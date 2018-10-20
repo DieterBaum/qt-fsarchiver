@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>treeview_dialog</class>
+ <widget class="QDialog" name="treeview_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string extracomment="Wiederherstellungsdatei auswählen">Select restore file</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>451</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="cmd_cancel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>423</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string extracomment="Abbrechen">Cancel</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cmd_save">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>423</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string extracomment="Mit der Wiederherstellung fortfahren">Next</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>421</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <attribute name="headerDefaultSectionSize">
+     <number>400</number>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>411</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string extracomment="Vorhandene Wiederherstellungsdateien:">Existing restore files:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_treeview">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>320</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>a</string>
+    </property>
+   </widget>
+   <zorder>cmd_cancel</zorder>
+   <zorder>treeView</zorder>
+   <zorder>label</zorder>
+   <zorder>pushButton_treeview</zorder>
+   <zorder>cmd_save</zorder>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cmd_cancel</tabstop>
+  <tabstop>cmd_save</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>treeView</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>pushButton_treeview</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>297</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>60</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

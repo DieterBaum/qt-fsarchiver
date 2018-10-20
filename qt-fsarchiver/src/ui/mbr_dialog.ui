@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mbr_dialog</class>
+ <widget class="QWidget" name="mbr_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>469</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string extracomment="MBR sichern/zurückschreiben">Save / Restore MBR/GPT</string>
+  </property>
+  <widget class="QComboBox" name="cmb_mbr">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string extracomment="nur den Bootloaderbereich wieder herstellen">Only the boot loader area to restore</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string extracomment="Bootloaderbereich und die Partitionstabelle wieder herstellen">Bootloader area and restore the partition table</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string extracomment="Partitionstabelle wiederherstellen">Restore partition table</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string extracomment="Verborgenen Bereich  wieder herstellen. (Ohne  Bootloader und ohne Partitionstabelle).">Secretly area to restore. (Without Boot Loader and without partition table).</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string/>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="bt_end">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>460</y>
+     <width>201</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="Abbrechen">Exit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_save">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>460</y>
+     <width>221</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="MBR sichern/zurückschreiben">Save / restore MBR</string>
+   </property>
+  </widget>
+  <widget class="QTreeView" name="treeView">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>431</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <attribute name="headerDefaultSectionSize">
+    <number>400</number>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>421</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Directory in which the MBR/GPT is written.</string>
+   </property>
+   <property name="text">
+    <string extracomment="MBR Sicherungsverzeichnis:">MBR/GPT backup directory:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="MBR von dieser dieser Festplatte sichern / wiederherstellen:">MBR of that drive this
+Backup / restore:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb_disk">
+   <property name="geometry">
+    <rect>
+     <x>357</x>
+     <y>420</y>
+     <width>91</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>410</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Existing
+&amp;harddrive:</string>
+   </property>
+   <property name="buddy">
+    <cstring>cmb_disk</cstring>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_dummy">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>460</y>
+     <width>21</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>bt_dummy</zorder>
+  <zorder>cmb_mbr</zorder>
+  <zorder>bt_end</zorder>
+  <zorder>bt_save</zorder>
+  <zorder>treeView</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>cmb_disk</zorder>
+  <zorder>label_3</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cmb_disk</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>bt_dummy</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>418</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

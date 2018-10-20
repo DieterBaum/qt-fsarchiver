@@ -1,0 +1,125 @@
+=====================================================================================================================================================
+qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt4-fsarchiver]
+=====================================================================================================================================================
+
+Copyright (C) 2008-2018 Francois Dupoux und Dieter Baum.  All rights reserved.
+Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
+Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
+
+qt4-fsarchiver wurde in die Qt5-Umgebung übersetzt und in qt-fsarchiver umbenannt.
+
+qt-fsarchiver ist ein Programm mit einer grafischen Oberfläche zur einfachen Bedienung des Archivierungsprogramms fsarchiver.
+qt-fsarchiver wurde aufgeteilt in ein Programm mit grafischer Oberfläche und in ein Terminal-Programm.
+Es müssen zwingend beide Programme installiert werden.
+Das grafische Programm kann ohne Root-Rechte gestartet werden.
+Somit wurden die Startprobleme mit gksu/gksudo, das nicht mehr installierbar ist,  mit Wayland und Snap-Programmen behoben. 
+
+Der Quellcode kann auf allen auf Debian basierenden System, auf Suse und Fedora installiert werden.
+Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rpm-Pakete vorhanden.
+
+Installation des Programms aus den Quelldateien:
+Für die Installation von den Programmen qt-fsarchiver und qt-fsarchiver-terminal müssen die für fsarchiver notwendigen Abhängigkeiten und die qt5-Entwicklungsumgebung installiert werden.
+Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt11-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt5-default qtbase5-dev qttools5-dev-tools btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo
+
+Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:
+username ALL=(ALL) ALL 
+%sudo	ALL=(ALL:ALL) ALL
+Der username ist anzupassen: beispielweise peter.
+
+Anstatt libzst1-dev wird in einigen Systemen libzst-dev installiert. btrfs-tools wird neuerdings durch btrfs-progs ersetzt. Der obige Befehl ist entsprechend anzupassen.
+
+In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils qt5-default
+Wenn Sie ssh (secureshell) für den Zugriff auf weitere Rechner im Netzwerk nutzen wollen, müssen Sie noch sshpass individuell installieren.
+
+In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs qt5-default
+Bei einem 64-bit System müssen Sie zusätzlich lrelease installieren: dnf install qt5-linguist
+32-bit Systeme werden nicht mehr unterstützt.
+
+In dem Terminal wechseln Sie in den Ordner qt-fsarchiver, der bei der Entpackung des Quellcodes installiert wurde.
+Bei Debian, Ubuntu und Mint 64-bit Version müssen Sie eingeben: /usr/lib/x86_64-linux-gnu/qt5/bin/qmake && make && sudo make install.
+Bei Debian müssen Sie anstatt sudo make install dies eingeben: su -l, make install.
+Bei Fedora und Suse müssen Sie eingeben: qmake-qt5 && make && sudo make install
+Genauso installieren Sie das Programm qt-fsarchiver-terminal.
+Wechseln Sie in einem Terminal in den Ordner, indem der Quellcode von qt-fsarchiver-terminal vorhanden ist.
+Wiederholen Sie die obigen Terminalbefehle.
+
+Qt-fsarchiver funktioniert nur, wenn qt-fsarchiver-terminal installiert wurde.
+
+Installation des Programms aus den DEB-Paketen:
+Ein Doppelklick auf die DEB-Datei installiert in der Regel das Programm.
+Eventuell müssen Sie im Terminal mit root-Rechten dieses Kommando eingeben: sudo apt install qt-fsarchiver-0.8.5-1.deb., wobei die Versionsnummer angepasst werden muss.
+Bei Debian müssen Sie eingeben: gpk-install-local-file qt-fsarchiver-0.8.1-1.deb, wobei die Versionsnummer ebenfalls angepasst werden muss.
+Ist bei Debian das Programm nicht installiert, dann müssen Sie eingeben: su -l dpkg-i, qt-fsarchiver-0.8.4-3.deb und apt install -f. Die von dpkg ausgegebene Fehlermeldung können Sie ignorieren. 
+
+Installation des Programms aus einem Launchpad:
+Bei Ubuntu und Mint erreichen sie die Installation mit diesen Befehlen:
+sudo add-apt-repository ppa:/dieterbaum/qt-fsarchiver
+Bestätigen Sie deisen Befehl mit Enter
+sudo apt update
+sudo apt install qt-fsarchiver
+
+Sowohl bei den deb-Paketen als auch bei der launchpadinstallation wird qt-fsarchiver-terminal mitinstalliert.
+
+Programmaufruf:
+Meistens werden Starter unter Zubehör installiert. Mit Doppelklick wird qt-fsarchiver gestartet.
+qt-fsarchiver im Terminal starten:
+Befehl: qt-fsarchiver
+
+Die Handhabung von qt-fsarchiver ist einfach:
+Über den Menüpunkt "Aktionen" oder über die Werkzeugleiste können folgende Aktionen ausgewählt werden: "Partitionen sichern/zurückschreiben", "Partitionen sichern/zurückschreiben über ein Netzwerk", "MBR/GPT sichern/zurückschreiben", "Verzeichnisse sichern/zurückschreiben" und "Festplatten klonen, Festplattenimage erzeuegen/zurückspielen". Zusätzlich kann über den Menüpunkt "Einstellungen" Basiseinstellungen wie Anzahl der Prozessorkerne oder Kompressionsstärke und Weiteres eingestellt werden.
+Das Programm erkennt automatisch ob der Master Boot Record oder eine GUID Partitionstabelle gesichert werden muss.
+Bei der Sicherungen von Partitionen kann gewählt werden, ob der Partition Boot Sektor (PBR) mit gesichert werden soll. Bei Verwendung von Grub ist dieser Punkt normalerweise uninteressant, da Grub den PBR nur über chainloader erreicht, der beim Starten von Linux System nicht verwendet wird.
+
+Die Sicherung läuft immer nach dem selben Schema ab: Man wählt den Namen für die Sicherung, das Programm ergänzt den Namen automatisch mit einem Datumstempel, dann werden die zu sichernde Partition oder das zu sichernde Verzeichnis und das Verzeichnis ausgewählt, in dem die Sicherung gespeichert werden soll. Dann den Button "Partition sichern" betätigen und die Sicherung beginnt.
+USB-Partitionen sind unter /media/user/ oder unter run/media/user gemountet.
+
+Das Wiederherstellen ist ähnlich. In dem Sicherungsverzeichnis wird der Name der Datei ausgewählt, die wiederhergestellt werden soll. Beim Wiederherstellen einer Partition wird die wiederherzustellende Partition ausgewählt. Dabei wird überprüft, ob die Bezeichnung der wiederherzustellende Partition (zum Beispiel /dev/sda5), mit der Bezeichnung der gesicherte Partition übereinstimmt. Nach entsprechendem Warnhinweis kann die Partition an eine beliebige Stelle zurück geschrieben werden. Beim vorhandensein einer Datei mit dem Partitions Boot Sektor als Inhalt, wird gefragt, ob der PBR wieder hergestellt werden soll.
+Beim Wiederherstellen einer btrfs-Partiiton kann gewählt werden, ob die Partition formatiert werden soll oder nicht. Beim Formatieren wird eine neue UUID erzeugt, beim nichtformatieren bleibt die UUID erhalten.
+Beim Wiederherstellen von Verzeichnissen wird ausgewählt, ob das Verzeichnis an den Ursprungsort oder an einen anderen Ort zurückgeschrieben werden soll. Den Button "Partition wiederherstellen" betätigen und die Partition oder das Verzeichnis wird zurückgeschrieben.
+
+Bei der Sicherung über ein Netzwerk wird eine zusätzliche Maske geöffnet, in dem der Benutzername und das Kennwort für den Netzwerkrechner eingegeben werden muss. Von der Speicherung des Kennworts ist außerhalb des privaten Bereiches abzuraten, da die Verschlüsselung des Kennwortes auf einfache Art durchgeführt wird.
+
+Vorausetzungen für die Arbeit mit dem Netzwerk: 
+Mit Netzwerprotokoll Samba:
+Im Linux-Bereich müssen auf dem Rechner, der die Sicherung durchführt/wiederherstellt(Client) und auf dem Rechner, auf dem die Daten abgelegt werden (Server), Samba installiert sein. Das Einbinden des virtuellen Dateisystem "cifs-vfs" auf dem Linux-Rechner muss möglich sein. Sie hierzu den Ubuntu-Wiki Artikel "http://wiki.ubuntuusers.de/Samba_Client_cifs".
+Mit diesem Befehl können Sie überprüfen, ob ein freigegebener Ordner angesprochen werden kann: sudo mount -t cifs -o username=ABCD,password=xyz,uid=0,gid=0 //192.168.2.5/Name des freigegebenen Verzeichnisses /home/username/.qt-fs-client. Der Username, das Passwort, die IP-Adresse und der Name des freigegebenen Verzeichnisses ist den bestehenden Verhältnissen anzupassen.
+Für den Zugriff auf eine Windows7 Freigabe ist es erforderlich, dem Ordner unter Eigenschaften > Freigabe > Erweiterte Freigabe >  Berechtigungen der Gruppen- oder Benutzername „Jeder“ hinzuzufügen. Als Berechtigungen für „Jeder“ sollten der „Vollzugriff“, „Ändern“ und „Lesen“ aktiviert werden. 
+
+Mit Netzwerprotokoll SSH (secure shell): 
+Im Linux-Bereich müssen auf den Rechnern, auf dem die Daten abgelegt werden (Server), openssh-server installiert sein. Um auf den einzelnen Server zugreifen zu können müssen im Terminal zur Identifizierung einmalig diese Befehle eingegeben werden: sudo ssh Benutzername@Adresse des Servers. (Beispiel: sudo ssh peter@192.168.2.10). Der Aufruf muss mit Administrationrechten erfolgen. Bestätigen Sie die Frage nach dem RSA key fingerprint mit yes. Geben Sie das Passwort für den Zugriff auf den Server ein. Ist dieser Vorgang erfolgreich haben Sie mit dem Terminal Kontakt mit dem Server. Dies ist erkennbar an dem geänderten Prompt. Verlassen Sie den Server mit dem Befehl exit. 
+Dieser Vorgang muss einmalig für alle Server durchgeführt werden.
+Beim erstmaligen Zugriff des Programms qt-fsarchiver auf einen Server, wird der Befehl sudo ssh Benutzername@Adresse des Servers direkt in das Terminal eingetragen. In den Basiseinstellungen des Programms kann eingestellt werden, ob der automatische Eintrag für den Zugriff auf weitere Server wiederholt werden soll oder nicht. 
+Für das Mounten eines ssh-Servers, muss im Terminal das Passwort für den Zugriff auf den Server eingegeben werden. Um dies zu vermeiden, empfiehlt es sich, einen Public Keys einzurichten. (http://wiki.ubuntuusers.de/SSH#Authentifizieruoot/ng-ueber-Public-Keys). Wichtig: Der öffentliche Schlüssel (Datei: authorized_keys) muss beim Server in das Verzeichnis /root/.ssh kopiert werden.
+In den Basiseinstellungen kann festgelegt werden, ob der Hinweis für das Eingeben des Passworts angezeigt werden soll oder nicht.
+Hinweis: Bei einigen Betriebssystemen muss das Programm beim Arbeiten mit ssh in einem Terminal mit Root-Rechten gestartet werden.
+
+Mit Netzwerprotokoll NFS (Network File System):
+Es können nur Linux-Rechner als Client oder Server verwendet werden. Auf den Rechnern, auf dem die Daten abgelegt werden (Server), muss nfs-kernel-server installiert sein. In der Datei  /etc/exports müssen zusätzlich die freizugebenden Verzeichnisse eingetragen werden. Der Namen darf keine Leerzeichen enthalten. Auf das freigegebne Verzeichnis muss lesend und schreibend zugegriffen werden können. Der Eintrag /home/user/Bilder 192.168.2.0/255.255.255.0(rw) erlaubt allen Rechnern mit der IP-Adresse 192.168.2.0 bis 192.168.2.255 einen Lese-Schreibezugriff auf das Verzeichnis /home/user/Bilder des Clients.
+
+Nach dem Start der Live-CD oder des Computers kann es eine Weile dauern, bis andere Rechner im Netzwerk angezeigt werden. 
+
+Die Sicherungen können auch verschlüsselt vorgenommen werde. Dabei muss die Schlüssellänge zwischen 6 und 64 Zeichen sein. Die Archivaufteilung auf DVD-Größe ist möglich.
+
+Die Sicherung von eingehängten Partitionen ist, nach einer Abfrage ob dies gewünscht wird, möglich. Das Wiederherstellen von Partitionen kann nur dann vorgenommen werden, wenn die Partition ausgehängt ist. Die Wiederherstellung einer Root- oder Homepartition ist mit der Live-CD qt5-fsarchiver (http://sourceforge.net/projects/qt5-fsarchiver/files/Live-CD/") möglich. Auf der bekannten SystemRescueCD ist das Programm fsarchiver ebenfalls vorhanden, so dass diese Live-CDs auch zum Zurückschreiben von mit qt-fsarchiver erstellten Archiven geeignet ist. 
+
+Bei der Sicherung des MBR/GPT muss lediglich (bei mehreren Festplatten) die Festplatte und das Sicherungsverzeichnis ausgewählt werden. Der verborgene Bereich der Festplatte zwischen dem Ende des MBR und Beginn der ersten Partition wird mitgesichert. Beim Zurückschreiben des MBR/GPT kann bei mehreren Festplatten die Festplatte ausgewählt werden, deren MBR/GPT zurück geschrieben werden soll. Zusätzlich hat man die Wahl, ob der Bootloaderbereich, die Partitionstabelle oder der verborgene Bereich der Festplatte wiederhergestellt werden soll. Die letzte Option ist dann von Bedeutung, wenn beispielsweise auf dem Rechner Ubuntu Maverick installiert ist und eine Lucid Version zurück gesichert wird. In solch einem Fall wird Grub zerstört und der Rechner ist nicht mehr bootbar. Die Wiederherstellung des verborgenen Bereiches einer Lucid-Installation verhindert dies.
+
+qt-fsarchiver kann ecryptfs verschlüsselte Home-Verzeichnisse sichern und wiederherstellen. Das ist unabhängig davon, ob das Home-Verzeichnis in einer eigenen Partition oder innerhalb des Wurzelverzeichnisses gespeichert ist.
+
+Mit TrueCrypt verschlüsselte Partitionen können nicht gesichert werden.
+
+Die Sicherung und Wiederherstellung einer Windows Fat-Partitionen ist ab Version 0.8.0.5. möglich. Auf eine FAT-Partition kann gesichert werden. Die Sicherungsdatei wird gesplittet, wenn die Dateigröße 4GB überschreitet.
+
+Klonen der Festplatte: Man wählt im linken Verzeichnisfeld die existierende Festplatte aus, die geklont werden soll und im rechten Verzeichnisfeld die Festplatte aus, die neu erzeugt werden soll. Dann den Button "Festplatte klonen" betätigen.
+Abbild der Festplatte/Partitionen erzeugen:
+Man wählt im linken Verzeichnisfeld die existierende Festplatte/Partition aus, von der ein Abbild erzeugt werden soll. Sicherungsverzeichnis auswählen. Zusätzlich auswählen, ob das Image komprimiert werden soll. Dann den Button "Festplatte Abbild erstellen" betätigen.
+Abbild der Festplatte zurückschreiben:
+Man wählt im linken Verzeichnisfeld die Festplatte/Partition aus, von deren ein Abbild zurückgeschrieben werden soll. Vorhandene Sicherungsdatei (Endung: img.fsa oder gz.fsa bei Festplatten, gz.part.fsa oder part.fsa bei Partitionen) auswählen. Dann den Button "Festplatte/partition Abbild zurückschreiben" betätigen.
+
+Beim Starten von qt-fsarchiver werden alle nicht eingebundenen Partionen unter /media/sda..., /media/sdb... eingebunden und sind somit leicht auf der Oberfläche erreichbar. Das Verzeichnis, in dem die Sicherung gespeichert werden soll beziehungsweise das Verzeichnis, in dem die gesicherte Partition abgelegt ist, ist somit in qt-fsarchiver unter /media/sd.... ansprechbar. Die zu sichernde oder wiederherzustellende Partition wird beim Start der Sicherung oder Wiederherstellung selbsttätig ausgehängt. Beim erneuten Aufruf von qt-fsarchiver wird die gerade gesicherte oder wiederhergestellte Partition wieder eingebunden.
+
+Qt-fsarchiver kann nur einmal aufgerufen werden. Das mehrmalige starten wird verhindert.
+
+Weitere Hinweise können den Webseiten http://wiki.ubuntuusers.de/qt4-fsarchiver und http://wiki.ubuntuusers.de/fsarchiver entnommen werden.
+Informationen über fsarchiver können Sie über die englische Webseite von fsarchiver http://www.fsarchiver.org/Main_Page erhalten.

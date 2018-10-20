@@ -1,0 +1,200 @@
+==================================================================================================
+* qt5-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt4-fsarchiver] 
+==================================================================================================
+* qt5-fsarchiver-0.8.5-1 5. Oktober 2018.
+    - kleine Korrekturen.
+* qt5-fsarchiver-0.8.5-0 31. August 2018.
+    - Verbesserte Unterstützung für Dateisysteme von exts (Beitrag von Marcos Mello)
+    - Behebung eines Build Problems mit e2fsprogs <1.41 (Beitrag von Marcos Mello)
+    - Behebung eines Build-Problems im Zusammenhang mit xattr.h (Beitrag von Lars Wendler)
+    - Französische Übersetzung vervollständigt. 
+* qt5-fsarchiver-0.8.4-7 30. Juli 2018.
+    - Fehlerbehebung beim Schreiben eines Abbildes einer Partition.
+* qt5-fsarchiver-0.8.4-6 30. Mai 2018.
+    - Sicherungen auf jfs- und xfy-Partionen ist nun möglich.
+    - Fehlerbehebung: Systempartition beim Klonen wird nun erkannt.
+* qt5-fsarchiver-0.8.4-5 30. April 2018.
+    - gksudo/kdesudo wird nicht mehr installiert.
+    - geänderte Startsymbole ohne pkexec.
+* qt5-fsarchiver-0.8.4-4 28. April 2018.
+    - pkexec ersetzt gksudo
+* qt5-fsarchiver-0.8.4-3 20. April 2018.
+    - polnische Übersetzung vervollständigt.
+* qt5-fsarchiver-0.8.4-0 10. April 2018.
+    - zstd Kompression wurde hinzugefügt. (Neue Option -Z, from 1 to 22).
+* qt5-fsarchiver-0.8.3-0 15. Januar 2018.
+    - LZ4 Kompression wurde hinzugefügt (Beitrag von Cristian Vazquez). 
+* qt5-fsarchiver-0.8.2-0 2. Januar 2018.
+    - Die Unterstützung für die neuesten ext4-Dateisystemfunktionen wurden hinzugefügt. 
+    - Verbesserte Unterstützung von großen Blockgeräten beim Wiederherstellen von extfs-Dateisystemen.
+* qt5-fsarchiver-0.8.1-1 28. April 2017.
+    - Fehlerbehebung Arbeiten mit ntfs Partitionen 
+    - Windows 10 Systempartition kann nicht gesichert werden.
+* qt5-fsarchiver-0.8.1-0 5. Februar, 2017.
+    - Verbesserte Unterstützung für das XFS-Dateisystem (Beiträge von Marcos Mello)
+    - Aktualisierte Dokumentation und Kommentare in den Quellen (Marcos Mello)
+* qt5-fsarchiver-0.8.0-5 2. November, 2016.
+    - Sichern und Wiederherstellen von vfat-Partitionen ist möglich.
+* qt5-fsarchiver-0.8.0-3 31. Oktober, 2016.
+    - Korrektur bei der Schlussmeldung.
+* qt5-fsarchiver-0.8.0-0 15 Oktober, 2016.
+    - Anpassung an die Version 0.8.0 von fsarchiver
+    - Die Änderungen von fsarchiver sind in der Datei Change erläutert.
+* qt5-fsarchiver-6.19-21 August 2016
+    - Mit ssh über das Netzwerk sichern und zurückschreiben ist wieder möglich möglich.
+    - Je nach Betriebssystem muss das Programm in einem Terminal mit Root-Rechten gestartet werden.
+    - kleinere Verbesserungen.
+* qt5-fsarchiver-6.19-20 30. Juni 2016
+    - Anzeige der zurückzuschreibenden fsa-Datei über das Netzwerk wieder vorhanden.
+    - Mit ssh über das Netzwerk sichern und zurückschreiben ist vorläufig nicht mehr möglich.
+    - kleinere Verbesserungen.
+* qt5-fsarchiver-6.19-19 1. Juni 2016
+    - qt4-fsarchiver wurde ind die Qt5 Entwicklungumgebung übersetzt.
+    - Umbenennung von qt4-fsarchiver in qt5-fsarchiver.
+    - kleinere Verbesserungen.
+* qt4-fsarchiver-6.19-18 5. Mai 2016
+    - kleinere Verbesserungen.
+* qt4-fsarchiver-6.19-17 5. Mai 2016
+    - Russische Übersetzung korrigiert.
+    - kleinere Verbesserungen.
+* qt4-fsarchiver-6.19-16 15. Dezember 2015
+    - Imagebildung von Partitionen hinzugefügt.
+    - kleinere Verbesserungen.
+* qt4-fsarchiver-6.19-15 1. August 2015
+    - Starter von sudo nach gksu geändert.
+    - Starter für Gnome, KDE, Unity, Mate, Cinnamon, Xfce und  Lxde hinzugefügt.
+* qt4-fsarchiver-6.19-14 10. Juni 2015
+    - Korrekturen und Verbesserungen im Netzwerkbereich.
+* qt4-fsarchiver-6.19-13 4. Mai 2015
+    - 32 Übersetzungungen wurden hinzugefügt.
+* qt4-fsarchiver-6.19-12 25. Februar 2015
+    - Die russische Übersetzung ist wieder vollständig
+* qt4-fsarchiver-6.19-11 20. Februar 2015
+    - Diese Version wurde erstellt in Erinnerung an Gabi, die auf einer gemeinsamen Skitour 
+    - am 30.1.2015 im Schwarzwald durch eine Lawine ihr Leben verlor.
+    - Korrektur: Korrekte Fehlermeldung bei Sicherung von nicht unterstützten Partitionen.
+    - Einschränkung erkannte Festplatten sda bis sdd bei Sicherung MBR/GPT aufgehoben.
+* qt4-fsarchiver-6.19-10 27. Januar 2015
+    - bei btrfs-Partitionen wird der Schnappschuss-Ordner .snapshots nicht gesichert.
+    - Korrektur: Erkennung Ende des versteckten Bereiches bei Sicherung des MBR.
+* qt4-fsarchiver-6.19-9 31.Oktober 2014
+    - Sicherung/Wiederherstellung von versteckten Verzeichnisen.
+    - Sicherung/Wiederherstellung von (versteckten) Verzeichnisen über das Netzwerk ergänzt.
+* qt4-fsarchiver-6.19-8 15.Oktober 2014
+    - Chinesisch hinzugefügt.
+* qt4-fsarchiver-6.19-7 2.September 2014
+    - Wiederholte Sicherungen/Wiederherstellungen mit NFS korrigiert
+* qt4-fsarchiver-6.19-6 4.August 2014
+    - Sichern und Wiederherstellen des GPT wieder möglich
+* qt4-fsarchiver-6.19-5 28.Juni 2014
+    - Italienisch hinzugefügt.
+    - kleinere Korrekturen
+* qt4-fsarchiver-6.19-4 28.Mai 2014
+    - Spanisch hinzugefügt.
+    - Mount-Verzeichnis für das Netzwerk geändert
+* qt4-fsarchiver-6.19-3 8.Mai.2014
+    - Erkennung von Netzwerkrechner korrigiert
+* qt4-fsarchiver-6.19-2 27.4.2014
+    - kleinere Fehlerbehebungen
+* qt4-fsarchiver-6.19-1 17.3.2014
+    - Änderungen bei fsarchiver:
+    - Zurückname "Anzahl der Inode-Blöcke pro Gruppe". 
+* qt4-fsarchiver-6.18-1 15.3.2014
+    - Änderungen bei fsarchiver:
+    - Patch von Berix, die Zahl der Inode-Blöcke pro Gruppe auf ext-Dateisystemen bleiben erhalten. 
+    - Zusätzliche Unterstützung für die neuesten btrfs Funktionen.(bis zu linux-3.14) 	
+* qt4-fsarchiver-6.17-5 20.12.2013
+    - Tooltips wurden hinzugefügt.
+    - USB-Sticks können ebenfalls geklont, Images können gebildet und zurückgeschrieben werden.
+    - Fehlerbehebung bei der Fortschrittsanzeige.
+* qt4-fsarchiver-6.17-4 1.06.2013
+    - Anpassung an Debian 7
+* qt4-fsarchiver-6.17-3 14.04.2013
+    - Fehlerkorrektur
+* qt4-fsarchiver-6.17-2 01.04.2013
+    - Datenübertragung im Netzwerk mit NFS (Network File System) möglich.
+* qt4-fsarchiver-6.17-1 15.03.2013
+    - Anpassung an die Version 0.6.17 fsarchiver.
+    - Datenübertragung im Netzwerk mit SSH (Secure Shell) möglich.
+* qt4-fsarchiver-6.15-3 10.02.2013
+    - Programmerweiterung: Klonen von Festplatten, Image von Festplatten bilden und zurückschreiben.
+* qt4-fsarchiver-6.15-2 25.10.2012
+    - btrfs-Partitionen werden automatisch eingehängt.
+    - Beim Beenden des Programms werden die von qt4-fsarchiver in /media eingehängten Partitionen ausgehängt und die leeren Verzeichnisse in /media gelöscht.
+    - Fehlerbehebung: MBR-Sicherung in Verzeichnissen mit Leerzeichen im Namen ist nunmehr möglich.
+* qt4-fsarchiver-6.15-1 25.09.2012
+    - Zusätzliche Unterstützung von ext4 und btrfs Funktionen
+* qt4-fsarchiver-6.13-5 10.08.2012
+   - Sicherung einer GUID-Partitionstabelle ist möglich.
+* qt4-fsarchiver-6.13-4 20.06.2012
+   - Die Windows Auslagerungsdatei pagefiles.sys wird nicht mehr gesichert. Die Sicherung ist unnötig und vermeidet eine
+     Fehlermeldung bei der Sicherung.
+* qt4-fsarchiver-6.13-3 27.05.2012
+   - kritische Fehlerbehebung: Bei der Verwendung von Ubuntu Precise Pangolin (12.04) und bei der gleichzeitigen Sicherung 
+     von Root- und Home-Partitionen im eingehängten Zustand, konnte es zum Absturz und zur Zerstörung des Systems kommen.
+* qt4-fsarchiver-6.13-2 10.05.2012
+   - Die Größe für das splitten eines Archivs kann zwischen 2GB, 4GB und DVD-Größe gewählt werden.
+* qt4-fsarchiver-6.13-1 15.04.2012)
+   - Anpassung an die Version 0.6.13 von fsarchiver
+   - Erkennung des Root-Dateisystems mit "/proc/self/mountinfo" anstelle von "/proc/mounts"
+* qt4-fsarchiver-6.12-11 26.01.2012
+   - Bei der Wiederherstellung einer btrfs-Partition kann zwischen neu formatieren und nicht formatieren gewählt werden.
+* qt4-fsarchiver-6.12-10 10.12.2011
+   - Sicherung und Wiederherstellung des Partition Boot Sektors möglich.
+* qt4-fsarchiver-6.12-9 30.11.2011)
+   - Alle vorhandenen freigegebene Ordner können für die Sicherung/Wiederherstellung über das Netzwerk ausgewählt werden.
+* qt4-fsarchiver-6.12-8 8.11.2011
+   - Wird die Sicherung auf eine FAT-Partition geschrieben, wird die Sicherungsdatei geplittet und die einzelne Dateigrößeauf 4GB begrenzt.
+* qt4-fsarchiver-6.12-8 1.11.2011
+   - für die Wiederherstellung von btrfs-Partitionen ist die Installation der btrfs-tools zusätzlich erforderlich.
+   - Fehler in der Übersetzungsdatei korrigiert.
+   - Hinweis, wenn die 4GB-Grenze bei der Sicherung auf eine FAT-Partition überschritten wird.
+* qt4-fsarchiver-6.12.8 (1. Juli 2011
+   - Lizenzdaten für gpl-2 und gpl-3 hinzugefügt.
+   - Anzahl korrekt gesicherte Daten in der Schlussanzeige korrigiert
+* qt4-fsarchiver-6.12.7 (26. Juni 2011
+   - Übersetzung für Englisch hinzugefügt.
+   - Button für Abbrechen einer Sicherung/Wiederherstellung hinzugefügt.
+   - Anzeige des Fortschrittbalkens im Einsekunden-Intervall
+* qt4-fsarchiver-6.12.6 (6. Mai 2011
+   - Sichern und Wiederherstellen von Partitonen über ein Netzwerk hinzugefügt.
+* qt4-fsarchiver-6.12.5 (2. April 2011
+   - Fehlerbehebung: Unter bestimmten Voraussetzungen konnt der MBR nur von sda gesichert oder zurückgeschrieben werden.
+* qt4-fsarchiver-6.12.4 (27. März 2011
+   - Die Größe des wiederherzustellenden verborgenen Bereich wird mit der Größe des bestehenden verborgenen Bereich verglichen.
+   - Beim MBR Zurückschreiben werden die Namen der gesicherten und der zurückzuschreibenden Festplatte verglichen. 
+   - Bei Größendifferenzen und Namensungleichheit erscheinen Warmeldungen.
+* nur Live-CD: rkhunter und chkrootkit wurden hinzugefügt (19.März 2011)
+* qt4-fsarchiver-6.12.3 (17. Februar 2011
+   - Anzahl der möglichen einzulesenden Partitionen auf 100 erhöht. Anzahl der möglichen Prozessorenkerne auf 12 erhöht.
+* qt4-fsarchiver-6.12.2 (1. Februar 2011
+   - Im Hinweisedialog zu der geplanten Sicherung werden Namen der Sicherung, Größe, Art und Name der Partition und weiteres vorweg eingetragen.
+* qt4-fsarchiver-6.12.1 (14. Januar 2011)
+   - Fehler in fsarchiver wurde korrigiert: (Mountinfo ergänzt für die root-Partition bei fehlendem Eintrag in  /proc/mounts)
+* qt4-fsarchiver-6.11.1 (7. Dezember)
+   - die Änderungen von fsarchiver 6.11 wurden übernommen:
+   - btrfs-2.6.35 wird unterstützt.
+* qt4-fsarchiver-6.10.5 (5. Dezember 2010)
+   - Installationsroutine hinzugefügt.
+   - Hinweise über die Anpassung der Oberfläche an Gnome in der Datei Liesmich.
+   - Fehlerbehebung: MBR Sicherung ist nun möglich, wenn in dem Namen des Sicherungsverzeichnisses eine Leerstelle vorhanden ist. 
+* qt4-fsarchiver-6.10.4 (10.November 2010)
+   - Der Ende-Button kann erst nach erfolgter Meldung über die Sicherung betätigt werden.
+   - Der MBR wird bei der Sicherung mit dem installierten System gekennzeichnet. (nicht bei der Live CD).
+* qt4-fsarchiver-6.10.3  (1. November 2010)
+   - Bei der MBR-Sicherung wird auch der verborgene Bereich zwischen Ende MBR und Anfang erste Partition gesichert.
+   - Wiederherstellung des verborgenen Bereiches möglich.
+   - Dies ist von Bedeutung, wenn zum Beispiel auf dem Rechner Ubuntu 10.10 vorhanden ist und eine Rücksicherung mit Ubuntu 10.04 erfolgt. Grub wird dabei zerstört.
+   - Durch die Wiederherstellung des MBR und des verborgenen Bereiches ist der Rechner wieder bootbar.
+* qt4-fsarchiver-6.10.2  (26. Oktober 2010)
+  - Ergänzung des Archives mit dem Ordner Hinweise.
+  - Keine zusätzlichen oder geänderte Funktionen. 
+* qt4-fsarchiver-6.10.1  (16. Oktober 2010)
+  - Anpassung des Codes an die gcc und g++ Version: 4:4.4.3-1ubuntu1.
+  - Installation unter Ubuntu Maverick Meerkat 10.10 erfolgreich.
+  - Keine zusätzlichen oder geänderte Funktionen.
+* qt4-fsarchiver (ohne Versionsnummer) (15. Oktober 2010)
+  - Anpassung des Codes für Qt Creator 1.3.1, erstellt am 30. September 2010.
+  - Keine zusätzlichen oder geänderte Funktionen.
+* qt4-fsarchiver (ohne Versionsnummer) (Mai 2010) 
+  - erste lauffähige Version.

@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/src">
+        <file>images/cancel.png</file>
+        <file>images/book_previous.png</file>
+        <file>images/disk.png</file>
+        <file>images/mbr_restore.png</file>
+        <file>images/mbr_save.png</file>
+        <file>images/information.png</file>
+        <file>images/folder_page_white.png</file>
+        <file>images/folder_back.png</file>
+        <file>images/folder_go.png</file>
+        <file>images/einstellung.png</file>
+        <file>images/setting.png</file>
+        <file>images/applications-internet.png</file>
+        <file>images/applications-internet-ein.png</file>
+        <file>images/clone1.png</file>
+        <file>images/dir.png</file>
+        <file>images/file.png</file>
+        <file>images/cdtoparent.png</file>
+    </qresource>
+</RCC>
