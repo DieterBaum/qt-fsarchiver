@@ -209,7 +209,7 @@ void DialogSetting:: setting_save()
             setting.setValue("hidden",0);	
      setting.endGroup();
      QMessageBox::about(this,tr("Note", "Hinweis"),
-         tr("The settings have been saved. Be restarted, the program modified the language setting.","Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.\n"));
+         tr("The settings have been saved. If the language setting is changed, the program must be restarted.","Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.\n"));
 }
 
 void DialogSetting::zip_setting_einlesen() {

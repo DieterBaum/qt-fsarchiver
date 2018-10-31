@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>Start the backup or the restore of a folder.</string>
+    <string>Starting a Backup or Restoring a Directory. </string>
    </property>
    <property name="text">
     <string extracomment="Verzeichnis sichern/zurückschreiben">Save/restore directory</string>
@@ -65,7 +65,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>Select the folder to be backed up or restored.</string>
+    <string>Select the directory that is to be backed up or written back.</string>
    </property>
    <property name="text">
     <string extracomment="zu sicherndes Verzeichnis:">Saved directory</string>
@@ -94,7 +94,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>Directory in which the folder is backed up or from the recovery file is removed.</string>
+    <string>Directory to which the directory backup is written or from which the recovery file is read.</string>
    </property>
    <property name="text">
     <string extracomment="Ort (Pfad) der Sicherung:">Location (path) of backup:</string>
@@ -125,8 +125,8 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Anzahl der zu sichernden Dateien/Verzeichnisse:">On the number of
-captive Files/directories:</string>
+     <string extracomment="Anzahl der zu sichernden Dateien/Verzeichnisse:">Number of files/directories
+to be backed up:</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="AnzahlsaveFile">
@@ -412,7 +412,7 @@ backup key</string>
      </rect>
     </property>
     <property name="toolTip">
-     <string>Same backup files are overwritten without prior consultation.</string>
+     <string>Identical backup files are overwritten without prior consultation.</string>
     </property>
     <property name="text">
      <string extracomment="vorhandene Sicherung überschreiben">Overwrite existing backup</string>
@@ -428,10 +428,11 @@ backup key</string>
      </rect>
     </property>
     <property name="toolTip">
-     <string>The directory will be written back to the original path</string>
+     <string>The directory is written back to the path of origin.
+</string>
     </property>
     <property name="text">
-     <string extracomment="Sicherung an den Ursprungsort zurückschreiben">Backup restore to the Origin</string>
+     <string extracomment="Sicherung an den Ursprungsort zurückschreiben">Writing a backup back to the original path.</string>
     </property>
    </widget>
    <widget class="QComboBox" name="cmb_zstd_dir">

@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>Select the partition to be backed up or restored.</string>
+     <string>Select the partition to be backed up or written back.</string>
     </property>
     <property name="locale">
      <locale language="English" country="UnitedStates"/>
@@ -43,7 +43,7 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>Directory in which the partition is backed up or from the recovery file is removed.</string>
+     <string>Directory where the backup file is written or directory where the recovery file is stored.</string>
     </property>
     <property name="locale">
      <locale language="English" country="UnitedStates"/>
@@ -65,7 +65,7 @@
      <string>Start the backup of a partition.</string>
     </property>
     <property name="text">
-     <string>Stored partitions</string>
+     <string>Save partition</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_end">
@@ -398,10 +398,10 @@ setting:</string>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Notes to the backup is written to a file</string>
+      <string>Notes about the backup are written to a file.</string>
      </property>
      <property name="text">
-      <string>Notes to  the backup</string>
+      <string>Notes on the backup</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineKey">
@@ -424,10 +424,10 @@ setting:</string>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Same backup files are overwritten without prior consultation</string>
+      <string>An existing backup file with the same name is overwritten without confirmation.</string>
      </property>
      <property name="text">
-      <string>available backup overwrite</string>
+      <string>overwrite existing backup.</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="chk_split">
@@ -440,7 +440,7 @@ setting:</string>
       </rect>
      </property>
      <property name="text">
-      <string>Stock Split on size:</string>
+      <string>Split archive , specified size:</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="chk_key">
@@ -470,7 +470,7 @@ backup key</string>
       </rect>
      </property>
      <property name="toolTip">
-      <string>PBR is first block of any bootable partition</string>
+      <string>PBR is the first block of a bootable partition.</string>
      </property>
      <property name="text">
       <string extracomment="PBR sichern">Save PBR</string>
@@ -526,7 +526,7 @@ backup key</string>
      </size>
     </property>
     <property name="title">
-     <string extracomment="vorgesehene Aktion:">Proposed action:</string>
+     <string extracomment="vorgesehene Aktion:">Planned action:</string>
     </property>
     <property name="flat">
      <bool>true</bool>
@@ -639,7 +639,7 @@ with fsarchi&amp;ver</string>
      <x>0</x>
      <y>0</y>
      <width>770</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAktionen">
@@ -721,7 +721,7 @@ with fsarchi&amp;ver</string>
      <normaloff>:/src/images/information.png</normaloff>:/src/images/information.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Information fsarchiver</string>
+    <string>&amp;Information qt-fsarchiver</string>
    </property>
   </action>
   <action name="action_mbr_save">
@@ -826,7 +826,7 @@ with fsarchi&amp;ver</string>
   </action>
   <action name="action_Restore_directories_from_network">
    <property name="text">
-    <string>Restore directories from network</string>
+    <string>Restoring directories over a network.</string>
    </property>
   </action>
  </widget>

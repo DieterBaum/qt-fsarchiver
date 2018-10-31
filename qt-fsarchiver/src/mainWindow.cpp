@@ -1,4 +1,3 @@
-
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
@@ -158,14 +157,14 @@ QFile file2("/usr/sbin/qt-fsarchiver-terminal");
    if (!file2.exists())
       {
       QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("The program qt-fsarchiver-terminal is not installed. You must also install this program.\n", "Das Programm qt-fsarchiver-terminal ist nicht installiert. Sie müssen dieses  Programm zusätzlich installieren.\n"));
+         	tr("The program qt-fsarchiver-terminal is not installed. You have to install this program additionally.\n", "Das Programm qt-fsarchiver-terminal ist nicht installiert. Sie müssen dieses  Programm zusätzlich installieren.\n"));
       esc_end(1);
       return;
       }
    if (password == "")
    {
    QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("You must enter a password. You must quit and restart the program.\n", "Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.\n"));
+         	tr("You must enter a password. You must exit the program and restart.\n", "Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.\n"));
    return;
    }
    //Vorsichtshalber alle txt Dateien löschen
@@ -355,7 +354,7 @@ QFile file2("/usr/sbin/qt-fsarchiver-terminal");
         int auswertung = setting.value("showPrg").toInt();
         setting.endGroup();
         if (auswertung ==1 && dialog_auswertung == 0){
-        int ret = questionMessage(tr("In the file /usr/share/doc/qt-fsarchiver/doc/Readme are instructions included on the use of the program. Should this continue to be displayed? You can change this in the basic settings.", "In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern."));
+        int ret = questionMessage(tr("The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.", "In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern."));
     		if (ret == 2){
 		//Basiseinstellungen ändern
         	QSettings setting("qt-fsarchiver", "qt-fsarchiver");
@@ -508,7 +507,7 @@ int MWindow::savePartition()
         if (partition_ == "")
            {
           	QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("Please select the partition to be", "Bitte wählen Sie die zu sichernde Partition aus.\n"));
+         	tr("Please select the partition you want to back up.", "Bitte wählen Sie die zu sichernde Partition aus.\n"));
 		return 0 ;
            }
         DateiName = lineEdit_DateiName->text();
@@ -556,7 +555,7 @@ int MWindow::savePartition()
                    int ret = 1; 
                    if (part_art == "system")
                 	{
-                	ret = questionMessage(tr("To back up the system partition is mounted. Do you want to do a live backup?", "Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?"));
+                	ret = questionMessage(tr("The system partition to be backed up is mounted. Do you want to perform a live backup?", "Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?"));
                         if (ret == 2)
                            return 0;
                         if (ret == 1)
@@ -564,7 +563,7 @@ int MWindow::savePartition()
                 	}
                   if (part_art == "home")
                 	{
-                	ret = questionMessage(tr("To back up home partition is mounted. Do you want to do a live backup?", "Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?"));
+                	ret = questionMessage(tr("The home partition to be backed up is mounted. Do you want to perform a live backup?", "Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?"));
                         if (ret == 2)
                            return 0;
                         if (ret == 1)
@@ -580,7 +579,7 @@ int MWindow::savePartition()
                            if (err != 0 && liveFlag == 0)
                                 {
 				QMessageBox::about(this,tr("Note", "Hinweis"),
-         			tr("The partition", "Die Partition ")   + partition_ + tr("can not be unmounted. The program is terminated\n", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
+         			tr("The partition", "Die Partition ")   + partition_ + tr("cannot be unmounted. The program is aborted.\n", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
                                 return 0 ; 
                                 }  
                  	}
@@ -879,7 +878,7 @@ QString attribute;
           if (state1 == Qt::Checked && keyText.isEmpty())  
               {
                 QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("There was no key to decrypt specified.", "Es wurde kein Schlüssel für die Entschlüsselung angegeben.\n"));
+         	tr("No decryption key was specified.", "Es wurde kein Schlüssel für die Entschlüsselung angegeben.\n"));
 		return 1 ;
                }
            if (folder == "")
@@ -891,7 +890,7 @@ QString attribute;
            if (partition_ == "")
            {
           	QMessageBox::about(this,tr("Note","Hinweis"),
-         	tr("Please select from the writing back to partition.\n", "Bitte wählen Sie die zurück zu schreibende Partition aus.\n"));
+         	tr("Please select the partition you want to write back.\n", "Bitte wählen Sie die zurück zu schreibende Partition aus.\n"));
                 return 0;
            }
    	   if (file.open(QIODevice::ReadOnly))
@@ -903,7 +902,7 @@ QString attribute;
          		if (pos > 0 && pos1 >0)
          			   {
            			   QMessageBox::about(this, tr("Note", "Hinweis"),
-         			   tr("You have chosen the wrong recovery file selected. \nThe files should end with. fsa be", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht \nDie Dateiendung muss .fsa sein"));
+         			   tr("You have selected an incorrect recovery file. \nThe file extension must be .fsa.", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht. \nDie Dateiendung muss .fsa sein"));
                                    return 0;
          			   }
              		}
@@ -970,8 +969,8 @@ QString attribute;
                 }
             // Hier wird verglichen dev_ = die Partition, die zu sichern ist. dev_part = Originalpartition
             if (dev_part != "/dev/" + partition_){
-               cmp = questionMessage(tr("Partition to restore the ", "Die wiederherzustellende Partition ") + "/dev/" + partition_ + 
-               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you want to continue restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
+               cmp = questionMessage(tr("The partition to be recovered  ", "Die wiederherzustellende Partition ") + "/dev/" + partition_ + 
+               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you still want to perform the recovery?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (cmp == 2)  //nicht wiederherstellen
                   return 0;
             }
@@ -1007,7 +1006,7 @@ QString attribute;
        		QFile f1(filename);
 		if (f1.exists())
        			{
- 			cmp = questionMessage(tr("There is a file with the contents of the partition boot sector present. Do you want to perform the restoration of the PBR?", "Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?"));
+ 			cmp = questionMessage(tr("There is a file with the contents of the partition boot sector. Do you want to restore the PBR?", "Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?"));
     			if (cmp == 1)  // wiederherstellen
         			befehl_pbr = "if="+ filename + " of=/dev/" + partition_; 
 		       }
@@ -1022,14 +1021,14 @@ QString attribute;
                    if (part_art == "system")
                 	{
                         QMessageBox::about(this,tr("Note", "Hinweis"),
-         			tr("Restore the system partition is mounted and can not be written back. Please use a live CD.", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
+         			tr("The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0;
 				      } 
                         
                    if (part_art == "home")
                 	{
                         QMessageBox::about(this,tr("Note", "Hinweis"),
-         			tr("Restore the home partition is mounted and can not be written back. Please use a live CD.","Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
+         			tr("The home partition to be restored is mounted and cannot be written back. Please use a live CD.","Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0; 
                         
                 	}
@@ -1041,7 +1040,7 @@ QString attribute;
                           if (err != 0)
                                 {
 				QMessageBox::about(this,tr("Note", "Hinweis"),
-         			tr("The partition ", "Die Partition ") + partition_ + tr(" can not be unmounted. The program is terminated", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
+         			tr("The partition ", "Die Partition ") + partition_ + tr(" cannot be unmounted. The program is aborted.", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
                                 return 0 ; 
                                 }  
                           }
@@ -1100,7 +1099,7 @@ QString attribute;
                this->setCursor(Qt::WaitCursor);
                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 " + userpath;
                system (befehl.toLatin1().data());
-               statusBar()->showMessage(tr("The restoring is performed", "Die Wiederherstellung wird durchgeführt"), 15000); 
+               statusBar()->showMessage(tr("The recovery is performed.", "Die Wiederherstellung wird durchgeführt"), 15000); 
                }
      }
   return 0;              
@@ -1383,7 +1382,7 @@ int anzahl = 0;
            // Ausgabe progressBar durch Timer unterbinden
            stopFlag = 1; 
            QMessageBox::about(this, tr("Note", "Hinweis"), 
-           tr("The partition has been backed up successfully.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
+           tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
         + cnt_special_ + tr(" specials have been backed.", " spezielle Daten wurden gesichert."));
         progressBar->setValue(100);     
@@ -1393,7 +1392,7 @@ int anzahl = 0;
            // Ausgabe progressBar durch Timer unterbinden
            stopFlag = 1; 
            QMessageBox::about(this, tr("Note", "Hinweis"), 
-           tr("The partition has been backed up successfully.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
+           tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
         + cnt_special_ + tr(" specials and the Partition Boot Record have been backed.", " spezielle Daten und der Partition Boot Sektor wurden gesichert."));
         progressBar->setValue(100);     
@@ -1431,7 +1430,7 @@ int anzahl = 0;
           }
        if (part_testen == 109){
 	   QMessageBox::about(this, tr("Note", "Hinweis"),
-          tr("Error saving partition. File too large. Use is FAT-partition?\n", "Die Sicherung der Partition war nicht erfolgreich. Die Datei ist zu groß. Nutzen Sie eine FAT-Partition?\n" ));
+          tr("The backup of the partition was not successful. The file is too large. Use a FAT partition?\n", "Die Sicherung der Partition war nicht erfolgreich. Die Datei ist zu groß. Nutzen Sie eine FAT-Partition?\n" ));
           }
        dummy = datei_auswerten("a");
        int err_regfile = dummy.toInt();    
@@ -1455,7 +1454,7 @@ int anzahl = 0;
          + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") 
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
-         + tr(" specials were not properly backed\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
+         + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
 	  }
         }
        
@@ -1478,7 +1477,7 @@ int err = 0;
    int meldung  = dummy.toInt();
    int i = 0;
    if (meldung == 105) {
-      QMessageBox::about(this, tr("Note", "Hinweis"), tr("cannot restore an archive to a partition which is mounted, unmount it first \n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
+      QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition to be restored is mounted. It must be unmounted first! \n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
       endeThread == 0;
        }
    if (endeThread != 0) { 
@@ -1516,13 +1515,13 @@ int err = 0;
          }
       if (i!=0 ) {
         stopFlag = 1; 
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition is successful back.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been restored.", " spezielle Daten wurden wieder hergestellt."));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition was successfully restored.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data has been restored.", " spezielle Daten wurden wieder hergestellt."));
         }
       if (i==0) {
        stopFlag = 1; 
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition is successful back.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links ", " Links ") + cnt_special_ + tr(" specials and the Partition Boot Record have been restored.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt."));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition was successfully restored.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links ", " Links ") + cnt_special_ + tr(" special data and the partition boot sector were restored.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt."));
         } 
       }  
      if (flag_end == 1) {
@@ -1554,7 +1553,7 @@ int err = 0;
           QMessageBox::about(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
-         + cnt_special_ + tr(" specials have been restored\n.", " spezielle Daten wurden wiederhergestellt\n.")
+         + cnt_special_ + tr(" specials has been restored.\n.", " spezielle Daten wurden wiederhergestellt\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") 
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
          + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
@@ -1564,7 +1563,7 @@ int err = 0;
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
          + cnt_hardlinks_ + tr(" links and ", " Links und ") 
-         + cnt_special_ + tr(" specials and the Partition Boot Record have been restored\n.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt\n.")
+         + cnt_special_ + tr(" special data and the partition boot sector were restored.\n.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") 
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
          + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
@@ -1938,7 +1937,7 @@ int ret = 0;
       pid_qt_fsarchiver = pid_ermitteln_("qt-fsarchiver"); 
       pid_qt_fsarchiver_terminal = pid_ermitteln_("qt-fsarchiver-terminal"); 
       if (flag == 0)
-          ret = questionMessage(tr("Do you really want to break the save or restore from the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+          ret = questionMessage(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
       if (ret == 1)
         {
         attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen

@@ -346,7 +346,7 @@ Qt::CheckState state;
     // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint(img_partition_clone);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("On the hard drive exist a root or a home partition. You must need a live-CD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
       }
        if (state == Qt::Checked)
@@ -355,7 +355,7 @@ Qt::CheckState state;
           attribute = "if=/dev/" + img_partition_clone + " of=" + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt"; 
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
         thread1.setValues( 0,befehl);
-	int ret = questionMessage(tr(" Do you want really built a image from a partition? ", " Wollen Sie wirklich ein Abbild einer Partition erstellen? ") );  
+	int ret = questionMessage(tr("Do you really want to create an image of a partition?  ", " Wollen Sie wirklich ein Abbild einer Partition erstellen? ") );  
               if (ret == 2)
                  return 0;
               if (ret == 1){
@@ -421,7 +421,7 @@ QString attribute;
     // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint(img_partition_clone);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("On the hard drive exist a root or a home partition. You must need a live-CD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
 	}
 	partition_name  = partition_exist.right(partition_exist.size() -4);
@@ -436,7 +436,7 @@ QString attribute;
             attribute = "if=" + folder_clone +  " of=/dev/" +  img_partition_clone + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
             }
-            int ret = questionMessage(tr(" Do you want really restore an image of a partition? ", " Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? ") );  
+            int ret = questionMessage(tr("Do you really want to write back an image of a partition? ", " Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? ") );  
               if (ret == 2)
                  return 0;
               if (ret == 1){
@@ -509,7 +509,7 @@ qDebug() << " partition_exist_size_int" << partition_exist_size_int;
    // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint(partition_exist);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("On the hard drive exist a root or a home partition. You must need a live-CD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
 }
        attribute = "if=" + partition_exist + " of=" + partition_clone + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
@@ -567,7 +567,7 @@ Qt::CheckState state;
     // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint(partition_exist);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("On the hard drive exist a root or a home partition. You must need a live-CD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
 }
 	partition_name  = partition_exist.right(partition_exist.size() -4);
@@ -578,7 +578,7 @@ Qt::CheckState state;
 	        attribute = "if=" + partition_exist + " of=" + folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute; 
  	thread1.setValues( 0,befehl);
-	int ret = questionMessage(tr(" Do you want really built a image from the hard drive? ", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
+	int ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
               if (ret == 2)
                  return 0;
               if (ret == 1){
@@ -608,7 +608,7 @@ QString partition_exist;
 QString partition_exist_size;
 QString attribute;
 Qt::CheckState state;
-      lbl_save->setText (tr("already restored", "bereits zurückgeschrieben"));
+      lbl_save->setText (tr("already written back.", "bereits zurückgeschrieben"));
       state = chk_zip->checkState();
       flag_clone = 4;
       row = listWidget_exist->currentRow();
@@ -646,14 +646,14 @@ QString disk_name;
              disk_name = folder_clone.mid(pos-14,3);
          disk_name = partition_exist.right(partition_exist.size() -4);
          if (folder_clone.indexOf(disk_name) == -1)
-            pos = questionMessage(tr("Partition to restore ", "Die wiederherzustellende Partition ") + disk_name + 
-               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + img_partition_clone + tr(" Do you want to continue restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
+            pos = questionMessage(tr("The partition to be recovered ", "Die wiederherzustellende Partition ") + disk_name + 
+               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + img_partition_clone + tr("Do you still want to perform the recovery?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (pos == 2)  //nicht wiederherstellen
                   return 0;
     // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint(partition_exist);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("On the hard drive exist a root or a home partition. You must need a live-CD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
 	}
 	partition_name  = partition_exist.right(partition_exist.size() -4);
@@ -668,7 +668,7 @@ QString disk_name;
             attribute = "if=" + folder_clone +  " of=" + partition_exist + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt"; 
             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
             }
-            int ret = questionMessage(tr(" Do you want really restore the image of the hard drive? ", " Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? "));
+            int ret = questionMessage(tr("Do you really want to write back an image of the hard disk? ", " Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? "));
               if (ret == 2)
                  return 0;
               if (ret == 1){
@@ -741,7 +741,7 @@ void DialogClone::rdbutton_image_save(){
 
 void DialogClone::rdbutton_image_restore(){
 	treeView_clone->setEnabled(true);
-        bt_save->setText (tr("Restore Harddrive Image", "Festplatten Abbild zurückschreiben"));
+        bt_save->setText (tr("Write hard disk image back", "Festplatten Abbild zurückschreiben"));
         filters_clone << "*gz.fsa" << "*img.fsa" ;
    	dirModel->setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot);
    	dirModel->setNameFilters(filters_clone); 
@@ -776,9 +776,9 @@ void DialogClone::rdbutton_partition_image_restore(){
         listWidget->setEnabled(true);
         listWidget_exist->setHidden(true); 
         label_3->setHidden(true);  
-        lbl_hd->setText (tr("Restore Partition Image", "Image einer Partition zurückschreiben"));
+        lbl_hd->setText (tr("Writing back the image of a partition", "Image einer Partition zurückschreiben"));
         chk_zip->setEnabled(false);
-        bt_save->setText (tr("Restore Partition Image", "Partition Abbild zurückschreiben"));
+        bt_save->setText (tr("Writing back the image of a partition", "Partition Abbild zurückschreiben"));
         filters_clone << "*-part.fsa" << "*-gz.part.fsa" ;
    	dirModel->setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot);
    	dirModel->setNameFilters(filters_clone); 
@@ -882,7 +882,7 @@ int DialogClone::file_check() {
    if (!info.isFile() )
       {
       QMessageBox::about(this, tr("Note", "Hinweis"),
-      tr("You have selected a folder. You must select a gz.fsa file.\n", "Sie haben ein Verzeichnis ausgewählt. Sie müssen eine gz.fsa Datei auswählen\n"));
+      tr("You have selected a directory. You must select a gz.fsa file.\n", "Sie haben ein Verzeichnis ausgewählt. Sie müssen eine gz.fsa Datei auswählen\n"));
       return 1 ;
       }
    return 0;
@@ -1074,30 +1074,30 @@ float dummy1;
                savedBytes->setText(QString::number(partition_exist_size_int,'f',2));
                } 
             if (flag_clone==1 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The clone of the hard drive was successfully.", "Das Klonen der Festplatte war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was successful", "Das Klonen der Festplatte war erfolgreich.\n"));
             if (flag_clone==2 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Backing up the image of the hard disk was successful.", "Das Sichern des Abbildes der Festplatte war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was successful.", "Das Sichern des Abbildes der Festplatte war erfolgreich.\n"));
             if (flag_clone==3 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Backing up the image of a partition was successful.", "Die Sichern des Abbildes der Partition war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the image of the partition was successful.", "Das Sichern des Abbildes der Partition war erfolgreich.\n"));
             if (flag_clone==1 && dialog_auswertung != 0){
             	progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-QMessageBox::about(this, tr("Note", "Hinweis"), tr("The clone of the hard drive was not successfully.", "Das Klonen der Festplatte war nicht erfolgreich.\n"));
+QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was not successful.", "Das Klonen der Festplatte war nicht erfolgreich.\n"));
             }
             if (flag_clone==2 && dialog_auswertung != 0)
                 {
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Backing up the image of the hard disk was not successful.", "Die Sichern des Abbildes der Festplatte war nicht erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was not successful.", "Das Sichern des Abbildes der Festplatte war nicht erfolgreich.\n"));
 		}
             if (flag_clone==3 && dialog_auswertung != 0)
                 {
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Backing up the image of a partition was not successful.", "Die Sichern des Abbildes der Partition war nicht erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Saving the image of the partition was not successful.", "Das Sichern des Abbildes der Partition war nicht erfolgreich.\n"));
 		}
         }
 	thread_run_clone = 0;
@@ -1141,20 +1141,20 @@ float dummy1;
                savedBytes->setText(QString::number(partition_exist_size_int,'f',2));
                } 
             if (flag_clone==4 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The restore of the image of the hard disk was successful.", "Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hard disk image recovery was successful.", "Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.\n"));
             if (flag_clone==5 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The restore of the image of the partition was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich.\n"));
             if (flag_clone==4 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The restore of the image of the hard disk was not successful.", "Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Hard disk image recovery was not successful.", "Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.\n"));
                 }
             if (flag_clone==5 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The restore of the image of the partition was not successful.", "Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was not successful.", "Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.\n"));
                 }
 	}
         thread_run_clone = 0; 
@@ -1475,19 +1475,3 @@ QString DialogClone::Zeit_auslesen_clone(){
     _Datum_clone = _Datum_clone + Datum_akt.setNum(Jahr) ;
     return _Datum_clone;
 }
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-

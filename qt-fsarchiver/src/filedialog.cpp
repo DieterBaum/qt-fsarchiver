@@ -65,7 +65,7 @@ void FileDialog::file_save()
         if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) 
            {
              QMessageBox::about(this,tr("Note", "Hinweis"),
-              tr("Instructions for partition were not recorded written to the file.\n", "Die Hinweise zur Partition wurden nicht in eine Datei geschrieben.\n"));
+              tr("The notes on the partition were not written to a file.\n", "Die Hinweise zur Partition wurden nicht in eine Datei geschrieben.\n"));
             }
         textEdit->toPlainText().toUtf8();
     	int i = file.write((textEdit->toPlainText()).toUtf8());

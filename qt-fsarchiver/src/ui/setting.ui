@@ -110,7 +110,7 @@ compression:</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="vorhandene Dateien * standardmäßig überschreiben">Existing files by default override</string>
+     <string extracomment="vorhandene Dateien * standardmäßig überschreiben">Overwrite existing files by default</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_tip">
@@ -123,7 +123,7 @@ compression:</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Hinweise zur Sicherung * standardmäßig aktivieren">Backup note enable by default</string>
+     <string extracomment="Hinweise zur Sicherung * standardmäßig aktivieren">Activate notes for backup  by default</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_folder">
@@ -136,8 +136,8 @@ compression:</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Verzeichnisse * standardmäßig an * den ursprünglichen * Ort zurückschreiben">Directories by default write 
-back to the original location</string>
+     <string extracomment="Verzeichnisse * standardmäßig an * den ursprünglichen * Ort zurückschreiben">Directories write back
+to the original location by default</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_key">
@@ -189,7 +189,7 @@ back to the original location</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Netzwerkeingabedaten * speichern">Network input data save</string>
+     <string extracomment="Netzwerkeingabedaten * speichern">Save network input data</string>
     </property>
    </widget>
    <widget class="QPushButton" name="cmd_save">
@@ -264,7 +264,7 @@ back to the original location</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Hinweis  für den Zugriff auf Netzwerkrechner anzeigen">Show Note for accessing network computer</string>
+     <string extracomment="Hinweis  für den Zugriff auf Netzwerkrechner anzeigen">Display note for access to network computers</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_sshfs">
@@ -277,7 +277,7 @@ back to the original location</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Hinweis über das Mounten des Netzwerkrechners anzeigen">Show  Note to mount the network computer</string>
+     <string extracomment="Hinweis über das Mounten des Netzwerkrechners anzeigen">Displaying a note about mounting the network computer</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_prg">
@@ -290,7 +290,7 @@ back to the original location</string>
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Hinweise zum Gebrauch des Programms anzeigen">Show  Note about the programm qt5-fsarchiver</string>
+     <string extracomment="Hinweise zum Gebrauch des Programms anzeigen">Display notes on how to use the program qt-fsarchiver</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_hidden">

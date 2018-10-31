@@ -49,7 +49,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>Username and password are stored.</string>
+    <string>Username and password will be saved.</string>
    </property>
    <property name="text">
     <string extracomment="Daten speichern">Save data</string>
@@ -114,7 +114,7 @@
     </rect>
    </property>
    <property name="text">
-    <string extracomment="Im Netz erreichbare Rechner:">Achievable network computer:</string>
+    <string extracomment="Im Netz erreichbare Rechner:">Computers that can be reached in the network:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_net">

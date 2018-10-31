@@ -330,7 +330,7 @@ void DialogNet:: Daten_NFS_eintragen()
         int i = nfs_search_folder_free(rechner_IP); 
    	if ( i==1){
         	QMessageBox::about(this,tr("Note", "Hinweis"),
-        tr("Can not find a shared directory with the NFS Protokoll.\n", "Mit dem NFS Protokoll wurde kein freigegebenes Verzeichnis gefunden.\n"));
+        tr("No released directory was found for the NFS protocol.\n", "Für das NFS Protokoll wurde kein freigegebenes Verzeichnis gefunden.\n"));
 	}
     	this->setCursor(Qt::ArrowCursor); 
 }
@@ -372,7 +372,7 @@ int i = 0;
    i = search_folder_free(rechner_IP); 
    if ( i==1){
         QMessageBox::about(this,tr("Note", "Hinweis"),
-        tr("Can not find a shared directory with the Samba Protokoll.\n", "Mit Samba wurde kein freigegebenes Verzeichnis gefunden.\n"));
+        tr("No shared directory was found for Samba.\n", "Für das Samba Protokoll wurde kein freigegebenes Verzeichnis gefunden.\n"));
 	}
     this->setCursor(Qt::ArrowCursor); 
    
@@ -517,7 +517,7 @@ QString attribute;
         if (rdBt_showDirectories->isChecked() && (folder_dir_net == ""))
            {
           	QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("Please, select the directorie to be saved.\n", "Bitte wählen Sie das zu sichernde Verzeichnis aus.\n"));
+         	tr("Please, select the directory to be saved.\n", "Bitte wählen Sie das zu sichernde Verzeichnis aus.\n"));
 		return 0 ;
            }
         DateiName_net = lineEdit_DateiName->text();
@@ -619,7 +619,7 @@ QString zeichen = "'";
                                 {
 				QMessageBox::about(this, tr("Note", "Hinweis"),
          			tr("The partition ", "Die Partition ")   + partition_net_ + 
-				tr("can not be unmounted. The program is terminated\n", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
+				tr("cannot be unmounted. The program is aborted.\n", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
                                 return 0 ; 
                                 }  
                  	}
@@ -831,7 +831,7 @@ QString optionkey;
           if (state1 == Qt::Checked && keyText.isEmpty())  
               {
                 QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("No key was given for the decryption\n", "Es wurde kein Schlüssel für die Entschlüsselung angegeben.\n"));
+         	tr("No decryption key was specified.\n", "Es wurde kein Schlüssel für die Entschlüsselung angegeben.\n"));
 		return 1 ;
                }
            if (file_net == "")
@@ -843,13 +843,13 @@ QString optionkey;
           if (rdBt_showPartition->isChecked() && (partition_net_ == ""))
            {
           	QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("Please, select the partition to be written back.\n", "Bitte wählen Sie die zurück zu schreibende Partition aus.\n"));
+         	tr("Please select the partition you want to write back.\n", "Bitte wählen Sie die zurück zu schreibende Partition aus.\n"));
 		return 0 ;
            }
           if (rdBt_showDirectories->isChecked() && (folder_dir_net == "" && state != Qt::Checked))
            {
           	QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("Please, select the directorie to be written back.\n", "Bitte wählen Sie das zurück zu schreibende Verzeichnis aus.\n"));
+         	tr("Please select the directory to write back to.\n", "Bitte wählen Sie das zurück zu schreibende Verzeichnis aus.\n"));
 		return 0 ;
            }
            if (rdBt_restoreFsArchiv->isChecked())
@@ -859,7 +859,7 @@ QString optionkey;
          		if (pos > 0 && pos1 >0)
          	   {
            	   QMessageBox::about(this, tr("Note", "Hinweis"),
-         	   tr("You have chosen the wrong recovery file selected.\nThe files should end with. fsa be", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht \nDie Dateiendung muss .fsa sein"));
+         	   tr("You have selected an incorrect recovery file.\nThe file extension must be .fsa.", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht \nDie Dateiendung muss .fsa sein"));
                     return 0;
          	   }
          	}
@@ -923,7 +923,7 @@ QString optionkey;
                 QThread::msleep(10 * sleepfaktor);
 		//Überprüfen, ob in die Originalpartition zurückgeschrieben werden soll
             if (dev_part != "/dev/" + partition_net_ && rdBt_showPartition->isChecked()){
-               cmp = questionMessage_net(tr("Partition to restore the ", "Die wiederherzustellende Partition ") +  "/dev/" + partition_net_ + tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you want to continue restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
+               cmp = questionMessage_net(tr("The partition to be recovered ", "Die wiederherzustellende Partition ") +  "/dev/" + partition_net_ + tr(" does not match the backed up partition.", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you still want to perform the restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (cmp == 2)  //nicht wiederherstellen
                   return 0;
             }
@@ -949,7 +949,7 @@ QString optionkey;
              		if (wert == 0 && dialog_auswertung == 3)
                 	   {
                 	   QMessageBox::about(this, tr("Note", "Hinweis"),
-         		   tr("The restore was canceled by user\n", "Das Zurückschreiben wurde vom Benutzer abgebrochen\n"));
+         		   tr("The write back was aborted by the user.\n", "Das Zurückschreiben wurde vom Benutzer abgebrochen\n"));
                             pushButton_restore->setEnabled(false);
                             return 0;
                 	   }
@@ -974,14 +974,14 @@ QString optionkey;
                        if (part_art_net == "system")
                 	{
                         QMessageBox::about(this, tr("Note", "Hinweis"),
-         			tr("To restore system partition is mounted and can not be restored. Please use a live CD\n", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
+         			tr("The system partition to be restored is mounted and cannot be written back. Please use a live DVD.\n", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0;
 				      } 
                         
                    if (part_art_net == "home")
                 	{
                         QMessageBox::about(this, tr("Note", "Hinweis"),
-         			tr("The restored home partition is mounted and can not be restored. Please use a live CD\n", "Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
+         			tr("The home partition to be restored is mounted and cannot be written back. Please use a live DVD.\n", "Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0; 
                         
                 	}
@@ -1090,7 +1090,7 @@ void DialogNet::starteinstellung(){
             Qt::CheckState state;
             QStringList filters;
             state= chk_hidden->checkState();
-            pushButton_save->setText (tr("Save partition/directorie", "Partition/Verzeichnis sichern"));
+            pushButton_save->setText (tr("Save partition/directory", "Partition/Verzeichnis sichern"));
             lineEdit_DateiName->setEnabled(true);
             chk_pbr->setEnabled(true);
             if(rdBt_saveFsArchiv->isChecked() && rdBt_showDirectories->isChecked())
@@ -1133,7 +1133,7 @@ void DialogNet::rdButton_auslesen()
         }
      if (rdBt_restoreFsArchiv->isChecked())
         {
-		pushButton_save->setText (tr("Partition/directorie restore", "Partition/Verzeichnis zurückschreiben"));
+		pushButton_save->setText (tr("Partition/directory restore", "Partition/Verzeichnis zurückschreiben"));
                 pushButton_restore->setEnabled(true);
                 pushButton_save->setEnabled(false);
                 lineEdit_DateiName->setEnabled(false);
@@ -1231,7 +1231,7 @@ int net_art = cmb_Net->currentIndex();
        this->setCursor(Qt::ArrowCursor);  
     if (k != 0){
    	QMessageBox::about(this, tr("Note", "Hinweis"),
-      	tr("The network computer ",  "Der Netzwerkrechner ") + rechner_IP + tr(" could not be integrated. The program is aborted\n", " konnte nicht eingebunden werden. Das Programm wird abgebrochen\n"));
+      	tr("The network computer ",  "Der Netzwerkrechner ") + rechner_IP + tr(" cannot be embedded. The program is aborted.\n", " konnte nicht eingebunden werden. Das Programm wird abgebrochen\n"));
         return 1;
         }
     if (rdBt_restoreFsArchiv->isChecked()){
@@ -1304,8 +1304,8 @@ int err = 0;
           if (befehl_pbr_net == "")
           {
        QMessageBox::about(this, tr("Note", "Hinweis"), 
-           tr("The partition/directorie has been backed up successfully.\n", "Die Partition/das Verzeichnis wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed.", " spezielle Daten wurden gesichert."));
+           tr("The partition/directory was successfully backed up.\n", "Die Partition/das Verzeichnis wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials has been backed up.", " spezielle Daten wurden gesichert."));
           } 
           if (befehl_pbr_net != "") 
           {
@@ -1364,7 +1364,7 @@ int err = 0;
        QMessageBox::about(this, tr("Note", "Hinweis"), 
        	  tr("The backup of the partition/directorie was only partially successful.\n", "Die Sicherung der Partition/des Verzeichnis war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") 
-         + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" specials were not properly backed\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
+         + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
 	  }
         }
        
@@ -1407,7 +1407,7 @@ void DialogNet::thread2Ready()  {
    int i = 0;
    int err = 0;
    if (meldung == 105) {
-      QMessageBox::about(this, tr("Note", "Hinweis"), tr("cannot restore an archive to a partition which is mounted, unmount it first \n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
+      QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition to be restored is mounted. It must be unmounted first!\n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
       endeThread_net == 0;
        }
    if (endeThread_net != 0) { 
@@ -1444,16 +1444,16 @@ void DialogNet::thread2Ready()  {
          i = 0;
          }
 	if (i!=0 ) { 
-       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition/directorie is successful back.\n", "Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.\n") + 		cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been restored.", " spezielle Daten wurden wieder hergestellt."));
+       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition/directory was successfully restored.\n", "Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.\n") + 		cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been restored.", " spezielle Daten wurden wieder hergestellt."));
         }
 	if (i==0) { 
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition is successful back.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links ", " Links ") + cnt_special_ + tr(" specials and the Partition Boot Record have been restored.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt."));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition was successfully restored.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links ", " Links ") + cnt_special_ + tr(" special data and the partition boot sector were restored.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt."));
         } 
         }
        if (flag_end_net == 1) {
         QMessageBox::about(this, tr("Note", "Hinweis"),
-         tr("The restore of the partition/directorie was break by user!\n", "Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!\n") );
+         tr("The restore of the partition/directory was aborted by the user!\n", "Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!\n") );
 	meldung == 0;
         }
      if (err != 10) {
@@ -1485,16 +1485,16 @@ void DialogNet::thread2Ready()  {
       if (i==0) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition/directorie was only partially successful.\n", "Die Wiederherstellung der Partition/des Verzeicnisses war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
-         + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials and the Partition Boot Record have been restored\n.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt\n.") + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
+         + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data and the partition boot sector were restored.\n.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt\n.") + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                 }
              }
      if (meldung == 102) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), 
-        tr("You tried to restore a partition. The selected file can only restore directories. Please restart the program.\n", "Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.\n"));
+        tr(" You have tried to restore a partition. The selected file can only recover directories. Please restart the program.\n", "Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.\n"));
       }
      if (meldung == 104) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), 
-        tr("You tried to restore a directory. The selected file can only restore partitions. Please restart the program.\n", "Sie haben versucht einVerzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.\n"));
+        tr("You have tried to restore a directory. The selected file can only recover partitions. Please restart the program.\n", "Sie haben versucht einVerzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.\n"));
       }
      if (meldung == 103) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.\n", "Sie haben ein falsches Passwort eingegeben. \n"));
@@ -1722,7 +1722,7 @@ QString pid_qt_fsarchiver;
 QString pid_qt_fsarchiver_terminal;
       pid_qt_fsarchiver = window.pid_ermitteln_("qt-fsarchiver"); 
       pid_qt_fsarchiver_terminal = window.pid_ermitteln_("qt-fsarchiver-terminal");  
-      int ret = questionMessage(tr("Do you want really break the save or restore from the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+      int ret = questionMessage(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
       if (ret == 1)
         {
 	attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
@@ -1807,9 +1807,9 @@ int i = 0;
         setting.endGroup();
         if (auswertung ==1)
               QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("When using ssh, the program must be started in a terminal with sudo qt-fsarchiver. You may need to restart the program.\n", "Bei der Verwendung von ssh muss das Program in einem Terminal mit sudo qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.\n"));
+         	tr("If ssh is used, the program must be started in a terminal with sudo qt-fsarchiver. You may need to restart the program.\n", "Bei der Verwendung von ssh muss das Program in einem Terminal mit sudo qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.\n"));
         if (auswertung ==1){
-             int ret = questionMessage(tr("If you have not set up SSH authentication, you must now enter the password in the terminal. Should this continue to be displayed? You can change this in the basic settings.", "Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern"));
+             int ret = questionMessage(tr("If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.", "Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern"));
              if (ret == 2){
 		//Basiseinstellungen ändern
         	QSettings setting("qt-fsarchiver", "qt-fsarchiver");
@@ -1832,7 +1832,7 @@ int i = 0;
         if ( i==256){
 		QString str= QString::number(i);
 		QMessageBox::about(this, tr("Note", "Hinweis"),
-         			tr("The backup or restore with ssh is not possible. Exit the program and restart it again in the terminal with root right.\n", " Die Sicherung oder Wiederherstellung mit ssh ist nicht möglich. Beenden Sie  das Programm und starten es erneut im Terminal mit Root-Rechten\n"));
+         			tr("Backup or restore with ssh is not possible. Exit the program and restart it in the terminal with root privileges.\n", " Die Sicherung oder Wiederherstellung mit ssh ist nicht möglich. Beenden Sie  das Programm und starten es erneut im Terminal mit Root-Rechten\n"));
          return 256;
          }
         if (i == 0)
@@ -1850,7 +1850,7 @@ int ret_;
         int auswertung = setting.value("ssh").toInt();
         setting.endGroup();
         if (auswertung ==1 && show1 == 0){
-        int ret_ = questionMessage(tr("When you first contact the computer with ssh, you must do the following:  In a terminal enter these commands: 1.In the open terminal you must confirm the RSA key fingerprint with yes. 2.Enter the password for accessing the server and 3.leave the server with the command exit. Do you want to enter the RSA key fingerprint now?\n", "Wenn Sie noch nicht erfolgreich per ssh auf den Rechner(Server) zugegriffen haben, müssen Sie nun folgendes tun: 1.In dem geöffneten Terminal müssen Sie den RSA key fingerprint mit yes bestätigen. 2.Geben Sie das Passwort für den Zugriff auf den Server ein  und 3.verlassen Sie den Server mit dem Befehl exit. Wollen Sie nun den RSA key fingerprint eingeben?\n")); 
+        int ret_ = questionMessage(tr("If you have not yet successfully accessed the computer (server) via ssh, you must now do the following: 1.In the opened terminal, you must confirm the RSA key fingerprint with yes. 2.enter the password for the access to the server and 3.leave the server with the command exit. Do you now want to enter the RSA key fingerprint?\n", "Wenn Sie noch nicht erfolgreich per ssh auf den Rechner(Server) zugegriffen haben, müssen Sie nun folgendes tun: 1.In dem geöffneten Terminal müssen Sie den RSA key fingerprint mit yes bestätigen. 2.Geben Sie das Passwort für den Zugriff auf den Server ein  und 3.verlassen Sie den Server mit dem Befehl exit. Wollen Sie nun den RSA key fingerprint eingeben?\n")); 
         if (ret_ == 1)
            {
            befehl = "ssh " + user_net + "@" +  rechner_IP;
@@ -1860,7 +1860,7 @@ int ret_;
         //Basiseinstellungen ändern
         //QSettings setting("qt-fsarchiver", "qt-fsarchiver");
          if (auswertung == 1  && show1 == 0){
-            int ret = questionMessage(tr("Should this continue to be displayed? You can change this in the basic settings.", "Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern."));
+            int ret = questionMessage(tr("Do you still want to see this message? You can change this in the basic settings.", "Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern."));
             if (ret == 2){ 
               setting.beginGroup("Basiseinstellungen");
               setting.setValue("dummy",0);

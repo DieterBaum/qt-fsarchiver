@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="text">
-    <string extracomment="Name der Sicherungsdatei:">Restore file name:</string>
+    <string extracomment="Name der Sicherungsdatei:">Name of the backup file:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_partition">
@@ -68,7 +68,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>Select the partition to be backed up or restored.</string>
+    <string>Select the partition to back up or write back to.</string>
    </property>
    <property name="text">
     <string extracomment="vorhandene Partitionen:">Existing partitions/directories:</string>
@@ -90,7 +90,7 @@
     </size>
    </property>
    <property name="title">
-    <string extracomment="vorgesehene Aktion:">Proposed action:</string>
+    <string extracomment="vorgesehene Aktion:">Planned action:</string>
    </property>
    <property name="flat">
     <bool>true</bool>
@@ -122,8 +122,8 @@
      </rect>
     </property>
     <property name="text">
-     <string extracomment="Partition mit fs-Archiver * zurückschreiben">&amp;Restore partition 
- or directory</string>
+     <string extracomment="Partition mit fs-Archiver * zurückschreiben">&amp;Writing back partitions
+ with fs-Archiver</string>
     </property>
    </widget>
    <zorder>rdBt_restoreFsArchiv</zorder>
@@ -176,7 +176,7 @@
     <string>Start the backup of a partition.</string>
    </property>
    <property name="text">
-    <string extracomment="Partition sichern">Save partition/directorie</string>
+    <string extracomment="Partition sichern">Save partition/directory</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_DateiName">
@@ -251,7 +251,7 @@
     <string>Start restore a partition.</string>
    </property>
    <property name="text">
-    <string extracomment="Partition wiederherstellen">Partition/directorie restore</string>
+    <string extracomment="Partition wiederherstellen">Partition/directory restore</string>
    </property>
   </widget>
   <widget class="QFrame" name="frame">
@@ -395,7 +395,7 @@ files/directories:</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>Directory in which the partition is backed up or from the recovery file is removed.</string>
+    <string>Directory in which the partition is backed up or from which the recovery file is selected.</string>
    </property>
    <property name="text">
     <string extracomment="Bitte wählen Sie einen freigegebene Ordner aus:">Please select the folder.</string>
@@ -523,7 +523,7 @@ setting:</string>
      </rect>
     </property>
     <property name="toolTip">
-     <string>Same backup files are overwritten without prior consultation.</string>
+     <string>Identical backup files are overwritten without prior consultation.</string>
     </property>
     <property name="text">
      <string>available backup overwrite</string>
@@ -539,7 +539,7 @@ setting:</string>
      </rect>
     </property>
     <property name="text">
-     <string>Stock Split on DVD size</string>
+     <string>Split backup file to DVD size:</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_key">
@@ -582,7 +582,7 @@ backup key</string>
      </rect>
     </property>
     <property name="text">
-     <string>Backup restore to the Origin</string>
+     <string>Writing a backup back to the original path.</string>
     </property>
    </widget>
    <widget class="QComboBox" name="cmb_zstd_net">

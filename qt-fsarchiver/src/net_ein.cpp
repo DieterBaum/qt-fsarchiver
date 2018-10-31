@@ -287,7 +287,7 @@ QString hostname_;
         //Ermitteln widget_net Belegung
         if (widget_net[0] == "" && flag == "1"){
    		QMessageBox::about(this,tr("Note","Hinweis"),
-      		tr("There is currently no available network computer.\n","Es ist derzeit kein Netzwerkrechner.\n"));
+      		tr("There is currently no network computer available.\n","Es ist derzeit kein Netzwerkrechner erreichbar.\n"));
         return 1;
    }
    
@@ -469,23 +469,23 @@ setting.beginGroup(comNet_name);
      if (comNet == "" && dialog_auswertung == 6)
        {
        QMessageBox::about(this, tr("Note", "Hinweis"),
-      tr("You must select the computer on which the backup data to be written\n", "Sie müssen den Rechner auswählen, auf den die Sicherungsdaten geschrieben werden sollen\n"));
+      tr("You must select the computer on which the backup data is to be written.\n", "Sie müssen den Rechner auswählen, auf den die Sicherungsdaten geschrieben werden sollen\n"));
       return 1 ;
       }
      if (comNet == "" && dialog_auswertung == 7)
       {
        QMessageBox::about(this, tr("Note", "Hinweis"),
-       tr("You must select your computer from which the backup data to be written back\n", "Sie müssen den Rechner auswählen, von dem die Sicherungsdaten zurück geschrieben werden sollen\n"));
+       tr("You must select the computer from which the backup data is to be written back.\n", "Sie müssen den Rechner auswählen, von dem die Sicherungsdaten zurück geschrieben werden sollen\n"));
       return 1 ;
       }
      if (user_net_ein == "" )
       {
        QMessageBox::about(this, tr("Note","Hinweis"),
-      tr("You must enter the user name. Can not otherwise be accessible to network computers\n", "Sie müssen den Benutzernamen eingeben. Sonst kann nicht auf Netzrechner zugegriffen werden\n"));
+      tr("You must enter the user name. Otherwise network computers cannot be accessed.\n", "Sie müssen den Benutzernamen eingeben. Sonst kann nicht auf Netzrechner zugegriffen werden\n"));
       return 1 ;
       }
      if (key == "" ) {
-          int ret = questionMessage(tr("Is it true that you have entered a key? (NFS dont need a key)", "Ist das richtig, dass Sie keinen Schlüssel eingegeben haben? (NFS benötigt keinen Schlüssel)"));
+          int ret = questionMessage(tr("Is that correct that you have not entered a key? (NFS does not need a key.", "Ist das richtig, dass Sie keinen Schlüssel eingegeben haben? (NFS benötigt keinen Schlüssel)"));
               if (ret == 2)
               return 1;
       }

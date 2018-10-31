@@ -24,12 +24,12 @@
    </property>
    <item>
     <property name="text">
-     <string extracomment="nur den Bootloaderbereich wieder herstellen">Only the boot loader area to restore</string>
+     <string extracomment="nur den Bootloaderbereich wieder herstellen">Restore only the bootloader area</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string extracomment="Bootloaderbereich und die Partitionstabelle wieder herstellen">Bootloader area and restore the partition table</string>
+     <string extracomment="Bootloaderbereich und die Partitionstabelle wieder herstellen">Restoring the bootloader area and partition table</string>
     </property>
    </item>
    <item>
@@ -39,7 +39,7 @@
    </item>
    <item>
     <property name="text">
-     <string extracomment="Verborgenen Bereich  wieder herstellen. (Ohne  Bootloader und ohne Partitionstabelle).">Secretly area to restore. (Without Boot Loader and without partition table).</string>
+     <string extracomment="Verborgenen Bereich  wieder herstellen. (Ohne  Bootloader und ohne Partitionstabelle).">Restore hidden area. (Without bootloader and without partition table).</string>
     </property>
    </item>
    <item>
@@ -113,8 +113,8 @@
     </rect>
    </property>
    <property name="text">
-    <string extracomment="MBR von dieser dieser Festplatte sichern / wiederherstellen:">MBR of that drive this
-Backup / restore:</string>
+    <string extracomment="MBR von dieser dieser Festplatte sichern / wiederherstellen:">Backup / restore MBR
+from this hard disk:</string>
    </property>
   </widget>
   <widget class="QComboBox" name="cmb_disk">
