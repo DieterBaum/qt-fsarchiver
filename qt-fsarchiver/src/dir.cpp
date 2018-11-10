@@ -23,7 +23,7 @@ extern "C" {
 
 extern int dialog_auswertung;
 extern int anzahl_disk;
-extern QString parameter[10];
+extern QString parameter[15];
 extern QString password;
 extern QString user;
 QString folder_dir;
@@ -213,7 +213,6 @@ QString keyText = "";
 Qt::CheckState state1;
 QString optionkey;
 QString attribute;
-   
    	QModelIndex index = treeView_dir->currentIndex();
    	folder_dir.append  (dirModel->filePath(index));
    	folder_dir =  (dirModel->filePath(index));
@@ -294,6 +293,7 @@ QString attribute;
                indizierung = indizierung + 2;  
 	      }
         dummy = folder_dir;
+qDebug() << "folder_dir" << dummy;
       	while (pos != -1)
       	{
       		pos = dummy.indexOf("/");
@@ -590,7 +590,7 @@ void DialogDIR::thread2Ready()  {
        dummy = datei_auswerten_dir("p");
        err = dummy.toInt();
        QMessageBox::about(this, tr("Note", "Hinweis"), tr("The restoring of the directory was successful.\n", "Die Wiederherstellung des Verzeichnisses war erfolgreich.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been restored.", " spezielle Daten wurden wieder hergestellt."));
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data has been restored.", " spezielle Daten wurden wieder hergestellt."));
         }
    if (flag_end_dir == 1) {
         QMessageBox::about(this, tr("Note", "Hinweis"),

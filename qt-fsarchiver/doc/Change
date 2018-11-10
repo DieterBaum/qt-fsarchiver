@@ -1,6 +1,10 @@
 ===========================================================================================================
-* qt5-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt4-fsarchiver] 
+* qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt4-fsarchiver] 
 ===========================================================================================================
+* qt5-fsarchiver-0.8.5-2 November 12, 2018.
+     - qt5-fsarchiver has been newly programmed and split into qt-fsarchiver and qt-fsarchiver-terminal.
+     - qt-fsarchiver can now be started without root privileges.
+     - Both programs qt-fsarchiver and qt-fsarchiver-terminal must be installed.
 * qt5-fsarchiver-0.8.5-1 October 5, 2018.
      - small corrections.
 * qt5-fsarchiver-0.8.5-0 August 31,2018.

@@ -112,11 +112,13 @@ QString space1;
 QString space2;
 QString space3;
 QString space4;
+QString space5;
 int faktor1 = 0;
         space1.fill (' ',1); 
         space2.fill (' ',2); 
         space3.fill (' ',5); 
         space4.fill (' ',2); 
+        space5.fill (' ',4); 
         QStringList disk;
         QString disk_;
         QString filename = userpath_clone + "/.config/qt-fsarchiver/disk2.txt";
@@ -132,7 +134,7 @@ int faktor1 = 0;
             if (disk_.indexOf("nv") > 0)
                 {
                 disk = disk_.split(QRegExp("\\s+"));
-                   if (disk[4].size() == 6)      //nvme
+                   if (disk[4].size() == 7)      //nvme
                       {
                        part_clone[j][0] = disk[4] + ":";  //nvme
                        size = disk[3].size();
@@ -149,15 +151,15 @@ int faktor1 = 0;
                          if(disk[3].size() > 9)
                             part_clone[j][3]= disk[3].left(disk[3].size() -9);
                        part_size = part_size/faktor/faktor1;
-                       disk_clone[j] = part_clone[j][0] + space4 + space2 + QString::number(part_size,'f',2) + " MB";
+                       disk_clone[j] = part_clone[j][0] + space1 + space2 + QString::number(part_size,'f',2) + " MB";
                        if(part_size >= 10)
-                          disk_clone[j] = part_clone[j][0] + space4 + space1 + QString::number(part_size,'f',2) + " MB";
+                          disk_clone[j] = part_clone[j][0] + space1 + space1 + QString::number(part_size,'f',2) + " MB";
                        if(part_size >= 100)
-                          disk_clone[j] = part_clone[j][0] + space4 + QString::number(part_size) + " MB";
+                          disk_clone[j] = part_clone[j][0] + space1 + QString::number(part_size) + " MB";
                        if(part_size >= 1000)
                            {
                             part_size = part_size/1000;
-                            disk_clone[j] = part_clone[j][0] + space3 + space2 + QString::number(part_size,'f',2) + " GB";
+                            disk_clone[j] = part_clone[j][0] + space5 + space2 + QString::number(part_size,'f',2) + " GB";
                            } 
                        }
                        if (size == 7 or size == 8 or size == 9)
@@ -172,15 +174,15 @@ int faktor1 = 0;
                          if(disk[3].size() > 9)
                             part_clone[j][3]= disk[3].left(disk[3].size() -9);
                          part_size = part_size/faktor/faktor1;
-                         disk_clone[j] = part_clone[j][0] + space4 + space2 + QString::number(part_size,'f',2) + " GB";
+                         disk_clone[j] = part_clone[j][0] + space1 + space2 + QString::number(part_size,'f',2) + " GB";
                          if(part_size >= 10)
-                            disk_clone[j] = part_clone[j][0] + space4 + space1 + QString::number(part_size,'f',2) + " GB";
+                            disk_clone[j] = part_clone[j][0] + space1 + space1 + QString::number(part_size,'f',2) + " GB";
                          if(part_size >= 100)
-                            disk_clone[j] = part_clone[j][0] + space4 + QString::number(part_size,'f',2) + " GB";
+                            disk_clone[j] = part_clone[j][0] + space1 + QString::number(part_size,'f',2) + " GB";
                          if(part_size >= 1000)
                            {
                             part_size = part_size/1000;
-                            disk_clone[j] = part_clone[j][0] + space3 + space2 + QString::number(part_size,'f',2) + " TB";
+                            disk_clone[j] = part_clone[j][0] + space5 + space2 + QString::number(part_size,'f',2) + " TB";
                            } 
                        } 
                        if (size == 10 or size == 11 or size == 12)
@@ -195,15 +197,15 @@ int faktor1 = 0;
                          if(disk[3].size() > 9)
                             part_clone[j][3]= disk[3].left(disk[3].size() -9);
                          part_size = part_size/faktor/faktor1;
-                         disk_clone[j] = part_clone[j][0] + space4 + space2 + QString::number(part_size,'f',2) + " TB";
+                         disk_clone[j] = part_clone[j][0] + space1 + space2 + QString::number(part_size,'f',2) + " TB";
                          if(part_size >= 10)
-                            disk_clone[j] = part_clone[j][0] + space4 + space1 + QString::number(part_size,'f',2) + " TB";
+                            disk_clone[j] = part_clone[j][0] + space1 + space1 + QString::number(part_size,'f',2) + " TB";
                          if(part_size >= 100)
-                            disk_clone[j] = part_clone[j][0] + space4 + QString::number(part_size) + " TB"; 
+                            disk_clone[j] = part_clone[j][0] + space1 + QString::number(part_size) + " TB"; 
                          if(part_size >= 1000)
                            {
                             part_size = part_size/1000;
-                            disk_clone[j] = part_clone[j][0] + space3 + space2 + QString::number(part_size,'f',2) + " PB";
+                            disk_clone[j] = part_clone[j][0] + space5 + space2 + QString::number(part_size,'f',2) + " PB";
                            }   
                        }
                    j++;
@@ -414,7 +416,7 @@ QString attribute;
             part_name= "s" + part_name;
          if (folder_clone.indexOf(img_partition_clone) == -1)
             pos = questionMessage(tr("Partition to restore ", "Die wiederherzustellende Partition ") + part_name + 
-               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + img_partition_clone + tr(" Do you want to continue restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
+               tr(" does not match the backed up partition.", " stimmt nicht mit der gesicherten ") + img_partition_clone + tr(" Do you want to continue restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (pos == 2)  //nicht wiederherstellen
                   return 0;
 // Image wiederherstellung nicht ausführen
@@ -1052,7 +1054,7 @@ float dummy1;
 	endeThread_clone = endeThread_clone + 1;
         if (endeThread_clone > 0) {
  	    bt_end->setEnabled(true);
-            bt_save->setEnabled(true);
+            //bt_save->setEnabled(true);
             progressBar->setValue(100);
        	    SekundeRemaining ->setText("0");
             MinuteRemaining ->setText("0");
@@ -1074,7 +1076,7 @@ float dummy1;
                savedBytes->setText(QString::number(partition_exist_size_int,'f',2));
                } 
             if (flag_clone==1 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was successful", "Das Klonen der Festplatte war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was successful.", "Das Klonen der Festplatte war erfolgreich.\n"));
             if (flag_clone==2 && dialog_auswertung == 0)
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was successful.", "Das Sichern des Abbildes der Festplatte war erfolgreich.\n"));
             if (flag_clone==3 && dialog_auswertung == 0)
@@ -1119,7 +1121,7 @@ float dummy1;
 	endeThread_clone = endeThread_clone + 1;
         if (endeThread_clone > 0) {
 	           bt_end->setEnabled(true);
-            bt_save->setEnabled(true);
+            //bt_save->setEnabled(true);
       	    progressBar->setValue(100);
        	    SekundeRemaining ->setText("0");
             MinuteRemaining ->setText("0");
@@ -1141,20 +1143,20 @@ float dummy1;
                savedBytes->setText(QString::number(partition_exist_size_int,'f',2));
                } 
             if (flag_clone==4 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hard disk image recovery was successful.", "Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hard disk image recovery was successful.", "Die Wiederherstellung des Abbildes der Festplatte war erfolgreich."));
             if (flag_clone==5 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich."));
             if (flag_clone==4 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Hard disk image recovery was not successful.", "Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Hard disk image recovery was not successful.", "Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich."));
                 }
             if (flag_clone==5 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was not successful.", "Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.\n"));
+            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was not successful.", "Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich."));
                 }
 	}
         thread_run_clone = 0; 

@@ -12,7 +12,7 @@ qt-fsarchiver ist ein Programm mit einer grafischen Oberfläche zur einfachen Be
 qt-fsarchiver wurde aufgeteilt in ein Programm mit grafischer Oberfläche und in ein Terminal-Programm.
 Es müssen zwingend beide Programme installiert werden.
 Das grafische Programm kann ohne Root-Rechte gestartet werden.
-Somit wurden die Startprobleme mit gksu/gksudo, das nicht mehr installierbar ist,  mit Wayland und Snap-Programmen behoben. 
+Somit wurden die Startprobleme mit gksu/gksudo, das nicht mehr installierbar ist, mit Wayland und Snap-Programmen behoben. 
 
 Der Quellcode kann auf allen auf Debian basierenden System, auf Suse und Fedora installiert werden.
 Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rpm-Pakete vorhanden.
@@ -32,7 +32,7 @@ Anstatt libzst1-dev wird in einigen Systemen libzst-dev installiert. btrfs-tools
 In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils qt5-default
 Wenn Sie ssh (secureshell) für den Zugriff auf weitere Rechner im Netzwerk nutzen wollen, müssen Sie noch sshpass individuell installieren.
 
-In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs qt5-default
+In Fedora werden die Abhängigkeiten mit Root-Rechten (sudo su) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs qt5-default
 Bei einem 64-bit System müssen Sie zusätzlich lrelease installieren: dnf install qt5-linguist
 32-bit Systeme werden nicht mehr unterstützt.
 
@@ -59,12 +59,12 @@ Bestätigen Sie deisen Befehl mit Enter
 sudo apt update
 sudo apt install qt-fsarchiver
 
-Sowohl bei den deb-Paketen als auch bei der launchpadinstallation wird qt-fsarchiver-terminal mitinstalliert.
+Sowohl bei den deb-Paketen als auch bei der Launchpadinstallation wird qt-fsarchiver-terminal mitinstalliert.
 
 Programmaufruf:
 Meistens werden Starter unter Zubehör installiert. Mit Doppelklick wird qt-fsarchiver gestartet.
 qt-fsarchiver im Terminal starten:
-Befehl: qt-fsarchiver
+Befehl: /usr/sbin/qt-fsarchiver
 
 Die Handhabung von qt-fsarchiver ist einfach:
 Über den Menüpunkt "Aktionen" oder über die Werkzeugleiste können folgende Aktionen ausgewählt werden: "Partitionen sichern/zurückschreiben", "Partitionen sichern/zurückschreiben über ein Netzwerk", "MBR/GPT sichern/zurückschreiben", "Verzeichnisse sichern/zurückschreiben" und "Festplatten klonen, Festplattenimage erzeuegen/zurückspielen". Zusätzlich kann über den Menüpunkt "Einstellungen" Basiseinstellungen wie Anzahl der Prozessorkerne oder Kompressionsstärke und Weiteres eingestellt werden.
@@ -121,5 +121,5 @@ Beim Starten von qt-fsarchiver werden alle nicht eingebundenen Partionen unter /
 
 Qt-fsarchiver kann nur einmal aufgerufen werden. Das mehrmalige starten wird verhindert.
 
-Weitere Hinweise können den Webseiten http://wiki.ubuntuusers.de/qt4-fsarchiver und http://wiki.ubuntuusers.de/fsarchiver entnommen werden.
+Weitere Hinweise können den Webseiten http://wiki.ubuntuusers.de/qt4-fsarchiver (http://wiki.ubuntuusers.de/qt-fsarchiver) und http://wiki.ubuntuusers.de/fsarchiver entnommen werden.
 Informationen über fsarchiver können Sie über die englische Webseite von fsarchiver http://www.fsarchiver.org/Main_Page erhalten.

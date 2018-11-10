@@ -775,7 +775,7 @@ with fsarchi&amp;ver</string>
      <normaloff>:/src/images/applications-internet.png</normaloff>:/src/images/applications-internet.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Save a partition/directorie on network</string>
+    <string>&amp;Save a partition on network</string>
    </property>
   </action>
   <action name="action_partition_restore_net">
@@ -784,7 +784,7 @@ with fsarchi&amp;ver</string>
      <normaloff>:/src/images/applications-internet-ein.png</normaloff>:/src/images/applications-internet-ein.png</iconset>
    </property>
    <property name="text">
-    <string>Restore &amp;a partition/directorie on network</string>
+    <string>Restore &amp;a partition on network</string>
    </property>
   </action>
   <action name="breakProcess">

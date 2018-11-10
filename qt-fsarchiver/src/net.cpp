@@ -110,9 +110,6 @@ setupUi(this); // this sets up GUI
         connect( bt_toParent, SIGNAL( clicked() ), this, SLOT(button_toParent()));
         connect(treeWidget, SIGNAL(itemActivated(QTreeWidgetItem *, int)), this, SLOT(listWidget_tree_auslesen(QTreeWidgetItem *, int)));
         connect( bt_treeWiget, SIGNAL( clicked() ), this, SLOT(treeWidget_auslesen()));
-        connect( rdBt_showPartition, SIGNAL( clicked() ), this, SLOT(save_partitions()));
-        connect( rdBt_showDirectories, SIGNAL( clicked() ), this, SLOT(save_directories()));
-        connect( chk_hidden, SIGNAL( clicked() ), this, SLOT(chkhidden()));
         if (rdBt_saveFsArchiv->isChecked()){
   	    pushButton_restore->setEnabled(false);
             pushButton_save->setEnabled(true);}
@@ -153,18 +150,9 @@ setupUi(this); // this sets up GUI
    	QFile file1(userpath_net + "/.config/qt-fsarchiver/qt-fsarchiver.conf");
         cmb_Net -> setCurrentIndex(0);
         treeWidget->setHidden(true);
-        rdBt_showPartition->setChecked(Qt::Checked);
-        if (rdBt_showPartition->isChecked())
-           {
-           listWidget ->setHidden(false);
-           treeView_dir ->setHidden(true);
-           }
-        if (rdBt_showDirectories->isChecked())
-           {
-           listWidget ->setHidden(true);
-           treeView_dir ->setHidden(false);
-           }
-   if (file1.exists()) {
+        listWidget ->setHidden(false);
+        treeView_dir ->setHidden(true);
+    if (file1.exists()) {
         QSettings setting("qt-fsarchiver", "qt-fsarchiver");
         setting.beginGroup("Basiseinstellungen");
         int auswertung = setting.value("Kompression").toInt();
@@ -187,9 +175,6 @@ setupUi(this); // this sets up GUI
         auswertung = setting.value("key").toInt();
         if (auswertung ==1)
            chk_key->setChecked(Qt::Checked);
-        auswertung = setting.value("hidden").toInt();
-        if (auswertung ==1)
-           chk_hidden->setChecked(Qt::Checked); 
         auswertung = setting.value("place").toInt();
         if (auswertung ==1)
            chk_path->setChecked(Qt::Checked); 
@@ -508,20 +493,14 @@ QString attribute;
          	tr("Please, select a folder.\n", "Bitte wählen Sie einen Ordner aus.\n"));
 		return 0 ;
            }
-        if (rdBt_showPartition->isChecked() && (partition_net_ == ""))
+        if (partition_net_ == "")
            {
           	QMessageBox::about(this,tr("Note", "Hinweis"),
          	tr("Please, select the partition to be saved.\n", "Bitte wählen Sie die zu sichernde Partition aus.\n"));
 		return 0 ;
            }
-        if (rdBt_showDirectories->isChecked() && (folder_dir_net == ""))
-           {
-          	QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("Please, select the directory to be saved.\n", "Bitte wählen Sie das zu sichernde Verzeichnis aus.\n"));
-		return 0 ;
-           }
         DateiName_net = lineEdit_DateiName->text();
-        if (DateiName_net == "" && rdBt_showPartition->isChecked())
+        if (DateiName_net == "")
            {
           	QMessageBox::about(this, tr("Note", "Hinweis"),
          	tr("Please, select the filename of the backup.\n", "Bitte wählen Sie den Dateinamen der Sicherung aus.\n"));
@@ -540,7 +519,7 @@ QString attribute;
           if (found > -1)
              	DateiName_net.replace(found, 1, "-"); 
         }
-        if (file.open(QIODevice::ReadOnly) && rdBt_showPartition->isChecked())
+        if (file.open(QIODevice::ReadOnly))
         	  {
                 QMessageBox::about(this, tr("Note", "Hinweis"),
          	tr("You have selected a file. You must select a directory\n", "Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen\n"));
@@ -562,7 +541,6 @@ QString zeichen = "'";
        if (net_art == 2){ //NFS
            attribute = rechner_IP + ":" + folder_free +  " " + userpath_net + "/.qt-fs-client" ; //mounten
            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 2 " + attribute; 
-           befehl = "sshfs -o nonempty " + rechner_IP + ":" + folder_free +  " " + userpath_net + "/.qt-fs-client" ;
            k = system (befehl.toLatin1().data());
 	} 
         QThread::msleep(50 * sleepfaktor);
@@ -578,15 +556,12 @@ QString zeichen = "'";
             zip = 3;
          int liveFlag = 0;
          int row;
-         if (rdBt_showPartition->isChecked())
-         {
-	 	// Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
-         	row = listWidget->currentRow();
-                text = window.beschreibungstext("/dev/" + partition_net_, DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
-                filedialog.werte_uebergeben(text);
-                //Überprüfung ob gemounted
-         } 
-         if (!window.is_mounted(partition_net_.toLatin1().data()) && rdBt_showPartition->isChecked()) 
+         // Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
+         row = listWidget->currentRow();
+         text = window.beschreibungstext("/dev/" + partition_net_, DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
+         filedialog.werte_uebergeben(text);
+         //Überprüfung ob gemounted
+         if (!window.is_mounted(partition_net_.toLatin1().data())) 
             {
 		   UUID_net = window.UUID_auslesen(listwidgetrow);
 		   part_art_net = window.mtab_einlesen("/dev/" + partition_net_);
@@ -632,10 +607,7 @@ QString zeichen = "'";
                          state3 = chk_split->checkState();
                          keyText = lineKey->text();
                          parameter[0] = "fsarchiver";
-                         if (rdBt_showPartition->isChecked())
-       			 	           parameter[1] = "savefs"; 
-                         if (rdBt_showDirectories->isChecked())
-                                parameter[1] = "savedir"; 
+                         parameter[1] = "savefs"; 
                          zip = cmb_zip->currentIndex();
                                 if (zip < 10)
                                 {
@@ -683,9 +655,7 @@ QString zeichen = "'";
 	    			      parameter[indizierung + 1] = "-a";
                                       indizierung = indizierung + 2; 
                                       }
-				   if (rdBt_showPartition->isChecked())
-         		          {
-                                  QFile file_suse(".snapshots");
+				  QFile file_suse(".snapshots");
                                   if (file.exists())
                                     {
                                     parameter[indizierung] = "--exclude=./snapshots";
@@ -699,55 +669,15 @@ QString zeichen = "'";
 				state = chk_pbr->checkState();
 				if (state == Qt::Checked)
 				    system (befehl_pbr_net.toLatin1().data());
-                                } 
-                                  if (rdBt_showPartition->isChecked())
-                                     {
-                                      parameter[indizierung] = (folder_net + "/" + DateiName_net + "-" + _Datum_net + ".fsa");
-                                      parameter[indizierung + 1] = ("/dev/" + partition_net_);
-                                     }
-                                    if (rdBt_showDirectories->isChecked())
-                                     {
-                                     parameter[indizierung] = (folder_net + folder_dir_net + "-" + _Datum_net + ".fsa");
-                                     // Schrägstrich in minus wandeln
-                                     QRegExp rx("(\\/)");
-                                     dev_sdx_ = folder_net + folder_dir_net + "-" + _Datum_net + ".fsa";
-                                     while ((pos = rx.indexIn(dev_sdx_, pos)) != -1) {
-                                           dev_sdx << rx.cap(1);
-    	                                   pos += rx.matchedLength();
-                                           i++;
-                                           }
- 				     dev_sdx = dev_sdx_.split("/"); 
-          			     for (j=0;j < i; j++)
-              				{
-              				dummy = dev_sdx[j];  
-              				if (dummy.indexOf("qt-fs-client") > -1) 
-                 				break;
-					}
-           				dummy = " ";
-                                    for (k = 1; k < j +1; k++)
-           				{
-           				dummy = dummy + "/" + dev_sdx[k];
-           				}
-           				dummy = dummy + "/" + dev_sdx[j + 1];
-				    for (j=j+2; j<i+1; j++)
-           				{
-              				dummy = dummy + "_" + dev_sdx[j];
-				        } 
-                                     parameter[indizierung] = dummy;
-                                     parameter[indizierung + 1] = folder_dir_net;
-                                  }
-       			 	  QFile f(parameter[indizierung]);
-                                  if  (rdBt_showPartition->isChecked() && parameter[4] != "-o" && (f.exists())){
+                                parameter[indizierung] = (folder_net + "/" + DateiName_net + "-" + _Datum_net + ".fsa");
+                                parameter[indizierung + 1] = ("/dev/" + partition_net_);
+                                QFile f(parameter[indizierung]);
+                                if  (parameter[4] != "-o" && (f.exists())){
 				       QMessageBox::about(this, tr("Note", "Hinweis"),
          	  			  tr("The partition file ", "Die Partitionsdatei ")   + parameter[indizierung] + tr("already exists. The backup is not performed\n", " ist bereits vorhanden. Die Sicherung wird nicht durchgeführt\n"));
                   			  return 0 ; 
-               				}
-                                   if  (rdBt_showDirectories->isChecked() && parameter[4] != "-o" && (f.exists())){
-				       QMessageBox::about(this, tr("Note", "Hinweis"),
-         	  			  tr("The directorie file ", "Die Verzeichnisdatei ")   + parameter[indizierung] + tr("already exists. The backup is not performed\n", " ist bereits vorhanden. Die Sicherung wird nicht durchgeführt\n"));
-                  			  return 0 ; 
-               				}
-                                state = chk_Beschreibung->checkState();
+               			}
+               			state = chk_Beschreibung->checkState();
 				if (rdBt_saveFsArchiv->isChecked() && (state == Qt::Checked))
             			  {
 			 	  dialog_auswertung = 2;
@@ -755,9 +685,7 @@ QString zeichen = "'";
              			  FileDialog Filedialog;
      	     			  FileDialog *dlg = new FileDialog;
      	     			 // dlg->show(); nicht modal
-     	     			 if (rdBt_showPartition->isChecked())
-     	     			 {
-             			  int wert = dlg->exec();
+     	     			 int wert = dlg->exec();
              			 if (wert == 0 && dialog_auswertung == 2)
                 		      {
                 		      QMessageBox::about(this, tr("Note", "Hinweis"),
@@ -765,16 +693,11 @@ QString zeichen = "'";
 				      pushButton_save->setEnabled(true);
                                       return 0;
                 		      }
-                	 }
-				   }
+                	         }
 				//txt-Datei von /.config/qt-fsarchiver in die gemeountete Partition kopieren
                                 attribute = folder_file_ + " " + userpath_net + "/.qt-fs-client/" +  DateiName_net + "-" + _Datum_net + ".txt";
-                                if (rdBt_showPartition->isChecked())
-                                {
                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 " + attribute;  //Datei kopieren
-                               // befehl = "cp " + attribute; 
                                 system (befehl.toLatin1().data());
-                                }
                                 QString attribute; 
 				for ( int i=0; i<15; i++)
   				  {
@@ -840,19 +763,13 @@ QString optionkey;
          	tr("Please, select the filename of the backup.\n", "Bitte wählen Sie den Dateinamen der Sicherung aus.\n"));
                 return 0;
            }
-          if (rdBt_showPartition->isChecked() && (partition_net_ == ""))
+          if (partition_net_ == "")
            {
           	QMessageBox::about(this,tr("Note", "Hinweis"),
          	tr("Please select the partition you want to write back.\n", "Bitte wählen Sie die zurück zu schreibende Partition aus.\n"));
 		return 0 ;
            }
-          if (rdBt_showDirectories->isChecked() && (folder_dir_net == "" && state != Qt::Checked))
-           {
-          	QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("Please select the directory to write back to.\n", "Bitte wählen Sie das zurück zu schreibende Verzeichnis aus.\n"));
-		return 0 ;
-           }
-           if (rdBt_restoreFsArchiv->isChecked())
+            if (rdBt_restoreFsArchiv->isChecked())
            	{
                  pos = testDateiName(".fsa"); 
                  pos1= testDateiName("part.fsa");
@@ -922,14 +839,12 @@ QString optionkey;
                 dev_part = datei_auswerten_net("r");
                 QThread::msleep(10 * sleepfaktor);
 		//Überprüfen, ob in die Originalpartition zurückgeschrieben werden soll
-            if (dev_part != "/dev/" + partition_net_ && rdBt_showPartition->isChecked()){
+            if (dev_part != "/dev/" + partition_net_){
                cmp = questionMessage_net(tr("The partition to be recovered ", "Die wiederherzustellende Partition ") +  "/dev/" + partition_net_ + tr(" does not match the backed up partition.", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you still want to perform the restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (cmp == 2)  //nicht wiederherstellen
                   return 0;
             }
-       if (rdBt_showPartition->isChecked())
-          {         
-	       if (rdBt_restoreFsArchiv->isChecked())
+           if (rdBt_restoreFsArchiv->isChecked())
             	{
                 folder_file_ = file_net;
                // folder_file();	
@@ -1000,8 +915,7 @@ QString optionkey;
                           }
                                 
                  } 
-   	 } 
-   	 if (rdBt_restoreFsArchiv->isChecked())
+   	if (rdBt_restoreFsArchiv->isChecked())
               {
 if (partition_typ_net == "btrfs"){
                  QThread::msleep(20 * sleepfaktor);
@@ -1015,23 +929,15 @@ if (partition_typ_net == "btrfs"){
             state = chk_path->checkState();  	
             QString keyText = lineKey->text();
                state1 = chk_key->checkState();
-	            parameter[0] = "fsarchiver";
-	            if (rdBt_showPartition->isChecked())
-       	         parameter[1] = "restfs"; 
-       	      if (rdBt_showDirectories->isChecked())
-       	         parameter[1] = "restdir";   
-               int kerne = cmb_kerne->currentIndex()+1;
+	       parameter[0] = "fsarchiver";
+	       parameter[1] = "restfs"; 
+       	       int kerne = cmb_kerne->currentIndex()+1;
                QString index = QString::number(kerne);
                if (index == "0")
                   index = "1"; 
                parameter[2] = "-j" + index;
                parameter[3] = file_net;
-               if (rdBt_showPartition->isChecked())
-                  parameter[4] = "id=0,dest=/dev/" + partition_net_;
-               if (state == Qt::Checked && rdBt_showDirectories->isChecked())
-                   parameter[4] = "/";  // Originalort zurückschreiben
-               if (state != Qt::Checked && rdBt_showDirectories->isChecked()) 
-                  parameter[4] = folder_dir_net;  // an gewählten Ort zurückschreiben 
+               parameter[4] = "id=0,dest=/dev/" + partition_net_;
                int indizierung = 4;
                if (state1 == Qt::Checked) { // Verzeichnis mit Schlüssel gesichert
                     parameter[3] = "-c";
@@ -1044,12 +950,7 @@ if (partition_typ_net == "btrfs"){
                	   }
                  parameter[5] = file_net;
                  indizierung = 5;
-                 if (rdBt_showPartition->isChecked())
-                    parameter[6] = "id=0,dest=/dev/" + partition_net_;
-                 if (state == Qt::Checked && rdBt_showDirectories->isChecked())
-                    parameter[6] = "/";  // Originalort zurückschreiben
-                 if (state != Qt::Checked && rdBt_showDirectories->isChecked()) 
-                  parameter[6] = folder_dir_net;  // an gewählten Ort zurückschreiben 
+                 parameter[6] = "id=0,dest=/dev/" + partition_net_;
                  indizierung = 6;
                  }
                 attribute = " ";
@@ -1087,17 +988,10 @@ int i = 0;
 }
 
 void DialogNet::starteinstellung(){
-            Qt::CheckState state;
             QStringList filters;
-            state= chk_hidden->checkState();
-            pushButton_save->setText (tr("Save partition/directory", "Partition/Verzeichnis sichern"));
+            pushButton_save->setText (tr("Save partition", "Partition sichern"));
             lineEdit_DateiName->setEnabled(true);
             chk_pbr->setEnabled(true);
-            if(rdBt_saveFsArchiv->isChecked() && rdBt_showDirectories->isChecked())
-               {
-               lineEdit_DateiName->setEnabled(false);
-                chk_pbr->setEnabled(false);
-               }
             pushButton_restore->setEnabled(false);
             pushButton_save->setEnabled(true);
             label_4->setEnabled(true);
@@ -1112,10 +1006,7 @@ void DialogNet::starteinstellung(){
             restore_file_name_txt ->setEnabled(false); 
             label_folder->setEnabled(false);
             filters << "*.*";
-            if (state == Qt::Checked)
-               dirModel->setFilter(QDir::AllDirs  | QDir::NoDotAndDotDot | QDir::Hidden);
-    	    else 
-   	        dirModel->setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
+            dirModel->setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
    	    dirModel->setNameFilters(filters); 
             treeView_dir ->setEnabled(true); 
             }
@@ -1123,7 +1014,6 @@ void DialogNet::starteinstellung(){
 void DialogNet::rdButton_auslesen()
      {
      Qt::CheckState state;
-     state= chk_hidden->checkState();
      Qt::CheckState state1;
      state1= chk_path->checkState();
      QStringList filters; 
@@ -1133,7 +1023,7 @@ void DialogNet::rdButton_auslesen()
         }
      if (rdBt_restoreFsArchiv->isChecked())
         {
-		pushButton_save->setText (tr("Partition/directory restore", "Partition/Verzeichnis zurückschreiben"));
+		pushButton_save->setText (tr("Write back partition", "Partition zurückschreiben"));
                 pushButton_restore->setEnabled(true);
                 pushButton_save->setEnabled(false);
                 lineEdit_DateiName->setEnabled(false);
@@ -1147,20 +1037,8 @@ void DialogNet::rdButton_auslesen()
                 chk_split->setEnabled(false);
 		chk_pbr->setEnabled(false);
                 filters << "*.fsa";
-                if (state1 == Qt::Checked && rdBt_showDirectories->isChecked())
-		   {
-                   //treeView_dir ->setHidden(false);
-                   treeView_dir ->setEnabled(false);
-                   }
-                 if (state1 != Qt::Checked && rdBt_showDirectories->isChecked())
-		   {
-                  // treeView_dir ->setHidden(false);
-                   treeView_dir ->setEnabled(true);
-                   }
-                if (state == Qt::Checked)
-               	        dirModel->setFilter(QDir::AllDirs  | QDir::NoDotAndDotDot | QDir::Hidden);
-	    	else	
-	       		dirModel->setFilter(QDir::AllDirs  | QDir::NoDotAndDotDot);
+                treeView_dir ->setEnabled(true);
+                dirModel->setFilter(QDir::AllDirs  | QDir::NoDotAndDotDot);
    		dirModel->setNameFilters(filters);  
          }
      } 
@@ -1304,13 +1182,13 @@ int err = 0;
           if (befehl_pbr_net == "")
           {
        QMessageBox::about(this, tr("Note", "Hinweis"), 
-           tr("The partition/directory was successfully backed up.\n", "Die Partition/das Verzeichnis wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials has been backed up.", " spezielle Daten wurden gesichert."));
+           tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed up.", " spezielle Daten wurden gesichert."));
           } 
           if (befehl_pbr_net != "") 
           {
            QMessageBox::about(this, tr("Note", "Hinweis"), 
-           tr("The partition has been backed up successfully.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
+           tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
         + cnt_special_ + tr(" specials and the Partition Boot Record have been backed.", " spezielle Daten und der Partition Boot Sektor wurden gesichert."));
           }
@@ -1328,7 +1206,7 @@ int err = 0;
           system (befehl.toLatin1().data());
         if (flag_end_net == 1) {
         QMessageBox::about(this, tr("Note", "Hinweis"),
-         tr("The backup of the partition/directorie was aborted by the user!\n", "Die Sicherung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!\n") );
+         tr("The backup of the partition was aborted by the user!\n", "Die Sicherung der Partition wurde vom Benutzer abgebrochen!\n") );
         }
         // Prüfen ob Partitionsart unterstützt wird      
        dummy = datei_auswerten_net("c");
@@ -1362,9 +1240,7 @@ int err = 0;
        QString err_special_ = QString::number(err_special);  
        if (part_testen != 108 && flag_end_net == 0){
        QMessageBox::about(this, tr("Note", "Hinweis"), 
-       	  tr("The backup of the partition/directorie was only partially successful.\n", "Die Sicherung der Partition/des Verzeichnis war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")
-         + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") 
-         + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
+       	  tr("The backup of the partition was only partially successful.\n", "Die Sicherung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")  + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
 	  }
         }
        
@@ -1435,7 +1311,7 @@ void DialogNet::thread2Ready()  {
        stopFlag_ = 1; 
        progressBar->setValue(100);
        SekundeRemaining ->setText("0");
-       //PBR herstellen
+       //Abfrage PBR herstellen ja nein
        i = 2;
 	if (befehl_pbr_net != "") 
          {
@@ -1443,17 +1319,18 @@ void DialogNet::thread2Ready()  {
          system (befehl.toLatin1().data());
          i = 0;
          }
+        //PBR nicht herstellen
 	if (i!=0 ) { 
-       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition/directory was successfully restored.\n", "Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.\n") + 		cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been restored.", " spezielle Daten wurden wieder hergestellt."));
+       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition was successfully restored.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials has been restored.", " spezielle Daten wurden wieder hergestellt."));
         }
+        //PBR herstellen
 	if (i==0) { 
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition was successfully restored.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links ", " Links ") + cnt_special_ + tr(" special data and the partition boot sector were restored.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt."));
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition was successfully restored.\n", "Die Partition wurde erfolgreich wieder hergestellt.\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links ", " Links ") + cnt_special_ + tr(" special data and the partition boot sector were restored.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt."));
         } 
         }
        if (flag_end_net == 1) {
         QMessageBox::about(this, tr("Note", "Hinweis"),
-         tr("The restore of the partition/directory was aborted by the user!\n", "Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!\n") );
+         tr("The restore of the partition was aborted by the user!\n", "Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!\n") );
 	meldung == 0;
         }
      if (err != 10) {
@@ -1477,14 +1354,14 @@ void DialogNet::thread2Ready()  {
        err_hardlinks_ = QString::number(err_hardlinks); 
        if (i!=0) {  
        QMessageBox::about(this, tr("Note", "Hinweis"), 
-       	  tr("The restore of the partition/directorie was only partially successful.\n", "Die Wiederherstellung der Partition/des Verzeichnisses war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been restored\n.", " spezielle Daten wurden wiederhergestellt\n.")
+       	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data has been restored.\n.", " spezielle Daten wurden wiederhergestellt\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") 
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
          + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                }
       if (i==0) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), 
-       	  tr("The restore of the partition/directorie was only partially successful.\n", "Die Wiederherstellung der Partition/des Verzeicnisses war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
+       	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
          + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data and the partition boot sector were restored.\n.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt\n.") + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                 }
              }
@@ -2002,49 +1879,6 @@ void DialogNet::listWidget_base()
 	QList<QTreeWidgetItem *> items1;
 	treeWidget->addTopLevelItems( items1 );
         treeWidget->setRootIsDecorated(false);  // Pfeil wird nicht angezeigt
-}
-
-void DialogNet::save_partitions(){
-Qt::CheckState state;
-state = chk_path->checkState();
-       listWidget ->setHidden(false);
-       treeView_dir ->setHidden(true);
-       treeView_dir ->setEnabled(true);
-       chk_pbr ->setEnabled(true);
-       chk_split ->setEnabled(true);
-       chk_path ->setEnabled(false);
-       lineEdit_DateiName->setEnabled(true);
-}
-
-void DialogNet::save_directories(){
-Qt::CheckState state;
-state = chk_path->checkState();
-       listWidget ->setHidden(true);
-       treeView_dir ->setHidden(false);
-       if (state == Qt::Checked && rdBt_restoreFsArchiv->isChecked())
-          treeView_dir ->setEnabled(false);  
-       if (state == Qt::Checked && rdBt_saveFsArchiv->isChecked())
-          treeView_dir ->setEnabled(true);
-       if (state != Qt::Checked) 
-          treeView_dir ->setEnabled(true);
-       chk_pbr ->setEnabled(false);
-       chk_split ->setEnabled(false);
-       chk_path ->setEnabled(false);
-       if (rdBt_restoreFsArchiv->isChecked())
-          chk_path ->setEnabled(true);
-       if(rdBt_saveFsArchiv->isChecked() && rdBt_showDirectories->isChecked())
-          lineEdit_DateiName->setEnabled(false);
-          chkhidden();
-}
-
-void DialogNet::chkhidden(){
-     Qt::CheckState state;
-     state = chk_hidden->checkState();
-     if (rdBt_saveFsArchiv->isChecked())
-        starteinstellung();   
-     else
-        rdButton_auslesen();  //Prüfung versteckte Dateien werden sofort angezeigt ist falsch
-     chkhidden();
 }
 
 void DialogNet::zip_einlesen_net() {

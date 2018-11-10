@@ -69,21 +69,21 @@
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partitiom auswählen.
 </comment>
-        <translation type="unfinished">Sie müssen eine Partition auswählen.</translation>
+        <translation>Sie müssen eine Partition auswählen.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="398"/>
         <source>You must select a part.fsa file or an part.fsa.gz file.</source>
         <comment>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.
 </comment>
-        <translation type="unfinished">Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.</translation>
+        <translation>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="416"/>
         <location filename="../src/clone.cpp" line="649"/>
         <source>Partition to restore </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation type="unfinished">Die wiederherzustellende Partition </translation>
+        <translation>Die wiederherzustellende Partition </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="417"/>
@@ -97,13 +97,13 @@
         <location filename="../src/clone.cpp" line="650"/>
         <source>Do you still want to perform the recovery?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation type="unfinished"> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</translation>
+        <translation> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="439"/>
         <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
-        <translation type="unfinished">Wollen Sie wirklich ein Abbild einer Partition zurückschreiben?</translation>
+        <translation>Wollen Sie wirklich ein Abbild einer Partition zurückschreiben?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="501"/>
@@ -125,14 +125,14 @@
         <source>The backup of the hard disk image was successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war erfolgreich.
 </comment>
-        <translation type="unfinished">Das Sichern des Abbildes war erfolgreich.</translation>
+        <translation>Das Sichern des Abbildes war erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1081"/>
         <source>The backup of the image of the partition was successful.</source>
         <comment>Die Sichern des Abbildes der Partition war erfolgreich.
 </comment>
-        <translation type="unfinished">Die Sichern des Abbildes der Partition war erfolgreich.</translation>
+        <translation>Das Sichern des Abbildes der Partition war erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1093"/>
@@ -146,35 +146,35 @@
         <source>Saving the image of the partition was not successful.</source>
         <comment>Die Sichern des Abbildes der Partition war nicht erfolgreich.
 </comment>
-        <translation type="unfinished">Die Sicherung des Abbildes der Partition war nicht erfolgreich.</translation>
+        <translation>Die Sicherung des Abbildes der Partition war nicht erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1144"/>
         <source>The hard disk image recovery was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.
 </comment>
-        <translation type="unfinished">Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.</translation>
+        <translation>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1146"/>
         <source>The recovery of the partition image was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war erfolgreich.
 </comment>
-        <translation type="unfinished">Die Wiederherstellung des Abbildes der Partition war erfolgreich.</translation>
+        <translation>Die Wiederherstellung des Abbildes der Partition war erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1151"/>
         <source>Hard disk image recovery was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
-        <translation type="unfinished">Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.</translation>
+        <translation>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1157"/>
         <source>The recovery of the partition image was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.
 </comment>
-        <translation type="unfinished">Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.</translation>
+        <translation>Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="349"/>
@@ -292,7 +292,7 @@ erstellen</translation>
         <location filename="../src/clone.cpp" line="750"/>
         <source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
-        <translation type="unfinished">Existierende Festplatte</translation>
+        <translation>Existierende Festplatte</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="744"/>
@@ -1039,29 +1039,29 @@ Sie müssen ein Verzeichnis auswählen.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="444"/>
-        <source>You may have selected the wrong hard disk. The hard disk to be restored is  </source>
+        <source>You may have selected the wrong hard disk. The hard disk to be restored is </source>
         <comment>Sie haben eventuell eine falsche Festplatte ausgewählt. Die wiederherzustellende Festplatte ist </comment>
         <translation>Sie haben eventuell eine falsche Festplatte ausgewählt. 
 Die wiederherzustellende Festplatte ist </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="445"/>
-        <source>You may have selected the wrong hard disk. The hard disk to be restored is  </source>
+        <source>, but the backed up hard drive is </source>
         <comment>die gesicherte Festplatte ist aber </comment>
-        <translation>die gesicherte Festplatte ist aber </translation>
+        <translation> die gesicherte Festplatte ist aber </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="452"/>
-        <source> but the backed up hard drive is </source>
+        <source>You may have selected an incorrect file. The hidden area to be restored has a size of </source>
         <comment>Sie haben eventuell eine falsche Datei ausgewählt. Der wiederherzustellende verborgene Bereich hat eine Größe von</comment>
         <translation>Sie haben eventuell eine falsche Datei ausgewählt. Der 
-wiederherzustellende verborgene Bereich hat eine Größe von</translation>
+wiederherzustellende verborgene Bereich hat eine Größe von </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="453"/>
         <source> bytes. The hidden area of the disk </source>
         <comment> Byte. Der verborgene Bereich von der Festplatte </comment>
-        <translation> Byte. Der verborgene Bereich von der Festplatte</translation>
+        <translation> Byte. Der verborgene Bereich von der Festplatte </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="453"/>
@@ -1073,7 +1073,13 @@ wiederherzustellende verborgene Bereich hat eine Größe von</translation>
         <location filename="../src/mbr.cpp" line="453"/>
         <source> Do you want to continue?</source>
         <comment> Byte. Wollen Sie fortfahren?</comment>
-        <translation> Byte. Wollen Sie fortfahren?</translation>
+        <translation> Wollen Sie fortfahren?</translation>
+    </message>
+    <message>
+        <location filename="../src/mbr.cpp" line="455"/>
+        <source> bytes. Do you want to continue?</source>
+        <comment> Bytes. Wollen Sie fortfahren?</comment>
+        <translation> Bytes. Wollen Sie fortfahren?</translation>
     </message>
 </context>
 <context>
@@ -1389,23 +1395,23 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1093"/>
-        <source>Save partition/directory</source>
-        <comment>Partition/Verzeichnis sichern</comment>
-        <translation>Partition/Verzeichnis sichern</translation>
+<source>Save partition</source>
+        <comment>Partition sichern</comment>
+        <translation>Partition sichern</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1136"/>
-        <source>Partition/directory restore</source>
-        <comment>Partition/Verzeichnis zurückschreiben</comment>
-        <translation>Partition/Verzeichnis zurückschreiben</translation>
+<source>Write back partition</source>
+        <comment>Partition zurückschreiben</comment>
+        <translation>Partition zurückschreiben</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1307"/>
-        <source>The partition/directory was successfully backed up.
+<source>The partition was successfully backed up.
 </source>
-        <comment>Die Partition/das Verzeichnis wurde erfolgreich gesichert.
+        <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
-        <translation>Die Partition/das Verzeichnis wurde erfolgreich gesichert.</translation>
+        <translation>Die Partition wurde erfolgreich gesichert.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1308"/>
@@ -1441,11 +1447,11 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1331"/>
-        <source>The backup of the partition/directorie was aborted by the user!
+<source>The backup of the partition was aborted by the user!
 </source>
-        <comment>Die Sicherung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
+        <comment>Die Sicherung der Partition wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Die Sicherung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!</translation>
+        <translation>Die Sicherung der Partition wurde vom Benutzer abgebrochen!</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1338"/>
@@ -1457,11 +1463,11 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1456"/>
-        <source>The restore of the partition/directory was aborted by the user!
+<source>The restore of the partition was aborted by the user!
 </source>
-        <comment>Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
+        <comment>Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!</translation>
+        <translation>Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1835"/>
@@ -1473,8 +1479,7 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1365"/>
-        <source> specials have been backed
-.</source>
+        <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
         <translation>spezielle Daten wurden gesichert.</translation>
@@ -1484,7 +1489,7 @@ Die Dateiendung muss .fsa sein</comment>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation type="unfinished">Sie haben ein falsches Passwort eingegeben.</translation>
+        <translation>Sie haben ein falsches Passwort eingegeben.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1313"/>
@@ -1492,7 +1497,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
-        <translation type="unfinished">Die Partition wurde erfolgreich gesichert.
+        <translation>Die Partition wurde erfolgreich gesichert.
 </translation>
     </message>
     <message>
@@ -1503,11 +1508,11 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1365"/>
-        <source>The backup of the partition/directorie was only partially successful.
+<source>The backup of the partition was only partially successful.
 </source>
-        <comment>Die Sicherung der Partition/des Verzeichnis war nur teilweise erfolgreich
+        <comment>Die Sicherung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>Die Sicherung der Partition/des Verzeichnisses war nur teilweise erfolgreich.</translation>
+        <translation>Die Sicherung der Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1367"/>
@@ -1519,11 +1524,11 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1447"/>
-        <source>The partition/directory was successfully restored.
+<source>The partition was successfully restored.
 </source>
-        <comment>Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.
+        <comment>Die Partition wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.</translation>
+        <translation>Die Partition wurde erfolgreich wieder hergestellt.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1451"/>
@@ -1539,19 +1544,19 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
-        <source> specials has been restored.
-.</source>
+        <source> special data has been restored.
+</source>
         <comment> spezielle Daten wurden wiederhergestellt
-.</comment>
+</comment>
         <translation> spezielle Daten wurden wieder hergestellt.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
-        <source>The restore of the partition/directorie was only partially successful.
+<source>The restore of the partition was only partially successful.
 </source>
-        <comment>Die Wiederherstellung der Partition/des Verzeichnisses war nur teilweise erfolgreich
+        <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>Die Wiederherstellung der Partition/des Verzeichnisses war nur teilweise erfolgreich.</translation>
+        <translation>Die Wiederherstellung der Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1483"/>
@@ -1564,11 +1569,11 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1487"/>
-        <source>The restore of the partition/directorie was only partially successful.
+<source>The restore of the partition was only partially successful.
 </source>
-        <comment>Die Wiederherstellung der Partition/des Verzeicnisses war nur teilweise erfolgreich
+        <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>Die Wiederherstellung der Partition/des Verzeichnisses war nur teilweise erfolgreich.</translation>
+        <translation>Die Wiederherstellung der Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1488"/>
@@ -1682,8 +1687,9 @@ kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD</translati
     </message>
     <message>
         <location filename="../src/net.cpp" line="1447"/>
-        <source> special data has been restored.</source>
-        <comment> spezielle Daten wurden wieder hergestellt.</comment>
+        <source> specials has been restored.</source>
+        <comment> spezielle Daten wurden wieder hergestellt.
+</comment>
         <translation> spezielle Daten wurden wieder hergestellt.</translation>
     </message>
     <message>
@@ -2181,8 +2187,8 @@ entschlüsseln. Schlüssel:</translation>
         <location filename="../src/ui/net.ui" line="111"/>
         <source>Save par&amp;tition
 with fs-archiver</source>
-        <translation type="unfinished">Par&amp;tition oder Ver-
-zeichnis sichern </translation>
+        <translation>Par&amp;tition sichern
+with fs-archiver</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="176"/>
@@ -2191,9 +2197,9 @@ zeichnis sichern </translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="179"/>
-        <source>Save partition/directory</source>
+<source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>Partition/Verzeichnis sichern</translation>
+        <translation>Partition sichern</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="251"/>
@@ -2202,9 +2208,9 @@ zeichnis sichern </translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="254"/>
-        <source>Partition/directory restore</source>
+<source>Write back partition</source>
         <extracomment>Partition wiederherstellen</extracomment>
-        <translation>Partition/Verzeichnis wiederherstellen</translation>
+        <translation>Partition wiederherstellen</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="276"/>
@@ -2310,7 +2316,7 @@ protokoll:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="542"/>
-        <source>Stock Split on DVD size</source>
+        <source>Split archive , specified size:</source>
         <translation>Archiv splitten auf DVD Größe</translation>
     </message>
     <message>
@@ -2321,11 +2327,11 @@ protokoll:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="125"/>
-        <source>Writing back partitions
+        <source>Restore partition
 with fs-archiver</source>
-        <extracomment>Partition mit fs-Archiver * zurückschreiben</extracomment>
-        <translation>Partition oder Verzeichnis
-&amp;wiederherstellen</translation>
+        <extracomment>Partition mit fs-Archiver zurückschreiben</extracomment>
+        <translation>Partition mit fs-Archiver
+wiederherstellen</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="238"/>
@@ -2947,7 +2953,7 @@ Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1388"/>
-        <source> specials have been backed up.</source>
+        <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation> spezielle Daten wurden gesichert.     </translation>
     </message>
@@ -3092,10 +3098,10 @@ Vielleicht ist die Partition verschlüsselt?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-1, October 30, 2018</source>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-2, November 12, 2018</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-        <translation type="unfinished">Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-1, 30.Oktober 2018</translation>
+<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-2, 12.November 2018</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1525"/>
@@ -3367,13 +3373,13 @@ Partition mit fsarchi&amp;ver</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="778"/>
-        <source>&amp;Save a partition/directorie on network</source>
-        <translation type="unfinished">&amp;Sichern von Partitionen/Verzeichnissen über das Netzwerk</translation>
+<source>&amp;Save a partition on network</source>
+        <translation>&amp;Sichern von Partitionen über das Netzwerk</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="787"/>
-        <source>Restore &amp;a partition/directorie on network</source>
-        <translation>Wiederherstellung einer Parttion/Verzeichnis über das Netzwerk</translation>
+<source>Restore &amp;a partition on network</source>
+        <translation>Wiederherstellung einer Partition über das Netzwerk</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="819"/>
@@ -3607,7 +3613,7 @@ Sonst kann nicht auf Netzrechner zugegriffen werden</translation>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="39"/>
         <source>Exist harddrive:</source>
-        <extracomment>MBR Sicherungsverzeichnis:</extracomment>
+        <extracomment>Existierende Festplatte:</extracomment>
         <translation>Existierende Festplatte:</translation>
     </message>
     <message>
@@ -3804,7 +3810,7 @@ entschlüsseln. Schlüssel:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="128"/>
-        <source>Number of files/directorie
+<source>Number of files/directories
 to be backed up</source>
         <extracomment>Anzahl der zu sichernden Dateien/Verzeichnisse:</extracomment>
         <translation>Anzahl der zu sichernden 
@@ -3915,7 +3921,7 @@ fsarchiver verwendet werden sollen:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="37"/>
-        <source>Writing back partitions</source>
+<source>Restore partition table</source>
         <extracomment>Partitionstabelle wiederherstellen</extracomment>
         <translation>Partitionstabelle wiederherstellen</translation>
     </message>
@@ -3935,7 +3941,8 @@ fsarchiver verwendet werden sollen:</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
         <source>Existing
 &amp;harddrive:</source>
-        <translation>Existierende Festplatte</translation>
+        <translation>Existierende 
+Festplatte</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="100"/>
@@ -3950,7 +3957,7 @@ fsarchiver verwendet werden sollen:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="116"/>
-        <source>from this hard disk:
+        <source>Backup / restore MBR
 from this hard disk:</source>
         <extracomment>MBR von dieser dieser Festplatte sichern / wiederherstellen:</extracomment>
         <translation>MBR von dieser dieser Festplatte

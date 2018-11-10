@@ -56,9 +56,6 @@ protected slots:
         void button_toParent();
         void treeWidget_auslesen();
         int folder_free_mounten();
-        void save_partitions();
-        void save_directories();
-        void chkhidden();
         void zip_einlesen_net();
         void save_attribut_net(QString attribut);
         QString datei_auswerten_net(QString buchstabe);

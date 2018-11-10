@@ -87,15 +87,19 @@ QString disk_;
             while (!ds.atEnd())
       	    { 
             disk_ = ds.readLine();
+
          if (disk_.indexOf("nv") > 0)
                 { 
                    disk = disk_.split(QRegExp("\\s+"));
-                   if (disk[4].size() == 6)
+                   if (disk[4].size() == 7)
+                       {
                        disk_name[j] = disk[4];
-                   j++;
+                       j++;
+                       }
                 }
              if (disk_.indexOf("sd") > 0)
                 { 
+
                    disk = disk_.split(QRegExp("\\s+"));
                    if (disk[4].size() == 3)
                       {
@@ -108,7 +112,6 @@ QString disk_;
    	  file.close();
  //Anzahl Festplatten ermitteln 
           j = 0;
-
          while (disk_name[j]!= "")
             {
             j++;
@@ -119,6 +122,7 @@ QString disk_;
              items_disk <<  disk_name[i];
              cmb_disk->addItems (items_disk); 
              items_disk.clear();
+
 }
 
 void DialogMBR::disk_art()

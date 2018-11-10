@@ -711,8 +711,8 @@ int MWindow::savePartition()
                 		  return 0;
                 		  }
              			}
-   
 //qDebug() << "Befehl" << parameter[0] << parameter[1] << parameter[2] << parameter[3] << parameter[4] << parameter[5] << parameter[6] << parameter[7] << parameter[8] << parameter[9] << parameter[10] << indizierung + 2;
+
                                 // Argumente in txt-Datei schreiben
 				QString attribute; 
 				for ( int i=0; i<15; i++)
@@ -1163,8 +1163,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-1, October 30, 2018",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-2, November 12, 2018",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-2, 12.November 2018"));
       }
 
 int MWindow::is_running(){
@@ -1467,6 +1467,7 @@ int anzahl = 0;
   sekunde_summe = 0;
   minute_elapsed = 0;
   sekunde_elapsed = 0;
+  befehl_pbr = "";
 }
 
 void MWindow::thread2Ready(){
@@ -2209,7 +2210,7 @@ float part_size;
          system (befehl.toLatin1().data());
        	     QFile file(filename);
 	     QTextStream ds(&file);
-         QThread::msleep(10 * sleepfaktor);       
+         QThread::msleep(50 * sleepfaktor);       
          if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
             text = ds.readLine();

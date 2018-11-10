@@ -1241,7 +1241,7 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="444"/>
-<source> but the backed up hard drive is  </source>
+<source>, but the backed up hard drive is </source>
         <comment>,  die gesicherte Festplatte ist aber </comment>
         <translation>, salvate hard-disk este </translation>
     </message>
@@ -1678,7 +1678,7 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1093"/>
-<source>Save partition/directory</source>
+<source>Save partition</source>
         <comment>Partition/Verzeichnis sichern</comment>
         <translation>salvare partiție</translation>
     </message>
@@ -1693,7 +1693,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1136"/>
-<source>Partition/directory restore</source>
+<source>Write back partition</source>
         <comment>Partition/Verzeichnis zurückschreiben</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1708,7 +1708,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1307"/>
-<source>The partition/directory was successfully backed up.
+<source>The partition was successfully backed up.
 </source>
         <comment>Die Partition/das Verzeichnis wurde erfolgreich gesichert.
 </comment>
@@ -1777,7 +1777,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1331"/>
-        <source>The backup of the partition/directorie was aborted by the user!
+<source>The backup of the partition was aborted by the user!
 </source>
         <comment>Die Sicherung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
@@ -1802,7 +1802,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1365"/>
-        <source>The backup of the partition/directorie was only partially successful.
+<source>The backup of the partition was only partially successful.
 </source>
         <comment>Die Sicherung der Partition/des Verzeichnis war nur teilweise erfolgreich
 </comment>
@@ -1834,7 +1834,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1447"/>
-<source>The partition/directory was successfully restored.
+<source>The partition was successfully restored.
 </source>
         <comment>Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.
 </comment>
@@ -1869,7 +1869,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1456"/>
-<source>The restore of the partition/directory was aborted by the user!
+<source>The restore of the partition was aborted by the user!
 </source>
         <comment>Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
@@ -1877,7 +1877,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
-        <source>The restore of the partition/directorie was only partially successful.
+<source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition/des Verzeichnisses war nur teilweise erfolgreich
 </comment>
@@ -1909,7 +1909,7 @@ copierea de rezervă. cheia:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1487"/>
-        <source>The restore of the partition/directorie was only partially successful.
+<source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition/des Verzeicnisses war nur teilweise erfolgreich
 </comment>
@@ -2396,7 +2396,7 @@ with fs-archiver</source>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="179"/>
-<source>Save partition/directory</source>
+<source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
         <translation>salvare partiție</translation>
     </message>
@@ -2419,7 +2419,7 @@ with fs-archiver</source>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="254"/>
-<source>Partition/directory restore</source>
+<source>Write back partition</source>
         <extracomment>Partition wiederherstellen</extracomment>
         <translation type="unfinished"></translation>
     </message>
@@ -3126,11 +3126,11 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-1, October 30, 2018</source>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-2, November 12, 2018</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-        <translation>Backup și restaurare partiții, directoare și MBR.
-Versiune 0.8.5-1, 30.Octombrie 2018</translation>
+<translation>Backup și restaurare partiții, directoare și MBR.
+Versiune 0.8.5-2, 12.Noiembrie 2018</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>
@@ -3588,12 +3588,12 @@ with fsarchi&amp;ver</source>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="778"/>
-        <source>&amp;Save a partition/directorie on network</source>
+<source>&amp;Save a partition on network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="787"/>
-        <source>Restore &amp;a partition/directorie on network</source>
+<source>Restore &amp;a partition on network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4182,7 +4182,7 @@ cheie de rezervă</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="128"/>
-<source>Number of files/directorie
+<source>Number of files/directories
 to be backed up</source>
         <extracomment>Anzahl der zu sichernden Dateien/Verzeichnisse:</extracomment>
         <translation>După numărul de
