@@ -2065,7 +2065,6 @@ int i = 0;
 
 void MWindow::sdx2_einlesen ()
 {
-
 QString text;
 QString befehl;
 QString attribute;
@@ -2099,7 +2098,6 @@ float dummy1;
       	  } 
    	  file.close();
           sdx[i] = text;
-
           for (k=0; k < i +1 ; k++){
            dummy = sdx[k];
            part_sdx_= dummy;

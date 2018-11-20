@@ -2956,10 +2956,10 @@ Proszę użyć live CD.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
-        <source>Backup and restore partitions, directory and MBR.
+<source>Backup and restore partitions, directory and MBR.
 version 0.8.5-2, November 12, 2018</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-        <translation>Tworzenie/przywracanie:
+<translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
 - kopii zapasowych
 - partycji,
 - katalogów
@@ -3113,7 +3113,7 @@ wersja 0.8.5-2, 12.listopad 2018</translation>
         <translation>nie można przywrócić archiwum do zamontowanej partycji, odmontuj pierwszo 
 </translation>
     </message>
-    <message>
+<message>
         <location filename="../src/mainWindow.cpp" line="1519"/>
         <location filename="../src/mainWindow.cpp" line="1524"/>
 <source>The partition was successfully restored.

@@ -69,21 +69,21 @@
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partitiom auswählen.
 </comment>
-        <translation>Sie müssen eine Partition auswählen.</translation>
+        <translation type="unfinished">Sie müssen eine Partition auswählen.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="398"/>
         <source>You must select a part.fsa file or an part.fsa.gz file.</source>
         <comment>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.
 </comment>
-        <translation>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.</translation>
+        <translation type="unfinished">Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="416"/>
         <location filename="../src/clone.cpp" line="649"/>
-        <source>Partition to restore </source>
+<source>Partition to restore </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>Die wiederherzustellende Partition </translation>
+        <translation type="unfinished">Die wiederherzustellende Partition </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="417"/>
@@ -97,13 +97,13 @@
         <location filename="../src/clone.cpp" line="650"/>
         <source>Do you still want to perform the recovery?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</translation>
+        <translation type="unfinished"> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="439"/>
         <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
-        <translation>Wollen Sie wirklich ein Abbild einer Partition zurückschreiben?</translation>
+        <translation type="unfinished">Wollen Sie wirklich ein Abbild einer Partition zurückschreiben?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="501"/>
@@ -143,14 +143,14 @@
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1100"/>
-        <source>Saving the image of the partition was not successful.</source>
+<source>Exist harddrive</source>
         <comment>Die Sichern des Abbildes der Partition war nicht erfolgreich.
 </comment>
         <translation>Die Sicherung des Abbildes der Partition war nicht erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1144"/>
-        <source>The hard disk image recovery was successful.</source>
+<source>nein so nicht</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.
 </comment>
         <translation>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.</translation>
@@ -290,7 +290,7 @@ erstellen</translation>
         <location filename="../src/clone.cpp" line="714"/>
         <location filename="../src/clone.cpp" line="731"/>
         <location filename="../src/clone.cpp" line="750"/>
-        <source>Exist harddrive</source>
+<source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
         <translation>Existierende Festplatte</translation>
     </message>
@@ -1479,7 +1479,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1365"/>
-        <source> specials have been backed.</source>
+        <source> specials have been backed
+.</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
         <translation>spezielle Daten wurden gesichert.</translation>
@@ -1490,15 +1491,6 @@ Die Dateiendung muss .fsa sein</comment>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
         <translation>Sie haben ein falsches Passwort eingegeben.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1313"/>
-        <source>The partition was successfully backed up.
-</source>
-        <comment>Die Partition wurde erfolgreich gesichert.
-</comment>
-        <translation>Die Partition wurde erfolgreich gesichert.
-</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1315"/>
@@ -1544,10 +1536,10 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
-        <source> special data has been restored.
-</source>
+        <source> specials has been restored.
+.</source>
         <comment> spezielle Daten wurden wiederhergestellt
-</comment>
+.</comment>
         <translation> spezielle Daten wurden wieder hergestellt.</translation>
     </message>
     <message>
@@ -1566,14 +1558,6 @@ Die Dateiendung muss .fsa sein</comment>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
 </comment>
         <translation> spezielle Daten wurden nicht korrekt wiederhergestellt.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1487"/>
-<source>The restore of the partition was only partially successful.
-</source>
-        <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
-</comment>
-        <translation>Die Wiederherstellung der Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1488"/>
@@ -1678,18 +1662,9 @@ kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD</translati
         <translation>Die Partition </translation>
     </message>
     <message>
-        <location filename="../src/net.cpp" line="1450"/>
-        <source>The partition was successfully restored.
-</source>
-        <comment>Die Partition wurde erfolgreich wieder hergestellt.
-</comment>
-        <translation>Die Partition wurde erfolgreich wieder hergestellt.</translation>
-    </message>
-    <message>
         <location filename="../src/net.cpp" line="1447"/>
-        <source> specials has been restored.</source>
-        <comment> spezielle Daten wurden wieder hergestellt.
-</comment>
+        <source> special data has been restored.</source>
+        <comment> spezielle Daten wurden wieder hergestellt.</comment>
         <translation> spezielle Daten wurden wieder hergestellt.</translation>
     </message>
     <message>
@@ -2793,13 +2768,13 @@ Sie müssen eine Datei auswählen</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="973"/>
-        <source>The partition to be recovered </source>
+        <source>The partition to be recovered  </source>
         <comment>Die wiederherzustellende Partition </comment>
         <translation>Die wiederherzustellende Partition </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="974"/>
-        <source> does not match the backed up partition.</source>
+        <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
         <translation> stimmt nicht mit der gesicherten </translation>
     </message>
@@ -2953,7 +2928,7 @@ Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1388"/>
-        <source> specials have been backed.</source>
+        <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation> spezielle Daten wurden gesichert.     </translation>
     </message>
@@ -3612,7 +3587,7 @@ Sonst kann nicht auf Netzrechner zugegriffen werden</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="39"/>
-        <source>Exist harddrive:</source>
+<source>Exist harddrive</source>
         <extracomment>Existierende Festplatte:</extracomment>
         <translation>Existierende Festplatte:</translation>
     </message>
