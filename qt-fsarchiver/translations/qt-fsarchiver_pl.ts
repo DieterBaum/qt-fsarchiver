@@ -1786,11 +1786,11 @@ deszyfrujący:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1810"/>
-<source>If ssh is used, the program must be started in a terminal with sudo qt-fsarchiver. You may need to restart the program.
+<source>If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.
 </source>
-        <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit sudo qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
+        <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
 </comment>
-        <translation>Podczas korzystania z ssh, program musi być uruchomiony w terminalu jako root. Może być konieczne ponowne uruchomienie programu.
+        <translation>Podczas korzystania z ssh, program musi być uruchomiony w terminalu qt-fsarchiver. Może być konieczne ponowne uruchomienie programu.
 </translation>
     </message>
     <message>
@@ -2957,7 +2957,7 @@ Proszę użyć live CD.</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-2, November 12, 2018</source>
+version 0.8.5-4, November 30, 2018</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
 - kopii zapasowych
@@ -2965,7 +2965,7 @@ version 0.8.5-2, November 12, 2018</source>
 - katalogów
 - i MBR.
 
-wersja 0.8.5-2, 12.listopad 2018</translation>
+wersja 0.8.5-4, 30.listopad 2018</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

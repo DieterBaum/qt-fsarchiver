@@ -90,7 +90,7 @@ sudo ssh user@Adresse des Servers. (Example: sudo ssh peter@192.168.2.10). The c
 The first time access the program qt-fsarchiver on a server, the command sudo ssh username@serveraddress is entered directly into the terminal. In the basic settings of the program can be set if the automatic entry to access additional servers should be repeated or not. 
 For mounting a ssh server, the terminal must be the password for access to the server to be entered. To avoid this, it is advisable to set up a public key. Important: The public key of the server (file:authorized_keys) needs in the /root/.ssh be copied.
 In the basic settings can be determined whether the reference for setting the password to be displayed or not.
-Note works with ssh: Some operating systems, the program must be started in a root-terminal. 
+Note works with ssh: Some operating systems, the program must be started in a terminal with the command: qt-fsarchiver 
 
 With the protocoll NFS (Network File System):
 Only Linux machine as a client or server can be used. Must be installed on the server nfs-kernel-server. In the file /etc/exports to be released in addition to the directories listed. The name can not contain spaces. In the directory must have read and write can be accessed. The entry /home/user/images 192.168.2.0/255.255.255.0(rw) allows any computer with the IP address 192.168.2.0 through 192.168.2.255 a read-write access to the directory /home/user/pictures of the client.

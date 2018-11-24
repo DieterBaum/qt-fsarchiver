@@ -124,10 +124,12 @@ int faktor1 = 0;
         QString filename = userpath_clone + "/.config/qt-fsarchiver/disk2.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /proc/partitions " + filename;
         system (befehl.toLatin1().data());
-       	     QFile file(filename);
-	     QTextStream ds(&file);
-         QThread::msleep(10 * sleepfaktor);   
-         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+       	    QFile file(filename);
+          // while (file.size() == 0)
+          //      QThread::msleep(5 * sleepfaktor); 
+	    QTextStream ds(&file);
+            QThread::msleep(10 * sleepfaktor);   
+            if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             while (!ds.atEnd())
       	    { 
             disk_ = ds.readLine();
@@ -323,6 +325,7 @@ void DialogClone::todo(){
            restore_image();
         if (rdbt_partition_save->isChecked()) 
             do_image_partition();
+
         if (rdbt_partition_restore->isChecked()) 
             restore_image_partition();
  }
@@ -486,7 +489,6 @@ lbl_save->setText (tr("already saved", "bereits gesichert"));
             partition_exist_size_int = partition_exist_size_int * 1.024;
           if (partition_exist_size_int >= 1000000)
             partition_exist_size_int = partition_exist_size_int * 1.024 * 1.024;
-qDebug() << " partition_exist_size_int" << partition_exist_size_int;
           }
       partition_exist = partition_exist.left(partition_exist.size() -1);
       row = listWidget_clone->currentRow();
@@ -806,7 +808,7 @@ void DialogClone::listWidget_auslesen() {
     img_partition_clone = partition_kurz[0]; // z.B. sda1
     befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /proc/partitions " + filename;
     system (befehl.toLatin1().data());
-         QThread::msleep(10* sleepfaktor);
+    QThread::msleep(10* sleepfaktor);
          if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
             while (!ds.atEnd())
@@ -1054,7 +1056,6 @@ float dummy1;
 	endeThread_clone = endeThread_clone + 1;
         if (endeThread_clone > 0) {
  	    bt_end->setEnabled(true);
-            //bt_save->setEnabled(true);
             progressBar->setValue(100);
        	    SekundeRemaining ->setText("0");
             MinuteRemaining ->setText("0");
@@ -1355,7 +1356,6 @@ int found = 0;
             read_write_counter_1 = read_write_counter_1 +1;}
         befehl = "vmstat 2 2 1> " +  userpath_clone + "/.config/qt-fsarchiver/disk.txt";
         system (befehl.toLatin1().data());
-        QThread::msleep(10 * sleepfaktor); 
         if (sekunde_elapsed_clone < 59)
         	sekunde_elapsed_clone = sekunde_elapsed_clone +1;
         if (sekunde_elapsed_clone < 59)
@@ -1413,7 +1413,6 @@ QString filename = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
             return;
          while (pid_dd.size() < 4) 
          pid_dd = pid_ermitteln("dd"); 
-qDebug() <<"pid" << pid_dd;
         QTimer::singleShot(9800, this, SLOT(read_write_hd_1()));  //10 sekunden
         // Wird für den Fortschrittsbalken benötigt
         if (pid_dd.size() > 3)

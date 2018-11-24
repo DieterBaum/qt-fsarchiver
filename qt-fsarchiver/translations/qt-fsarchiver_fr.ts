@@ -1704,11 +1704,11 @@ Veuillez saisir la clef :</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1802"/>
-<source>If ssh is used, the program must be started in a terminal with sudo qt-fsarchiver. You may need to restart the program.
+<source>If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.
 </source>
-        <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit sudo qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
+        <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
 </comment>
-        <translation>Utilisant ssh le programme doit être démarré dans un terminal par &gt;sudo qt-fsarchiver&lt;.Terminer et redémarrer le programme</translation>
+        <translation>Utilisant ssh le programme doit être démarré dans un terminal par &gt;qt-fsarchiver&lt;.Terminer et redémarrer le programme</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1804"/>
@@ -2847,10 +2847,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1153"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-2, November 12, 2018</source>
+version 0.8.5-4, November 30, 2018</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>sauvegarde et de restauration des répertoires de partition et MBR.
-Version 0.8.5-2, Novembre 2018 12. </translation>
+Version 0.8.5-4, Novembre 2018 30. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1224"/>

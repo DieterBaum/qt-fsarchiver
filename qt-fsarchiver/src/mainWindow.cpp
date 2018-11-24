@@ -1163,8 +1163,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-2, November 12, 2018",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-2, 12.November 2018"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-4, November 30, 2018",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-4, 30.November 2018"));
       }
 
 int MWindow::is_running(){
@@ -2019,13 +2019,15 @@ QStringList part_sdx;
 QString part_sdx_;
 QString partsdx[100][6];
 int i = 0;
+int j = 0;
      	attribute = "blkid -o export 1> " +  userpath + "/.config/qt-fsarchiver/disk.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
         system (befehl.toLatin1().data());
         filename = userpath + "/.config/qt-fsarchiver/disk.txt";
         QFile file(filename);
+        while (file.size() ==0)
+            QThread::msleep(5 * sleepfaktor);
 	QTextStream ds(&file); 
-        QThread::msleep(300 * sleepfaktor);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
    	    while (!ds.atEnd())
@@ -2082,8 +2084,9 @@ float dummy1;
         system (befehl.toLatin1().data());
         filename = userpath + "/.config/qt-fsarchiver/disk1.txt";
         QFile file(filename);
-	QTextStream ds(&file); 
-        QThread::msleep(300 * sleepfaktor);
+        while (file.size() ==0)
+            QThread::msleep(5 * sleepfaktor);  
+        QTextStream ds(&file); 
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
    	      while (!ds.atEnd())
@@ -2103,11 +2106,9 @@ float dummy1;
            part_sdx_= dummy;
            part_sdx = part_sdx_.split(QRegExp("\\s+"));
            dummy = part_sdx[0]; 
-
            dummy = dummy.right(dummy.size() -5); 
            partsdx[k][0] = dummy.left(dummy.size() -1); //Partitionsname
            dummy = part_sdx[1];
-
            if (dummy.indexOf("LABEL") > -1) {
                dummy= dummy.right(dummy.size() -7);
                partsdx[k][1]= dummy.left(dummy.size() -1); //Bezeichnung
@@ -2148,10 +2149,11 @@ int pos = 0;
           QString filename = userpath + "/.config/qt-fsarchiver/disk2.txt";
           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /proc/partitions " + filename;
           system (befehl.toLatin1().data());
-       	     QFile file(filename);
-	     QTextStream ds(&file);
-         QThread::msleep(10 * sleepfaktor);       
-         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+       	  QFile file(filename);
+          while (file.size() == 0)
+            QThread::msleep(5 * sleepfaktor);  
+            QTextStream ds(&file);
+          if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
             while (!ds.atEnd())
       	    {
@@ -2206,10 +2208,11 @@ float part_size;
          QString filename = userpath + "/.config/qt-fsarchiver/disk3.txt";
          befehl = "df /dev/" + part + " 1>" + filename;
          system (befehl.toLatin1().data());
-       	     QFile file(filename);
-	     QTextStream ds(&file);
-         QThread::msleep(50 * sleepfaktor);       
-         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+       	 QFile file(filename);
+         while (file.size() ==0)
+            QThread::msleep(5 * sleepfaktor);  
+            QTextStream ds(&file);
+           if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
             text = ds.readLine();
             dev_sdx = text.split(QRegExp("\\s+"));

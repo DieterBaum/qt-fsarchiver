@@ -1824,9 +1824,9 @@ còpia de seguretat. clau:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1810"/>
-<source>If ssh is used, the program must be started in a terminal with sudo qt-fsarchiver. You may need to restart the program.
+<source>If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.
 </source>
-        <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit sudo qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
+        <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
 </comment>
         <translation></translation>
     </message>
@@ -2759,9 +2759,9 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-2, November 12, 2018</source>
+version 0.8.5-4, November 30, 2018</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-<translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR. Versió 0.8.5-2, 12. de novembre 2018</translation>
+<translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR. Versió 0.8.5-4, 30. de novembre 2018</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

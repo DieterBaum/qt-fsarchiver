@@ -1093,9 +1093,11 @@ int net_art = cmb_Net->currentIndex();
        attribute = userpath_net + "/.qt-fs-client 2>/dev/null";
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
        k = system (befehl.toLatin1().data()); 
+       QThread::msleep(10 * sleepfaktor); 
        attribute = "-t cifs -o username=" + user_net + ",password=" + key_net + ",uid=0,gid=0 //" + rechner_IP + "/'" + folder_free + "' " + userpath_net + "/.qt-fs-client";
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 19 " + attribute;
        k = system (befehl.toLatin1().data());
+       QThread::msleep(50 * sleepfaktor);
        }
     if (rdBt_restoreFsArchiv->isChecked() && net_art == 2) //NFS
        {
@@ -1684,7 +1686,7 @@ int i = 0;
         setting.endGroup();
         if (auswertung ==1)
               QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("If ssh is used, the program must be started in a terminal with sudo qt-fsarchiver. You may need to restart the program.\n", "Bei der Verwendung von ssh muss das Program in einem Terminal mit sudo qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.\n"));
+         	tr("If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.\n", "Bei der Verwendung von ssh muss das Program in einem Terminal mit qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.\n"));
         if (auswertung ==1){
              int ret = questionMessage(tr("If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.", "Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern"));
              if (ret == 2){
@@ -1696,11 +1698,9 @@ int i = 0;
                 }
         }
         if (folder_free != "" && rdBt_saveFsArchiv->isChecked() )
-		//attribute = "sshfs -o nonempty " + user_net+ "@" + rechner_IP + ":" + folder_free + " " +  userpath_net + "/.qt-fs-client";
-               // befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-                befehl = "sshfs -o nonempty " + user_net+ "@" + rechner_IP + ":" + folder_free + " " +  userpath_net + "/.qt-fs-client";
+		befehl = "sudo sshfs -o nonempty " + user_net+ "@" + rechner_IP + ":" + folder_free + " " +  userpath_net + "/.qt-fs-client";
         if (folder_free != "" && rdBt_restoreFsArchiv->isChecked() )
-		befehl = "sshfs " + user_net+ "@" + rechner_IP + ":" + pfad_forward + " " + userpath_net + "/.qt-fs-client";
+		befehl = "sudo sshfs " + user_net+ "@" + rechner_IP + ":" + pfad_forward + " " + userpath_net + "/.qt-fs-client";
         i = system (befehl.toLatin1().data());
         if ( i==1){
             QMessageBox::about(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
