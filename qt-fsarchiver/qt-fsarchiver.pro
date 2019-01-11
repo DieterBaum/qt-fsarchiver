@@ -19,7 +19,6 @@ RCC_DIR = build
 CODECFORTR=utf8
 CODECFORSRC=utf8
 #CONFIG += debug
-
 # Input
 HEADERS += src/clone.h \
            src/dir.h \
@@ -32,7 +31,6 @@ HEADERS += src/clone.h \
            src/setting.h \
            src/thread.h \
            src/treeview.h 
-           
 FORMS += src/ui/clone_dialog.ui \
          src/ui/dir_dialog.ui \
          src/ui/filedialog.ui \
@@ -53,7 +51,6 @@ SOURCES += src/clone.cpp \
            src/setting.cpp \
            src/thread.cpp \
            src/treeview.cpp 
-           
 RESOURCES += src/icon.qrc
 # install
  target.path = /usr/sbin

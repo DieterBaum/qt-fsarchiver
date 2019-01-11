@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2018 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -1063,13 +1063,19 @@ QString DialogNet::Zeit_auslesen(){
 
 void DialogNet::listWidget_auslesen() {
     QStringList partition_kurz;
+    QString dummy;
     listwidgetrow = listWidget->currentRow();
     partition_net_ = add_part[listwidgetrow];
     int pos = partition_net_.indexOf("btrfs");
     if (pos > 0)
        partition_typ_net = "btrfs";
-    partition_kurz = partition_net_.split(" ");
+    partition_kurz = partition_net_.split(QRegExp("\\s+"));
     partition_net_ = partition_kurz[0];
+    dummy = partition_kurz[1];
+    if (dummy == "ntfs" || dummy == "vfat")
+        chk_pbr->setEnabled(false);
+    else 
+       chk_pbr->setEnabled(true);
 }
 
 int DialogNet::listWidget_folder_free_auslesen() {
@@ -1996,4 +2002,5 @@ QString DialogNet::Zeit_auslesen_net(){
     _Datum_net = _Datum_net + Datum_akt.setNum(Jahr) ;
     return _Datum_net;
 }
+
 

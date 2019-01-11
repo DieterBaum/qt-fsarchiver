@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2018 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -510,6 +510,7 @@ int MWindow::savePartition()
          	tr("Please select the partition you want to back up.", "Bitte wählen Sie die zu sichernde Partition aus.\n"));
 		return 0 ;
            }
+        // Überprüfen ob ntfs oder fat Partition, wenn ja Sicherung PBR nicht ermöglichen
         DateiName = lineEdit_DateiName->text();
         if (DateiName == "")
            {
@@ -708,6 +709,7 @@ int MWindow::savePartition()
                 		  QMessageBox::about(this,tr("Note", "Hinweis"),
          			  tr("The backup was aborted by the user\n", "Die Sicherung wurde vom Benutzer abgebrochen\n"));
 				  pushButton_save->setEnabled(true);
+                                  chk_pbr->setEnabled(true);
                 		  return 0;
                 		  }
              			}
@@ -723,7 +725,8 @@ int MWindow::savePartition()
 				  attribute = QString::number(indizierung + 2)  + attribute;
                                 save_attribut(attribute);
 				pushButton_end->setEnabled(false);  
-                                pushButton_save->setEnabled(false); 
+                                pushButton_save->setEnabled(false);
+                                chk_pbr->setEnabled(true); 
                                 flag_View = 1;
                               //  werte_reset();
   				//timer->singleShot( 20, this , SLOT(ViewProzent( ))) ;
@@ -1133,7 +1136,11 @@ void MWindow::listWidget_auslesen() {
        partition_typ_ = "btrfs";
     partition_ = part[row][0]; // z.B. sda1
     UUID = part[row][3];
-    
+    partition_typ = part[row][1];
+    if (partition_typ == "ntfs" || partition_typ == "vfat")
+        chk_pbr->setEnabled(false);
+    else 
+       chk_pbr->setEnabled(true);
 }
 
 QString MWindow::UUID_auslesen(int row){
@@ -1163,8 +1170,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-4, November 30, 2018",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-4, 30.November 2018"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-5, January 15, 2019",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-5, 15.Januar 2019"));
       }
 
 int MWindow::is_running(){
@@ -2356,3 +2363,4 @@ Auswertung in zahlen.txt
 
 Inhalt Anzahlfile.txt: Summe Anzahl gesicherter Dateien Verzeichnisse Links und Specials
 */
+

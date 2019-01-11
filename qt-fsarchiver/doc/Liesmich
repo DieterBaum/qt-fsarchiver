@@ -121,5 +121,5 @@ Beim Starten von qt-fsarchiver werden alle nicht eingebundenen Partionen unter /
 
 Qt-fsarchiver kann nur einmal aufgerufen werden. Das mehrmalige starten wird verhindert.
 
-Weitere Hinweise können den Webseiten http://wiki.ubuntuusers.de/qt4-fsarchiver (http://wiki.ubuntuusers.de/qt-fsarchiver) und http://wiki.ubuntuusers.de/fsarchiver entnommen werden.
+Weitere Hinweise können den Webseiten http://wiki.ubuntuusers.de/qt-fsarchiver und http://wiki.ubuntuusers.de/fsarchiver entnommen werden.
 Informationen über fsarchiver können Sie über die englische Webseite von fsarchiver http://www.fsarchiver.org/Main_Page erhalten.
