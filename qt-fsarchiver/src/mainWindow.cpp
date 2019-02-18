@@ -31,13 +31,10 @@ extern "C" {
 #include "treeview.h"
 #include "thread.h"
 
-
-using namespace std;
-
 QString Datum_akt("");
 QString partition_;
 QString UUID;
-string partition_str;
+std::string partition_str;
 QString folder;
 QString _Datum;
 QString DateiName("") ;
@@ -77,7 +74,6 @@ extern int sleepfaktor;
 
 MWindow::MWindow()
 {
-   questionLabel = new QLabel;
    QStringList dummy;
    QStringList partition_kurz;
    QString partition1_;
@@ -127,7 +123,9 @@ MWindow::MWindow()
    // pushButton_partition, pushButton_folder und pushButton_zstd sind dummy Button um einen Slot ansprechen zu können
    connect( pushButton_zstd, SIGNAL( clicked() ), this, SLOT(zip_einlesen())); 
    connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
+   connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
    connect( pushButton_folder, SIGNAL( clicked() ), this, SLOT(folder_einlesen()));
+   connect(treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &MWindow::folder_einlesen);
    connect( rdBt_saveFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen()));
    connect( rdBt_restoreFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen()));
    connect( chk_key, SIGNAL( clicked() ), this, SLOT(chkkey()));
@@ -872,7 +870,7 @@ QString attribute;
 
   indicator_reset();
   if (rdBt_restoreFsArchiv->isChecked())
-      string dateiname;
+      std::string dateiname;
       int pos;
       int pos1;
       keyText = lineKey->text();
@@ -1170,8 +1168,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-5, January 15, 2019",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-5, 15.Januar 2019"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-6, February 18, 2019",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-6, 18.Februar 2019"));
       }
 
 int MWindow::is_running(){
@@ -1203,13 +1201,13 @@ int MWindow::is_running(){
            return 0; 
 }
 
-int MWindow::testDateiName(string endung)
+int MWindow::testDateiName(std::string endung)
 {
-  string str (folder.toLatin1().data());
+  std::string str (folder.toLatin1().data());
   size_t found;
   // different member versions of find in the same order as above:
   found=str.find(endung);
-  if (found!=string::npos)
+  if (found!=std::string::npos)
      {
         return found;
      }
@@ -2027,6 +2025,7 @@ QString part_sdx_;
 QString partsdx[100][6];
 int i = 0;
 int j = 0;
+int k = 0;
      	attribute = "blkid -o export 1> " +  userpath + "/.config/qt-fsarchiver/disk.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
         system (befehl.toLatin1().data());
@@ -2036,12 +2035,13 @@ int j = 0;
             QThread::msleep(5 * sleepfaktor);
 	QTextStream ds(&file); 
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            text = ds.readLine();
+          //  text = ds.readLine();
    	    while (!ds.atEnd())
       	    { 
+            text = ds.readLine();
             if (text.indexOf("DEVNAME=/dev/sd") > -1 && (text.indexOf("PTTYPE") == -1) or text.indexOf("DEVNAME=/dev/nvme0") > -1 &&  (text.indexOf("PTTYPE") == -1))
                { 
-      	       dummy = text; 
+      	       dummy = text;
                part[i][0] = dummy.right(dummy.size() -13); //Partitionsname
                }
              if (text.indexOf("UUID=") > -1 && (text.indexOf("PTTYPE") == -1) && text.indexOf("UUID_SUB") == -1)
@@ -2050,8 +2050,7 @@ int j = 0;
       	      if (part[i][0]!= "")
       	         { 
                   part[i][3] = dummy.right(dummy.size() -5); //UUID
-                  }
-    
+                 }
               } 
               if (text.indexOf("TYPE") > -1 && (text.indexOf("PTTYPE") == -1))
                { 
@@ -2061,14 +2060,24 @@ int j = 0;
                      part[i][1] = dummy.right(dummy.size() -5); //Partitionstyp
                      i++;
                      }
- 
                  } 
-              if (text.indexOf("swap") > -1)
-                  i--;  //Swap Partition aus Array entfernen
-              text = ds.readLine();
-      	} 
+      	}
    	file.close();
         } 
+        
+        //Suchen an welcher Stelle Swap vorhanden ist
+        for(j=0; j< i; j++)
+        {
+          text = part[j][1];
+          if (text.indexOf("swap") > -1)
+             break;
+        }
+       //Swap aus Array entfernen
+        for(j=3; j< i; j++)
+        {
+          for(k=0; k< 7; k++)
+             part[j][k] = part[j+1][k];
+        }
         sdx2_einlesen (); 
 }
 
@@ -2095,20 +2104,18 @@ float dummy1;
             QThread::msleep(5 * sleepfaktor);  
         QTextStream ds(&file); 
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            text = ds.readLine();
-   	      while (!ds.atEnd())
+            while (!ds.atEnd())
       	    { 
+           text = ds.readLine();
           if (text.indexOf("/dev/sd") > -1 or text.indexOf("/dev/nvme0") > -1 &&  (text.indexOf("PTUUID") == -1))
       	      {
       	      sdx[i] = text;
       	      i++;
       	      }
-              text = ds.readLine();
               }
       	  } 
    	  file.close();
-          sdx[i] = text;
-          for (k=0; k < i +1 ; k++){
+          for (k=0; k < i; k++){
            dummy = sdx[k];
            part_sdx_= dummy;
            part_sdx = part_sdx_.split(QRegExp("\\s+"));
@@ -2120,12 +2127,13 @@ float dummy1;
                dummy= dummy.right(dummy.size() -7);
                partsdx[k][1]= dummy.left(dummy.size() -1); //Bezeichnung
            }
-           else
+           else{
                partsdx[k][1]= "";
+               }
            } 
            //Bezeichnung nach  nach part[i-1][j] übertragen 
-           for (k=0; k < i+1; k++){
-              for (j=0; j < i+ 1; j++){
+           for (k=0; k < i ; k++){
+              for (j=0; j < i; j++){
                 if (part[k][0] == partsdx[j][0])
                 {
                 //part[k][0]                Partitionsname

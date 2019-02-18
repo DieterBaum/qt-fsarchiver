@@ -22,8 +22,6 @@
 #include <QDialog>
 #include "ui_treeview.h"
 
-using namespace std;
-
 class TreeviewRead : public QDialog, private Ui::treeview_dialog
 {
 	Q_OBJECT

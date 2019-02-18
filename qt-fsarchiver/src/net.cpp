@@ -92,9 +92,6 @@ setupUi(this); // this sets up GUI
    	selModel = new QItemSelectionModel(dirModel);
         QModelIndex cwdIndex = dirModel->index(QDir::rootPath());
         dirModel->setRootPath(QDir::rootPath());
-        treeView_dir->setModel(dirModel);
-        treeView_dir->setSelectionModel(selModel);
-   	treeView_dir->setRootIndex(cwdIndex);
         connect( pushButton_zstd_net, SIGNAL( clicked() ), this, SLOT(zip_einlesen_net())); 
         connect( chk_path, SIGNAL( clicked()), this, SLOT(rdButton_auslesen()));
       	connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(end()));
@@ -103,13 +100,16 @@ setupUi(this); // this sets up GUI
        	connect( rdBt_saveFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen()));
    	connect( rdBt_restoreFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen())); 
         connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
+        connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
         connect( pushButton_folder_free, SIGNAL( clicked() ), this, SLOT(listWidget_folder_free_auslesen()));
         //connect( pushButton_break, SIGNAL( clicked() ), this, SLOT(esc_end()));
         connect( chk_key, SIGNAL( clicked() ), this, SLOT(chkkey()));
         connect( bt_net_art, SIGNAL( clicked() ), this, SLOT(cmb_net()));
         connect( bt_toParent, SIGNAL( clicked() ), this, SLOT(button_toParent()));
         connect(treeWidget, SIGNAL(itemActivated(QTreeWidgetItem *, int)), this, SLOT(listWidget_tree_auslesen(QTreeWidgetItem *, int)));
+        connect(treeWidget, SIGNAL(doubleClicked(QTreeWidgetItem *, int)), this, SLOT(listWidget_tree_auslesen(QTreeWidgetItem *, int)));
         connect( bt_treeWiget, SIGNAL( clicked() ), this, SLOT(treeWidget_auslesen()));
+        connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
         if (rdBt_saveFsArchiv->isChecked()){
   	    pushButton_restore->setEnabled(false);
             pushButton_save->setEnabled(true);}
@@ -151,8 +151,7 @@ setupUi(this); // this sets up GUI
         cmb_Net -> setCurrentIndex(0);
         treeWidget->setHidden(true);
         listWidget ->setHidden(false);
-        treeView_dir ->setHidden(true);
-    if (file1.exists()) {
+     if (file1.exists()) {
         QSettings setting("qt-fsarchiver", "qt-fsarchiver");
         setting.beginGroup("Basiseinstellungen");
         int auswertung = setting.value("Kompression").toInt();
@@ -322,6 +321,7 @@ void DialogNet:: Daten_NFS_eintragen()
 
 void DialogNet:: Daten_SSH_eintragen()
 {
+
 	this->setCursor(Qt::WaitCursor);
         bt_toParent->setEnabled(true);
 	NetEin netein;	
@@ -457,9 +457,8 @@ QString filename = userpath_net + "/.config/qt-fsarchiver/hostname.txt";
 
 int DialogNet::savePartition() {
 MWindow window;
-QModelIndex index = treeView_dir->currentIndex();
-folder_dir_net.append  (dirModel->filePath(index));
-folder_dir_net =  (dirModel->filePath(index));
+//folder_dir_net.append  (dirModel->filePath(index));
+//folder_dir_net =  (dirModel->filePath(index));
 QFileInfo info(folder_dir_net); 
 FileDialog filedialog;
 QFile file(folder_net);
@@ -723,9 +722,8 @@ int DialogNet::restorePartition() {
 MWindow window;
 Qt::CheckState state;
 Qt::CheckState state1;
-QModelIndex index = treeView_dir->currentIndex();
-folder_dir_net.append  (dirModel->filePath(index));
-folder_dir_net =  (dirModel->filePath(index));
+//folder_dir_net.append  (dirModel->filePath(index));
+//folder_dir_net =  (dirModel->filePath(index));
 QFileInfo info(folder_dir_net); 
 QFile file(file_net);
 QString DateiName("") ;
@@ -1008,7 +1006,6 @@ void DialogNet::starteinstellung(){
             filters << "*.*";
             dirModel->setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
    	    dirModel->setNameFilters(filters); 
-            treeView_dir ->setEnabled(true); 
             }
 
 void DialogNet::rdButton_auslesen()
@@ -1037,7 +1034,6 @@ void DialogNet::rdButton_auslesen()
                 chk_split->setEnabled(false);
 		chk_pbr->setEnabled(false);
                 filters << "*.fsa";
-                treeView_dir ->setEnabled(true);
                 dirModel->setFilter(QDir::AllDirs  | QDir::NoDotAndDotDot);
    		dirModel->setNameFilters(filters);  
          }
@@ -1466,7 +1462,7 @@ void DialogNet::indicator_reset() {
 
 int DialogNet::testDateiName(string endung)
 {
-  string str (file_net.toLatin1().data());
+  std::string str (file_net.toLatin1().data());
   size_t found;
   // different member versions of find in the same order as above:
   found=str.find(endung);
@@ -1690,9 +1686,6 @@ int i = 0;
         setting.beginGroup("Basiseinstellungen");
         int auswertung = setting.value("sshfs").toInt();
         setting.endGroup();
-        if (auswertung ==1)
-              QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.\n", "Bei der Verwendung von ssh muss das Program in einem Terminal mit qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.\n"));
         if (auswertung ==1){
              int ret = questionMessage(tr("If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.", "Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern"));
              if (ret == 2){
@@ -1786,7 +1779,6 @@ int ret_;
 	QString folder_[500];
 	int found = 0;
 	int i = 0;
-
 QFile file1(filename);
 QTextStream ds(&file1);
 QString folder_teilen;
@@ -1810,7 +1802,6 @@ int jj= 0;
  	}      
  	file1.close();
         }
-
         if (rdBt_restoreFsArchiv->isChecked()){ //Verzeichnisse und Dateien auswerten
       	    if( file1.open(QIODevice::ReadOnly|QIODevice::Text)) {
                 folder_teilen= ds.readLine();
@@ -1834,7 +1825,6 @@ int jj= 0;
  	}      
  	file1.close();
         }
-  
  	befehl = "rm " + userpath_net + "/.config/qt-fsarchiver/folder.txt";
  	//system (befehl.toLatin1().data()); 
  	treeWidget->clear();
@@ -1876,7 +1866,7 @@ int found1;
 
 void DialogNet::listWidget_base()
 {
-   	treeWidget->setColumnCount(1);
+  	treeWidget->setColumnCount(1);
  	QStringList sList;
  	sList << tr("Name");
  	treeWidget->setHeaderLabels( sList );

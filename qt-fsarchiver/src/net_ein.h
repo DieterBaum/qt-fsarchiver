@@ -22,10 +22,6 @@
 #include <QDialog>
 #include "ui_net_ein.h"
 
-
-
-using namespace std;
-
 class NetEin : public QDialog, private Ui::Eingabe_Net
 {
 	Q_OBJECT

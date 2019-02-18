@@ -83,6 +83,7 @@ DialogClone::DialogClone(QWidget *parent)
         dirModel->setRootPath(QDir::rootPath());
    	treeView_clone->setRootIndex(cwdIndex);
         rdbt_clone->setChecked(Qt::Checked);
+        connect(treeView_clone->selectionModel(), &QItemSelectionModel::currentChanged, this, &DialogClone::folder_einlesen);
         treeView_clone->setEnabled(false);
         userpath_clone = "/home/" + user; 
        	format_Disk();
@@ -878,7 +879,6 @@ void DialogClone::folder_einlesen() {
    QModelIndex index = treeView_clone->currentIndex();
    QModelIndexList indexes = selModel->selectedIndexes();
    folder_clone =  (dirModel->filePath(index));
-   
 }
 
 int DialogClone::file_check() {

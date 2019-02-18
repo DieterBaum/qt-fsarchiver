@@ -51,6 +51,7 @@ QStringList filters;
    	QModelIndex cwdIndex = dirModel->index(QDir::rootPath());
         dirModel->setRootPath(QDir::rootPath());
    	treeView->setRootIndex(cwdIndex);
+        connect(treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &DialogMBR::folder_einlesen);
         this->setCursor(Qt::WaitCursor);
         userpath_mbr = "/home/" + user; 
    	disk_exist();

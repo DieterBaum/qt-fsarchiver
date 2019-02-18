@@ -56,7 +56,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>335</y>
+      <y>329</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -72,7 +72,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>418</y>
+      <y>412</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -94,6 +94,9 @@
      <font>
       <family>Courier 10 Pitch</family>
      </font>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
     </property>
     <property name="selectionBehavior">
      <enum>QAbstractItemView::SelectRows</enum>
@@ -133,7 +136,7 @@
      </size>
     </property>
     <property name="text">
-     <string>S</string>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_folder">
@@ -163,7 +166,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>376</y>
+      <y>370</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -592,6 +595,20 @@ with fsarchi&amp;ver</string>
      <string>z</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_partition_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>430</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <zorder>pushButton_partition_2</zorder>
    <zorder>pushButton_zstd</zorder>
    <zorder>pushButton_partition</zorder>
    <zorder>pushButton_folder</zorder>
@@ -842,7 +859,7 @@ with fsarchi&amp;ver</string>
    <hints>
     <hint type="sourcelabel">
      <x>370</x>
-     <y>225</y>
+     <y>221</y>
     </hint>
     <hint type="destinationlabel">
      <x>139</x>
@@ -879,6 +896,22 @@ with fsarchi&amp;ver</string>
     <hint type="destinationlabel">
      <x>246</x>
      <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pushButton_partition_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>243</y>
     </hint>
    </hints>
   </connection>

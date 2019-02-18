@@ -24,7 +24,7 @@ class Thread : public QThread {
 public:
    Thread();
    void setValues( int anzahl_, QString dummy);
-   //int progressbar();
+
 protected:
    void run();
 private:

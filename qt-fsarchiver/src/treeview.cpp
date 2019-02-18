@@ -40,6 +40,7 @@ QStringList filters;
         dirModel->setRootPath(userpath_treeview +"/.qt-fs-client");
         treeView->setRootIndex(cwdIndex);
 	treeView->setEnabled(true);
+        connect(treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &TreeviewRead::folder_einlesen);
         
 }        
 

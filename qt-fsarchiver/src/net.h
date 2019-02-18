@@ -21,10 +21,8 @@
 #include <QMessageBox>
 #include "ui_net.h"
 #include "thread.h"
-using namespace std;
 
 class DialogNet : public QDialog, private Ui::Dialog_Net
-//class DialogNet : public QWidget, private Ui::Dialog_Net
 {
 	Q_OBJECT
 
@@ -40,7 +38,7 @@ protected slots:
         void elapsedTime();
    	void remainingTime(int prozent);
         void indicator_reset();
-        int testDateiName(string endung);
+        int testDateiName(std::string endung);
         void Daten_Samba_eintragen();
         void Daten_SSH_eintragen();
         void Daten_NFS_eintragen();

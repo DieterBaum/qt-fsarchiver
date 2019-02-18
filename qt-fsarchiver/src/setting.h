@@ -22,8 +22,6 @@
 #include <QDialog>
 #include "ui_setting.h"
 
-using namespace std;
-
 class DialogSetting : public QDialog, private Ui::setting_dialog
 {
 	Q_OBJECT

@@ -22,7 +22,6 @@
 #include <string.h>
 #include "ui_dir_dialog.h"
 #include "thread.h"
-using namespace std;
 
 class DialogDIR : public QWidget, private Ui::dir_dialog
 {

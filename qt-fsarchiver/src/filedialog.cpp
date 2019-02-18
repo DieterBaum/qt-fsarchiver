@@ -25,7 +25,6 @@
 #include <sstream>
 #include "mainWindow.h"
 
-using namespace std;
 extern int dialog_auswertung;
 QString wort;
 

@@ -23,7 +23,6 @@
 #include <locale.h>
 #include <gettext.h>
 
-using namespace std;
 QString folder_file_;
 int dialog_auswertung;
 QString parameter[15];

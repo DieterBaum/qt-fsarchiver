@@ -37,6 +37,7 @@ QString attribute;
 QString befehl;
 setupUi(this);
 connect( pushButton_net, SIGNAL( clicked() ), this, SLOT(listWidget_show()));
+connect( pushButton_net_2, SIGNAL( clicked() ), this, SLOT(listWidget_show()));
 connect( pushButton_go, SIGNAL( clicked() ), this, SLOT(go()));
 connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(end()));
 connect( chk_password, SIGNAL( clicked() ), this, SLOT(Kennwort()));

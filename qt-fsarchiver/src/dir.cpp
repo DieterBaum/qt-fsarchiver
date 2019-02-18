@@ -60,7 +60,7 @@ extern int sleepfaktor;
 DialogDIR::DialogDIR(QWidget *parent)
 {
         setupUi(this); // this sets up GUI
-	connect( bt_save, SIGNAL( clicked() ), this, SLOT( folder_dir_path_einlesen() ) ); 
+	connect( bt_save, SIGNAL( clicked() ), this, SLOT( folder_dir_path_einlesen())); 
         connect( chk_path, SIGNAL( clicked() ), this, SLOT( treeview_show() ) );
         connect( bt_end, SIGNAL( clicked() ), this, SLOT(close()));
         connect( chk_key, SIGNAL( clicked() ), this, SLOT(chkkey()));
@@ -219,6 +219,8 @@ QString attribute;
         QModelIndex index1 = treeView_path->currentIndex();
    	folder_path.append  (dirModel1->filePath(index1));
    	folder_path =  (dirModel1->filePath(index1));
+if (folder_path == "" or folder_dir == "")
+    return 1;
         QFileInfo info(folder_path); 
         keyText = lineKey->text();
         state = chk_overwrite->checkState();

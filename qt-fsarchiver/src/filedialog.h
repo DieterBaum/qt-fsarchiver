@@ -30,7 +30,6 @@ class FileDialog: public QDialog, private Ui::FileDialog {
     void file_save();
     void file_read();
     
-    
   private:
 
 };

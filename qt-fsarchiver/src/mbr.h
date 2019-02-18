@@ -22,8 +22,6 @@
 #include <string.h>
 #include "ui_mbr_dialog.h"
 
-using namespace std;
-
 class DialogMBR : public QWidget, private Ui::mbr_dialog
 {
 	Q_OBJECT

@@ -1,6 +1,9 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt4-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.5-6 18. Februar 2019.
+    - Fehlerkorrektur beim Einlesen der Partitionen. 
+    - Pfeiltasten unterstützen das Auslesen von Partitionen, Verzeichnissen. 
 * qt-fsarchiver-0.8.5-5 15. Januar 2019.
     - PBR-Sicherung bei NTFS und FAT32 Partitionen ist nicht mehr möglich. 
     - Die Wiederherstellung des PBR von NTFS und FAT32 Partitionen, die von Windows errichtet wurden, ist fehlerhaft.

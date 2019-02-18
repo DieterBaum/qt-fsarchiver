@@ -27,10 +27,6 @@
 #include <QDialog>
 #include <QMap>
 
-using namespace std;
-
-
-
 class MWindow : public QMainWindow,
                 private Ui::MainWindow {
     Q_OBJECT
@@ -57,7 +53,7 @@ public slots:
 protected slots:
    void esc_end(int flag);
    void ViewProzent();
-   int testDateiName(string endung);
+   int testDateiName(std::string endung);
    int savePartition();
    int restorePartition();
    void info();
@@ -98,7 +94,6 @@ protected slots:
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
-    QLabel *questionLabel;
     Thread thread1;
     Thread thread2;
     QTimer *timer;  

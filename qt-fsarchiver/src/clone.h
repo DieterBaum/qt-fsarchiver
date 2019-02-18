@@ -24,7 +24,6 @@
 #include <qthread.h>
 
 #include "thread.h"
-using namespace std;
 
 class DialogClone : public QWidget, private Ui::clone_dialog
 {

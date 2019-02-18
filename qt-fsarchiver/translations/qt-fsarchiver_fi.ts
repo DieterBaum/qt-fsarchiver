@@ -3108,10 +3108,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-5, January 15, 2019</source>
+version 0.8.5-6, February 18, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.
-Versio 0.8.5-5, 15.tammikuu 2019</translation>
+Versio 0.8.5-6, 18.helmikuu 2019</translation>
     </message>
     <message>
         <source>If the existing btrfs partition to be formatted? The new UUID is defined here. If you choose &lt;no&gt;, the UUID remains preserved.</source>

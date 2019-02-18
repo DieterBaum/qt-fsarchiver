@@ -62,7 +62,7 @@
    <property name="geometry">
     <rect>
      <x>390</x>
-     <y>55</y>
+     <y>40</y>
      <width>361</width>
      <height>18</height>
     </rect>
@@ -229,7 +229,7 @@ with fs-archiver</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>458</y>
+     <y>459</y>
      <width>351</width>
      <height>41</height>
     </rect>
@@ -668,40 +668,6 @@ transmission:</string>
     </property>
    </column>
   </widget>
-  <widget class="QTreeView" name="treeView_dir">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>80</y>
-     <width>371</width>
-     <height>151</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Courier 10 Pitch</family>
-     <pointsize>11</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <attribute name="headerDefaultSectionSize">
-    <number>400</number>
-   </attribute>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>10</y>
-     <width>371</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_zstd_net">
    <property name="geometry">
     <rect>
@@ -715,6 +681,20 @@ transmission:</string>
     <string>z</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_partition_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>465</y>
+     <width>21</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <zorder>pushButton_partition_2</zorder>
   <zorder>pushButton_zstd_net</zorder>
   <zorder>bt_treeWiget</zorder>
   <zorder>label_2</zorder>
@@ -740,8 +720,6 @@ transmission:</string>
   <zorder>label_13</zorder>
   <zorder>bt_toParent</zorder>
   <zorder>treeWidget</zorder>
-  <zorder>treeView_dir</zorder>
-  <zorder>groupBox_2</zorder>
  </widget>
  <resources>
   <include location="../icon.qrc"/>
@@ -824,6 +802,22 @@ transmission:</string>
     <hint type="destinationlabel">
      <x>223</x>
      <y>476</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pushButton_partition_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>475</y>
     </hint>
    </hints>
   </connection>
