@@ -453,7 +453,7 @@ QString NetEin::user_holen()
   return user_net_ein;
 }
 
-int NetEin:: end()
+void NetEin:: end()
 { 
    close();
 }
@@ -686,6 +686,8 @@ int NetEin::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+
+  return 0;
 }
 
 

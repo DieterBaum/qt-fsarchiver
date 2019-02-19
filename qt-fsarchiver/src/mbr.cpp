@@ -477,6 +477,8 @@ int DialogMBR::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+
+  return 0;
 }
 
 QString DialogMBR::mtab_einlesen(QString partition_if_home)
