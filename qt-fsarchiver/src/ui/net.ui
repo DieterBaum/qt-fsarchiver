@@ -163,22 +163,6 @@ with fs-archiver</string>
     <string>n</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_save">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>370</y>
-     <width>351</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="toolTip">
-    <string>Start the backup of a partition.</string>
-   </property>
-   <property name="text">
-    <string extracomment="Partition sichern">Save partition</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineEdit_DateiName">
    <property name="geometry">
     <rect>
@@ -210,19 +194,6 @@ with fs-archiver</string>
      <width>371</width>
      <height>27</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>320</y>
-     <width>291</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string extracomment="Dateiname der Sicherung:">File name of the backup:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_end">
@@ -406,7 +377,7 @@ files/directories:</string>
     <rect>
      <x>390</x>
      <y>300</y>
-     <width>351</width>
+     <width>371</width>
      <height>101</height>
     </rect>
    </property>
@@ -471,20 +442,6 @@ cores for to be used fsarchiver:</string>
       <width>51</width>
       <height>27</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>193</y>
-      <width>161</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Compression
-setting:</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="chk_Beschreibung">
@@ -645,8 +602,8 @@ transmission:</string>
     <rect>
      <x>40</x>
      <y>380</y>
-     <width>21</width>
-     <height>27</height>
+     <width>16</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -657,9 +614,9 @@ transmission:</string>
    <property name="geometry">
     <rect>
      <x>390</x>
-     <y>300</y>
+     <y>240</y>
      <width>371</width>
-     <height>101</height>
+     <height>161</height>
     </rect>
    </property>
    <column>
@@ -694,6 +651,75 @@ transmission:</string>
     <string>2</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="bt_treeWiget_2">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>380</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>273</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Compression
+setting:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>291</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="Dateiname der Sicherung:">File name of the backup:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_folder_free_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>380</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_save">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Start the backup of a partition.</string>
+   </property>
+   <property name="text">
+    <string extracomment="Partition sichern">Save partition</string>
+   </property>
+  </widget>
   <zorder>pushButton_partition_2</zorder>
   <zorder>pushButton_zstd_net</zorder>
   <zorder>bt_treeWiget</zorder>
@@ -704,11 +730,9 @@ transmission:</string>
   <zorder>groupBox</zorder>
   <zorder>listWidget</zorder>
   <zorder>pushButton_folder_free</zorder>
-  <zorder>pushButton_save</zorder>
   <zorder>lineEdit_DateiName</zorder>
   <zorder>bt_net_art</zorder>
   <zorder>txt_rechner_net</zorder>
-  <zorder>label_4</zorder>
   <zorder>pushButton_end</zorder>
   <zorder>pushButton_restore</zorder>
   <zorder>frame</zorder>
@@ -720,6 +744,11 @@ transmission:</string>
   <zorder>label_13</zorder>
   <zorder>bt_toParent</zorder>
   <zorder>treeWidget</zorder>
+  <zorder>bt_treeWiget_2</zorder>
+  <zorder>label</zorder>
+  <zorder>label_4</zorder>
+  <zorder>pushButton_folder_free_2</zorder>
+  <zorder>pushButton_save</zorder>
  </widget>
  <resources>
   <include location="../icon.qrc"/>
@@ -780,11 +809,11 @@ transmission:</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>227</x>
-     <y>115</y>
+     <x>390</x>
+     <y>240</y>
     </hint>
     <hint type="destinationlabel">
-     <x>95</x>
+     <x>55</x>
      <y>395</y>
     </hint>
    </hints>
@@ -818,6 +847,38 @@ transmission:</string>
     <hint type="destinationlabel">
      <x>257</x>
      <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeWidget</sender>
+   <signal>currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)</signal>
+   <receiver>bt_treeWiget_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_free_folder</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>pushButton_folder_free_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>547</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>107</x>
+     <y>390</y>
     </hint>
    </hints>
   </connection>

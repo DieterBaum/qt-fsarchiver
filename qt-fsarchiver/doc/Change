@@ -1,6 +1,9 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt4-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-7 March 13, 2019.
+     - Arrow keys support added.
+     - Error correction when reading the partitions.  
 * qt-fsarchiver-0.8.5-6 February 18, 2019.
      - Error correction when reading the partitions. 
      - Arrow keys support reading of partitions, directories.

@@ -2859,9 +2859,8 @@ Sie müssen eine Datei auswählen</translation>
 Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1455"/>
-        <source> specials have been backed
-.</source>
+        <location filename="../src/mainWindow.cpp" line="1396"/>
+        <source> specials have been backed</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
         <translation>spezielle Daten wurden gesichert.</translation>
@@ -2928,7 +2927,7 @@ Partition war nur teilweise erfolgreich.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1388"/>
-        <source> specials have been backed up.</source>
+        <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation> spezielle Daten wurden gesichert.     </translation>
     </message>
@@ -3074,9 +3073,9 @@ Vielleicht ist die Partition verschlüsselt?</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-6, February 18, 2019</source>
+version 0.8.5-7, March 13, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-6, 18.Februar 2019</translation>
+<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-7, 13.März 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1525"/>

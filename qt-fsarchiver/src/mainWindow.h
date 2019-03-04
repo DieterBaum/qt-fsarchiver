@@ -47,6 +47,7 @@ public:
            
 public slots: 
    void folder_einlesen();
+   void folder_expand();
    void save_button();
    QString pid_ermitteln_(QString prozess);
    

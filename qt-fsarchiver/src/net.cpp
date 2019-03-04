@@ -75,6 +75,7 @@ int mountflag = 0;
 int show1 = 0;
 QString userpath_net;
 extern int sleepfaktor;
+int nameflag = 0;
 
 DialogNet::DialogNet(QWidget *parent)
 {
@@ -102,6 +103,7 @@ setupUi(this); // this sets up GUI
         connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
         connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
         connect( pushButton_folder_free, SIGNAL( clicked() ), this, SLOT(listWidget_folder_free_auslesen()));
+        connect( pushButton_folder_free_2, SIGNAL( clicked() ), this, SLOT(listWidget_folder_free_auslesen()));
         //connect( pushButton_break, SIGNAL( clicked() ), this, SLOT(esc_end()));
         connect( chk_key, SIGNAL( clicked() ), this, SLOT(chkkey()));
         connect( bt_net_art, SIGNAL( clicked() ), this, SLOT(cmb_net()));
@@ -109,6 +111,7 @@ setupUi(this); // this sets up GUI
         connect(treeWidget, SIGNAL(itemActivated(QTreeWidgetItem *, int)), this, SLOT(listWidget_tree_auslesen(QTreeWidgetItem *, int)));
         connect(treeWidget, SIGNAL(doubleClicked(QTreeWidgetItem *, int)), this, SLOT(listWidget_tree_auslesen(QTreeWidgetItem *, int)));
         connect( bt_treeWiget, SIGNAL( clicked() ), this, SLOT(treeWidget_auslesen()));
+        connect( bt_treeWiget_2, SIGNAL( clicked() ), this, SLOT(listWidget_tree_auslesen_1()));
         connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
         if (rdBt_saveFsArchiv->isChecked()){
   	    pushButton_restore->setEnabled(false);
@@ -1658,6 +1661,28 @@ QString rechner;
         listWidget_tree_eintragen(rechner_IP, key_net, user_net, "/" + name, 0);
 }
 
+void DialogNet::listWidget_tree_auslesen_1()
+{
+NetEin netein;	
+QString rechner;
+QString name = " ";
+       if(nameflag == 0)
+          {QTreeWidgetItem *current = treeWidget->currentItem();
+          name = current->text(0);}
+       rechner = netein.Namen_holen();
+       user_net = netein.user_holen(); 
+       key_net = netein.key_holen();
+       folder_free = pfad_forward + "/" + name;
+       // Prüfen ob 2 Flash vorhanden sind
+        if (folder_free.indexOf ("/", 1) == 1)
+		folder_free.replace(1,1,"");
+        if (rdBt_restoreFsArchiv->isChecked()){
+            file_net = userpath_net + "/.qt-fs-client/" + name;
+            int pos = file_net.indexOf(".fsa");
+            if (pos > 1)
+            	restore_file_name_txt ->setText(name);}
+}
+
 void DialogNet::treeWidget_auslesen()
 {
 	QTreeWidgetItem *current = treeWidget->currentItem();
@@ -1705,12 +1730,6 @@ int i = 0;
             QMessageBox::about(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
         return 1;
         }
-        if ( i==256){
-		QString str= QString::number(i);
-		QMessageBox::about(this, tr("Note", "Hinweis"),
-         			tr("Backup or restore with ssh is not possible. Exit the program and restart it in the terminal with root privileges.\n", " Die Sicherung oder Wiederherstellung mit ssh ist nicht möglich. Beenden Sie  das Programm und starten es erneut im Terminal mit Root-Rechten\n"));
-         return 256;
-         }
         if (i == 0)
            mountflag = 1; //Beim erfolgreichen mounten wird das erneute mounten verhindert
 }
@@ -1827,7 +1846,9 @@ int jj= 0;
         }
  	befehl = "rm " + userpath_net + "/.config/qt-fsarchiver/folder.txt";
  	//system (befehl.toLatin1().data()); 
+ 	nameflag = 1;
  	treeWidget->clear();
+        nameflag = 0;
         QDir dir2(QString("%1").arg(""));
    	dir2.setNameFilters(filters);
    	QStringList dirList2 = dir2.entryList(QDir::Files);

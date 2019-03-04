@@ -63,6 +63,7 @@ public slots:
         void rdbutton_partition_image_restore();
         void addWidget();
         void listWidget_auslesen();
+        void folder_expand();
                        
 private:
     QFileSystemModel *dirModel;

@@ -29,6 +29,7 @@ QStringList filters;
 	connect( cmd_save, SIGNAL( clicked() ), this, SLOT(folder_einlesen_beenden())); 
         connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(close()));
         connect( pushButton_treeview, SIGNAL( clicked() ), this, SLOT(folder_einlesen()));
+        connect( pushButton_treeview_2, SIGNAL( clicked() ), this, SLOT(folder_expand()));
         dirModel = new QFileSystemModel;
    	selModel = new QItemSelectionModel(dirModel);
    	treeView->setModel(dirModel);
@@ -58,6 +59,13 @@ QString TreeviewRead::folder_treeview_holen()
 void TreeviewRead::folder_einlesen_beenden() {
      close();
 }
+
+void TreeviewRead::folder_expand() {
+   QModelIndex index = treeView->currentIndex();
+   treeView->expand(index);
+}
+
+
 
 
 

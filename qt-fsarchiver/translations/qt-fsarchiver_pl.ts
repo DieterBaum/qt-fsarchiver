@@ -2957,15 +2957,14 @@ Proszę użyć live CD.</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-6, February 18, 2019</source>
+version 0.8.5-7, March 13, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
 - kopii zapasowych
 - partycji,
 - katalogów
 - i MBR.
-
-wersja 0.8.5-6, 30.luty 2019</translation>
+wersja 0.8.5-7, 13.marzec 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

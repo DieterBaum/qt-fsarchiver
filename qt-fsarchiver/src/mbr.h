@@ -38,6 +38,7 @@ public slots:
         int is_gpt(QString partition_efi);
         void disk_exist();
         void disk_art();
+        void folder_expand();
 
 private:
     QFileSystemModel *dirModel;

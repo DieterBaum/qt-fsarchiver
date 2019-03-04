@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>375</x>
-     <y>458</y>
+     <y>457</y>
      <width>321</width>
      <height>41</height>
     </rect>
@@ -46,7 +46,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>52</y>
+     <y>50</y>
      <width>331</width>
      <height>301</height>
     </rect>
@@ -75,7 +75,7 @@
    <property name="geometry">
     <rect>
      <x>370</x>
-     <y>52</y>
+     <y>50</y>
      <width>325</width>
      <height>301</height>
     </rect>
@@ -472,6 +472,34 @@ backup key</string>
     <string>z</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="bt_path">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>470</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_dir">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>470</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>bt_path</zorder>
+  <zorder>bt_dir</zorder>
   <zorder>pushButton_zstd_dir</zorder>
   <zorder>bt_end</zorder>
   <zorder>bt_save</zorder>
@@ -502,6 +530,38 @@ backup key</string>
     <hint type="destinationlabel">
      <x>524</x>
      <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView_dir</sender>
+   <signal>activated(QModelIndex)</signal>
+   <receiver>bt_dir</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>125</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView_path</sender>
+   <signal>activated(QModelIndex)</signal>
+   <receiver>bt_path</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>180</x>
+     <y>430</y>
     </hint>
    </hints>
   </connection>

@@ -34,6 +34,8 @@ public slots:
 	int folder_dir_path_einlesen();
         void treeview_show();
         void zip_einlesen_dir(); 
+        void folder_expand_dir(); 
+        void folder_expand_path();
               
 private:
     QFileSystemModel *dirModel;
@@ -43,6 +45,7 @@ private:
     QLabel *questionLabel;
     void indicator_reset();
     QTimer *timer;
+    
 
 protected slots:
     void elapsedTime();
@@ -58,7 +61,7 @@ protected slots:
 private slots:    
    void thread1Ready();
    void thread2Ready();
-	
+   	
 };
 
 #endif

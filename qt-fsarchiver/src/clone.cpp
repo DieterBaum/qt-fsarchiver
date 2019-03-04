@@ -74,7 +74,9 @@ DialogClone::DialogClone(QWidget *parent)
         //connect( pushButton_break, SIGNAL( clicked() ), this, SLOT(esc_end()));
         connect( bt_end, SIGNAL( clicked() ), this, SLOT(close()));
         connect( pushButton_folder, SIGNAL( clicked() ), this, SLOT(folder_einlesen()));
+        connect( pushButton_folder_2, SIGNAL( clicked() ), this, SLOT(folder_expand()));
         connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
+        connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
         dirModel = new QFileSystemModel;
    	selModel = new QItemSelectionModel(dirModel);
    	treeView_clone->setModel(dirModel);
@@ -1476,4 +1478,10 @@ QString DialogClone::Zeit_auslesen_clone(){
     _Datum_clone = _Datum_clone + Datum_akt.setNum(Jahr) ;
     return _Datum_clone;
 }
+
+void DialogClone::folder_expand() {
+   QModelIndex index = treeView_clone->currentIndex();
+   treeView_clone->expand(index);
+}
+
 

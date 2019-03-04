@@ -68,19 +68,6 @@
      <string>Save partition</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_end">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>412</y>
-      <width>351</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Exit</string>
-    </property>
-   </widget>
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
@@ -608,6 +595,32 @@ with fsarchi&amp;ver</string>
      <string>2</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_folder_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>430</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_end">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>412</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
    <zorder>pushButton_partition_2</zorder>
    <zorder>pushButton_zstd</zorder>
    <zorder>pushButton_partition</zorder>
@@ -615,7 +628,6 @@ with fsarchi&amp;ver</string>
    <zorder>label_Partition</zorder>
    <zorder>label_folder</zorder>
    <zorder>pushButton_save</zorder>
-   <zorder>pushButton_end</zorder>
    <zorder>listWidget</zorder>
    <zorder>treeView</zorder>
    <zorder>lineEdit_DateiName</zorder>
@@ -625,6 +637,8 @@ with fsarchi&amp;ver</string>
    <zorder>frame_2</zorder>
    <zorder>groupBox</zorder>
    <zorder>chk_hidden</zorder>
+   <zorder>pushButton_folder_2</zorder>
+   <zorder>pushButton_end</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -910,8 +924,24 @@ with fsarchi&amp;ver</string>
      <y>158</y>
     </hint>
     <hint type="destinationlabel">
-     <x>239</x>
-     <y>243</y>
+     <x>260</x>
+     <y>491</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>activated(QModelIndex)</signal>
+   <receiver>pushButton_folder_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>346</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>509</y>
     </hint>
    </hints>
   </connection>

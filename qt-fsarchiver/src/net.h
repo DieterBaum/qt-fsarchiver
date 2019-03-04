@@ -50,6 +50,7 @@ protected slots:
         void listWidget_base();
 	void listWidget_tree_eintragen(QString rechner, QString pass, QString user, QString pfad, int flag);
         void listWidget_tree_auslesen(QTreeWidgetItem *item, int);
+        void listWidget_tree_auslesen_1();
 	void addItems(const QString &name, const QStringList& iconMap);
         void button_toParent();
         void treeWidget_auslesen();

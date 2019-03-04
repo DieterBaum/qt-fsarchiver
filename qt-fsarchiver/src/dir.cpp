@@ -67,6 +67,8 @@ DialogDIR::DialogDIR(QWidget *parent)
         //connect( pushButton_break, SIGNAL( clicked() ), this, SLOT( esc_end() ) ); 
         connect( chk_hidden, SIGNAL( clicked() ), this, SLOT(chkhidden()));
         connect( pushButton_zstd_dir, SIGNAL( clicked() ), this, SLOT(zip_einlesen_dir()));
+        connect( bt_dir, SIGNAL( clicked() ), this, SLOT(folder_expand_dir()));
+        connect( bt_path, SIGNAL( clicked() ), this, SLOT(folder_expand_path()));
         timer = new QTimer(this);
         dirModel = new QFileSystemModel;
    	selModel = new QItemSelectionModel(dirModel);
@@ -898,7 +900,15 @@ if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
           return dev_sdx[0];
 }
 
-
+void DialogDIR::folder_expand_dir(){
+   QModelIndex index = treeView_dir->currentIndex();
+   treeView_dir->expand(index);
+}
+void DialogDIR::folder_expand_path()
+   {
+   QModelIndex index = treeView_path->currentIndex();
+   treeView_path->expand(index);
+}
 
 
 

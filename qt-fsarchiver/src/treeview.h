@@ -37,6 +37,7 @@ private:
 private slots:	
         void folder_einlesen();
         void folder_einlesen_beenden();
+        void folder_expand();
 };
 
 #endif

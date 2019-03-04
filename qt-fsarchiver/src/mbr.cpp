@@ -52,6 +52,7 @@ QStringList filters;
         dirModel->setRootPath(QDir::rootPath());
    	treeView->setRootIndex(cwdIndex);
         connect(treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &DialogMBR::folder_einlesen);
+        connect( bt_folder, SIGNAL( clicked() ), this, SLOT(folder_expand()));
         this->setCursor(Qt::WaitCursor);
         userpath_mbr = "/home/" + user; 
    	disk_exist();
@@ -524,6 +525,11 @@ int DialogMBR::is_gpt(QString partition_efi)
         }
  	file.close();
   return 0;
+}
+
+void DialogMBR::folder_expand() {
+   QModelIndex index = treeView->currentIndex();
+   treeView->expand(index);
 }
 
 

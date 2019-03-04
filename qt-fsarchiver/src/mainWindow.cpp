@@ -125,6 +125,7 @@ MWindow::MWindow()
    connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
    connect( pushButton_partition_2, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
    connect( pushButton_folder, SIGNAL( clicked() ), this, SLOT(folder_einlesen()));
+   connect( pushButton_folder_2, SIGNAL( clicked() ), this, SLOT(folder_expand()));
    connect(treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &MWindow::folder_einlesen);
    connect( rdBt_saveFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen()));
    connect( rdBt_restoreFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen()));
@@ -1160,6 +1161,11 @@ void MWindow::folder_einlesen() {
    folder =  (dirModel->filePath(index));
 }
 
+void MWindow::folder_expand() {
+   QModelIndex index = treeView->currentIndex();
+   treeView->expand(index);
+}
+
 void MWindow::folder_file() {
    extern QString folder_file_;
    folder_file_ = folder + "/" + DateiName + "-" + _Datum + ".txt";
@@ -1168,8 +1174,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-6, February 18, 2019",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-6, 18.Februar 2019"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-7, March 13, 2019",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019"));
       }
 
 int MWindow::is_running(){
@@ -1347,7 +1353,6 @@ void MWindow::closeEvent(QCloseEvent *event) {
 
 void MWindow::thread1Ready(){
 int part_testen;
-
 QString dummy; 
 QString text_integer; 
 int err = 0;
@@ -1388,8 +1393,7 @@ int anzahl = 0;
            stopFlag = 1; 
            QMessageBox::about(this, tr("Note", "Hinweis"), 
            tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
-        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
-        + cnt_special_ + tr(" specials have been backed.", " spezielle Daten wurden gesichert."));
+        tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed.", " spezielle Daten wurden gesichert."));
         progressBar->setValue(100);     
 	}
         if (dialog_auswertung == 1 and err == 10 and befehl_pbr != ""){ 
@@ -2026,6 +2030,8 @@ QString partsdx[100][6];
 int i = 0;
 int j = 0;
 int k = 0;
+int l = 0;
+int m = 0;
      	attribute = "blkid -o export 1> " +  userpath + "/.config/qt-fsarchiver/disk.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
         system (befehl.toLatin1().data());
@@ -2039,7 +2045,9 @@ int k = 0;
    	    while (!ds.atEnd())
       	    { 
             text = ds.readLine();
-            if (text.indexOf("DEVNAME=/dev/sd") > -1 && (text.indexOf("PTTYPE") == -1) or text.indexOf("DEVNAME=/dev/nvme0") > -1 &&  (text.indexOf("PTTYPE") == -1))
+         if (text.indexOf("PARTLABEL=Microsoft") > -1)
+             part[i][0] = "";
+           if (text.indexOf("DEVNAME=/dev/sd") > -1 or text.indexOf("DEVNAME=/dev/nvme0") > -1 )
                { 
       	       dummy = text;
                part[i][0] = dummy.right(dummy.size() -13); //Partitionsname
@@ -2064,7 +2072,15 @@ int k = 0;
       	}
    	file.close();
         } 
-        
+        //Anzahl der Swap ermitteln
+        for(j=0; j< i; j++)
+        {
+          text = part[j][1];
+          if (text.indexOf("swap") > -1)
+             l++;
+        }
+     for(m=0; m<l; m++)
+       {
         //Suchen an welcher Stelle Swap vorhanden ist
         for(j=0; j< i; j++)
         {
@@ -2073,14 +2089,15 @@ int k = 0;
              break;
         }
        //Swap aus Array entfernen
-        for(j=3; j< i; j++)
+        for(j=j; j< i; j++)
         {
           for(k=0; k< 7; k++)
              part[j][k] = part[j+1][k];
         }
+       }
+
         sdx2_einlesen (); 
 }
-
 void MWindow::sdx2_einlesen ()
 {
 QString text;
@@ -2107,7 +2124,7 @@ float dummy1;
             while (!ds.atEnd())
       	    { 
            text = ds.readLine();
-          if (text.indexOf("/dev/sd") > -1 or text.indexOf("/dev/nvme0") > -1 &&  (text.indexOf("PTUUID") == -1))
+          if (text.indexOf("/dev/sd") > -1  &&  (text.indexOf("PTUUID") == -1) or text.indexOf("/dev/nvme0") > -1 &&  (text.indexOf("PTUUID") == -1))
       	      {
       	      sdx[i] = text;
       	      i++;

@@ -157,6 +157,20 @@ from this hard disk:</string>
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="bt_folder">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>462</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <zorder>bt_folder</zorder>
   <zorder>bt_dummy</zorder>
   <zorder>cmb_mbr</zorder>
   <zorder>bt_end</zorder>
@@ -182,6 +196,22 @@ from this hard disk:</string>
     <hint type="destinationlabel">
      <x>238</x>
      <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>activated(QModelIndex)</signal>
+   <receiver>bt_folder</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>472</y>
     </hint>
    </hints>
   </connection>
