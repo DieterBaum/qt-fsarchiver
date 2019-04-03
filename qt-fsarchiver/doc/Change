@@ -1,6 +1,9 @@
 ===========================================================================================================
-* qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt4-fsarchiver] 
+* qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-8 April 10, 2019.
+     - Directory paths with spaces are processed correctly.
+     - When installing from sources, qt-fsarchiver-terminal must be upgraded to version 0.8.5-8
 * qt-fsarchiver-0.8.5-7 March 13, 2019.
      - Arrow keys support added.
      - Error correction when reading the partitions.  

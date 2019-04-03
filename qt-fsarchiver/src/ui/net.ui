@@ -614,9 +614,9 @@ transmission:</string>
    <property name="geometry">
     <rect>
      <x>390</x>
-     <y>240</y>
+     <y>300</y>
      <width>371</width>
-     <height>161</height>
+     <height>101</height>
     </rect>
    </property>
    <column>

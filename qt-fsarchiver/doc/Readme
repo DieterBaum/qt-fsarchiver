@@ -1,8 +1,8 @@
 =========================================================================================================================================
-qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt4-fsarchiver]
+qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =========================================================================================================================================
 
-Copyright (C) 2008-2018 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2019 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
@@ -78,6 +78,10 @@ When restoring a btrfs Partiiton you can choose whether the partition should be 
 When restoring directories is selected, whether the directory should be restored to its original location or to another location. Press the  button "Restore Partition" and the partition or directory being restored.
 Requisites for the work with the network:
 When the backup over a network, an additional form is opened, in which the user name and password must be entered for the network. Of storing the password is not recommended outside of the private sector, because the encryption of the password is performed in a simple way.
+
+Prerequisites for working with the network: 
+The computer name may contain a maximum of 15 characters.
+The names of the backup directories must not contain any spaces.
 
 With the protocoll samba:
 If the network is used must be installed on both computers (Client and Server) Samba. Client is the computer that performs the backup/restore. Server is the computer where the data is stored.

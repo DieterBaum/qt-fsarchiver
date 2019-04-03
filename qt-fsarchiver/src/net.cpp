@@ -4,7 +4,7 @@
 * Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
+ * modify it under the terms of the GNU General Publicstimmt nicht 
  * License v2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -1930,7 +1930,9 @@ if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             text = ds.readLine();
             dummy = text.right(1);
             if (dummy == buchstabe)
+               {
       	       dev_sdx_ = text;
+               }
       	   else
       	   {    
             while (!ds.atEnd())

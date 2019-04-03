@@ -3,7 +3,7 @@
  * 
 * Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
  *
- * This program is free software; you can redistribute it and/or
+ * This program is free software; you can redistribute it and/orchar
  * modify it under the terms of the GNU General Public
  * License v2 as published by the Free Software Foundation.
  *
@@ -36,6 +36,7 @@ QString partition_;
 QString UUID;
 std::string partition_str;
 QString folder;
+QString folder1;
 QString _Datum;
 QString DateiName("") ;
 extern int dialog_auswertung;
@@ -77,11 +78,14 @@ MWindow::MWindow()
    QStringList dummy;
    QStringList partition_kurz;
    QString partition1_;
-   QStringList items; 
+   QStringList items;
+   QString version = ""; 
+   QString version1 = "";
    int pos = 0, pos1 = 0;
    int i = 0;
    int j = 0;
    int k = 0;
+   int found = 0;
    QString befehl;
    QString homepath = QDir::homePath();
    QString rootpath = QDir::rootPath();
@@ -152,7 +156,7 @@ MWindow::MWindow()
      if (ok && !text.isEmpty())
        password= text;
      }
-QFile file2("/usr/sbin/qt-fsarchiver-terminal");
+   QFile file2("/usr/sbin/qt-fsarchiver-terminal");
    if (!file2.exists())
       {
       QMessageBox::about(this,tr("Note", "Hinweis"),
@@ -160,6 +164,35 @@ QFile file2("/usr/sbin/qt-fsarchiver-terminal");
       esc_end(1);
       return;
       }
+      //Version von qt-fsarchiver-terminal prüfen
+      befehl = "/usr/sbin/qt-fsarchiver-terminal " + userpath + " version";
+      system (befehl.toLatin1().data());
+      QString filename = userpath + "/.config/qt-fsarchiver/version.txt";
+      QFile file1(filename);
+      if(file1.open(QIODevice::ReadOnly));
+      {
+          QDataStream in(&file1);
+          QString str;
+          in >> version;
+      }
+       file1.close();
+       found = version.indexOf(".");
+        while (found > -1)
+        {
+          found = version.indexOf(".");
+          if (found > -1)
+             version.replace(found, 1, "");
+        } 
+        found = version.indexOf("-");
+        version.replace(found, 1, "");
+       int version_  = version.toInt();
+       if (version1 == "")
+           version1 ="0.8.5-8";
+       if (!file1.exists() or 858 > version_)
+           {
+       QMessageBox::about(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
+    	return;	
+          }
    if (password == "")
    {
    QMessageBox::about(this,tr("Note", "Hinweis"),
@@ -677,13 +710,13 @@ int MWindow::savePartition()
                                  // indizierung = indizierung + 1;
 				     }
 
-                                 parameter[indizierung] = (folder + "/" + DateiName + "-" + _Datum + ".fsa");
+                                 parameter[indizierung] = (folder1 + "/" + DateiName + "-" + _Datum + ".fsa");
 				// Vorbereitung für psb
                                 befehl_pbr = ""; 
 				state = chk_pbr->checkState();
 				if (state == Qt::Checked)
                                   {
-                                  befehl_pbr = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + "if=/dev/" + partition_ + " of=" + folder + "/" + DateiName + "-" + _Datum + ".pbr bs=512 count=1";
+                                  befehl_pbr = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + "if=/dev/" + partition_ + " 'of=" + folder + "/" + DateiName + "-" + _Datum + ".pbr' bs=512 count=1";
 				  system (befehl_pbr.toLatin1().data());
                                   }
                                   SicherungsFolderFileName = parameter[indizierung];
@@ -923,7 +956,7 @@ QString attribute;
                parameter[0] = "fsarchiver";
        	       parameter[1] = "archinfo";
                if (state1 != Qt::Checked) {
-               		parameter[2] = folder;
+               		parameter[2] = folder1;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2];
   			attribute = "3 " + attribute;
                         save_attribut(attribute);
@@ -951,7 +984,7 @@ QString attribute;
                   	lineKey->setText ("");
 	                return 0 ; 
                	   		}
-			parameter[4] = folder;
+			parameter[4] = folder1;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2] + " " + parameter[3] + " " + parameter[4];
                         attribute = "5 " + attribute;
                         save_attribut(attribute);
@@ -1066,7 +1099,7 @@ QString attribute;
                if (index == "0")
                   index = "1";
                parameter[2] = "-j" + index;
-               parameter[3] = folder;
+               parameter[3] = folder1;
                parameter[4] = "id=0,dest=/dev/" + partition_;
                int indizierung = 5;       
                if (state1 == Qt::Checked) { // Verzeichnis mit Schlüssel gesichert
@@ -1130,6 +1163,7 @@ void MWindow::listWidget_auslesen() {
     row = listWidget->currentRow();
     row_1 = row;
     partition_ = widget[row];
+partition_ = "/dev/sda8";
     int pos = partition_.indexOf("btrfs");
     if (pos > 0)
        partition_typ_ = "btrfs";
@@ -1156,9 +1190,17 @@ int zip = cmb_zip->currentIndex();
 }
 
 void MWindow::folder_einlesen() {
+int found = 0;
    QModelIndex index = treeView->currentIndex();
    QModelIndexList indexes = selModel->selectedIndexes();
+
    folder =  (dirModel->filePath(index));
+   folder1 =  (dirModel->filePath(index));
+   while (found > -1){
+          found = folder1.indexOf(" ");
+          if (found > -1)
+            folder1.replace(found, 1, "+"); 
+          }
 }
 
 void MWindow::folder_expand() {
@@ -1174,8 +1216,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-7, March 13, 2019",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-8, April 10, 2019",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-8, 10.April 2019"));
       }
 
 int MWindow::is_running(){

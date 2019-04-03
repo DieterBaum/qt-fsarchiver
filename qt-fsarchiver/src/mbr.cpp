@@ -144,6 +144,7 @@ int i;
 int success = 0;
 int pos=0;
 int pos2=0;
+int found = 0;
 QString partition;
 QString attribute;
 QModelIndex index = treeView->currentIndex();
@@ -155,6 +156,9 @@ QModelIndexList indexes = selModel->selectedIndexes();
     efiflag = is_gpt("/dev/" + partition);
     // efiflag = 0 :MBR 1:GPT
     folder_ =  (dirModel->filePath(index));
+    found = folder_.indexOf(" ");
+      if (found > -1)
+            folder_= "'" + folder_ + "'"; 
     pos = folder_.indexOf("_mbr_");
     pos2 = folder_.indexOf("_gpt_");
     if (efiflag == 0 && (pos == -1) && (dialog_auswertung == 5)){
@@ -192,7 +196,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
              if (efiflag == 1)
              {
                 attribute = "sgdisk -b" + folder_ + "/" + Ubuntuversion + "_gpt_" + partition + " /dev/" + partition;
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
              }
             i = system (befehl.toLatin1().data());
                 if (i == 0 && efiflag == 0)
@@ -219,7 +223,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
          if (i ==0) {
               if (cmb_mbr->currentIndex() == 0) {
               attribute = "sgdisk -l " + folder_ + " /dev/" + partition;
-              befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+              befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
               i = system (befehl.toLatin1().data());
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The GUID partition table was successfully restored.\n", "Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
@@ -244,6 +248,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
         	
 	   if (cmb_mbr->currentIndex() == 0) {
               attribute = "if=" + folder_ + " of=/dev/" + partition + " bs=1 count=446";
+
               befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
               i = system (befehl.toLatin1().data());
               if (i == 0)
@@ -402,22 +407,55 @@ QString filename = userpath_mbr + "/.config/qt-fsarchiver/issue.txt";
 int DialogMBR::folder_einlesen() {
    QString partition;
    QString Festplatte;
+   QString befehl;
+   QString filename = userpath_mbr + "/.config/qt-fsarchiver/mbr_size.txt";
+   QFile file(filename); 
+   QTextStream ds(&file);
+   QString size__; 
+   QString dummy;
    int ret = 1; 
-  // int pos = 0;
+   int found = 0;
    int pos1 = 0;
- //  int pos2 = 0;
    int i = 0;
+   QString mbr_name;
+   QStringList mbr;
+   QString mbr_;
+   QString text;
    QModelIndex index = treeView->currentIndex();
-   QModelIndexList indexes = selModel->selectedIndexes();
+   QModelIndexList indexemas = selModel->selectedIndexes();
    folder_.append  (dirModel->filePath(index));
    folder_ =  (dirModel->filePath(index));
-   if (dialog_auswertung == 5)
-	Festplatte = folder_.right(3);
+   found = folder_.indexOf(" ");
    QFileInfo info(folder_); 
-   size_ = info.size(); 
-  //  pos = folder_.indexOf("mbr_sd");
-  //  pos2 = folder_.indexOf("gpt_sd");
-   if (folder_ == "" && (dialog_auswertung == 4))
+   if (found > -1)
+     {
+     mbr_ = folder_; 
+     dummy = "'" + folder_ + "'";
+     mbr = mbr_.split("/");
+     i = mbr.length();
+     mbr_name = mbr[i-1];
+     pos1 = mbr_name.size();
+     folder_= folder_.left(folder_.size() - pos1);
+     befehl = "ls -la '" + folder_ + "' 1>" +  userpath_mbr + "/.config/qt-fsarchiver/mbr_size.txt";
+     system (befehl.toLatin1().data());
+     if( file.open(QIODevice::ReadOnly|QIODevice::Text)) {  
+        while (!ds.atEnd()){
+          text = ds.readLine();
+	  if (text.indexOf("mbr") > -1) 
+              mbr_ = text;      
+           }
+         file.close();
+        }
+       mbr = mbr_.split(QRegExp("\\s+"));
+      if (dialog_auswertung == 5) 
+         size__ = mbr[4];
+       size_ = size__.toInt();
+       folder_ = dummy;
+      }
+   else
+       size_ = info.size();
+    Festplatte = folder_.right(3);
+    if (folder_ == "" && (dialog_auswertung == 4))
       {
        QMessageBox::about(this, tr("Note", "Hinweis"),
       tr("You must select a directory", "Sie müssen ein Verzeichnis auswählen\n"));
@@ -508,7 +546,7 @@ int DialogMBR::is_gpt(QString partition_efi)
       QString attribute;
       QString befehl;
       attribute = "gdisk -l " + partition_efi +  " 1>" +  userpath_mbr + "/.config/qt-fsarchiver/efi.txt";
-      befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+      befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
       system (befehl.toLatin1().data());
       QThread::msleep(10 * sleepfaktor);
       QString filename = userpath_mbr + "/.config/qt-fsarchiver/efi.txt";

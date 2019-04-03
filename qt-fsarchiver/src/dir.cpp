@@ -215,14 +215,27 @@ QString keyText = "";
 Qt::CheckState state1;
 QString optionkey;
 QString attribute;
+int found = 0;
    	QModelIndex index = treeView_dir->currentIndex();
    	folder_dir.append  (dirModel->filePath(index));
    	folder_dir =  (dirModel->filePath(index));
+        while (found > -1){
+          found = folder_dir.indexOf(" ");
+          if (found > -1)
+            folder_dir.replace(found, 1, "+"); 
+          }
+qDebug() << "folderdir1" << folder_dir;
         QModelIndex index1 = treeView_path->currentIndex();
    	folder_path.append  (dirModel1->filePath(index1));
    	folder_path =  (dirModel1->filePath(index1));
-if (folder_path == "" or folder_dir == "")
-    return 1;
+        found = 0;
+        while (found > -1){
+          found = folder_path.indexOf(" ");
+          if (found > -1)
+            folder_path.replace(found, 1, "+"); 
+          }
+qDebug() << "folderpath" << folder_path;
+        
         QFileInfo info(folder_path); 
         keyText = lineKey->text();
         state = chk_overwrite->checkState();
@@ -903,11 +916,13 @@ if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
 void DialogDIR::folder_expand_dir(){
    QModelIndex index = treeView_dir->currentIndex();
    treeView_dir->expand(index);
+qDebug() << "treeviewdir" << treeView_dir;
 }
 void DialogDIR::folder_expand_path()
    {
    QModelIndex index = treeView_path->currentIndex();
    treeView_path->expand(index);
+qDebug() << "treeviewpath" << treeView_path;
 }
 
 

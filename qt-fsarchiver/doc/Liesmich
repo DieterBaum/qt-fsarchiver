@@ -1,8 +1,8 @@
 =====================================================================================================================================================
-qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt4-fsarchiver]
+qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =====================================================================================================================================================
 
-Copyright (C) 2008-2018 Francois Dupoux und Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2019 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
@@ -81,6 +81,8 @@ Beim Wiederherstellen von Verzeichnissen wird ausgewählt, ob das Verzeichnis an
 Bei der Sicherung über ein Netzwerk wird eine zusätzliche Maske geöffnet, in dem der Benutzername und das Kennwort für den Netzwerkrechner eingegeben werden muss. Von der Speicherung des Kennworts ist außerhalb des privaten Bereiches abzuraten, da die Verschlüsselung des Kennwortes auf einfache Art durchgeführt wird.
 
 Vorausetzungen für die Arbeit mit dem Netzwerk: 
+Der Rechnername darf maximal 15 Zeichen enthalten.
+Die Namen der Sicherungsverzeichnisse dürfen keine Leerstellen enthalten.
 Mit Netzwerprotokoll Samba:
 Im Linux-Bereich müssen auf dem Rechner, der die Sicherung durchführt/wiederherstellt(Client) und auf dem Rechner, auf dem die Daten abgelegt werden (Server), Samba installiert sein. Das Einbinden des virtuellen Dateisystem "cifs-vfs" auf dem Linux-Rechner muss möglich sein. Sie hierzu den Ubuntu-Wiki Artikel "http://wiki.ubuntuusers.de/Samba_Client_cifs".
 Mit diesem Befehl können Sie überprüfen, ob ein freigegebener Ordner angesprochen werden kann: sudo mount -t cifs -o username=ABCD,password=xyz,uid=0,gid=0 //192.168.2.5/Name des freigegebenen Verzeichnisses /home/username/.qt-fs-client. Der Username, das Passwort, die IP-Adresse und der Name des freigegebenen Verzeichnisses ist den bestehenden Verhältnissen anzupassen.
@@ -93,6 +95,7 @@ Beim erstmaligen Zugriff des Programms qt-fsarchiver auf einen Server, wird der 
 Für das Mounten eines ssh-Servers, muss im Terminal das Passwort für den Zugriff auf den Server eingegeben werden. Um dies zu vermeiden, empfiehlt es sich, einen Public Keys einzurichten. (http://wiki.ubuntuusers.de/SSH#Authentifizieruoot/ng-ueber-Public-Keys). Wichtig: Der öffentliche Schlüssel (Datei: authorized_keys) muss beim Server in das Verzeichnis /root/.ssh kopiert werden.
 In den Basiseinstellungen kann festgelegt werden, ob der Hinweis für das Eingeben des Passworts angezeigt werden soll oder nicht.
 Beim Arbeiten mit diesem Protokoll muss das Programm in einem Terminal gestartet werden, damit das sudo-Passwort für den Zugriff auf den Server eingegeben werden kann.
+
 
 Mit Netzwerprotokoll NFS (Network File System):
 Es können nur Linux-Rechner als Client oder Server verwendet werden. Auf den Rechnern, auf dem die Daten abgelegt werden (Server), muss nfs-kernel-server installiert sein. In der Datei  /etc/exports müssen zusätzlich die freizugebenden Verzeichnisse eingetragen werden. Der Namen darf keine Leerzeichen enthalten. Auf das freigegebne Verzeichnis muss lesend und schreibend zugegriffen werden können. Der Eintrag /home/user/Bilder 192.168.2.0/255.255.255.0(rw) erlaubt allen Rechnern mit der IP-Adresse 192.168.2.0 bis 192.168.2.255 einen Lese-Schreibezugriff auf das Verzeichnis /home/user/Bilder des Clients.

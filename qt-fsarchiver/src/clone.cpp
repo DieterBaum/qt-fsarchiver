@@ -26,6 +26,7 @@ extern int anzahl_disk;
 QStringList filters_clone;
 QString part_clone[100][4];
 QString folder_clone;
+QString folder_clone_test;
 int endeThread_clone;
 int flag_clone;
 int thread_run_clone;
@@ -328,7 +329,6 @@ void DialogClone::todo(){
            restore_image();
         if (rdbt_partition_save->isChecked()) 
             do_image_partition();
-
         if (rdbt_partition_restore->isChecked()) 
             restore_image_partition();
  }
@@ -358,10 +358,15 @@ Qt::CheckState state;
 	return 0;
       }
        if (state == Qt::Checked)
+          {
 	  attribute = "if=/dev/" + img_partition_clone + " | gzip --best >" + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa";
+          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 21 " + attribute;
+          }
        else
+          {
           attribute = "if=/dev/" + img_partition_clone + " of=" + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt"; 
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+          }
         thread1.setValues( 0,befehl);
 	int ret = questionMessage(tr("Do you really want to create an image of a partition?  ", " Wollen Sie wirklich ein Abbild einer Partition erstellen? ") );  
               if (ret == 2)
@@ -443,6 +448,7 @@ QString attribute;
             {
             attribute = "if=" + folder_clone +  " of=/dev/" +  img_partition_clone + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+qDebug() << "befehl restore partition gzip" << befehl;
             }
             int ret = questionMessage(tr("Do you really want to write back an image of a partition? ", " Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? ") );  
               if (ret == 2)
@@ -580,10 +586,15 @@ Qt::CheckState state;
 	partition_name  = partition_exist.right(partition_exist.size() -4);
      
        if (state == Qt::Checked)
-        	attribute = "if=" + partition_exist + " | gzip --best > " + folder_clone +  partition_name + "-" + _Datum_clone + ".gz.fsa";
+          {
+          attribute = "if=" + partition_exist + " | gzip --best > " + folder_clone +  partition_name + "-" + _Datum_clone + ".gz.fsa";
+          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 21 " + attribute; 
+          }
        else
-	        attribute = "if=" + partition_exist + " of=" + folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute; 
+          {
+	   attribute = "if=" + partition_exist + " of=" + folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
+           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute; 
+          }
  	thread1.setValues( 0,befehl);
 	int ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
               if (ret == 2)
@@ -636,6 +647,7 @@ Qt::CheckState state;
     	QMessageBox::about(this, tr("Note", "Hinweis"), tr("You must select a hard drive.", "Sie müssen eine Festplatte auswählen.\n"));
 	return 0;        
 	}
+qDebug() << "folderclone in restore festplatte" << folder_clone;
      if (folder_clone == "" ){
     	QMessageBox::about(this, tr("Note", "Hinweis"), tr("You must select a gz.fsa file or an img.fsa file.", "Sie müssen eine gz.fsa- oder eine img.fsa-Datei auswählen.\n"));
 	return 0;        
@@ -666,14 +678,16 @@ QString disk_name;
 	partition_name  = partition_exist.right(partition_exist.size() -4);
 //Prüfen ob img.fsa oder gz.fsa Datei
         if (folder_clone.indexOf("gz.fsa") > 0)
-            {
+             {
         	attribute = "-c " + folder_clone + "|sudo dd of=" + partition_exist; 
                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 14 " + attribute;
+qDebug() << "restore festplatte dd" << befehl;
             }
         if (folder_clone.indexOf("img.fsa") > 0)
             {
             attribute = "if=" + folder_clone +  " of=" + partition_exist + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt"; 
             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+qDebug() << "restore festplatte gzip" << befehl;
             }
             int ret = questionMessage(tr("Do you really want to write back an image of the hard disk? ", " Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? "));
               if (ret == 2)
@@ -881,10 +895,14 @@ void DialogClone::folder_einlesen() {
    QModelIndex index = treeView_clone->currentIndex();
    QModelIndexList indexes = selModel->selectedIndexes();
    folder_clone =  (dirModel->filePath(index));
+   folder_clone_test =  (dirModel->filePath(index));
+   int found = folder_clone.indexOf(" ");
+      if (found > -1)
+            folder_clone= "'" + folder_clone + "'"; 
 }
 
 int DialogClone::file_check() {
-   QFileInfo info(folder_clone); 
+   QFileInfo info(folder_clone_test);
    if (!info.isFile() )
       {
       QMessageBox::about(this, tr("Note", "Hinweis"),
@@ -1335,6 +1353,7 @@ QStringList pid;
 
 
 void DialogClone::read_write_hd(){
+// verarbeitet gzip
 QString teilstring = "";
 QString befehl = "";
 QString harddrive;
@@ -1344,6 +1363,7 @@ QString rw_;
 QString rw_1;
 int read_write_space = 0;
 int found = 0;
+qDebug() << "bin in read_write_hd";
        
        if (endeThread_clone !=0)
             return;
@@ -1403,18 +1423,21 @@ int found = 0;
    }
 }
 
-void DialogClone::read_write_hd_1() // mit dd kopieren
+void DialogClone::read_write_hd_1() 
+// mit dd ungezipt verarbeiten
 {
 QString befehl;
 QString bytes_;
 QStringList bytes;
 int size = 0;
 QString attribute;
+qDebug() << "bin in read_write_hd_1(";
 QString filename = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
 	if (endeThread_clone !=0)
             return;
          while (pid_dd.size() < 4) 
-         pid_dd = pid_ermitteln("dd"); 
+        pid_dd = pid_ermitteln("dd"); 
+qDebug() << "pid_dd" << pid_dd;
         QTimer::singleShot(9800, this, SLOT(read_write_hd_1()));  //10 sekunden
         // Wird für den Fortschrittsbalken benötigt
         if (pid_dd.size() > 3)
@@ -1439,6 +1462,7 @@ QString filename = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
            pid_dd = pid_ermitteln("dd");
            bytes = bytes_.split(" ");
            bytes_ = bytes[0];
+qDebug() << "pid_dd 1" << pid_dd;
            if(pid_dd == "")
               {
               endeThread_clone = 1;
