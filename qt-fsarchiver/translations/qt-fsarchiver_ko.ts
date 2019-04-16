@@ -3334,10 +3334,10 @@ version 0.8.5-7, March 13, 2019</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>백업 및 복원, 디렉터리 파티션과 MBR
-버전 0.8.5-8, 2019년 4 월월 10일</translation>
+버전 0.8.5-9, 2019년 4 월월 16일</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
@@ -3347,13 +3347,11 @@ version 0.8.5-8, April 10, 2019</source>
     </message>
      <message>
         <location filename="../src/mainWindow.cpp" line="1572"/>
-        <location filename="../src/mainWindow.cpp" line="1577"/>
-        <source>The partition was successfully restored.
-</source>
-        <comment>Die Partition wurde erfolgreich wieder hergestellt.
-</comment>
-        <translation>분할 성공적인 뒤 이다입니다.
-</translation>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
+        
+<translation>백업 및 복원, 디렉터리 파티션과 MBR
+버전 0.8.5-9, 2019년 4 월월 16일</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1573"/>

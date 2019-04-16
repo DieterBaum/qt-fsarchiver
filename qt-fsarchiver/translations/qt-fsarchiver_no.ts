@@ -3343,16 +3343,15 @@ Versjon 0.8.5-7, 13,2019</translation>
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation >kan ikke gjenopprette et arkiv på en partisjon som er montert, kan du deaktivere det første 
-</translation>
+        <translation >kan ikke gjenopprette et arkiv på en partisjon som er montert, kan du deaktivere det første </translation >
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1221"/>
+     <location filename="../src/mainWindow.cpp" line="1440"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Sikkerhetskopiering og gjenoppretting partisjoner, katalog og MBR.
-Versjon 0.8.5-8, April10,2019</translation>
+Versjon 0.8.5-9, April16,2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

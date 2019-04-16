@@ -3333,28 +3333,11 @@ Versiune 0.8.5-7, 13. 2019</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1507"/>
-        <source> specials have been backed
-.</source>
-        <comment> spezielle Daten wurden gesichert
-.</comment>
-        <translation>speciale au fost susținute</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1510"/>
-        <source> special data was not saved correctly.
-.</source>
-        <comment> spezielle Daten wurden nicht korrekt gesichert.
-</comment>
-        <translation>oferte speciale nu au fost corect garantate.</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
-<translation>Backup și restaurare partiții, directoare și MBR.
-Versiune 0.8.5-8, 10.Aprilie 2019</translation>
+version 0.8.5-9, April 16, 2019</source>
+<translation>Backup și restaurare partiții, directoare și MBR. 
+Versiune 0.8.5-9, 16.Aprilie 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1572"/>

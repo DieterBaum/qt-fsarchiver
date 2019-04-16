@@ -3203,18 +3203,16 @@ version 0.8.5-7, March 13, 2019</source>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1510"/>
-        <source> special data was not saved correctly.
-.</source>
-        <comment> spezielle Daten wurden nicht korrekt gesichert.
-</comment>
-        <translation>ofertes no van ser adequadament recolzat.</translation>
+        <source> special data was not saved correctly.</source>
+       <translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR.
+Versió 0.8.5-9, 16. Abril 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
-<translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR. Versió 0.8.5-8, 10. Abril 2019</translation>
+<translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR. Versió 0.8.5-9, 16. Abril 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

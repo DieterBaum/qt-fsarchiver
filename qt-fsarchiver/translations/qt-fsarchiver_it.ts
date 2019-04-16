@@ -3059,10 +3059,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Backup e ripristino partizioni, directory e MBR.
-La versione 0.8.5-8, 10. Aprile 2019</translation>
+La versione 0.8.5-9, 16. Aprile 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
@@ -3287,26 +3287,10 @@ La versione 0.8.5-8, 10. Aprile 2019</translation>
         <translation>partizione di ripristino</translation>
     </message>
     <message>
-        <source>File name of the backup:</source>
-        <translation >Ripristinare il nome del file:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="217"/>
-        <source>elapsed time:</source>
-        <translation>tempo trascorso:</translation>
-    </message>
-    <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="227"/>
         <source>On the number saved
 Files/directories:</source>
         <translation>già salvato: files/directories:
-files/directories:</translation>
-<source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
-        <location filename="../src/ui/fsarchiverMain.ui" line="235"/>
-<translation>Backup e ripristino partizioni, directory e MBR.
-La versione 0.8.5-8, 10. Aprile 2019</translation>
-        <translation>già salvato: 
 files/directories:</translation>
     </message>
     <message>

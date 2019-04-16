@@ -3352,8 +3352,8 @@ version 0.8.5-7, March 13, 2019</source>
 version 0.8.5-8, April 10, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Резервне копіювання і відновлення розділи, директорії і MBR
-Версія 0.8.5-8, 10. Квітень 2019</translation>
-        </message>
+Версія 0.8.5-9, 16. Квітень 2019</translation>
+</message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
         <source> specials have been backed.</source>

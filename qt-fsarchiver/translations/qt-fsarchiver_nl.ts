@@ -3133,12 +3133,6 @@ Die Dateiendung muss .fsa sein</comment>
         <translation>The restoring is performed</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="154"/>
-        <source>Enter sudo-password</source>
-        <comment>Sudo-Passwort eingeben</comment>
-        <translation ></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="215"/>
         <source>lz4</source>
         <comment>lz4</comment>
@@ -3335,9 +3329,9 @@ version 0.8.5-7, March 13, 2019</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
-<translation>Back-up en herstel partities, mappen en MBR. Versie 0.8.5-8, 10.April 2019</translation>
+<translation>Back-up en herstel partities, mappen en MBR. Versie 0.8.5-9, 16.April 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

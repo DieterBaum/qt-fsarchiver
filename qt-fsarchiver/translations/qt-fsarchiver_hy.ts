@@ -3339,13 +3339,11 @@ version 0.8.5-7, March 13, 2019</source>
 </comment>
         <translation>հատուկ առաջարկներ չեն եղել պատշաճ կերպով ապահովված.</translation>
     </message>
-    <message>
-        <source>The partition to be restored is mounted. It must be unmounted first!
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation >չեմ կարող վերականգնել արխիվի բաժնում, որտեղ պարզել է, размонтировать առաջին 
-</translation>
+<message>
+        <location filename="../src/mainWindow.cpp" line="1510"/>
+<source>Backup and restore partitions, directory and MBR.</source>
+        <translation >Կրկնօրնկ եւ վերականգնել բաժիններ, գրացուցակը եւ MBR.
+Մեսսենջեր 0.8.5-9 2019 Ապրիլ 16</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

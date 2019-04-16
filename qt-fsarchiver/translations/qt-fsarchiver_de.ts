@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE" sourcelanguage="de">
+<TS version="2.1" language="ca_ES">
 <context>
     <name>DialogClone</name>
     <message>
@@ -3311,9 +3311,9 @@ Die Dateiendung muss .fsa sein.</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
-<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-8, 10. April 2019</translation>
+<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-9, 16.April 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1507"/>

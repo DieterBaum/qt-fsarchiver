@@ -3340,21 +3340,7 @@ Versiune 0.8.5-7, 13. 2019</translation>
         <translation>посебне понуде које нису биле правилно обезбеђен.</translation>
     </message>
     <message>
-        <source>The partition to be restored is mounted. It must be unmounted first!
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation >не могу да се опорави архива у одељак у коме је утврдила да демонтира први 
-</translation>
-    </message>
-   <message>
-        <location filename="../src/mainWindow.cpp" line="1440"/>
-        <source> specials have been backed.</source>
-        <comment> spezielle Daten wurden gesichert.</comment>
-        <translation ></translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1534"/>
+<location filename="../src/mainWindow.cpp" line="1440"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!

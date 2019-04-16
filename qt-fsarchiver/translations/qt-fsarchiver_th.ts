@@ -3348,17 +3348,11 @@ version 0.8.5-7, March 13, 2019</source>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
-        <source>Backup and restore partitions, directory and MBR.
+<source>Backup and restore partitions, directory and MBR.
 version 0.8.5-8, April 10, 2019</source>
 <translation>สำรองและเรียกคืนพาร์ทิชัน Directory และ MBR
-รุ่น 0.8.5-8, 10.เมษายน 2019</translation>
-         </message>
-          <message>
-        <location filename="../src/mainWindow.cpp" line="1440"/>
-        <source> specials have been backed.</source>
-        <comment> spezielle Daten wurden gesichert.</comment>
-        <translation ></translation>
-    </message>
+รุ่น 0.8.5-9, 16.เมษายน 2019</translation>
+        </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1534"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 

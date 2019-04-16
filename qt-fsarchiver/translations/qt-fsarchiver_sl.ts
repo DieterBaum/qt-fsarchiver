@@ -3338,23 +3338,13 @@ verzia 0.8.5-7, 13. 2019</translation>
 </comment>
         <translation>specials were not properly backed.</translation>
     </message>
-    <message>
-        <source>The partition to be restored is mounted. It must be unmounted first!
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation>cannot restore an archive to a partition which is mounted, unmount it first 
-</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1534"/>
-        <source>The partition to be restored is mounted. It must be unmounted first! 
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
+<message>
+<location filename="../src/mainWindow.cpp" line="1215"/>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
         <translation ></translation>
     </message>
-    <message>
+<message>
         <location filename="../src/mainWindow.cpp" line="1572"/>
         <location filename="../src/mainWindow.cpp" line="1577"/>
         <source>The partition was successfully restored.

@@ -3221,10 +3221,10 @@ version 0.8.5-7, March 13, 2019</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Δημιουργία αντιγράφων ασφαλείας και επαναφορά διαμερίσματα, καταλόγου και MBR.
-Έκδοση 0.8.5-8, 10.Απρίλιος 2019</translation>
+Έκδοση 0.8.5-9, 16.Απρίλιος 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
@@ -3346,11 +3346,11 @@ version 0.8.5-8, April 10, 2019</source>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
         <translation>Διαμέρισμα όνομα:</translation>
-    </message>
-    <message>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
         <location filename="../src/mainWindow.cpp" line="1779"/>
-        <source>Partition type: </source>
-        <comment>Partitionsart: </comment>
+<translation>Δημιουργία αντιγράφων ασφαλείας και επαναφορά διαμερίσματα, καταλόγου και MBR.
+Έκδοση 0.8.5-9, 16.Απρίλιος 2019</translation>
         <translation>Τύπος διαμερίσματος: </translation>
 <source>Backup and restore partitions, directory and MBR.
 version 0.8.5-8, April 10, 2019</source>

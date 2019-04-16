@@ -1,6 +1,8 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-9 April 16, 2019.
+     - Troubleshooting: Program does not start during initial installation.
 * qt-fsarchiver-0.8.5-8 April 10, 2019.
      - Directory paths with spaces are processed correctly.
      - When installing from sources, qt-fsarchiver-terminal must be upgraded to version 0.8.5-8

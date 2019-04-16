@@ -3220,11 +3220,17 @@ Versioon 0.8.5-7, 13. 2019</translation>
         <source>No</source>
         <comment>Nein</comment>
         <translation>Ei</translation>
-    </message>
-    <message>
+     </message>
+     <message>
+        <location filename="../src/mainWindow.cpp" line="1293"/>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
+         <translation>Varundamine ja taastamine vaheseinad, kataloog ja MBR.
+Versioon 0.8.5-9, 16.Aprill 2019</translation>
+        </message>
+     <message>
         <location filename="../src/mainWindow.cpp" line="1439"/>
-        <location filename="../src/mainWindow.cpp" line="1448"/>
-        <source>The partition was successfully backed up.
+        <source>The partition has been backed up successfully.
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
@@ -3353,11 +3359,11 @@ Versioon 0.8.5-7, 13. 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-7, April 13, 2019</source>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
-        <translation>Varundamine ja taastamine vaheseinad, kataloog ja MBR.
-Versioon 0.8.5-8, 13. aprill 2019</translation>
+<translation>Varundamine ja taastamine vaheseinad, kataloog ja MBR.
+Versioon 0.8.5-9, 16.Aprill 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

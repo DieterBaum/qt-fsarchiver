@@ -3341,20 +3341,12 @@ Version 0.8.5-7, 13. 2019</translation>
         <translation>Specials säkerhetskopierades inte ordentligt.</translation>
     </message>
     <message>
-        <source>The partition to be restored is mounted. It must be unmounted first!
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation >kan inte återställa ett arkiv till en partition som är monterad, avmontera den först 
-</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Säkerhetskopiering och återställning partitioner, katalog och MBR.
-Version 0.8.5-8, 10.April 2019</translation>
+Version 0.8.5-9, 16.April 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

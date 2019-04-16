@@ -3352,8 +3352,8 @@ Phiên bản 0.8.5-7, 13.  2019</translation>
 version 0.8.5-8, April 10, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Sao lưu và phục hồi phân vùng, thư mục và MBR.
-Phiên bản 0.8.5-8, 10. Tháng 4 2019</translation>
-       </message>
+Phiên bản 0.8.5-9, 16. Tháng 4 2019</translation>
+</message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
         <source> specials have been backed.</source>

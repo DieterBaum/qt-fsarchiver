@@ -3343,17 +3343,15 @@ versija 0.8.5-7, 13. 2019</translation>
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation >cannot restore an archive to a partition which is mounted, unmount it first 
-</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1221"/>
+          </message>
+  <message>
+        <location filename="../src/mainWindow.cpp" line="1440"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Atsarginę kopiją ir atkurti pertvaros, katalogas ir MBR.
 versija 0.8.5-8, 10.Aprīlis 2019</translation>
-    </message>
+</message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
         <source> specials have been backed.</source>

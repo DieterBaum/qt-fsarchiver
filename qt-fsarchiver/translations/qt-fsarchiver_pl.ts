@@ -3338,23 +3338,15 @@ wersja 0.8.5-7, 13.marzec 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-8, 10.März 2019</comment>
-        <translation >Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
+<translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
 - kopii zapasowych
 - partycji,
-- katalogów
-- i MBR.
-wersja 0.8.5-8, 13.kwiecień 2019</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1440"/>
-        <source> specials have been backed.</source>
-        <comment> spezielle Daten wurden gesichert.</comment>
-        <translation ></translation>
-    </message>
-    <message>
+wersja 0.8.5-9, 13.kwiecień 2019</translation>
+ </message>
+   <message>
         <location filename="../src/mainWindow.cpp" line="1534"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>

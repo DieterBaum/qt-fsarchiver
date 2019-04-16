@@ -2984,12 +2984,16 @@ Los archivos deben terminar al fsa</translation>
 </comment>
         <translation>La restauración fue abortado por el usuario</translation>
     </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1061"/>
+     <message>
+     <location filename="../src/mainWindow.cpp" line="1034"/>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
+     <translation>Copia de seguridad y restauración de particiones, directorios y MBR.
+versione 0.8.5-9, 16.Abril 2019</translation>
+       </message>
+       <message>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
-        <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
-</comment>
-        <translation>Restore está montada la partición casa y no se puede escribir de nuevo. Por favor, use un CD en vivo.</translation>
+       <translation>Restore está montada la partición casa y no se puede escribir de nuevo. Por favor, use un CD en vivo.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1068"/>
@@ -3289,10 +3293,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>Copia de seguridad y restauración de particiones, directorios y MBR.
-versione 0.8.5-8, 10.Abril 2019</translation>
+versione 0.8.5-9, 16.Abril 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

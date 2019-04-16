@@ -3342,21 +3342,11 @@ version 0.8.5-7, March 13, 2019</source>
         <translation>specials were not properly backed.</translation>
     </message>
     <message>
-        <source>The partition to be restored is mounted. It must be unmounted first!
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation >cannot restore an archive to a partition which is mounted, unmount it first 
-</translation>
-       </message>
-
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1221"/>
-     <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
-<translation>بیک اپ اور بحال پارٹیشنز، ڈائریکٹری اور MBR.
-ورژن 0.8.5-8 10 اپریل 2019</translation>
-
+        <location filename="../src/mainWindow.cpp" line="1440"/>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.5-9, April 16, 2019</source>
+     <translation>بیک اپ اور بحال پارٹیشنز، ڈائریکٹری اور MBR.
+ورژن 0.8.5-9 16 اپریل 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>

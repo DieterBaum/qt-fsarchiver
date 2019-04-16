@@ -3342,24 +3342,12 @@ version 0.8.5-7, March 13, 2019</source>
 <source>Backup and restore partitions, directory and MBR.
 version 0.8.5-8, April 10, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
-<translation>बैकअप और पुनर्स्थापना विभाजन, निर्देशिका और MBR.
-संस्करण 0.8.5-8 10.अप्रैल 2019</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1440"/>
-        <source> specials have been backed.</source>
-        <comment> spezielle Daten wurden gesichert.</comment>
-        <translation ></translation>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
-        <location filename="../src/mainWindow.cpp" line="1534"/>
-<translation>बैकअप और पुनर्स्थापना विभाजन, निर्देशिका और MBR.
-संस्करण 0.8.5-8 10.अप्रैल 2019</translation>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation ></translation>
+version 0.8.5-9, April 16, 2019</source>
+   <translation>बैकअप और पुनर्स्थापना विभाजन, निर्देशिका और MBR.
+संस्करण 0.8.5-9 16.अप्रैल 2019</translation>
     </message>
-    <message>
+      <message>
         <location filename="../src/mainWindow.cpp" line="1572"/>
         <location filename="../src/mainWindow.cpp" line="1577"/>
         <source>The partition was successfully restored.

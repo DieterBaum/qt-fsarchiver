@@ -156,6 +156,16 @@ MWindow::MWindow()
      if (ok && !text.isEmpty())
        password= text;
      }
+   QDir dir1(userpath + "/.config/qt-fsarchiver");
+   if (!dir1.exists()){
+       attribute = userpath + "/.config/qt-fsarchiver 2>/dev/null";
+       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
+       system (befehl.toLatin1().data());
+       }
+   //vorsichtshalber Rechte immer neu setzen
+       attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
+       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+       system (befehl.toLatin1().data()); 
    QFile file2("/usr/sbin/qt-fsarchiver-terminal");
    if (!file2.exists())
       {
@@ -229,16 +239,6 @@ MWindow::MWindow()
    items << zip_[5] << zip_[6] << zip_[7] << zip_[8] << zip_[9] << zip_[10];
    cmb_zip->addItems (items);
    items.clear();
-   QDir dir1(userpath + "/.config/qt-fsarchiver");
-   if (!dir1.exists()){
-       attribute = userpath + "/.config/qt-fsarchiver 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
-       system (befehl.toLatin1().data());
-       }
-   //vorsichtshalber Rechte immer neu setzen
-       attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-       system (befehl.toLatin1().data());
    QDir dir(userpath + "/.qt-fs-client");
    if (!dir.exists()){
        attribute = userpath + "/.qt-fs-client 2>/dev/null" ;
@@ -1216,8 +1216,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-8, April 10, 2019",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-8, 10.April 2019"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-9, April 16, 2019",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-9, 16.April 2019"));
       }
 
 int MWindow::is_running(){

@@ -3163,10 +3163,10 @@ version 0.8.5-7, March 13, 2019</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+version 0.8.5-9, April 16, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-7, 13.März 2019</comment>
 <translation>バックアップウント復元するパーティション
-バージョン 0.8.5-8, 10.4月 2019</translation>
+バージョン 0.8.5-9, 16.4月 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1440"/>
@@ -3332,18 +3332,12 @@ version 0.8.5-8, April 10, 2019</source>
         <translation>Immagine Dimensioni file approssimative:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1783"/>
-        <source>Other notes: </source>
-        <comment>weitere Hinweise:</comment>
-        <translation>詳細情報：</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1784"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
         <translation>essere protetto partizione/assicurato: / (directory di sistema root)</translation>
-<source>Backup and restore partitions, directory and MBR.
-version 0.8.5-8, April 10, 2019</source>
+</message>
+<message>
         <location filename="../src/mainWindow.cpp" line="1789"/>
 <translation>バックアップウント復元するパーティション バージョン 0.8.5-8, 10.4月 2019</translation>
         <source>Operating system: </source>
