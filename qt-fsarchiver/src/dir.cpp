@@ -824,6 +824,8 @@ int DialogDIR::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+
+  return 0;
 }
 
 void DialogDIR::chkhidden(){

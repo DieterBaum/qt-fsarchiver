@@ -1595,6 +1595,8 @@ int DialogNet::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+
+  return 0;
 }
 
 void DialogNet::esc_end()
@@ -1732,6 +1734,8 @@ int i = 0;
         }
         if (i == 0)
            mountflag = 1; //Beim erfolgreichen mounten wird das erneute mounten verhindert
+
+    return 0;
 }
 
 

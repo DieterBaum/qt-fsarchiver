@@ -54,7 +54,7 @@ private:
 	QFileSystemModel *dirModel;
 	
 private slots:
-	int end();
+	void end();
         int go();
 };
 

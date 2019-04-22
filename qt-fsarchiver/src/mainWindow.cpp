@@ -1294,6 +1294,8 @@ int MWindow::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+
+  return 0;
 }
 
 
@@ -1832,6 +1834,7 @@ int found;
              	zahl_.replace(found, 1, ","); 
             return zahl_  + tr(" GB");
 	 }   
+   return zahl_;
 }
 
 
