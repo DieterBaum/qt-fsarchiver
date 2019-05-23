@@ -28,8 +28,7 @@
 extern int dialog_auswertung;
 QString wort;
 
-FileDialog::FileDialog(QWidget *parent)
-  : QDialog(parent)
+FileDialog::FileDialog()
 {
   setupUi(this);
   connect( cmd_save, SIGNAL(clicked()), this, SLOT(folder_einlesen()));
@@ -66,15 +65,14 @@ void FileDialog::file_save()
              QMessageBox::about(this,tr("Note", "Hinweis"),
               tr("The notes on the partition were not written to a file.\n", "Die Hinweise zur Partition wurden nicht in eine Datei geschrieben.\n"));
             }
-        textEdit->toPlainText().toUtf8();
-    	int i = file.write((textEdit->toPlainText()).toUtf8());
+        //textEdit->toPlainText().toUtf8();
+    	file.write((textEdit->toPlainText()).toUtf8());
   }
 
 void FileDialog::file_read()
 {
         QSettings setting("qt-fsarchiver", "qt-fsarchiver");
         setting.beginGroup("Basiseinstellungen");
-        int auswertung = setting.value("Sprache").toInt();
         setting.endGroup();
 	extern QString folder_file_;	
 	QString filename = folder_file_;

@@ -27,7 +27,8 @@ class DialogMBR : public QWidget, private Ui::mbr_dialog
 	Q_OBJECT
 
 public:
-	DialogMBR(QWidget *parent = 0);
+	DialogMBR();
+        ~DialogMBR() {}
 
 public slots:
 	int mbr();

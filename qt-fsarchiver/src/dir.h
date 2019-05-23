@@ -28,7 +28,8 @@ class DialogDIR : public QWidget, private Ui::dir_dialog
 	Q_OBJECT
 
 public:
-	DialogDIR(QWidget *parent = 0);
+	DialogDIR();
+         ~DialogDIR() {}
 
 public slots:
 	int folder_dir_path_einlesen();

@@ -27,8 +27,9 @@ class DialogSetting : public QDialog, private Ui::setting_dialog
 	Q_OBJECT
 
 public:
-	DialogSetting(QWidget *parent = 0);
-	
+	DialogSetting();
+         ~DialogSetting() {}
+        	
 private slots:	
    void setting_save();
    void zip_setting_einlesen();

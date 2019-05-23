@@ -27,6 +27,7 @@ QString folder_file_;
 int dialog_auswertung;
 QString parameter[15];
 QString add_part[100];
+QString part[100][10];
 QString anlage;
 QString password;
 QString user;

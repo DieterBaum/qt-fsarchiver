@@ -27,9 +27,10 @@ class NetEin : public QDialog, private Ui::Eingabe_Net
 	Q_OBJECT
 
 public:
-	NetEin(QWidget *parent = 0);
+	NetEin();
+        ~NetEin() {}
         int list_net(QString flag);
-        int list_net_ssh(QString flag);
+        int list_net_ssh();
         QString Namen_holen(); 
 	QString user_holen(); 
 	QString key_holen(); 
@@ -45,7 +46,7 @@ protected slots:
         void listWidget_show();
         QString crypt(QString key);
         QString decrypt(QString key_);
-        int setting_save();
+        int setting_save(QString user_net_ein, QString key);  
         void Kennwort();
         int Array_pruefen(QString ip);
         int questionMessage(QString frage);

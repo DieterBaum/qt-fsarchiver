@@ -27,9 +27,10 @@ class TreeviewRead : public QDialog, private Ui::treeview_dialog
 	Q_OBJECT
 
 public:
-	TreeviewRead(QWidget *parent = 0);
-        QString folder_treeview_holen();
-
+	TreeviewRead();
+         ~TreeviewRead() {}
+         QString folder_treeview_holen();
+       
 private:
 	QFileSystemModel *dirModel;
     	QItemSelectionModel *selModel;       

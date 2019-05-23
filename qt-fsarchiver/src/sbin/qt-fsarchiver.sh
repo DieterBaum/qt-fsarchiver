@@ -86,3 +86,6 @@ fi
 if [ $2 -eq 22 ]; then
 echo $1 | sudo -S -b $3 "$ddof" "$sgdisk" $6
 fi
+if [ $2 -eq 23 ]; then
+echo $1 | sudo -S -b rm $3
+fi

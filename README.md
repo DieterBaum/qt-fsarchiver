@@ -1,7 +1,7 @@
 # qt-fsarchiver
-qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt4-fsarchiver]
+qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 
-Copyright (C) 2008-2018 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2019 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
@@ -119,5 +119,5 @@ Choose in the left list box from the hard drive/partiiton, from which an image i
 When starting qt-fsarchiver are not all unmounted partitions under / media / sda ... / media / sdb ... mounted. The partitions are easily reachable on the desktop. The directory where the backup should be saved or the directory in which the secured partition is stored, can be selected in qt-fsarchiver under / media / sd .... 
 Qt-fsarchiver can only be called once. The repeated start is prevented.
 
-Further information can be found in the german websites and http://wiki.ubuntuusers.de/qt4-fsarchiver http://wiki.ubuntuusers.de/fsarchiver.
+Further information can be found in the german websites and http://wiki.ubuntuusers.de/qt-fsarchiver http://wiki.ubuntuusers.de/fsarchiver.
 You can get information about fsarchiver on the English website of fsarchiver http://www.fsarchiver.org/Main_Page.

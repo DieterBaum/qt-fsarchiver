@@ -34,7 +34,7 @@ The command for Suse: (you must be an administrator su -l) zypper in zypper in q
 If you use ssh (secure shell) want to access other computers in the network, you still need to install individually sshpass.
 
 The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-default qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils beesu lz4-devel libzstd-devel jfsutils xfsprogs
-For a 64-bit system, you must also install lrelease: dnf install qt5-linguist.x86-64
+For a 64-bit system, you must also install lrelease: dnf install qt5-linguist.x86-64. With Fediora30 you still have to install make.
 32-bit systems are no longer supported.
 
 You change in the terminal to the folder qt5-fsarchiver (extracted from the sources).

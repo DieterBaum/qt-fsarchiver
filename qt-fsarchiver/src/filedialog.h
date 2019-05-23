@@ -22,7 +22,8 @@
 class FileDialog: public QDialog, private Ui::FileDialog {
   Q_OBJECT
   public:
-    FileDialog(QWidget *parent = 0);
+    FileDialog();
+    ~FileDialog() {}
     void werte_uebergeben(QString wert);
         
   protected slots:

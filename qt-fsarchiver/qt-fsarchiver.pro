@@ -6,10 +6,11 @@ TEMPLATE = app
 TARGET = bin/qt-fsarchiver
 DEPENDPATH += . src translations src/ui
 QT_AUTO_SCREEN_SCALE_FACTOR=1
+#QT_QPA_PLATFORM=wayland
 
 QT += widgets gui core
 
-DEFINES +=  HAVE_CONFIG_H _REENTRANT _FILE_OFFSET_BITS=64 _LARGEFILE64_SOURCE _GNU_SOURCE HAVE_QT5
+DEFINES +=  HAVE_CONFIG_H _REENTRANT _FILE_OFFSET_BITS=64 _LARGEFILE64_SOURCE _GNU_SOURCE 
 INCLUDEPATH += . src /usr/include/ext2fs /usr/include/et /usr/include/e2p /usr/include/blkid /usr/include/uuid 
 LIBS += -L/usr/lib -lQt5Gui -lQt5Core -lpthread -lrt -llzma -lext2fs -lcom_err -le2p -lblkid -luuid -lz -llz4 -lbz2 -llzo2 -lgcrypt -lgpg-error -lzstd
 OBJECTS_DIR = build

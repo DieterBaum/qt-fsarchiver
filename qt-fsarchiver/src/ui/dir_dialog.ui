@@ -45,9 +45,9 @@
   <widget class="QTreeView" name="treeView_dir">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>370</x>
      <y>50</y>
-     <width>331</width>
+     <width>321</width>
      <height>301</height>
     </rect>
    </property>
@@ -74,7 +74,7 @@
   <widget class="QTreeView" name="treeView_path">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>20</x>
      <y>50</y>
      <width>325</width>
      <height>301</height>

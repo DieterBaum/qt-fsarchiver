@@ -36,15 +36,15 @@ public:
    ~MWindow() {}
    int is_running();
    QString Zeit_auslesen();
-   QString mtab_einlesen(QString partition_if_home);
+   QString mtab_einlesen(int zahl);
    QString identify_save_part(QString save_partition);
-   QString beschreibungstext(QString partitiontext, QString text, int zip, int row);
+   QString beschreibungstext(QString text, int zip, int row);
    int is_mounted (char* dev_path);
    int questionMessage(QString frage); 
    QString UUID_auslesen(int row);
    void save_attribut(QString attribut);
    void date_delete();
-           
+              
 public slots: 
    void folder_einlesen();
    void folder_expand();
@@ -86,8 +86,6 @@ protected slots:
    void clone_save();
    void zip_einlesen();
    void sdx_einlesen();
-   void sdx1_einlesen();
-   void sdx2_einlesen();
    QString datei_auswerten(QString buchstabe);
    QString datei_auswerten_1(QString dateiname);
    QString sdx3_einlesen(QString part, int flag);

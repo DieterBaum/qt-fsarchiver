@@ -27,7 +27,8 @@ class DialogNet : public QDialog, private Ui::Dialog_Net
 	Q_OBJECT
 
 public:
-	DialogNet(QWidget *parent = 0);
+	DialogNet();
+        ~DialogNet() {}
         
 public slots:
         
@@ -51,7 +52,7 @@ protected slots:
 	void listWidget_tree_eintragen(QString rechner, QString pass, QString user, QString pfad, int flag);
         void listWidget_tree_auslesen(QTreeWidgetItem *item, int);
         void listWidget_tree_auslesen_1();
-	void addItems(const QString &name, const QStringList& iconMap);
+	void addItems(const QString &name);
         void button_toParent();
         void treeWidget_auslesen();
         int folder_free_mounten();
@@ -61,6 +62,7 @@ protected slots:
         QString datei_auswerten_1_net(QString dateiname);
         void date_delete_net();
         int questionMessage_net(QString frage);
+        QString mtab_einlesen_net(int zahl);
                        
 private:
         Thread thread1;

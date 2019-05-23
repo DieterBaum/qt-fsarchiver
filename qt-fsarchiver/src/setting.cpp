@@ -25,7 +25,7 @@ QStringList items_network;
 QStringList items_zstd_setting;
 QStringList items_sleep;
 
-DialogSetting::DialogSetting(QWidget *parent)
+DialogSetting::DialogSetting()
 {
         setupUi(this); // this sets up GUI
 	connect( cmd_save, SIGNAL( clicked() ), this, SLOT( setting_save())); 
@@ -85,47 +85,46 @@ DialogSetting::DialogSetting(QWidget *parent)
         cmb_network -> setCurrentIndex(auswertung-1); 
         auswertung = setting.value("overwrite").toInt();
         if (auswertung ==1)
-           chk_file->setChecked(Qt::Checked); 
+           chk_file->setChecked(true); 
         auswertung = setting.value("tip").toInt();
         if (auswertung ==1)
-           chk_tip->setChecked(Qt::Checked);  
+           chk_tip->setChecked(true);  
         auswertung = setting.value("key").toInt();
         if (auswertung ==1)
-           chk_key->setChecked(Qt::Checked); 
+           chk_key->setChecked(true); 
         auswertung = setting.value("place").toInt();
         if (auswertung ==1)
-           chk_folder->setChecked(Qt::Checked); 
+           chk_folder->setChecked(true); 
         auswertung = setting.value("split").toInt();
         if (auswertung ==1)
-           chk_split->setChecked(Qt::Checked); 
+           chk_split->setChecked(true); 
         auswertung = setting.value("Passwort").toInt();
         if (auswertung ==1)
-           chk_password->setChecked(Qt::Checked); 
+           chk_password->setChecked(true);
         auswertung = setting.value("save").toInt();
         if (auswertung ==1)
-           chk_datesave->setChecked(Qt::Checked);
+           chk_datesave->setChecked(true);
         auswertung = setting.value("pbr").toInt();
         if (auswertung ==1)
-           chk_pbr->setChecked(Qt::Checked);
+           chk_pbr->setChecked(true);
         auswertung = setting.value("ssh").toInt();
         if (auswertung ==1)
-           chk_ssh->setChecked(Qt::Checked);
+           chk_ssh->setChecked(true);
         auswertung = setting.value("sshfs").toInt();
         if (auswertung ==1)
-           chk_sshfs->setChecked(Qt::Checked);
+           chk_sshfs->setChecked(true);
         auswertung = setting.value("showPrg").toInt();
         if (auswertung ==1)
-           chk_prg->setChecked(Qt::Checked);
+           chk_prg->setChecked(true);
         auswertung = setting.value("hidden").toInt();
 	if (auswertung ==1)
-           chk_hidden->setChecked(Qt::Checked);
+           chk_hidden->setChecked(true);
         setting.endGroup();
         zip_setting_einlesen();
 }        
 
 void DialogSetting:: setting_save()
 {
-     Qt::CheckState state;
      QSettings setting("qt-fsarchiver", "qt-fsarchiver");
      setting.beginGroup("Basiseinstellungen");
      setting.setValue("Sprache",cmb_language->currentIndex()+1);
@@ -134,12 +133,10 @@ void DialogSetting:: setting_save()
      	setting.setValue("Kerne",cmb_Kerne->currentText());
      else
         setting.setValue("Kerne","1");
-     int zstd = cmb_zstd->currentIndex();
      if (cmb_zstd->currentIndex() > -1)
      	setting.setValue("zstd",cmb_zstd->currentIndex()+1);
      else
         setting.setValue("zstd","1");
-     int sleep = cmb_sleep->currentIndex();
      if (cmb_sleep->currentIndex() > -1)
      	setting.setValue("sleep",cmb_sleep->currentIndex());
      else
@@ -147,63 +144,51 @@ void DialogSetting:: setting_save()
      setting.setValue("Kompression",zip);
      int net = cmb_network->currentIndex()+1;
      setting.setValue("Network",net);
-     state = chk_file->checkState();
-     if (state == Qt::Checked) 
+     if (chk_file->checkState()) 
             setting.setValue("overwrite",1);
      else
             setting.setValue("overwrite",0);
-     state = chk_tip->checkState();
-     if (state == Qt::Checked) 
+     if (chk_tip->checkState())
             setting.setValue("tip",1);
      else
             setting.setValue("tip",0);
-     state = chk_key->checkState();
-     if (state == Qt::Checked) 
+     if (chk_key->checkState()) 
             setting.setValue("key",1);
      else
             setting.setValue("key",0);
-     state = chk_folder->checkState();
-     if (state == Qt::Checked) 
+     if (chk_folder->checkState()) 
             setting.setValue("place",1);
      else
             setting.setValue("place",0);
-     state = chk_split->checkState();
-     if (state == Qt::Checked) 
+     if (chk_split->checkState()) 
             setting.setValue("split",1);
      else
             setting.setValue("split",0);
-     state = chk_password->checkState();
-     if (state == Qt::Checked) 
+     if (chk_password->checkState()) 
             setting.setValue("Passwort",1);
      else
             setting.setValue("Passwort",0);
-     state = chk_datesave->checkState();
-     if (state == Qt::Checked) 
+     if (chk_datesave->checkState()) 
             setting.setValue("save",1);
      else
             setting.setValue("save",0);
-     state = chk_pbr->checkState();
-     if (state == Qt::Checked) 
+     if (chk_pbr->checkState()) 
             setting.setValue("pbr",1);
      else
             setting.setValue("pbr",0);
-     state = chk_ssh->checkState();
-     if (state == Qt::Checked) 
+     if (chk_ssh->checkState()) 
             setting.setValue("ssh",1);
      else
             setting.setValue("ssh",0);
-     state = chk_sshfs->checkState();
-     if (state == Qt::Checked) 
+     if (chk_sshfs->checkState()) 
             setting.setValue("sshfs",1);
      else
             setting.setValue("sshfs",0);
-     state = chk_prg->checkState();
-     if (state == Qt::Checked) 
+     if (chk_prg->checkState()) 
             setting.setValue("showPrg",1);
      else 
             setting.setValue("showPrg",0);
-     state = chk_hidden->checkState();
-     if (state == Qt::Checked) 
+     if (chk_hidden->checkState()) 
             setting.setValue("hidden",1);
      else
             setting.setValue("hidden",0);	
@@ -224,15 +209,3 @@ int zip = cmb_zip->currentIndex();
        label_5->setEnabled(false);
        }
 }
-
-
-
-
-
-
-
-
-
-
-
-

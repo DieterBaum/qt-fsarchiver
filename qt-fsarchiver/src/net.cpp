@@ -31,6 +31,7 @@ extern int dialog_auswertung;
 extern QString add_part[100]; 
 extern QString parameter[15];
 extern QString folder_file_;
+extern QString part[100][10];
 extern QString user;
 QString folder_file_1;
 QString zip_net[11];
@@ -76,8 +77,10 @@ int show1 = 0;
 QString userpath_net;
 extern int sleepfaktor;
 int nameflag = 0;
+int liveFlag_net = 0;
+int row_net = 0;
 
-DialogNet::DialogNet(QWidget *parent)
+DialogNet::DialogNet()
 {
 QString befehl; 
 QStringList items;
@@ -86,12 +89,12 @@ setupUi(this); // this sets up GUI
         userpath_net = "/home/" + user; 
         folder_net = userpath_net + "/.qt-fs-client";
         if ( dialog_auswertung == 6)
-        	rdBt_saveFsArchiv->setChecked(Qt::Checked);
+        	rdBt_saveFsArchiv->setChecked(true);
         else
-		rdBt_restoreFsArchiv->setChecked(Qt::Checked);
+		rdBt_restoreFsArchiv->setChecked(true);
         dirModel = new QFileSystemModel;
    	selModel = new QItemSelectionModel(dirModel);
-        QModelIndex cwdIndex = dirModel->index(QDir::rootPath());
+      //  QModelIndex cwdIndex = dirModel->index(QDir::rootPath());
         dirModel->setRootPath(QDir::rootPath());
         connect( pushButton_zstd_net, SIGNAL( clicked() ), this, SLOT(zip_einlesen_net())); 
         connect( chk_path, SIGNAL( clicked()), this, SLOT(rdButton_auslesen()));
@@ -167,19 +170,19 @@ setupUi(this); // this sets up GUI
             cmb_Net -> setCurrentIndex(1); //Auswahl setzen
         auswertung = setting.value("overwrite").toInt();
         if (auswertung ==1)
-           chk_overwrite->setChecked(Qt::Checked); 
+           chk_overwrite->setChecked(true); 
         auswertung = setting.value("pbr").toInt();
         if (auswertung ==1)
-           chk_pbr->setChecked(Qt::Checked); 
+           chk_pbr->setChecked(true); 
         auswertung = setting.value("tip").toInt();
         if (auswertung ==1)
-           chk_Beschreibung->setChecked(Qt::Checked);  
+           chk_Beschreibung->setChecked(true);  
         auswertung = setting.value("key").toInt();
         if (auswertung ==1)
-           chk_key->setChecked(Qt::Checked);
+           chk_key->setChecked(true);
         auswertung = setting.value("place").toInt();
         if (auswertung ==1)
-           chk_path->setChecked(Qt::Checked); 
+           chk_path->setChecked(true); 
         auswertung = setting.value("Passwort").toInt();
         if (auswertung ==1){
            	lineKey ->setEchoMode(QLineEdit::Normal);
@@ -199,8 +202,8 @@ setupUi(this); // this sets up GUI
         lineKey ->setEchoMode(QLineEdit::Password);
         cmb_Net -> setCurrentIndex(1); //Auswahl setzen
         cmb_kerne -> setCurrentIndex(0);
-        chk_Beschreibung->setChecked(Qt::Checked);
-        chk_overwrite->setChecked(Qt::Checked); 
+        chk_Beschreibung->setChecked(true);
+        chk_overwrite->setChecked(true); 
         cmb_zip -> setCurrentIndex(2);
         cmb_zstd_net -> setCurrentIndex(7);
         cmb_zstd_net->setEnabled(false);
@@ -210,7 +213,7 @@ setupUi(this); // this sets up GUI
    	chk_overwrite->setEnabled(true);
    	cmb_zip->setEnabled(false);
    	chk_Beschreibung->setEnabled(true);
-   	chk_Beschreibung->setChecked(Qt::Checked);
+   	chk_Beschreibung->setChecked(true);
    	rdButton_auslesen();
    	addWidget();
         chk_path ->setEnabled(false);
@@ -221,6 +224,7 @@ setupUi(this); // this sets up GUI
     int b = 0;
     int c = 0;
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    QThread::msleep(5 * sleepfaktor);
     QString text = ds.readLine();
    	  while (!ds.atEnd())
       	  {
@@ -289,13 +293,16 @@ QString filename;
 QString attribute;
         attribute = "-f" + userpath_net + "/.qt-fs-client 2>/dev/null";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute; //umount samba
-	system (befehl.toLatin1().data());   
+	if(system (befehl.toLatin1().data()))
+           befehl = "";   
         attribute = "-u " + userpath_net + "/.qt-fs-client 2>/dev/null";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 17 " + attribute; //fusermount 
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         attribute = "-a -t nfs 2>/dev/null";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount nfs
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
        cmbFlag = 0;
        close(); 
 }
@@ -373,14 +380,18 @@ QString text;
 QStringList items;
 listWidget_free_folder -> clear();
 	// freigegebene Verzeichnisse ermitteln
-    	befehl = "showmount -e " + rechner_IP + " 1> " +  userpath_net + "/.config/qt-fsarchiver/smbclient.txt";
-	system (befehl.toLatin1().data()); 
         QFile file(userpath_net + "/.config/qt-fsarchiver/smbclient.txt");
 	QTextStream ds(&file);
-        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-           text = ds.readLine();
-           
-   	  while (!ds.atEnd())
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+             {
+            befehl = "showmount -e " + rechner_IP + " 1> " +  userpath_net + "/.config/qt-fsarchiver/smbclient.txt";
+	    if(system (befehl.toLatin1().data()))
+                befehl = "";
+            while (text == ""){
+             text = ds.readLine();
+             QThread::msleep(5 * sleepfaktor);
+            }
+    	  while (!ds.atEnd())
       	{
           text = ds.readLine();
  	  items = text.split(" ");
@@ -408,12 +419,18 @@ QString text;
 QStringList items;
 listWidget_free_folder -> clear();
 	// freigegebene Verzeichnisse ermitteln
-    	befehl = "smbclient -N -L" + rechner_IP + " 1> " +  userpath_net + "/.config/qt-fsarchiver/smbclient.txt";
-	system (befehl.toLatin1().data()); 
+    	
         QFile file(userpath_net + "/.config/qt-fsarchiver/smbclient.txt");
 	QTextStream ds(&file);
-        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-           text = ds.readLine();
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+             {
+            befehl = "smbclient -N -L" + rechner_IP + " 1> " +  userpath_net + "/.config/qt-fsarchiver/smbclient.txt";
+	    if(system (befehl.toLatin1().data()))
+                 befehl = ""; 
+            while (text == ""){
+             text = ds.readLine();
+             QThread::msleep(5 * sleepfaktor);
+            }
    	  while (!ds.atEnd())
       	{
  	       if (text.indexOf("Disk") > -1)  {
@@ -445,15 +462,21 @@ QString DialogNet::hostname()
 {
 // eigenen Hostname einlesen
 QString filename = userpath_net + "/.config/qt-fsarchiver/hostname.txt";
-   QFile file(filename);
-   QString befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /etc/hostname " + filename;
-   system (befehl.toLatin1().data());
+QFile file(filename);
+QString befehl;
     	QTextStream ds(&file);
         QString text; 
-        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     text = ds.readLine();
-             file.close();
-        }
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+             {
+             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /etc/hostname " + filename;
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
+        while (text == ""){
+            text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            } 
+         }
+        file.close();
      text = text.toLower();
      return text;
 }
@@ -468,10 +491,7 @@ QFile file(folder_net);
 QStringList dev_sdx;
 QString dev_sdx_;
 QString devsdx[10][20];
-int i = 0;
-int j = 0;
 int k = 0;
-int pos = 0;
 QString dummy;
 QString attribute;
      QString befehl;
@@ -531,10 +551,9 @@ QString attribute;
 this->setCursor(Qt::WaitCursor);
 QString zeichen = "'";
        if (net_art == 1) //SSH
-         stop = folder_free_mounten();
-         if (stop == 256){
-            return 1;}
-       
+           stop = folder_free_mounten();
+       if (stop == 256){
+           return 1;}
        if (net_art == 0){  //Samba
          attribute = "-t cifs -o username=" + user_net + ",password=" + key_net + ",uid=0,gid=0 //" + rechner_IP + "/'" + folder_free + "' " + userpath_net + "/.qt-fs-client";
          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 19 " + attribute; 
@@ -560,13 +579,20 @@ QString zeichen = "'";
          int row;
          // Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
          row = listWidget->currentRow();
-         text = window.beschreibungstext("/dev/" + partition_net_, DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
+         text = window.beschreibungstext(DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
          filedialog.werte_uebergeben(text);
          //Überprüfung ob gemounted
          if (!window.is_mounted(partition_net_.toLatin1().data())) 
             {
 		   UUID_net = window.UUID_auslesen(listwidgetrow);
-		   part_art_net = window.mtab_einlesen("/dev/" + partition_net_);
+                   liveFlag_net = 0;
+		   part_art_net = mtab_einlesen_net(row);
+                   //Überprüfung on LVM vorhanden
+                   if(part[row][7] == "/" or part[row][7] == "/home")
+                      liveFlag = 1;
+                   if(liveFlag_net == 1)
+                      liveFlag = 1;
+                   liveFlag_net = 0; 
                    //Überprüfung ob System oder Home Partition
                    int ret = 1; 
                    if (part_art_net == "system")
@@ -619,7 +645,6 @@ QString zeichen = "'";
                                 }
                                 if (zip == 10)
                                    {
-                                   int zstd = cmb_zstd_net->currentIndex()+1;
                                    compress = "-Z" + QString::number(zstd_level_net);   
                                    parameter[2] = compress;
                                 }
@@ -670,7 +695,10 @@ QString zeichen = "'";
 				 QString befehl_pbr_net = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + "if=/dev/" + partition_net_ + " of=" + folder_net + "/" + DateiName_net + "-" + _Datum_net + ".pbr bs=512 count=1";
 				state = chk_pbr->checkState();
 				if (state == Qt::Checked)
-				    system (befehl_pbr_net.toLatin1().data());
+                                   {
+				    if(system (befehl.toLatin1().data()))
+                                        befehl = "";
+                                    }
                                 parameter[indizierung] = (folder_net + "/" + DateiName_net + "-" + _Datum_net + ".fsa");
                                 parameter[indizierung + 1] = ("/dev/" + partition_net_);
                                 QFile f(parameter[indizierung]);
@@ -699,9 +727,10 @@ QString zeichen = "'";
 				//txt-Datei von /.config/qt-fsarchiver in die gemeountete Partition kopieren
                                 attribute = folder_file_ + " " + userpath_net + "/.qt-fs-client/" +  DateiName_net + "-" + _Datum_net + ".txt";
                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 " + attribute;  //Datei kopieren
-                                system (befehl.toLatin1().data());
-                                QString attribute; 
-				for ( int i=0; i<15; i++)
+                               if(system (befehl.toLatin1().data()))
+                                    befehl = "";
+                               QString attribute; 
+			       for ( int i=0; i<15; i++)
   				  {
   				  if (parameter[i] != " ")
      				  attribute = attribute + " " + parameter[i];
@@ -715,7 +744,8 @@ QString zeichen = "'";
                                 stopFlag_ = 0;
                                 this->setCursor(Qt::WaitCursor);
   				befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                                system (befehl.toLatin1().data());
+                                if(system (befehl.toLatin1().data()))
+                                    befehl = "";
         		        }
                        }
                                return 0;
@@ -723,7 +753,6 @@ QString zeichen = "'";
 
 int DialogNet::restorePartition() {
 MWindow window;
-Qt::CheckState state;
 Qt::CheckState state1;
 //folder_dir_net.append  (dirModel->filePath(index));
 //folder_dir_net =  (dirModel->filePath(index));
@@ -736,7 +765,6 @@ QString dev_part;
 int pos= 0;
 int pos1 = 0;
 int cmp = 0;
-int stop = 0;
 QString str = ""; 
 QString str1 = "";
 QString befehl;
@@ -745,7 +773,6 @@ QString text;
 QString dummy;
 QString sys;
 QString optionkey;
-        state = chk_path->checkState();
         state1 = chk_key->checkState();
 	indicator_reset();
         int net_art = cmb_Net->currentIndex();
@@ -784,8 +811,7 @@ QString optionkey;
           if (net_art == 1)
               folder_free_mounten();
           this->setCursor(Qt::WaitCursor);  
-               state = chk_Beschreibung->checkState();
-              this->setCursor(Qt::ArrowCursor);
+          this->setCursor(Qt::ArrowCursor);
 		// Archinfo einholen um Originalpartition einzulesen und Verschlüsselung überprüfen.
                 // das zurücksichern Partition oder Verzeichnis
                // Annahme zunächst kein Schlüssel
@@ -797,12 +823,13 @@ QString optionkey;
   			attribute = "3 " + attribute;
                         save_attribut_net(attribute);
                         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                        system (befehl.toLatin1().data());
+                        if(system (befehl.toLatin1().data()))
+                           befehl = "";
                         QThread::msleep(10 * sleepfaktor);
                         optionkey = datei_auswerten_net("s");
                         QThread::msleep(10 * sleepfaktor);
                         if(optionkey == "112") {    
-                       		chk_key->setChecked(Qt::Checked);
+                       		chk_key->setChecked(true);
                                 lineKey->setEnabled(true);
                   		QMessageBox::about(this, tr("Note", "Hinweis"),
          	     		tr("The partition is encrypted. Please enter the key\n", "Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein\n"));
@@ -823,7 +850,8 @@ QString optionkey;
                         attribute = "5 " + attribute;
                         save_attribut_net(attribute);
                         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                        system (befehl.toLatin1().data());
+                        if(system (befehl.toLatin1().data()))
+                            befehl = "";
                         QThread::msleep(10 * sleepfaktor);
                         optionkey = datei_auswerten_net("s");
                         QThread::msleep(10 * sleepfaktor);
@@ -831,8 +859,9 @@ QString optionkey;
                             QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.", "Sie haben ein falsches Passwort eingegeben. \n"));
            		   lineKey->setText ("");
                            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath_net + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
-                           system (befehl.toLatin1().data());
-                           return 0;
+                          if(system (befehl.toLatin1().data()))
+                              befehl = "";
+                          return 0;
                         }
 			
 
@@ -885,10 +914,12 @@ QString optionkey;
                      if (!window.is_mounted(partition_net_.toLatin1().data()))
                        {
                        UUID_net = window.UUID_auslesen(listwidgetrow);
-                       part_art_net = window.mtab_einlesen("/dev/" + partition_net_);
-              //Überprüfung ob System oder Home Partition 
-                       if (part_art_net == "system")
-                	{
+
+                      part_art_net = mtab_einlesen_net(listwidgetrow);
+qDebug() << "row_net" << row_net << part_art_net;
+                     //Überprüfung ob System oder Home Partition
+                      if (part_art_net == "system")
+                	 {
                         QMessageBox::about(this, tr("Note", "Hinweis"),
          			tr("The system partition to be restored is mounted and cannot be written back. Please use a live DVD.\n", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0;
@@ -921,14 +952,13 @@ QString optionkey;
 if (partition_typ_net == "btrfs"){
                  QThread::msleep(20 * sleepfaktor);
                  befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_net_; // unmounten
- 		 system (befehl.toLatin1().data());
+ 		 if(system (befehl.toLatin1().data()))
+                     befehl = "";
                  befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 7 -f /dev/" + partition_net_; // Partition anlegen
- 		 system (befehl.toLatin1().data());
+ 		if(system (befehl.toLatin1().data()))
+                    befehl = "";
                }  
-
-            Qt::CheckState state;  	
-            state = chk_path->checkState();  	
-            QString keyText = lineKey->text();
+               QString keyText = lineKey->text();
                state1 = chk_key->checkState();
 	       parameter[0] = "fsarchiver";
 	       parameter[1] = "restfs"; 
@@ -972,7 +1002,8 @@ if (partition_typ_net == "btrfs"){
                stopFlag_ = 0;
                this->setCursor(Qt::WaitCursor);
                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-               system (befehl.toLatin1().data());
+               if(system (befehl.toLatin1().data()))
+                   befehl = "";
                }
      }
    return 0;
@@ -1013,9 +1044,6 @@ void DialogNet::starteinstellung(){
 
 void DialogNet::rdButton_auslesen()
      {
-     Qt::CheckState state;
-     Qt::CheckState state1;
-     state1= chk_path->checkState();
      QStringList filters; 
      if (rdBt_saveFsArchiv->isChecked())
         {
@@ -1089,6 +1117,7 @@ int net_art = cmb_Net->currentIndex();
     this->setCursor(Qt::WaitCursor); 
     restore_file_name_txt ->setText("");
     row = listWidget_free_folder->currentRow();
+    row_net = row;
     if (row > -1)
     	folder_free = folder_free_[row];
     if (rdBt_restoreFsArchiv->isChecked() && net_art == 0) //Samba
@@ -1210,8 +1239,9 @@ int err = 0;
         // Prüfen ob text-Datei vorhanden 
        if (f.exists())
           befehl = "rm "  + filename;
-          system (befehl.toLatin1().data());
-        if (flag_end_net == 1) {
+       if(system (befehl.toLatin1().data()))
+           befehl = "";
+       if (flag_end_net == 1) {
         QMessageBox::about(this, tr("Note", "Hinweis"),
          tr("The backup of the partition was aborted by the user!\n", "Die Sicherung der Partition wurde vom Benutzer abgebrochen!\n") );
         }
@@ -1270,7 +1300,8 @@ int err = 0;
          attribute = "-a -t nfs 2>/dev/null";
          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
      }
-  system (befehl.toLatin1().data());
+  if(system (befehl.toLatin1().data()))
+           befehl = "";
   lineKey->setText ("");
   pushButton_end->setEnabled(true);
   date_delete_net();
@@ -1291,7 +1322,7 @@ void DialogNet::thread2Ready()  {
    int err = 0;
    if (meldung == 105) {
       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition to be restored is mounted. It must be unmounted first!\n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
-      endeThread_net == 0;
+      endeThread_net = 0;
        }
    if (endeThread_net != 0) { 
      dummy = datei_auswerten_net("f"); 
@@ -1323,7 +1354,8 @@ void DialogNet::thread2Ready()  {
 	if (befehl_pbr_net != "") 
          {
          QString befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + befehl_pbr_net ; 
-         system (befehl.toLatin1().data());
+         if(system (befehl.toLatin1().data()))
+           befehl = "";
          i = 0;
          }
         //PBR nicht herstellen
@@ -1338,7 +1370,7 @@ void DialogNet::thread2Ready()  {
        if (flag_end_net == 1) {
         QMessageBox::about(this, tr("Note", "Hinweis"),
          tr("The restore of the partition was aborted by the user!\n", "Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!\n") );
-	meldung == 0;
+	meldung = 0;
         }
      if (err != 10) {
           // Anzahl nicht korrekt zurückgeschriebene Dateien ausgeben
@@ -1405,7 +1437,8 @@ void DialogNet::thread2Ready()  {
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
        }
     this->setCursor(Qt::ArrowCursor);
-    system (befehl.toLatin1().data());
+    if(system (befehl.toLatin1().data()))
+           befehl = "";
     lineKey->setText ("");
     pushButton_end->setEnabled(true);
     date_delete_net();
@@ -1494,9 +1527,9 @@ QString dummy1;
 int flag = 0;
 text = datei_auswerten_net("p");
 endeThread_net = text.toInt();  //10 korrekt beendet 11 fehlerhaft
-if (endeThread_net == 10 && flag_View_net == 1 or endeThread_net == 11 && flag_View_net == 1) //backup
+if ((endeThread_net == 10 && flag_View_net == 1) || (endeThread_net == 11 && flag_View_net == 1)) //backup
    thread1Ready();
-if (endeThread_net == 10 && flag_View_net == 2 or endeThread_net == 11 && flag_View_net == 2) //restore
+if ((endeThread_net == 10 && flag_View_net == 2) || (endeThread_net == 11 && flag_View_net == 2)) //restore
    thread2Ready();
 if (endeThread_net != 10 && endeThread_net != 11)
 {
@@ -1595,6 +1628,7 @@ int DialogNet::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+return 0;
 }
 
 void DialogNet::esc_end()
@@ -1611,33 +1645,39 @@ QString pid_qt_fsarchiver_terminal;
         {
 	attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         attribute = "rm " + SicherungsFolderFileName_net;	
 	befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         int pos = SicherungsFolderFileName_net.indexOf("fsa");  //fsa-Datei löschen
        	SicherungsFolderFileName_net = SicherungsFolderFileName_net.left(pos);
        	SicherungsFolderFileName_net.insert(pos, QString("txt"));
         attribute = "rm "  + SicherungsFolderFileName_net;  //txt-Datei löschen
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         // pbr-Datei löschen
         pos = SicherungsFolderFileName_net.indexOf("txt");
         SicherungsFolderFileName_net = SicherungsFolderFileName_net.left(pos);
         SicherungsFolderFileName_net.insert(pos, QString("pbr"));
         attribute = "rm " + SicherungsFolderFileName_net;
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         attribute = "kill -15 " + pid_qt_fsarchiver;  //qt-fsarchiver-terminal abbrechen
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+           befehl = "";
         close();
 	}
 }
 
-void DialogNet::addItems(const QString &name, const QStringList& iconMap) {
+void DialogNet::addItems(const QString &name) {
    QTreeWidgetItem *root1 = new QTreeWidgetItem(treeWidget);
    root1->setText(0, name);  //zuständig für die Anzeige des Foldernamens
    if (name.right(4)== ".fsa")
@@ -1645,8 +1685,8 @@ void DialogNet::addItems(const QString &name, const QStringList& iconMap) {
    else
       root1->setIcon(0, folderIcon );// zuständig für das Foldersymbol
    QList<QTreeWidgetItem *> items;
-   QTreeWidgetItem *tItem=new QTreeWidgetItem(root1); // zuständig für den Pfeil vor dem Namen
-   treeWidget->addTopLevelItems( items );
+ // QTreeWidgetItem *tItem=new QTreeWidgetItem(root1); // zuständig für den Pfeil vor dem Namen
+   treeWidget->addTopLevelItems(items);
 }
 
 
@@ -1732,6 +1772,7 @@ int i = 0;
         }
         if (i == 0)
            mountflag = 1; //Beim erfolgreichen mounten wird das erneute mounten verhindert
+return 0;
 }
 
 
@@ -1824,6 +1865,7 @@ int jj= 0;
         if (rdBt_restoreFsArchiv->isChecked()){ //Verzeichnisse und Dateien auswerten
       	    if( file1.open(QIODevice::ReadOnly|QIODevice::Text)) {
                 folder_teilen= ds.readLine();
+                QThread::msleep(5 * sleepfaktor);
         	while (!ds.atEnd())
         	{
         	folder_teilen= ds.readLine();
@@ -1855,7 +1897,7 @@ int jj= 0;
  	for ( i = 0; i < jj; ++i){
     		dir2.setNameFilters(filters);
     		dirList2 = dir2.entryList(QDir::Files);
-    		addItems(folder_[i], dirList2);
+    		addItems(folder_[i]);
    	}
 }
 void DialogNet::button_toParent()
@@ -1881,7 +1923,7 @@ int found1;
         if (pfad_back == "/")
                 bt_toParent->setEnabled(false); 
         pfad_forward = pfad_back;
-        backFlag == 0;
+        backFlag = 0;
         listWidget_tree_eintragen(rechner_IP, key_net, user_net, pfad_back, 1);
 }
 
@@ -1925,7 +1967,7 @@ QString text;
 QString dummy;
 QString filename = userpath_net + "/.config/qt-fsarchiver/zahlen.txt";
 QFile file(filename);
-if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             QTextStream ds(&file);
             text = ds.readLine();
             dummy = text.right(1);
@@ -1982,7 +2024,8 @@ QString date_delete_[10];
      for(i=0; i<7; i++)
      {
      befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath_net + "/.config/qt-fsarchiver " + date_delete_[i] + " 2>/dev/null"; 
-     system (befehl.toLatin1().data());
+     if(system (befehl.toLatin1().data()))
+        befehl = "";
      }
 }
 
@@ -1996,6 +2039,7 @@ int DialogNet::questionMessage_net(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+return 0;
 }
 
 QString DialogNet::Zeit_auslesen_net(){
@@ -2015,5 +2059,20 @@ QString DialogNet::Zeit_auslesen_net(){
     _Datum_net = _Datum_net + Datum_akt.setNum(Jahr) ;
     return _Datum_net;
 }
+
+//Mountpoint ermitteln
+QString DialogNet::mtab_einlesen_net(int zahl)
+{
+         if (part[zahl][7] == "/")  // sys Partition gefunden
+             {
+             return "system";
+             }
+         if (part[zahl][7] == "/home") // home Partition gefunden
+             {
+             return "home";
+             }
+return "";
+}  
+ 
 
 

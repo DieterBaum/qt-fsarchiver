@@ -40,7 +40,6 @@ int dummy_prozent_dir;
 int prozent_ = 0;
 int flag_View_dir;
 int sekunde_tara_dir ;
-QString SicherungsFolderFileName_dir;
 int thread_run_dir;
 int flag_end_dir;
 extern int fsarchiver_aufruf(int argc, char *anlage0=NULL, char 
@@ -57,7 +56,7 @@ extern QString user;
 QString userpath_dir;
 extern int sleepfaktor;
 
-DialogDIR::DialogDIR(QWidget *parent)
+DialogDIR::DialogDIR()
 {
         setupUi(this); // this sets up GUI
 	connect( bt_save, SIGNAL( clicked() ), this, SLOT( folder_dir_path_einlesen())); 
@@ -128,16 +127,16 @@ DialogDIR::DialogDIR(QWidget *parent)
            auswertung = setting.value("overwrite").toInt();
            auswertung = setting.value("place").toInt();
            if (auswertung ==1)
-              chk_path->setChecked(Qt::Checked);
+              chk_path->setChecked(true);
            if (auswertung ==1)
-              chk_overwrite->setChecked(Qt::Checked); 
+              chk_overwrite->setChecked(true); 
            auswertung = setting.value("pbr").toInt();
            if (auswertung ==1)
-              chk_key->setChecked(Qt::Checked); 
+              chk_key->setChecked(true); 
 	   auswertung = setting.value("hidden").toInt();
            if (auswertung ==1)
-              chk_hidden->setChecked(Qt::Checked);
-              auswertung = setting.value("Passwort").toInt(); 
+              chk_hidden->setChecked(true);
+           auswertung = setting.value("Passwort").toInt(); 
            if (auswertung ==1)
               lineKey ->setEchoMode(QLineEdit::Normal);
            else
@@ -153,8 +152,8 @@ DialogDIR::DialogDIR(QWidget *parent)
         } 
         else { 
                 cmb_kerne -> setCurrentIndex(0);
-        	chk_path->setChecked(Qt::Checked);
-        	chk_overwrite->setChecked(Qt::Checked); 
+        	chk_path->setChecked(true);
+        	chk_overwrite->setChecked(true); 
         	cmb_zip -> setCurrentIndex(2);
                 cmb_zstd_dir -> setCurrentIndex(9);
                 cmb_zstd_dir->setEnabled(false);
@@ -181,8 +180,8 @@ DialogDIR::DialogDIR(QWidget *parent)
         if (dialog_auswertung == 5){
             chk_key->setText (tr("Decrypt\nbackup. key:", "Sicherung\nentschlüsseln. Schlüssel:"));
             bt_save->setText (tr("Write directory back", "Verzeichnis zurückschreiben"));  
-	    label->setText (tr("Backup file to write back", "zurück zu schreibende Sicherungsdatei"));
-            label_2->setText (tr("Location (path) of the restore", "Ort (Pfad) der Wiederherstellung")); 
+	    label_2->setText (tr("Backup file to write back", "zurück zu schreibende Sicherungsdatei"));
+            label->setText (tr("Location (path) of the restore", "Ort (Pfad) der Wiederherstellung")); 
             state = chk_path->checkState();
             if (state == Qt::Checked)
                  treeView_path->setEnabled(false);
@@ -224,7 +223,6 @@ int found = 0;
           if (found > -1)
             folder_dir.replace(found, 1, "+"); 
           }
-qDebug() << "folderdir1" << folder_dir;
         QModelIndex index1 = treeView_path->currentIndex();
    	folder_path.append  (dirModel1->filePath(index1));
    	folder_path =  (dirModel1->filePath(index1));
@@ -234,8 +232,6 @@ qDebug() << "folderdir1" << folder_dir;
           if (found > -1)
             folder_path.replace(found, 1, "+"); 
           }
-qDebug() << "folderpath" << folder_path;
-        
         QFileInfo info(folder_path); 
         keyText = lineKey->text();
         state = chk_overwrite->checkState();
@@ -270,6 +266,7 @@ qDebug() << "folderpath" << folder_path;
         parameter[0] = "fsarchiver";
        	parameter[1] = "savedir"; 
         zip = cmb_zip->currentIndex();
+        zstd_level_dir = cmb_zstd_dir->currentIndex() +1;
                                 if (zip < 10)
                                 {
                                 compress = QString::number(zip);
@@ -282,7 +279,6 @@ qDebug() << "folderpath" << folder_path;
                                 }
                                 if (zip == 10)
                                    {
-                                   int zstd = cmb_zstd_dir->currentIndex()+1;
                                    compress = "-Z" + QString::number(zstd_level_dir);
                                    parameter[2] = compress;
                                 }
@@ -309,17 +305,15 @@ qDebug() << "folderpath" << folder_path;
                	   }
                indizierung = indizierung + 2;  
 	      }
-        dummy = folder_dir;
-qDebug() << "folder_dir" << dummy;
+        dummy = folder_path;
       	while (pos != -1)
       	{
       		pos = dummy.indexOf("/");
       		dummy.replace(pos,1,"-"); 
       		}
       	dummy.replace(0,1,"/"); 
-        parameter[indizierung] = folder_path + dummy + ".fsa";
-        SicherungsFolderFileName_dir = parameter[indizierung];
-        parameter[indizierung+1] = folder_dir;
+        parameter[indizierung] = folder_dir + dummy + ".fsa";
+        parameter[indizierung+1] = folder_path;
         QFile f(parameter[indizierung]);
         if  (parameter[4] != "-o" && (f.exists())){
             QMessageBox::about(this,tr("Note", "Hinweis"),
@@ -327,7 +321,6 @@ qDebug() << "folder_dir" << dummy;
 	+ tr("already exists. The backup is not performed\n", " ist bereits vorhanden. Die Sicherung wird nicht durchgeführt\n"));
                 return 0 ; 
             }
-//qDebug() << "befehle" << parameter[0] << parameter[1] << parameter[2] << parameter[3] << parameter[4] << parameter[5] << parameter[6] << parameter[7];
             for ( int i=0; i<15; i++)
   		{
   		 if (parameter[i] != " ")
@@ -342,7 +335,8 @@ qDebug() << "folder_dir" << dummy;
             flag_View_dir = 1;
             ViewProzent();
             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-            system (befehl.toLatin1().data());
+            if(system (befehl.toLatin1().data()))
+               befehl = "";
             return 0;
             }
 
@@ -387,12 +381,13 @@ qDebug() << "folder_dir" << dummy;
         	attribute = "3 fsarchiver archinfo " + folder_dir;
                 save_attribut_dir(attribute);
                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                system (befehl.toLatin1().data());
+                if(system (befehl.toLatin1().data()))
+                    befehl = "";
                 QThread::msleep(10 * sleepfaktor);
                 optionkey = datei_auswerten_dir("p");
                 if(optionkey == "13") 
                  {
-                 chk_key->setChecked(Qt::Checked);
+                 chk_key->setChecked(true);
                  lineKey->setEnabled(true);
                  QMessageBox::about(this,tr("Note", "Hinweis"),
          	 tr("The partition is encrypted. Please enter the key", "Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein\n"));
@@ -410,7 +405,8 @@ qDebug() << "folder_dir" << dummy;
                 attribute = "5 fsarchiver archinfo -c " + keyText + " "  + folder_dir;
                 save_attribut_dir(attribute);
                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                system (befehl.toLatin1().data());
+                if(system (befehl.toLatin1().data()))
+                   befehl = "";
                 QThread::msleep(10 * sleepfaktor);
                 optionkey = datei_auswerten_dir("p");
                 if(optionkey == "13") 
@@ -457,7 +453,8 @@ qDebug() << "folder_dir" << dummy;
         flag_View_dir = 2;
         this->setCursor(Qt::WaitCursor);
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+               befehl = "";
         QThread::msleep(10 * sleepfaktor);
         optionkey = datei_auswerten_dir("p");
         if(optionkey == "11")
@@ -482,7 +479,6 @@ void DialogDIR::treeview_show()
 
 void DialogDIR::thread1Ready()  {
    QString err_regfile_;
-   int err;
    int anzahl;
    QString text_integer; 
    if (endeThread_ > 0) {
@@ -518,11 +514,7 @@ void DialogDIR::thread1Ready()  {
        int cnt_special  = dummy.toInt();
        QString cnt_special_;
        cnt_special_ = QString::number(cnt_special);
-       dummy = datei_auswerten_dir("p"); 
-       err = dummy.toInt();
-       dummy = datei_auswerten_dir("p");
-       err = dummy.toInt();
-QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the directory was successful.\n", "Die Sicherung des Verzeichnisses war erfolgreich.\n") + cnt_regfile_ + 
+       QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the directory was successful.\n", "Die Sicherung des Verzeichnisses war erfolgreich.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr("  directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr("  links and ", " Links und ") + cnt_special_ + tr(" specials have been backed up.", " spezielle Daten wurden gesichert."));
       }
       else if (flag_end_dir == 1)
@@ -567,14 +559,13 @@ QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the directory 
 
 void DialogDIR::thread2Ready()  {
    QString err_regfile_;
-   int err;
    int anzahl;
    QString text_integer; 
    QString dummy;
    dummy = datei_auswerten_dir("f"); //nochmals prüfen
    int meldung  = dummy.toInt();
    if (endeThread_ > 0) {
-   	if (endeThread_ == 10){
+       if (endeThread_ == 10){
        progressBar->setValue(100);
        SekundeRemaining ->setText("0");
        dummy = datei_auswerten_1_dir(userpath_dir + "/.config/qt-fsarchiver/anzahlfile.txt");
@@ -602,10 +593,6 @@ void DialogDIR::thread2Ready()  {
        int cnt_special  = dummy.toInt();
        QString cnt_special_;
        cnt_special_ = QString::number(cnt_special);
-       dummy = datei_auswerten_dir("p"); 
-       err = dummy.toInt();
-       dummy = datei_auswerten_dir("p");
-       err = dummy.toInt();
        QMessageBox::about(this, tr("Note", "Hinweis"), tr("The restoring of the directory was successful.\n", "Die Wiederherstellung des Verzeichnisses war erfolgreich.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data has been restored.", " spezielle Daten wurden wieder hergestellt."));
         }
@@ -732,9 +719,9 @@ QString dummy;
 QString dummy1;
 text = datei_auswerten_dir("p");
 endeThread_ = text.toInt();
-if (endeThread_ == 10 && flag_View_dir == 1 or endeThread_ == 11 && flag_View_dir == 1)
+if ((endeThread_ == 10 && flag_View_dir == 1) or (endeThread_ == 11 && flag_View_dir == 1))
    thread1Ready();
-if (endeThread_ == 10 && flag_View_dir == 2 or endeThread_ == 11 && flag_View_dir == 2)
+if ((endeThread_ == 10 && flag_View_dir == 2) or (endeThread_ == 11 && flag_View_dir == 2))
    thread2Ready();
 if (endeThread_ != 10 and endeThread_ != 11)  //noch fejhlerhaft bei 11
 {
@@ -824,6 +811,7 @@ int DialogDIR::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+return 0;
 }
 
 void DialogDIR::chkhidden(){
@@ -916,13 +904,11 @@ if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
 void DialogDIR::folder_expand_dir(){
    QModelIndex index = treeView_dir->currentIndex();
    treeView_dir->expand(index);
-qDebug() << "treeviewdir" << treeView_dir;
 }
 void DialogDIR::folder_expand_path()
    {
    QModelIndex index = treeView_path->currentIndex();
    treeView_path->expand(index);
-qDebug() << "treeviewpath" << treeView_path;
 }
 
 

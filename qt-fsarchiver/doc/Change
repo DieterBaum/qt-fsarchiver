@@ -1,6 +1,9 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-10 May 20, 2019.
+     - Reprogramming Reading the partitions and hard disks. LVM is supported. Raid is not supported.
+     - Small bug fixes.
 * qt-fsarchiver-0.8.5-9 April 16, 2019.
      - Troubleshooting: Program does not start during initial installation.
 * qt-fsarchiver-0.8.5-8 April 10, 2019.

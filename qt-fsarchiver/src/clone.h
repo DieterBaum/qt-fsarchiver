@@ -30,7 +30,8 @@ class DialogClone : public QWidget, private Ui::clone_dialog
 	Q_OBJECT
 
 public:
-	DialogClone(QWidget *parent = 0);
+	DialogClone();
+        ~DialogClone() {}
 
 protected slots:
    	void closeEvent(QCloseEvent* event);
@@ -52,7 +53,7 @@ public slots:
         void remainingTime(int prozent);
 	void elapsedTime();
 	QString  pid_ermitteln(QString prozess);
-        void pid_2_ermitteln(QString prozess);
+        void pid_2_ermitteln();
         void esc_end();
         void read_write_hd();
 	void read_write_hd_1();
@@ -69,7 +70,8 @@ private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
     QLabel *questionLabel;
-    int mountpoint(QString partition);
+    int mountpoint(int zahl);
+    int mountpoint_disk(QString partition);
     Thread thread1;
     Thread thread2;
     QTimer *timer_clone; 

@@ -31,13 +31,13 @@ QString Sektor_byte;
 QString Sektor_byte_1;
 qint64 size_;
 int efiflag;
-QString disk_name[20];
+QString disk_name[100];
 QStringList items_disk;
 extern QString user;
 QString userpath_mbr;
 extern int sleepfaktor;
 
-DialogMBR::DialogMBR(QWidget *parent)
+DialogMBR::DialogMBR()
 {
 QStringList filters;
 	setupUi(this); // this sets up GUI
@@ -78,40 +78,47 @@ QString befehl;
 QString attribute;
 int i = 0;
 int j = 0;
+int k = 0;
+int size = 0;
 QStringList disk;
 QString disk_;
-        QString filename = userpath_mbr + "/.config/qt-fsarchiver/disk2.txt";
-         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /proc/partitions " + filename;
-       	     QFile file(filename);
-	     QTextStream ds(&file);
-         QThread::msleep(10 * sleepfaktor);   
-         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            while (!ds.atEnd())
-      	    { 
+QString filename;
+        filename = userpath_mbr + "/.config/qt-fsarchiver/disk2.txt";
+        QFile file(filename);
+        QTextStream ds(&file);
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+           {
+           attribute = "lsblk -l 1> " +  userpath_mbr + "/.config/qt-fsarchiver/disk2.txt";
+           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+           if(system (befehl.toLatin1().data()))
+              befehl = "";
+           while (disk_ == ""){
             disk_ = ds.readLine();
-
-         if (disk_.indexOf("nv") > 0)
-                { 
-                   disk = disk_.split(QRegExp("\\s+"));
-                   if (disk[4].size() == 7)
-                       {
-                       disk_name[j] = disk[4];
-                       j++;
-                       }
-                }
-             if (disk_.indexOf("sd") > 0)
-                { 
-
-                   disk = disk_.split(QRegExp("\\s+"));
-                   if (disk[4].size() == 3)
-                      {
-                       disk_name[j] = disk[4];
-                       j++;
-                      }
-                }
-               }
-      	  } 
-   	  file.close();
+            QThread::msleep(5 * sleepfaktor);
+            } 
+            while (!ds.atEnd())
+      	    {
+            disk_ = ds.readLine();
+      	    if (disk_.indexOf("loop") == -1 )
+      	      {
+      	      disk_name[i] = disk_;
+      	      i++;
+      	      }
+           }
+           file.close();
+           }
+           j = 0;
+           for (k=0; k < i; k++)
+           {
+           disk = disk_name[k].split(QRegExp("\\s+"));
+           size = disk.size();
+           if(disk[5] == "disk" && size >= 5)
+             {
+              disk_name[j] = disk[0]; //Diskname
+              j++;
+             }
+             }
+             disk_name[j] = "";
  //Anzahl Festplatten ermitteln 
           j = 0;
          while (disk_name[j]!= "")
@@ -120,10 +127,10 @@ QString disk_;
             }
 //Combobox füllen
            items_disk.clear();
-            for (i=0; i < j; i++) 
-             items_disk <<  disk_name[i];
-             cmb_disk->addItems (items_disk); 
-             items_disk.clear();
+           for(i=0;i<j;i++) 
+              items_disk <<  disk_name[i];
+            cmb_disk->addItems(items_disk); 
+            items_disk.clear();
 
 }
 
@@ -334,7 +341,8 @@ QString attribute;
         else   //nvme
            attribute = " -lu | grep " + partition + "p1 > " + userpath_mbr + "/.config/qt-fsarchiver/sektornummer.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 9 " + attribute;
-        system (befehl.toLatin1().data());
+        if(system (befehl.toLatin1().data()))
+              befehl = "";
         QFile file(Dateiname);
         QFileInfo info(Dateiname); 
         size_ = info.size();  //Wenn Dateigröße = 0 ist verhindert diese Abfrage einen Abstaurz
@@ -378,31 +386,30 @@ QString partition;
 QString befehl;
 QStringList Ubuntu_;
 int i = 0;
-QString test;
-QString filename = userpath_mbr + "/.config/qt-fsarchiver/issue.txt";
+QString filename = "/etc/issue";
+QFile file(filename); 
         i = cmb_disk->currentIndex();
         partition = disk_name[i];
         partition = "/dev/"+ partition;
         //Prüfen ob System Partition
-        test = mtab_einlesen(partition);
-        if (test == "system") {
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /etc/issue " + userpath_mbr + "/.config/qt-fsarchiver/issue.txt";
-             	system (befehl.toLatin1().data());
-                QThread::msleep(10 * sleepfaktor);
-        	QFile file(filename);
-        	//Datei auslesen
-        	if( file.open(QIODevice::ReadOnly|QIODevice::Text)) {
-            		QTextStream ds(&file);
-            		Ubuntuversion = ds.readLine();
-            		Ubuntu_ = Ubuntuversion.split(" ");
-            		Ubuntuversion = Ubuntu_[1];
-            		file.close();
-                }
+        if (mtab_einlesen(partition) == "system") {
+                //Datei auslesen
+                Ubuntuversion = "";
+                QTextStream ds(&file);
+                file.open(QIODevice::ReadOnly | QIODevice::Text); 
+                while (Ubuntuversion == ""){
+                   Ubuntuversion = ds.readLine();
+                   QThread::msleep(5 * sleepfaktor);
+                 } 
+        	Ubuntu_ = Ubuntuversion.split(" ");
+            	Ubuntuversion = Ubuntu_[1];
+            	file.close();
          }
          else
 		Ubuntuversion = "";
    
 }
+
 
 int DialogMBR::folder_einlesen() {
    QString partition;
@@ -435,10 +442,12 @@ int DialogMBR::folder_einlesen() {
      i = mbr.length();
      mbr_name = mbr[i-1];
      pos1 = mbr_name.size();
-     folder_= folder_.left(folder_.size() - pos1);
-     befehl = "ls -la '" + folder_ + "' 1>" +  userpath_mbr + "/.config/qt-fsarchiver/mbr_size.txt";
-     system (befehl.toLatin1().data());
-     if( file.open(QIODevice::ReadOnly|QIODevice::Text)) {  
+     if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+       { 
+        folder_= folder_.left(folder_.size() - pos1);
+        befehl = "ls -la '" + folder_ + "' 1>" +  userpath_mbr + "/.config/qt-fsarchiver/mbr_size.txt";
+        if(system (befehl.toLatin1().data()))
+              befehl = "";
         while (!ds.atEnd()){
           text = ds.readLine();
 	  if (text.indexOf("mbr") > -1) 
@@ -516,6 +525,7 @@ int DialogMBR::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+return 0;
 }
 
 QString DialogMBR::mtab_einlesen(QString partition_if_home)
@@ -524,17 +534,18 @@ QString DialogMBR::mtab_einlesen(QString partition_if_home)
    QString befehl;
    QString filename = userpath_mbr + "/.config/qt-fsarchiver/mtab.txt";
    befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /etc/mtab " + userpath_mbr + "/.config/qt-fsarchiver/mtab.txt";
-   system (befehl.toLatin1().data());
+   if(system (befehl.toLatin1().data()))
+              befehl = "";
    QThread::msleep(10 * sleepfaktor);
    QFile file(filename); 
    QTextStream ds(&file); 
    if( file.open(QIODevice::ReadOnly|QIODevice::Text)) {  
         while (!ds.atEnd()){
           text = ds.readLine();
-	       if (text.indexOf(" /home ") > -1) 
-                   if (text.indexOf(partition_if_home) > -1) 
-                       return "system";
-           }
+          if (text.indexOf(" / ") > -1) 
+             if (text.indexOf(partition_if_home) > -1) 
+                return "system";
+         }
          file.close();
      }
      return  " ";
@@ -547,7 +558,8 @@ int DialogMBR::is_gpt(QString partition_efi)
       QString befehl;
       attribute = "gdisk -l " + partition_efi +  " 1>" +  userpath_mbr + "/.config/qt-fsarchiver/efi.txt";
       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
-      system (befehl.toLatin1().data());
+      if(system (befehl.toLatin1().data()))
+              befehl = "";
       QThread::msleep(10 * sleepfaktor);
       QString filename = userpath_mbr + "/.config/qt-fsarchiver/efi.txt";
       QFile file(filename);

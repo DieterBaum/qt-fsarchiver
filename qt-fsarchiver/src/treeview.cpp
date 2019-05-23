@@ -21,7 +21,7 @@ QString folder_treeview;
 extern QString user;
 QString userpath_treeview;
 
-TreeviewRead::TreeviewRead(QWidget *parent)
+TreeviewRead::TreeviewRead()
 {
 QStringList filters;
         userpath_treeview = "/home/" + user; 

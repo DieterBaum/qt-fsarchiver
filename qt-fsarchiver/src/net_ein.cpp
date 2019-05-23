@@ -19,6 +19,7 @@
 #include "net.h"
 #include "mainWindow.h"
 #include <iostream>
+#include <string>
 
 QString widget_net[100]; // Netzwerk
 QString comNet;
@@ -28,9 +29,10 @@ QString dummykey;
 extern QString password;
 extern int dialog_auswertung; 
 extern QString user;
+extern int sleepfaktor;
 QString userpath_net_ein;
 
-NetEin::NetEin(QWidget *parent)
+NetEin::NetEin()
 {
 int i = 0;
 QString attribute;
@@ -45,14 +47,16 @@ connect( chk_password, SIGNAL( clicked() ), this, SLOT(Kennwort()));
 // Vorsichtshalver ./qt-fs-client löschen und neu anlegen, da eventuell nicht leer
        attribute =  userpath_net_ein + "/.qt-fs-client  2>/dev/null"; 
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
-       system (befehl.toLatin1().data());
+       if(system (befehl.toLatin1().data()))
+         attribute = "";
        attribute  = attribute;
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
-       system (befehl.toLatin1().data());
+       if (system (befehl.toLatin1().data()))
+        attribute = "";
     /*   //vorsichtshalber Rechte immer neu setzen
        attribute = "a+rwx " + userpath_net_ein + "/.qt-fs-client 2>/dev/null";
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 16 " + attribute;
-       system (befehl.toLatin1().data());*/
+       x = system (befehl.toLatin1().data());*/
 // Ini-Datei auslesen
    QFile file(userpath_net_ein + "/.config/qt-fsarchiver/qt-fsarchiver.conf");
    if (file.exists()) {
@@ -61,13 +65,13 @@ connect( chk_password, SIGNAL( clicked() ), this, SLOT(Kennwort()));
         int auswertung = setting.value("Passwort").toInt();
         if (auswertung ==1){
            	txt_key ->setEchoMode(QLineEdit::Normal);
-                chk_password->setChecked(Qt::Checked);
+                chk_password->setChecked(true);
         } 
    	else
 		txt_key ->setEchoMode(QLineEdit::Password);
         auswertung = setting.value("save").toInt();
         if (auswertung ==1)
-           chk_datesave->setChecked(Qt::Checked);      
+           chk_datesave->setChecked(true);      
         setting.endGroup();
    }
     while (widget_net[i] != ""){
@@ -89,7 +93,7 @@ state = chk_password->checkState();
 		txt_key ->setEchoMode(QLineEdit::Normal);
 }
 
-int NetEin:: list_net_ssh(QString flag)
+int NetEin:: list_net_ssh()
 {
 QString befehl;
 QString attribute;
@@ -102,14 +106,19 @@ QString adresse_eigen_ = "";
 int k = 0;
 int i = 0;
         // Routeradresse ermitteln
-        befehl = "route -n 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
-        system (befehl.toLatin1().data());
         QFile file(userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt");
         QTextStream ds1(&file);
-        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     	adresse = ds1.readLine();
-             	adresse = ds1.readLine();
-             	adresse = ds1.readLine();
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+           {
+           befehl = "route -n 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
+        if(system (befehl.toLatin1().data()))
+            befehl = ""; 
+        while (adresse == ""){
+            adresse = ds1.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+       	   adresse = ds1.readLine();
+           adresse = ds1.readLine();
             if (adresse != ""){  //verhindert Absturz wenn weder WLan noch Kabelnetzverbindung vorhanden ist
 		do{
     			k=adresse.indexOf("  ");
@@ -120,7 +129,7 @@ int i = 0;
 	     adresse_ = adresse.split(" ");
              adresse_router = adresse_[1];
            }
-	}
+        }
         file.close();
         hostname_ = hostname();
         adresse_eigen = IP("localhost");
@@ -145,12 +154,19 @@ int i = 0;
        }
         //Zahl zwischen 3. und 4. Punkt ermitteln
         //route -n ermittelt die Routeradresse
-        attribute = "-sP " + adresse_eigen + ".0/24 1>" +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 18 " + attribute;
-        system (befehl.toLatin1().data()); 
-       	QTextStream ds(&file);
-        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     adresse = ds.readLine();
+        QTextStream ds(&file);
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+           {
+           attribute = "-sP " + adresse_eigen + ".0/24 1>" +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
+           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 18 " + attribute;
+           if(system (befehl.toLatin1().data()))
+              befehl = "";
+           {
+            while (adresse == "")
+            adresse = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+ 	     adresse = ds.readLine();
   	     //Ermitteln widget_net Belegung
              i = 0;
              while (widget_net[i] != ""){
@@ -169,7 +185,8 @@ int i = 0;
                      		i++;
                		 }
 			}}
-	}}
+	}
+        }
 	file.close();
    return 0;
 }
@@ -177,7 +194,6 @@ int i = 0;
 int NetEin:: list_net(QString flag)
 {
 int pos = 0;
-int pos1 = 0;
 int i = 0;
 int j;
 QStringList adresse_;
@@ -196,24 +212,27 @@ QString hostname_;
         adresse_eigen = adresse_[0];
  //smbtree: zuverlässige und schnelle Linux-Rechner Suche. Windows-Rechner werden aber nicht erkannt
 // -N verhindert die sudo-Abfrage
-        befehl = "smbtree -N 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
-	system (befehl.toLatin1().data()); 
         QFile file(userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt");
     	QTextStream ds(&file);
         QString text = ds.readLine();
-        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     text = ds.readLine();
-   	     while (!ds.atEnd()) {
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+           {
+           befehl = "smbtree -N 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
+	   if (system (befehl.toLatin1().data()))
+              befehl = "";
+           while (text == ""){
+            text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+	     while (!ds.atEnd()) {
              	text = ds.readLine();
                // text = text.toLower(); 
                 pos = text.indexOf("IPC$ ");
                 if (pos > -1){
-                pos1 = text.indexOf(hostname_);
                 text = text.left(pos-1);
                 text = text.trimmed();
                 j = text.size();
-		        text = text.right(j-2);
-               // if (pos1 == -1) {
+		     text = text.right(j-2);
                      text = text.toLower();
                      text = IP(text); // IP ermitteln
                      adresse_ = text.split(" ");
@@ -223,13 +242,14 @@ QString hostname_;
                       i++;}
                    if (i > 99)
                       break;
-              //  }
-             }} 
-        } 
+             }
+           } 
+        }
 	file.close();
 //Auswertung findsmb-qt Windows-Rechner werden erkannt
         befehl = "/usr/sbin/findsmb-qt 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/findsmb-qt.txt";
-	system (befehl.toLatin1().data()); 
+	if (system (befehl.toLatin1().data()))
+            befehl = "";
         QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/findsmb-qt.txt");
     	QTextStream ds1(&file1);
         QString adresse = ds1.readLine();
@@ -243,7 +263,11 @@ QString hostname_;
            adresse_eigen = IP(hostname_);
         adresse_ = adresse_eigen.split(" ");
         adresse_eigen = adresse_[0];
-        if (file1.open(QIODevice::ReadWrite | QIODevice::Text)) {
+        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
+        while (adresse == ""){
+            adresse = ds1.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
             for (k = 0; k < 5; k++){
                	adresse = ds1.readLine();
              }
@@ -276,15 +300,16 @@ QString hostname_;
                 }
                }
              } 
-        }
 	file1.close();
         // Dateien entfernen 
   	if (file1.exists()){
      		attribute = "~/.config/qt-fsarchiver/findsmb-qt.txt";
-		system (befehl.toLatin1().data());
                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
+		if(system (befehl.toLatin1().data()))
+                   befehl = "";
+               
        } 
-        list_net_ssh(" ");
+        list_net_ssh();
         //Ermitteln widget_net Belegung
         if (widget_net[0] == "" && flag == "1"){
    		QMessageBox::about(this,tr("Note","Hinweis"),
@@ -319,11 +344,9 @@ QString hostname_;
         return 2;
 }
 
-int NetEin:: setting_save()
+int NetEin:: setting_save(QString user_net_ein, QString key)
 {
-   QString key;  
    QString befehl;
-   QString text;
    QString filename;
    QFile f(filename);
    QString attribute;
@@ -331,8 +354,6 @@ int NetEin:: setting_save()
    state = chk_datesave->checkState();
    QSettings setting("qt-fsarchiver", "qt-fsarchiver");
    setting.beginGroup(comNet_name);
-   user_net_ein = txt_user->text();
-   key = txt_key->text();
    dummykey = key;
    //Neue oder geänderte Daten in setting eingeben
     if (state == Qt::Checked && comNet != "")   
@@ -347,14 +368,15 @@ int NetEin:: setting_save()
 	if (f.exists()){
      		attribute = filename;
                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
-		system (befehl.toLatin1().data());
-
+		if(system (befehl.toLatin1().data()))
+                  befehl = "";
        }     
        filename = "~/.config/qt-fsarchiver/smbtree.txt";
        if (f.exists()){
      		attribute = filename;
                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
-		system (befehl.toLatin1().data());
+		if(system (befehl.toLatin1().data()))
+                   befehl = "";
        } 
    return 0;
 } 
@@ -364,15 +386,24 @@ QString NetEin::hostname()
 {
 QString befehl;
 QString text;
-	befehl = "hostname > " +  userpath_net_ein + "/.config/qt-fsarchiver/hostname.txt";
-	system (befehl.toLatin1().data()); 
         QFile file(userpath_net_ein + "/.config/qt-fsarchiver/hostname.txt");
     	QTextStream ds(&file);
-        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) 
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+           {
+           befehl = "hostname > " +  userpath_net_ein + "/.config/qt-fsarchiver/hostname.txt";
+	if(system (befehl.toLatin1().data()))
+           befehl = "";
+        while (text == ""){
             text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+           }
+        file.close();
         befehl = "rm " + userpath_net_ein + "/.config/qt-fsarchiver/hostname.txt";
-        system (befehl.toLatin1().data());
+        if (system (befehl.toLatin1().data()))
+             befehl = "";
         return text;
+return "";
 }
         
 QString NetEin:: IP(QString adresse)
@@ -382,26 +413,31 @@ int pos;
 QFile file(userpath_net_ein + "/.config/qt-fsarchiver/ip.txt");
 QTextStream ds(&file);
 QString text;
-	befehl = "nmblookup -R " + adresse + " 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/ip.txt 2>/dev/null";
-	system (befehl.toLatin1().data()); 
         // IP-Adresse auslesen
         int i = 0;
         // Anzahl Zeilen der Datei /.config/qt-fsarchiver/ip.txt ermitteln
         // Ausgabe nmblookup manchmal mit einer aber auch mit 2 Zeilen
-        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
+        if (file.open(QIODevice::ReadWrite | QIODevice::Text)) 
+           {
+            befehl = "nmblookup -R " + adresse + " 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/ip.txt 2>/dev/null";
+	   if (system (befehl.toLatin1().data())) 
+              befehl = "";
      	     do {
                  i = i + 1;
                 text = ds.readLine();
-	        } while (!ds.atEnd());
+	         } 
+             while (!ds.atEnd());
               }
              file.close();
         if (i  == 2) // Anzahl 2 Zeilen, nmblookup -T adresse arbeitet korrekt
 	  {
-          if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     text = ds.readLine();
-	     text = ds.readLine();   
-              }
-             file.close();
+        file.open(QIODevice::ReadOnly | QIODevice::Text); 
+        while (text == ""){
+            text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+            text = ds.readLine();   
+            file.close();
           }
           pos = text.indexOf("<");
           text = text.left(pos);
@@ -435,7 +471,10 @@ QStringList comNet_;
    key = decrypt(key_);
    dummykey = key;
    txt_user ->setText(user_net_ein);
-   txt_key ->setText(key);
+   if(user_net_ein != "")
+      txt_key ->setText(key);
+   if(user_net_ein == "")
+      txt_key ->setText("");
 }
 
 QString NetEin::Namen_holen()
@@ -456,6 +495,7 @@ QString NetEin::user_holen()
 int NetEin:: end()
 { 
    close();
+return 0;
 }
 
 int NetEin:: go()
@@ -496,8 +536,13 @@ setting.beginGroup(comNet_name);
        setting.setValue("Name",user_net_ein);
        setting.setValue("key",crypt(key));
       }
+     else
+       {
+       setting.setValue("Name","");
+       setting.setValue("key",0);
+      }
      setting.endGroup();
-     int i = setting_save();     
+     int i = setting_save(user_net_ein, key);     
      if (dialog_auswertung == 6 && i == 0)
      {
 	save_net();
@@ -529,11 +574,22 @@ FILE *lesen, *schreiben;
 char dateiname_eingabe[100], dateiname_ausgabe[100];
 char *homepath_;
 char *suffix;
+char *suffix1;
 char zeichen;
 int schluessel=5;
 int j;
 int i;
 QString text;
+QString convert;
+QByteArray bytes;
+convert = "/.config/qt-fsarchiver/crypt.txt";
+bytes  = convert.toLocal8Bit();
+suffix = new char[bytes.size() + 1];
+strcpy(suffix, bytes.data());
+convert = "/.config/qt-fsarchiver/crypt1.txt";
+bytes  = convert.toLocal8Bit();
+suffix1 = new char[bytes.size() + 1];
+strcpy(suffix1, bytes.data());
 QFile file(userpath_net_ein + "/.config/qt-fsarchiver/crypt.txt");
 QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/crypt1.txt");
 QTextStream ds(&file1);
@@ -545,13 +601,11 @@ QTextStream stream(&file);
           file.close(); 
        }
 homepath_ =  userpath_net_ein.toLatin1().data();
-suffix = "/.config/qt-fsarchiver/crypt.txt";
 strcpy (dateiname_eingabe, homepath_);
 strcat (dateiname_eingabe, suffix);
 lesen=fopen(dateiname_eingabe,"r");
-suffix = "/.config/qt-fsarchiver/crypt1.txt";
 strcpy (dateiname_ausgabe, homepath_);
-strcat (dateiname_ausgabe, suffix);
+strcat (dateiname_ausgabe, suffix1);
 schreiben=fopen(dateiname_ausgabe,"w");
 for (i=0; i < j + 1; i++)
 	{
@@ -591,10 +645,12 @@ for (i=0; i < j + 1; i++)
 	fclose(lesen);
 	fclose(schreiben);
 	file.remove();
-        if (file1.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     text = ds.readLine();
-             file1.close();
-        }
+        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
+        while (text == ""){
+            text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+            file1.close();
         return text;
 }
 
@@ -604,10 +660,21 @@ FILE *lesen, *schreiben;
 char dateiname_eingabe[100], dateiname_ausgabe[100];
 char *homepath_;
 char *suffix;
+char *suffix1;
 char zeichen;
 int schluessel= -5;
 int j;
 int i;
+QString convert;
+QByteArray bytes;
+convert = "/.config/qt-fsarchiver/crypt1.txt";
+bytes  = convert.toLocal8Bit();
+suffix = new char[bytes.size() + 1];
+strcpy(suffix, bytes.data());
+convert = "/.config/qt-fsarchiver/crypt2.txt";
+bytes  = convert.toLocal8Bit();
+suffix1 = new char[bytes.size() + 1];
+strcpy(suffix1, bytes.data());
 QFile file(userpath_net_ein + "/.config/qt-fsarchiver/crypt1.txt");
 QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/crypt2.txt");
 QTextStream ds(&file1);
@@ -622,17 +689,15 @@ j = file.size();
 if (j == 0) // Datei noch nicht vorhanden
     return "";
 homepath_ =  userpath_net_ein.toLatin1().data();
-suffix = "/.config/qt-fsarchiver/crypt1.txt";
 strcpy (dateiname_eingabe, homepath_);
 strcat (dateiname_eingabe, suffix);
 lesen=fopen(dateiname_eingabe,"r");
-suffix = "/.config/qt-fsarchiver/crypt2.txt";
 strcpy (dateiname_ausgabe, homepath_);
-strcat (dateiname_ausgabe, suffix);
+strcat (dateiname_ausgabe, suffix1);
 schreiben=fopen(dateiname_ausgabe,"w");
-
 for (i=0; i < j; i++)
 	{
+
 		zeichen=fgetc(lesen);
 		//Zahlen
 		if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)<58)&&((zeichen+schluessel)>47))
@@ -668,10 +733,12 @@ for (i=0; i < j; i++)
 	}
 	fclose(lesen);
 	fclose(schreiben);
-        if (file1.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     text = ds.readLine();
-             file1.close();
-        }
+        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
+        while (text == ""){
+            text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
+        file1.close();
 	file1.remove();
         return text;
 }
@@ -686,6 +753,7 @@ int NetEin::questionMessage(QString frage)
     		return 1;
 	else if (msg.clickedButton() == noButton)
     		return 2;
+return 0;
 }
 
 
