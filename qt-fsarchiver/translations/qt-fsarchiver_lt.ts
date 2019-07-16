@@ -3144,10 +3144,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-10, May 10, 2019</source>
+version 0.8.5-11, June 20, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Backup un atjaunot starpsienas, direktoriju un MBR.
-versija 0.8.5-10, 10.Maijs 2019</translation>
+versija 0.8.5-11, 20.Jūnijs 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

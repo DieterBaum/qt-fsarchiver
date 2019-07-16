@@ -30,6 +30,7 @@ class FileDialog: public QDialog, private Ui::FileDialog {
     void folder_einlesen();
     void file_save();
     void file_read();
+    void beenden();
     
   private:
 

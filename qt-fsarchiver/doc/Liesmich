@@ -20,7 +20,7 @@ Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rp
 Installation des Programms aus den Quelldateien:
 Für die Installation von den Programmen qt-fsarchiver und qt-fsarchiver-terminal müssen die für fsarchiver notwendigen Abhängigkeiten und die qt5-Entwicklungsumgebung installiert werden.
 Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt11-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt5-default qtbase5-dev qttools5-dev-tools btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt5-default qtbase5-dev qttools5-dev-tools btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo
 
 Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:
 username ALL=(ALL) ALL 
@@ -33,7 +33,7 @@ In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl in
 Wenn Sie ssh (secureshell) für den Zugriff auf weitere Rechner im Netzwerk nutzen wollen, müssen Sie noch sshpass individuell installieren.
 
 In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs 
-Bei einem 64-bit System müssen Sie zusätzlich lrelease installieren: dnf install qt5-linguist. Bei Fedora30 muss noch make nachinstalliert werden.
+Bei einem 64-bit System müssen Sie zusätzlich lrelease installieren: dnf install qt5-linguist. Bei Fedora 30 muss noch make nachinstalliert werden.
 32-bit Systeme werden nicht mehr unterstützt.
 
 In dem Terminal wechseln Sie in den Ordner qt-fsarchiver, der bei der Entpackung des Quellcodes installiert wurde.

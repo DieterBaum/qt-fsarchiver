@@ -615,8 +615,14 @@ QString zeichen = "'";
                 	{
                              if (liveFlag == 0)
                                {
-                               befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_net_;
-                               err = system (befehl.toLatin1().data());  
+                               if(partition_net_.indexOf("dm-") > -1)   //Live-DVD mit LVM und Raid
+                                    befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /media/" + partition_net_;
+                               else
+                                    befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_net_;
+                               err = system (befehl.toLatin1().data());
+                               if(part[listwidgetrow][7] != "")
+                                    befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + part[listwidgetrow][7]; 
+                               err = err + system (befehl.toLatin1().data());   
                                }
                            if (err != 0 && liveFlag == 0)
                                 {
@@ -716,7 +722,7 @@ QString zeichen = "'";
      	     			  FileDialog *dlg = new FileDialog;
      	     			 // dlg->show(); nicht modal
      	     			 int wert = dlg->exec();
-             			 if (wert == 0 && dialog_auswertung == 2)
+             			 if (wert == 0 && dialog_auswertung == 0)
                 		      {
                 		      QMessageBox::about(this, tr("Note", "Hinweis"),
          			      tr("The backup was aborted by the user\n", "Die Sicherung wurde vom Benutzer abgebrochen\n"));
@@ -891,7 +897,7 @@ QString optionkey;
      	       		FileDialog *dlg = new FileDialog;
      	     		// dlg->show(); nicht modal
              		int wert = dlg->exec();
-             		if (wert == 0 && dialog_auswertung == 3)
+             		if (wert == 0 && dialog_auswertung == 0)
                 	   {
                 	   QMessageBox::about(this, tr("Note", "Hinweis"),
          		   tr("The write back was aborted by the user.\n", "Das Zurückschreiben wurde vom Benutzer abgebrochen\n"));
@@ -932,9 +938,12 @@ qDebug() << "row_net" << row_net << part_art_net;
 				return 0; 
                         
                 	}
-                   if (part_art_net != "system"|| part_art_net != "home")
+                   if (part_art_net != "system" && part_art_net != "home")
                 	{
-                       attribute = "/dev/" + partition_net_  + " 2>/dev/null";
+                       if(partition_net_.indexOf("/dm-") > -1)
+                             attribute = "/media/" + partition_net_  + " 2>/dev/null";  //LVM, Raid
+                       else
+                             attribute = "/dev/" + partition_net_  + " 2>/dev/null";    //nicht LVM, Raid
                        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
                        err = system (befehl.toLatin1().data()); 
                        if (err != 0)

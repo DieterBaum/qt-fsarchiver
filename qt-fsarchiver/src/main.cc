@@ -70,8 +70,8 @@ int main(int argc, char **argv)
    language[18] = "hu_HU";
    language[19] = "hy_HY";
    language[20] = "id_ID";
-   language[21] = "lt_LT";
-   language[22] = "lv_LV";
+   language[21] = "lv_LT";
+   language[22] = "lt_LV";
    language[23] = "ko_KO";
    language[24] = "no_NO";
    language[25] = "pl_PL";

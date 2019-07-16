@@ -32,7 +32,7 @@ FileDialog::FileDialog()
 {
   setupUi(this);
   connect( cmd_save, SIGNAL(clicked()), this, SLOT(folder_einlesen()));
-  connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(reject()));
+  connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(beenden()));
   textEdit->setPlainText(wort);
  
  if (dialog_auswertung ==3)
@@ -52,6 +52,12 @@ void FileDialog::folder_einlesen() {
         dialog_auswertung = 1;
   	close();
 }
+
+void FileDialog::beenden() {
+     dialog_auswertung = 0;
+     close();
+}
+
 
 void FileDialog::file_save()
 {

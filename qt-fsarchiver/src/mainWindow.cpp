@@ -591,7 +591,7 @@ int MWindow::savePartition()
        	 beschreibungstext(DateiName + "-" + _Datum + ".fsa", zip, row);
          if (!is_mounted(partition_.toLatin1().data()))
          {
-            part_art = mtab_einlesen(row_1);
+                   part_art = mtab_einlesen(row_1);
                    //Überprüfung on LVM vorhanden und ob gemounted
                    if(part[row][7] == "/" or part[row][7] == "/home")
                       liveFlag = 1;
@@ -617,8 +617,15 @@ int MWindow::savePartition()
                 	{
                            if (liveFlag == 0)
                             {
-                             befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_; 
+                             if(partition_.indexOf("dm-") > -1)   //Live-DVD mit LVM und Raid
+                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /media/" + partition_; 
+                             else                                 //Live-DVD ohne LVM und Raid
+                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_; 
                              err = system (befehl.toLatin1().data());
+                                                                  // Sichern von LVM und Raid, keine Live-DVD
+                             if(part[row_1][7] != "")
+                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + part[row_1][7]; 
+                             err = err + system (befehl.toLatin1().data());
                             } 
                            if (err != 0 && liveFlag == 0)
                                 {
@@ -747,8 +754,8 @@ int MWindow::savePartition()
              			  FileDialog Filedialog;
      	     			  FileDialog *dlg = new FileDialog;
      	     			 // dlg->show(); nicht modal
-             			  int wert = dlg->exec();
-             			 if (wert == 0 && dialog_auswertung == 2)
+             			 int wert = dlg->exec();
+             			 if (wert == 0 && dialog_auswertung == 0)
                 		  {
                 		  QMessageBox::about(this,tr("Note", "Hinweis"),
          			  tr("The backup was aborted by the user\n", "Die Sicherung wurde vom Benutzer abgebrochen\n"));
@@ -905,7 +912,7 @@ int MWindow::restorePartition()
 Qt::CheckState state1;
 QFile file(folder);
 QString DateiName("") ;
-int err;
+int err = 0;
 QString keyText = "";
 QString dev_part;
 QString text;
@@ -913,7 +920,6 @@ QString befehl;
 int cmp = 0;
 QString attribute;
   indicator_reset();
- // if(rdBt_restoreFsArchiv->isChecked())
   std::string dateiname;
   keyText = lineKey->text();
   state1 = chk_key->checkState();
@@ -1037,7 +1043,7 @@ QString attribute;
      	       		FileDialog *dlg = new FileDialog;
      	     		// dlg->show(); nicht modal
              		int wert = dlg->exec();
-             		if (wert == 0 && dialog_auswertung == 3)
+             		if (wert == 0 && dialog_auswertung == 0)
                 	   {
                 	   QMessageBox::about(this,tr("Note","Hinweis"),
          		   tr("The restore was aborted by the user", "Das Zurückschreiben wurde vom Benutzer abgebrochen\n"));
@@ -1074,11 +1080,15 @@ QString attribute;
 				return 0; 
                         
                 	}
-                   if (part_art != "system"|| part_art != "home")
+                   if (part_art != "system" && part_art != "home")
                 	{
-                          attribute = "/dev/" + partition_  + " 2>/dev/null";
+                          if(partition_.indexOf("/dm-") > -1)
+                              attribute = "/media/" + partition_  + " 2>/dev/null"; //LVM, Raid
+                          else
+                              attribute = "/dev/" + partition_  + " 2>/dev/null";   // nicht LVM, Raid
                           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
-                          err = system (befehl.toLatin1().data()); 
+                          err = system (befehl.toLatin1().data());
+                          QThread::msleep(200 * sleepfaktor);  
                           if (err != 0)
                                 {
 				QMessageBox::about(this,tr("Note", "Hinweis"),
@@ -1224,8 +1234,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-10, May 10, 2019",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-10, 10.Mai 2019"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-11, June 20, 2019",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-11, 20.Juni 2019"));
       }
 
 int MWindow::is_running(){
