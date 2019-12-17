@@ -70,37 +70,37 @@ int main(int argc, char **argv)
    language[18] = "hu_HU";
    language[19] = "hy_HY";
    language[20] = "id_ID";
-   language[21] = "lv_LT";
-   language[22] = "lt_LV";
+   language[21] = "lv_LV";
+   language[22] = "lt_LT";
    language[23] = "ko_KO";
    language[24] = "no_NO";
    language[25] = "pl_PL";
    language[26] = "pt_PT";
    language[27] = "fa_FA";
-   language[28] = "ro_RO";
-   language[29] = "sl_SL";
-   language[30] = "sr_SR";
-   language[31] = "sv_SV";
-   language[32] = "th_TH";
-   language[33] = "tr_TR";
-   language[34] = "uk_UK";
-   language[35] = "ur_UR";
-   language[36] = "vi_VI";
+   language[28] = "fa_FA";
+   language[29] = "ro_RO";
+   language[30] = "sl_SL";
+   language[31] = "sr_SR";
+   language[32] = "sv_SV";
+   language[33] = "th_TH";
+   language[34] = "tr_TR";
+   language[35] = "uk_UK";
+   language[36] = "ur_UR";
+   language[37] = "vi_VI";
            
    QSettings setting("qt-fsarchiver", "qt-fsarchiver");
    setting.beginGroup("Basiseinstellungen");
    int auswertung = setting.value("Sprache").toInt();
    if (auswertung > 0) 
-   	language_ = "qt-fsarchiver_" + language[auswertung -1];
+      language_ = "qt-fsarchiver_" + language[auswertung -1];
    setting.endGroup();
   // internationale Sprachauswahl
     QString sLocPath = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
-
-     QTranslator *translator = new QTranslator(0);
-     if (auswertung == 0)
-         translator->load(QString("qt5-fsarchiver_"+QLocale::system().name()), sLocPath);
-     if (auswertung != 0) 
-         translator->load(language_, sLocPath);
+    QTranslator *translator = new QTranslator(0);
+    if (auswertung == 0)
+        translator->load(QString("qt-fsarchiver_"+ QLocale::system().name()), sLocPath);
+    if (auswertung != 0) 
+       translator->load(language_, sLocPath);
      app.installTranslator(translator);
      QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8")); 
      MWindow window;

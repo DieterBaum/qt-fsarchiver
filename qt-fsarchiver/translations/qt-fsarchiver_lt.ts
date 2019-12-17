@@ -8,7 +8,7 @@
         <location filename="../src/clone.cpp" line="708"/>
         <source>Clone Harddrive</source>
         <comment>Festplatte klonen</comment>
-        <translation>Klonas kietajame diske</translation>
+        <translation>Klonuoti standųjį diską</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="334"/>
@@ -16,7 +16,7 @@
         <location filename="../src/clone.cpp" line="542"/>
         <source>already saved</source>
         <comment>bereits gesichert</comment>
-        <translation>i¹saugojê</translation>
+        <translation>jau įrašyta</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="338"/>
@@ -56,14 +56,14 @@
         <source>You must select a hard drive.</source>
         <comment>Sie müssen eine Festplatte auswählen.
 </comment>
-        <translation>Pasirinkite kietajame diske.</translation>
+        <translation>Turite pasirinkti standųjį diską.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="506"/>
         <source>The selected hard drive is too small.</source>
         <comment>Die gewählte Festplatte ist zu klein.
 </comment>
-        <translation>Pasirinktas Kietasis diskas yra per mažas.</translation>
+        <translation>Pasirinktas standudis diskas yra per mažas.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="349"/>
@@ -71,22 +71,22 @@
         <location filename="../src/clone.cpp" line="512"/>
         <location filename="../src/clone.cpp" line="570"/>
         <location filename="../src/clone.cpp" line="656"/>
-<source>There is a root or home partition on the hard disk. You must use a live DVD.</source>
+        <source>There is a root or home partition on the hard disk. You must use a live DVD.</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.
 </comment>
-        <translation>Kietajame diske yra šaknis arba vidaus pertvara. Turite poreikį live CD.</translation>
+        <translation>Standžiajame diske aptiktas šakninis (/) arba namų (/home) skaidinys. Patariame naudoti demonstracinę laikmeną (LiveCD/LiveDVD/LiveUSB).</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="518"/>
         <source> Do you want really clone the hard drive? All dates on  </source>
         <comment> Wollen Sie wirklich die Festplatte klonen? Alle Daten auf der Festplatte </comment>
-        <translation> Norite tikrai mesti į kietąjį diską? Visos datos  </translation>
+        <translation> Tikrai norite klonuoti standųjį diską? Visi jame esantys duomenys  </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="518"/>
         <source> are deleted!</source>
         <comment> werden gelöscht!</comment>
-        <translation> išbraukiami!</translation>
+        <translation> ištrinsimi!</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="342"/>
@@ -94,20 +94,20 @@
         <source>You must select a folder.</source>
         <comment>Sie müssen ein Verzeichnis auswählen.
 </comment>
-        <translation>Pasirinkite aplanką.</translation>
+        <translation>Pasirinkite katalogą.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="581"/>
-<source>Do you really want to create an image of the hard disk?</source>
+        <source>Do you really want to create an image of the hard disk?</source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte erstellen? </comment>
-        <translation>Ar norite tikrai pastatytas vaizdas iš kietojo disko?</translation>
+        <translation>Tikrai norite sukurti standžiojo disko atvaizdį?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="389"/>
         <location filename="../src/clone.cpp" line="611"/>
-<source>already written back.</source>
+        <source>already written back.</source>
         <comment>bereits zurückgeschrieben</comment>
-        <translation>jau atkurta</translation>
+        <translation>jau atkurta.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="338"/>
@@ -115,85 +115,85 @@
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partition auswählen.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Turite pasirinkti skaidinį.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="358"/>
-<source>Do you really want to create an image of a partition?  </source>
+        <source>Do you really want to create an image of a partition?  </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition erstellen? </comment>
-        <translation type="unfinished"></translation>
+        <translation>Tikrai norite sukurti skaidinio atvaizdį?  </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="394"/>
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partitiom auswählen.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Turite pasirinkti skaidinį.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="398"/>
         <source>You must select a part.fsa file or an part.fsa.gz file.</source>
         <comment>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Turite pasirinkti „part.fsa“ arba „part.fsa.gz“ rinkmeną.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="416"/>
         <location filename="../src/clone.cpp" line="649"/>
         <source>Partition to restore </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation type="unfinished"></translation>
+        <translation>Atkurtinas skaidinys </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="417"/>
         <location filename="../src/clone.cpp" line="650"/>
-<source> does not match the backed up partition.</source>
+        <source> does not match the backed up partition.</source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation type="unfinished"> does not coincide with the saved  </translation>
+        <translation> neatitinka skaidinio, kuriam buvo sukurta atsarginė kopija.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="417"/>
         <location filename="../src/clone.cpp" line="650"/>
-<source>Do you still want to perform the recovery?</source>
+        <source>Do you still want to perform the recovery?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tikrai norite atkurti?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="439"/>
-<source>Do you really want to write back an image of a partition? </source>
+        <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
-        <translation type="unfinished"></translation>
+        <translation>Tikrai norite atvaizdžio turinį įrašyti į skaidinį? </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="633"/>
         <source>You must select a gz.fsa file or an img.fsa file.</source>
         <comment>Sie müssen eine gz.fsa- oder eine img.fsa-Datei auswählen.
 </comment>
-        <translation>Turite pasirinkti gz.fsa failą arba img.fsa failą.</translation>
+        <translation>Turite pasirinkti „gz.fsa“ arba „img.fsa“ rinkmeną.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="671"/>
-<source>Do you really want to write back an image of the hard disk? </source>
+        <source>Do you really want to write back an image of the hard disk? </source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? </comment>
-        <translation> Norite tikrai atkurti vaizdą iš kietojo disko? </translation>
+        <translation>Tikrai norite atvaizdžio turinį įrašyti į standųjį diską? </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="697"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>taip</translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="698"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>ne</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="726"/>
         <source>Save Harddrive Image</source>
         <comment>Festplatten Abbild erstellen</comment>
-        <translation>Išsaugoti kietajame diske vaizdo</translation>
+        <translation>Įrašyti standžiojo disko atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="714"/>
@@ -201,128 +201,116 @@
         <location filename="../src/clone.cpp" line="750"/>
         <source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> MB</source>
-        <translation type="obsolete">MB</translation>
-    </message>
-    <message>
-        <source> TB</source>
-        <translation type="obsolete">TB</translation>
-    </message>
-    <message>
-        <source> GB</source>
-        <translation type="obsolete">GB</translation>
+        <translation>Esamas standusis diskas</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="744"/>
-<source>Write hard disk image back</source>
+        <source>Write hard disk image back</source>
         <comment>Festplatten Abbild zurückschreiben</comment>
-        <translation>Atkurti kietajame diske vaizdo</translation>
+        <translation>Atkurti standųjį diską pagal atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="766"/>
         <source>Save Partition Image</source>
         <comment>Image einer Partition erstellen</comment>
-        <translation type="unfinished"></translation>
+        <translation>Įrašyti skaidinio atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="768"/>
         <source>Save Partition Image</source>
         <comment>Partition Abbild erstellen</comment>
-        <translation type="unfinished"></translation>
+        <translation>Įrašyti skaidinio atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="779"/>
-<source>Writing back the image of a partition</source>
+        <source>Writing back the image of a partition</source>
         <comment>Image einer Partition zurückschreiben</comment>
-        <translation type="unfinished"></translation>
+        <translation>Atkurti skaidinį pagal atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="781"/>
-<source>Writing back the image of a partition</source>
+        <source>Writing back the image of a partition</source>
         <comment>Partition Abbild zurückschreiben</comment>
-        <translation type="unfinished"></translation>
+        <translation>Atkurti skaidinį pagal atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="885"/>
-<source>You have selected a directory. You must select a gz.fsa file.
+        <source>You have selected a directory. You must select a gz.fsa file.
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine gz.fsa Datei auswählen
 </comment>
-        <translation>Jūs pasirinkote aplanką. Turite pasirinkti gz.fsa failą.
+        <translation>Jūs pasirinkote katalogą. Tačiau turėtumėte pasirinkti „gz.fsa“ rinkmeną.
 </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1077"/>
-<source>The cloning of the hard disk was successful.</source>
+        <source>The cloning of the hard disk was successful.</source>
         <comment>Das Klonen der Festplatte war erfolgreich.
 </comment>
-        <translation>Kietojo disko klonas buvo sėkmingai.</translation>
+        <translation>Standusis diskas sėkmingai klonuotas.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1079"/>
-<source>The backup of the hard disk image was successful.</source>
+        <source>The backup of the hard disk image was successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Standžiojo disko atsarginė kopija sėkmingai sukurta.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1081"/>
-<source>The backup of the image of the partition was successful.</source>
+        <source>The backup of the image of the partition was successful.</source>
         <comment>Die Sichern des Abbildes der Partition war erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Skaidinio atsarginė kopija sėkmingai sukurta.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1093"/>
-<source>The backup of the hard disk image was not successful.</source>
+        <source>The backup of the hard disk image was not successful.</source>
         <comment>Die Sichern des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Kuriant standžiojo disko atsarginę kopiją kilo nesklandumų.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1100"/>
-<source>Saving the image of the partition was not successful.</source>
+        <source>Saving the image of the partition was not successful.</source>
         <comment>Die Sichern des Abbildes der Partition war nicht erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Kuriant skaidinio atsarginę kopiją kilo nesklandumų.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1144"/>
-<source>The hard disk image recovery was successful.</source>
+        <source>The hard disk image recovery was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Standusis diskas sėkmingai atkurtas pagal atvaizdį.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1146"/>
-<source>The recovery of the partition image was successful.</source>
+        <source>The recovery of the partition image was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Skaidinys sėkmingai atkurtas pagal atvaizdį.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1151"/>
-<source>Hard disk image recovery was not successful.</source>
+        <source>Hard disk image recovery was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Atkuriant standžiojo disko turinį kilo nesklandumų.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1157"/>
-<source>The recovery of the partition image was not successful.</source>
+        <source>The recovery of the partition image was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Atkuriant skaidinio turinį kilo nesklandumų.</translation>
     </message>
-<message>
+    <message>
         <location filename="../src/clone.cpp" line="262"/>
         <source>There is a root or home partition. Do you want to continue?</source>
         <comment>Es ist eine root- oder home Partition vorhanden. Wollen Sie fortfahren?
 </comment>
-        <translation>There is a root or home partition. Do you want to continue?</translation>
+        <translation>Aptiktas šaktinis (/) arba namų (/home) skaidinys. Tęsti?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="419"/>
@@ -330,273 +318,89 @@
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren.
 </comment>
-        <translation>There is a root or home partition on the hard disk. Do you want to continue?</translation>
-    </message>
-    <message>
-        <source>The backup of the image was successfully.</source>
-        <comment>Die Sichern des Abbildes war erfolgreich.
-</comment>
-        <translation type="obsolete">Atsarginių kopijų vaizdas buvo sėkmingai.</translation>
+        <translation>Standžiajame diske aptiktas šaktinis (/) arba namų (/home) skaidinys. Tęsti?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1086"/>
-<source>The cloning of the hard disk was not successful.</source>
+        <source>The cloning of the hard disk was not successful.</source>
         <comment>Das Klonen der Festplatte war nicht erfolgreich.
 </comment>
-        <translation>Kietojo disko klonas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>The backup of the image was not successfully.</source>
-        <comment>Die Sichern des Abbildes war nicht erfolgreich.
-</comment>
-        <translation type="obsolete">Atsarginių kopijų vaizdas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>The restore from the image was successfully.</source>
-        <comment>Die Wiederherstellung des Abbildes war erfolgreich.
-</comment>
-        <translation type="obsolete">Atkuriant iš vaizdas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>The restore from the image was not successfully.</source>
-        <comment>Die Wiederherstellung des Abbildes war nicht erfolgreich.
-</comment>
-        <translation type="obsolete">Atkuriant iš vaizdas buvo sėkmingai.</translation>
+        <translation>Klonuojant standųjį diską kilo nesklandumų.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1226"/>
         <source>Do you want really break clone, save or restore an image from the partition?</source>
         <comment>Wollen Sie wirklich das Klonen der Festplatte, die Erstellung oder die Wiederherstellung eines Images der Festplatte beenden?</comment>
-        <translation>Ar norite tikrai pertraukos klonas, išsaugoti ar atkurti vaizdą iš skyrių?</translation>
-    </message>
-</context>
-<context>
-    <name>DialogClone_net</name>
-    <message>
-        <source>Save Harddrive Image</source>
-        <comment>Festplatten Abbild erstellen</comment>
-        <translation type="obsolete">Išsaugoti kietajame diske vaizdo</translation>
-    </message>
-    <message>
-        <source>Note</source>
-        <comment>Hinweis</comment>
-        <translation type="obsolete">Pastaba</translation>
-    </message>
-    <message>
-        <source>You must select a hard drive.</source>
-        <comment>Sie müssen eine Festplatte auswählen.
-</comment>
-        <translation type="obsolete">Pasirinkite kietajame diske.</translation>
-    </message>
-    <message>
-        <source>You must select a folder.</source>
-        <comment>Sie müssen ein Verzeichnis auswählen.
-</comment>
-        <translation type="obsolete">Pasirinkite aplanką.</translation>
-    </message>
-    <message>
-        <source>Please, select the filename of the backup.
-</source>
-        <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
-</comment>
-        <translation type="obsolete">Pasirinkite atsarginės kopijos failo vardas.
-</translation>
-    </message>
-    <message>
-<source>There is a root or home partition on the hard disk. You must use a live DVD.</source>
-        <comment>Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.
-</comment>
-        <translation type="obsolete">Kietajame diske yra šaknis arba vidaus pertvara. Turite poreikį live CD.</translation>
-    </message>
-    <message>
-<source>Do you really want to create an image of the hard disk?</source>
-        <comment> Wollen Sie wirklich ein Abbild der Festplatte erstellen? </comment>
-        <translation type="obsolete">Ar norite tikrai pastatytas vaizdas iš kietojo disko?</translation>
-    </message>
-    <message>
-        <source>You must select a fsa.gz file.</source>
-        <comment>Sie müssen eine fsa.gz Datei auswählen.
-</comment>
-        <translation type="obsolete">Turite pasirinkti fsa.gz failą.</translation>
-    </message>
-    <message>
-<source>Do you really want to write back an image of the hard disk? </source>
-        <comment> Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? </comment>
-        <translation type="obsolete"> Norite tikrai atkurti vaizdą iš kietojo disko? </translation>
-    </message>
-    <message>
-        <source>Can not find a shared directory. The program is terminated.
-</source>
-        <comment>Es wurde kein freigegebenes Verzeichnis gefunden. Das Programm kann nicht fortgesetzt werden.
-</comment>
-        <translation type="obsolete">Negaliu rasti bendrai naudojamas katalogas. Programa nutraukiama.
-</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <comment>Ja</comment>
-        <translation type="obsolete">taip</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <comment>Nein</comment>
-        <translation type="obsolete">ne</translation>
-    </message>
-    <message>
-<source>Write hard disk image back</source>
-        <comment>Festplatten Abbild zurückschreiben</comment>
-        <translation type="obsolete">Atkurti kietajame diske vaizdo</translation>
-    </message>
-    <message>
-        <source>You have selected a folder. You must select a fsa.gz file.
-</source>
-        <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine fsa.gz Datei auswählen
-</comment>
-        <translation type="obsolete">Jūs pasirinkote aplanką. Turite pasirinkti fsa.gz failą.
-</translation>
-    </message>
-    <message>
-        <source>The backup of the image was successfully.</source>
-        <comment>Die Sichern des Abbildes war erfolgreich.
-</comment>
-        <translation type="obsolete">Atsarginių kopijų vaizdas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>The backup of the image was not successfully.</source>
-        <comment>Die Sichern des Abbildes war nicht erfolgreich.
-</comment>
-        <translation type="obsolete">Atsarginių kopijų vaizdas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>The restore from the image was successfully.</source>
-        <comment>Die Wiederherstellung des Abbildes war erfolgreich.
-</comment>
-        <translation type="obsolete">Atkuriant iš vaizdas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>The restore from the image was not successfully.</source>
-        <comment>Die Wiederherstellung des Abbildes war nicht erfolgreich.
-</comment>
-        <translation type="obsolete">Atkuriant iš vaizdas buvo sėkmingai.</translation>
-    </message>
-    <message>
-        <source>Do you want really break save or restore an image from the partition?</source>
-        <comment>Wollen Sie wirklich die Erstellung oder das Zurückschreiben eines Images der Festplatte beenden?</comment>
-        <translation type="obsolete">Ar norite tikrai pertraukos išsaugoti arba atkurti vaizdą iš skyrių?</translation>
-    </message>
-    <message>
-        <source>The network computer </source>
-        <comment>Der Netzwerkrechner </comment>
-        <translation type="obsolete">Tinklo kompiuteris </translation>
-    </message>
-    <message>
-<source> cannot be embedded. The program is aborted.
-</source>
-        <comment> konnte nicht eingebunden werden. Das Programm wird abgebrochen
-</comment>
-        <translation type="obsolete"> gali būti neintegruotas. Programa yra nutrauktas
-</translation>
+        <translation>Tikrai norite nutraukti klonavimą, įrašymą arba atkūrimą pagal atvaizdį?</translation>
     </message>
 </context>
 <context>
     <name>DialogDIR</name>
     <message>
-        <source>gzip fast</source>
-        <translation type="vanished">gzip greitai</translation>
-    </message>
-    <message>
-        <source>gzip standard</source>
-        <translation type="vanished">gzip standartinis</translation>
-    </message>
-    <message>
-        <source>qzip best</source>
-        <translation type="vanished">qzip geriausias</translation>
-    </message>
-    <message>
-        <source>bzip2 fast</source>
-        <translation type="vanished">bzip2 greitai</translation>
-    </message>
-    <message>
-        <source>bzip2 good</source>
-        <translation type="vanished">bzip2 geras</translation>
-    </message>
-    <message>
-        <source>lzma fast</source>
-        <translation type="vanished">lzma greitai</translation>
-    </message>
-    <message>
-        <source>lzma medium</source>
-        <translation type="vanished">lzma vidutinės</translation>
-    </message>
-    <message>
-        <source>lzma best</source>
-        <translation type="vanished">lzma geriausias</translation>
-    </message>
-    <message>
         <location filename="../src/dir.cpp" line="91"/>
         <source>lz4</source>
         <comment>lz4</comment>
-        <translation type="unfinished"></translation>
+        <translation>lz4</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="92"/>
         <source>lzo</source>
         <comment>lzo</comment>
-        <translation type="unfinished">lzo</translation>
+        <translation>lzo</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="93"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
-        <translation type="unfinished">gzip greitai</translation>
+        <translation>gzip, greitasis</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="94"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
-        <translation type="unfinished">gzip standartinis</translation>
+        <translation>gzip, įprastas</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
-        <translation type="unfinished">qzip geriausias</translation>
+        <translation>qzip, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
-        <translation type="unfinished">bzip2 greitai</translation>
+        <translation>bzip2, greitasis</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="97"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
-        <translation type="unfinished">bzip2 geras</translation>
+        <translation>bzip2, geras</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="98"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
-        <translation type="unfinished">lzma greitai</translation>
+        <translation>lzma, greitasis</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="99"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
-        <translation type="unfinished">lzma vidutinės</translation>
+        <translation>lzma, vidutinis</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="100"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
-        <translation type="unfinished">lzma geriausias</translation>
+        <translation>lzma, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="101"/>
         <source>zstd</source>
         <comment>zstd</comment>
-        <translation type="unfinished"></translation>
+        <translation>zstd</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="166"/>
@@ -604,26 +408,25 @@
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel:</comment>
-        <translation>Encrypt
-backup. key:</translation>
+        <translation>Užšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="167"/>
-<source>Backup directory</source>
+        <source>Backup directory</source>
         <comment>Verzeichnis sichern</comment>
-        <translation>Katalogas įrašyti</translation>
+        <translation>Sukurti katalogo atsarginę kopiją</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="168"/>
-<source>Directory to backup</source>
+        <source>Directory to backup</source>
         <comment>zu sicherndes Verzeichnis</comment>
-        <translation>i¹saugotù katalogas</translation>
+        <translation>Katalogas, kurio atsarginę kopiją kurtumėte</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="169"/>
         <source>Location (path) of the backup</source>
         <comment>Ort (Pfad) der Sicherung</comment>
-        <translation>Atsarginės kopijos (kelio) vietą</translation>
+        <translation>Atsarginės kopijos vieta (kelias)</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="180"/>
@@ -631,26 +434,25 @@ backup. key:</translation>
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel:</comment>
-        <translation>Decrypt
-backup. key:</translation>
+        <translation>Atšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="181"/>
-<source>Write directory back</source>
+        <source>Write directory back</source>
         <comment>Verzeichnis zurückschreiben</comment>
-        <translation>Katalogas atkūrimo</translation>
+        <translation>Atkurti katalogą</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="182"/>
-<source>Backup file to write back</source>
+        <source>Backup file to write back</source>
         <comment>zurück zu schreibende Sicherungsdatei</comment>
-        <translation>atgal į rašyti atsarginės kopijos failą</translation>
+        <translation>Rinkmena, iš kurios norite atkurti duomenis</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="183"/>
         <source>Location (path) of the restore</source>
         <comment>Ort (Pfad) der Wiederherstellung</comment>
-        <translation>Vieta (kelias), atkurti</translation>
+        <translation>Vieta (kelias), į kurį norite atkurti duomenis</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="232"/>
@@ -685,28 +487,29 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="233"/>
-<source>No encryption key was specified.
+        <source>No encryption key was specified.
 </source>
         <comment>Es wurde kein Schlüssel für die Verschlüsselung angegeben.
 </comment>
-        <translation>Ten buvo ne nurodyti šifravimo raktas.
+        <translation>Šifravimo raktas nenurodytas.
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="239"/>
-<source>Please select the directory in which the directory or file to be backed up is to be written.
+        <source>Please select the directory in which the directory or file to be backed up is to be written.
 </source>
         <comment>Bitte wählen Sie das Verzeichnis aus, in das das zu sichernde Verzeichnis bzw die zu sichernde Datei geschrieben werden soll.
 </comment>
-        <translation></translation>
+        <translation>Pasirinkite katalogą, kuriame talpintina atsarginė kopija.
+</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="245"/>
-<source>Please select the directory or file to be backed up.
+        <source>Please select the directory or file to be backed up.
 </source>
         <comment>Bitte wählen Sie das zu sichernde Verzeichnis bzw. die zu sichernde Datei aus.
 </comment>
-        <translation>Prašome pasirinkti į katalogą ar failą įrašyti.
+        <translation>Nurodykite katalogą ar rinkmeną, kurios atsarginę kopiją ketinate sukurti.
 </translation>
     </message>
     <message>
@@ -715,7 +518,7 @@ backup. key:</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Pasirinkote failą. Turite pasirinkti katalogą
+        <translation>Pasirinkote rinkmeną, tačiau reikia pasirinkti katalogą
 </translation>
     </message>
     <message>
@@ -725,14 +528,14 @@ backup. key:</translation>
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
 </comment>
-        <translation>Rakto žodžio ilgį turi būti nuo 6 iki 64 simbolių
+        <translation>Rakto ilgis turi būti nuo 6 iki 64 ženklų
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="309"/>
         <source>The partition file </source>
         <comment>Die Partitionsdatei </comment>
-        <translation>Disko failas </translation>
+        <translation>Skaidinio rinkmena </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="310"/>
@@ -740,25 +543,25 @@ backup. key:</translation>
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
 </comment>
-        <translation>jau yra. Atsarginę kopiją neatliekamas
+        <translation>jau yra. Atsarginė kopija nekursima
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="338"/>
-<source>No decryption key was specified.
+        <source>No decryption key was specified.
 </source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>Ten buvo ne labai iššifruoti nurodyta.
+        <translation>Šifravimo raktas nenurodytas.
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="345"/>
-<source>Please select the directory in which the saved directory is to be written back.
+        <source>Please select the directory in which the saved directory is to be written back.
 </source>
         <comment>Bitte wählen Sie das Verzeichnis aus, in das das das gesicherte Verzeichnis zurück geschrieben werden soll.
 </comment>
-        <translation>Pasirinkite katalogą, kuriame bus panaudojama išsaugotą vaizdą.
+        <translation>Pasirinkite katalogą, į kurį norėtumėte atkurti duomenis, esančius atsarginėje kopijoje.
 </translation>
     </message>
     <message>
@@ -767,47 +570,47 @@ backup. key:</translation>
 </source>
         <comment>Bitte wählen Sie die vorhandene Sicherungsdatei aus.
 </comment>
-        <translation>Pasirinkite esamą atsarginės kopijos failą.
+        <translation>Pasirinkite esamą atsarginės kopijos rinkmeną.
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="357"/>
-<source>You have selected a directory. You must select a backup file with the file extension .fsa.
+        <source>You have selected a directory. You must select a backup file with the file extension .fsa.
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Sicherungsdatei mit der Dateiendung .fsa auswählen
 </comment>
-        <translation>Jūs pasirinkote katalogas. Reikia atsarginės kopijos failą su plėtiniu .fsa pasirinkite
+        <translation>Jūs pasirinkote katalogą, tačiau reikia pasirinkti atsarginės kopijos rinkmeną, kurios prievardis būtų .fsa.
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="364"/>
-<source>You have selected an incorrect recovery file.
+        <source>You have selected an incorrect recovery file.
 The file extension must be .fsa.</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht 
 Die Dateiendung muss .fsa sein</comment>
-        <translation>Jūs pasirinkote pasirinktas neteisingas atkūrimo failas.
- Failai turėtų baigtis. FSA būti</translation>
+        <translation>Pasirinkote netinkamą atsarginės kopijos rinkmeną.
+Rinkmenos prievardis turi būti FSA.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="381"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>Skaidinys yra užšifruotas. Prašome įvesti pagrindinių</translation>
+        <translation>Skaidinys yra užšifruotas. Prašome įvesti jo raktą</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="401"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>Įvedėte neteisingą slaptaždį.</translation>
+        <translation>Įvedėte klaidingą slaptažodį.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="448"/>
-<source>You have selected an incorrect fsa_file. </source>
+        <source>You have selected an incorrect fsa_file. </source>
         <comment>Sie haben ein falsche fsa_Datei gewählt. 
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkote netinkamą FSA rinkmeną. </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="508"/>
@@ -815,7 +618,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Sicherung des Verzeichnisses war erfolgreich.
 </comment>
-        <translation>Atsarginių kopijų katalogą buvo sėkmingas.
+        <translation>Katalogo atsarginė kopija sėkmingai sukurta.
 </translation>
     </message>
     <message>
@@ -823,25 +626,25 @@ Die Dateiendung muss .fsa sein</comment>
         <location filename="../src/dir.cpp" line="593"/>
         <source> files, </source>
         <comment> Dateien, </comment>
-        <translation> failus,</translation>
+        <translation> rinkmena(-os,-ų), </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="509"/>
         <source>  directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> katalogai, </translation>
+        <translation>  katalogas(-ai,-ų), </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="509"/>
         <source>  links and </source>
         <comment> Links und </comment>
-        <translation> nuorodos ir </translation>
+        <translation>  nuoroda(-os,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="509"/>
-<source> specials have been backed up.</source>
+        <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation> akcijos buvo atsargines kopijas.</translation>
+        <translation> spec. duomenys sudėti į atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="514"/>
@@ -849,29 +652,29 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Sicherung des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Atsarginių kopijų aplanko nutraukė vartotojas!
+        <translation>Atsarginių kopijų kūrimą nutraukė naudotojas!
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="536"/>
         <source> Files, </source>
         <comment> Dateien, </comment>
-        <translation>Failus, </translation>
+        <translation> rinkmena(-os,-ų), </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="537"/>
         <location filename="../src/dir.cpp" line="620"/>
         <source> directories, and </source>
         <comment> Verzeichnisse und </comment>
-        <translation> katalogai, ir </translation>
+        <translation> katalogas(-ai,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="538"/>
-<source> Links were not saved correctly. The backup of the directories was only partially successful.
+        <source> Links were not saved correctly. The backup of the directories was only partially successful.
 </source>
         <comment> Links wurden nicht korrekt gesichert. Die Sicherung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation> Nuorodos buvo atsarginės kopijos tinkamai. Atsarginių kopijų katalogus pavyko tik iš dalies
+        <translation> nuorodos nebuvo tinkamai įrašytos. Katalogų atsarginių kopijų kūrimas pavyko tik iš dalies.
 </translation>
     </message>
     <message>
@@ -880,25 +683,26 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Wiederherstellung des Verzeichnisses war erfolgreich.
 </comment>
-        <translation></translation>
+        <translation>Katalogas sėkmingai atkurtas.
+</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="593"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> katalogai, </translation>
+        <translation> katalogas(-ai,-ų), </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="593"/>
         <source> links and </source>
         <comment> Links und </comment>
-        <translation> nuorodos ir </translation>
+        <translation> nuoroda(-os,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="593"/>
-<source> special data has been restored.</source>
+        <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> akcijos būtų atstatytas.</translation>
+        <translation> spec. duomenys atkurti.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="597"/>
@@ -906,21 +710,21 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Wiederherstellung des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Atkūrimo aplanko buvo pertraukos iš vartotojo!
+        <translation>Katalogo atkūrimą iš atsarginės kopijos nutraukė naudotojas!
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="619"/>
         <source> files,</source>
         <comment> Dateien, </comment>
-        <translation> failus,</translation>
+        <translation> rinkmena(-os,-ų), </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="621"/>
-<source> links were not restored correctly. Directory recovery was only partially successful.</source>
+        <source> links were not restored correctly. Directory recovery was only partially successful.</source>
         <comment> Links wurden nicht korrekt wiederhergestellt. Die Wiederherstellung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation> nuorodos buvo teisingai nepradėta. Atkurti sąrašai buvo tik iš dalies sėkmingas</translation>
+        <translation> nuoroda(-os,-ų) nebuvo tinkamai atkurtos. Katalogo atkūrimas buvo tik iš dalies sėkmingas.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="624"/>
@@ -928,7 +732,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
 </comment>
-        <translation>Įvedėte neteisingą slaptaždį.
+        <translation>Įvedėte klaidingą slaptažodį.
 </translation>
     </message>
     <message>
@@ -937,7 +741,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Sie haben versucht ein Verzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen.
 </comment>
-        <translation>Jūs bandė atkurti katalogą. Pasirinktas failas gali tik atkurti pertvaros.
+        <translation>Bandote atkurti katalogą, tačiau pasirinkta rinkmena gali atkurti tik skaidinius.
 </translation>
     </message>
     <message>
@@ -945,31 +749,26 @@ Die Dateiendung muss .fsa sein</comment>
         <source>Error in fsarchiver. The directory can not be restored!</source>
         <comment>Fehler in fsarchiver. Das Verzeichnis kann nicht wiederhergestellt werden!!
 </comment>
-        <translation>Klaida fsarchiver. Negali būti atkurtas katalogą!</translation>
+        <translation>Fsarchiver klaida. Nepavyksta atkurti katalogo!</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="638"/>
-<source>Error! The directory was only partially restored.</source>
+        <source>Error! The directory was only partially restored.</source>
         <comment>Fehler! Das Verzeichnis wurde nur teilweise wiederhergestellt. 
 </comment>
-        <translation>Klaida!  Aplanką atkurti buvo tik iš dalies sėkmingas!</translation>
+        <translation>Klaida! Katalogas atkurtas tik dalinai.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="803"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>taip</translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="804"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>ne</translation>
-    </message>
-    <message>
-        <source>Do you want really break the save or restore from the folder?</source>
-        <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Verzeichnisse beenden?</comment>
-        <translation type="vanished">Ar norite tikrai pertraukos įrašyti arba atkurti iš aplanko?</translation>
+        <translation>Ne</translation>
     </message>
 </context>
 <context>
@@ -978,13 +777,13 @@ Die Dateiendung muss .fsa sein</comment>
         <location filename="../src/mbr.cpp" line="58"/>
         <source>MBR/GPT save</source>
         <comment>MBR/GPT sichern</comment>
-        <translation>MBR/GPT įrašyti</translation>
+        <translation>Kopijuoti MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="63"/>
         <source>MBR/GPT restore</source>
         <comment>MBR/GPT zurückschreiben</comment>
-        <translation>MBR/GPT atkūrimo</translation>
+        <translation>Atkurti MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="155"/>
@@ -1016,70 +815,74 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="156"/>
-<source>You must select an MBR backup file.
+        <source>You must select an MBR backup file.
 </source>
         <comment>Sie müssen eine MBR Sicherungsdatei auswählen.
 </comment>
-        <translation>Jūs turite pasirinkti failo MBR
+        <translation>Pasirinkite MBR atsarginės kopijos rinkmeną.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="162"/>
-<source>You must select a GPT backup file.
+        <source>You must select a GPT backup file.
 </source>
         <comment>Sie müssen eine GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>Jūs turite pasirinkti failo GPT
+        <translation>Pasirinkite GPT atsarginės kopijos rinkmeną.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="193"/>
-<source>The MBR was successfully saved.
+        <source>The MBR was successfully saved.
 </source>
         <comment>MBR wurde erfolgreich gesichert.
 </comment>
-        <translation></translation>
+        <translation>MBR sėkmingai įrašyta į rinkmeną.
+</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="195"/>
-<source>The MBR was not saved.
+        <source>The MBR was not saved.
 </source>
         <comment>MBR wurde nicht gesichert.
 </comment>
-        <translation></translation>
+        <translation>MBR neįrašyta.
+</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="197"/>
-<source>GPT was successfully saved.
+        <source>GPT was successfully saved.
 </source>
         <comment>GPT wurde erfolgreich gesichert.
 </comment>
-        <translation></translation>
+        <translation>GPT sėkmingai įrašyta į rinkmeną.
+</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="199"/>
-<source>GPT was not saved.
+        <source>GPT was not saved.
 </source>
         <comment>GPT wurde nicht gesichert.
 </comment>
-        <translation></translation>
+        <translation>GPT neįrašyta.
+</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="210"/>
-<source>Caution: Do you really want to write back the GUID partition table?
+        <source>Caution: Do you really want to write back the GUID partition table?
 </source>
         <comment>Vorsicht: Wollen Sie wirklich die GUID Partitionstabelle zurückschreiben?
 </comment>
-        <translation>Įspėjimas: Jei jūs tikrai nori parašyti atgal GUID skaidymo lentelė?
+        <translation>Atsargiai! Ar tikrai norite atkurti GUID skaidinių lentelę?
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="219"/>
-<source>The GUID partition table was successfully restored.
+        <source>The GUID partition table was successfully restored.
 </source>
         <comment>Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>GUID skaidymo lentelė yra sėkmingas grąžinimo.
+        <translation>GUID skaidinių lentelė sėkmingai atkurta.
 </translation>
     </message>
     <message>
@@ -1088,25 +891,25 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die GUID Partitionstabelle wurde nicht wieder hergestellt.
 </comment>
-        <translation>GUID skaidymo lentelė buvo nepradėta.
+        <translation>GUID skaidinių lentelė neatkurta.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="233"/>
-<source>Caution: Do you really want to write the MBR back completely or partially?
+        <source>Caution: Do you really want to write the MBR back completely or partially?
 </source>
         <comment>Vorsicht: Wollen Sie wirklich den MBR komplett beziehungsweise teilweise zurückschreiben?
 </comment>
-        <translation>Įspėjimas: Jei jūs tikrai nori parašyti atgal MBR visiškai arba iš dalies?
+        <translation>Atsargiai! Ar tikrai norite pilnai arba iš dalies atkurti MBR iš atsarginės kopijos?
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="244"/>
-<source>The bootloader area was successfully restored.
+        <source>The bootloader area was successfully restored.
 </source>
         <comment>Der Bootloaderbereich wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Įkrovos skyrių yra sėkmingas grąžinimo.
+        <translation>Paleidyklė sėkmingai atkurta.
 </translation>
     </message>
     <message>
@@ -1115,15 +918,15 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Der Bootloaderbereich wurde nicht wieder hergestellt.
 </comment>
-        <translation>Boot loader plotas buvo nepradėta.
+        <translation>Paleidyklė neatkurta.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="257"/>
-<source>The partition table was successfully restored.</source>
+        <source>The partition table was successfully restored.</source>
         <comment>Die Partitionstabelle wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Skirsnių lentelę, yra sėkmingas grąžinimo.</translation>
+        <translation>Skaidinių lentelė sėkmingai atkurta.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="259"/>
@@ -1131,16 +934,16 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Partitionstabelle wurde nicht wieder hergestellt.
 </comment>
-        <translation>Skirsnių lentelė buvo nepradėta.
+        <translation>Skaidinių lentelė neatkurta.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="267"/>
-<source>The MBR was successfully restored.
+        <source>The MBR was successfully restored.
 </source>
         <comment>Der MBR wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>MBR yra sėkmingas grąžinimo.
+        <translation>Pagrindinis paleidimo įrašas (MBR) sėkmingai atkurtas.
 </translation>
     </message>
     <message>
@@ -1149,25 +952,25 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Der MBR wurde nicht wieder hergestellt.
 </comment>
-        <translation>MBR nepradėta.
+        <translation>Pagrindinis paleidimo įrašas (MBR) neatkurtas.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="280"/>
-<source>Caution: Do you really want to write back the hidden area?
+        <source>Caution: Do you really want to write back the hidden area?
 </source>
         <comment>Vorsicht: Wollen Sie wirklich den verborgenen Bereich zurückschreiben? 
 </comment>
-        <translation>Įspėjimas: Jei tikrai norite kaip parašyti atgal lauką paslaptis?
+        <translation>Atsargiai! Ar tikrai norite atkurti paslėptąją sritį?
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="292"/>
-<source>The hidden area was successfully restored.
+        <source>The hidden area was successfully restored.
 </source>
         <comment>Der verborgene Bereich wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Paslėpti plotas yra sėkmingas grąžinimo.
+        <translation>Paslėptoji sritis sėkmingai atkurta.
 </translation>
     </message>
     <message>
@@ -1176,22 +979,22 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Der verborgene Bereich wurde nicht wieder hergestellt.
 </comment>
-        <translation>Paslėptų plotą buvo nepradėta.
+        <translation>Paslėptoji sritis neatkurta.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="331"/>
-<source>Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.</source>
+        <source>Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.</source>
         <comment>Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Klaida. Nepavyksta nuskaityti skaidinių lentelės. Progamos darbas nutrauktas.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="355"/>
         <source>The end of hidden area of the 1st Partition could not be read. Only 512 bytes are saved.</source>
         <comment>Das Ende des verborgenen Bereiches der 1. Partition konnte nicht ausgelesen werden. Es werden nur 512 Bytes gesichert.
 </comment>
-        <translation>To, paslėptų plotą 1 disko negalima skaityti. Išsaugomi tik 512 baitų.</translation>
+        <translation>Nepavyksta nuskaityti pirmojo skaidinio paslėptosios srities pabaigos. Pavyko įrašyti tik 512 baitų.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="417"/>
@@ -1206,80 +1009,80 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Pasirinkote failą. Turite pasirinkti katalogą
+        <translation>Pasirinkote rinkmeną, tačiau reikia pasirinkti katalogą.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="429"/>
-<source>You must select an MBR/GPT backup file.
+        <source>You must select an MBR/GPT backup file.
 </source>
         <comment>Sie müssen die MBR/GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>Jūs turite pasirinkti failo MBR/GPT
+        <translation>Prašome pasirinkti MBR/GPT atsarginės kopijos rinkmeną.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="435"/>
-<source>You have selected a directory. You must select an MBR/GPT backup file.
+        <source>You have selected a directory. You must select an MBR/GPT backup file.
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen die MBR/GPT Sicherungsdatei auswählen
 </comment>
-        <translation>Jūs pasirinkote katalogas. Pasirinkite MBR/GPT atsarginės kopijos failą
+        <translation>Jūs pasirinkote katalogą, tačiau reikėtų pasirinkti MBR/GPT atsarginės kopijos rinkmeną.
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="444"/>
-<source>You may have selected the wrong hard disk. The hard disk to be restored is  </source>
+        <source>You may have selected the wrong hard disk. The hard disk to be restored is  </source>
         <comment>Sie haben eventuell eine falsche Festplatte ausgewählt. Die wiederherzustellende Festplatte ist </comment>
-        <translation>Jums gali būti neteisingai pažymėtas diskas. Atkūrimo diskas yra </translation>
+        <translation>Galbūt pasirinkote netinkamą standųjį diską. Atkurtinas standusis diskas yra  </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="444"/>
-<source>, but the backed up hard drive is </source>
+        <source>, but the backed up hard drive is </source>
         <comment>,  die gesicherte Festplatte ist aber </comment>
-        <translation>, išsaugoti kietajame diske yra </translation>
+        <translation>, bet išsaugotasis diskas yra </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="444"/>
-<source> Do you want to continue?</source>
+        <source> Do you want to continue?</source>
         <comment> Wollen Sie fortfahren?</comment>
-        <translation> ar tikrai?</translation>
+        <translation> Tikrai tęsti?</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="452"/>
-<source>You may have selected an incorrect file. The hidden area to be restored has a size of </source>
+        <source>You may have selected an incorrect file. The hidden area to be restored has a size of </source>
         <comment>Sie haben eventuell eine falsche Datei ausgewählt. Der wiederherzustellende verborgene Bereich hat eine Größe von</comment>
-        <translation>Jums gali būti pasirinktas neteisingas failas. Atkūrimo paslėptas laukas turi daug </translation>
+        <translation>Galbūt pasirinkote netinkamą rinkmeną. Atsarginėje kopijoje paslėptosios srities dydis yra </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="453"/>
         <source> bytes. The hidden area of the disk </source>
         <comment> Byte. Der verborgene Bereich von der Festplatte </comment>
-        <translation>baitų. Paslėpti plotas diską</translation>
+        <translation> baitų. Paslėptoji sritis diske </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="453"/>
         <source> has a size of </source>
         <comment> hat eine Größe von </comment>
-        <translation> turi daug </translation>
+        <translation> užima </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="453"/>
-<source> Do you want to continue?</source>
+        <source> Do you want to continue?</source>
         <comment> Byte. Wollen Sie fortfahren?</comment>
-        <translation>baitų. ar tikrai?</translation>
+        <translation> Tikrai tęsti?</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="468"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>taip</translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="469"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>ne</translation>
+        <translation>Ne</translation>
     </message>
 </context>
 <context>
@@ -1287,7 +1090,7 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/net.cpp" line="134"/>
         <source>lz4</source>
-        <translation type="unfinished"></translation>
+        <translation>lz4</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="135"/>
@@ -1297,48 +1100,48 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/net.cpp" line="136"/>
         <source>gzip fast</source>
-        <translation>gzip greitai</translation>
+        <translation>gzip, greitasis</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="137"/>
         <source>gzip standard</source>
-        <translation>gzip standartinis</translation>
+        <translation>gzip, įprastas</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
         <source>qzip best</source>
-        <translation>qzip geriausias</translation>
+        <translation>qzip, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
         <source>bzip2 fast</source>
-        <translation>bzip2 greitai</translation>
+        <translation>bzip2, greitasis</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="140"/>
         <source>bzip2 good</source>
-        <translation>bzip2 geras</translation>
+        <translation>bzip2, geras</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="141"/>
         <source>lzma fast</source>
-        <translation>lzma greitai</translation>
+        <translation>lzma, greitasis</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="142"/>
         <source>lzma medium</source>
-        <translation>lzma vidutinės</translation>
+        <translation>lzma, vidutinis</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="143"/>
         <source>lzma best</source>
-        <translation>lzma geriausias</translation>
+        <translation>lzma, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="144"/>
         <source>zstd</source>
         <comment>zstd</comment>
-        <translation type="unfinished"></translation>
+        <translation>zstd</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="332"/>
@@ -1395,20 +1198,20 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="333"/>
-<source>No released directory was found for the NFS protocol.
+        <source>No released directory was found for the NFS protocol.
 </source>
         <comment>Mit dem NFS Protokoll wurde kein freigegebenes Verzeichnis gefunden.
 </comment>
-        <translation>Can not find a shared directory with the NFS Protokoll.
+        <translation>Nerasta per NFS bendrinamų katalogų.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="375"/>
-<source>No shared directory was found for Samba.
+        <source>No shared directory was found for Samba.
 </source>
         <comment>Mit Samba wurde kein freigegebenes Verzeichnis gefunden.
 </comment>
-        <translation>Can not find a shared directory with the Samba Protokoll.
+        <translation>Nerasta per Samba bendrinamų katalogų.
 </translation>
     </message>
     <message>
@@ -1417,7 +1220,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Bitte wählen Sie einen Ordner aus.
 </comment>
-        <translation>Please, select a folder.
+        <translation>Pasirinkite katalogą.
 </translation>
     </message>
     <message>
@@ -1426,16 +1229,17 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
-        <translation>Please, select the partition to be saved.
+        <translation>Pasirinkite skaidinį, kurio atsarginę kopiją norite sukurti.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="520"/>
-<source>Please select the directory to be saved.
+        <source>Please select the directory to be saved.
 </source>
         <comment>Bitte wählen Sie das zu sichernde Verzeichnis aus.
 </comment>
-        <translation></translation>
+        <translation>Pasirinkite katalogą, kurio atsarginę kopiją norite sukurti.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="527"/>
@@ -1444,7 +1248,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
 </comment>
-        <translation>Pasirinkite atsarginės kopijos failo vardas.
+        <translation>Sugalvokite vardą atsarginės kopijos rinkmenai.
 </translation>
     </message>
     <message>
@@ -1453,7 +1257,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Pasirinkote failą. Turite pasirinkti katalogą
+        <translation>Pasirinkote rinkmeną, tačiau reikia pasirinkti katalogą
 </translation>
     </message>
     <message>
@@ -1466,39 +1270,39 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/net.cpp" line="572"/>
         <location filename="../src/net.cpp" line="1234"/>
-<source> cannot be embedded. The program is aborted.
+        <source> cannot be embedded. The program is aborted.
 </source>
         <comment> konnte nicht eingebunden werden. Das Programm wird abgebrochen
 </comment>
-        <translation> gali būti neintegruotas. Programa yra nutrauktas
+        <translation> negali būti integruotas. Programa nutraukta.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="597"/>
         <source>The system partition to be saved is mounted. Do you want to do a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>The system partition to be saved is mounted. Do you want to do a live backup?</translation>
+        <translation>Sistemos skaidinys, kurį pasirinkote, šiuo metu programiškai prijungtas (angl. mounted) ir yra naudojamas. Ar tikrai norite kurti atsarginę kopiją programiškai neatjungę to skaidinio?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="605"/>
         <source>The home partition to be saved is mounted. Do you want to do a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>Montuojamas į disko skirsnį turi būti išsaugota. Ar norite gyventi kopiją?</translation>
+        <translation>Namų skaidinys, kurį pasirinkote, šiuo metu programiškai prijungtas prie sistemos (angl. mounted) ir yra naudojamas. Ar tikrai norite kurti atsarginę kopiją programiškai neatjungę to skaidinio?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="621"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
-        <translation>The partition </translation>
+        <translation>Skaidinio </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="622"/>
         <location filename="../src/net.cpp" line="997"/>
-<source>cannot be unmounted. The program is aborted.
+        <source>cannot be unmounted. The program is aborted.
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>can not be unmounted. The program is terminated
+        <translation>programiškai atjungti nepavyko. Programa nutraukta.
 </translation>
     </message>
     <message>
@@ -1509,14 +1313,14 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
 </comment>
-        <translation>Rakto žodžio ilgį turi būti nuo 6 iki 64 simbolių
+        <translation>Rakto ilgis turi būti nuo 6 iki 64 ženklų
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="742"/>
         <source>The partition file </source>
         <comment>Die Partitionsdatei </comment>
-        <translation>Disko failas </translation>
+        <translation>Skaidinio rinkmena </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="742"/>
@@ -1525,14 +1329,14 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
 </comment>
-        <translation>jau yra. Atsarginę kopiją neatliekamas
+        <translation>jau yra. Atsarginė kopija nekursima
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="747"/>
         <source>The directorie file </source>
         <comment>Die Verzeichnisdatei </comment>
-        <translation type="unfinished"></translation>
+        <translation>Katalogo rinkmena </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="764"/>
@@ -1540,43 +1344,44 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>The backup was aborted by the user
+        <translation>Atsarginių kopijų kūrimą nutraukė naudotojas
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="834"/>
-<source>No decryption key was specified.
+        <source>No decryption key was specified.
 </source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>No key was given for the decryption
+        <translation>Šifravimo raktas nenurodytas.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="846"/>
-<source>Please select the partition you want to write back.
+        <source>Please select the partition you want to write back.
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
 </comment>
-        <translation>Please, select the partition to be written back.
+        <translation>Pasirinkite skaidinį, į kurį norite atkurti duomenis.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="852"/>
-<source>Please select the directory to write back to.
+        <source>Please select the directory to write back to.
 </source>
         <comment>Bitte wählen Sie das zurück zu schreibende Verzeichnis aus.
 </comment>
-        <translation></translation>
+        <translation>Pasirinkite katalogą, į kurį norite atkurti duomenis.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="862"/>
-<source>You have selected an incorrect recovery file.
+        <source>You have selected an incorrect recovery file.
 The file extension must be .fsa.</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht 
 Die Dateiendung muss .fsa sein</comment>
-        <translation>Jūs pasirinkote pasirinktas neteisingas atkūrimo failas.
- Failai turėtų baigtis. FSA būti</translation>
+        <translation>Galbūt pasirinkote netinkamą atsarginės kopijos rinkmeną. 
+Rinkmenos prievardis turi būti .FSA.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="890"/>
@@ -1584,69 +1389,69 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>The partition is encrypted. Please enter the key
+        <translation>Skaidinys užšifruotas. Įveskite raktą
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="926"/>
-<source>The partition to be recovered </source>
+        <source>The partition to be recovered </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>Partition to restore the </translation>
+        <translation>Atkurtinas skaidinys </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="926"/>
-<source> does not match the backed up partition.</source>
+        <source> does not match the backed up partition.</source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation> does not coincide with the saved  </translation>
+        <translation> neatitinka atsarginėje kopijoje esančio skaidinio.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="926"/>
-<source>Do you still want to perform the recovery?</source>
+        <source>Do you still want to perform the recovery?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>Do you want to continue restore?</translation>
+        <translation>Ar tikrai norite atkūrinėti?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="952"/>
-<source>The write back was aborted by the user.
+        <source>The write back was aborted by the user.
 </source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
-        <translation>The restore was canceled by user
+        <translation>Atkūrimą iš atsarginės kopijos nutraukė naudotojas.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="964"/>
-<source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
+        <source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
-        <translation>There is a file with the contents of the partition boot sector present. Do you want to perform the restoration of the PBR?</translation>
+        <translation>Aptikta rinkmena su skaidinio paleidimo įrašu (PBR). Ar norėtumėte atkurti PBR?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="977"/>
-<source>The system partition to be restored is mounted and cannot be written back. Please use a live DVD.
+        <source>The system partition to be restored is mounted and cannot be written back. Please use a live DVD.
 </source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>To restore system partition is mounted and can not be restored. Please use a live CD
+        <translation>Pasirinktas atkurtinas sistemos skaidinys yra programiškai prijungtas (angl. mounted), todėl į jį negalima atkurti duomenų. Tokiu atveju naudokite demonstracinę laikmeną (LiveCD, LiveDVD, LiveUSB).
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="984"/>
-<source>The home partition to be restored is mounted and cannot be written back. Please use a live DVD.
+        <source>The home partition to be restored is mounted and cannot be written back. Please use a live DVD.
 </source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>The restored home partition is mounted and can not be restored. Please use a live CD
+        <translation>Pasirinktas atkurtinas namų skaidinys yra programiškai prijungtas (angl. mounted), todėl į jį negalima atkurti duomenų. Tokiu atveju naudokite demonstracinę laikmeną (LiveCD, LiveDVD, LiveUSB).
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="996"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
-        <translation>The partition </translation>
+        <translation>Skaidinys</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1853"/>
-<source>If you have not yet successfully accessed the computer (server) via ssh, you must now do the following: 1.In the opened terminal, you must confirm the RSA key fingerprint with yes. 2.enter the password for the access to the server and 3.leave the server with the command exit. Do you now want to enter the RSA key fingerprint?
+        <source>If you have not yet successfully accessed the computer (server) via ssh, you must now do the following: 1.In the opened terminal, you must confirm the RSA key fingerprint with yes. 2.enter the password for the access to the server and 3.leave the server with the command exit. Do you now want to enter the RSA key fingerprint?
 </source>
         <comment>Wenn Sie noch nicht erfolgreich per ssh auf den Rechner(Server) zugegriffen haben, müssen Sie nun folgendes tun: 1.In dem geöffneten Terminal müssen Sie den RSA key fingerprint mit yes bestätigen. 2.Geben Sie das Passwort für den Zugriff auf den Server ein  und 3.verlassen Sie den Server mit dem Befehl exit. Wollen Sie nun den RSA key fingerprint eingeben?
 </comment>
@@ -1654,27 +1459,22 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1863"/>
-<source>Do you still want to see this message? You can change this in the basic settings.</source>
+        <source>Do you still want to see this message? You can change this in the basic settings.</source>
         <comment>Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>If the existing btrfs partition to be formatted? The new UUID is defined here. If you choose &lt;no&gt;, the UUID remains preserved.</source>
-        <comment>Soll die vorhandene btrfs-Partition formatiert werden? Die UUID wird dabei neu festgelegt. Wenn Sie  nein wählen, bleibt die UUID erhalten.</comment>
-        <translation type="vanished">Jei esamas btrfs pasiskirstymo reikia formatuoti? Naujas UUID yra apibrėžti čia. Jei pasirinksite &lt;no&gt;, UUID lieka konservuotiems.&lt;/no&gt;</translation>
+        <translation>Ar norėtumėte ir toliau matyti šį pranešimą? Pasirinkimą galėsite pakeisti pagrindinėse nuostatose.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="913"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation type="unfinished">Įvedėte neteisingą slaptaždį.</translation>
+        <translation>Įvedėte klaidingą slaptažodį.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1093"/>
-<source>Save partition</source>
+        <source>Save partition</source>
         <comment>Partition/Verzeichnis sichern</comment>
-        <translation type="unfinished"></translation>
+        <translation>Įrašyti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1109"/>
@@ -1682,14 +1482,13 @@ Die Dateiendung muss .fsa sein</comment>
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel:</comment>
-        <translation>Encrypt
-backup. key:</translation>
+        <translation>Užšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1136"/>
-<source>Write back partition</source>
+        <source>Write back partition</source>
         <comment>Partition/Verzeichnis zurückschreiben</comment>
-        <translation type="unfinished"></translation>
+        <translation>Atkurti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1146"/>
@@ -1697,16 +1496,16 @@ backup. key:</translation>
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel</comment>
-        <translation>Decrypt
-backup. key:</translation>
+        <translation>Atšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1307"/>
-<source>The partition was successfully backed up.
+        <source>The partition was successfully backed up.
 </source>
         <comment>Die Partition/das Verzeichnis wurde erfolgreich gesichert.
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atsarginė kopija sėkmingai sukurta.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1308"/>
@@ -1721,7 +1520,7 @@ backup. key:</translation>
         <location filename="../src/net.cpp" line="1488"/>
         <source> files, </source>
         <comment> Dateien, </comment>
-        <translation> failus,</translation>
+        <translation> rinkmena(-os,-ų), </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1308"/>
@@ -1734,7 +1533,7 @@ backup. key:</translation>
         <location filename="../src/net.cpp" line="1487"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> katalogai, </translation>
+        <translation> katalogas(-ai,-ų), </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1308"/>
@@ -1747,36 +1546,37 @@ backup. key:</translation>
         <location filename="../src/net.cpp" line="1488"/>
         <source> links and </source>
         <comment> Links und </comment>
-        <translation> nuorodos ir </translation>
+        <translation> nuoroda(-os,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1308"/>
-<source> specials have been backed up.</source>
+        <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation> akcijos buvo atsargines kopijas.</translation>
+        <translation> spec. duomenys sudėti į atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1313"/>
-<source>The partition was successfully backed up.
+        <source>The partition was successfully backed up.
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
-        <translation type="unfinished">The partition has been backed up successfully.
+        <translation>Skaidinio atsarginė kopija sėkmingai sukurta.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1315"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation type="unfinished"></translation>
+        <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) sudėti į atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1331"/>
-<source>The backup of the partition was aborted by the user!
+        <source>The backup of the partition was aborted by the user!
 </source>
         <comment>Die Sicherung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atsarginės kopijos kūrimą nutraukė naudotojas!
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1338"/>
@@ -1784,7 +1584,8 @@ backup. key:</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt
 </comment>
-        <translation></translation>
+        <translation>Skaidinio tipas nepalaikomas.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1346"/>
@@ -1792,16 +1593,17 @@ backup. key:</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
 </comment>
-        <translation>The partition type is not supported. Maybe the partition is encrypted?
+        <translation>Skaidinio tipas nepalaikomas. Galbūt skaidinys užšifruotas?
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1365"/>
-<source>The backup of the partition was only partially successful.
+        <source>The backup of the partition was only partially successful.
 </source>
         <comment>Die Sicherung der Partition/des Verzeichnis war nur teilweise erfolgreich
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atsarginės kopijos kūrimas pavyko tik iš dalies.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1365"/>
@@ -1809,90 +1611,96 @@ backup. key:</translation>
 .</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
-        <translation> akcijos buvo atsargines kopijas.</translation>
+        <translation> spec. duomenys sudėti į atsarginę kopiją
+.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1367"/>
-<source> special data was not saved correctly.
+        <source> special data was not saved correctly.
 .</source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
 </comment>
-        <translation>specials were not properly backed.</translation>
+        <translation> spec. duomenys įrašyti nebuvo įrašyti tinkamai.
+.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1410"/>
-<source>The partition to be restored is mounted. It must be unmounted first!
+        <source>The partition to be restored is mounted. It must be unmounted first!
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation>cannot restore an archive to a partition which is mounted, unmount it first 
+        <translation>Skaidinys, į kurį ketinate atkurti duomenis, šiuo metu yra progamiškai prijungtas (angl. mounted). Pirmiausia jį progamiškai atjunkite!
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1447"/>
-<source>The partition was successfully restored.
+        <source>The partition was successfully restored.
 </source>
         <comment>Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation></translation>
+        <translation>Skaidinys sėkmingai atkurtas.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1447"/>
-<source> special data has been restored.</source>
+        <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> akcijos būtų atstatytas.</translation>
+        <translation> spec. duomenys atkurti.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1450"/>
-<source>The partition was successfully restored.
+        <source>The partition was successfully restored.
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>The partition is successful back.
+        <translation>Skaidinys sėkmingai atkurtas.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1451"/>
         <source> links </source>
         <comment> Links </comment>
-        <translation> links </translation>
+        <translation> nuoroda(-os,-ų) </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1451"/>
-<source> special data and the partition boot sector were restored.</source>
+        <source> special data and the partition boot sector were restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation>akcijos ir pertvarų sistemos įkrovos įrašas būtų atstatytas.</translation>
+        <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) atkurti.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1456"/>
-<source>The restore of the partition was aborted by the user!
+        <source>The restore of the partition was aborted by the user!
 </source>
         <comment>Die Wiederherstellung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atkūrimą nutraukė naudotojas!
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
-<source>The restore of the partition was only partially successful.
+        <source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition/des Verzeichnisses war nur teilweise erfolgreich
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atkūrimas iš atsarginės kopijos pavyko tik iš dalies.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
-<source> specials has been restored.
+        <source> specials has been restored.
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
 .</comment>
-        <translation> akcijos būtų atstatytas.</translation>
+        <translation> spec. duomenys atkurti.
+.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1481"/>
         <location filename="../src/net.cpp" line="1488"/>
         <source> directories and </source>
         <comment> Verzeichnisse und </comment>
-        <translation> directories and </translation>
+        <translation> katalogas(-ai,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1483"/>
@@ -1901,40 +1709,44 @@ backup. key:</translation>
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
 </comment>
-        <translation>specials were not properly restored.</translation>
+        <translation> spec. duomenys nebuvo tinkamai atkurti
+.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1487"/>
-<source>The restore of the partition was only partially successful.
+        <source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition/des Verzeicnisses war nur teilweise erfolgreich
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atkūrimas iš atsarginės kopijos pavyko tik iš dalies.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1488"/>
-<source> special data and the partition boot sector were restored.
+        <source> special data and the partition boot sector were restored.
 .</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
 .</comment>
-        <translation>akcijos ir pertvarų sistemos įkrovos įrašas būtų atstatytas.</translation>
+        <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) atkurti.
+.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1493"/>
-<source> You have tried to restore a partition. The selected file can only recover directories. Please restart the program.
+        <source> You have tried to restore a partition. The selected file can only recover directories. Please restart the program.
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation>You tried to restore a partition. The selected file can only restore directories. Please restart the program.
+        <translation> Bandote atkurti skaidinį, tačiau pasirinkta rinkmena gali atkurti tik katalogus. Iš naujo paleiskite programą.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1497"/>
-<source>You have tried to restore a directory. The selected file can only recover partitions. Please restart the program.
+        <source>You have tried to restore a directory. The selected file can only recover partitions. Please restart the program.
 </source>
         <comment>Sie haben versucht einVerzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Bandote atkurti katalogą, tačiau pasirinkta rinkmena gali atkurti tik skaidinius. Iš naujo paleiskite programą.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1500"/>
@@ -1942,7 +1754,7 @@ backup. key:</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>Įvedėte neteisingą slaptaždį.
+        <translation>Įvedėte klaidingą slaptažodį.
 </translation>
     </message>
     <message>
@@ -1950,34 +1762,35 @@ backup. key:</translation>
         <location filename="../src/net.cpp" line="2139"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>taip</translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1708"/>
         <location filename="../src/net.cpp" line="2140"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>ne</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1725"/>
-<source>Do you really want to stop backing up or restoring the partition?</source>
+        <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>Ar norite tikrai pertraukos įrašyti arba atkurti iš disko?</translation>
+        <translation>Ar tikrai norite nutraukti darbą su skaidinio atsargine kopija?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1810"/>
-<source>If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.
+        <source>If ssh is used, the program must be started in a terminal with qt-fsarchiver. You may need to restart the program.
 </source>
         <comment>Bei der Verwendung von ssh muss das Program in einem Terminal mit qt-fsarchiver gestartet werden. Sie müssen gegebenenfalls das Programm neu starten.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Jei renkatės naudoti SSH, tuomet programą reikia paleisti terminale įvykdant qt-fsarchiver. Tam gali tekti iš naujo paleisti programą.
+</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1812"/>
-<source>If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.</source>
+        <source>If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.</source>
         <comment>Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern</comment>
-        <translation>Jei jūs nesate sukūrę SSH autentifikavimo, dabar turite įvesti slaptažodį į terminalą. Jeigu tai ir toliau turi būti rodomas? Tai galima keisti nustatymus.</translation>
+        <translation>Jei dar nesukonfigūravote SSH prisijungimo, tuomet prašome dabar terminale įvesti slaptažodį. Ar norėtumėte ir toliau matyti šį pranešimą? Pasirinkimą galėsite pakeisti pagrindinėse nuostatose.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1829"/>
@@ -1986,29 +1799,22 @@ backup. key:</translation>
 </source>
         <comment>Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.
 </comment>
-        <translation>The SSH server is not reachable. Try again or with another network protocol.
+        <translation>SSH serveris nepasiekiamas. Bandykite iš naujo arba rinkitės kitą tinklo protokolą.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1835"/>
-<source>Backup or restore with ssh is not possible. Exit the program and restart it in the terminal with root privileges.
+        <source>Backup or restore with ssh is not possible. Exit the program and restart it in the terminal with root privileges.
 </source>
         <comment> Die Sicherung oder Wiederherstellung mit ssh ist nicht möglich. Beenden Sie  das Programm und starten es erneut im Terminal mit Root-Rechten
 </comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When you first contact the computer with ssh, you must do the following:  In a terminal enter these commands: 1.In the open terminal you must confirm the RSA key fingerprint with yes. 2.Enter the password for accessing the server and 3.leave the server with the command exit.
-</source>
-        <comment>Wenn Sie noch nicht erfolgreich per ssh auf den Rechner(Server) zugegriffen haben, müssen Sie nun folgendes tun: 1.In dem geöffneten Terminal müssen Sie den RSA key fingerprint mit yes bestätigen. 2.Geben Sie das Passwort für den Zugriff auf den Server ein  und 3.verlassen Sie den Server mit dem Befehl exit.
-</comment>
-        <translation type="obsolete">When you first contact the computer with ssh, you must do the following:  In a terminal enter these commands: 1.In the open terminal you must confirm the RSA key fingerprint with yes. 2.Enter the password for accessing the server and 3.leave the server with the command exit.
+        <translation>Sukurti atsarginių kopijų ir iš jų atkurti duomenų negalite per SSH. Užvertkite programą ir paleiskite ją iš naujo terminale adminisratoriaus (root) teisėmis.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1998"/>
         <source>Name</source>
-        <translation>Name</translation>
+        <translation>Vardas</translation>
     </message>
 </context>
 <context>
@@ -2017,223 +1823,223 @@ backup. key:</translation>
         <location filename="../src/setting.cpp" line="35"/>
         <source>German</source>
         <comment>Deutsch</comment>
-        <translation type="unfinished">Vokiečių</translation>
+        <translation>vokiečių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>English</source>
         <comment>Englisch</comment>
-        <translation type="unfinished">Anglų</translation>
+        <translation>anglų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Russian</source>
         <comment>Russisch</comment>
-        <translation type="unfinished">Rusijos</translation>
+        <translation>rusų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Spanish</source>
         <comment>Spanisch</comment>
-        <translation type="unfinished">Ispanų</translation>
+        <translation>ispanų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Italian</source>
         <comment>Italienisch</comment>
-        <translation type="unfinished">Italų</translation>
+        <translation>italų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Chinese</source>
         <comment>Chinesisch</comment>
-        <translation type="unfinished">Kinijos</translation>
+        <translation>kinų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Dutch</source>
         <comment>Niederländisch</comment>
-        <translation type="unfinished">Olandų</translation>
+        <translation>olandų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Japanese</source>
         <comment>Japanisch</comment>
-        <translation type="unfinished">Japonijos</translation>
+        <translation>japonų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Arabic</source>
         <comment>Arabisch</comment>
-        <translation type="unfinished">Arabų</translation>
+        <translation>arabų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Catalan</source>
         <comment>Katalanisch</comment>
-        <translation type="unfinished">Katalonų</translation>
+        <translation>katalonų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Danish</source>
         <comment>Dänisch</comment>
-        <translation type="unfinished">Danijos</translation>
+        <translation>danų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>French</source>
         <comment>Französisch</comment>
-        <translation type="unfinished">Prancūzų</translation>
+        <translation>prancūzų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Czech</source>
         <comment>Tschechisch</comment>
-        <translation type="unfinished">Čekijos</translation>
+        <translation>čekų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Greek</source>
         <comment>Griechisch</comment>
-        <translation type="unfinished">Graikų</translation>
+        <translation>graikų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Finnish</source>
         <comment>Finnisch</comment>
-        <translation type="unfinished">Suomių</translation>
+        <translation>suomių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Hindi</source>
         <comment>Hindi</comment>
-        <translation type="unfinished">Hindi</translation>
+        <translation>hindi</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Hungarian</source>
         <comment>Ungarisch</comment>
-        <translation type="unfinished">Vengrų</translation>
+        <translation>vengrų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Armenian</source>
         <comment>Armenisch</comment>
-        <translation type="unfinished">Armėnų</translation>
+        <translation>armėnų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Estonian</source>
         <comment>Estnisch</comment>
-        <translation type="unfinished">Estijos</translation>
+        <translation>estų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Hebrew</source>
         <comment>Hebräisch</comment>
-        <translation type="unfinished">Hebrajų</translation>
+        <translation>hebrajų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Indonesian</source>
         <comment>Indonesisch</comment>
-        <translation>Indoneziečių</translation>
+        <translation>indoneziečių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Korean</source>
         <comment>Koreanisch</comment>
-        <translation type="unfinished">Korėjiečių</translation>
+        <translation>korėjiečių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Norwegian</source>
         <comment>Norwegisch</comment>
-        <translation type="unfinished">Norvegijos</translation>
+        <translation>norvegų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Polish</source>
         <comment>Polnisch</comment>
-        <translation type="unfinished">Lenkų</translation>
+        <translation>lenkų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Romanian</source>
         <comment>Rumänisch</comment>
-        <translation type="unfinished">Rumunų</translation>
+        <translation>rumunų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Latvian</source>
         <comment>Lettisch</comment>
-        <translation type="unfinished">Latvijos</translation>
+        <translation>latvių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Lithuanian</source>
         <comment>Litauisch</comment>
-        <translation type="unfinished">Lietuvos</translation>
+        <translation>lietuvių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Portuguese</source>
         <comment>Portugisisch</comment>
-        <translation type="unfinished">Portugalų</translation>
+        <translation>portugalų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Persian</source>
         <comment>Persisch</comment>
-        <translation type="unfinished">Persijos</translation>
+        <translation>persų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Slovak</source>
         <comment>Slowakisch</comment>
-        <translation type="unfinished">Slovakų</translation>
+        <translation>slovakų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Serbian</source>
         <comment>Serbisch</comment>
-        <translation type="unfinished">Serbų</translation>
+        <translation>serbų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Swedish</source>
         <comment>Schwedisch</comment>
-        <translation type="unfinished">švedų</translation>
+        <translation>švedų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Turkish</source>
         <comment>Türkisch</comment>
-        <translation type="unfinished">Turkų</translation>
+        <translation>turkų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Ukrainian</source>
         <comment>Ukrainisch</comment>
-        <translation type="unfinished">Ukrainiečių</translation>
+        <translation>ukrainiečių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Urdu</source>
         <comment>Urdu</comment>
-        <translation type="unfinished">Urdų kalba</translation>
+        <translation>urdų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Thai</source>
         <comment>Thailändisch</comment>
-        <translation type="unfinished">Tajų</translation>
+        <translation>tajų</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Vietnamese</source>
         <comment>Vietnamesich</comment>
-        <translation type="unfinished">Vietnamiečių</translation>
+        <translation>vietnamiečių</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2245,61 +2051,61 @@ backup. key:</translation>
         <location filename="../src/setting.cpp" line="49"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
-        <translation>gzip greitai</translation>
+        <translation>gzip, greitasis</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
-        <translation>gzip standartinis</translation>
+        <translation>gzip, įprastas</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
-        <translation>qzip geriausias</translation>
+        <translation>qzip, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
-        <translation>bzip2 greitai</translation>
+        <translation>bzip2, greitasis</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>lz4</source>
         <comment>lz4</comment>
-        <translation type="unfinished"></translation>
+        <translation>lz4</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>bzip2 good</source>
         <comment>bzip2 good</comment>
-        <translation>bzip2 geras</translation>
+        <translation>bzip2, geras</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
-        <translation>lzma greitai</translation>
+        <translation>lzma, greitasis</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
-        <translation>lzma vidutinės</translation>
+        <translation>lzma, vidutinis</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
-        <translation>lzma geriausias</translation>
+        <translation>lzma, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>zstd</source>
         <comment>zstd</comment>
-        <translation type="unfinished"></translation>
+        <translation>zstd</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="55"/>
@@ -2324,10 +2130,10 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="212"/>
-<source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
+        <source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
         <comment>Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.
 </comment>
-        <translation>The settings have been saved. Be restarted, the program modified the language setting.</translation>
+        <translation>Nuostatos įrašytos. Jei pakeitėte kalbą, pakeitimai matysis tik iš naujo paleidus programą.</translation>
     </message>
 </context>
 <context>
@@ -2336,98 +2142,95 @@ backup. key:</translation>
         <location filename="../src/ui/net.ui" line="14"/>
         <source>Backup/restore partition over network</source>
         <extracomment>Partitionen über ein Netzwerk sichern/zurückschreiben</extracomment>
-        <translation>Atsarginio kopijavimo/atkūrimo skaidinio per tinklą</translation>
+        <translation>Disko skaidinio atsarginė kopija / atkūrimas per tinklą</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="26"/>
         <source>Network computer  name:</source>
         <extracomment>Netzrechnername:</extracomment>
-        <translation>Tinklo kompiuterio vardą:</translation>
+        <translation>Tinklo kompiuterio vardas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="39"/>
-<source>Name of the backup file:</source>
+        <source>Name of the backup file:</source>
         <extracomment>Name der Sicherungsdatei:</extracomment>
-        <translation>Atkurti failo vardą:</translation>
+        <translation>Atsarginės kopijos rinkmenos vardas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="58"/>
         <source>S</source>
-        <translation>S</translation>
+        <translation type="unfinished">S</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="71"/>
-<source>Select the partition to back up or write back to.</source>
-        <translation>Pasirinkite disko atsarginę kopiją arba atkurti.</translation>
+        <source>Select the partition to back up or write back to.</source>
+        <translation>Pasirinkite disko skaidinį, kurio atsarginę kopiją norite sukurti, arba skaidinį, į kurį norite išskleisti jau turimos atsarginės kopijos duomenis.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="74"/>
         <source>Existing partitions/directories:</source>
         <extracomment>vorhandene Partitionen:</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Skaidiniai / katalogai:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="93"/>
-<source>Planned action:</source>
+        <source>Planned action:</source>
         <extracomment>vorgesehene Aktion:</extracomment>
-        <translation>Siūlomų veiksmų:</translation>
-    </message>
-    <message>
-        <source>Save partition
-with fs-archiver</source>
-        <translation type="obsolete">Save partition</translation>
+        <translation>Darbas su fsarchiver:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="111"/>
         <source>Save par&amp;tition
 with fs-archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Skaidinio atsarginės 
+kopijos &amp;sukūrimas</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="125"/>
-<source>Writing back partitions
+        <source>Writing back partitions
 with fs-archiver</source>
         <extracomment>Partition mit fs-Archiver * zurückschreiben</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Skaidinio atkūrimas 
+iš atsarginės kopijos</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="163"/>
         <source>n</source>
-        <translation>n</translation>
+        <translation type="unfinished">n</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="176"/>
         <source>Start the backup of a partition.</source>
-        <translation>Paleisti disko kopijas.</translation>
+        <translation>Pradėti kurti naują skaidinio atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="179"/>
-<source>Save partition</source>
+        <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Įrašyti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="225"/>
-<source>File name of the backup:</source>
+        <source>File name of the backup:</source>
         <extracomment>Dateiname der Sicherung:</extracomment>
-        <translation>Atsarginės kopijos failo vardą:</translation>
+        <translation>Atsarginės kopijos rinkmenos vardas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="238"/>
         <source>Exit</source>
         <extracomment>Beenden</extracomment>
-        <translation>Išėjimo</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="251"/>
         <source>Start restore a partition.</source>
-        <translation>Pradėti atkurti skaidinį.</translation>
+        <translation>Pradėti atkūrinėti skaidinį.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="254"/>
-<source>Write back partition</source>
+        <source>Write back partition</source>
         <extracomment>Partition wiederherstellen</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Atkurti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="276"/>
@@ -2438,131 +2241,128 @@ with fs-archiver</source>
         <location filename="../src/ui/net.ui" line="286"/>
         <source>On the number saved
 Files/directories:</source>
-        <translation>On the number saved
-Files/directories:</translation>
+        <translation>Rinkmenų / katalogų
+skaičius:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="301"/>
         <source>already saved 
 files/directories:</source>
-        <translation>already saved 
-files/directories:</translation>
+        <translation>Jau įrašyta 
+rinkmenų / katalogų:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="323"/>
         <location filename="../src/ui/net.ui" line="372"/>
         <source>seconds</source>
-        <translation>i¹saugojê</translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="337"/>
         <location filename="../src/ui/net.ui" line="358"/>
         <source>minutes</source>
-        <translation>minučių</translation>
+        <translation>min</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="351"/>
         <source>remaining time</source>
-        <translation>likęs laikas</translation>
+        <translation>Likęs laikas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="398"/>
-<source>Directory in which the partition is backed up or from which the recovery file is selected.</source>
-        <translation>Katalogas, kuriame disko remia aukštyn arba nuo atkūrimo failo yra pašalintas.</translation>
+        <source>Directory in which the partition is backed up or from which the recovery file is selected.</source>
+        <translation>Katalogas, į kurį norite įrašyti skaidinio atsarginės kopijos rinkmeną, arba katalogas, kuriame jau patalpinta skaidinio atsarginė kopija.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="401"/>
         <source>Please select the folder.</source>
         <extracomment>Bitte wählen Sie einen freigegebene Ordner aus:</extracomment>
-        <translation>Pasirinkite aplanką.</translation>
+        <translation>Pasirinkite katalogą.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="462"/>
         <source>Number of processors
 cores for to be used fsarchiver:</source>
-        <translation>Number of processors
-cores for to be used fsarchiver:</translation>
+        <translation>Procesorių skaičius fsarchiver darbams:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="486"/>
         <source>Compression
 setting:</source>
-        <translation>Compression
-setting:</translation>
+        <translation>Glaudinimas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="500"/>
-<source>Notes about the backup are written to a file.</source>
-        <translation>Atkreipia dėmesį į atsarginės kopijos yra įrašyti į failą.</translation>
+        <source>Notes about the backup are written to a file.</source>
+        <translation>Pastabos apie atsarginę kopiją įrašomos į rinkmeną.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="503"/>
-<source>Notes on the backup</source>
-        <translation>Atkreipia dėmesį į atsarginę kopiją</translation>
+        <source>Notes on the backup</source>
+        <translation>Pridėti pastabas apie atsarginę kopiją</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="526"/>
-<source>Identical backup files are overwritten without prior consultation.</source>
-        <translation>Pačios atsarginių kopijų failai perrašomi be išankstinių konsultacijų.</translation>
+        <source>Identical backup files are overwritten without prior consultation.</source>
+        <translation>Jei atsarginių kopijų rinkmenos sutampa su senomis, tai senas perrašyti nebeklausiant.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="529"/>
-<source>overwrite existing backup.</source>
-        <translation>Laisvas atsarginė perrašyti</translation>
+        <source>overwrite existing backup.</source>
+        <translation>Jei yra senų atsarginių kopijų, jas perrašyti</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="542"/>
         <source>Stock Split on DVD size</source>
-        <translation>Vertybinių popierių Splite apie DVD dydis</translation>
+        <translation>Dalinti į DVD dydžio rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="555"/>
         <source>Encrypt 
 backup key</source>
-        <translation>Encrypt
-backup key</translation>
+        <translation>Užšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="569"/>
-<source>PBR is the first block of a bootable partition.</source>
-        <translation>PBR yra pirmojo bloko bet įkrovos skaidinys.</translation>
+        <source>PBR is the first block of a bootable partition.</source>
+        <translation>PBR yra skaidinio, iš kurio paleidžiama operacinė sistema, pirmasis blokas.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="572"/>
         <source>Save PBR</source>
         <extracomment>PBR sichern</extracomment>
-        <translation>Išsaugoti PBR</translation>
+        <translation>Įrašyti skaidinio paleidimo įrašą (PBR)</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="585"/>
-<source>Writing a backup back to the original path.</source>
-        <translation>Backup restore to the Origin</translation>
+        <source>Writing a backup back to the original path.</source>
+        <translation>Atkurti į pradinę vietą.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="619"/>
         <source>Protocoll for network
 transmission:</source>
-        <translation>Ekvivalentiškai tinklo perdavimo:</translation>
+        <translation>Tinklo protokolas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="681"/>
         <source>Show hidden directories and files</source>
-        <translation type="unfinished">Restore partition</translation>
+        <translation>Rodyti slepiamuosius katalogus ir rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="727"/>
         <source>Show &amp;partitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti skai&amp;dinius</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="740"/>
         <source>Show &amp;directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti &amp;katalogus</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="754"/>
         <source>z</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">z</translation>
     </message>
 </context>
 <context>
@@ -2571,42 +2371,42 @@ transmission:</source>
         <location filename="../src/ui/net_ein.ui" line="14"/>
         <source>Data network</source>
         <extracomment>Daten Netzwerk</extracomment>
-        <translation>Data network</translation>
+        <translation>Duomenų tinklas</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="26"/>
         <source>Username:</source>
         <extracomment>Benutzername:</extracomment>
-        <translation>Username:</translation>
+        <translation>Naudotojo vardas:</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="39"/>
         <source>Password:</source>
         <extracomment>Kennwort:</extracomment>
-        <translation>Password:</translation>
+        <translation>Slaptažodis:</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="52"/>
-<source>Username and password will be saved.</source>
-        <translation>Username and password are stored.</translation>
+        <source>Username and password will be saved.</source>
+        <translation>Naudotojo vardas ir slaptažodis bus įrašytas.</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="55"/>
         <source>Save data</source>
         <extracomment>Daten speichern</extracomment>
-        <translation>Save data</translation>
+        <translation>Įrašyti duomenis</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="94"/>
         <source>Next</source>
         <extracomment>Weiter</extracomment>
-        <translation>Next</translation>
+        <translation>Toliau</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="117"/>
-<source>Computers that can be reached in the network:</source>
+        <source>Computers that can be reached in the network:</source>
         <extracomment>Im Netz erreichbare Rechner:</extracomment>
-        <translation>Achievable network computer:</translation>
+        <translation>Tinkle pasiekiami kompiuteriai:</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="130"/>
@@ -2617,13 +2417,13 @@ transmission:</source>
         <location filename="../src/ui/net_ein.ui" line="143"/>
         <source>Show Password</source>
         <extracomment>Kennwort anzeigen</extracomment>
-        <translation>Show Password</translation>
+        <translation>Rodyti slaptažodį</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="156"/>
         <source>Cancel</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Atšaukti</translation>
+        <translation>Atsisakyti</translation>
     </message>
 </context>
 <context>
@@ -2632,25 +2432,25 @@ transmission:</source>
         <location filename="../src/ui/filedialog.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Description of the backup</translation>
+        <translation>Atsarginės kopijos aprašas</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="26"/>
         <source>Cancel</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Atšaukti</translation>
+        <translation>Atsisakyti</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="39"/>
         <source>Description of the backup:</source>
         <extracomment>Beschreibung der Sicherung:</extracomment>
-        <translation>Description of the backup</translation>
+        <translation>Atsarginės kopijos aprašas:</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="52"/>
-<source>Save partition</source>
+        <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>Back partition</translation>
+        <translation>Įrašyti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="80"/>
@@ -2659,19 +2459,23 @@ transmission:</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;sans-serif&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="42"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
-        <translation>Disko atkūrimas</translation>
+        <translation>Atkurti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="51"/>
         <source>Save partition</source>
         <comment>Partition sichern</comment>
-        <translation>Save partition</translation>
+        <translation>Įrašyti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="67"/>
@@ -2681,17 +2485,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="68"/>
-<source>The notes on the partition were not written to a file.
+        <source>The notes on the partition were not written to a file.
 </source>
         <comment>Die Hinweise zur Partition wurden nicht in eine Datei geschrieben.
 </comment>
-        <translation>Instructions for partition were not recorded written to the file.
+        <translation>Pastabos apie skaidinį neįrašytos.
 </translation>
-    </message>
-    <message>
-        <source>hello</source>
-        <comment>hallo</comment>
-        <translation type="vanished">hello</translation>
     </message>
 </context>
 <context>
@@ -2706,67 +2505,67 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/mainWindow.cpp" line="186"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
-        <translation>gzip greitai</translation>
+        <translation>gzip, greitasis</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="187"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
-        <translation>gzip standartinis</translation>
+        <translation>gzip, įprastas</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
-        <translation>qzip geriausias</translation>
+        <translation>qzip, stipriausias</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
-        <translation>bzip2 greitai</translation>
+        <translation>bzip2, greitasis</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="190"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
-        <translation>bzip2 geras</translation>
+        <translation>bzip2, geras</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="191"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
-        <translation>lzma greitai</translation>
+        <translation>lzma, greitasis</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="192"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
-        <translation>lzma vidutinės</translation>
+        <translation>lzma, vidutinis</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="193"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
-        <translation>lzma geriausias</translation>
+        <translation>lzma, stipriausias</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="358"/> 
-<source>The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.</source>
+        <location filename="../src/mainWindow.cpp" line="358"/>
+        <source>The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.</source>
         <comment>In der Datei /usr/share/doc/qt-fsarchiver/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
-        <translation>In the file /usr/share/doc/qt-fsarchiver/Readme are instructions included on the use of the program. Should this continue to be displayed? You can change this in the basic settings.</translation>
+        <translation>Instrukcijų kaip naudotis šia progama ieškokite /usr/share/doc/qt-fsarchiver/doc/Readme rinkmenoje. Ar norėtumėte ir toliau matyti šį pranešimą? Pasirinkimą galėsite pakeisti pagrindinėse nuostatose.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="420"/>
         <source>Backup File</source>
         <comment>Sicherungsdatei</comment>
-        <translation>Backup File</translation>
+        <translation>Atsarginės kopijos rinkmena</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="421"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
-        <translation>Disko atkūrimas</translation>
+        <translation>Atkurti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="434"/>
@@ -2774,19 +2573,13 @@ p, li { white-space: pre-wrap; }
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel</comment>
-        <translation>Decrypt
-backup. key:</translation>
+        <translation>Atšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="452"/>
         <source>Backup directory</source>
         <comment>Sicherungsverzeichnis</comment>
-        <translation>Atsarginę katalogą:</translation>
-    </message>
-    <message>
-        <source>Save partition</source>
-        <comment>Partition sichern</comment>
-        <translation type="obsolete">Save partition</translation>
+        <translation>Atsarginių kopijų katalogas</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="466"/>
@@ -2794,8 +2587,7 @@ backup. key:</translation>
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel</comment>
-        <translation>Encrypt
-backup. key:</translation>
+        <translation>Užšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="144"/>
@@ -2846,35 +2638,37 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="153"/>
         <source>sudo-Password:</source>
         <comment>sudo Passwort</comment>
-        <translation type="unfinished"></translation>
+        <translation>Administratoriaus (root) slaptažodis:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="161"/>
-<source>The program qt-fsarchiver-terminal is not installed. You have to install this program additionally.
+        <source>The program qt-fsarchiver-terminal is not installed. You have to install this program additionally.
 </source>
         <comment>Das Programm qt-fsarchiver-terminal ist nicht installiert. Sie müssen dieses  Programm zusätzlich installieren.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Neįdiegta pagalbinė qt-fsarchiver-terminal progama. Privalote ją papildomai įdiegti.
+</translation>
     </message>
-<message>
+    <message>
         <location filename="../src/mainWindow.cpp" line="193"/>
         <source>qt-fsarchiver-terminal must be updated to version: </source>
         <comment>qt-fsarchiver-terminal muss auf die Version aktualisiert werden: </comment>
-        <translation>qt-fsarchiver-terminal must be updated to version: </translation>
+        <translation>Pagalbinę qt-fsarchiver-terminal programą reikia atnaujinti iki kitos versijos: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="193"/>
         <source> The program is terminated.</source>
         <comment> Das Programm wird beendet</comment>
-        <translation> The program is terminated.</translation>
+        <translation> Pragrama užsidarė.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+        <source>You must enter a password. You must exit the program and restart.
 </source>
         <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Privalote įvesti slaptažodį. Reikės užverti programą ir ją paleisti iš naujo.
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="505"/>
@@ -2882,15 +2676,15 @@ backup. key:</translation>
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
 </comment>
-        <translation>Please select from the backup directory.
+        <translation>Pasirinkite iš atsarginių kopijų katalogo.
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="511"/>
-<source>Please select the partition you want to back up.</source>
+        <source>Please select the partition you want to back up.</source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
-        <translation>Please select the partition to be</translation>
+        <translation>Pasirinkite skaidinį, kurio atsarginę kopiją norite sukurti.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="518"/>
@@ -2899,7 +2693,7 @@ backup. key:</translation>
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
 </comment>
-        <translation>Please select the file name of the backup.
+        <translation>Sugalvokite vardą atsarginės kopijos rinkmenai.
 </translation>
     </message>
     <message>
@@ -2908,34 +2702,34 @@ backup. key:</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Pasirinkote failą. Turite pasirinkti katalogą
+        <translation>Pasirinkote rinkmeną, tačiau reikia pasirinkti katalogą
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="559"/>
-<source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
+        <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>To back up the system partition is mounted. Do you want to do a live backup?</translation>
+        <translation>Sistemos skaidinys, kurį pasirinkote, šiuo metu programiškai prijungtas (angl. mounted) ir yra naudojamas. Ar tikrai norite kurti atsarginę kopiją programiškai neatjungę to skaidinio?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="567"/>
-<source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
+        <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>To back up home partition is mounted. Do you want to do a live backup?</translation>
+        <translation>Namų skaidinys, kurį pasirinkote, šiuo metu programiškai prijungtas prie sistemos (angl. mounted) ir yra naudojamas. Ar tikrai norite kurti atsarginę kopiją programiškai neatjungę to skaidinio?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="583"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
-        <translation>The partition </translation>
+        <translation>Skaidinio</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="583"/>
-<source>cannot be unmounted. The program is aborted.
+        <source>cannot be unmounted. The program is aborted.
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>can not be unmounted. The program is terminated
+        <translation>atjungti nepavyko. Programos darbas nutrūko.
 </translation>
     </message>
     <message>
@@ -2945,14 +2739,14 @@ backup. key:</translation>
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
 </comment>
-        <translation>Rakto žodžio ilgį turi būti nuo 6 iki 64 simbolių
+        <translation>Rakto ilgis turi būti nuo 6 iki 64 ženklų
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="695"/>
         <source>The partition file</source>
         <comment>Die Partitionsdatei</comment>
-        <translation>Disko failas </translation>
+        <translation>Skaidinio rinkmena</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="695"/>
@@ -2960,7 +2754,7 @@ backup. key:</translation>
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
 </comment>
-        <translation>jau yra. Atsarginę kopiją neatliekamas
+        <translation> jau yra. Atsarginė kopija nekursima
 </translation>
     </message>
     <message>
@@ -2969,39 +2763,39 @@ backup. key:</translation>
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>The backup was aborted by the user
+        <translation>Atsarginių kopijų kūrimą nutraukė naudotojas
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="734"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
-        <translation>The backup is performed</translation>
+        <translation>Kuriama atsarginė kopija</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="882"/>
-<source>No decryption key was specified.</source>
+        <source>No decryption key was specified.</source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>Ten buvo ne labai iššifruoti nurodyta.</translation>
+        <translation>Šifravimo raktas nenurodytas.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="894"/>
-<source>Please select the partition you want to write back.
+        <source>Please select the partition you want to write back.
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
 </comment>
-        <translation>Please select from the writing back to partition.
+        <translation>Pasirinkite skaidinį, į kurį norite atkurti duomenis.
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="906"/>
-<source>You have selected an incorrect recovery file.
+        <source>You have selected an incorrect recovery file.
 The file extension must be .fsa.</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht 
 Die Dateiendung muss .fsa sein</comment>
-        <translation>Jūs pasirinkote pasirinktas neteisingas atkūrimo failas.
- Failai turėtų baigtis. FSA būti</translation>
+        <translation>Pasirinkote netinkamą atsarginės kopijos rinkmeną.
+Rinkmenos prievardis turi būti FSA.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="915"/>
@@ -3009,7 +2803,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
 </comment>
-        <translation>You have selected a directory. You must select a file
+        <translation>Jūs pasirinkote katalogą, tačiau reikėtų pasirinkti rinkmeną
 </translation>
     </message>
     <message>
@@ -3017,102 +2811,97 @@ Die Dateiendung muss .fsa sein</comment>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>Skaidinys yra užšifruotas. Prašome įvesti pagrindinių</translation>
+        <translation>Skaidinys yra užšifruotas. Prašome įvesti jo raktą</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="963"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>Įvedėte neteisingą slaptaždį.</translation>
+        <translation>Įvedėte klaidingą slaptažodį.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="973"/>
-<source>The partition to be recovered </source>
+        <source>The partition to be recovered </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>Partition to restore the </translation>
+        <translation>Atkurtinas skaidinys </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="974"/>
-<source> does not match the backed up partition.</source>
+        <source> does not match the backed up partition.</source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation> does not coincide with the saved  </translation>
+        <translation> neatitinka skaidinio, kuriam buvo sukurta atsarginė kopija.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="974"/>
-<source>Do you still want to perform the recovery?</source>
+        <source>Do you still want to perform the recovery?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>Do you want to continue restore?</translation>
+        <translation>Tikrai norite atkurti?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="998"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
-        <translation>The restore was aborted by the user</translation>
+        <translation>Atkūrimą iš atsarginės kopijos nutraukė naudotojas</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1010"/>
-<source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
+        <source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
-        <translation>There is a file with the contents of the partition boot sector present. Do you want to perform the restoration of the PBR?</translation>
+        <translation>Aptikta rinkmena su skaidinio paleidimo įrašu (PBR). Ar norėtumėte atkurti PBR?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1025"/>
-<source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
+        <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>Restore the system partition is mounted and can not be written back. Please use a live CD.</translation>
+        <translation>Pasirinktas atkurtinas sistemos skaidinys yra programiškai prijungtas (angl. mounted), todėl į jį negalima atkurti duomenų. Tokiu atveju naudokite demonstracinę laikmeną (LiveCD, LiveDVD, LiveUSB).</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1032"/>
-<source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
+        <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>Restore the home partition is mounted and can not be written back. Please use a live CD.</translation>
+        <translation>Pasirinktas atkurtinas namų skaidinys yra programiškai prijungtas (angl. mounted), todėl į jį negalima atkurti duomenų. Tokiu atveju naudokite demonstracinę laikmeną (LiveCD, LiveDVD, LiveUSB).</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1044"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
-        <translation>The partition </translation>
+        <translation>Skaidinio </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1044"/>
-<source>cannot be unmounted. The program is aborted.</source>
+        <source>cannot be unmounted. The program is aborted.</source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>negali būti neaptaisyti. Programa nutraukiama</translation>
-    </message>
-    <message>
-        <source>If the existing btrfs partition to be formatted? The new UUID is defined here. If you choose &lt;no&gt;, the UUID remains preserved.</source>
-        <comment>Soll die vorhandene btrfs-Partition formatiert werden? Die UUID wird dabei neu festgelegt. Wenn Sie  nein wählen, bleibt die UUID erhalten.</comment>
-        <translation type="vanished">Jei esamas btrfs pasiskirstymo reikia formatuoti? Naujas UUID yra apibrėžti čia. Jei pasirinksite &lt;no&gt;, UUID lieka konservuotiems.&lt;/no&gt;</translation>
+        <translation>atjungti nepavyko. Programos darbas nutrūko.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1078"/>
         <source>The key length must be between 6 and 64 characters.</source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein.
 </comment>
-        <translation>Rakto žodžio ilgį turi būti nuo 6 iki 64 simbolių</translation>
+        <translation>Rakto ilgis turi būti nuo 6 iki 64 ženklų.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1103"/>
-<source>The recovery is performed.</source>
+        <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
-        <translation>The restoring is performed</translation>
+        <translation>Atkūrinėjama.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="184"/>
         <source>lz4</source>
         <comment>lz4</comment>
-        <translation type="unfinished"></translation>
+        <translation>lz4</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="194"/>
         <source>zstd</source>
         <comment>zstd</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>The program must be run with root privileges. The program is terminated.
@@ -3126,12 +2915,12 @@ Die Dateiendung muss .fsa sein</comment>
         <location filename="../src/mainWindow.cpp" line="152"/>
         <source>Enter sudo-password</source>
         <comment>Sudo-Passwort eingeben</comment>
-        <translation type="unfinished"></translation>
+        <translation>Įveskite sudo slaptažodį</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1166"/>
         <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
+        <translation>qt-fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="145"/>
@@ -3139,36 +2928,38 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Vienu metu galite paleisti tik vieną Qt-fsarchiver programą. Teks užverti programą...</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-11, June 20, 2019</source>
+version 0.8.5-12, December 20, 2019</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Backup un atjaunot starpsienas, direktoriju un MBR.
-versija 0.8.5-11, 20.Jūnijs 2019</translation>
+atsarginių kopijų kūrimas 
+ir atkūrimas iš jų. 
+versija 0.8.5-12, 20.Gruodis 2019</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>taip</translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1239"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>ne</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1386"/>
         <location filename="../src/mainWindow.cpp" line="1396"/>
-<source>The partition was successfully backed up.
+        <source>The partition was successfully backed up.
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
-        <translation>The partition has been backed up successfully.
+        <translation>Skaidinio atsarginė kopija sėkmingai sukurta.
 </translation>
     </message>
     <message>
@@ -3184,7 +2975,7 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
         <location filename="../src/mainWindow.cpp" line="1568"/>
         <source> files, </source>
         <comment> Dateien, </comment>
-        <translation> failus,</translation>
+        <translation> rinkmena(-os,-ų), </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1387"/>
@@ -3197,7 +2988,7 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
         <location filename="../src/mainWindow.cpp" line="1565"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> katalogai, </translation>
+        <translation> katalogas(-ai,-ų), </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1387"/>
@@ -3211,19 +3002,19 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
         <location filename="../src/mainWindow.cpp" line="1569"/>
         <source> links and </source>
         <comment> Links und </comment>
-        <translation> nuorodos ir </translation>
+        <translation> nuoroda(-os,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1388"/>
-<source> specials have been backed up.</source>
+        <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation> akcijos buvo atsargines kopijas.</translation>
+        <translation> spec. duomenys sudėti į atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1398"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation type="unfinished"></translation>
+        <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) sudėti į atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1416"/>
@@ -3231,7 +3022,7 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Die Sicherung der Partition  wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>The backup of the partition was aborted by the user!
+        <translation>Skaidinio atsarginės kopijos kūrimą nutraukė naudotojas!
 </translation>
     </message>
     <message>
@@ -3240,7 +3031,8 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt.
 </comment>
-        <translation></translation>
+        <translation>Skaidinio tipas nepalaikomas.
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1430"/>
@@ -3248,16 +3040,16 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
 </comment>
-        <translation>The partition type is not supported. Maybe the partition is encrypted?
+        <translation>Skaidinio tipas nepalaikomas. Galbūt skaidinys užšifruotas?
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1434"/>
-<source>The backup of the partition was not successful. The file is too large. Use a FAT partition?
+        <source>The backup of the partition was not successful. The file is too large. Use a FAT partition?
 </source>
         <comment>Die Sicherung der Partition war nicht erfolgreich. Die Datei ist zu groß. Nutzen Sie eine FAT-Partition?
 </comment>
-        <translation>Error saving partition. File too large. Use is FAT-partition?
+        <translation>Nepavyko sukurti skaidinio atsarginės kopijos. Rinkmena per didelė. Galbūt naudojamas FAT skaidinys?
 </translation>
     </message>
     <message>
@@ -3266,7 +3058,8 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atsarginės kopijos kūrimas pavyko tik iš dalies.
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1455"/>
@@ -3274,52 +3067,54 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 .</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
-        <translation> akcijos buvo atsargines kopijas.</translation>
+        <translation> spec. duomenys sudėti į atsarginę kopiją
+.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1458"/>
-<source> special data was not saved correctly.
+        <source> special data was not saved correctly.
 .</source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
 </comment>
-        <translation>specials were not properly backed.</translation>
+        <translation> spec. duomenys įrašyti nebuvo įrašyti tinkamai.
+.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1481"/>
-<source>The partition to be restored is mounted. It must be unmounted first!
+        <source>The partition to be restored is mounted. It must be unmounted first!
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation>cannot restore an archive to a partition which is mounted, unmount it first 
+        <translation>Skaidinys, į kurį ketinate atkurti duomenis, šiuo metu yra progamiškai prijungtas (angl. mounted). Pirmiausia jį progamiškai atjunkite!
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1519"/>
         <location filename="../src/mainWindow.cpp" line="1524"/>
-<source>The partition was successfully restored.
+        <source>The partition was successfully restored.
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>The partition is successful back.
+        <translation>Skaidinys sėkmingai atkurtas.
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1520"/>
-<source> special data has been restored.</source>
+        <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> akcijos būtų atstatytas.</translation>
+        <translation> spec. duomenys atkurti.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1525"/>
         <source> links </source>
         <comment> Links </comment>
-        <translation> links </translation>
+        <translation> nuoroda(-os,-ų) </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1525"/>
-<source> special data and the partition boot sector were restored.</source>
+        <source> special data and the partition boot sector were restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation>akcijos ir pertvarų sistemos įkrovos įrašas būtų atstatytas.</translation>
+        <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) atkurti.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1530"/>
@@ -3327,7 +3122,8 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atkūrimą iš atsarginės kopijos nutraukė naudotojas!
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1555"/>
@@ -3336,22 +3132,24 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation></translation>
+        <translation>Skaidinio atkūrimas iš atsarginės kopijos pavyko tik iš dalies.
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1557"/>
-<source> specials has been restored.
+        <source> specials has been restored.
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
 .</comment>
-        <translation> akcijos būtų atstatytas.</translation>
+        <translation> spec. duomenys atkurti.
+.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1558"/>
         <location filename="../src/mainWindow.cpp" line="1568"/>
         <source> directories and </source>
         <comment> Verzeichnisse und </comment>
-        <translation> directories and </translation>
+        <translation> katalogas(-ai,-ų) ir </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1560"/>
@@ -3360,15 +3158,17 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
 </comment>
-        <translation>specials were not properly restored.</translation>
+        <translation> spec. duomenys nebuvo tinkamai atkurti
+.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1567"/>
-<source> special data and the partition boot sector were restored.
+        <source> special data and the partition boot sector were restored.
 .</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
 .</comment>
-        <translation>akcijos ir pertvarų sistemos įkrovos įrašas būtų atstatytas.</translation>
+        <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) atkurti.
+.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1574"/>
@@ -3376,7 +3176,7 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation>You have tried restore a partition. The selected file can only restore directories. Please restart the program.
+        <translation>Bandote atkurti skaidinį, tačiau pasirinkta rinkmena gali atkurti tik katalogus. Iš naujo paleiskite programą.
 </translation>
     </message>
     <message>
@@ -3385,114 +3185,114 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
 </comment>
-        <translation>Įvedėte neteisingą slaptaždį.
+        <translation>Įvedėte klaidingą slaptažodį.
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1724"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
-        <translation>Backup file name: </translation>
+        <translation>Atsarginės kopijos rinkmenos vardas: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1725"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
-        <translation>Partition  name: </translation>
+        <translation>Skaidinio vardas: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1726"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
-        <translation>Partition type: </translation>
+        <translation>Skaidinio tipas: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1727"/>
         <source>UUID: </source>
-        <translation>UUID:</translation>
+        <translation>UUID: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1727"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
-        <translation>Description: </translation>
+        <translation>Aprašas: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1728"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
-        <translation>Partition size: </translation>
+        <translation>Skaidinio dydis: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1728"/>
         <location filename="../src/mainWindow.cpp" line="1729"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
-        <translation>Assignment of the partition: </translation>
+        <translation>Skaidinio lygiavimas: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1729"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
-        <translation>Compression: </translation>
+        <translation>Glaudinimas: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1730"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
-        <translation>Approximate image file sizes: </translation>
+        <translation>Apytikris atvaizdžio rinkmenos dydis: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1730"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
-        <translation>Other notes: </translation>
+        <translation>Kitos pastabos: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1731"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
-        <translation>to be protected/secured partition: / (root system directory) </translation>
+        <translation>apsaugotinas skaidinys: / (šakninis sistemos katalogas) </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1736"/>
         <location filename="../src/mainWindow.cpp" line="1742"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
-        <translation>Operating system: </translation>
+        <translation>Operacinė sistema: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1736"/>
         <location filename="../src/mainWindow.cpp" line="1742"/>
         <source>Kernel: </source>
-        <translation>Kernel:</translation>
+        <translation>Branduolys: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1738"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
-        <translation>to be protected/secured partition: /home</translation>
+        <translation>apsaugotinas skaidinys: /home (namų)</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1760"/>
         <source> MB</source>
-        <translation>MB</translation>
+        <translation> MB</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1771"/>
         <source> TB</source>
-        <translation>TB</translation>
+        <translation> TB</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1782"/>
         <source> GB</source>
-        <translation>GB</translation>
+        <translation> GB</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1941"/>
-<source>Do you really want to stop backing up or restoring the partition?</source>
+        <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>Do you really want to break the save or restore from the partition?</translation>
+        <translation>Ar tikrai norite nutraukti darbą su skaidinio atsargine kopija?</translation>
     </message>
 </context>
 <context>
@@ -3500,62 +3300,74 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="14"/>
         <source>Save/restore partition </source>
-        <translation>Save/restore partition</translation>
+        <translation>Disko skaidinio atsarginė kopija / atkūrimas </translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="27"/>
-<source>Select the partition to back up or write back to.</source>
-        <translation>Pasirinkite disko atsarginę kopiją arba atkurti.</translation>
+        <source>Select the partition to back up or write back to.</source>
+        <translation>Pasirinkite disko skaidinį, kurio atsarginę kopiją norite sukurti, arba skaidinį, į kurį norite išskleisti jau turimos atsarginės kopijos duomenis.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="33"/>
         <source>Existing partitions:</source>
-        <translation>Esamos pertvaros:</translation>
+        <translation>Skaidiniai:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="46"/>
-<source>Directory in which the partition is backed up or from which the recovery file is selected.</source>
-        <translation>Katalogas, kuriame disko remia aukštyn arba nuo atkūrimo failo yra pašalintas.</translation>
+        <source>Directory in which the partition is backed up or from which the recovery file is selected.</source>
+        <translation>Katalogas, į kurį norite įrašyti skaidinio atsarginės kopijos rinkmeną, arba katalogas, kuriame jau patalpinta skaidinio atsarginė kopija.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="52"/>
         <source>Backup directory:</source>
-        <translation>Atsarginę katalogą:</translation>
+        <translation>Atsarginių kopijų katalogas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="65"/>
         <source>Start the backup of a partition.</source>
-        <translation>Paleisti disko kopijas.</translation>
+        <translation>Pradėti kurti naują skaidinio atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="68"/>
-<source>Save partition</source>
-        <translation type="unfinished">Palaiko Pasiskirstymo</translation>
+        <source>Save partition</source>
+        <translation>Įrašyti skaidinį</translation>
+    </message>
+    <message>
+        <source>Restore partition</source>
+        <translation>Atkurti skaidinį</translation>
+    </message>
+    <message>
+        <source>&amp;Restore partition</source>
+        <translation>&amp;Atkurti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="81"/>
         <source>Exit</source>
-        <translation>Išėjimo</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="136"/>
         <source>S</source>
-        <translation>S</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="172"/>
         <source>Start restore a partition.</source>
-        <translation>Pradėti atkurti skaidinį.</translation>
+        <translation>Pradėti atkūrinėti skaidinį.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="175"/>
         <source>Partition restore</source>
-        <translation>Disko atkūrimas</translation>
+        <translation>Atkurti skaidinį</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="191"/>
-<source>File name of the backup:</source>
-        <translation>Atsarginės kopijos failo vardą:</translation>
+        <source>File name of the backup:</source>
+        <translation>Atsarginės kopijos rinkmenos vardas:</translation>
+    </message>
+    <message>
+        <source>Name the backup file:</source>
+        <translation>Atsarginės kopijos rinkmenos vardas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="227"/>
@@ -3566,29 +3378,37 @@ versija 0.8.5-11, 20.Jūnijs 2019</translation>
         <location filename="../src/ui/fsarchiverMain.ui" line="237"/>
         <source>On the number saved
 Files/directories:</source>
-        <translation>On the number saved
-Files/directories:</translation>
+        <translation>Rinkmenų / katalogų
+skaičius:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="245"/>
         <source>already saved 
 files/directories:</source>
-        <translation>already saved 
-files/directories:</translation>
+        <translation>Jau įrašyta 
+rinkmenų / katalogų:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="547"/>
         <source>&amp;Partition save 
 with fsarchiver</source>
         <extracomment>Partition mit * fsArchiver sichern:</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Skaidinio atsarginės 
+kopijos &amp;sukūrimas</translation>
+    </message>
+    <message>
+        <source>Restore partition
+with fsarchi&amp;ver</source>
+        <translation>&amp;Atkurti skaidinį iš 
+atsarginės kopijos</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="564"/>
-<source>Writing back partitions
+        <source>Writing back partitions
 with fsarchi&amp;ver</source>
         <extracomment>Partition mit fs-Archiver * zurückschreiben</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Skaidinio &amp;atkūrimas 
+iš atsarginės kopijos</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="592"/>
@@ -3598,101 +3418,102 @@ with fsarchi&amp;ver</source>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="665"/>
         <source>Se&amp;ttings</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nuostatos</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="724"/>
         <source>&amp;Information qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Informacija &amp;apie qt-fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="778"/>
-<source>&amp;Save a partition on network</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Save a partition on network</source>
+        <translation>Sukurti skaidinio atsarginę kopiją per ti&amp;nklą</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="787"/>
-<source>Restore &amp;a partition on network</source>
-        <translation type="unfinished"></translation>
+        <source>Restore &amp;a partition on network</source>
+        <translation>Atku&amp;rti skaidinį per tinklą</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="819"/>
         <source>&amp;Clone HD, HD-Image built and restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Klonuoti / atkurti standųjį &amp;diską</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="213"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="253"/>
         <source>seconds</source>
-        <translation>i¹saugojê</translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="220"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="288"/>
         <source>minutes</source>
-        <translation>minučių</translation>
+        <translation>min</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="281"/>
         <source>remaining time:</source>
-        <translation>likęs laikas</translation>
+        <translation>Likęs laikas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="363"/>
         <source>Number of processors
 cores for to be used fsarchiver:</source>
-        <translation>Number of processors
-cores for to be used fsarchiver:</translation>
+        <translation>Procesorių skaičius fsarchiver darbams:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="387"/>
         <source>Compression
 setting:</source>
-        <translation>Compression
-setting:</translation>
+        <translation>Glaudinimas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="401"/>
         <source>Notes to the backup is written to a file</source>
-        <translation>Atkreipia dėmesį į atsarginės kopijos yra įrašyti į failą.</translation>
+        <translation>Pastabos apie atsarginę kopiją įrašomos į rinkmeną</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="404"/>
-<source>Notes on the backup</source>
-        <translation>Atkreipia dėmesį į atsarginę kopiją</translation>
+        <source>Notes on the backup</source>
+        <translation>Pridėti pastabas apie atsarginę kopiją</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="427"/>
-<source>Identical backup files are overwritten without prior consultation.</source>
-        <translation>Pačios atsarginių kopijų failai perrašomi be išankstinių konsultacijų.</translation>
+        <source>Identical backup files are overwritten without prior consultation.</source>
+        <translation>Jei atsarginių kopijų rinkmenos sutampa su senomis, tai senas perrašyti nebeklausiant.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="430"/>
-<source>overwrite existing backup.</source>
-        <translation>Laisvas atsarginė perrašyti</translation>
+        <source>overwrite existing backup.</source>
+        <translation>Jei yra senų atsarginių kopijų, jas perrašyti.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="443"/>
-<source>Split backup file to DVD size:</source>
-        <translation>Stock Split on size:</translation>
+        <source>Split backup file to DVD size:</source>
+        <translation>Dalinti į DVD dydžio rinkmenas:</translation>
+    </message>
+    <message>
+        <source>Split archive , specified size:</source>
+        <translation>Dalinti į pasirinkto dydžio rinkmenas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="459"/>
         <source>Encrypt 
 backup key</source>
-        <translation>Encrypt
-backup key</translation>
+        <translation>Užšifruoti naudojant raktą</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="473"/>
-<source>PBR is the first block of a bootable partition.</source>
-        <translation>PBR yra pirmojo bloko bet įkrovos skaidinys.</translation>
+        <source>PBR is the first block of a bootable partition.</source>
+        <translation>PBR yra skaidinio, iš kurio paleidžiama operacinė sistema, pirmasis blokas.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="476"/>
         <source>Save PBR</source>
         <extracomment>PBR sichern</extracomment>
-        <translation>Išsaugoti PBR</translation>
+        <translation>Įrašyti PBR</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="499"/>
@@ -3701,145 +3522,94 @@ backup key</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="529"/>
-<source>Planned action:</source>
+        <source>Planned action:</source>
         <extracomment>vorgesehene Aktion:</extracomment>
-        <translation>Siūlomų veiksmų:</translation>
+        <translation>Darbas su fsarchiver:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="647"/>
         <source>&amp;Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Veiksmai</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="671"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Informacija</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="677"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Baigti</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="697"/>
         <source>&amp;Backup partition</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sukurti skaidinio atsarginę kopiją</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="715"/>
         <source>&amp;Basic Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pagrindinės nuostatos</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="733"/>
         <source>Save &amp;MBR/GPT</source>
-        <translation type="unfinished"></translation>
+        <translation>Įrašyti &amp;MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="742"/>
         <source>R&amp;estore MBR/GPT</source>
-        <translation type="unfinished"></translation>
+        <translation>Atkurti M&amp;BR/GPT</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="751"/>
         <source>Rest&amp;ore directory </source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;tkurti katalogą </translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="760"/>
         <source>Save &amp;directory </source>
-        <translation type="unfinished"></translation>
+        <translation>Sukurti &amp;katalogo atsarginę kopiją </translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="769"/>
         <source>&amp;Exit program</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Partition save 
-with fsarchiver</source>
-        <extracomment>Partition mit * fsArchiver sichern:</extracomment>
-        <translation type="obsolete">Partition save 
-with fsarchiver</translation>
+        <translation>Iš&amp;eiti</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="579"/>
         <source>Show hidden directories and files</source>
-        <translation>Restore partition</translation>
-    </message>
-    <message>
-        <source>Actions</source>
-        <translation type="obsolete">Actions</translation>
-    </message>
-    <message>
-        <source>Settings</source>
-        <translation type="obsolete">Settings</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation type="obsolete">Information</translation>
+        <translation>Rodyti slepiamuosius katalogus ir rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="688"/>
         <source>Basic Settings</source>
-        <translation>Basic Settings</translation>
-    </message>
-    <message>
-        <source>Backup partition</source>
-        <translation type="obsolete">Backup partition</translation>
-    </message>
-    <message>
-        <source>Information fsarchiver</source>
-        <translation type="obsolete">Information fsarchiver</translation>
-    </message>
-    <message>
-        <source>Save MBR/GPT</source>
-        <translation type="obsolete">Save MBR/GPT</translation>
-    </message>
-    <message>
-        <source>Restore MBR/GPT</source>
-        <translation type="obsolete">Restore MBR/GPT</translation>
-    </message>
-    <message>
-        <source>Restore directory </source>
-        <translation type="obsolete">Restore directory</translation>
-    </message>
-    <message>
-        <source>Save directory </source>
-        <translation type="obsolete">Save directory</translation>
-    </message>
-    <message>
-        <source>Exit program</source>
-        <translation type="obsolete">Exit program</translation>
+        <translation>Pagrindinės nuostatos</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="796"/>
         <source>breakprocess</source>
-        <translation>breakprocess</translation>
+        <translation>nutraukimas</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="805"/>
         <source>Clone Drive HD-Image save/restore </source>
-        <translation>Clone Drive HD-Image save/restore</translation>
+        <translation>Klonuoti / atkurti standųjį diską </translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="810"/>
         <source>HD-Image save/restore on network</source>
-        <translation>HD-Image save/restore on network</translation>
-    </message>
-    <message>
-        <source>Clone HD, HD-Image built and restore</source>
-        <translation type="obsolete">Clone HD, HD-Image built and restore</translation>
+        <translation>Standžiojo disko atsarginė kopija per tinklą</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="824"/>
-<source>Backing up directories over the networ</source>
-        <translation type="unfinished"></translation>
+        <source>Backing up directories over the networ</source>
+        <translation>Katalogo atsarginės kopijos kūrimas per tinklą</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="829"/>
-<source>Restore directories over the networ</source>
-        <translation type="unfinished"></translation>
+        <source>Restore directories over the networ</source>
+        <translation>Katalogo atkūrimas iš atsarginės kopijos per tinklą</translation>
     </message>
 </context>
 <context>
@@ -3856,57 +3626,57 @@ with fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="290"/>
-<source>There is currently no network computer available.
+        <source>There is currently no network computer available.
 </source>
         <comment>Es ist derzeit kein Netzwerkrechner.
 </comment>
-        <translation>There is currently no available network computer.
+        <translation>Nepavyksta aptikti jokio tinklo kompiuterio.
 </translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="472"/>
-<source>You must select the computer on which the backup data is to be written.
+        <source>You must select the computer on which the backup data is to be written.
 </source>
         <comment>Sie müssen den Rechner auswählen, auf den die Sicherungsdaten geschrieben werden sollen
 </comment>
-        <translation>You must select the computer on which the backup data to be written
+        <translation>Pasirinkite kompiuterį, kuriame norėtumėte patalpinti atsarginę kopiją.
 </translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="478"/>
-<source>You must select the computer from which the backup data is to be written back.
+        <source>You must select the computer from which the backup data is to be written back.
 </source>
         <comment>Sie müssen den Rechner auswählen, von dem die Sicherungsdaten zurück geschrieben werden sollen
 </comment>
-        <translation>You must select your computer from which the backup data to be written back
+        <translation>Pasirinkite kompiuterį, kuriame patalpinta atsarginė kopija, iš kurios norėtumėte atkurti duomenis.
 </translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="484"/>
-<source>You must enter the user name. Otherwise network computers cannot be accessed.
+        <source>You must enter the user name. Otherwise network computers cannot be accessed.
 </source>
         <comment>Sie müssen den Benutzernamen eingeben. Sonst kann nicht auf Netzrechner zugegriffen werden
 </comment>
-        <translation>You must enter the user name. Can not otherwise be accessible to network computers
+        <translation>Įveskite naudotojo vardą. Kitaip negalėsite pasiekti tinklo kompiuterių.
 </translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="488"/>
-<source>Is that correct that you have not entered a key? (NFS does not need a key.</source>
+        <source>Is that correct that you have not entered a key? (NFS does not need a key.</source>
         <comment>Ist das richtig, dass Sie keinen Schlüssel eingegeben haben? (NFS benötigt keinen Schlüssel)</comment>
-        <translation>Is it true that you have entered a key? (NFS dont need a key)</translation>
+        <translation>Ar tikrai norite nenurodyti rakto? (NFS nereikia rakto.)</translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="681"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>taip</translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="682"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>ne</translation>
+        <translation>Ne</translation>
     </message>
 </context>
 <context>
@@ -3915,18 +3685,18 @@ with fsarchiver</translation>
         <location filename="../src/ui/clone_dialog.ui" line="14"/>
         <source>Clone hard drive</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>Klonas kietajame diske</translation>
+        <translation>Standžiojo disko klonavimas</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="521"/>
         <source>Image of a &amp;hard disk to create</source>
         <extracomment>sdb</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Sukurti standžiojo &amp;disko atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="534"/>
         <source>Image of a partition &amp;to create</source>
-        <translation type="unfinished"></translation>
+        <translation>Sukurti &amp;skaidinio atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="574"/>
@@ -3937,24 +3707,19 @@ with fsarchiver</translation>
         <location filename="../src/ui/clone_dialog.ui" line="600"/>
         <source>Exit</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Išėjimo</translation>
-    </message>
-    <message>
-        <source>Save / Restore MBR</source>
-        <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation type="obsolete">Išsaugoti / atkurti MBA</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="39"/>
         <source>Exist harddrive:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation>Egzistuoja kietajame diske:</translation>
+        <translation>Esamas standusis diskas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="86"/>
         <source>New harddrive:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation>Naują diską:</translation>
+        <translation>Naujas standusis diskas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="99"/>
@@ -3963,19 +3728,19 @@ with fsarchiver</translation>
         <location filename="../src/ui/clone_dialog.ui" line="626"/>
         <location filename="../src/ui/clone_dialog.ui" line="639"/>
         <source>CommandLinkButton</source>
-        <translation>CommandLinkButton</translation>
+        <translation>Komandos nuorodos mygtukas</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="140"/>
         <location filename="../src/ui/clone_dialog.ui" line="205"/>
         <source>seconds</source>
-        <translation>sekundžių</translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="166"/>
         <location filename="../src/ui/clone_dialog.ui" line="231"/>
         <source>minutes</source>
-        <translation>minučių</translation>
+        <translation>min</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="192"/>
@@ -3985,12 +3750,12 @@ with fsarchiver</translation>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="257"/>
         <source>remaining time:</source>
-        <translation>likęs laikas</translation>
+        <translation>Likęs laikas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="302"/>
         <source>already saved:</source>
-        <translation>i¹saugojê</translation>
+        <translation>Jau įrašyta:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="318"/>
@@ -4001,163 +3766,65 @@ with fsarchiver</translation>
         <location filename="../src/ui/clone_dialog.ui" line="331"/>
         <location filename="../src/ui/clone_dialog.ui" line="357"/>
         <source>hours</source>
-        <translation>valandų</translation>
+        <translation>val.</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="383"/>
         <source>Transmission speed:</source>
-        <translation>Perdavimo greitis</translation>
+        <translation>Perdavimo greitis:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="409"/>
         <source>MB/sec</source>
-        <translation>MB/sek.</translation>
+        <translation>MB/s</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="423"/>
         <source>f</source>
-        <translation>f</translation>
+        <translation type="unfinished">f</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="436"/>
         <source>Directory in which the image is written</source>
-        <translation>Katalogas, kuriame vaizdas yra parašyta</translation>
+        <translation>Katalogas, kuriame talpinamas atvaizdis</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="442"/>
         <source>Backup directory:</source>
-        <translation>Atsarginę katalogą:</translation>
+        <translation>Atsarginių kopijų katalogas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="470"/>
         <source>&amp;Image of a hard disk write back</source>
         <extracomment>sdc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Atkurti standųjį diską pagal atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="483"/>
         <source>&amp;Clone hard disk</source>
         <extracomment>sda</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Klonuoti standųjį diską</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="547"/>
         <source>Image of a &amp;partition write back</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Image of a hard disk write back</source>
-        <extracomment>sdc</extracomment>
-        <translation type="obsolete">Vaizdas iš standžiojo disko parašyti atgal</translation>
-    </message>
-    <message>
-        <source>Clone hard disk</source>
-        <extracomment>sda</extracomment>
-        <translation type="obsolete">Klonas standžiajame diske</translation>
+        <translation>A&amp;tkurti skaidinį pagal atvaizdį</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="502"/>
-<source>Planned action:</source>
+        <source>Planned action:</source>
         <extracomment>vorgesehene Aktion:</extracomment>
-        <translation>Siūlomų veiksmų:</translation>
-    </message>
-    <message>
-        <source>Image of a hard disk to create</source>
-        <extracomment>sdb</extracomment>
-        <translation type="obsolete">Atvaizdas yra standžiojo disko sukurti:</translation>
+        <translation>Darbas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="560"/>
         <source>Use gzip</source>
-        <translation>Naudojant gzip</translation>
+        <translation>Naudoti gzip</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="587"/>
         <source>Save/Restore</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>clone_dialog_net</name>
-    <message>
-        <source>Clone hard drive</source>
-        <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation type="obsolete">Klonas kietajame diske</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <extracomment>Abbrechen</extracomment>
-        <translation type="obsolete">Atšaukti</translation>
-    </message>
-    <message>
-        <source>Save / restore MBR</source>
-        <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation type="obsolete">Išsaugoti / atkurti MBA</translation>
-    </message>
-    <message>
-        <source>Exist harddrive:</source>
-        <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation type="obsolete">Egzistuoja kietajame diske:</translation>
-    </message>
-    <message>
-        <source>Image einer Festplatte erstellen:</source>
-        <extracomment>sdb</extracomment>
-        <translation type="obsolete">Vaizdo einer Festplatte erstellen:</translation>
-    </message>
-    <message>
-        <source>Image einer Festplatte zurückschreiben:</source>
-        <extracomment>sdc</extracomment>
-        <translation type="obsolete">Vaizdo einer Festplatte zurückschreiben:</translation>
-    </message>
-    <message>
-        <source>seconds</source>
-        <translation type="obsolete">sekundžių</translation>
-    </message>
-    <message>
-        <source>minutes</source>
-        <translation type="obsolete">minučių</translation>
-    </message>
-    <message>
-        <source>elapsed time:</source>
-        <translation type="obsolete">Praėjęs laikas:</translation>
-    </message>
-    <message>
-        <source>remaining time:</source>
-        <translation type="obsolete">likęs laikas</translation>
-    </message>
-    <message>
-        <source>already saved:</source>
-        <translation type="obsolete">i¹saugojê</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation type="obsolete">MB</translation>
-    </message>
-    <message>
-        <source>hours</source>
-        <translation type="obsolete">valandų</translation>
-    </message>
-    <message>
-        <source>f</source>
-        <translation type="obsolete">f</translation>
-    </message>
-    <message>
-        <source>Image name:</source>
-        <extracomment>Name der Sicherungsdatei:</extracomment>
-        <translation type="obsolete">Vaizdo pavadinimas:</translation>
-    </message>
-    <message>
-        <source>Network computer  name:</source>
-        <extracomment>Netzrechnername:</extracomment>
-        <translation type="obsolete">Tinklo kompiuterio vardą:</translation>
-    </message>
-    <message>
-        <source>Exist Image:</source>
-        <translation type="obsolete">Yra vaizdo:</translation>
-    </message>
-    <message>
-        <source>l</source>
-        <translation type="obsolete">l</translation>
+        <translation>Įrašyti / atkurti</translation>
     </message>
 </context>
 <context>
@@ -4167,56 +3834,56 @@ with fsarchiver</translation>
         <location filename="../src/ui/dir_dialog.ui" line="42"/>
         <source>Save/restore directory</source>
         <extracomment>Verzeichnis sichern/zurückschreiben</extracomment>
-        <translation>Save/restore directory</translation>
+        <translation>Katalogo atsarginė kopija ir atkūrimas</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="26"/>
         <source>Exit</source>
         <extracomment>Schließen</extracomment>
-        <translation>Išėjimo</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="39"/>
-<source>Starting a Backup or Restoring a Directory.</source>
-        <translation>Start the backup or the restore of a folder.</translation>
+        <source>Starting a Backup or Restoring a Directory.</source>
+        <translation>Pradėti kurti katalogo atsarginę kopiją arba pradėti atkūrinėti katalogą.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="68"/>
-<source>Select the directory that is to be backed up or written back</source>
-        <translation>Select the folder to be backed up or restored.</translation>
+        <source>Select the directory that is to be backed up or written back</source>
+        <translation>Pasirinkite katalogą, kurio atsarginę kopiją norite sukurti, arba katalogą, į kurį norite išskleisti jau turimos atsarginės kopijos duomenis</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="71"/>
         <source>Saved directory</source>
         <extracomment>zu sicherndes Verzeichnis:</extracomment>
-        <translation>Saved directory</translation>
+        <translation>Saugotinas katalogas arba katalogas išskleidimui:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="97"/>
-<source>Directory to which the directory backup is written or from which the recovery file is read</source>
-        <translation>Directory in which the folder is backed up or from the recovery file is removed.</translation>
+        <source>Directory to which the directory backup is written or from which the recovery file is read</source>
+        <translation>Katalogas, į kurį norite įrašyti katalogo atsarginės kopijos rinkmeną, arba katalogas, kuriame jau patalpinta katalogo atsarginė kopija</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="100"/>
         <source>Location (path) of backup:</source>
         <extracomment>Ort (Pfad) der Sicherung:</extracomment>
-        <translation>Location (path) of backup:</translation>
+        <translation>Atsarginės kopijos vieta (kelias):</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="128"/>
-<source>Number of files/directories
+        <source>Number of files/directories
 to be backed up</source>
         <extracomment>Anzahl der zu sichernden Dateien/Verzeichnisse:</extracomment>
-        <translation>On the number of
-captive Files/directories:</translation>
+        <translation>Rinkmenų / katalogų
+skaičius:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="155"/>
         <source>Already backed
 Files/directories:</source>
         <extracomment>bereits gesicherte Datein/Verzeichnisse:</extracomment>
-        <translation>Already backed
-Files/directories:</translation>
+        <translation>Jau įrašyta 
+rinkmenų / katalogų:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="198"/>
@@ -4229,73 +3896,71 @@ Files/directories:</translation>
         <location filename="../src/ui/dir_dialog.ui" line="302"/>
         <source>minutes</source>
         <extracomment>Minuten</extracomment>
-        <translation>minučių</translation>
+        <translation>min</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="250"/>
         <location filename="../src/ui/dir_dialog.ui" line="315"/>
         <source>seconds</source>
         <extracomment>Sekunden</extracomment>
-        <translation>sekundžių</translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="263"/>
         <source>remaining  time:</source>
         <extracomment>noch zu erwartende Zeit:</extracomment>
-        <translation>remaining  time:</translation>
+        <translation>Likęs laikas:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="339"/>
         <source>Number of processor cores
 for to be used fsarchiver:</source>
         <extracomment>Anzahl der Prozessorkerne, die für fsarchiver verwendet werden sollen:</extracomment>
-        <translation>Number of processor cores
-for to be used fsarchiver:</translation>
+        <translation>Procesorių skaičius fsarchiver darbams:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="368"/>
         <source>Compression setting:</source>
         <extracomment>Kompressioneinstellung:</extracomment>
-        <translation>Compression setting:</translation>
+        <translation>Glaudinimas:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="391"/>
         <source>Encrypt
 backup key</source>
-        <translation>Encrypt
-backup key</translation>
+        <translation>Užšifruoti naudojant raktą:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="415"/>
-<source>Identical backup files are overwritten without prior consultation.</source>
-        <translation>Pačios atsarginių kopijų failai perrašomi be išankstinių konsultacijų.</translation>
+        <source>Identical backup files are overwritten without prior consultation.</source>
+        <translation>Jei atsarginių kopijų rinkmenos sutampa su senomis, tai senas perrašyti nebeklausiant.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="418"/>
         <source>Overwrite existing backup</source>
         <extracomment>vorhandene Sicherung überschreiben</extracomment>
-        <translation>Overwrite existing backup</translation>
+        <translation>Jei yra senų atsarginių kopijų, jas perrašyti</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="431"/>
-<source>The directory is written back to the path of origin</source>
-        <translation>The directory will be written back to the original path</translation>
+        <source>The directory is written back to the path of origin</source>
+        <translation>Atsarginę kopiją išskleisti į katalogą, kuriam atsarginė kopija ir buvo sukurta</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="434"/>
-<source>Writing a backup back to the original path.</source>
+        <source>Writing a backup back to the original path.</source>
         <extracomment>Sicherung an den Ursprungsort zurückschreiben</extracomment>
-        <translation>Backup restore to the Origin</translation>
+        <translation>Atkurti į pradinę vietą.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="458"/>
         <source>show hidden directories/files</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti slepiamuosius katalogus ir rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="471"/>
         <source>z</source>
-        <translation type="unfinished"></translation>
+        <translation>z</translation>
     </message>
 </context>
 <context>
@@ -4304,68 +3969,80 @@ backup key</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="14"/>
         <source>Save / Restore MBR/GPT</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>Save / Restore MBR/GPT</translation>
+        <translation>MBR/GPT atsarginė kopija / atkūrimas</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="27"/>
-<source>Restore only the bootloader area</source>
+        <source>Restore only the bootloader area</source>
         <extracomment>nur den Bootloaderbereich wieder herstellen</extracomment>
-        <translation>Only the boot loader area to restore</translation>
+        <translation>Atkurti tik paleidyklę</translation>
+    </message>
+    <message>
+        <source>Restore partition table</source>
+        <translation>Atkurti skaidinių lentelę</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="32"/>
-<source>Restoring the bootloader area and partition table</source>
+        <source>Restoring the bootloader area and partition table</source>
         <extracomment>Bootloaderbereich und die Partitionstabelle wieder herstellen</extracomment>
-        <translation>Bootloader area and restore the partition table</translation>
+        <translation>Atkurti paleidyklę ir skaidinių lentelę</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="37"/>
-<source>Writing back partitions</source>
+        <source>Writing back partitions</source>
         <extracomment>Partitionstabelle wiederherstellen</extracomment>
-        <translation>Restore partition table</translation>
+        <translation>Įrašomi skaidiniai</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="42"/>
-<source>Restore hidden area. (Without bootloader and without partition table).</source>
+        <source>Restore hidden area. (Without bootloader and without partition table).</source>
         <extracomment>Verborgenen Bereich  wieder herstellen. (Ohne  Bootloader und ohne Partitionstabelle).</extracomment>
-        <translation>Secretly area to restore. (Without Boot Loader and without partition table).</translation>
+        <translation>Atkurti paslėptąją sritį. (Be paleidyklės ir be skaidinių lentelės.)</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="61"/>
         <source>Exit</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Išėjimo</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="74"/>
         <source>Save / restore MBR</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>Išsaugoti / atkurti MBA</translation>
+        <translation>Įrašyti / atkurti MBR</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="100"/>
         <source>Directory in which the MBR/GPT is written.</source>
-        <translation>Directory in which the MBR/GPT is written.</translation>
+        <translation>Katalogas, kuriame norėtumėte įrašyti MBR/GPT atsarginę kopiją.</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="103"/>
         <source>MBR/GPT backup directory:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation>MBR/GPT backup directory:</translation>
+        <translation>MBR/GPT atsarginės kopijos katalogas:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="116"/>
-<source>from this hard disk:
+        <source>from this hard disk:
 from this hard disk:</source>
         <extracomment>MBR von dieser dieser Festplatte sichern / wiederherstellen:</extracomment>
-        <translation>MBR of that drive this
-Backup / restore:</translation>
+        <translation type="unfinished">Standusis diskas, kurio MBR 
+norite nukopijuoti / atkurti:</translation>
+    </message>
+    <message>
+        <source>Backup / restore MBR
+from this hard disk:</source>
+        <extracomment>MBR von dieser dieser Festplatte sichern / wiederherstellen:</extracomment>
+        <translation type="unfinished">Standusis diskas, kurio MBR 
+norite nukopijuoti / atkurti:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
         <source>Existing
 &amp;harddrive:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standusis
+&amp;diskas:</translation>
     </message>
 </context>
 <context>
@@ -4373,7 +4050,7 @@ Backup / restore:</translation>
     <message>
         <location filename="../src/ui/setting.ui" line="14"/>
         <source>Basic settings</source>
-        <translation>Basic settings</translation>
+        <translation>Pagrindinės nuostatos</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="41"/>
@@ -4381,121 +4058,118 @@ Backup / restore:</translation>
 cores, for fsarchiver
 should be used:</source>
         <extracomment>Anzahl Prozessorenkerne, * die für fsarchiver * verwendet werden sollen:</extracomment>
-        <translation>Number of processors
-cores, for fsarchiver
-should be used:</translation>
+        <translation>Numatytasis procesorių skaičius 
+fsarchiver darbams:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="66"/>
         <source>Standard
 compression:</source>
         <extracomment>Standard*kompression:</extracomment>
-        <translation>Standard
-compression:</translation>
+        <translation>Numatytasis glaudinimas:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="90"/>
         <source>Language:</source>
-        <translation>Language:</translation>
+        <translation>Kalba:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="113"/>
-<source>Overwrite existing files by default</source>
+        <source>Overwrite existing files by default</source>
         <extracomment>vorhandene Dateien * standardmäßig überschreiben</extracomment>
-        <translation>Existing files by default override</translation>
+        <translation>Numatytuoju atveju perrašyti senas rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="126"/>
-<source>Activate notes for backup  by default</source>
+        <source>Activate notes for backup  by default</source>
         <extracomment>Hinweise zur Sicherung * standardmäßig aktivieren</extracomment>
-        <translation>Backup note enable by default</translation>
+        <translation>Numatytuoju atveju siūlyti pridėti pastabą</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="139"/>
-<source>Directories write back
+        <source>Directories write back
 to the original location by default</source>
         <extracomment>Verzeichnisse * standardmäßig an * den ursprünglichen * Ort zurückschreiben</extracomment>
-        <translation>Directories by default write 
-back to the original location</translation>
+        <translation>Numatytuoju atveju katalogus atkurti į pradinę vietą</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="153"/>
         <source>Enable encryption by default</source>
         <extracomment>Verschlüsselung * standardmäßig aktivieren</extracomment>
-        <translation>Enable encryption by default</translation>
+        <translation>Numatytuoju atveju įgalinti šifravimą</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="166"/>
-<source>Archive file size divided on DVD</source>
+        <source>Archive file size divided on DVD</source>
         <extracomment>Archiv-Datei auf DVD * Größe aufteilen</extracomment>
-        <translation>Archive file size divided on DVD</translation>
+        <translation>Dalinti į DVD dydžio rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="179"/>
         <source>Show passwords</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti slaptažodžius</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="192"/>
-<source>Save network input data</source>
+        <source>Save network input data</source>
         <extracomment>Netzwerkeingabedaten * speichern</extracomment>
-        <translation>Network input data save</translation>
+        <translation>Įrašyti tinklo įvedimo duomenis</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="205"/>
         <source>Save Settings</source>
         <extracomment>Einstellungen speichern</extracomment>
-        <translation>Save Settings</translation>
+        <translation>Įrašyti nuostatas</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="218"/>
         <source>Exit</source>
         <extracomment>Beenden</extracomment>
-        <translation>Išėjimo</translation>
+        <translation>Užverti</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="231"/>
         <source>Safe PBR by default</source>
         <extracomment>PBR standradmäßig sichern</extracomment>
-        <translation>Safe PBR by default</translation>
+        <translation>Numatytuoju atveju įrašyti skaidinio paleidimo įrašą (PBR)</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="254"/>
         <source>Network protocol:</source>
-        <translation>Network protocol:</translation>
+        <translation>Tinklo protokolas:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="267"/>
-<source>Display note for access to network computers</source>
+        <source>Display note for access to network computers</source>
         <extracomment>Hinweis  für den Zugriff auf Netzwerkrechner anzeigen</extracomment>
-        <translation>Show Note for accessing network computer</translation>
+        <translation type="unfinished">Rodyti informaciją apie prieigą prie tinklo kompiuterių</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="280"/>
-<source>Displaying a note about mounting the network computer</source>
+        <source>Displaying a note about mounting the network computer</source>
         <extracomment>Hinweis über das Mounten des Netzwerkrechners anzeigen</extracomment>
-        <translation>Show  Note to mount the network computer</translation>
+        <translation type="unfinished">Rodyti informaciją apie tinklo kompiuterių prijungimą</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="293"/>
-<source>Display notes on how to use the program qt-fsarchiver</source>
+        <source>Display notes on how to use the program qt-fsarchiver</source>
         <extracomment>Hinweise zum Gebrauch des Programms anzeigen</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti paaiškinimą kaip naudotis qt-fsarchiver programa</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="306"/>
         <source>Show hidden directories and files</source>
-        <translation type="unfinished">Restore partition</translation>
+        <translation>Rodyti slepiamuosius katalogus ir rinkmenas</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="329"/>
         <source>zstd level   1: very fast   22:highest compression</source>
-        <translation type="unfinished">zstd 1 lygis: labai greitai 22: didžiausias suspaudimas</translation>
+        <translation>zstd lygiai: 1 – greičiausias, 22 – stipriausias glaudinimas</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="342"/>
         <source>z</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">z</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="355"/>
@@ -4503,13 +4177,15 @@ back to the original location</translation>
 slow down the evaluation time. As standard, the 
 evaluation time set with factor 5 * 10 msec
 You can set the factor between 1 and 20.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jei progama veikia netinkamai, galite padidinti įvertinimo laiką.
+Numatytuoju atveju įvertinimo laikas yra 5 * 10 ms.
+Galite pasirinkti daugiklį nuo 1 iki 20.</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="361"/>
         <source>Selection of the evaluation time 
 from the terminal program. </source>
-        <translation type="unfinished"></translation>
+        <translation>Įvertinimo laikas iš terminalo programos. </translation>
     </message>
 </context>
 <context>
@@ -4518,25 +4194,25 @@ from the terminal program. </source>
         <location filename="../src/ui/treeview.ui" line="14"/>
         <source>Select restore file</source>
         <extracomment>Wiederherstellungsdatei auswählen</extracomment>
-        <translation>Select restore file</translation>
+        <translation>Pasirinkite atkurtiną rinkmeną</translation>
     </message>
     <message>
         <location filename="../src/ui/treeview.ui" line="41"/>
         <source>Cancel</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Atšaukti</translation>
+        <translation>Atsisakyti</translation>
     </message>
     <message>
         <location filename="../src/ui/treeview.ui" line="60"/>
         <source>Next</source>
         <extracomment>Mit der Wiederherstellung fortfahren</extracomment>
-        <translation>Next</translation>
+        <translation>Toliau</translation>
     </message>
     <message>
         <location filename="../src/ui/treeview.ui" line="92"/>
         <source>Existing restore files:</source>
         <extracomment>Vorhandene Wiederherstellungsdateien:</extracomment>
-        <translation>Existing restore files:</translation>
+        <translation>Atkurtinos rinkmenos:</translation>
     </message>
     <message>
         <location filename="../src/ui/treeview.ui" line="105"/>

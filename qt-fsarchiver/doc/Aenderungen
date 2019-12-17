@@ -1,6 +1,9 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.5-12 20. Dezember 2019.
+    - Internationale Sprache wird beim Start erkannt.
+    - Litauische Übersetzung wurde vervollständigt.
 * qt-fsarchiver-0.8.5-11 20. Juni 2019.
     - Raid und LVM wird unterstützt.
 * qt-fsarchiver-0.8.5-10 20. Mai 2019.
