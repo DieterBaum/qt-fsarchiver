@@ -2870,11 +2870,11 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Peate sisestama parooli</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="505"/>
@@ -3144,10 +3144,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Varundamine ja taastamine vaheseinad, kataloog ja MBR.
-Versioon 0.8.5-12, 20.Detsember 2019</translation>
+Versioon 0.8.5-14, 6.jaanuar 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

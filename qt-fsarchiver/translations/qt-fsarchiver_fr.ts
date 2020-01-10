@@ -361,9 +361,9 @@
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip meilleur</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip meilleur</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
@@ -1071,8 +1071,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
-        <translation>qzip meilleur</translation>
+        <source>gzip best</source>
+        <translation>gzip meilleur</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
@@ -2010,9 +2010,9 @@ Veuillez saisir la clef :</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip meilleur</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip meilleur</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2464,9 +2464,9 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip meilleur</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip meilleur</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>
@@ -2627,11 +2627,11 @@ Veuillez saisir la clef :</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="168"/>
-        <source>You must enter a password. You must exit the program and restart.
+        <source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation>La spécification du mot de passe est indispensable. Terminer le programme et démarrer-le.</translation>
+        <translation>La spécification du mot de passe est indispensable.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="499"/>
@@ -2872,10 +2872,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1153"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>sauvegarde et de restauration des répertoires de partition et MBR.
-Version 0.8.5-12, Décembre 2019 20. </translation>
+Version 0.8.5-14, janvier 2020 6. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1224"/>

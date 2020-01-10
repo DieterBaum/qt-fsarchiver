@@ -1,11 +1,11 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2020 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Publicstimmt nicht 
- * License v2 as published by the Free Software Foundation.
+ * License v3 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -33,6 +33,7 @@ extern QString parameter[15];
 extern QString folder_file_;
 extern QString part[100][10];
 extern QString user;
+extern int flag;
 QString folder_file_1;
 QString zip_net[11];
 QString folder_net;
@@ -138,7 +139,7 @@ setupUi(this); // this sets up GUI
         zip_net[1]= tr("lzo");
    	zip_net[2]= tr("gzip fast");
    	zip_net[3]= tr("gzip standard");
-   	zip_net[4]= tr("qzip best");
+   	zip_net[4]= tr("gzip best");
    	zip_net[5]= tr("bzip2 fast");
    	zip_net[6]= tr("bzip2 good");
    	zip_net[7]= tr("lzma fast");
@@ -482,7 +483,9 @@ QString befehl;
 }
 
 int DialogNet::savePartition() {
+flag = 1;
 MWindow window;
+flag = 0;
 //folder_dir_net.append  (dirModel->filePath(index));
 //folder_dir_net =  (dirModel->filePath(index));
 QFileInfo info(folder_dir_net); 
@@ -548,8 +551,8 @@ QString attribute;
 		file.close();
 		return 0 ;
  	        }
-this->setCursor(Qt::WaitCursor);
-QString zeichen = "'";
+       this->setCursor(Qt::WaitCursor);
+       QString zeichen = "'";
        if (net_art == 1) //SSH
            stop = folder_free_mounten();
        if (stop == 256){
@@ -758,7 +761,9 @@ QString zeichen = "'";
 }  
 
 int DialogNet::restorePartition() {
+flag = 1;
 MWindow window;
+flag = 0;
 Qt::CheckState state1;
 //folder_dir_net.append  (dirModel->filePath(index));
 //folder_dir_net =  (dirModel->filePath(index));
@@ -814,7 +819,7 @@ QString optionkey;
                     return 0;
          	   }
          	}
-          if (net_art == 1)
+          if (net_art == 1) //SSH
               folder_free_mounten();
           this->setCursor(Qt::WaitCursor);  
           this->setCursor(Qt::ArrowCursor);
@@ -869,14 +874,14 @@ QString optionkey;
                               befehl = "";
                           return 0;
                         }
-			
-
                 }
-                dev_part = datei_auswerten_net("r");
+                //Überprüfen, ob in die Originalpartition zurückgeschrieben werden soll
+                while (dev_part == ""){
                 QThread::msleep(10 * sleepfaktor);
-		//Überprüfen, ob in die Originalpartition zurückgeschrieben werden soll
-            if (dev_part != "/dev/" + partition_net_){
-               cmp = questionMessage_net(tr("The partition to be recovered ", "Die wiederherzustellende Partition ") +  "/dev/" + partition_net_ + tr(" does not match the backed up partition.", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you still want to perform the restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
+                dev_part = datei_auswerten_net("r");
+                }
+                if (dev_part != "/dev/" + partition_net_){
+                   cmp = questionMessage_net(tr("The partition to be recovered ", "Die wiederherzustellende Partition ") +  "/dev/" + partition_net_ + tr(" does not match the backed up partition.", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you still want to perform the restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (cmp == 2)  //nicht wiederherstellen
                   return 0;
             }
@@ -922,7 +927,6 @@ QString optionkey;
                        UUID_net = window.UUID_auslesen(listwidgetrow);
 
                       part_art_net = mtab_einlesen_net(listwidgetrow);
-qDebug() << "row_net" << row_net << part_art_net;
                      //Überprüfung ob System oder Home Partition
                       if (part_art_net == "system")
                 	 {
@@ -1016,7 +1020,6 @@ if (partition_typ_net == "btrfs"){
                }
      }
    return 0;
-   
 }
 
 void DialogNet::addWidget() {
@@ -1977,8 +1980,12 @@ QString dummy;
 QString filename = userpath_net + "/.config/qt-fsarchiver/zahlen.txt";
 QFile file(filename);
          if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QThread::msleep(5 * sleepfaktor);
             QTextStream ds(&file);
+            while (text == ""){
             text = ds.readLine();
+            QThread::msleep(5 * sleepfaktor);
+            }
             dummy = text.right(1);
             if (dummy == buchstabe)
                {
@@ -2083,5 +2090,7 @@ QString DialogNet::mtab_einlesen_net(int zahl)
 return "";
 }  
  
+
+
 
 

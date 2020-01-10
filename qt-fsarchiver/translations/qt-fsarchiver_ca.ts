@@ -381,10 +381,6 @@
         <translation type="vanished">gzip estàndard</translation>
     </message>
     <message>
-        <source>qzip best</source>
-        <translation type="vanished">qzip millor</translation>
-    </message>
-    <message>
         <source>bzip2 fast</source>
         <translation type="vanished">bzip2 ràpid</translation>
     </message>
@@ -430,9 +426,9 @@
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip millor</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip millor</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
@@ -1178,8 +1174,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
-        <translation>qzip millor</translation>
+        <source>gzip best</source>
+        <translation>gzip millor</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
@@ -2138,9 +2134,9 @@ còpia de seguretat. clau:</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip millor</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip millor</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2358,9 +2354,9 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip millor</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip millor</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>
@@ -2500,11 +2496,11 @@ còpia de seguretat. clau:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation></translation>
+        <translation>Heu d'introduir una contrasenya.</translation>
     </message>
  <message>
         <location filename="../src/mainWindow.cpp" line="193"/>
@@ -2786,9 +2782,9 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-<translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR. Versió 0.8.5-12, 20. Desembre 2019</translation>
+<translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR. Versió 0.8.5-14, 6. gener 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

@@ -356,8 +356,8 @@
         <translation type="vanished">gzip standard</translation>
     </message>
     <message>
-        <source>qzip best</source>
-        <translation type="vanished">qzip best</translation>
+        <source>gzip best</source>
+        <translation type="vanished">gzip best</translation>
     </message>
     <message>
         <source>bzip2 fast</source>
@@ -640,9 +640,9 @@ entschlüsseln. Schlüssel:</comment>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation type="unfinished">qzip best</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation type="unfinished">gzip best</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
@@ -1143,8 +1143,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
-        <translation>qzip best</translation>
+        <source>gzip best</source>
+        <translation>gzip best</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
@@ -2134,9 +2134,9 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip best</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip best</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2641,12 +2641,12 @@ p, li { white-space: pre-wrap; }
         <translation> Программа завершается.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+        <location filename="../src/mainWindow.cpp" line="152"/>
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Вы должны ввести пароль.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="505"/>
@@ -2885,10 +2885,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Сохранение и восстановление разделов, каталогов и MBR.
-Версия 0.8.5-12, 20.декабрь 2019</translation>
+Версия 0.8.5-14, 6.январь 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1558"/>
@@ -3154,9 +3154,9 @@ version 0.8.5-0, August 30, 2018</source>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip best</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip best</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>

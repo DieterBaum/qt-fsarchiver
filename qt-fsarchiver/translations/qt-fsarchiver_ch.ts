@@ -361,8 +361,8 @@
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
         <translation>gzip算法最小压缩</translation>
     </message>
     <message>
@@ -1069,7 +1069,7 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
+        <source>gzip best</source>
         <translation>gzip算法最小压缩</translation>
     </message>
     <message>
@@ -2009,8 +2009,8 @@ entschlüsseln. Schlüssel</comment>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
         <translation>gzip算法最小压缩</translation>
     </message>
     <message>
@@ -2546,11 +2546,11 @@ verschlüsseln. Schlüssel</comment>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation></translation>
+        <translation>您必須輸入密碼。</translation>
     </message>
 
     <message>
@@ -2809,8 +2809,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
         <translation>gzip算法最小压缩</translation>
     </message>
     <message>
@@ -2870,9 +2870,9 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-<translation>分区、目录和MBR 备份/恢复工具。 版本 0.8.5-12, 2019. 十二月.20</translation>
+<translation>分区、目录和MBR 备份/恢复工具。 版本 0.8.5-14, 2020. 一月.6</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

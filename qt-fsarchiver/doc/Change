@@ -1,6 +1,10 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-14 January 6, 2020.
+    - A password is no longer required in the live DVD.
+    - In the basic settings you can choose whether the root password is displayed or not.
+    - An empty password is detected and a message is displayed.
 * qt-fsarchiver-0.8.5-12 December 20, 2019.
      - International language is recognized at startup.
      - Lithuanian translation completed.

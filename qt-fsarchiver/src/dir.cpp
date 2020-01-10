@@ -1,11 +1,11 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2020 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v2 as published by the Free Software Foundation.
+ * License v3 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -93,7 +93,7 @@ DialogDIR::DialogDIR()
         zip_dir_[1]=(tr("lzo", "lzo"));
         zip_dir_[2]=(tr("gzip fast","gzip fast"));
         zip_dir_[3]=(tr("gzip standard","gzip standard"));
-        zip_dir_[4]=(tr("qzip best","qzip best"));
+        zip_dir_[4]=(tr("gzip best","gzip best"));
         zip_dir_[5]=(tr("bzip2 fast","bzip2 fast"));
         zip_dir_[6]=(tr("bzip2 good"," bzip2 good"));
         zip_dir_[7]=(tr("lzma fast","lzma fast"));
@@ -910,6 +910,8 @@ void DialogDIR::folder_expand_path()
    QModelIndex index = treeView_path->currentIndex();
    treeView_path->expand(index);
 }
+
+
 
 
 

@@ -2,7 +2,7 @@
 qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =====================================================================================================================================================
 
-Copyright (C) 2008-2019 Francois Dupoux und Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2020 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
@@ -67,7 +67,9 @@ qt-fsarchiver im Terminal starten:
 Befehl: /usr/sbin/qt-fsarchiver
 
 Die Handhabung von qt-fsarchiver ist einfach:
-Über den Menüpunkt "Aktionen" oder über die Werkzeugleiste können folgende Aktionen ausgewählt werden: "Partitionen sichern/zurückschreiben", "Partitionen sichern/zurückschreiben über ein Netzwerk", "MBR/GPT sichern/zurückschreiben", "Verzeichnisse sichern/zurückschreiben" und "Festplatten klonen, Festplattenimage erzeuegen/zurückspielen". Zusätzlich kann über den Menüpunkt "Einstellungen" Basiseinstellungen wie Anzahl der Prozessorkerne oder Kompressionsstärke und Weiteres eingestellt werden.
+Zu Beginn wird in einem Dialogfenster das root-Passwort abgefragt. Unter Einstellungen > Basiseinstellungen kann mit der Checkbos Passwort ausgewählt werden, ob das Passwort an gezeigt wird oder nicht.
+Bitte beachten: ein falsches Root-Passwort wird nicht gemeldet und das Programm hängt sich auf. Ein leeeres Passwort wird erkannt und eine Fehlermeldung wird angezeigt.
+Über den Menüpunkt "Aktionen" oder über die Werkzeugleiste können folgende Aktionen ausgewählt werden: "Partitionen sichern/zurückschreiben", "Partitionen sichern/zurückschreiben über ein Netzwerk", "MBR/GPT sichern/zurückschreiben", "Verzeichnisse sichern/zurückschreiben" und "Festplatten klonen, Festplattenimage erzeuegen/zurxckspielen". Zusätzlich kann über den Menüpunkt "Einstellungen" Basiseinstellungen wie Anzahl der Prozessorkerne oder Kompressionsstärke und Weiteres eingestellt werden.
 Das Programm erkennt automatisch ob der Master Boot Record oder eine GUID Partitionstabelle gesichert werden muss.
 Bei der Sicherungen von Partitionen kann gewählt werden, ob der Partition Boot Sektor (PBR) mit gesichert werden soll. Bei Verwendung von Grub ist dieser Punkt normalerweise uninteressant, da Grub den PBR nur über chainloader erreicht, der beim Starten von Linux System nicht verwendet wird.
 

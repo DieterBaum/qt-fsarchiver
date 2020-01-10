@@ -381,8 +381,8 @@
         <translation type="vanished">gzip standardní</translation>
     </message>
     <message>
-        <source>qzip best</source>
-        <translation type="vanished">qzip nejlepší</translation>
+        <source>gzip best</source>
+        <translation type="vanished">gzip nejlepší</translation>
     </message>
     <message>
         <source>bzip2 fast</source>
@@ -430,9 +430,9 @@
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation type="unfinished">qzip nejlepší</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation type="unfinished">gzip nejlepší</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
@@ -1178,8 +1178,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
-        <translation>qzip nejlepší</translation>
+        <source>gzip best</source>
+        <translation>gzip nejlepší</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
@@ -2127,9 +2127,9 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip nejlepší</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip nejlepší</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2543,9 +2543,9 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip nejlepší</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip nejlepší</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>
@@ -2697,9 +2697,9 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
         <translation type="unfinished"></translation>
     </message>
@@ -2971,10 +2971,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Zálohování a obnovení příčky, adresář a MBR.
-Verze 0.8.5-12, 20. Prosince 2019</translation>
+Verze 0.8.5-14, 6. leden 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

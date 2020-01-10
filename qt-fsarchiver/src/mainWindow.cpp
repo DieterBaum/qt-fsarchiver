@@ -40,6 +40,7 @@ QString folder1;
 QString _Datum;
 QString DateiName("") ;
 extern int dialog_auswertung;
+extern int flag;
 extern QString parameter[15];
 extern QString part[100][10];
 QString widget[100];
@@ -84,6 +85,8 @@ MWindow::MWindow()
    int pos = 0, pos1 = 0;
    int i = 0;
    int found = 0;
+   int rootpassword = 0;
+   QString text = "";
    QString befehl;
    QString homepath = QDir::homePath();
    QString rootpath = QDir::rootPath();
@@ -140,13 +143,44 @@ MWindow::MWindow()
    // Zeitgeber für Berechnung remainingTime
    timer = new QTimer(this);
    bool ok;
-   if (password == "")
-     {
-     QString text = QInputDialog::getText(this, tr("Enter sudo-password","Sudo-Passwort eingeben"),
-       (tr("sudo-Password:","sudo Passwort")), QLineEdit::Password,"", &ok);
-     if (ok && !text.isEmpty())
-       password= text;
-     }
+   int live_flag = 0;
+   // 0 = Eingabe Passwort erforderlich, 1 = keine Passworteingabe: Live-DVD
+// Ini-Datei auslesen, Passwort anzeigen
+   QFile file4(userpath + "/.config/qt-fsarchiver/qt-fsarchiver.conf");
+   QSettings setting1("qt-fsarchiver", "qt-fsarchiver");
+   file4.open(QIODevice::ReadOnly);
+   if (file4.exists()) {
+        setting1.beginGroup("Basiseinstellungen");
+        int auswertung = setting1.value("Passwort").toInt(); 
+        if (auswertung ==1)
+           lineKey ->setEchoMode(QLineEdit::Normal);
+        else
+	   lineKey ->setEchoMode(QLineEdit::Password);
+        rootpassword = auswertung;
+        setting1.endGroup();
+        } 
+  if (live_flag == 0 && password == "")
+      {
+      do
+       {
+       if(rootpassword == 1)
+          text = QInputDialog::getText(this, tr("Enter sudo-password","Sudo-Passwort eingeben"),
+          (tr("sudo-Password:","sudo Passwort")), QLineEdit::Normal,"", &ok);
+       else
+          text = QInputDialog::getText(this, tr("Enter sudo-password","Sudo-Passwort eingeben"),
+          (tr("sudo-Password:","sudo Passwort")), QLineEdit::Password,"", &ok);
+       if (!ok)   //Cancel Programm wird beendet
+          close();
+       if (ok && !text.isEmpty())
+          password= text;
+       if (ok && text.isEmpty())
+          QMessageBox::about(this,tr("Note", "Hinweis"),
+         	tr("You must enter a password.\n", "Sie müssen ein Passwort eingeben.\n"));
+       } 
+       while( password == "");
+      }
+   if (live_flag == 1)
+      password = "xx";
    QDir dir1(userpath + "/.config/qt-fsarchiver");
    if (!dir1.exists()){
        attribute = userpath + "/.config/qt-fsarchiver 2>/dev/null";
@@ -248,8 +282,10 @@ MWindow::MWindow()
    items << zip_[5] << zip_[6] << zip_[7] << zip_[8] << zip_[9] << zip_[10];
    cmb_zip->addItems (items);
    items.clear();
-   QDir dir(userpath + "/.qt-fs-client");
-   // Eventuelle Datein in .qt-fs-client löschen, da sonst das Mounten fehlerhaft sein kann
+   if (flag == 0) 
+   {
+      QDir dir(userpath + "/.qt-fs-client");
+      // Eventuelle Datein in .qt-fs-client löschen, da sonst das Mounten fehlerhaft sein kann
        attribute = "-R -f " + userpath + "/.qt-fs-client";
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 15 " + attribute; 
        if (system (befehl.toLatin1().data()))
@@ -258,10 +294,11 @@ MWindow::MWindow()
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
        if(system (befehl.toLatin1().data()))
           befehl = "";
-       attribute = "chown -R " + user + " " + userpath + "/.qt-fs-client";
+      /* attribute = "chown -R " + user + " " + userpath + "/.qt-fs-client";
        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
        if (system (befehl.toLatin1().data()))
-          befehl = "";
+          befehl = ""; */
+    }
    // wegen Suse
    QDir dir3("/media");
    QString media = "/media";
@@ -314,7 +351,6 @@ MWindow::MWindow()
            lineKey ->setEchoMode(QLineEdit::Normal);
         else
 	   lineKey ->setEchoMode(QLineEdit::Password);
-        auswertung = setting.value("sleep").toInt();
         zstd_level = setting.value("zstd").toInt();
         cmb_zstd -> setCurrentIndex(zstd_level-1);
         auswertung = setting.value("Kompression").toInt();
@@ -330,7 +366,6 @@ MWindow::MWindow()
         chk_Beschreibung->setChecked(true);
         chk_overwrite->setChecked(true); 
         cmb_zip -> setCurrentIndex(2);
-        chk_Beschreibung->setChecked(true); 
         setting.beginGroup("Basiseinstellungen");
         setting.setValue("showPrg",1); 
         setting.setValue("ssh",1); 
@@ -344,8 +379,7 @@ MWindow::MWindow()
    chk_overwrite->setEnabled(true);
    cmb_zip->setEnabled(false);
    cmb_GB->setEnabled(false);
-   chk_Beschreibung->setEnabled(true);
-   chk_Beschreibung->setChecked(true);
+  // chk_Beschreibung->setEnabled(true);
    label->setEnabled(false);
    starteinstellung();
    if(show_part == 0)
@@ -1234,8 +1268,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-12, December 20, 2019",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-12, 20.Dezember 2019"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-14, January 6, 2020",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-14, 6.Januar 2020"));
       }
 
 int MWindow::is_running(){

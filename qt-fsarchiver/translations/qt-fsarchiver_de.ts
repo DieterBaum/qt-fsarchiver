@@ -372,9 +372,9 @@ zurückschreiben</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation type="unfinished">qzip best</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation type="unfinished">gzip best</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
@@ -1123,8 +1123,8 @@ wiederherzustellende verborgene Bereich hat eine Größe von </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
-        <translation>qzip best</translation>
+        <source>gzip best</source>
+        <translation>gzip best</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
@@ -1551,18 +1551,18 @@ Die Dateiendung muss .fsa sein</comment>
         <translation> Links </translation>
     </message>
     <message>
-        <location filename="../src/net.cpp" line="1451"/>
-        <source> special data and the partition boot sector were restored.</source>
-        <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1480"/>
+        <location filename="../src/net.cpp" line="1453"/>
         <source> specials has been restored.
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
 .</comment>
         <translation> spezielle Daten wurden wieder hergestellt.</translation>
+    </message>
+    <message>
+        <location filename="../src/net.cpp" line="1461"/>
+        <source> special data and the partition boot sector were restored.</source>
+        <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
+        <translation> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1480"/>
@@ -2032,9 +2032,9 @@ Passwort eingegeben.</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip best</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip best</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2520,9 +2520,9 @@ entschlüsseln. Schlüssel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip best</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip best</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>
@@ -2641,12 +2641,12 @@ verschlüsseln. Schlüssel:</translation>
         <translation> Das Programm wird beendet</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="168"/>
-        <source>You must enter a password. You must exit the program and restart.
+        <location filename="../src/mainWindow.cpp" line="152"/>
+        <source>You must enter a password.
 </source>
         <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
 </comment>
-        <translation type="unfinished">Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.</translation>
+        <translation>Sie müssen ein Passwort eingeben</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="358"/>
@@ -3105,9 +3105,9 @@ Vielleicht ist die Partition verschlüsselt?</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
-<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-12, 20.Dezember 2019</translation>
+<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-14, 6.Januar 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1525"/>

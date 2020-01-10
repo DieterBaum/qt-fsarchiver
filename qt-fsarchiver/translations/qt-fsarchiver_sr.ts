@@ -509,8 +509,8 @@
         <translation type="vanished">стандард GZIP</translation>
     </message>
     <message>
-        <source>qzip best</source>
-        <translation type="vanished">qzip најбоље</translation>
+        <source>gzip best</source>
+        <translation type="vanished">gzip најбоље</translation>
     </message>
     <message>
         <source>bzip2 fast</source>
@@ -558,9 +558,9 @@
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation type="unfinished">qzip најбоље</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation type="unfinished">gzip најбоље</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
@@ -1306,8 +1306,8 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
-        <translation>qzip најбоље</translation>
+        <source>gzip best</source>
+        <translation>gzip најбоље</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="139"/>
@@ -2255,9 +2255,9 @@ entschlüsseln. Schlüssel</comment>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip најбоље</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip најбоље</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -2717,9 +2717,9 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
-        <translation>qzip најбоље</translation>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
+        <translation>gzip најбоље</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="189"/>
@@ -2870,12 +2870,12 @@ verschlüsseln. Schlüssel</comment>
         <translation> The program is terminated.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+        <location filename="../src/mainWindow.cpp" line="152"/>
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Морате унети лозинку.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="505"/>
@@ -3145,10 +3145,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>Backup și restaurare partiții, directoare și MBR.
-Versiune 0.8.5-12, 20.децембар 2019</translation>
+Versiune 0.8.5-14, 6.Јануар 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>

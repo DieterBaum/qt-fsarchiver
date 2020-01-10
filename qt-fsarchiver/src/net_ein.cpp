@@ -1,11 +1,11 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2020 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v2 as published by the Free Software Foundation.
+ * License v3 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -304,7 +304,7 @@ QString hostname_;
         // Dateien entfernen 
   	if (file1.exists()){
      		attribute = "~/.config/qt-fsarchiver/findsmb-qt.txt";
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
+                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 15 " + attribute; 
 		if(system (befehl.toLatin1().data()))
                    befehl = "";
                
@@ -344,7 +344,7 @@ QString hostname_;
         return 2;
 }
 
-int NetEin:: setting_save(QString user_net_ein, QString key)
+int NetEin:: setting_save(QString user_net_ein)
 {
    QString befehl;
    QString filename;
@@ -354,15 +354,10 @@ int NetEin:: setting_save(QString user_net_ein, QString key)
    state = chk_datesave->checkState();
    QSettings setting("qt-fsarchiver", "qt-fsarchiver");
    setting.beginGroup(comNet_name);
-   dummykey = key;
    //Neue oder geänderte Daten in setting eingeben
     if (state == Qt::Checked && comNet != "")   
-       {
        setting.setValue("Name",user_net_ein);
-       // Key verschlüsseln und in setting eingeben
-       setting.setValue("key",crypt(key));
-      }
-   setting.endGroup();
+    setting.endGroup();
   // Dateien entfernen 
   filename = "~/.config/qt-fsarchiver/ip.txt";
 	if (f.exists()){
@@ -466,15 +461,7 @@ QStringList comNet_;
    user_net_ein = setting.value("Name").toString();
    key_ = setting.value("key").toString();
    setting.endGroup();
-   //Netzwerk-Daten in Textfeld eintragen
-   //key entschlüsseln 
-   key = decrypt(key_);
-   dummykey = key;
    txt_user ->setText(user_net_ein);
-   if(user_net_ein != "")
-      txt_key ->setText(key);
-   if(user_net_ein == "")
-      txt_key ->setText("");
 }
 
 QString NetEin::Namen_holen()
@@ -507,6 +494,7 @@ QSettings setting("qt-fsarchiver", "qt-fsarchiver");
 setting.beginGroup(comNet_name);
      user_net_ein = txt_user->text();
      key = txt_key->text();
+     dummykey = key;
      if (comNet == "" && dialog_auswertung == 6)
        {
        QMessageBox::about(this, tr("Note", "Hinweis"),
@@ -532,17 +520,11 @@ setting.beginGroup(comNet_name);
       }
      
      if (state == Qt::Checked )   
-      {
        setting.setValue("Name",user_net_ein);
-       setting.setValue("key",crypt(key));
-      }
      else
-       {
        setting.setValue("Name","");
-       setting.setValue("key",0);
-      }
      setting.endGroup();
-     int i = setting_save(user_net_ein, key);     
+     int i = setting_save(user_net_ein);     
      if (dialog_auswertung == 6 && i == 0)
      {
 	save_net();
@@ -569,180 +551,6 @@ void NetEin::restore_net () {
         close();
 }
 
-QString NetEin::crypt(QString key){
-FILE *lesen, *schreiben;
-char dateiname_eingabe[100], dateiname_ausgabe[100];
-char *homepath_;
-char *suffix;
-char *suffix1;
-char zeichen;
-int schluessel=5;
-int j;
-int i;
-QString text;
-QString convert;
-QByteArray bytes;
-convert = "/.config/qt-fsarchiver/crypt.txt";
-bytes  = convert.toLocal8Bit();
-suffix = new char[bytes.size() + 1];
-strcpy(suffix, bytes.data());
-convert = "/.config/qt-fsarchiver/crypt1.txt";
-bytes  = convert.toLocal8Bit();
-suffix1 = new char[bytes.size() + 1];
-strcpy(suffix1, bytes.data());
-QFile file(userpath_net_ein + "/.config/qt-fsarchiver/crypt.txt");
-QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/crypt1.txt");
-QTextStream ds(&file1);
-j = key.size();
-QTextStream stream(&file);
-       if (file.open(QIODevice::ReadWrite| QIODevice::Text)) {
-	  file.resize(1);
-	  stream << key << "\n";
-          file.close(); 
-       }
-homepath_ =  userpath_net_ein.toLatin1().data();
-strcpy (dateiname_eingabe, homepath_);
-strcat (dateiname_eingabe, suffix);
-lesen=fopen(dateiname_eingabe,"r");
-strcpy (dateiname_ausgabe, homepath_);
-strcat (dateiname_ausgabe, suffix1);
-schreiben=fopen(dateiname_ausgabe,"w");
-for (i=0; i < j + 1; i++)
-	{
-		zeichen=fgetc(lesen);
-		//Zahlen
-		if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)<58)&&((zeichen+schluessel)>47))
-			fputc(zeichen+schluessel, schreiben);
-
-		else if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)>57))
-			fputc(zeichen+schluessel+47-57, schreiben);
-
-		else if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)<48))
-			fputc(zeichen+schluessel-47+57, schreiben);
-		//Grossbuchstaben
-		else if((zeichen>64)&&(zeichen<91)&&((zeichen+schluessel)<91)&&((zeichen+schluessel)>64))
-			fputc(zeichen+schluessel, schreiben);
-
-		else if((zeichen>64)&&(zeichen<91)&&((zeichen+schluessel)>90))
-			fputc(zeichen+schluessel+64-90, schreiben);
-
-		else if((zeichen>64)&&(zeichen<91)&&((zeichen+schluessel)<65))
-         		fputc(zeichen+schluessel-64+90, schreiben);
-		//Kleinbuchstaben
-		else if((zeichen>96)&&(zeichen<123)&&((zeichen+schluessel)<123)&&((zeichen+schluessel)>96))
-			fputc(zeichen+schluessel, schreiben);
-
-		else if((zeichen>96)&&(zeichen<123)&&((zeichen+schluessel)>122))
-			fputc(zeichen+schluessel+96-122, schreiben);
-
-		else if((zeichen>96)&&(zeichen<123)&&((zeichen+schluessel)<97))
-			fputc(zeichen+schluessel-96+122, schreiben);
-
-		//sonstige Zeichen
-		else
-			fputc(zeichen, schreiben);
-	}
-	fclose(lesen);
-	fclose(schreiben);
-	file.remove();
-        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
-        while (text == ""){
-            text = ds.readLine();
-            QThread::msleep(5 * sleepfaktor);
-            }
-            file1.close();
-        return text;
-}
-
-
-QString NetEin::decrypt(QString key_){
-FILE *lesen, *schreiben;
-char dateiname_eingabe[100], dateiname_ausgabe[100];
-char *homepath_;
-char *suffix;
-char *suffix1;
-char zeichen;
-int schluessel= -5;
-int j;
-int i;
-QString convert;
-QByteArray bytes;
-convert = "/.config/qt-fsarchiver/crypt1.txt";
-bytes  = convert.toLocal8Bit();
-suffix = new char[bytes.size() + 1];
-strcpy(suffix, bytes.data());
-convert = "/.config/qt-fsarchiver/crypt2.txt";
-bytes  = convert.toLocal8Bit();
-suffix1 = new char[bytes.size() + 1];
-strcpy(suffix1, bytes.data());
-QFile file(userpath_net_ein + "/.config/qt-fsarchiver/crypt1.txt");
-QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/crypt2.txt");
-QTextStream ds(&file1);
-QTextStream ds1(&file);
-QString text;
-// key_ in Datei crypt1.txt eintragen
-if (file.open(QIODevice::ReadWrite | QIODevice::Text)) {
-     	     ds1 << key_;
-             file.close();
-        }
-j = file.size();
-if (j == 0) // Datei noch nicht vorhanden
-    return "";
-homepath_ =  userpath_net_ein.toLatin1().data();
-strcpy (dateiname_eingabe, homepath_);
-strcat (dateiname_eingabe, suffix);
-lesen=fopen(dateiname_eingabe,"r");
-strcpy (dateiname_ausgabe, homepath_);
-strcat (dateiname_ausgabe, suffix1);
-schreiben=fopen(dateiname_ausgabe,"w");
-for (i=0; i < j; i++)
-	{
-
-		zeichen=fgetc(lesen);
-		//Zahlen
-		if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)<58)&&((zeichen+schluessel)>47))
-			fputc(zeichen+schluessel, schreiben);
-
-		else if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)>57))
-			fputc(zeichen+schluessel+47-57, schreiben);
-
-		else if((zeichen>47)&&(zeichen<58)&&((zeichen+schluessel)<48))
-			fputc(zeichen+schluessel-47+57, schreiben);
-		//Grossbuchstaben
-		else if((zeichen>64)&&(zeichen<91)&&((zeichen+schluessel)<91)&&((zeichen+schluessel)>64))
-			fputc(zeichen+schluessel, schreiben);
-
-		else if((zeichen>64)&&(zeichen<91)&&((zeichen+schluessel)>90))
-			fputc(zeichen+schluessel+64-90, schreiben);
-
-		else if((zeichen>64)&&(zeichen<91)&&((zeichen+schluessel)<65))
-         		fputc(zeichen+schluessel-64+90, schreiben);
-		//Kleinbuchstaben
-		else if((zeichen>96)&&(zeichen<123)&&((zeichen+schluessel)<123)&&((zeichen+schluessel)>96))
-			fputc(zeichen+schluessel, schreiben);
-
-		else if((zeichen>96)&&(zeichen<123)&&((zeichen+schluessel)>122))
-			fputc(zeichen+schluessel+96-122, schreiben);
-
-		else if((zeichen>96)&&(zeichen<123)&&((zeichen+schluessel)<97))
-			fputc(zeichen+schluessel-96+122, schreiben);
-
-		//sonstige Zeichen
-		else
-			fputc(zeichen, schreiben);
-	}
-	fclose(lesen);
-	fclose(schreiben);
-        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
-        while (text == ""){
-            text = ds.readLine();
-            QThread::msleep(5 * sleepfaktor);
-            }
-        file1.close();
-	file1.remove();
-        return text;
-}
-
 int NetEin::questionMessage(QString frage)
 {
 	QMessageBox msg(QMessageBox::Question, tr("Note", "Hinweis"), frage);
@@ -755,6 +563,8 @@ int NetEin::questionMessage(QString frage)
     		return 2;
 return 0;
 }
+
+
 
 
 

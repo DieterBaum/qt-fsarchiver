@@ -1,11 +1,11 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2020 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v2 as published by the Free Software Foundation.
+ * License v3 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -46,7 +46,7 @@ DialogSetting::DialogSetting()
         items_sleep << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12" << "13" << "14" << "15" << "16" << "17" << "18" << "19" << "20";
         cmb_sleep->addItems (items_sleep);
         items_sleep.clear();
-        items_zip << tr("lz4", "lz4") << tr("lzo", "lzo") << tr("gzip fast","gzip fast") << tr("gzip standard","gzip standard") << tr("qzip best","qzip best") <<  tr("bzip2 fast","bzip2 fast");
+        items_zip << tr("lz4", "lz4") << tr("lzo", "lzo") << tr("gzip fast","gzip fast") << tr("gzip standard","gzip standard") << tr("gzip best","gzip best") <<  tr("bzip2 fast","bzip2 fast");
    	cmb_zip->addItems (items_zip);
    	items_zip.clear();
    	items_zip << tr("bzip2 good", "bzip2 good") << tr("lzma fast","lzma fast") << tr("lzma medium","lzma medium") << tr("lzma best","lzma best") << tr("zstd","zstd");
@@ -209,3 +209,5 @@ int zip = cmb_zip->currentIndex();
        label_5->setEnabled(false);
        }
 }
+
+

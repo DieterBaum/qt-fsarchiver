@@ -509,7 +509,7 @@
         <translation type="vanished">معیاری گزاپ</translation>
     </message>
     <message>
-        <source>qzip best</source>
+        <source>gzip best</source>
         <translation type="vanished">قزاپ سب سے بہتر</translation>
     </message>
     <message>
@@ -558,8 +558,8 @@
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
         <translation type="unfinished">قزاپ سب سے بہتر</translation>
     </message>
     <message>
@@ -1306,7 +1306,7 @@ Die Dateiendung muss .fsa sein</comment>
     </message>
     <message>
         <location filename="../src/net.cpp" line="138"/>
-        <source>qzip best</source>
+        <source>gzip best</source>
         <translation>قزاپ سب سے بہتر</translation>
     </message>
     <message>
@@ -2262,8 +2262,8 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
         <translation>قزاپ سب سے بہتر</translation>
     </message>
     <message>
@@ -2723,8 +2723,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="188"/>
-        <source>qzip best</source>
-        <comment>qzip best</comment>
+        <source>gzip best</source>
+        <comment>gzip best</comment>
         <translation>قزاپ سب سے بہتر</translation>
     </message>
     <message>
@@ -2876,12 +2876,12 @@ backup. key:</translation>
         <translation> The program is terminated.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="168"/>
-<source>You must enter a password. You must exit the program and restart.
+        <location filename="../src/mainWindow.cpp" line="152"/>
+<source>You must enter a password.
 </source>
-        <comment>Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.
+        <comment>Sie müssen ein Passwort eingeben.
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>آپ کو پاس ورڈ درج کرنا ہوگا۔</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="505"/>
@@ -3151,10 +3151,10 @@ Die Dateiendung muss .fsa sein</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1167"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-12, December 20, 2019</source>
+version 0.8.5-14, January 6, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-1, 30. Oktober 2018</comment>
 <translation>بیک اپ اور بحال پارٹیشنز، ڈائریکٹری اور MBR.
-ورژن 0.8.5-12 20 نومبر 2019</translation>
+ورژن 0.8.5-14 6 جنوری 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1238"/>
