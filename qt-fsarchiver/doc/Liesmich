@@ -44,7 +44,7 @@ Genauso installieren Sie das Programm qt-fsarchiver-terminal.
 Wechseln Sie in einem Terminal in den Ordner, indem der Quellcode von qt-fsarchiver-terminal vorhanden ist.
 Wiederholen Sie die obigen Terminalbefehle.
 
-Qt-fsarchiver funktioniert nur, wenn qt-fsarchiver-terminal installiert wurde.
+Qt-fsarchiver funktioniert nur, wenn qt-fsarchiver-terminal installiert wurde. Die Version von qt-fsarchiver-terminal wird überprüft. Bei falscher Version wird das Programm abgebrochen.
 
 Installation des Programms aus den DEB-Paketen:
 Ein Doppelklick auf die DEB-Datei installiert in der Regel das Programm.
@@ -68,7 +68,7 @@ Befehl: /usr/sbin/qt-fsarchiver
 
 Die Handhabung von qt-fsarchiver ist einfach:
 Zu Beginn wird in einem Dialogfenster das root-Passwort abgefragt. Unter Einstellungen > Basiseinstellungen kann mit der Checkbos Passwort ausgewählt werden, ob das Passwort an gezeigt wird oder nicht.
-Bitte beachten: ein falsches Root-Passwort wird nicht gemeldet und das Programm hängt sich auf. Ein leeeres Passwort wird erkannt und eine Fehlermeldung wird angezeigt.
+Bitte beachten: Bei einem falschen Root-Passwort wird ein Hinweis zum Beenden des Programms gegeben. Das Programm wird hart beendet. Ein leeeres Passwort wird erkannt und eine Fehlermeldung wird angezeigt.
 Über den Menüpunkt "Aktionen" oder über die Werkzeugleiste können folgende Aktionen ausgewählt werden: "Partitionen sichern/zurückschreiben", "Partitionen sichern/zurückschreiben über ein Netzwerk", "MBR/GPT sichern/zurückschreiben", "Verzeichnisse sichern/zurückschreiben" und "Festplatten klonen, Festplattenimage erzeuegen/zurxckspielen". Zusätzlich kann über den Menüpunkt "Einstellungen" Basiseinstellungen wie Anzahl der Prozessorkerne oder Kompressionsstärke und Weiteres eingestellt werden.
 Das Programm erkennt automatisch ob der Master Boot Record oder eine GUID Partitionstabelle gesichert werden muss.
 Bei der Sicherungen von Partitionen kann gewählt werden, ob der Partition Boot Sektor (PBR) mit gesichert werden soll. Bei Verwendung von Grub ist dieser Punkt normalerweise uninteressant, da Grub den PBR nur über chainloader erreicht, der beim Starten von Linux System nicht verwendet wird.

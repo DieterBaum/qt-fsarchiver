@@ -1,6 +1,9 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-15 February 6, 2020.    
+    - Root password is now encrypted and can no longer be read from RAM.
+    - Root password is checked for correctness. Note on terminating the program if the password is incorrect. 
 * qt-fsarchiver-0.8.5-14 January 6, 2020.
     - A password is no longer required in the live DVD.
     - In the basic settings you can choose whether the root password is displayed or not.

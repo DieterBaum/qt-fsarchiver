@@ -89,6 +89,8 @@ protected slots:
    QString datei_auswerten(QString buchstabe);
    QString datei_auswerten_1(QString dateiname);
    QString sdx3_einlesen(QString part, int flag);
+   void daten_write(QString password, int i);
+   QString md5sum(QString file_name);
      
 private:
     QFileSystemModel *dirModel;

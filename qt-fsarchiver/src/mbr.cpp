@@ -89,7 +89,7 @@ QString filename;
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
            {
            attribute = "lsblk -l 1> " +  userpath_mbr + "/.config/qt-fsarchiver/disk2.txt";
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
            if(system (befehl.toLatin1().data()))
               befehl = "";
            while (disk_ == ""){
@@ -198,12 +198,12 @@ QModelIndexList indexes = selModel->selectedIndexes();
              if (efiflag == 0) 
              {  
               attribute = "if=/dev/" + partition + " of=" + folder_ + "/" + Ubuntuversion + "_mbr_" + partition + " bs=" + Sektor_byte + " count=1";
-              befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+              befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
              }
              if (efiflag == 1)
              {
                 attribute = "sgdisk -b" + folder_ + "/" + Ubuntuversion + "_gpt_" + partition + " /dev/" + partition;
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  22 " + attribute;
              }
             i = system (befehl.toLatin1().data());
                 if (i == 0 && efiflag == 0)
@@ -230,7 +230,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
          if (i ==0) {
               if (cmb_mbr->currentIndex() == 0) {
               attribute = "sgdisk -l " + folder_ + " /dev/" + partition;
-              befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
+              befehl = "/usr/sbin/qt-fsarchiver.sh  22 " + attribute;
               i = system (befehl.toLatin1().data());
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The GUID partition table was successfully restored.\n", "Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
@@ -256,7 +256,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
 	   if (cmb_mbr->currentIndex() == 0) {
               attribute = "if=" + folder_ + " of=/dev/" + partition + " bs=1 count=446";
 
-              befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+              befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
               i = system (befehl.toLatin1().data());
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The bootloader area was successfully restored.\n", "Der Bootloaderbereich wurde erfolgreich wieder hergestellt.\n"));
@@ -269,7 +269,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
                  i = system (befehl.toLatin1().data());
                   //Partitionstabelle wiederherstellen 
                  attribute = "if=" + userpath_mbr + "/.config/qt-fsarchiver/mbr.txt  of=/dev/" + partition + " bs=1 seek=446 count=66";
-                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+                 befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
                //    i = i + system (befehl.toLatin1().data());  	
                    if (i == 0)
       			QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition table was successfully restored.", "Die Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
@@ -279,7 +279,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
                if (cmb_mbr->currentIndex() == 1) {
                  // MBR und Pasrtitionstabelle wieder herstellen
                  attribute = "if="+ folder_ + " of=/dev/" + partition + " bs=1 count=512";
-                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+                 befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
                  i = system (befehl.toLatin1().data());
                if (i == 0) 
       		   QMessageBox::about(this, tr("Note","Hinweis"), tr("The MBR was successfully restored.\n", "Der MBR wurde erfolgreich wieder hergestellt.\n"));
@@ -304,7 +304,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
                    i = i + system (befehl.toLatin1().data());
                    //verborgenen Bereich wiederherstellen 	
                    attribute  = "if=" + userpath_mbr + "/.config/qt-fsarchiver/mbr.txt  of=/dev/" + partition + " bs=1 seek=512 count=" + Sektor_byte_1;
-                   befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+                   befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
                    i = i + system (befehl.toLatin1().data());  	
       	        if (i == 0) 
       		   QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hidden area was successfully restored.\n", "Der verborgene Bereich wurde erfolgreich wieder hergestellt.\n"));
@@ -340,7 +340,7 @@ QString attribute;
            attribute = " -lu | grep " + partition + "1 > " + userpath_mbr + "/.config/qt-fsarchiver/sektornummer.txt";
         else   //nvme
            attribute = " -lu | grep " + partition + "p1 > " + userpath_mbr + "/.config/qt-fsarchiver/sektornummer.txt";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 9 " + attribute;
+        befehl = "/usr/sbin/qt-fsarchiver.sh  9 " + attribute;
         if(system (befehl.toLatin1().data()))
               befehl = "";
         QFile file(Dateiname);
@@ -533,7 +533,7 @@ QString DialogMBR::mtab_einlesen(QString partition_if_home)
    QString text;
    QString befehl;
    QString filename = userpath_mbr + "/.config/qt-fsarchiver/mtab.txt";
-   befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 11 /etc/mtab " + userpath_mbr + "/.config/qt-fsarchiver/mtab.txt";
+   befehl = "/usr/sbin/qt-fsarchiver.sh  11 /etc/mtab " + userpath_mbr + "/.config/qt-fsarchiver/mtab.txt";
    if(system (befehl.toLatin1().data()))
               befehl = "";
    QThread::msleep(10 * sleepfaktor);
@@ -557,7 +557,7 @@ int DialogMBR::is_gpt(QString partition_efi)
       QString attribute;
       QString befehl;
       attribute = "gdisk -l " + partition_efi +  " 1>" +  userpath_mbr + "/.config/qt-fsarchiver/efi.txt";
-      befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 22 " + attribute;
+      befehl = "/usr/sbin/qt-fsarchiver.sh  22 " + attribute;
       if(system (befehl.toLatin1().data()))
               befehl = "";
       QThread::msleep(10 * sleepfaktor);

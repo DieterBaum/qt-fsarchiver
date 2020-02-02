@@ -55,7 +55,7 @@ Confirm the command with Enter.
 sudo apt update
 sudo apt install qt-fsarchiver
 
-qt-fsarchiver-terminal is installed with the deb packages as well as with the launchpad installation.
+qt-fsarchiver-terminal is installed with the deb packages as well as with the launchpad installation. The version of qt-fsarchiver-terminal is checked. If the version is incorrect, the program is terminated.
 
 Program call:
 Partial starters are installed. By double-qt5-fsarchiver is started.
@@ -64,7 +64,7 @@ Start qt-fsarchiver in a terminal: /usr/sbin/qt-fsarchiver
 The handling of qt-fsarchiver is simple:
 
 At the beginning the root password is requested in a dialog window. Under Settings > Basic Settings the Checkbos Password can be used to select whether the password is shown on or not.
-Please note: an incorrect root password is not reported and the program hangs up. An empty password is detected and an error message is displayed.
+Please note: If the root password is incorrect, a hint to terminate the program is given. The program will be terminated hard. An empty password is detected and an error message is displayed.
 Using the menu option "Actions" from the toolbar or the following actions can be selected:
 "Partition backup/restore partitions", "Partition backup/restore over a network", "MBR/GPT backup / restore your files", "Directories save/restore" and "clone HD, create oder restore an Image".
 The program automatically detects if the Master Boot Record or GUID partition table must be secured.

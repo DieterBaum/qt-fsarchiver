@@ -32,7 +32,8 @@ QString anlage;
 QString password;
 QString user;
 int sleepfaktor = 5;
-int flag = 0;
+int flag1 = 0;
+int password_ = 0;
 //QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
 int main(int argc, char **argv)

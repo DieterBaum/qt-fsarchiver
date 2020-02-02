@@ -334,8 +334,8 @@ int found = 0;
             bt_end->setEnabled(false);
             flag_View_dir = 1;
             ViewProzent();
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-            if(system (befehl.toLatin1().data()))
+            befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+          if(system (befehl.toLatin1().data()))
                befehl = "";
             return 0;
             }
@@ -372,7 +372,7 @@ int found = 0;
           if (pos == -1)
          	{
                 QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("You have selected an incorrect recovery file.\n The files should end with. fsa be", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht\nDie Dateiendung muss .fsa sein"));
+         	tr("You have selected an incorrect recovery file.\nThe file extension must be .fsa.", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht\nDie Dateiendung muss .fsa sein"));
                 return 1;
          	}
         // prüfen ob Verzeichnis verschlüsselt
@@ -380,8 +380,8 @@ int found = 0;
               if (state1 != Qt::Checked) {
         	attribute = "3 fsarchiver archinfo " + folder_dir;
                 save_attribut_dir(attribute);
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                if(system (befehl.toLatin1().data()))
+                befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+              if(system (befehl.toLatin1().data()))
                     befehl = "";
                 QThread::msleep(10 * sleepfaktor);
                 optionkey = datei_auswerten_dir("p");
@@ -404,8 +404,8 @@ int found = 0;
                 parameter[4] = folder_dir;
                 attribute = "5 fsarchiver archinfo -c " + keyText + " "  + folder_dir;
                 save_attribut_dir(attribute);
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-                if(system (befehl.toLatin1().data()))
+                befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+               if(system (befehl.toLatin1().data()))
                    befehl = "";
                 QThread::msleep(10 * sleepfaktor);
                 optionkey = datei_auswerten_dir("p");
@@ -452,8 +452,8 @@ int found = 0;
         bt_end->setEnabled(false);
         flag_View_dir = 2;
         this->setCursor(Qt::WaitCursor);
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 /home/" + user;
-        if(system (befehl.toLatin1().data()))
+        befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+       if(system (befehl.toLatin1().data()))
                befehl = "";
         QThread::msleep(10 * sleepfaktor);
         optionkey = datei_auswerten_dir("p");

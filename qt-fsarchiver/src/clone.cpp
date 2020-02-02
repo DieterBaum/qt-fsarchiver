@@ -128,8 +128,8 @@ QString teilstring;
 int aa, bb, dd;
 //Zunächst disk.txt löschen
         attribute = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 23 " + attribute;
-        if(system (befehl.toLatin1().data()))
+        befehl = "/usr/sbin/qt-fsarchiver.sh  23 " + attribute;
+       if(system (befehl.toLatin1().data()))
            befehl = "";
         filename = userpath_clone + "/.config/qt-fsarchiver/disk2.txt";
         QFile file(filename);
@@ -137,8 +137,8 @@ int aa, bb, dd;
              if(file.open(QIODevice::ReadWrite | QIODevice::Text))
                {
                 attribute = "lsblk -l 1> " +  userpath_clone + "/.config/qt-fsarchiver/disk2.txt";
-               befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-               if(system (befehl.toLatin1().data()))
+               befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+              if(system (befehl.toLatin1().data()))
                   befehl = "";
             while (text == ""){
                text = ds.readLine();
@@ -163,8 +163,8 @@ int aa, bb, dd;
           if(file1.open(QIODevice::ReadWrite | QIODevice::Text))
                {
               attribute = "lsblk -l -b 1> " +  userpath_clone + "/.config/qt-fsarchiver/disk1.txt";
-              befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-              if(system (befehl.toLatin1().data()))
+              befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+             if(system (befehl.toLatin1().data()))
                  befehl = "";
          while (text == ""){
             text = ds1.readLine();
@@ -276,12 +276,12 @@ Qt::CheckState state;
        if (state == Qt::Checked)
           {
 	  attribute = "if=/dev/" + img_partition_clone + " | gzip --best >" + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa";
-          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 21 " + attribute;
+          befehl = "/usr/sbin/qt-fsarchiver.sh  21 " + attribute;
           }
        else
           {
           attribute = "if=/dev/" + img_partition_clone + " of=" + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt"; 
-          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+          befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
           }
         thread1.setValues( 0,befehl);
 	ret = questionMessage(tr("Do you really want to create an image of a partition?  ", " Wollen Sie wirklich ein Abbild einer Partition erstellen? ") );  
@@ -350,12 +350,12 @@ QString attribute;
         if (folder_clone.indexOf("-gz.part.fsa") > -1)
             {
             attribute = "-c " + folder_clone + "|sudo dd of=/dev/" + img_partition_clone;
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 14 " + attribute;
+            befehl = "/usr/sbin/qt-fsarchiver.sh  14 " + attribute;
             }
         if (folder_clone.indexOf("-part.fsa") > -1)
             {
             attribute = "if=" + folder_clone +  " of=/dev/" +  img_partition_clone + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+            befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
             }
             int ret = questionMessage(tr("Do you really want to write back an image of a partition? ", " Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? ") );  
               if (ret == 2)
@@ -428,7 +428,7 @@ lbl_save->setText (tr("already saved", "bereits gesichert"));
           return 0; 
 
        attribute = "if=" + partition_exist + " of=" + partition_clone + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+       befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
        thread1.setValues(0,befehl);
        ret = questionMessage(tr(" Do you want really clone the hard drive? All dates on  ", " Wollen Sie wirklich die Festplatte klonen? Alle Daten auf der Festplatte ")   + partition_clone + tr(" are deleted!", " werden gelöscht!") );
               if (ret == 2)
@@ -481,12 +481,12 @@ Qt::CheckState state;
         if (state == Qt::Checked)
           {
           attribute = "if=" + partition_exist + " | gzip --best > " + folder_clone +  partition_name + "-" + _Datum_clone + ".gz.fsa";
-          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 21 " + attribute; 
+          befehl = "/usr/sbin/qt-fsarchiver.sh  21 " + attribute; 
           }
        else
           {
 	   attribute = "if=" + partition_exist + " of=" + folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute; 
+           befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute; 
           }
  	thread1.setValues( 0,befehl);
 	ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
@@ -566,12 +566,12 @@ QString disk_name;
         if (folder_clone.indexOf("gz.fsa") > 0)
              {
         	attribute = "-c " + folder_clone + "|sudo dd of=" + partition_exist; 
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 14 " + attribute;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  14 " + attribute;
             }
         if (folder_clone.indexOf("img.fsa") > 0)
             {
             attribute = "if=" + folder_clone +  " of=" + partition_exist + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt"; 
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + attribute;
+            befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
             }
             int ret = questionMessage(tr("Do you really want to write back an image of the hard disk? ", " Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? "));
               if (ret == 2)
@@ -710,8 +710,8 @@ QTextStream ds(&file);
      if(file.open(QIODevice::ReadWrite | QIODevice::Text))
           {
           attribute = "lsblk /dev/" + img_partition_clone + " -l -b 1> " +  filename;
-          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-          if(system (befehl.toLatin1().data()))
+          befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+         if(system (befehl.toLatin1().data()))
               befehl = "";
           while (text == "")
             {
@@ -772,8 +772,8 @@ QString dev_sdx_;
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
            {
             attribute = "lsblk 1> " + filename;
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-            if(system (befehl.toLatin1().data()))
+            befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+           if(system (befehl.toLatin1().data()))
                 befehl = "";
             while (text == "")
               {
@@ -1054,7 +1054,7 @@ QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk
         }
 	thread_run_clone = 0;
 	thread1.exit();
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath_clone + "/.config/qt-fsarchiver *.txt 2>/dev/null";
+        befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath_clone + "/.config/qt-fsarchiver *.txt 2>/dev/null";
         if(system (befehl.toLatin1().data()))
            befehl = "";
         sekunde_summe_clone = 0;
@@ -1112,7 +1112,7 @@ float dummy1;
 	}
         thread_run_clone = 0; 
         thread2.exit();	
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath_clone + "/.config/qt-fsarchiver *.txt 2>/dev/null";
+        befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath_clone + "/.config/qt-fsarchiver *.txt 2>/dev/null";
         if(system (befehl.toLatin1().data()))
             befehl = "";
         progressBar->setValue(100);
@@ -1182,24 +1182,24 @@ QString attribute;
       if (ret == 1)
         {
         attribute = "kill -15 " + pid_2_dd[0];;  //dd abbrechen
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
         if(system (befehl.toLatin1().data()))
            befehl = "";
         attribute = "kill -15 " + pid_2_dd[1];;  //dd abbrechen
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
         if(system (befehl.toLatin1().data()))
             befehl = "";
         attribute = "rm " + folder_clone +  partition_name + ".gz.fsa 2>/dev/null";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        if(system (befehl.toLatin1().data()))
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+       if(system (befehl.toLatin1().data()))
            befehl = "";
         attribute = "rm " + folder_clone +  partition_name + ".img.fsa 2>/dev/null";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        if(system (befehl.toLatin1().data()))
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+       if(system (befehl.toLatin1().data()))
            befehl = "";
         attribute = "rm " + folder_clone +  partition_name + ".gz.part.fsa 2>/dev/null";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
-        if(system (befehl.toLatin1().data()))
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+       if(system (befehl.toLatin1().data()))
            befehl = "";
     	close();
         }
@@ -1398,8 +1398,8 @@ QString filename = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
         if (pid_dd != "")
         {
         attribute = "kill -USR1 " + pid_dd ;
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 10 " + attribute; 
-        if(system (befehl.toLatin1().data()))
+        befehl = "/usr/sbin/qt-fsarchiver.sh  10 " + attribute; 
+       if(system (befehl.toLatin1().data()))
            befehl = "";
         } 
 	QFile file(filename);

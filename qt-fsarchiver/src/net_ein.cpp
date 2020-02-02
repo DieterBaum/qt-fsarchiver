@@ -46,16 +46,16 @@ connect( chk_password, SIGNAL( clicked() ), this, SLOT(Kennwort()));
        userpath_net_ein = "/home/" + user; 
 // Vorsichtshalver ./qt-fs-client löschen und neu anlegen, da eventuell nicht leer
        attribute =  userpath_net_ein + "/.qt-fs-client  2>/dev/null"; 
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
+       befehl = "/usr/sbin/qt-fsarchiver.sh  8 " + attribute; 
        if(system (befehl.toLatin1().data()))
          attribute = "";
        attribute  = attribute;
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
+       befehl = "/usr/sbin/qt-fsarchiver.sh  3 " + attribute;
        if (system (befehl.toLatin1().data()))
         attribute = "";
     /*   //vorsichtshalber Rechte immer neu setzen
        attribute = "a+rwx " + userpath_net_ein + "/.qt-fs-client 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 16 " + attribute;
+       befehl = "/usr/sbin/qt-fsarchiver.sh  16 " + attribute;
        x = system (befehl.toLatin1().data());*/
 // Ini-Datei auslesen
    QFile file(userpath_net_ein + "/.config/qt-fsarchiver/qt-fsarchiver.conf");
@@ -158,7 +158,7 @@ int i = 0;
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
            {
            attribute = "-sP " + adresse_eigen + ".0/24 1>" +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 18 " + attribute;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  18 " + attribute;
            if(system (befehl.toLatin1().data()))
               befehl = "";
            {
@@ -304,7 +304,7 @@ QString hostname_;
         // Dateien entfernen 
   	if (file1.exists()){
      		attribute = "~/.config/qt-fsarchiver/findsmb-qt.txt";
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 15 " + attribute; 
+                befehl = "/usr/sbin/qt-fsarchiver.sh  15 " + attribute; 
 		if(system (befehl.toLatin1().data()))
                    befehl = "";
                
@@ -362,14 +362,14 @@ int NetEin:: setting_save(QString user_net_ein)
   filename = "~/.config/qt-fsarchiver/ip.txt";
 	if (f.exists()){
      		attribute = filename;
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
+                befehl = "/usr/sbin/qt-fsarchiver.sh  8 " + attribute; 
 		if(system (befehl.toLatin1().data()))
                   befehl = "";
        }     
        filename = "~/.config/qt-fsarchiver/smbtree.txt";
        if (f.exists()){
      		attribute = filename;
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + attribute; 
+                befehl = "/usr/sbin/qt-fsarchiver.sh  8 " + attribute; 
 		if(system (befehl.toLatin1().data()))
                    befehl = "";
        } 

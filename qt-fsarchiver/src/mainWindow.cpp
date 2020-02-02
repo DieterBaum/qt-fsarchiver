@@ -18,6 +18,8 @@
 #include <mntent.h>
 #include <QtGui>
 #include <QInputDialog>
+#include <QFile>
+#include <QTextStream>
 #include "filedialog.h"
 #include "setting.h"
 #include "net.h"
@@ -25,6 +27,7 @@
 #include "mbr.h"
 #include "clone.h"
 #include "dir.h"
+
 extern "C" {
 }
 #include <unistd.h>
@@ -40,7 +43,7 @@ QString folder1;
 QString _Datum;
 QString DateiName("") ;
 extern int dialog_auswertung;
-extern int flag;
+extern int flag1;
 extern QString parameter[15];
 extern QString part[100][10];
 QString widget[100];
@@ -73,10 +76,11 @@ int zstd_level;
 QString sdx[500];
 int show_part = 0;
 extern int sleepfaktor;
+extern int password_;
 
 MWindow::MWindow()
 {
-   QStringList dummy;
+   QStringList dummy; 
    QStringList partition_kurz;
    QString partition1_;
    QStringList items;
@@ -137,6 +141,7 @@ MWindow::MWindow()
    connect( chk_key, SIGNAL( clicked() ), this, SLOT(chkkey()));
    connect( chk_hidden, SIGNAL( clicked() ), this, SLOT(chkhidden()));
    connect( chk_split, SIGNAL( clicked() ), this, SLOT(chkGB()));
+
    //Benutzername ermitteln
    user = homepath.right(homepath.size() -6);
    userpath = "/home/" + user;
@@ -145,7 +150,14 @@ MWindow::MWindow()
    bool ok;
    int live_flag = 0;
    // 0 = Eingabe Passwort erforderlich, 1 = keine Passworteingabe: Live-DVD
-// Ini-Datei auslesen, Passwort anzeigen
+   QDir dir1(userpath + "/.config/qt-fsarchiver");
+   if (!dir1.exists())
+       {
+       befehl = " mkdir " + userpath + "/.config/qt-fsarchiver 2>/dev/null";
+       if(system (befehl.toLatin1().data()))
+          befehl = "";
+       }
+   // Ini-Datei auslesen, Passwort anzeigen?
    QFile file4(userpath + "/.config/qt-fsarchiver/qt-fsarchiver.conf");
    QSettings setting1("qt-fsarchiver", "qt-fsarchiver");
    file4.open(QIODevice::ReadOnly);
@@ -159,7 +171,9 @@ MWindow::MWindow()
         rootpassword = auswertung;
         setting1.endGroup();
         } 
-  if (live_flag == 0 && password == "")
+   if (live_flag == 1)
+       password = "xx"; //Fiktives Passwort für die Live-DVD        
+   if (live_flag == 0 && password == "")
       {
       do
        {
@@ -179,23 +193,55 @@ MWindow::MWindow()
        } 
        while( password == "");
       }
-   if (live_flag == 1)
-      password = "xx";
-   QDir dir1(userpath + "/.config/qt-fsarchiver");
-   if (!dir1.exists()){
-       attribute = userpath + "/.config/qt-fsarchiver 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
-       if (system (befehl.toLatin1().data()))
+      daten_write(password,0);
+      daten_write("",1);
+      //vorsichtshalber Passswortdatei löschen
+      befehl = "rm " + userpath + "/.config/qt-fsarchiver/den.nfo.cpt 2>/dev/null";
+      if(system (befehl.toLatin1().data()))
           befehl = "";
-       }
+      QThread::msleep(10 * sleepfaktor);
+      befehl = "/usr/sbin/de -e -k " + userpath + "/.local/share/.en.nfo " + userpath + "/.config/qt-fsarchiver/den.nfo";
+      if (system (befehl.toLatin1().data()))
+          befehl = "";
+      password = "xx"; //Damit das Passwort nicht im RAM ausgelesen werden kann
+      if (live_flag == 0 && password_ == 0)
+         {
+       // Passwort prüfen
+       attribute ="/temp1 2>/dev/null";
+       befehl = "/usr/sbin/qt-fsarchiver.sh  3 " + attribute;
+       if(system (befehl.toLatin1().data()))
+           befehl = "";
+       QThread::msleep(10 * sleepfaktor);
+       QDir dir2("/temp1");
+       if (dir2.exists())
+          {
+          attribute ="/temp1 2>/dev/null";
+          befehl = "/usr/sbin/qt-fsarchiver.sh  8 "  + attribute;
+          if(system (befehl.toLatin1().data()))
+                befehl = ""; 
+          password_ = 1; 
+          } 
+       else 
+          {
+          QMessageBox::about(this,tr("Note", "Hinweis"),
+         	tr("The password is wrong. The program must be terminated. It may take a few seconds to close the window.\n", "Das Passwort ist falsch. Das Programm muss beendet werden. Das Schließen des Fensters kann einige Sekunden dauern.\n"));
+          QString pid_terminal;
+          pid_terminal = pid_ermitteln_("bash"); 
+         // befehl = "kill -15 " + pid_terminal;  //bash abbrechen, Zeit zum ordentlichen Beenden
+          befehl = "kill -9 " + pid_terminal;  //bash abbrechen, sofortiges Beenden
+          if(system (befehl.toLatin1().data()))
+            befehl = "";
+          return;
+         } 
+         }   
    //vorsichtshalber Rechte immer neu setzen
        attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-       if (system (befehl.toLatin1().data()))
+       befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+       if(system (befehl.toLatin1().data()))
          befehl = "";
        attribute = "chmod 777 "  + userpath + "/.config/qt-fsarchiver";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
-       if (system (befehl.toLatin1().data()))
+       befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+       if(system (befehl.toLatin1().data()))
          befehl = "";
    QFile file3(userpath + "/.config/qt-fsarchiver/running.txt");
    if (file3.exists())
@@ -245,16 +291,21 @@ MWindow::MWindow()
        QMessageBox::about(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
     	return;	
           }
-   if (password == "")
-   {
-   QMessageBox::about(this,tr("Note", "Hinweis"),
-         	tr("You must enter a password. You must exit the program and restart.\n", "Sie müssen ein Passwort eingeben. Sie müssen das Programm beenden und neu starten.\n"));
-   return;
-   }
+       //Prüfen ob qt-fsarchiver geändert wurde. Eventuell wurde eine echo Befehl zum Auslesen des Passwortes eingefügtf
+       // Bei Ubuntu, Debian, Mint und Suse ist die erste Zeile #!/bin/bash
+       // Bei Fedora ist die erste Zeile #!/usr/bin/bash. Daher die verschiedenen Ergebnisse.
+       QString vergleich = md5sum("/usr/sbin/qt-fsarchiver.sh");
+       if(vergleich == "13ad1c078007f2dbe13c0b0e5d922edf" or vergleich == "5109c347d701f788e7ef0469c0363519")
+        ;
+       else
+       {
+           QMessageBox::about(this,tr("Note", "Hinweis"),tr("Security warning: A file has been modified. The program is terminated. Please reinstall qt-fsarchiver.", "Sicherheitswarnung: Eine Datei wurde geändert. Das Programm wird beendet. Bitte installieren Sie qt-fsarchiver neu"));
+    	return;
+        }
    //Vorsichtshalber alle txt Dateien löschen
-   befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null";
+   befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null";
    if(system (befehl.toLatin1().data()))
-      befehl = "";
+       befehl = "";
    items_kerne_ << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12";
    cmb_kerne->addItems (items_kerne_);
    items_kerne_.clear();
@@ -282,20 +333,20 @@ MWindow::MWindow()
    items << zip_[5] << zip_[6] << zip_[7] << zip_[8] << zip_[9] << zip_[10];
    cmb_zip->addItems (items);
    items.clear();
-   if (flag == 0) 
+   if (flag1 == 0) 
    {
       QDir dir(userpath + "/.qt-fs-client");
       // Eventuelle Datein in .qt-fs-client löschen, da sonst das Mounten fehlerhaft sein kann
        attribute = "-R -f " + userpath + "/.qt-fs-client";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 15 " + attribute; 
-       if (system (befehl.toLatin1().data()))
+       befehl = "/usr/sbin/qt-fsarchiver.sh  15 " + attribute; 
+       if(system (befehl.toLatin1().data()))
            befehl = "";
        attribute = userpath + "/.qt-fs-client 2>/dev/null" ;
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
+       befehl = "/usr/sbin/qt-fsarchiver.sh  3 " + attribute;
        if(system (befehl.toLatin1().data()))
           befehl = "";
       /* attribute = "chown -R " + user + " " + userpath + "/.qt-fs-client";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+       befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
        if (system (befehl.toLatin1().data()))
           befehl = ""; */
     }
@@ -304,8 +355,8 @@ MWindow::MWindow()
    QString media = "/media";
    if (!dir3.exists()){
        attribute = media + " 2>/dev/null" ;
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 " + attribute;
-       if (system (befehl.toLatin1().data()))
+       befehl = "/usr/sbin/qt-fsarchiver.sh  3 " + attribute;
+       if(system (befehl.toLatin1().data()))
            befehl = "";
        }
    // beim Abbruch einer Sicherung bleiben eventuell Daten in /tmp/fsa erhalten.
@@ -314,8 +365,8 @@ MWindow::MWindow()
    // Das System sürzt ab!!
    if (is_running() == 0) {
        attribute = "-r -f /tmp/fsa 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 15 " + attribute; 
-       if (system (befehl.toLatin1().data()))
+       befehl = "/usr/sbin/qt-fsarchiver.sh  15 " + attribute; 
+       if(system (befehl.toLatin1().data()))
            befehl = "";
    }
    // Ini-Datei auslesen
@@ -412,11 +463,11 @@ MWindow::MWindow()
                      {
          		if (partition_typ == "ext" || partition_typ == "btrfs"|| partition_typ == "vfat" || partition_typ ==  "ntfs" || partition_typ ==  "jfs" || partition_typ ==  "xfs")
                    		{
-                   	 	befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 3 -m 0777 /media/" + part[i][0];
-                                if (system (befehl.toLatin1().data()))
+                   	 	befehl = "/usr/sbin/qt-fsarchiver.sh  3 -m 0777 /media/" + part[i][0];
+                                if(system (befehl.toLatin1().data()))
                                     befehl = "";
-                                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 2 /dev/" + part[i][0] + " /media/" + part[i][0]; 
-                         	if (system (befehl.toLatin1().data()))
+                                befehl = "/usr/sbin/qt-fsarchiver.sh  2 /dev/" + part[i][0] + " /media/" + part[i][0]; 
+                         	if(system (befehl.toLatin1().data()))
                                    befehl = "";
                                 }
                         }
@@ -652,13 +703,13 @@ int MWindow::savePartition()
                            if (liveFlag == 0)
                             {
                              if(partition_.indexOf("dm-") > -1)   //Live-DVD mit LVM und Raid
-                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /media/" + partition_; 
+                                 befehl = "/usr/sbin/qt-fsarchiver.sh  4 /media/" + partition_; 
                              else                                 //Live-DVD ohne LVM und Raid
-                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_; 
+                                 befehl = "/usr/sbin/qt-fsarchiver.sh  4 /dev/" + partition_; 
                              err = system (befehl.toLatin1().data());
                                                                   // Sichern von LVM und Raid, keine Live-DVD
                              if(part[row_1][7] != "")
-                                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + part[row_1][7]; 
+                                 befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + part[row_1][7]; 
                              err = err + system (befehl.toLatin1().data());
                             } 
                            if (err != 0 && liveFlag == 0)
@@ -768,7 +819,7 @@ int MWindow::savePartition()
 				state = chk_pbr->checkState();
 				if (state == Qt::Checked)
                                   {
-                                  befehl_pbr = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + "if=/dev/" + partition_ + " 'of=" + folder + "/" + DateiName + "-" + _Datum + ".pbr' bs=512 count=1";
+                                  befehl_pbr = "/usr/sbin/qt-fsarchiver.sh  12 if=/dev/" + partition_ + " 'of=" + folder + "/" + DateiName + "-" + _Datum + ".pbr' bs=512 count=1";
 				 if (system (befehl_pbr.toLatin1().data()))
                                      befehl = "";
                                   }
@@ -819,7 +870,7 @@ int MWindow::savePartition()
                                 stopFlag = 0;
                                 this->setCursor(Qt::WaitCursor);
   				statusBar()->showMessage(tr("The backup is performed", "Die Sicherung wird durchgeführt"), 15000);
-                                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 " + userpath;
+                                befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
                                 if(system (befehl.toLatin1().data()))
                                    befehl = "";
         		        }
@@ -1008,8 +1059,8 @@ QString attribute;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2];
   			attribute = "3 " + attribute;
                         save_attribut(attribute);
-                        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 " + userpath;
-                        if (system (befehl.toLatin1().data()))
+                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
+                        if(system (befehl.toLatin1().data()))
                             befehl = "";
                         QThread::msleep(10 * sleepfaktor);
                		optionkey = datei_auswerten("p");
@@ -1037,7 +1088,7 @@ QString attribute;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2] + " " + parameter[3] + " " + parameter[4];
                         attribute = "5 " + attribute;
                         save_attribut(attribute);
-                        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 " + userpath;
+                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
                         if(system (befehl.toLatin1().data()))
                            befehl = "";
                         QThread::msleep(10 * sleepfaktor);
@@ -1046,7 +1097,7 @@ QString attribute;
                         if(optionkey == "13") {
                            QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.", "Sie haben ein falsches Passwort eingegeben. \n"));
            		   lineKey->setText ("");
-                           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
+                           befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
                            if(system (befehl.toLatin1().data()))
                                befehl = "";
                            return 0;
@@ -1120,7 +1171,7 @@ QString attribute;
                               attribute = "/media/" + partition_  + " 2>/dev/null"; //LVM, Raid
                           else
                               attribute = "/dev/" + partition_  + " 2>/dev/null";   // nicht LVM, Raid
-                          befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
+                          befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
                           err = system (befehl.toLatin1().data());
                           QThread::msleep(200 * sleepfaktor);  
                           if (err != 0)
@@ -1134,11 +1185,11 @@ QString attribute;
            if (rdBt_restoreFsArchiv->isChecked())
            {
 	     if (partition_typ_ == "btrfs"){
-                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 /dev/" + partition_; // unmounten
+                 befehl = "/usr/sbin/qt-fsarchiver.sh  4 /dev/" + partition_; // unmounten
  		 if(system (befehl.toLatin1().data()))
                     befehl = "";
                  QThread::msleep(50 * sleepfaktor);
-                 befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 7 -f /dev/" + partition_; // Partition anlegen
+                 befehl = "/usr/sbin/qt-fsarchiver.sh  7 -f /dev/" + partition_; // Partition anlegen
  		if(system (befehl.toLatin1().data()))
                      befehl = "";
                  QThread::msleep(50 * sleepfaktor);
@@ -1185,7 +1236,7 @@ QString attribute;
                ViewProzent();
                stopFlag = 0;
                this->setCursor(Qt::WaitCursor);
-               befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 1 " + userpath;
+               befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
                if(system (befehl.toLatin1().data()))
                   statusBar()->showMessage(tr("The recovery is performed.", "Die Wiederherstellung wird durchgeführt"), 15000); 
                }
@@ -1268,8 +1319,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-14, January 6, 2020",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-14, 6.Januar 2020"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-15, February 6, 2020",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020"));
       }
 
 int MWindow::is_running(){
@@ -1618,7 +1669,7 @@ int err = 0;
       i = 2;
       if (befehl_pbr != "") 
          {
-         QString befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 12 " + befehl_pbr + " bs=512 count=1"; 
+         QString befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + befehl_pbr + " bs=512 count=1"; 
          if(system (befehl.toLatin1().data()))
              befehl = "";
          i = 0;
@@ -1902,9 +1953,9 @@ int i;
 	befehl = "cat /etc/*release 1> " +  userpath + "/.config/qt-fsarchiver/version.txt";
         if(system (befehl.toLatin1().data()))
            befehl = "";
-QString filename = userpath + "/.config/qt-fsarchiver/version.txt";
-QFile file(filename);
-QTextStream ds(&file);
+        QString filename = userpath + "/.config/qt-fsarchiver/version.txt";
+        QFile file(filename);
+        QTextStream ds(&file);
         file.open(QIODevice::ReadOnly | QIODevice::Text); 
         while (Linuxversion == ""){
             Linuxversion = ds.readLine();
@@ -2001,18 +2052,18 @@ int ret = 0;
       if (ret == 1)
         {
         attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
         if(system (befehl.toLatin1().data()))
             befehl = "";    
         attribute = "rm " + SicherungsFolderFileName;
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
         if(system (befehl.toLatin1().data()))
             befehl = "";
      	int pos = SicherungsFolderFileName.indexOf("fsa");
        	SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
        	SicherungsFolderFileName.insert(pos, QString("txt"));
         attribute = "rm " + SicherungsFolderFileName;
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
         if(system (befehl.toLatin1().data()))
             befehl = "";
 // pbr-Datei löschen
@@ -2020,11 +2071,11 @@ int ret = 0;
         SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
         SicherungsFolderFileName.insert(pos, QString("pbr"));
          attribute = "rm " + SicherungsFolderFileName;
-         befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute; 
+         befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
         if(system (befehl.toLatin1().data()))
             befehl = "";
         attribute = "kill -15 " + pid_qt_fsarchiver;  //qt-fsarchiver-terminal abbrechen
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
         if(system (befehl.toLatin1().data()))
             befehl = "";
         close();
@@ -2074,28 +2125,34 @@ void MWindow::del_mediafolder()
            media = dev_sdx[size - 1];
            foldername[k] = "/media/" + media; 
            attribute = foldername[k]  + " 2>/dev/null";
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
+            befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
             if(system (befehl.toLatin1().data()))
                befehl = "";
-            befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 8 " + foldername[k]; //rmdir
+            befehl = "/usr/sbin/qt-fsarchiver.sh  8 " + foldername[k]; //rmdir
             if(system (befehl.toLatin1().data()))
                befehl = "";
            }
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
+           befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
            if(system (befehl.toLatin1().data()))
                befehl = "";
            attribute = "-f " + userpath + "/.qt-fs-client 2>/dev/null";
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
+           befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
            if(system (befehl.toLatin1().data()))
               befehl = "";
            attribute = "-a -t nfs 2>/dev/null";
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 4 " + attribute;  //umount
+           befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
            if(system (befehl.toLatin1().data()))
               befehl = "";
            attribute = "fusermount -u " + userpath + "/.qt-fs-client 2>/dev/null";
-           befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;  //umount
-          if(system (befehl.toLatin1().data()))
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  //umount
+           if(system (befehl.toLatin1().data()))
               befehl = "";
+           befehl = "rm " + userpath + "/.config/qt-fsarchiver/den.nfo.cpt 2>/dev/null";
+           if(system (befehl.toLatin1().data()))
+                befehl = "";
+           befehl = "rm " + userpath + "/.local/share/.en.nfo 2>/dev/null";
+           if(system (befehl.toLatin1().data()))
+             befehl = "";
            qApp->quit();
 }
 
@@ -2125,7 +2182,7 @@ int size = 0;
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
           {
         attribute = "lsblk --output KNAME,FSTYPE,SIZE,UUID,MOUNTPOINT 1> " +  userpath + "/.config/qt-fsarchiver/disk2.txt";
-        befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
         if(system (befehl.toLatin1().data()))
             befehl = "";
         while (text == ""){
@@ -2165,7 +2222,7 @@ int size = 0;
               if(file.open(QIODevice::ReadWrite | QIODevice::Text))
                 {
                 attribute = "lsblk /dev/" + part[j][0] + " --output LABEL 1> " +  userpath + "/.config/qt-fsarchiver/disk1.txt";
-                befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 13 " + attribute;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
                 if(system (befehl.toLatin1().data()))
                       befehl = "";
                 text = "";
@@ -2335,10 +2392,51 @@ QStringList pid;
 void MWindow::date_delete()
 {
 QString befehl;
+      befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null";
+      if(system (befehl.toLatin1().data()))
+         befehl = "";
+}
 
-      befehl = "/usr/sbin/qt-fsarchiver.sh " + password + " 5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null";
+void MWindow::daten_write(QString password, int i)
+{
+QString befehl; 
+QString filename;
+
+   if(i == 1)
+   {
+      filename = userpath + "/.local/share/.en.nfo";
+      befehl = "rm " + filename + " 2>/dev/null";
       if (system (befehl.toLatin1().data()))
          befehl = "";
+      befehl = "md5sum /usr/sbin/de 2>&1 >> " + filename; 
+      if (system (befehl.toLatin1().data()))
+         befehl = "";
+    }
+    if ( i == 0)
+    {
+    filename = userpath + "/.config/qt-fsarchiver/den.nfo"; 
+    befehl = "rm " + filename + " 2>/dev/null";
+    if (system (befehl.toLatin1().data()))
+         befehl = "";
+    // }   
+QFile file(filename);
+    if (file.open(QIODevice::ReadWrite)) {
+        QTextStream stream(&file);
+        stream << password << endl;
+    }}
+}
+
+QString MWindow::md5sum(QString file_name)
+{
+QFile file(file_name);
+if (file.open(QIODevice::ReadOnly))
+{
+    QByteArray fileData = file.readAll();
+    QByteArray hashData = QCryptographicHash::hash(fileData,QCryptographicHash::Md5); // or QCryptographicHash::Sha1
+   // qDebug() << hashData.toHex();  // 0e0c2180dfd784dd84423b00af86e2fc
+    return hashData.toHex();
+}
+  return "";
 }
 
 /*

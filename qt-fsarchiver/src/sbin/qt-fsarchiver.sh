@@ -4,88 +4,101 @@ if [ $# -lt 1 ]; then
   echo "Fehler: Keine Kein Passwort übergeben"
   exit
 fi
-# $1 = Password
-# $2 = Auswahl
-# $3 = zu mountende Partition, qt-fsarchiver Starter Verzeichnis /.config if=/dev
-# $4 = Mountort of=/dev
-# $5 = parameter für rm
-#password=$1
-#auswahl=$2
-ddif="$3"
-ddof="$4"
-sgdisk="$5"
-if [ $2 -eq 1 ]; then
-echo $1 | sudo -S -b /usr/sbin/qt-fsarchiver-terminal $3
+# $1 = Auswahl
+# $2 = zu mountende Partition, qt-fsarchiver Starter Verzeichnis /.config if=/dev
+# $3 = Mountort of=/dev
+# $4 = parameter für rm
+ddif="$2"
+ddof="$3"
+sgdisk="$4"
+dateiname="/.config/qt-fsarchiver/den.nfo.cpt"
+testfile=$HOME$dateiname
+if [ -f "$testfile" ];then 
+/usr/sbin/de -d -k ~/.local/share/.en.nfo ~/.config/qt-fsarchiver/den.nfo.cpt
+URLFILE=~/.config/qt-fsarchiver/den.nfo
+for i in `cat $URLFILE`; do
+echo > .1 $i
+done
+if [ -f .1 ];then
+rm .1
 fi
-if [ $2 -eq 2 ]; then
-echo $1 | sudo -S -b mount $3 $4 
+# den.nfo.cpt wieder herstellen, den.nfo wird somit gelöscht
+/usr/sbin/de -e -k ~/.local/share/.en.nfo ~/.config/qt-fsarchiver/den.nfo
 fi
-if [ $2 -eq 3 ]; then
-echo $1 | sudo -S -b mkdir $3 $4 $5
+if [ $1 -eq 1 ]; then
+echo $i | sudo -S -b /usr/sbin/qt-fsarchiver-terminal $2
 fi
-if [ $2 -eq 4 ]; then
-echo $1 | sudo -S -b umount $3 $4 $5 $6
+if [ $1 -eq 2 ]; then
+echo $i | sudo -S -b mount $2 $3
 fi
-if [ $2 -eq 5 ]; then
+if [ $1 -eq 3 ]; then
+echo $i | sudo -S -b mkdir $2 $3 $4
+fi
+if [ $1 -eq 4 ]; then
+echo $i | sudo -S -b umount $2 $3 $4 $5
+fi
+if [ $1 -eq 5 ]; then
 cd /
-cd $3
-echo $1 | sudo -S -b rm $4 $5 $6 $7
+cd $2
+echo $i | sudo -S -b rm $3 $4 $5 $6
 fi
-if [ $2 -eq 6 ]; then
-echo $1 | sudo -S -b dd $3 $4 bs=512 count=1
+if [ $1 -eq 6 ]; then
+echo $i | sudo -S -b dd $2 $3 bs=512 count=1
 fi
-if [ $2 -eq 7 ]; then
-echo $1 | sudo -S -b mkfs.btrfs $3 $4 
+if [ $1 -eq 7 ]; then
+echo $i | sudo -S -b mkfs.btrfs $2 $3 
 fi
-if [ $2 -eq 8 ]; then
-echo $1 | sudo -S -b rmdir $3 $4
+if [ $1 -eq 8 ]; then
+echo $i | sudo -S -b rmdir $2 $3
 fi
-if [ $2 -eq 9 ]; then
-echo $1 | sudo -S -b fdisk $3 
+if [ $1 -eq 9 ]; then
+echo $i | sudo -S -b fdisk $2 
 fi
-if [ $2 -eq 10 ]; then
-echo $1 | sudo -S -b $3 $4 $5 $6 $7 
+if [ $1 -eq 10 ]; then
+echo $i | sudo -S -b $2 $3 $4 $5 $6 
 fi
-if [ $2 -eq 11 ]; then
-echo $1 | sudo -S -b  cp $3 $4
+if [ $1 -eq 11 ]; then
+echo $i | sudo -S -b  cp $2 $3
 fi
-if [ $2 -eq 12 ]; then
-echo $1 | sudo -S -b dd "$ddif" "$ddof" $5 $6 $7 $8
+if [ $1 -eq 12 ]; then
+echo $i | sudo -S -b dd "$ddif" "$ddof" $4 $5 $6 $7
 fi
-if [ $2 -eq 13 ]; then
-echo $1 | sudo -S -b $3 $4 $5 $6
+if [ $1 -eq 13 ]; then
+echo $i | sudo -S -b $2 $3 $4 $5
 fi
-if [ $2 -eq 14 ]; then
-echo $1 | sudo -S -b gunzip "$ddif" "$ddof" $5 $6 $7
+if [ $1 -eq 14 ]; then
+echo $i | sudo -S -b gunzip "$ddif" "$ddof" $4 $5 $6
 fi
-if [ $2 -eq 15 ]; then
+if [ $1 -eq 15 ]; then
 cd /
-cd $5
-echo $1 | sudo -S -b rm  $3 $4 $5 $6 $7
+cd $4
+echo $i | sudo -S -b rm  $2 $3 $4 $5 $6
 fi
-if [ $2 -eq 16 ]; then
-echo $1 | sudo -S -b chmod $3 $4 $5 $6 $7
+if [ $1 -eq 16 ]; then
+echo $i | sudo -S -b chmod $2 $3 $4 $5 $6
 fi
-if [ $2 -eq 17 ]; then
-echo $1 | sudo -S -b fusermount $3 $4 $5 
+if [ $1 -eq 17 ]; then
+echo $i | sudo -S -b fusermount $2 $3 $4
 fi
-if [ $2 -eq 18 ]; then
-echo $1 | sudo -S -b nmap $3 $4 $5 $6 $7
+if [ $1 -eq 18 ]; then
+echo $i | sudo -S -b nmap $2 $3 $4 $5 $6
 fi
-if [ $2 -eq 19 ]; then
-echo $1 | sudo -S -b mount $3 $4 $5 $6 $7 $8 $9 
+if [ $1 -eq 19 ]; then
+echo $i | sudo -S -b mount $2 $3 $4 $5 $6 $7 $8 
 fi
-if [ $2 -eq 20 ]; then
+if [ $1 -eq 20 ]; then
 cd /
-cd $3
-echo $1 | sudo -S -b  cp $4 $5
+cd $2
+echo $i | sudo -S -b  cp $3 $4
 fi
-if [ $2 -eq 21 ]; then
-echo $1 | sudo -S -b dd $3 $4 $5 $6 $7 $8
+if [ $1 -eq 21 ]; then
+echo $i | sudo -S -b dd $2 $3 $4 $5 $6 $7
 fi
-if [ $2 -eq 22 ]; then
-echo $1 | sudo -S -b $3 "$ddof" "$sgdisk" $6
+if [ $1 -eq 22 ]; then
+echo $i | sudo -S -b $3 "$ddof" "$sgdisk" $5
 fi
-if [ $2 -eq 23 ]; then
-echo $1 | sudo -S -b rm $3
+if [ -f "$2" ];then 
+  if [ $1 -eq 23 ]; then
+  echo $i | sudo -S -b rm $2 
+  fi
 fi
