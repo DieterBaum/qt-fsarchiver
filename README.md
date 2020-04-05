@@ -28,12 +28,12 @@ On some distributions, the /etc/sudoers file must be completed with these lines:
 Instead of libzst1-dev, libzst-dev is installed in some systems. btrfs-tools has recently been replaced by btrfs-progs.
 The above command has to be adapted accordingly.
   
-####SUSE:
+#### SUSE:
 1. Grant yourself superuser priviliges: "su -l"
 2. Install required packages "zypper in zypper in qt5-default libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils"
 If you use SSH (secure shell) and want to access other computers in the network, you also need "sshpass".
 
-####Fedora:
+#### Fedora:
 1. Grant yourself superuser priviliges: "su -l"
 2. Install required packages "dnf install gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-default qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs"
 For a 64-bit system, you must also install lrelease: "dnf install qt5-linguist.x86-64"
@@ -42,7 +42,7 @@ With Fediora30 you still have to install "make".
  
 You change in the terminal to the folder qt5-fsarchiver (extracted from the sources).
 
-####Install the program
+#### Install the program
 **Debian, Ubuntu and Mint** with this command:
 "/usr/lib/x86_64-linux-gnu/qt5/bin/qmake && make && sudo make install"
 **Debian**: Instead use sudo make install like this:
