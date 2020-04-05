@@ -11,12 +11,12 @@ Thus startup problems with gksu/gksudo, (which is no longer installable) were so
 
 The source code can be installed on any Debian-based system via DEB packages, and on SUSE and Fedora with RPM.
  
-###Installation from source files:
+### Installation from source files:
 To install qt-fsarchiver and qt-fsarchiver-terminal the necessary dependencies for fsarchiver and the
 Qt 5 development environment must be installed.
  
 
-####Debian based installations:
+#### Debian based installations:
 1. "sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qtbase5-dev qttools5-dev-tools qt5-default btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo"
 2. If that, grant yourself superuser privileges with "su"
  
