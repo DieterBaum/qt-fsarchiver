@@ -3,6 +3,8 @@
 Back up and restore partitions for Debian, Ubuntu, Linux-Mint, SUSE and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
  
 **qt-fsarchiver** is a program with a graphical interface for easy operation of the archiving program _fsarchiver_.
+
+####If you want to help with the translation, you can do so here: https://hosted.weblate.org/engage/qt-fsarchiver/?utm_source=widget
  
 qt-fsarchiver has been split into a program with a graphical user interface and a terminal program.
 Both programs must be installed.
