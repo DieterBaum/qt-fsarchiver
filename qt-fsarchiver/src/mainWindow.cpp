@@ -1319,8 +1319,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-15, February 6, 2020",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-16, April 30, 2020",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-16, 30.April 2020"));
       }
 
 int MWindow::is_running(){
@@ -2175,13 +2175,18 @@ int k = 0;
 int l = 0;
 int m = 0;
 int size = 0;
+int n = 0;
+int o = 0;
+int x = 0;
+int y = 0;
+int z = 0;
         filename = userpath + "/.config/qt-fsarchiver/disk2.txt";
         QFile file(filename);
         QThread::msleep(200 * sleepfaktor);  
         QTextStream ds(&file);
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
           {
-        attribute = "lsblk --output KNAME,FSTYPE,SIZE,UUID,MOUNTPOINT 1> " +  userpath + "/.config/qt-fsarchiver/disk2.txt";
+        attribute = "lsblk --output KNAME,FSTYPE,SIZE,UUID,MOUNTPOINT,LABEL 1> " +  userpath + "/.config/qt-fsarchiver/disk2.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
         if(system (befehl.toLatin1().data()))
             befehl = "";
@@ -2199,6 +2204,7 @@ int size = 0;
            }
            file.close();
            j = 0;
+           n = j;  //Anzahl der Partitionen
 
            for (k=0; k < i; k++)
            {
@@ -2215,30 +2221,33 @@ int size = 0;
               part[j][2] = part[j][2].left(part[j][2].size()-1);
               part[j][2] = part[j][2] + " " + dummy + "B";
               part[j][3] = dev_sdx[3]; //UUID
-              part[j][7] = dev_sdx[4]; //MOUNTPOINT
-              filename = userpath + "/.config/qt-fsarchiver/disk1.txt";
-              QFile file(filename);
-              QTextStream ds(&file);
-              if(file.open(QIODevice::ReadWrite | QIODevice::Text))
-                {
-                attribute = "lsblk /dev/" + part[j][0] + " --output LABEL 1> " +  userpath + "/.config/qt-fsarchiver/disk1.txt";
-                befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
-                if(system (befehl.toLatin1().data()))
-                      befehl = "";
-                text = "";
-              while (text == ""){
-                  text = ds.readLine();
-                  QThread::msleep(5 * sleepfaktor);
-              }
-               text = ds.readLine();
-               part[j][6] = ds.readLine();
-              }
+              dummy=dev_sdx[4]; 
+              if(dummy.indexOf("/") != -1) //Mountpoint vorhanden
+                 {
+                  part[j][7] = dev_sdx[4]; //MOUNTPOINT
+                  part[j][6] = dev_sdx[5]; //Bezeichnung
+                  for(y=6; y<size;y++)     // Wenn Bezeichnung Leersstellen enthält, gemounted
+                     {
+                     part[j][6] = part[j][6] + " " + dev_sdx[y];
+                     }
+                  
+                  }
+               if(dummy.indexOf("/") == -1)  //Mountpoint nicht vorhanden
+                  {
+                  part[j][6] = dev_sdx[4]; //Bezeichnung
+                  for(z=5; z<size;z++)     // Wenn Bezeichnung Leersstellen enthält, nicht gemounted
+                     {
+                     part[j][6] = part[j][6] + " " + dev_sdx[z];
+                     }
+                   }
+ 
               file.close();
               j++;
              }
+             x=j+1;
              }
              //Anzahl der Swap ermitteln
-             for(j=0; j< k; j++)
+             for(j=0; j<k; j++)
                {
                text = part[j][1];
                if (text.indexOf("swap") > -1)
@@ -2247,19 +2256,38 @@ int size = 0;
              for(m=0; m<l; m++)
              {
              //Suchen an welcher Stelle Swap vorhanden ist
-             for(j=0; j< i; j++)
+             for(j=0; j<i; j++)
                {
                text = part[j][1];
                if (text.indexOf("swap") > -1)
                   break;
                }
               //Swap aus Array entfernen
-              for(j=j; j< i; j++)
+              for(j=j; j<i; j++)
                 {
                   for(k=0; k< 8; k++)
                   part[j][k] = part[j+1][k];
                 }
               }
+              int part_zahl = x-l;
+              // Prüfen ob Partition doppelt vorhanden ist
+               for(j=0; j < part_zahl; j++)
+               {
+                  for(o=0; o < part_zahl; o++)
+                  {
+                  if(part[j][0] == part[j+o+1][0] and part[j][0] != "")
+                      {
+                      // Array kürzen
+                      for (n = o;  n < part_zahl -1; n++)
+                      {
+                       part[j+n+1][0] = part[j+n+2][0];
+                           for(k=0; k< 8; k++)
+                             part[j+n+1][k] = part[j+n+2][k];
+                      }
+                      part_zahl--;
+                    }
+                 }
+               }
 
                 //part[k][0]                    Partitionsname
                 //part[k][1]                    Partitionsart (ext4)

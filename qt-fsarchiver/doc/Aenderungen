@@ -1,6 +1,10 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.5-16 30. April 2020.
+    - Partitionen mit LVM und Raid werden nicht mehr doppelt angezeigt.
+    - Kleine Korrekturen.
+    - Ungarische Übersetzung vervollständigt.
 * qt-fsarchiver-0.8.5-15 6. Februar 2020.
     - Root-Passwort ist jetzt verschlüsselt und kann nicht mehr aus dem RAM ausgelesen werden.
     - Root-Passwort wird auf Richtigkeit überprüft. Hinweis zum Beenden des Programms bei falschen Passwort. 

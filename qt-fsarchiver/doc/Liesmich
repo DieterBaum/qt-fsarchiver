@@ -6,6 +6,9 @@ Copyright (C) 2008-2020 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
+Wenn Sie sich an der Übersetzung in andere Sprachen beteiligen wollen, können Sie es hier tun:
+https://hosted.weblate.org/engage/qt-fsarchiver/?utm_source=widget
+
 qt4-fsarchiver wurde in die Qt5-Umgebung übersetzt und in qt-fsarchiver umbenannt.
 
 qt-fsarchiver ist ein Programm mit einer grafischen Oberfläche zur einfachen Bedienung des Archivierungsprogramms fsarchiver.
