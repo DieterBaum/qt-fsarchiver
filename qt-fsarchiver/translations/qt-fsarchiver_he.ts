@@ -3002,10 +3002,10 @@ version 0.8.5-15, February 6, 2020</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-16, April 30, 2020</source>
+version 0.8.5-18, May 10, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
 <translation>מחיצות גיבוי ושחזור, ספריית MBR.
-גִרְסָה 0.8.5-16 30.אַפּרִיל, 2020</translation>
+גִרְסָה 0.8.5-18 10.מאי, 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>
@@ -3069,10 +3069,10 @@ version 0.8.5-16, April 30, 2020</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1710"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-16, April 30, 2020</source>
+version 0.8.5-18, May 10, 2020</source>
         <comment> spezielle Daten wurden wiederhergestellt</comment>
 <translation>מחיצות גיבוי ושחזור, ספריית MBR.
-גִרְסָה 0.8.5-16 30.אַפּרִיל, 2020</translation>
+גִרְסָה 0.8.5-18 10.מאי, 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1711"/>

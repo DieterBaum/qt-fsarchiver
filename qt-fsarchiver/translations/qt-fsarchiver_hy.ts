@@ -2993,10 +2993,10 @@ backup. բանալին:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-16, April 30, 2020</source>
+version 0.8.5-18, May 10, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
 <translation>Կրկնօրնկ եւ վերականգնել բաժիններ, գրացուցակը եւ MBR.
-Մեսսենջեր 0.8.5-16 2020 Ապրիլ 30</translation>
+Մեսսենջեր 0.8.5-18 2020 մինչեւ 10</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>

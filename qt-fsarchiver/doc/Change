@@ -1,8 +1,10 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-18 May 10, 2020.
+    - Error correction: MBR and GPT are saved and written back correctly.
 * qt-fsarchiver-0.8.5-16 April 30, 2020.
-    - Partitions with LVM and raid are no longer displayed twice..
+    - Partitions with LVM and raid are no longer displayed twice.
     - Small corrections.
     - Hungarian translation completed.
 * qt-fsarchiver-0.8.5-15 February 6, 2020.    

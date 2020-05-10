@@ -2990,7 +2990,7 @@ Proszę użyć live CD.</translation>
         <translation>Błąd zapisu partycji. Za dużt plik. Użyj partycji FAT?
 </translation>
     </message>
-    <message>
+     <message>
         <location filename="../src/mainWindow.cpp" line="1604"/>
         <source>The backup of the partition was only partially successful.
 </source>
@@ -3022,14 +3022,14 @@ Proszę użyć live CD.</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-16, April 30, 2020</source>
+version 0.8.5-18, May 10, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
-        <translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
+<translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
 - kopii zapasowych
 - partycji,
 - katalogów
 - i MBR.
-wersja 0.8.5-15, 30.Kwiecień 2020</translation>
+wersja 0.8.5-18, 10.Mai 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>
