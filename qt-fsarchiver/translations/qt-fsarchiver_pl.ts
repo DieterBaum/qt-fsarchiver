@@ -2995,8 +2995,6 @@ Proszę użyć live CD.</translation>
         <source>The backup of the partition was only partially successful.
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich</comment>
-        <translation>Tworzenie kopii zapasowej partycji tylko częściowo udane.
-</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1606"/>
@@ -3022,14 +3020,14 @@ Proszę użyć live CD.</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-18, May 10, 2020</source>
+version 0.8.5-20, November 27, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
 <translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
 - kopii zapasowych
 - partycji,
 - katalogów
 - i MBR.
-wersja 0.8.5-18, 10.Mai 2020</translation>
+ wersja 0.8.5-20, 27.listopad 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>

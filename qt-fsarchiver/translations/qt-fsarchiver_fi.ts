@@ -3069,10 +3069,10 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-18, May 10, 2020</source>
+version 0.8.5-20, November 27, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
 <translation>Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.
-Versio 0.8.5-18, 10.Toukokuu 2020</translation>
+Versio 0.8.5-20, 27.Marraskuu 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>

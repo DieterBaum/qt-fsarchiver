@@ -37,7 +37,7 @@ int minute_elapsed_clone;
 int hour_elapsed_clone;
 float sekunde_summe_clone = 0;
 float sekunde_summe_clone_1 = 0;
-QString pid_dd = " ";
+QString pid_dd = "";
 QString pid_2_dd[5];
 QString partition_name;
 int read_write_counter = 0;
@@ -291,7 +291,7 @@ Qt::CheckState state;
                	bt_end->setEnabled(false);
             	bt_save->setEnabled(false);
               	ViewProzent();
-                this->setCursor(Qt::WaitCursor);
+               this->setCursor(Qt::WaitCursor);
 		if (state == Qt::Checked){
 			read_write_hd();
 			startThread1(1);
@@ -302,8 +302,7 @@ Qt::CheckState state;
                             befehl = "";
                          read_write_hd_1();
                       }
-                qDebug() << "The image is created";
-               }
+                }
     return 0;
 }
 
@@ -499,12 +498,12 @@ Qt::CheckState state;
                 this->setCursor(Qt::WaitCursor);
 		if (state == Qt::Checked){
 			read_write_hd();
-			startThread1(1);}
+			startThread1(1);}   // mit gzip schreiben
                 else
                 {
                 	if(system (befehl.toLatin1().data()))
                           befehl = "";
-                        read_write_hd_1();
+                        read_write_hd_1();  // mit dd schreiben
                     }
                 }
     return 0;
@@ -854,6 +853,7 @@ int diff = 0;
 QString mb_sec;
 QString dummy;
 float dummy1;
+
      if (endeThread_clone ==0)
      {
        QTimer::singleShot(1000, this, SLOT(ViewProzent()));
@@ -965,7 +965,6 @@ float dummy1;
 
 void DialogClone::startThread1(int flag) {
 QString befehl;
-
    if( thread1.isRunning()) 
        return;
    connect( &thread1, SIGNAL(finished()),
@@ -1274,8 +1273,7 @@ QString DialogClone::pid_ermitteln(QString prozess)
 QString befehl = "";
 QString pid_nummer = "";
 QStringList pid;
-
-        QString filename = userpath_clone + "/.config/qt-fsarchiver/pid.txt";
+       QString filename = userpath_clone + "/.config/qt-fsarchiver/pid.txt";
 	QFile file(filename);
         QTextStream ds(&file);
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
@@ -1291,13 +1289,12 @@ QStringList pid;
         pid_nummer = ds.readLine();
         }
         file.close();
-      if (pid_nummer != "")
+        if (pid_nummer != "")
         {
-          pid = pid_nummer.split(" ") ;
-          pid_nummer = pid[0]; // 5-stellig
-          if (pid_nummer == "")
-             pid_nummer = pid[1];// 4-stellig
-         }
+           pid_nummer = pid_nummer.trimmed(); 
+           pid = pid_nummer.split(" ");
+           pid_nummer = pid[0]; 
+        }
         return pid_nummer;
 }
 
@@ -1387,19 +1384,18 @@ QString bytes_;
 QStringList bytes;
 int size = 0;
 QString attribute;
-
 QString filename = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
 	if (endeThread_clone !=0)
             return;
          while (pid_dd.size() < 4) 
-        pid_dd = pid_ermitteln("dd"); 
+            pid_dd = pid_ermitteln("dd"); 
         QTimer::singleShot(9800, this, SLOT(read_write_hd_1()));  //10 sekunden
         // Wird für den Fortschrittsbalken benötigt
         if (pid_dd != "")
         {
         attribute = "kill -USR1 " + pid_dd ;
         befehl = "/usr/sbin/qt-fsarchiver.sh  10 " + attribute; 
-       if(system (befehl.toLatin1().data()))
+        if(system (befehl.toLatin1().data()))
            befehl = "";
         } 
 	QFile file(filename);
@@ -1422,7 +1418,7 @@ QString filename = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
            pid_dd = pid_ermitteln("dd");
            bytes = bytes_.split(" ");
            bytes_ = bytes[0];
-           if(pid_dd == "")
+           if(pid_dd == 0)
               {
               endeThread_clone = 1;
               dialog_auswertung = 0;

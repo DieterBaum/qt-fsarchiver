@@ -2966,10 +2966,10 @@ Veuillez saisir la clef :</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-18, May 10, 2020</source>
+version 0.8.5-20, November 27, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
 <translation>sauvegarde et de restauration des répertoires de partition et MBR.
-Version 0.8.5-18, Mai 2020 10. </translation>
+Version 0.8.5-20, Novembre 2020 27. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>

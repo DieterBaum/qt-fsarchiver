@@ -8,7 +8,7 @@
         <location filename="../src/clone.cpp" line="615"/>
         <source>Clone Harddrive</source>
         <comment>Festplatte klonen</comment>
-        <translation>a merevlemezt klonolni</translation>
+        <translation>Klón a merevlemez</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="257"/>
@@ -52,7 +52,7 @@
         <location filename="../src/clone.cpp" line="555"/>
         <source> Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>Szeretne a mentest folytatni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="412"/>
@@ -107,7 +107,7 @@
         <location filename="../src/clone.cpp" line="524"/>
         <source>already written back.</source>
         <comment>bereits zurückgeschrieben</comment>
-        <translation>már vissza lett irva</translation>
+        <translation>már vissza</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="261"/>
@@ -115,58 +115,58 @@
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partition auswählen.
 </comment>
-        <translation>Vàlassza ki a particiot</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="287"/>
         <source>Do you really want to create an image of a partition?  </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition erstellen? </comment>
-        <translation>Valoban szeretne egy kepet a particiorol letrehozni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="319"/>
         <source>already restored</source>
         <comment>bereits zurückgeschrieben</comment>
-        <translation>már vissza lett irva</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="324"/>
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partitiom auswählen.
 </comment>
-        <translation>Valasszon ki egy particiot.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="328"/>
         <source>You must select a part.fsa file or an part.fsa.gz file.</source>
         <comment>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.
 </comment>
-        <translation>Valasszon ki egy part.fsa- vagy egy part.fsa.gz-fajlt.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="337"/>
         <source>Partition to restore </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>Kivalasztando particio.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="338"/>
         <source> does not match the backed up partition.</source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>nem esnek egybe a mentett particiok</translation>
+        <translation>nem esnek egybe a mentett</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="360"/>
         <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
-        <translation>Biztosan szeretne egy kepet a particiorol visszairni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="476"/>
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren?
 </comment>
-        <translation>A merevlemezen egy root vagy egy home particio talalhato.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="538"/>
@@ -179,19 +179,19 @@
         <location filename="../src/clone.cpp" line="554"/>
         <source>The disk to be recovered </source>
         <comment>Die wiederherzustellende Festplatte </comment>
-        <translation>A kivalasztando merevlemez.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="555"/>
         <source> does not coincide with the saved </source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>nem egyezik az elmentettekkel</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="576"/>
         <source>Do you really want to write back an image of the hard disk? </source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? </comment>
-        <translation>Biztosan szeretne egy kepet a particiorol visszairni</translation>
+        <translation> Szeretné, hogy tényleg visszaad a kép a merevlemez-meghajtó? </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="603"/>
@@ -216,45 +216,45 @@
         <source>The backup of the image of the partition was successful.</source>
         <comment>Das Sichern des Abbildes der Partition war erfolgreich.
 </comment>
-        <translation>A particio kepmentese sikeres volt.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1045"/>
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
-        <translation>A merevlemez kepmentese nem volt sikeres.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1052"/>
         <source>Saving the image of the partition was not successful.</source>
         <comment>Das Sichern des Abbildes der Partition war nicht erfolgreich.
 </comment>
-        <translation>A particio kepmentese nem volt sikeres.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1097"/>
         <source>The hard disk image recovery was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich.</comment>
-        <translation>A merevlemez kepeinek visszaadasa sikeres volt.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1099"/>
         <source>The recovery of the partition image was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war erfolgreich.</comment>
-        <translation>A particion kepeinek visszaadasa sikeres volt.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1104"/>
         <source>Hard disk image recovery was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.</comment>
-        <translation>A merevlemez kepeinek visszaadasa nem volt sikeres.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1110"/>
         <source>The recovery of the partition image was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.</comment>
-        <translation>A particio kepeinek visszaadasa nem volt sikeres.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="621"/>
@@ -262,37 +262,37 @@
         <location filename="../src/clone.cpp" line="657"/>
         <source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
-        <translation>Letezo merevlmez</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="651"/>
         <source>Write hard disk image back</source>
         <comment>Festplatten Abbild zurückschreiben</comment>
-        <translation>a merevlemez kepeinek visszairasa</translation>
+        <translation>Visszaad a merevlemez kép</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="673"/>
         <source>Save Partition Image</source>
         <comment>Image einer Partition erstellen</comment>
-        <translation>a particio kepeinek mentese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="675"/>
         <source>Save Partition Image</source>
         <comment>Partition Abbild erstellen</comment>
-        <translation>a particio kepeinek mentese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="686"/>
         <source>Writing back the image of a partition</source>
         <comment>Image einer Partition zurückschreiben</comment>
-        <translation>a particio kepeinek visszairasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="688"/>
         <source>Writing back the image of a partition</source>
         <comment>Partition Abbild zurückschreiben</comment>
-        <translation>a particio kepeinek visszairasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="832"/>
@@ -308,41 +308,41 @@
         <source>The cloning of the hard disk was successful.</source>
         <comment>Das Klonen der Festplatte war erfolgreich.
 </comment>
-        <translation>A merevlemez-meghajtó klonolasa sikeres volt.</translation>
+        <translation>A klón a merevlemez-meghajtó sikeres volt.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1031"/>
         <source>The backup of the hard disk image was successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war erfolgreich.
 </comment>
-        <translation>a merevlemez kepeinek mentese sikeres volt</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="272"/>
         <source>There is a root or home partition. Do you want to continue?</source>
         <comment>Es ist eine root- oder home Partition vorhanden. Wollen Sie fortfahren?
 </comment>
-        <translation>egy root vagy egy home particioja van. Szeretne folytatni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="425"/>
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren.
 </comment>
-        <translation>a merevlemezen egy root vagy egy home particio talalhato. szeretne folytatni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1038"/>
         <source>The cloning of the hard disk was not successful.</source>
         <comment>Das Klonen der Festplatte war nicht erfolgreich.
 </comment>
-        <translation>A merevlemez klonolasa nem volt sikeres.</translation>
+        <translation>A klón a merevlemez nem volt sikeres.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1181"/>
         <source>Do you want really break clone, save or restore an image from the partition?</source>
         <comment>Wollen Sie wirklich das Klonen der Festplatte, die Erstellung oder die Wiederherstellung eines Images der Festplatte beenden?</comment>
-        <translation>Szeretné a merevlemez klonolasat befejezni, menteni vagy a kep visszaadasat befejezni?</translation>
+        <translation>Szeretné, hogy valóban megtörni a klón, mentse vagy visszaad egy kép-ból feloszt?</translation>
     </message>
 </context>
 <context>
@@ -354,7 +354,7 @@
         <location filename="../src/dir.cpp" line="92"/>
         <source>lz4</source>
         <comment>lz4</comment>
-        <translation>lz4</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="93"/>
@@ -516,7 +516,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Bitte wählen Sie das Verzeichnis aus, in das das zu sichernde Verzeichnis bzw die zu sichernde Datei geschrieben werden soll.
 </comment>
-        <translation>Valasszon ki a mappak kozul egyet, ahova az elmentendo mappa illetve az elmentendo adat keruljon.z elmentendo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="257"/>
@@ -524,7 +524,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Bitte wählen Sie das zu sichernde Verzeichnis bzw. die zu sichernde Datei aus.
 </comment>
-        <translation>Kérjük, válassza ki az elmentendo könyvtárt vagy fájlt
+        <translation>Kérjük, válassza ki a könyvtár vagy fájl mentésének.
 </translation>
     </message>
     <message>
@@ -567,7 +567,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>nem lett kulcs a kibontashoz megadva</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="375"/>
@@ -575,7 +575,7 @@ biztonsági mentés. kulcs:</translation>
 The file extension must be .fsa.</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht
 Die Dateiendung muss .fsa sein</comment>
-        <translation>A rossz helyreállítási fájlt választotta ki.
+        <translation>A rossz helyreállítási fájl kiválasztott választotta.
  A fájlokat kell végződnie. FSA kell</translation>
     </message>
     <message>
@@ -617,14 +617,14 @@ Die Dateiendung muss .fsa sein</comment>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>A beírt jelszó helytelen.</translation>
+        <translation>A beírt helytelen jelszó.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="462"/>
         <source>You have selected an incorrect fsa_file. </source>
         <comment>Sie haben ein falsche fsa_Datei gewählt. 
 </comment>
-        <translation>teves fsa_fajlt valasztott ki</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="517"/>
@@ -632,7 +632,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Sicherung des Verzeichnisses war erfolgreich.
 </comment>
-        <translation>A könyvtár biztonsági mentése sikeres volt.
+        <translation>A könyvtár biztonsági mentés sikeres volt.
 </translation>
     </message>
     <message>
@@ -646,8 +646,7 @@ Die Dateiendung muss .fsa sein</comment>
         <location filename="../src/dir.cpp" line="518"/>
         <source>  directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation>
-könyvtárak,</translation>
+        <translation>könyvtárak,</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="518"/>
@@ -659,7 +658,7 @@ könyvtárak,</translation>
         <location filename="../src/dir.cpp" line="518"/>
         <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation>specialis adatok mentve vannak.</translation>
+        <translation>akciós volna mögöttük.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="523"/>
@@ -667,7 +666,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die Sicherung des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>A mappa biztonsági másolatat a felhasználó megszakította!
+        <translation>A biztonsági másolat, a mappa a felhasználó megszakította!
 </translation>
     </message>
     <message>
@@ -689,7 +688,7 @@ könyvtárak,</translation>
 </source>
         <comment> Links wurden nicht korrekt gesichert. Die Sicherung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation> Linkek nem voltak megfelelően elmentve. A konyvtarak biztonsági másolata csak részben volt sikeres
+        <translation> Linkek nem voltak megfelelően mögött. A biztonsági másolat a könyvtárakat a csak részben sikeres volt
 </translation>
     </message>
     <message>
@@ -698,7 +697,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die Wiederherstellung des Verzeichnisses war erfolgreich.
 </comment>
-        <translation>a konyvtarak visszaallitas sikeres volt</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="597"/>
@@ -716,7 +715,7 @@ könyvtárak,</translation>
         <location filename="../src/dir.cpp" line="597"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation>a specialis adatok ujra elo lettek allitva</translation>
+        <translation>akciós visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="601"/>
@@ -724,7 +723,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die Wiederherstellung des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>A mappa visszaallitasat a felhasznalo megbeszakitotta 
+        <translation>A visszaállítási mappa volt szünet felhasználó!
 </translation>
     </message>
     <message>
@@ -738,7 +737,7 @@ könyvtárak,</translation>
         <source> links were not restored correctly. Directory recovery was only partially successful.</source>
         <comment> Links wurden nicht korrekt wiederhergestellt. Die Wiederherstellung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation> linkek nem lettek korrektul eloallitva. A listák visszaállítása csak részben volt sikeres </translation>
+        <translation> linkek voltak nem sikerült megfelelően visszaállítani. A listák visszaállítása csak részben sikeres volt</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="628"/>
@@ -746,7 +745,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
 </comment>
-        <translation>helytelen jelszót írt be.
+        <translation>A megadott helytelen jelszót ír be.
 </translation>
     </message>
     <message>
@@ -755,7 +754,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie haben versucht ein Verzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen.
 </comment>
-        <translation>megprobalta a mappat ujra letrehozni. A kijelölt fájl csak particiokan allithatok elo
+        <translation>Volna próbált-hoz visszaad egy könyvtárat. A kijelölt fájl csak visszaad feloszt.
 </translation>
     </message>
     <message>
@@ -833,7 +832,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie müssen eine MBR Sicherungsdatei auswählen.
 </comment>
-        <translation>Ki kell  MBR biztonsagi fájlt valasztania
+        <translation>Ki kell választani az MBR fájlhoz
 </translation>
     </message>
     <message>
@@ -842,7 +841,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie müssen eine GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>Ki kell választani egy GPT-fájlt
+        <translation>Ki kell választani a GPT-fájl
 </translation>
     </message>
     <message>
@@ -851,7 +850,7 @@ könyvtárak,</translation>
 </source>
         <comment>MBR wurde erfolgreich gesichert.
 </comment>
-       <translation>MBR sikeresen el lett mentve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="212"/>
@@ -859,7 +858,7 @@ könyvtárak,</translation>
 </source>
         <comment>MBR wurde nicht gesichert.
 </comment>
-        <translation>MBR nem lett elmentve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="214"/>
@@ -867,7 +866,7 @@ könyvtárak,</translation>
 </source>
         <comment>GPT wurde erfolgreich gesichert.
 </comment>
-        <translation>GPT sikeresen el lett mentve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="216"/>
@@ -875,7 +874,7 @@ könyvtárak,</translation>
 </source>
         <comment>GPT wurde nicht gesichert.
 </comment>
-        <translation>GPT nem lett elmentve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="227"/>
@@ -883,7 +882,7 @@ könyvtárak,</translation>
 </source>
         <comment>Vorsicht: Wollen Sie wirklich die GUID Partitionstabelle zurückschreiben?
 </comment>
-        <translation>Vigyázat: Ha szeretné, hogy a GUID partíciós táblát visszairja?
+        <translation>Vigyázat: Ha szeretné, hogy írjon vissza a GUID partíciós táblát?
 </translation>
     </message>
     <message>
@@ -892,7 +891,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>A GUID partíciós tábla sikeresen elo lett allitva.
+        <translation>A GUID partíciós táblát az successful visszatérő.
 </translation>
     </message>
     <message>
@@ -901,7 +900,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die GUID Partitionstabelle wurde nicht wieder hergestellt.
 </comment>
-        <translation>A GUID partíciós tábla nem lett restauralva.
+        <translation>A GUID partíciós tábla nem restaurálták.
 </translation>
     </message>
     <message>
@@ -910,7 +909,7 @@ könyvtárak,</translation>
 </source>
         <comment>Vorsicht: Wollen Sie wirklich den MBR komplett beziehungsweise teilweise zurückschreiben?
 </comment>
-        <translation>Vigyázat: Ha szeretné, hogy az egesz MBR teljesen vagy reszben vissza legyen irva?
+        <translation>Vigyázat: Ha szeretné, hogy írjon vissza az MBR-t, teljesen vagy részben?
 </translation>
     </message>
     <message>
@@ -919,7 +918,7 @@ könyvtárak,</translation>
 </source>
         <comment>Der Bootloaderbereich wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>A Boot Loader szakasz sikeresen eloallitodott ujra.
+        <translation>A Boot Loader szakaszból a sikeres visszatérés.
 </translation>
     </message>
     <message>
@@ -936,7 +935,7 @@ könyvtárak,</translation>
         <source>The partition table was successfully restored.</source>
         <comment>Die Partitionstabelle wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>A partíciós tábla a sikeres elo lett allitva.</translation>
+        <translation>A partíciós tábla a sikeres visszatérés.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="277"/>
@@ -953,7 +952,7 @@ könyvtárak,</translation>
 </source>
         <comment>Der MBR wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Az MBR sikeres elo lett allitva.
+        <translation>Az MBR-t a sikeres visszatérés.
 </translation>
     </message>
     <message>
@@ -962,7 +961,7 @@ könyvtárak,</translation>
 </source>
         <comment>Der MBR wurde nicht wieder hergestellt.
 </comment>
-        <translation>Az MBR-t nem lett visszaallitva.
+        <translation>Az MBR-t nem állítja vissza.
 </translation>
     </message>
     <message>
@@ -971,7 +970,7 @@ könyvtárak,</translation>
 </source>
         <comment>Vorsicht: Wollen Sie wirklich den verborgenen Bereich zurückschreiben? 
 </comment>
-        <translation>Vigyázat: szeretné az elrejtett teruletet visszairni?
+        <translation>Vigyázat: Ha szeretné, hogy írjon vissza a titkos mező?
 </translation>
     </message>
     <message>
@@ -980,7 +979,7 @@ könyvtárak,</translation>
 </source>
         <comment>Der verborgene Bereich wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>A rejtett területen a visszatérés sikeres volt.
+        <translation>A rejtett területen a sikeres visszatérés.
 </translation>
     </message>
     <message>
@@ -997,21 +996,21 @@ könyvtárak,</translation>
         <source>Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.</source>
         <comment>Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.
 </comment>
-        <translation>A particiotablazat nem olvashato. A program megszakadt.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="374"/>
         <source>The end of hidden area of the 1st Partition could not be read. Only 512 bytes are saved.</source>
         <comment>Das Ende des verborgenen Bereiches der 1. Partition konnte nicht ausgelesen werden. Es werden nur 512 Bytes gesichert.
 </comment>
-        <translation>Az elso particio rejtett teruletenek vege nem olvashato. Csak 512 bájt került mentésre.</translation>
+        <translation>Nem lehet olvasni a rejtett területen az első partíció végét. Csak 512 bájtos kerülnek mentésre.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="470"/>
         <source>You must select a directory</source>
         <comment>Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>ki kell valasztania egy mappatkönyvtár</translation>
+        <translation>Meg kell adnia a könyvtár</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="476"/>
@@ -1019,7 +1018,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>A fájl kijelölésemegtortent. Meg kell valasztaia egy könyvtárat
+        <translation>A fájl kijelölése. Meg kell adnia a könyvtár
 </translation>
     </message>
     <message>
@@ -1028,7 +1027,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie müssen eine MBR/GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>Ki kell választani az MBR és a GPT-fájlt
+        <translation>Ki kell választani az MBR és a GPT-fájl
 </translation>
     </message>
     <message>
@@ -1037,14 +1036,14 @@ könyvtárak,</translation>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine MBR/GPT Sicherungsdatei auswählen
 </comment>
-        <translation>Kiválasztotta a könyvtárat. Ki kell választania az MBR és a GPT biztonságimásolat-fájlt
+        <translation>Kiválasztotta a könyvtárat. Ki kell választania az MBR és a GPT biztonságimásolat-fájl
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="506"/>
         <source> bytes. Do you want to continue?</source>
         <comment> Byte. Wollen Sie fortfahren?</comment>
-        <translation>Byte. szeretne folytatni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="497"/>
@@ -1062,19 +1061,19 @@ könyvtárak,</translation>
         <location filename="../src/mbr.cpp" line="497"/>
         <source>You may have selected the wrong hard disk. The hard disk to be restored is </source>
         <comment>Sie haben eventuell eine falsche Festplatte ausgewählt. Die wiederherzustellende Festplatte ist </comment>
-        <translation>valoszinuleg egy rossz merevlemezt valasztott ki.a merevlemezt el kell menteni</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="505"/>
         <source>You may have selected an incorrect file. The hidden area to be restored has a size of </source>
         <comment>Sie haben eventuell eine falsche Datei ausgewählt. Der wiederherzustellende verborgene Bereich hat eine Größe von</comment>
-        <translation>Előfordulhat, hogy a kiválasztott fájl hibas. Visszaállítando  a rejtett mező merete </translation>
+        <translation>Előfordulhat, hogy a kiválasztott hibás fájl. Visszaállítás a rejtett mező birtokol a méret-ból </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="506"/>
         <source> bytes. The hidden area of the disk </source>
         <comment> Byte. Der verborgene Bereich von der Festplatte </comment>
-        <translation>bájt. a merevlemez rejtett terulete</translation>
+        <translation>bájt. A rejtett terület, a lemez</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="506"/>
@@ -1216,7 +1215,7 @@ könyvtárak,</translation>
 </source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
-        <translation>Kérjük, válassza ki a partíciót,melyeket menteni akar.
+        <translation>Kérjük, válassza ki a partíciót, hogy üdvözüljenek.
 </translation>
     </message>
     <message>
@@ -1226,7 +1225,7 @@ könyvtárak,</translation>
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
 </comment>
-        <translation>Kérjük válassza ki a biztonsági másolat fájlnevet.
+        <translation>Kérjük válassza ki a biztonsági másolat fájlneve.
 </translation>
     </message>
     <message>
@@ -1235,7 +1234,7 @@ könyvtárak,</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>A fájl kijelölése. ki kell valasztania egy konyvtart
+        <translation>A fájl kijelölése. Meg kell adnia a könyvtár
 </translation>
     </message>
     <message>
@@ -1249,13 +1248,13 @@ könyvtárak,</translation>
         <location filename="../src/net.cpp" line="884"/>
         <source>Do you still want to perform the restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>szeretne megis az eloallitas veghezvinni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="920"/>
         <source>There is a file with the contents of the partition boot sector present. Do you want to perform the restoration of the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
-        <translation>ez egy fajl, aminek a tartalma a boot particio sektorban talalhato.Szeretne a PBR visszaallitast vegrehajtani? </translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="957"/>
@@ -1263,19 +1262,19 @@ könyvtárak,</translation>
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>Nem lehet kimontirozni.A program meg lesz szakitva</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1036"/>
         <source>Save partition</source>
         <comment>Partition sichern</comment>
-        <translation>a particio mentese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1066"/>
         <source>Write back partition</source>
         <comment>Partition zurückschreiben</comment>
-        <translation>a particio visszairasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1160"/>
@@ -1290,7 +1289,7 @@ könyvtárak,</translation>
         <location filename="../src/net.cpp" line="603"/>
         <source>The system partition to be saved is mounted. Do you want to do a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>Az elmentendo rendszerpartíció  fel van szerelve. Szeretne csinálni egy élő biztonsági mentés?</translation>
+        <translation>A rendszer partíció menti fel van szerelve. Szeretne csinálni egy élő biztonsági mentés?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="328"/>
@@ -1298,7 +1297,7 @@ könyvtárak,</translation>
 </source>
         <comment>Für das NFS Protokoll wurde kein freigegebenes Verzeichnis gefunden.
 </comment>
-        <translation>Az NFS Protokollhoz nem talalhato egy szabad konyvtar.
+        <translation>Nem talál egy megosztott könyvtár az NFS Protokoll.
 </translation>
     </message>
     <message>
@@ -1307,7 +1306,7 @@ könyvtárak,</translation>
 </source>
         <comment>Für das Samba Protokoll wurde kein freigegebenes Verzeichnis gefunden.
 </comment>
-        <translation>A Samba Protokollhoz nem talalhato megosztott konyvtar.
+        <translation>Nem talál egy megosztott könyvtárat, a Samba Protokoll.
 </translation>
     </message>
     <message>
@@ -1316,13 +1315,13 @@ könyvtárak,</translation>
 </source>
         <comment> konnte nicht eingebunden werden. Das Programm wird abgebrochen
 </comment>
-        <translation>nem integralhato, a program meg fog szakadni</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="611"/>
         <source>The home partition to be saved is mounted. Do you want to do a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>A mentendo home partíció  fel van szerelve. Szeretne csinálni egy élő biztonsági mentést?</translation>
+        <translation>A home partíció menti fel van szerelve. Szeretne csinálni egy élő biztonsági mentés?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="633"/>
@@ -1336,7 +1335,7 @@ könyvtárak,</translation>
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>nem lehet valaszthato A program megfog szakadni.
+        <translation>nem lehet leválasztásakor. A program megszűnik,
 </translation>
     </message>
     <message>
@@ -1347,7 +1346,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
 </comment>
-        <translation>A kulcs hosszanak 6 és 64 karakter között kell lennie
+        <translation>A kulcs hossza 6 és 64 karakter között kell lennie
 </translation>
     </message>
     <message>
@@ -1371,7 +1370,7 @@ könyvtárak,</translation>
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>A biztonsági mentés a felhasználó általlett mmegszakitva.
+        <translation>A biztonsági mentés volt, megszakítva a felhasználó által
 </translation>
     </message>
     <message>
@@ -1380,7 +1379,7 @@ könyvtárak,</translation>
 </source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>Nem lett kulcs a dekódoláshoz megadva.
+        <translation>Nincs kulcs volt, mivel a dekódolás
 </translation>
     </message>
     <message>
@@ -1389,7 +1388,7 @@ könyvtárak,</translation>
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
 </comment>
-        <translation>Kérjük, válassza ki a visszairando partíciót.
+        <translation>Kérjük, válassza ki a partíció írható vissza.
 </translation>
     </message>
     <message>
@@ -1398,8 +1397,8 @@ könyvtárak,</translation>
 The file extension must be .fsa.</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht 
 Die Dateiendung muss .fsa sein</comment>
-        <translation>Rossz helyreállítási fájtl kiválasztott ki.A fajlnak .fsa-ra kell vegzodnie.
-</translation>
+        <translation>A rossz helyreállítási fájl kiválasztott választotta.
+ A fájlokat kell végződnie. FSA kell</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="846"/>
@@ -1407,20 +1406,20 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>A partíció dekodolva van. Kérjük, írja be a kulcsot/kodot
+        <translation>A titkosított partíció. Kérjük, írja be a kulcs
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="884"/>
         <source>The partition to be recovered </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>A helyreállítando particio. </translation>
+        <translation>Partíció helyreállítása </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="884"/>
         <source> does not match the backed up partition.</source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>nem esnek egybe a mentettparticipioval</translation>
+        <translation>nem esnek egybe a mentett</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="908"/>
@@ -1428,7 +1427,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
-        <translation>A visszaállításifolyamat felhasználó altal lett megszakitva.
+        <translation>A visszaállítási leállította felhasználó
 </translation>
     </message>
     <message>
@@ -1437,7 +1436,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>Visszaállítando rendszerpartíciót csatlakoztatva lett, nem lehet visszaállítani. Kérjük, használja a live CD-ről
+        <translation>Visszaállítani a rendszert partíciót csatlakoztatni akarunk, nem lehet visszaállítani. Kérjük, használja a live CD-ről
 </translation>
     </message>
     <message>
@@ -1461,7 +1460,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Sicherung der Partition wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>A partíció biztonsagi mentese a felhasznalo altal lett megszakitva.
+        <translation>A biztonsági mentés a partíció volt megszakította a felhasználó!
 </translation>
     </message>
     <message>
@@ -1470,13 +1469,13 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>A particio mentese csak reszben volt sikeres.</translation>
+        <translation></translation>
     </message>
-      <message>
+    <message>
         <location filename="../src/net.cpp" line="1375"/>
         <source> specials has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation>a specialis adatok ujra eloallitodtak </translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1384"/>
@@ -1484,7 +1483,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>A particio ujra eloallitasa a felhazsnalo altal lett megszakitva.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1408"/>
@@ -1493,7 +1492,7 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>A particio eloallitasa csak reszben volt sikeres.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1408"/>
@@ -1501,7 +1500,7 @@ Die Dateiendung muss .fsa sein</comment>
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
 .</comment>
-        <translation>A specialis adatok ujra elo lettek allitva.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1801"/>
@@ -1509,20 +1508,20 @@ Die Dateiendung muss .fsa sein</comment>
 </source>
         <comment>Wenn Sie noch nicht erfolgreich per ssh auf den Rechner(Server) zugegriffen haben, müssen Sie nun folgendes tun: 1.In dem geöffneten Terminal müssen Sie den RSA key fingerprint mit yes bestätigen. 2.Geben Sie das Passwort für den Zugriff auf den Server ein  und 3.verlassen Sie den Server mit dem Befehl exit. Wollen Sie nun den RSA key fingerprint eingeben?
 </comment>
-        <translation>Ha az ssh-n keresztul mêg nem sikerult a computert elernie, akkor a kovetkezoket kell tennie:1.a nyitott terminalban az RSA kulcs ujjlenyomatot "yes"-vel kell megerositenie.2.adja meg a szerverhez vezeto jelszot es 3.hagyja el a szervert a "command exit" gombbal. Szeretne az RSA kulcs ujjlenyomatot megadni/begepelni?</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1811"/>
         <source>Do you still want to see this message? You can change this in the basic settings.</source>
         <comment>Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
-        <translation>Szeretne ezt az utasitast tovabbra is latni? Az alap beallitasoknal valtoztatni tud rajta.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="870"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>A beírt jelszó helytelen..</translation>
+        <translation>A beírt helytelen jelszó.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1047"/>
@@ -1584,7 +1583,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/net.cpp" line="1234"/>
         <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation>a specialis adatok el lettek mentve.</translation>
+        <translation>akciós volna mögöttük.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1233"/>
@@ -1593,14 +1592,14 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
-        <translation>A partíció már sikeresen el lett mentve.
+        <translation>A partíció már mentett sikeresen.
 </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1241"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation>A specialis adatok es a particio boot sektor el lett mentve.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1265"/>
@@ -1608,7 +1607,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt
 </comment>
-        <translation>A particio tipusa nem tamogatott.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1273"/>
@@ -1625,7 +1624,7 @@ biztonsági mentés. kulcs:</translation>
 .</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
-        <translation>a specialis adatok el lettek mentve.</translation>
+        <translation>akciós volna mögöttük.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1292"/>
@@ -1633,7 +1632,7 @@ biztonsági mentés. kulcs:</translation>
 .</source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
 </comment>
-        <translation>a specialis adatok nem lettek megfeleloen elmentve.</translation>
+        <translation>újdonságok nem voltak megfelelően támogatott.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1336"/>
@@ -1641,7 +1640,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation>A particio, amit ujra elo szeretne allitani, megakadt.A kovetkezokben le kell valasztania.
+        <translation>nem tudja visszaállítani egy archív, hogy egy partíció, mely fel van szerelve, leválaszthatja első 
 </translation>
     </message>
     <message>
@@ -1651,7 +1650,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>A partíció sikeresen ujra vissza lett allitva.
+        <translation>A partíció sikeres vissza.
 </translation>
     </message>
     <message>
@@ -1664,7 +1663,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/net.cpp" line="1379"/>
         <source> special data and the partition boot sector were restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation>a specialis adatok, valamint a Partíció Boot Record vissza lett allitva.</translation>
+        <translation>különlegességek, valamint a Partíció Boot Record visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1409"/>
@@ -1680,7 +1679,7 @@ biztonsági mentés. kulcs:</translation>
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
 </comment>
-        <translation>a specialis adatok nem lettek helyesen eloallitva.</translation>
+        <translation>újdonságok nem voltak megfelelően felújított.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1416"/>
@@ -1688,7 +1687,7 @@ biztonsági mentés. kulcs:</translation>
 .</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
 .</comment>
-        <translation>a specialis adatok valamint a Partíció Boot Record vissza lett állítotva.</translation>
+        <translation>különlegességek, valamint a Partíció Boot Record visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1421"/>
@@ -1696,7 +1695,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation>On megkiserelt egy particiot ujra eloallitani.A kiválasztott fájl csak a könyvtárakat tudja visszaállítani. Kérjük, indítsa újra a programot.
+        <translation>Megkísérelte visszaállítani egy-egy partíció. A kiválasztott fájl csak a könyvtárak visszaállítása. Kérjük, indítsa újra a programot.
 </translation>
     </message>
     <message>
@@ -1705,7 +1704,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Sie haben versucht einVerzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation>On megprobalt egy konyvtarat ujra eloallitani. A kivalasztott fajl csak particiokat tud eloallitani.Kerjuk, inditsa el a programot ujra.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1428"/>
@@ -1713,7 +1712,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation> helytelen jelszót írt be.
+        <translation>A megadott helytelen jelszót ír be.
 </translation>
     </message>
     <message>
@@ -1734,13 +1733,13 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/net.cpp" line="1655"/>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>Szeretnê a particio mentésêt vagy a visszaállításât megallitani ?</translation>
+        <translation>Szeretnéd igazán megtörni a mentés vagy a visszaállítás a partíció?</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1767"/>
         <source>If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.</source>
         <comment>Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern</comment>
-        <translation>Ha még nem állította be az SSH hitelesítésêt, akkor most meg kell adnia a jelszót a terminálnal. Szeretne, ha ez a figyelmeztetes tovabbra is megjelenne? Az alap beallitasoknal ezt megvaltoztathatja.</translation>
+        <translation>Ha még nem állítottuk be az SSH hitelesítés, most meg kell adnia a jelszót a terminál. Ha ez továbbra is jelenik meg? Módosíthatja ezt az alapvető beállításokat.</translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1782"/>
@@ -2074,7 +2073,7 @@ biztonsági mentés. kulcs:</translation>
         <source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
         <comment>Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.
 </comment>
-        <translation>A beállításokat mentette. Megvaltoztatot nyel-beallitasnal a programot ujra kell inditania.</translation>
+        <translation>A beállításokat mentette. Újra kell indítani a programot módosítani a nyelvi beállítás.</translation>
     </message>
 </context>
 <context>
@@ -2083,7 +2082,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/ui/net.ui" line="14"/>
         <source>Backup/restore partition over network</source>
         <extracomment>Partitionen über ein Netzwerk sichern/zurückschreiben</extracomment>
-        <translation>A particiokat a halozaton keresztul mentheti vagy ujrairhatja.</translation>
+        <translation>Hát/Visszaad feloszt hálózaton keresztül</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="26"/>
@@ -2100,7 +2099,7 @@ biztonsági mentés. kulcs:</translation>
     <message>
         <location filename="../src/ui/net.ui" line="58"/>
         <source>S</source>
-        <translation>Forras</translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="71"/>
@@ -2111,7 +2110,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/ui/net.ui" line="74"/>
         <source>Existing partitions/directories:</source>
         <extracomment>vorhandene Partitionen:</extracomment>
-        <translation>rendelkezesre allo particiok</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="93"/>
@@ -2123,35 +2122,35 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/ui/net.ui" line="111"/>
         <source>Save par&amp;tition
 with fs-archiver</source>
-        <translation>forras</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="163"/>
         <source>n</source>
-        <translation>forras</translation>
+        <translation>n</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="717"/>
         <source>Start the backup of a partition.</source>
-        <translation>Indítsa el a particio biztonsági másolatat.</translation>
+        <translation>Indítsa el a biztonsági másolatot egy-egy partíció.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="720"/>
         <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>particio mentese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="691"/>
         <source>File name of the backup:</source>
         <extracomment>Dateiname der Sicherung:</extracomment>
-        <translation> a biztonsági mentési fájl neve:</translation>
+        <translation>Nevet a biztonsági mentés fájl:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="125"/>
         <source>Restore partition
 with fs-archiver</source>
-        <translation>forras</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="209"/>
@@ -2162,13 +2161,13 @@ with fs-archiver</source>
     <message>
         <location filename="../src/ui/net.ui" line="222"/>
         <source>Start restore a partition.</source>
-        <translation>Inditsa el a particio visszaallitasat.</translation>
+        <translation>A Start visszaállítása egy-egy partíció.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="225"/>
         <source>Write back partition</source>
         <extracomment>Partition wiederherstellen</extracomment>
-        <translation>a particio ujra letrehozasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="247"/>
@@ -2209,7 +2208,7 @@ fájlok/könyvtárak:</translation>
     <message>
         <location filename="../src/ui/net.ui" line="369"/>
         <source>Directory in which the partition is backed up or from which the recovery file is selected.</source>
-        <translation>Könyvtár, ahol a partíció biztonsági mentése vagy amirol a helyreállítási fájl törlődik.</translation>
+        <translation>Könyvtárat, ahol a partíció biztonsági mentése vagy a helyreállítási fájl törlődik.</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="372"/>
@@ -2228,23 +2227,23 @@ mag használható fsarchiver:</translation>
         <location filename="../src/ui/net.ui" line="457"/>
         <source>Notes to the backup is written to a file.</source>
         <comment>Notizen zu dem Backup wurden in eine Datei geschrieben.</comment>
-        <translation>a backup-hoz szukseges jegyzetek el lettek mentve egy fajlba.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="499"/>
         <source>Split archive , specified size:</source>
-        <translation>specifikus meret</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="526"/>
         <source>PBR is first block of any bootable partition.</source>
         <comment>PBR ist der erste Block einer bootbaren Partition.</comment>
-        <translation>PBR a bootolhato particio elso blokkja</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="651"/>
         <source>2</source>
-        <translation>forras</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="677"/>
@@ -2261,7 +2260,7 @@ beállítás:</translation>
     <message>
         <location filename="../src/ui/net.ui" line="483"/>
         <source>Identical backup files are overwritten without prior consultation.</source>
-        <translation>Ugyanazok a biztonsági másolat fájlok felülíródnak előzetes konzultáció nélkül</translation>
+        <translation>Ugyanazt a biztonsági másolat fájlok felülíródnak előzetes konzultáció nélkül</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="486"/>
@@ -2295,7 +2294,7 @@ transmission:</source>
     <message>
         <location filename="../src/ui/net.ui" line="638"/>
         <source>z</source>
-        <translation>forras</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2310,7 +2309,7 @@ transmission:</source>
         <location filename="../src/ui/net_ein.ui" line="26"/>
         <source>Username:</source>
         <extracomment>Benutzername:</extracomment>
-        <translation>felhasznalonev</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="39"/>
@@ -2321,7 +2320,7 @@ transmission:</source>
     <message>
         <location filename="../src/ui/net_ein.ui" line="52"/>
         <source>Username and password will be saved.</source>
-        <translation>Felhasználói név es a jelszo el lesz mentve.</translation>
+        <translation>Felhasználói név, mind a jelszó van tárolva.</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="55"/>
@@ -2350,7 +2349,7 @@ transmission:</source>
         <location filename="../src/ui/net_ein.ui" line="143"/>
         <source>Show Password</source>
         <extracomment>Kennwort anzeigen</extracomment>
-        <translation>jelszot nutassa</translation>
+        <translation>Térkép Jelszó</translation>
     </message>
     <message>
         <location filename="../src/ui/net_ein.ui" line="156"/>
@@ -2370,7 +2369,7 @@ transmission:</source>
         <location filename="../src/ui/filedialog.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>a biztonsági mentésleirasa</translation>
+        <translation>Leírása a biztonsági mentés</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="26"/>
@@ -2382,13 +2381,13 @@ transmission:</source>
         <location filename="../src/ui/filedialog.ui" line="39"/>
         <source>Description of the backup:</source>
         <extracomment>Beschreibung der Sicherung:</extracomment>
-        <translation>a biztonsági mentés leirasa</translation>
+        <translation>Leírása a biztonsági mentés</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="52"/>
         <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>partíció mentese</translation>
+        <translation>Vissza partíció</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="40"/>
@@ -2414,7 +2413,7 @@ transmission:</source>
 </source>
         <comment>Die Hinweise zur Partition wurden nicht in eine Datei geschrieben.
 </comment>
-        <translation>A partíció utmutatasai nem lettek rögzítetve a fájlba.
+        <translation>Útmutató partíció nem voltak rögzített a fájlba.
 </translation>
     </message>
 </context>
@@ -2557,7 +2556,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="176"/>
         <source>sudo-Password:</source>
         <comment>sudo Passwort</comment>
-        <translation>jelszo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="253"/>
@@ -2565,19 +2564,19 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Das Programm qt-fsarchiver-terminal ist nicht installiert. Sie müssen dieses  Programm zusätzlich installieren.
 </comment>
-        <translation>A qt-fsaarchiver-terminal nincs installalva. Installalnia kell ezt a programot.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="284"/>
         <source>qt-fsarchiver-terminal must be updated to version: </source>
         <comment>qt-fsarchiver-terminal muss auf die Version aktualisiert werden: </comment>
-        <translation>qt-fsarchiver-erminalt az aktualis verziora kell frissitenie</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="284"/>
         <source> The program is terminated.</source>
         <comment> Das Programm wird beendet</comment>
-        <translation>A program bezarodik</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="183"/>
@@ -2593,7 +2592,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Das Passwort ist falsch. Das Programm muss beendet werden. Das Schließen des Fensters kann einige Sekunden dauern.
 </comment>
-        <translation>A jelszo teves. A programot bezarult.Az ablakok bezarasa nehany percet igenybe vehet.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="295"/>
@@ -2605,13 +2604,13 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="316"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
-        <translation>qzip legjobb</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="477"/>
         <source>The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.</source>
         <comment>In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
-        <translation>A fájl az /usr/share/doc/qt-fsarchiver/Readme a program hasznalati utasításait tartalmazza . Szeretne ha ez a figyelmeztetes tovabbra is megjelenjen? Módosíthatja ezt az alapbeállításoknal.</translation>
+        <translation>A fájl az /usr/share/doc/qt-fsarchiver/Readme utasításait tartalmazza a program használatának. Ha ez továbbra is jelenik meg? Módosíthatja ezt az alapvető beállításokat.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="622"/>
@@ -2619,7 +2618,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
 </comment>
-        <translation>Kérjük, válassza ki a mentési könyvtárt.
+        <translation>Kérjük, válassza ki a mentési könyvtár.
 </translation>
     </message>
     <message>
@@ -2627,7 +2626,7 @@ biztonsági mentés. kulcs:</translation>
         <source>Please select the partition you want to back up.</source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
-        <translation>Kérjük, válassza ki az elmentendo partíciót.</translation>
+        <translation>Kérjük, válassza ki a partíciót, hogy</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="636"/>
@@ -2636,7 +2635,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
 </comment>
-        <translation>Kérjük, válassza ki a mentesi fájl nevét.
+        <translation>Kérjük, válassza ki a fájl nevét a mentés.
 </translation>
     </message>
     <message>
@@ -2645,20 +2644,20 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>kijelolt egy fajlt.. Meg kell adnia egy könyvtárat is.
+        <translation>A fájl kijelölése. Meg kell adnia a könyvtár
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="680"/>
         <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>A rendszerpartíció montirolva van.. Szeretne csinálni egy élő biztonsági mentést?</translation>
+        <translation>A rendszerpartíció van szerelve. Szeretne csinálni egy élő biztonsági mentés?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="688"/>
         <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>Az elmentendo home partíció montirolva van.. Szeretne csinálni egy élő biztonsági mentést?</translation>
+        <translation>Vissza fel home partíciót csatlakoztatni akarunk. Szeretne csinálni egy élő biztonsági mentés?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="711"/>
@@ -2672,7 +2671,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>nem lehet leválasztani. A program megszűnik,
+        <translation>nem lehet leválasztásakor. A program megszűnik,
 </translation>
     </message>
     <message>
@@ -2713,14 +2712,14 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="865"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
-        <translation>A mentés végrehajtodik</translation>
+        <translation>A mentés végrehajtásának</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1008"/>
         <source>No decryption key was specified.</source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>Nem lett jelszo a visszafejteshez megadva.</translation>
+        <translation>Nem volt kulcs a visszafejteni megadott.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1020"/>
@@ -2728,7 +2727,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
 </comment>
-        <translation>Kérjük, válassza ki a visszairando particiot.
+        <translation>Kérjük, válassza ki az írás vissza partíció.
 </translation>
     </message>
     <message>
@@ -2737,21 +2736,21 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
 </comment>
-        <translation>Kivalasztott egy konvtarat. Valasszon ki egy adatot.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1066"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>A titkosított partíció. Kérjük, írja be a kulcsot</translation>
+        <translation>A titkosított partíció. Kérjük, írja be a kulcs</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1091"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>Rossz jelszót adott meg.</translation>
+        <translation>A beírt helytelen jelszó.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1103"/>
@@ -2763,34 +2762,34 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="1103"/>
         <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>nem egyezik a mentettekkel</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1127"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
-        <translation>A restore  megszakítva a felhasználó által</translation>
+        <translation>A restore volt, megszakítva a felhasználó által</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1139"/>
         <source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
-        <translation>ez egy fájl  a partíció boot szektor tartalmaval . Szeretnéd,  PBR ujrairasat veghezvinni?</translation>
+        <translation>Van egy fájl tartalmát a partíció boot szektor jelen. Szeretnéd, hogy végre a felújítás PBR?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1150"/>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>Az ujra irando systemparticio csalakoztatva van es nem lehet ujrairni.Kérjük, használja a live CD-t.</translation>
+        <translation>Visszaállítja a rendszer partíciót csatlakoztatni akarunk, nem írható vissza. Kérjük, használja a live CD-t.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1157"/>
         <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
-        <translation>Az ujra irando home partíciót csatlakoztatva van, nem írható vissza. Kérjük, használja a live CD-t.</translation>
+        <translation>Állítsa vissza a home partíciót csatlakoztatni akarunk, nem írható vissza. Kérjük, használja a live CD-t.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1173"/>
@@ -2815,7 +2814,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="312"/>
         <source>lz4</source>
         <comment>lz4</comment>
-        <translation>lz4</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="322"/>
@@ -2828,26 +2827,26 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="175"/>
         <source>Enter sudo-password</source>
         <comment>Sudo-Passwort eingeben</comment>
-        <translation>jelszo megadasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1032"/>
         <source>You have selected an incorrect recovery file. The file extension must be .fsa</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht. Die Dateiendung muss .fsa sein.</comment>
-        <translation>Egy teves ujrairo fajlt valasztott ki.A fajl vegzodese .fsa kell, hogy legyen</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1102"/>
         <source>The partition to be recovered  </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>A visszaallitando particio</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1173"/>
         <source> cannot be unmounted. The program is aborted.</source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation>nem csatlakoztathato.megszakadt a program.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1314"/>
@@ -2860,7 +2859,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
 </comment>
-        <translation>Qt-fsarchiv csak egyszer indithato el. A programot be kell zarni.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1387"/>
@@ -2881,7 +2880,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
 </comment>
-        <translation>A partíció sikeresen el lett mentve.
+        <translation>A partíció már mentett sikeresen.
 </translation>
     </message>
     <message>
@@ -2930,7 +2929,7 @@ biztonsági mentés. kulcs:</translation>
         <location filename="../src/mainWindow.cpp" line="1548"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation>A specialis adatok es a particio boot sektor sikeresen lett elmmentve.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1567"/>
@@ -2938,7 +2937,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Sicherung der Partition  wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>A biztonsági mentés a partíciót megszakította a felhasználó!
+        <translation>A biztonsági mentés a partíció volt megszakította a felhasználó!
 </translation>
     </message>
     <message>
@@ -2947,7 +2946,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt.
 </comment>
-        <translation>Ez a pariciotipus nincs tamogatva.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1581"/>
@@ -2955,7 +2954,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
 </comment>
-        <translation>A partíció típusa nem támogatott. Lehet, hogy titkosított a partíció?
+        <translation>A partíció típusa nem támogatott. Lehet, hogy a titkosított partíció?
 </translation>
     </message>
     <message>
@@ -2964,7 +2963,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Sicherung der Partition war nicht erfolgreich. Die Datei ist zu groß. Nutzen Sie eine FAT-Partition?
 </comment>
-        <translation>A partícióbiztositasa nem volt sikeres. A fájl túl nagy. Használja a FAT-partíciót?
+        <translation>Hiba megtakarítás partíció. A fájl túl nagy. Használja a ZSÍR-partíció?
 </translation>
     </message>
     <message>
@@ -2973,7 +2972,7 @@ biztonsági mentés. kulcs:</translation>
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>A particio biztositasa csak reszben volt sikeres</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1606"/>
@@ -2981,7 +2980,7 @@ biztonsági mentés. kulcs:</translation>
 .</source>
         <comment> spezielle Daten wurden gesichert
 .</comment>
-        <translation>a specialis fajlok el lettek mentve.</translation>
+        <translation>akciós volna mögöttük.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1609"/>
@@ -2989,21 +2988,21 @@ biztonsági mentés. kulcs:</translation>
 .</source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
 </comment>
-        <translation>a specialis fajlok nem lettek korrektul elmentve.</translation>
+        <translation>újdonságok nem voltak megfelelően támogatott.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-18, May 10, 2020</source>
+version 0.8.5-20, November 27, 2020</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
 <translation>Backup and restore partíciókat, könyvtár, MBR.
-Verzió 0.8.5-18, 10.május 2020</translation>
+Verzió 0.8.5-20, 27.November 2020</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1538"/>
         <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation>a specialis adatok el lettek mentve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1633"/>
@@ -3011,7 +3010,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation>az ujra eloallitando particiok csatlakoztatva lettek.Eloszor le kell oket csatlakoztatni</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1672"/>
@@ -3020,14 +3019,14 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>A partíció sikeres elo lett allitva.
+        <translation>A partíció sikeres vissza.
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1673"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation>a specialis fajlok ujra elo lettek allitva.</translation>
+        <translation>akciós visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1678"/>
@@ -3039,7 +3038,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
         <location filename="../src/mainWindow.cpp" line="1678"/>
         <source> special data and the partition boot sector were restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation>a specialis fajlok es a boot sektor particioja ujra elo lett allitva. </translation>
+        <translation>különlegességek, valamint a Partíció Boot Record visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1683"/>
@@ -3047,7 +3046,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 </source>
         <comment>Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>A particio eloallitasa a felhasznalo altal lett megszakitva</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1708"/>
@@ -3056,7 +3055,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>a particio visszaallitasa csak reszben volt sikeres</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1710"/>
@@ -3064,7 +3063,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
 .</comment>
-        <translation>a specialis fajlok vissza lettek allitva.</translation>
+        <translation>akciós visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1711"/>
@@ -3080,7 +3079,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
 </comment>
-        <translation>a specialis fajlok nem lettek helyesen eloallitva.</translation>
+        <translation>újdonságok nem voltak megfelelően felújított.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1720"/>
@@ -3088,7 +3087,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 .</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
 .</comment>
-        <translation>aspecialis fajlok es a  boot sektor particioja ujra elo lettek allitva.</translation>
+        <translation>különlegességek, valamint a Partíció Boot Record visszaállította.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1727"/>
@@ -3096,7 +3095,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation>megprobalt egy particiot ujra eloallitani. A kivalasztott fajl csak konyvtarban allithato elo.Kerjuk inditsa ujra a programot.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1730"/>
@@ -3104,7 +3103,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
 </comment>
-        <translation>A megadott  jelszó helytelen..
+        <translation>A megadott helytelen jelszót ír be.
 </translation>
     </message>
     <message>
@@ -3211,7 +3210,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
         <location filename="../src/mainWindow.cpp" line="2044"/>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>valoban abba akarja hagyni a particio menteset illetve ujraelo allitasat?</translation>
+        <translation>Tényleg meg akarod törni a mentés vagy a visszaállítás a partíció?</translation>
     </message>
 </context>
 <context>
@@ -3234,7 +3233,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="65"/>
         <source>Start the backup of a partition.</source>
-        <translation>Indítsa el a particio biztonsági másolatat.</translation>
+        <translation>Indítsa el a biztonsági másolatot egy-egy partíció.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="68"/>
@@ -3249,7 +3248,7 @@ Verzió 0.8.5-18, 10.május 2020</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="162"/>
         <source>Start restore a partition.</source>
-        <translation>inditsa el a particio visszaállításat..</translation>
+        <translation>A Start visszaállítása egy-egy partíció.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="165"/>
@@ -3278,31 +3277,31 @@ fájlok/könyvtárak:</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="391"/>
         <source>Notes about the backup are written to a file.</source>
-        <translation>Megjegyzes, hogy a biztonsági mentés a fájlra van irva.</translation>
+        <translation>Megjegyzi, hogy a biztonsági mentés van írva, hogy egy fájlt</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="417"/>
         <source>An existing backup file with the same name is overwritten without confirmation.</source>
-        <translation>A meglevo backup fajl ugyanazon a neven felulirodott anelkul, hogy meg lett volna erositve(konfirmalva)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="433"/>
         <source>Split archive , specified size:</source>
-        <translation>split archive, kulonleges meret</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="537"/>
         <source>&amp;Partition save 
 with fsarchiver</source>
         <extracomment>Partition mit * fsArchiver sichern:</extracomment>
-        <translation>a *fsArchiver-vel jelolt particiot menteni kell </translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="554"/>
         <source>Restore partition
 with fsarchi&amp;ver</source>
         <extracomment>Partition mit fsarchiver zurückschreiben</extracomment>
-        <translation>Az fsarchiver -rel jelolt particiot vissza kell irni.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="582"/>
@@ -3318,49 +3317,49 @@ with fsarchi&amp;ver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="696"/>
         <source>Se&amp;ttings</source>
         <comment>Einstellungen:</comment>
-        <translation>beallitas</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="737"/>
         <source>&amp;Restore partition</source>
         <comment>Partition wiederherstellen</comment>
-        <translation>a particio ujra eloallitasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="755"/>
         <source>&amp;Information qt-fsarchiver</source>
         <comment>Information qt-fsarchiver</comment>
-        <translation>qt-fsarchiver informacioja</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="809"/>
         <source>&amp;Save a partition on network</source>
         <comment>Sichern einer Partition über das Netzwerk</comment>
-        <translation>a particio mentese a halozaton keresztul</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="818"/>
         <source>Restore &amp;a partition on network</source>
         <comment>Wiederherstellen einer Partition über das Netzwerk</comment>
-        <translation>egy particio ujra eloallitasa a halozaton keresztul</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="850"/>
         <source>&amp;Clone HD, HD-Image built and restore</source>
         <comment>Klonen einer HD, Erstellen eines Abbildes einer HD und Wiederherstellung</comment>
-        <translation>a HD klonolasa, egy HD imidzs eloallitasa vagy letrehozasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="855"/>
         <source>Save directories on network</source>
         <comment>Verzeichnis sichern über das Netzwerk</comment>
-        <translation>konyvtar mentese halozaton keresztul</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="860"/>
         <comment>Wiederherstellen eines Verzeichnises über das Netzwerk</comment>
         <source>Restoring directories over a network.</source>
-        <translation>mappak mentese halozaton keresztul</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="203"/>
@@ -3372,13 +3371,13 @@ with fsarchi&amp;ver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="27"/>
         <source>Select the partition to be backed up or written back.</source>
         <comment>Wählen Sie die Partition aus, die gesichert oder wiederhergestellt werden soll.</comment>
-        <translation>valasszon ki egy particiot, amit menteni vagy ujra eloallitani akar.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="46"/>
         <source>Directory where the backup file is written or directory where the recovery file is stored.</source>
         <comment>Verzeichnis, in das die Sicherungsdatei geschrieben wird, oder Verzeichnis, in dem die Wiederherstellungsdatei gespeichert wird.</comment>
-        <translation>konyvtra, ahova az elmentett adatok irva legyenek vagy ahova az ujra eloallitando adatok elmentve legyenek.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="126"/>
@@ -3389,7 +3388,7 @@ with fsarchi&amp;ver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="181"/>
         <source>Name the backup file:</source>
         <comment>Name der Backup-Datei</comment> 
-        <translation>a backup fajl neve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="210"/>
@@ -3419,12 +3418,12 @@ beállítás:</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="394"/>
         <source>Notes on the backup</source>
-        <translation>Megjegyzes biztonsági mentéshez</translation>
+        <translation>Megjegyzi, hogy a biztonsági mentés</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="420"/>
         <source>overwrite existing backup.</source>
-        <translation>rendelkezésre álló  felülírás mentese</translation>
+        <translation>rendelkezésre álló mentési felülírása</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="449"/>
@@ -3458,31 +3457,31 @@ biztonsági kulcs</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="678"/>
         <source>&amp;Actions</source>
-        <translation>akciok</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="702"/>
         <source>&amp;Information</source>
         <comment>Information</comment>
-        <translation>Informacio</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="708"/>
         <source>&amp;Exit</source>
         <comment>Beenden</comment>
-        <translation>befejezni</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="728"/>
         <source>&amp;Backup partition</source>
         <comment>Backup Partition</comment>
-        <translation>Backup particio</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="746"/>
         <source>&amp;Basic Settings</source>
         <comment>Basis Einstellungen</comment>
-        <translation>alap beallitasok</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="764"/>
@@ -3493,25 +3492,25 @@ biztonsági kulcs</translation>
         <location filename="../src/ui/fsarchiverMain.ui" line="773"/>
         <source>R&amp;estore MBR/GPT</source>
         <comment>Wiederherstellung MBR/GPT</comment>
-        <translation>MBR ujra eloallitasa></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="782"/>
         <source>Rest&amp;ore directory </source>
         <comment>Verzeichnis wiederherstellen</comment>
-        <translation>konyvtar ujra eloallitasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="791"/>
         <source>Save &amp;directory </source>
         <comment>Verzeichnis sichern</comment>
-        <translation>konyvtar mentese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="800"/>
         <source>&amp;Exit program</source>
         <comment>Programm beenden</comment>   
-        <translation>program befejezese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="569"/>
@@ -3557,7 +3556,7 @@ biztonsági kulcs</translation>
 </source>
         <comment>Es ist derzeit kein Netzwerkrechner erreichbar.
 </comment>
-        <translation>jelenleg a halozati computer nem elerheto</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="501"/>
@@ -3565,7 +3564,7 @@ biztonsági kulcs</translation>
 </source>
         <comment>Sie müssen den Rechner auswählen, auf den die Sicherungsdaten geschrieben werden sollen
 </comment>
-        <translation>ki kell valasztania, hogy melyik computerre legyenek a biztonsagi adatok elmentve</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="507"/>
@@ -3573,7 +3572,7 @@ biztonsági kulcs</translation>
 </source>
         <comment>Sie müssen den Rechner auswählen, von dem die Sicherungsdaten zurück geschrieben werden sollen
 </comment>
-        <translation>ki kell valasztania, hogy melyik computerre legyenek a biztonsagi adatok ujra eloallitva</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="513"/>
@@ -3581,13 +3580,13 @@ biztonsági kulcs</translation>
 </source>
         <comment>Sie müssen den Benutzernamen eingeben. Sonst kann nicht auf Netzrechner zugegriffen werden
 </comment>
-        <translation>adja meg a felhasznaloi nevet, kulonben a halozati computer nem elerheto</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="517"/>
         <source>Is that correct that you have not entered a key? (NFS does not need a key.</source>
         <comment>Ist das richtig, dass Sie keinen Schlüssel eingegeben haben? (NFS benötigt keinen Schlüssel)</comment>
-        <translation>valoban nem adott meg kulcsot?(az NFS-hez nem kell kulcs)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/net_ein.cpp" line="557"/>
@@ -3608,24 +3607,24 @@ biztonsági kulcs</translation>
         <location filename="../src/ui/clone_dialog.ui" line="14"/>
         <source>Clone hard drive</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>MBR mentese vagy visszairasa</translation>
+        <translation>Klón agyonhajszol</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="521"/>
         <source>Image of a &amp;hard disk to create</source>
         <extracomment>Abbild einer Festplatte erstellen</extracomment>
-        <translation>a merevlemez masolatanak eloallitasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="534"/>
         <source>Image of a partition &amp;to create</source>
          <extracomment>Abbild einer Partition erstellen</extracomment>
-        <translation>a particio masolatanak eloallitasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="574"/>
         <source>p</source>
-        <translation>p</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="600"/>
@@ -3722,19 +3721,19 @@ biztonsági kulcs</translation>
         <location filename="../src/ui/clone_dialog.ui" line="470"/>
         <source>&amp;Image of a hard disk write back</source>
         <extracomment>Abbild einer Festplatte zurückschreiben</extracomment>
-        <translation>a merevlemez masolatanak ujrairasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="483"/>
         <source>&amp;Clone hard disk</source>
         <extracomment>Festplatte klonen</extracomment>
-        <translation>a merevlemez klonolasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="547"/>
         <source>Image of a &amp;partition write back</source>
         <extracomment>Abbild einer Partition zurückschreiben</extracomment>
-        <translation>egy particio masolatanak visszairasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="502"/>
@@ -3750,7 +3749,7 @@ biztonsági kulcs</translation>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="587"/>
         <source>Save/Restore</source>
-        <translation>mentes</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3781,19 +3780,19 @@ biztonsági kulcs</translation>
         <location filename="../src/ui/dir_dialog.ui" line="39"/>
         <source>Starting a Backup or Restoring a Directory. </source>
         <extracomment>Starten einer Sicherung oder Wiederherstellung eines Verzeichnisses</extracomment>
-        <translation>egy konyvtar mentesenek vagy letrehozasabnak biztositasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="68"/>
         <source>Select the directory that is to be backed up or written back.</source>
         <extracomment>Wählen Sie das Verzeichnis aus, das gesichert oder zurückgeschrieben werden soll.</extracomment>
-        <translation>valasszon ki egy konyvtarat, amely mentve vagy ujrairva legyen.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="97"/>
         <source>Directory to which the directory backup is written or from which the recovery file is read.</source>
         <extracomment>Verzeichnis, in das die Verzeichnissicherung geschrieben wird oder aus dem die Wiederherstellungsdatei gelesen wird</extracomment>
-        <translation>konyvtar, ahova a konyvtarbiztositas irva legyen vagy ahonnan az ujra eloallitasi adatok kiolvashatok legyenek></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="100"/>
@@ -3879,7 +3878,7 @@ biztonsági kulcs</translation>
         <source>The directory is written back to the path of origin.
 </source>
         <comment>Das Verzeichnis wird an den ursprünglichen Pfad zurückgeschrieben</comment>
-        <translation>a konyvtar az eredeti fadra lesz visszairva</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="435"/>
@@ -3891,7 +3890,7 @@ biztonsági kulcs</translation>
         <location filename="../src/ui/dir_dialog.ui" line="459"/>
         <source>show hidden directories/files</source>
         <comment>verdeckte Verzeichnisse oder Dateien anzeigen</comment>
-        <translation>rejtett konyvtarak vagy adatok mutatasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="472"/>
@@ -3923,7 +3922,7 @@ biztonsági kulcs</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="37"/>
         <source>Restore partition table</source>
         <extracomment>Partitionstabelle wiederherstellen</extracomment>
-        <translation>a particio tablazat ujra eloallitasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="42"/>
@@ -3959,7 +3958,7 @@ biztonsági kulcs</translation>
         <source>Backup / restore MBR
 from this hard disk:</source>
         <extracomment>MBR von dieser dieser Festplatte sichern / wiederherstellen:</extracomment>
-        <translation>MBR errol a merevlemezrol menteni</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="170"/>
@@ -3971,7 +3970,7 @@ from this hard disk:</source>
         <source>Existing
 &amp;harddrive:</source>
         <extracomment>Existierende Festplatte</extracomment>
-        <translation>letezo merevlemez</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4008,7 +4007,7 @@ tömörítés:</translation>
         <location filename="../src/ui/setting.ui" line="113"/>
         <source>Overwrite existing files by default</source>
         <extracomment>vorhandene Dateien standardmäßig überschreiben</extracomment>
-        <translation>a meglevo adatok szabalyszeru felulirasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="126"/>
@@ -4040,7 +4039,7 @@ vissza az eredeti helyen</translation>
         <location filename="../src/ui/setting.ui" line="179"/>
         <source>Show passwords</source>
         <extracomment>Passwort anzeigen</extracomment>
-        <translation>jelszo mutatasa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="192"/>
@@ -4064,7 +4063,7 @@ vissza az eredeti helyen</translation>
         <location filename="../src/ui/setting.ui" line="231"/>
         <source>Safe PBR by default</source>
         <extracomment>PBR standardmäßig sichern</extracomment>
-        <translation>PBR szabalyos mentese</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="254"/>
@@ -4075,19 +4074,19 @@ vissza az eredeti helyen</translation>
         <location filename="../src/ui/setting.ui" line="267"/>
         <source>Display note for access to network computers</source>
         <extracomment>Hinweis  für den Zugriff auf Netzwerkrechner anzeigen</extracomment>
-        <translation>a halozati computer tamadasara valo fihyelmeztetes</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="280"/>
         <source>Displaying a note about mounting the network computer</source>
         <extracomment>Hinweis über das Mounten des Netzwerkrechners anzeigen</extracomment>
-        <translation>a halozati computer mountigjara valo figyelmeztetes</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="293"/>
         <source>Display notes on how to use the program qt-fsarchiver</source>
         <extracomment>Hinweise zum Gebrauch des Programms anzeigen</extracomment>
-        <translation>a program hasznalatara valo figyelmeztetes</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="306"/>
@@ -4114,14 +4113,14 @@ You can set the factor between 1 and 20.</source>
 die Auswertungszeit verlangsamen. Standardmäßig wird die 
 Auswertezeit mit Faktor 5 * 10 msec eingestellt.
 Sie können den Faktor zwischen 1 und 20 einstellen.</comment>
-        <translation>Ha a program nem mukodik rendesen, akkor a kiertekelesi idot lelassithatja.Szabaly szerint a kiertekelesi ido 5*10msec- re van beallitva.A faktor beallithato 1 es 20 koze.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="361"/>
         <source>Selection of the evaluation time 
 from the terminal program. </source>
         <comment>Auswahl der Auswertezeit aus dem Terminalprogramm.</comment> 
-        <translation>A terminal programbol kivalaszthato a kiertekelesi ido.</translation>
+        <translation></translation>
     </message>
 </context>
 <context>

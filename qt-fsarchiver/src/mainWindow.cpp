@@ -105,7 +105,7 @@ MWindow::MWindow()
    QModelIndex cwdIndex = dirModel->index(QDir::rootPath());
    dirModel->setRootPath(QDir::rootPath());
    treeView->setRootIndex(cwdIndex);
-   groupBox->setFlat (true);
+  // groupBox->setFlat (true);
    pushButton_restore->setEnabled(false);
    // Signal-Slot-Verbindungen  Werkzeugleiste
    //connect( action_Beenden, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
@@ -149,7 +149,7 @@ MWindow::MWindow()
    timer = new QTimer(this);
    bool ok;
    int live_flag = 0;
-   // 0 = Eingabe Passwort erforderlich, 1 = keine Passworteingabe: Live-DVD
+   // 0 = Eingabe Passwort erforderlich, 1 = keine Passworteingabe: Live-DVD, Passwort wird übergeben
    QDir dir1(userpath + "/.config/qt-fsarchiver");
    if (!dir1.exists())
        {
@@ -172,7 +172,7 @@ MWindow::MWindow()
         setting1.endGroup();
         } 
    if (live_flag == 1)
-       password = "xx"; //Fiktives Passwort für die Live-DVD        
+       password = "ubuntu"; //Fiktives Passwort für die Live-DVD        
    if (live_flag == 0 && password == "")
       {
       do
@@ -1319,8 +1319,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-18, May 10, 2020",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-18, 10.Mai 2020"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-20, November 27, 2020",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-20, 27.November 2020"));
       }
 
 int MWindow::is_running(){
