@@ -91,6 +91,7 @@ protected slots:
    QString sdx3_einlesen(QString part, int flag);
    void daten_write(QString password, int i);
    QString md5sum(QString file_name);
+   int is_gpt_main(QString partition_efi);
      
 private:
     QFileSystemModel *dirModel;

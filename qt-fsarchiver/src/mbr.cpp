@@ -203,7 +203,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
              if (efiflag == 1)
              {
                 attribute = "sgdisk -b" + folder_ + "/" + Ubuntuversion + "_gpt_" + partition + " /dev/" + partition;
-                befehl = "/usr/sbin/qt-fsarchiver.sh  22 " + attribute;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
              }
             i = system (befehl.toLatin1().data());
                 if (i == 0 && efiflag == 0)
@@ -230,7 +230,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
          if (i ==0) {
               if (cmb_mbr->currentIndex() == 0) {
               attribute = "sgdisk -l " + folder_ + " /dev/" + partition;
-              befehl = "/usr/sbin/qt-fsarchiver.sh  22 " + attribute;
+              befehl = "/usr/sbin/qt-fsarchiver.sh  13" + attribute;
               i = system (befehl.toLatin1().data());
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The GUID partition table was successfully restored.\n", "Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
@@ -557,7 +557,7 @@ int DialogMBR::is_gpt(QString partition_efi)
       QString attribute;
       QString befehl;
       attribute = "gdisk -l " + partition_efi +  " 1>" +  userpath_mbr + "/.config/qt-fsarchiver/efi.txt";
-      befehl = "/usr/sbin/qt-fsarchiver.sh  22 " + attribute;
+      befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
       if(system (befehl.toLatin1().data()))
               befehl = "";
       QThread::msleep(10 * sleepfaktor);
@@ -569,9 +569,7 @@ int DialogMBR::is_gpt(QString partition_efi)
            	text = ds.readLine();
 		if (text.indexOf("GPT: present") > -1) 
                   return 1;
-               // if( text.isEmpty() )
-         	// break;
-           }
+             }
         }
  	file.close();
   return 0;

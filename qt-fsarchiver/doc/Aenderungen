@@ -1,6 +1,8 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.5-21 8. Dezember 2020.
+    - Sicherung der gpt-Partitionstabelle wird geprüft.
 * qt-fsarchiver-0.8.5-20 27. November 2020.
     - korrigierte koreanische Übersetzung
     - Fehlerkorrektur: Fortschrittsbalken beim Klonen einer Festplatte oder Partition mit dd wieder aktiv.

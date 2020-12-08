@@ -1319,8 +1319,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-20, November 27, 2020",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-20, 27.November 2020"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-21, December 8, 2020",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020"));
       }
 
 int MWindow::is_running(){
@@ -1330,7 +1330,7 @@ int MWindow::is_running(){
       if (dir1.exists()){  //vermeidet Fehlermeldung beim ersten Start
           befehl = "ps --user " + user + " | grep -w qt-fsarchiver 1> " +  userpath + "/.config/qt-fsarchiver/running.txt";
           if(system (befehl.toLatin1().data()))
-             befehl = "";
+             befehl = ""; 
       }
       QString filename = userpath + "/.config/qt-fsarchiver/running.txt";
       QFile file(filename);
@@ -1403,14 +1403,28 @@ return 0;
 
 
 void MWindow::mbr_save () {
-     dialog_auswertung = 4;
-     DialogMBR *dialog = new DialogMBR;
-     dialog->show();
+int i = 5;
+QString device = part[0][3]; 
+     i = is_gpt_main(device);
+//qDebug() << "dialog i" << i;
+     if(i < 2)
+     {
+        dialog_auswertung = 4;
+        DialogMBR *dialog = new DialogMBR;
+        dialog->show();
+      }
 }
 void MWindow::mbr_restore () {
-      dialog_auswertung = 5;
-      DialogMBR *dialog = new DialogMBR;
-      dialog->show();
+int i = 5;
+QString device = part[0][3]; 
+     i = is_gpt_main(device);
+//qDebug() << "dialog i" << i;
+     if(i < 2)
+      {
+         dialog_auswertung = 5;
+         DialogMBR *dialog = new DialogMBR;
+         dialog->show();
+      }
 }
 
 void MWindow::dir_save () {
@@ -2465,6 +2479,36 @@ if (file.open(QIODevice::ReadOnly))
     return hashData.toHex();
 }
   return "";
+}
+
+int MWindow::is_gpt_main(QString partition_efi)
+{
+      QString text;
+      QString attribute;
+      QString befehl;
+      attribute = "gdisk -l " + partition_efi +  " 1>" +  userpath + "/.config/qt-fsarchiver/efi.txt";
+      befehl = "/usr/sbin/qt-fsarchiver.sh 13 " + attribute;
+      if(system (befehl.toLatin1().data()))
+              befehl = "";
+      QThread::msleep(10 * sleepfaktor);
+      QString filename = userpath + "/.config/qt-fsarchiver/efi.txt";
+      QFile file(filename);
+      if( file.open(QIODevice::ReadOnly|QIODevice::Text)) { 
+	QTextStream ds(&file);
+	while (!ds.atEnd()){
+              	text = ds.readLine();
+		if (text.indexOf("GPT: present") > -1) 
+                  return 1;
+           }
+        }
+        if(file.size() == 0)
+            {
+            QMessageBox::about(this, tr("Note", "Hinweis"),
+      tr("Reading the partition type was faulty. The backup is not possible\n","Die Partitionsart auslesen war fehlerhaft. Die Sicherung ist nicht möglich.\n"));
+            return 2;
+            }
+ 	file.close();
+  return 0;
 }
 
 /*

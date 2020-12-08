@@ -1,6 +1,8 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-21 December 8, 2020.
+    - Backup of the gpt partition table is checked.
 * qt-fsarchiver-0.8.5-20 November 27, 2020.
     - corrected korean translation.
     - Error correction: Progress bar when cloning a hard disk or partition with dd again active.
