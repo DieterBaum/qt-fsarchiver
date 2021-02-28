@@ -7,4 +7,5 @@ Icon=/usr/share/app-install/icons/harddrive2.png
 Terminal=false
 Type=Application
 StartupNotify=true
+Categories=System;
 
