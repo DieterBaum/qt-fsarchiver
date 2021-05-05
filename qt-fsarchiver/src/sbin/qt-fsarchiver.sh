@@ -1,7 +1,7 @@
 #!/bin/bash
 # Hinweis: keine Leerzeile zulässig, auch nicht am Ende!!, gegebenenfalls korrigieren. 
 if [ $# -lt 1 ]; then
-  echo "Fehler: Keine Kein Passwort übergeben"
+  echo "Fehler: Kein Passwort übergeben"
   exit
 fi
 # $1 = Auswahl
