@@ -53,16 +53,19 @@ SOURCES += src/clone.cpp \
            src/thread.cpp \
            src/treeview.cpp 
 RESOURCES += src/icon.qrc
+isEmpty(DOC_DIR) {
+  DOC_DIR = /usr/share/doc/qt-fsarchiver
+}
 # install
  target.path = /usr/sbin
- icon.files = src/images/harddrive2.png
- icon.path = /usr/share/app-install/icons
+ icon.files = src/images/qt-fsarchiver.png
+ icon.path = /usr/share/pixmaps
  autostart.files = starter/qt-fsarchiver.desktop
  autostart.path = /usr/share/applications
- doc.files = doc
- doc.path = /usr/share/doc/qt-fsarchiver/doc
- smbfind.files = src/sbin
- smbfind.path = /usr
+ doc.files = doc/*
+ doc.path = $$DOC_DIR
+ smbfind.files = src/sbin/findsmb-qt src/sbin/qt-fsarchiver.sh
+ smbfind.path = /usr/sbin
 TRANSLATIONS += translations/qt-fsarchiver_ar.ts \
                 translations/qt-fsarchiver_ca.ts \
                 translations/qt-fsarchiver_ch.ts \
