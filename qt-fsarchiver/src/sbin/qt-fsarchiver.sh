@@ -1,7 +1,7 @@
 #!/bin/bash
 # Hinweis: keine Leerzeile zulässig, auch nicht am Ende!!, gegebenenfalls korrigieren. 
 if [ $# -lt 1 ]; then
-  echo "Fehler: Keine Kein Passwort übergeben"
+  echo "Fehler: Kein Passwort übergeben"
   exit
 fi
 # $1 = Auswahl
@@ -14,7 +14,7 @@ sgdisk="$4"
 dateiname="/.config/qt-fsarchiver/den.nfo.cpt"
 testfile=$HOME$dateiname
 if [ -f "$testfile" ];then 
-/usr/sbin/de -d -k ~/.local/share/.en.nfo ~/.config/qt-fsarchiver/den.nfo.cpt
+/usr/bin/ccrypt -d -k ~/.local/share/.en.nfo ~/.config/qt-fsarchiver/den.nfo.cpt
 URLFILE=~/.config/qt-fsarchiver/den.nfo
 for i in `cat $URLFILE`; do
 echo > .1 $i
@@ -23,7 +23,7 @@ if [ -f .1 ];then
 rm .1
 fi
 # den.nfo.cpt wieder herstellen, den.nfo wird somit gelöscht
-/usr/sbin/de -e -k ~/.local/share/.en.nfo ~/.config/qt-fsarchiver/den.nfo
+/usr/bin/ccrypt -e -k ~/.local/share/.en.nfo ~/.config/qt-fsarchiver/den.nfo
 fi
 if [ $1 -eq 1 ]; then
 echo $i | sudo -S -b /usr/sbin/qt-fsarchiver-terminal $2

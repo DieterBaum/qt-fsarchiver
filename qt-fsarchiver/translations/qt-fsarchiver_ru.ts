@@ -2705,10 +2705,10 @@ backup key</source>
     <message>
         <location filename="../src/mainWindow.cpp" line="1315"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-21, December 8, 2020</source>
+version 0.8.5-22, May 8, 2021</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020</comment>
 <translation>Сохранение и восстановление разделов, каталогов и MBR.
-Версия 0.8.5-21, 8.декабрь 2020</translation>
+Версия 0.8.5-22, 8.мая 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1387"/>

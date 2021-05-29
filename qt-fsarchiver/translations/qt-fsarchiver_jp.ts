@@ -2862,9 +2862,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1322"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-21, December 8, 2020</source>
+version 0.8.5-22, May 8, 2021</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020</comment>
-<translation>バックアップウント復元するパーティション バージョン 0.8.5-21, 8.12月 2020</translation>
+<translation>バックアップウント復元するパーティション バージョン 0.8.5-22, 8.5月 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1394"/>

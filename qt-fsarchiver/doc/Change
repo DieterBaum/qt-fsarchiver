@@ -1,6 +1,12 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.5-22 May 8, 2021.
+    - drop /usr/sbin/{findsmb-qt,ccguess,de} from tarball
+    - use standard findsmb directly instead of findsmb-qt
+    - drop use-system-ccrypt.patch (now upstream use /usr/bin/ccrypt)
+    - update translations
+    - Bugfix when writing back the hidden area in MBR.
 * qt-fsarchiver-0.8.5-21 December 8, 2020.
     - Backup of the gpt partition table is checked.
 * qt-fsarchiver-0.8.5-20 November 27, 2020.

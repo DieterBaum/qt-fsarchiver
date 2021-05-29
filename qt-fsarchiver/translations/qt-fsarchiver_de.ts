@@ -2800,9 +2800,9 @@ Sie müssen eine Datei auswählen</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1322"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-21, December 8, 2020</source>
+version 0.8.5-22, May 8, 2021</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020</comment>
-<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-21, 8.Dezember 2020</translation>
+<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-22, 8.Mai 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1569"/>
@@ -3164,12 +3164,6 @@ Passwort eingegeben.</translation>
         <translation></translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-20, November 27, 2020</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
-        <translation type="vanished">Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.5-20, 27.November 2020</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1627"/>
         <source> specials have been backed
 .</source>
@@ -3313,13 +3307,6 @@ with fsarchiver</source>
 fsarchiver sichern</translation>
     </message>
     <message>
-        <source>Restore partition
-with fsarchi&amp;ver</source>
-        <extracomment>Partition mit fs-Archiver * zurückschreiben</extracomment>
-        <translation type="vanished">Wiederherstellung der 
-Partition mit fsarchi&amp;ver</translation>
-    </message>
-    <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="239"/>
         <source>Show hidden directories and files</source>
         <translation>Zeige versteckte Verzeichnisse und Dateien</translation>
@@ -3383,7 +3370,8 @@ Partition mit fsarchi&amp;ver</translation>
         <location filename="../src/ui/fsarchiverMain.ui" line="31"/>
         <source>Restore partition
 with fsarchiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Partition mit fsarchi-
+ver wiederherstellen</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="525"/>

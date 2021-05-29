@@ -218,8 +218,10 @@ QString hostname_;
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
            {
            befehl = "smbtree -N 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/smbtree.txt";
-	   if (system (befehl.toLatin1().data()))
+	  if (system (befehl.toLatin1().data()))
               befehl = "";
+           if (file.size() != 0) 
+           {  
            while (text == ""){
             text = ds.readLine();
             QThread::msleep(5 * sleepfaktor);
@@ -243,14 +245,15 @@ QString hostname_;
                    if (i > 99)
                       break;
              }
+            } 
            } 
         }
 	file.close();
-//Auswertung findsmb-qt Windows-Rechner werden erkannt
-        befehl = "/usr/sbin/findsmb-qt 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/findsmb-qt.txt";
+//Auswertung findsmb Windows-Rechner werden erkannt
+        befehl = "findsmb 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/findsmb.txt";
 	if (system (befehl.toLatin1().data()))
             befehl = "";
-        QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/findsmb-qt.txt");
+        QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/findsmb.txt");
     	QTextStream ds1(&file1);
         QString adresse = ds1.readLine();
         QString adresse1; 
@@ -303,7 +306,7 @@ QString hostname_;
 	file1.close();
         // Dateien entfernen 
   	if (file1.exists()){
-     		attribute = "~/.config/qt-fsarchiver/findsmb-qt.txt";
+     		attribute = "~/.config/qt-fsarchiver/findsmb.txt";
                 befehl = "/usr/sbin/qt-fsarchiver.sh  15 " + attribute; 
 		if(system (befehl.toLatin1().data()))
                    befehl = "";

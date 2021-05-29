@@ -2,7 +2,7 @@
 qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =====================================================================================================================================================
 
-Copyright (C) 2008-2020 Francois Dupoux und Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2021 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
@@ -20,7 +20,7 @@ Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rp
 Installation des Programms aus den Quelldateien:
 Für die Installation von den Programmen qt-fsarchiver und qt-fsarchiver-terminal müssen die für fsarchiver notwendigen Abhängigkeiten und die qt5-Entwicklungsumgebung installiert werden.
 Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt5-default qtbase5-dev qttools5-dev-tools btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt5-default qtbase5-dev qttools5-dev-tools btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo ccrypt
 
 Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:
 username ALL=(ALL) ALL 
@@ -29,10 +29,11 @@ Der username ist anzupassen: beispielweise peter.
 
 Anstatt libzst1-dev wird in einigen Systemen libzst-dev installiert. btrfs-tools wird neuerdings durch btrfs-progs ersetzt. Der obige Befehl ist entsprechend anzupassen.
 
-In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils 
+In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils net-tools-deprecated ccrypt
 Wenn Sie ssh (secureshell) für den Zugriff auf weitere Rechner im Netzwerk nutzen wollen, müssen Sie noch sshpass individuell installieren.
+Für das Speichern über das Netzwerk müssen Sie noch installieren: net-tools-deprecated
 
-In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs 
+In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt 
 Bei einem 64-bit System müssen Sie zusätzlich lrelease installieren: dnf install qt5-linguist. Bei Fedora 30 muss noch make nachinstalliert werden.
 32-bit Systeme werden nicht mehr unterstützt.
 
@@ -43,7 +44,6 @@ Bei Fedora und Suse müssen Sie eingeben: qmake-qt5 && make && sudo make install
 Genauso installieren Sie das Programm qt-fsarchiver-terminal.
 Wechseln Sie in einem Terminal in den Ordner, indem der Quellcode von qt-fsarchiver-terminal vorhanden ist.
 Wiederholen Sie die obigen Terminalbefehle.
-
 Qt-fsarchiver funktioniert nur, wenn qt-fsarchiver-terminal installiert wurde. Die Version von qt-fsarchiver-terminal wird überprüft. Bei falscher Version wird das Programm abgebrochen.
 
 Installation des Programms aus den DEB-Paketen:

@@ -2781,9 +2781,9 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1322"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-21, December 8, 2020</source>
+version 0.8.5-22, May 8, 2021</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020</comment>
-<translation>分区、目录和MBR 备份/恢复工具。 版本 0.8.5-21, 2020. 十二月.8</translation>
+<translation>分区、目录和MBR 备份/恢复工具。 版本 0.8.5-22, 2021. 五月.8</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1394"/>

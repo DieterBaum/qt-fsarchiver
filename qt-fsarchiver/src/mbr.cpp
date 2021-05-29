@@ -503,8 +503,8 @@ int DialogMBR::folder_einlesen() {
     if (efiflag == 0)
     {
     QString text = tr("You may have selected an incorrect file. The hidden area to be restored has a size of ", "Sie haben eventuell eine falsche Datei ausgewählt. Der wiederherzustellende verborgene Bereich hat eine Größe von") +  sA + 
-    tr(" bytes. The hidden area of the disk ", " Byte. Der verborgene Bereich von der Festplatte ") + partition + tr(" has a size of ", " hat eine Größe von ") + Sektor_byte + tr(" bytes. Do you want to continue?", " Byte. Wollen Sie fortfahren?");
-    if (size_ != sektor_byte && dialog_auswertung == 5 && cmb_mbr->currentIndex() == 3) {
+    tr(" bytes. The hidden area of the disk ", " Byte. Der verborgene Bereich von der Festplatte ") + partition + tr(" has a size of ", " hat eine Größe von ") + Sektor_byte_1 + tr(" bytes. Do you want to continue?", " Byte. Wollen Sie fortfahren?");
+    if (size_ != sektor_byte && dialog_auswertung == 5 && cmb_mbr->currentIndex() == 3 && sektor_byte != 0 )  {
         ret = questionMessage(text);
         if (ret == 2)
             return 1;

@@ -200,7 +200,7 @@ MWindow::MWindow()
       if(system (befehl.toLatin1().data()))
           befehl = "";
       QThread::msleep(10 * sleepfaktor);
-      befehl = "/usr/sbin/de -e -k " + userpath + "/.local/share/.en.nfo " + userpath + "/.config/qt-fsarchiver/den.nfo";
+      befehl = "/usr/bin/ccrypt -e -k " + userpath + "/.local/share/.en.nfo " + userpath + "/.config/qt-fsarchiver/den.nfo";
       if (system (befehl.toLatin1().data()))
           befehl = "";
       password = "xx"; //Damit das Passwort nicht im RAM ausgelesen werden kann
@@ -284,19 +284,17 @@ MWindow::MWindow()
         found = version.indexOf("-");
         version.replace(found, 1, "");
         int version_  = version.toInt();
-       if (version1 == "")
-           version1 ="0.8.5-10";
-       if (!file1.exists() or 8510 > version_)
+        version1 ="0.8.5-22";
+       if (!file1.exists() or 8522 > version_)
            {
        QMessageBox::about(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
     	return;	
           }
-       //Prüfen ob qt-fsarchiver geändert wurde. Eventuell wurde eine echo Befehl zum Auslesen des Passwortes eingefügtf
-       // Bei Ubuntu, Debian, Mint und Suse ist die erste Zeile #!/bin/bash
+       // Prüfen ob qt-fsarchiver geändert wurde. Eventuell wurde eine echo Befehl zum Auslesen des Passwortes eingefügt.
+       // Bei Ubuntu, Debian, Mint und Suse ist die erste Zeile #!/bin/bash.
        // Bei Fedora ist die erste Zeile #!/usr/bin/bash. Daher die verschiedenen Ergebnisse.
        QString vergleich = md5sum("/usr/sbin/qt-fsarchiver.sh");
-       if(vergleich == "13ad1c078007f2dbe13c0b0e5d922edf" or vergleich == "5109c347d701f788e7ef0469c0363519")
-        ;
+       if(vergleich == "b36c2e4bea020b822ff7bb6bf807a2ff" or vergleich == "21187f7deeddb004c0f59a2a6da9068b");
        else
        {
            QMessageBox::about(this,tr("Note", "Hinweis"),tr("Security warning: A file has been modified. The program is terminated. Please reinstall qt-fsarchiver.", "Sicherheitswarnung: Eine Datei wurde geändert. Das Programm wird beendet. Bitte installieren Sie qt-fsarchiver neu"));
@@ -1319,8 +1317,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-21, December 8, 2020",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-22, May 8, 2021",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-22, 8. Mai 2021"));
       }
 
 int MWindow::is_running(){
@@ -2450,7 +2448,7 @@ QString filename;
       befehl = "rm " + filename + " 2>/dev/null";
       if (system (befehl.toLatin1().data()))
          befehl = "";
-      befehl = "md5sum /usr/sbin/de 2>&1 >> " + filename; 
+      befehl = "md5sum /usr/bin/ccrypt 2>&1 >> " + filename; 
       if (system (befehl.toLatin1().data()))
          befehl = "";
     }
