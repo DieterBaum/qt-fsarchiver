@@ -36,6 +36,7 @@ QStringList items_disk;
 extern QString user;
 QString userpath_mbr;
 extern int sleepfaktor;
+int zaehler = 0;
 
 DialogMBR::DialogMBR()
 {
@@ -209,11 +210,11 @@ QModelIndexList indexes = selModel->selectedIndexes();
                 if (i == 0 && efiflag == 0)
       			QMessageBox::about(this,tr("Note", "Hinweis"), tr("The MBR was successfully saved.\n", "MBR wurde erfolgreich gesichert.\n"));
         	if (i != 0 && efiflag == 0)
-      			QMessageBox::about(this, tr("Note", "Hinweis"), tr("The MBR was not saved.\n", "MBR wurde nicht gesichert.\n"));
+      			QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The MBR was not saved.\n", "MBR wurde nicht gesichert.\n"));
                 if (i == 0 && efiflag == 1)
       			QMessageBox::about(this,tr("Note", "Hinweis"), tr("GPT was successfully saved.\n", "GPT wurde erfolgreich gesichert.\n"));
         	if (i != 0 && efiflag == 1)
-      			QMessageBox::about(this, tr("Note", "Hinweis"), tr("GPT was not saved.\n", "GPT wurde nicht gesichert.\n"));
+      			QMessageBox::warning(this, tr("Note", "Hinweis"), tr("GPT was not saved.\n", "GPT wurde nicht gesichert.\n"));
       		
                 }
              
@@ -235,7 +236,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The GUID partition table was successfully restored.\n", "Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
               else
-      		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The GUID partition table was not restored.\n", "Die GUID Partitionstabelle wurde nicht wieder hergestellt.\n"));
+      		QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The GUID partition table was not restored.\n", "Die GUID Partitionstabelle wurde nicht wieder hergestellt.\n"));
               }
  	      }
 	}
@@ -261,7 +262,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The bootloader area was successfully restored.\n", "Der Bootloaderbereich wurde erfolgreich wieder hergestellt.\n"));
               else
-      		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The boot loader area was not restored.\n", "Der Bootloaderbereich wurde nicht wieder hergestellt.\n"));
+      		QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The boot loader area was not restored.\n", "Der Bootloaderbereich wurde nicht wieder hergestellt.\n"));
               }
               if (cmb_mbr->currentIndex() == 2) {
 		   //Partitionstabelle extrahieren  
@@ -274,7 +275,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
                    if (i == 0)
       			QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition table was successfully restored.", "Die Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
                    else
-      			QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition table was not restored.\n", "Die Partitionstabelle wurde nicht wieder hergestellt.\n"));
+      			QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The partition table was not restored.\n", "Die Partitionstabelle wurde nicht wieder hergestellt.\n"));
                }
                if (cmb_mbr->currentIndex() == 1) {
                  // MBR und Pasrtitionstabelle wieder herstellen
@@ -284,7 +285,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
                if (i == 0) 
       		   QMessageBox::about(this, tr("Note","Hinweis"), tr("The MBR was successfully restored.\n", "Der MBR wurde erfolgreich wieder hergestellt.\n"));
                 else
-      		  QMessageBox::about(this, tr("Note", "Hinweis"), tr("The MBR is not restored.\n", "Der MBR wurde nicht wieder hergestellt.\n"));
+      		  QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The MBR is not restored.\n", "Der MBR wurde nicht wieder hergestellt.\n"));
                }
                  
           }
@@ -309,7 +310,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
       	        if (i == 0) 
       		   QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hidden area was successfully restored.\n", "Der verborgene Bereich wurde erfolgreich wieder hergestellt.\n"));
                 else
-      		  QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hidden area was not restored.\n", "Der verborgene Bereich wurde nicht wieder hergestellt.\n"));
+      		  QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The hidden area was not restored.\n", "Der verborgene Bereich wurde nicht wieder hergestellt.\n"));
         }
     }
     this->setCursor(Qt::ArrowCursor); 
@@ -347,7 +348,7 @@ QString attribute;
         QFileInfo info(Dateiname); 
         size_ = info.size();  //Wenn Dateigröße = 0 ist verhindert diese Abfrage einen Abstaurz
         if (size_ == 0){
-           QMessageBox::about(this, tr("Note", "Hinweis"), tr("Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.", "Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.\n")); 
+           QMessageBox::warning(this, tr("Note", "Hinweis"), tr("Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.", "Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.\n")); 
            return 1;
         }
         //Datei auslesen
@@ -370,9 +371,15 @@ QString attribute;
             else 
                sektor_ = dummy[1].toInt(); //Festplatte hat keinen Bootsektor
             }
-       if (sektor_ < 2 && efiflag == 0) {
-	    QMessageBox::about(this, tr("Note", "Hinweis"), tr("The end of hidden area of the 1st Partition could not be read. Only 512 bytes are saved.", "Das Ende des verborgenen Bereiches der 1. Partition konnte nicht ausgelesen werden. Es werden nur 512 Bytes gesichert.\n"));
+       if (sektor_ == 0 && (dialog_auswertung == 4)) //mit Ubuntu Startmedienersteller erstelltes Startmedium 
+           {
+           QMessageBox::warning(this, tr("Note", "Hinweis"), tr("Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.", "Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.\n")); 
+           return 1;
+        } 
+       if (sektor_ < 2 && efiflag == 0 && (dialog_auswertung == 4) && zaehler == 0) {
+	    QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The end of hidden area of the 1st Partition could not be read. Only 512 bytes are saved.", "Das Ende des verborgenen Bereiches der 1. Partition konnte nicht ausgelesen werden. Es werden nur 512 Bytes gesichert.\n"));
             sektor_ = 2;
+            zaehler ++;
 	}
         sektor_byte = sektor_  * 512;
         Sektor_byte =  QString::number(sektor_byte);
@@ -432,9 +439,10 @@ int DialogMBR::folder_einlesen() {
    QModelIndexList indexemas = selModel->selectedIndexes();
    folder_.append  (dirModel->filePath(index));
    folder_ =  (dirModel->filePath(index));
-   found = folder_.indexOf(" ");
+   found = folder_.indexOf(" "); 
    QFileInfo info(folder_); 
-   if (found > -1)
+   sektor_auslesen();
+   if (found > -1) //Leerstelle im Verzeichnis
      {
      mbr_ = folder_; 
      dummy = "'" + folder_ + "'";
@@ -448,6 +456,7 @@ int DialogMBR::folder_einlesen() {
         befehl = "ls -la '" + folder_ + "' 1>" +  userpath_mbr + "/.config/qt-fsarchiver/mbr_size.txt";
         if(system (befehl.toLatin1().data()))
               befehl = "";
+        QThread::msleep(10 * sleepfaktor);
         while (!ds.atEnd()){
           text = ds.readLine();
 	  if (text.indexOf("mbr") > -1) 
@@ -456,14 +465,17 @@ int DialogMBR::folder_einlesen() {
          file.close();
         }
        mbr = mbr_.split(QRegExp("\\s+"));
-      if (dialog_auswertung == 5) 
-         size__ = mbr[4];
-       size_ = size__.toInt();
-       folder_ = dummy;
-      }
+    if (dialog_auswertung == 5) 
+         size_ = info.size();
+      folder_ = dummy;
+      dummy = folder_.right(4);
+      Festplatte = dummy.left(3);
+      }  
    else
+      {
        size_ = info.size();
-    Festplatte = folder_.right(3);
+       Festplatte = folder_.right(3);
+      }
     if (folder_ == "" && (dialog_auswertung == 4))
       {
        QMessageBox::about(this, tr("Note", "Hinweis"),
@@ -497,17 +509,23 @@ int DialogMBR::folder_einlesen() {
       QString text = tr("You may have selected the wrong hard disk. The hard disk to be restored is ", "Sie haben eventuell eine falsche Festplatte ausgewählt. Die wiederherzustellende Festplatte ist ") + partition + tr(", but the backed up hard drive is ", ",  die gesicherte Festplatte ist aber ") +  Festplatte + tr(" Do you want to continue?", " Wollen Sie fortfahren?");
         ret = questionMessage(text);
         if (ret == 2)
+            {
+            this->setCursor(Qt::ArrowCursor); 
             return 1;
+            }
         }
     QString sA = QString::number(size_);
     if (efiflag == 0)
     {
     QString text = tr("You may have selected an incorrect file. The hidden area to be restored has a size of ", "Sie haben eventuell eine falsche Datei ausgewählt. Der wiederherzustellende verborgene Bereich hat eine Größe von") +  sA + 
     tr(" bytes. The hidden area of the disk ", " Byte. Der verborgene Bereich von der Festplatte ") + partition + tr(" has a size of ", " hat eine Größe von ") + Sektor_byte_1 + tr(" bytes. Do you want to continue?", " Byte. Wollen Sie fortfahren?");
-    if (size_ != sektor_byte && dialog_auswertung == 5 && cmb_mbr->currentIndex() == 3 && sektor_byte != 0 )  {
+      if (size_ != sektor_byte && dialog_auswertung == 5 && cmb_mbr->currentIndex() == 3){
         ret = questionMessage(text);
         if (ret == 2)
+            {
+            this->setCursor(Qt::ArrowCursor); 
             return 1;
+            }
         if (ret == 1)
            return 0;
        }
@@ -579,6 +597,7 @@ void DialogMBR::folder_expand() {
    QModelIndex index = treeView->currentIndex();
    treeView->expand(index);
 }
+
 
 
 

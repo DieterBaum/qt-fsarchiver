@@ -341,7 +341,7 @@ QString attribute;
     // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint(mountpoint1);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::warning(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
 	}
 	partition_name  = partition_exist.right(partition_exist.size() -4);
@@ -557,7 +557,7 @@ QString disk_name;
     // Überprüfen, ob System oder Home-Partition auf der Festplatte vorhanden ist
     int part_art_clone = mountpoint_disk(part_clone[row][0]);
     if (part_art_clone == 1){
-       QMessageBox::about(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
+       QMessageBox::warning(this, tr("Note", "Hinweis"), tr("There is a root or home partition on the hard disk. You must use a live DVD.", "Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.\n"));
 	return 0;
 	}
 	partition_name  = partition_exist.right(partition_exist.size() -4);
@@ -1034,21 +1034,21 @@ float dummy1;
             	progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was not successful.", "Das Klonen der Festplatte war nicht erfolgreich.\n"));
+QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was not successful.", "Das Klonen der Festplatte war nicht erfolgreich.\n"));
             }
             if (flag_clone==2 && dialog_auswertung != 0)
                 {
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was not successful.", "Das Sichern des Abbildes der Festplatte war nicht erfolgreich.\n"));
+            	QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was not successful.", "Das Sichern des Abbildes der Festplatte war nicht erfolgreich.\n"));
 		}
             if (flag_clone==3 && dialog_auswertung != 0)
                 {
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Saving the image of the partition was not successful.", "Das Sichern des Abbildes der Partition war nicht erfolgreich.\n"));
+            	QMessageBox::warning(this, tr("Note", "Hinweis"), tr("Saving the image of the partition was not successful.", "Das Sichern des Abbildes der Partition war nicht erfolgreich.\n"));
 		}
         }
 	thread_run_clone = 0;
@@ -1095,18 +1095,18 @@ float dummy1;
             if (flag_clone==4 && dialog_auswertung == 0)
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hard disk image recovery was successful.", "Die Wiederherstellung des Abbildes der Festplatte war erfolgreich."));
             if (flag_clone==5 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich."));
+            	QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich."));
             if (flag_clone==4 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("Hard disk image recovery was not successful.", "Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich."));
+            	QMessageBox::warning(this, tr("Note", "Hinweis"), tr("Hard disk image recovery was not successful.", "Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich."));
                 }
             if (flag_clone==5 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was not successful.", "Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich."));
+            	QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was not successful.", "Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich."));
                 }
 	}
         thread_run_clone = 0; 

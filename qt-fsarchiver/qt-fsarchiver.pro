@@ -126,7 +126,7 @@ translations.files = translations/qt-fsarchiver_de.qm \
                 translations/qt-fsarchiver_fr.qm \
                 translations/qt-fsarchiver_he.qm \
                 translations/qt-fsarchiver_hi.qm \
-		translations/qt-fsarchiver_hu.qm \
+                translations/qt-fsarchiver_hu.qm \
                 translations/qt-fsarchiver_hy.qm \
                 translations/qt-fsarchiver_ko.qm \
                 translations/qt-fsarchiver_lv.qm \ 

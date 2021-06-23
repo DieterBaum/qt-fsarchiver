@@ -1,6 +1,12 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.6-0 15. Juni 2021.
+    - Unterstützung für EXT4 fast_commit-Funktion (Marcos Mello).
+    - Unterstützung für die XFS-Funktionen inobtcount und bigtime (Marcos Mello).
+    - Korrigierte Behandlung von Kompressionsoptionen auf der Kommandozeile (Marcos Mello).
+    - Gerät als letztes Argument in mkfs-Aufrufen angeben (Marcos Mello).
+    - Verbesserungen im Bereich MBR/GPT sichern/zurückschreiben.
 * qt-fsarchiver-0.8.5-22 8. Mai 2021.
     - Dateien findsmb-qt, ccguess und de wurden aus dem Tarball entfernt.
     - findsmb ersetzt findsmb-qt.

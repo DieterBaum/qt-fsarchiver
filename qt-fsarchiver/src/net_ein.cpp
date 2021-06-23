@@ -315,7 +315,7 @@ QString hostname_;
         list_net_ssh();
         //Ermitteln widget_net Belegung
         if (widget_net[0] == "" && flag == "1"){
-   		QMessageBox::about(this,tr("Note","Hinweis"),
+   		QMessageBox::warning(this,tr("Note","Hinweis"),
       		tr("There is currently no network computer available.\n","Es ist derzeit kein Netzwerkrechner erreichbar.\n"));
         return 1;
    }

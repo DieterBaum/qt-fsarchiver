@@ -1,7 +1,7 @@
 # qt-fsarchiver
 qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 
-Copyright (C) 2008-2020 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2019 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
@@ -19,14 +19,14 @@ For Debian, Ubuntu and Linux Mint are deb packages for Suse and Fedora rpm packa
 Installing the program from the source files:
 To install qt-fsarchiver and qt-fsarchiver-terminal the necessary dependencies for fsarchiver and the qt5 development environment must be installed.
 Of Debian based distributions: This is the command:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt11-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qtbase5-dev qttools5-dev-tools qt5-default btrfs-progs gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo 
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt11-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qtbase5-dev qttools5-dev-tools qt5-default btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo 
 
 For some distributions, the /etc/sudoers file must be completed with these lines:
 username ALL=(ALL) ALL 
 %sudo	ALL=(ALL:ALL) ALL
 The username has to be adjusted: for example peter.
 
-Instead of libzst1-dev, libzst-dev is installed in some systems. The above command has to be adapted accordingly.
+Instead of libzst1-dev, libzst-dev is installed in some systems. btrfs-tools has recently been replaced by btrfs-progs. The above command has to be adapted accordingly.
  
 The command for Suse: (you must be an administrator su -l) zypper in zypper in qt5-default libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils 
 If you use ssh (secure shell) want to access other computers in the network, you still need to install individually sshpass.
@@ -43,8 +43,8 @@ This is the command for Fedora and Suse: qmake-qt5 && make && sudo make install.
 Installing the program from the DEB packages:
 A double click on the deb file installs the program.
 If the installation is unsuccessful you enter this command in a terminal(you must be administrator): apt install qt-fsarchiver-0.8.5-1.deb. The version number needs to be adjusted.
-In Debian is this the command: gpk-install-local-file qt-fsarchiver-0.8.5-1.deb. The version number needs to be adjusted.
-Is in Debian8 gpk is not installed, then you must enter: su -l dpkg-i, qt-fsarchiver-0.8.5-1.deb und apt install -f. The output of dpkg error message can be ignored.
+In Debian is this the command: gpk-install-local-file qt5-fsarchiver-0.8.5-1.deb. The version number needs to be adjusted.
+Is in Debian8 gpk is not installed, then you must enter: su -l dpkg-i, qt5-fsarchiver-0.8.5-1.deb und apt install -f. The output of dpkg error message can be ignored.
 
 Installation of the program from a Launchpad:
 With Ubuntu and Mint you can reach the installation with these commands:
@@ -53,17 +53,15 @@ Confirm the command with Enter.
 sudo apt update
 sudo apt install qt-fsarchiver
 
-qt-fsarchiver-terminal is installed with the deb packages as well as with the launchpad installation. The version of qt-fsarchiver-terminal is checked. If the version is incorrect, the program is terminated.
+qt-fsarchiver-terminal is installed with the deb packages as well as with the launchpad installation.
 
 Program call:
-Partial starters are installed. By double-qt-fsarchiver is started.
+Partial starters are installed. By double-qt5-fsarchiver is started.
 Start qt-fsarchiver in a terminal:
 qt-fsarchiver
 
 The handling of qt-fsarchiver is simple:
 
-At the beginning the root password is requested in a dialog window. Under Settings > Basic Settings the Checkbos Password can be used to select whether the password is shown on or not.
-Please note: If the root password is incorrect, a hint to terminate the program is given. The program will be terminated hard. An empty password is detected and an error message is displayed.
 Using the menu option "Actions" from the toolbar or the following actions can be selected:
 "Partition backup/restore partitions", "Partition backup/restore over a network", "MBR/GPT backup / restore your files", "Directories save/restore" and "clone HD, create oder restore an Image".
 The program automatically detects if the Master Boot Record or GUID partition table must be secured.
@@ -101,7 +99,7 @@ After starting the live CD or the computer it may .ake a while to show up other 
 Backups can also be done encrypted. Here, the key length between 6 and 64 characters. The archives splitting on DVD-size is possible.
 
 The backup of mounted partitions is possible after asking for confirmation. Restoring partitions can only be made ​​if the partition is unmounted.
-The restoration of a root or a home partition is possible with the live CD qt-fsarchiver (http://sourceforge.net/projects/qt-fsarchiver/files/Live-CD/ ").
+The restoration of a root or a home partition is possible with the live CD qt5-fsarchiver (http://sourceforge.net/projects/qt5-fsarchiver/files/Live-CD/ ").
 On the SystemRescueCd is the program available fsarchiver. With fsarchiver it is posible root- and home-partitions can be restore​​.
 
 When backing up the MBR/GPT only needs to select (with multiple hard drives), the hard disk and the backup directory. The hidden area of ​​the disk between the end of the MBR and the start of the first partition will be backed up. While restoring the MBR/GPT with multiple hard drives, the hard disk can be selected, the MBR/GPT will be written back. In addition, you can choose whether the boot loader area, the partition table or hidden area of ​​the disk to be restored.

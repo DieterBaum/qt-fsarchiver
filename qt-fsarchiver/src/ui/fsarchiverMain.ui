@@ -29,7 +29,7 @@ with fsarchiver</string>
        <widget class="QRadioButton" name="rdBt_restoreFsArchiv">
         <property name="text">
          <string>Restore partition
-with fsarchiver</string>
+with fsarchi&amp;ver</string>Restore partition
         </property>
        </widget>
       </item>

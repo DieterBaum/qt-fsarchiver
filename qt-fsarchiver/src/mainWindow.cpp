@@ -223,7 +223,7 @@ MWindow::MWindow()
           } 
        else 
           {
-          QMessageBox::about(this,tr("Note", "Hinweis"),
+          QMessageBox::warning(this,tr("Note", "Hinweis"),
          	tr("The password is wrong. The program must be terminated. It may take a few seconds to close the window.\n", "Das Passwort ist falsch. Das Programm muss beendet werden. Das Schließen des Fensters kann einige Sekunden dauern.\n"));
           QString pid_terminal;
           pid_terminal = pid_ermitteln_("bash"); 
@@ -247,7 +247,7 @@ MWindow::MWindow()
    if (file3.exists())
       {
       if (is_running() == 2) {
-         QMessageBox::about(this,tr("Note", "Hinweis"),
+         QMessageBox::warning(this,tr("Note", "Hinweis"),
          	tr("Qt-fsarchiver can only be started once. The program must be terminated..\n", "Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.\n"));
          esc_end(1);
         return;
@@ -256,7 +256,7 @@ MWindow::MWindow()
    QFile file2("/usr/sbin/qt-fsarchiver-terminal");
    if(!file2.exists())
       {
-      QMessageBox::about(this,tr("Note", "Hinweis"),
+      QMessageBox::warning(this,tr("Note", "Hinweis"),
          	tr("The program qt-fsarchiver-terminal is not installed. You have to install this program additionally.\n", "Das Programm qt-fsarchiver-terminal ist nicht installiert. Sie müssen dieses  Programm zusätzlich installieren.\n"));
       esc_end(1);
       return;
@@ -284,10 +284,10 @@ MWindow::MWindow()
         found = version.indexOf("-");
         version.replace(found, 1, "");
         int version_  = version.toInt();
-        version1 ="0.8.5-22";
-       if (!file1.exists() or 8522 > version_)
+        version1 ="0.8.6-0";
+       if (!file1.exists() or 8600 > version_)
            {
-       QMessageBox::about(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
+       QMessageBox::warning(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
     	return;	
           }
        // Prüfen ob qt-fsarchiver geändert wurde. Eventuell wurde eine echo Befehl zum Auslesen des Passwortes eingefügt.
@@ -297,7 +297,7 @@ MWindow::MWindow()
        if(vergleich == "b36c2e4bea020b822ff7bb6bf807a2ff" or vergleich == "21187f7deeddb004c0f59a2a6da9068b");
        else
        {
-           QMessageBox::about(this,tr("Note", "Hinweis"),tr("Security warning: A file has been modified. The program is terminated. Please reinstall qt-fsarchiver.", "Sicherheitswarnung: Eine Datei wurde geändert. Das Programm wird beendet. Bitte installieren Sie qt-fsarchiver neu"));
+           QMessageBox::warning(this,tr("Note", "Hinweis"),tr("Security warning: A file has been modified. The program is terminated. Please reinstall qt-fsarchiver.", "Sicherheitswarnung: Eine Datei wurde geändert. Das Programm wird beendet. Bitte installieren Sie qt-fsarchiver neu"));
     	return;
         }
    //Vorsichtshalber alle txt Dateien löschen
@@ -712,7 +712,7 @@ int MWindow::savePartition()
                             } 
                            if (err != 0 && liveFlag == 0)
                                 {
-				QMessageBox::about(this,tr("Note", "Hinweis"),
+				QMessageBox::warning(this,tr("Note", "Hinweis"),
          			tr("The partition", "Die Partition ")   + partition_ + tr("cannot be unmounted. The program is aborted.\n", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
                                 return 0 ; 
                                 }  
@@ -825,7 +825,7 @@ int MWindow::savePartition()
                                   parameter[indizierung + 1] = ("/dev/" + partition_);
                                   QFile f(parameter[indizierung]);
                                   if  (parameter[4] != "-o" && (f.exists())){
-				       QMessageBox::about(this, tr("Note", "Hinweis"), 
+				       QMessageBox::warning(this, tr("Note", "Hinweis"), 
 				       tr("The partition file", "Die Partitionsdatei") + parameter[indizierung] + tr(" already exists. The backup is not performed\n", " ist bereits vorhanden. Die Sicherung wird nicht durchgeführt\n") );
                   			  return 0 ; 
                				}
@@ -840,7 +840,7 @@ int MWindow::savePartition()
              			 int wert = dlg->exec();
              			 if (wert == 0 && dialog_auswertung == 0)
                 		  {
-                		  QMessageBox::about(this,tr("Note", "Hinweis"),
+                		  QMessageBox::warning(this,tr("Note", "Hinweis"),
          			  tr("The backup was aborted by the user\n", "Die Sicherung wurde vom Benutzer abgebrochen\n"));
 				  pushButton_save->setEnabled(true);
                                   chk_pbr->setEnabled(true);
@@ -848,7 +848,6 @@ int MWindow::savePartition()
                 		  }
              			}
 //qDebug() << "Befehl" << parameter[0] << parameter[1] << parameter[2] << parameter[3] << parameter[4] << parameter[5] << parameter[6] << parameter[7] << parameter[8] << parameter[9] << parameter[10] << indizierung + 2;
-
                                 // Argumente in txt-Datei schreiben
 				QString attribute; 
 				for ( int i=0; i<15; i++)
@@ -1033,7 +1032,7 @@ QString attribute;
                        int pos1 = testDateiName("part.fsa");
           		if (pos > 0 && pos1 > 0)
                                    {
-         			   QMessageBox::about(this, tr("Note", "Hinweis"),
+         			   QMessageBox::warning(this, tr("Note", "Hinweis"),
          			   tr("You have selected an incorrect recovery file. The file extension must be .fsa", "Sie haben eine falsche Wiederherstellungsdatei ausgesucht. Die Dateiendung muss .fsa sein."));
                                    return 0;
          			   }
@@ -1151,14 +1150,14 @@ QString attribute;
               part_art = mtab_einlesen(row_1);
            if (part_art == "system")
                 	{
-                        QMessageBox::about(this,tr("Note", "Hinweis"),
+                        QMessageBox::warning(this,tr("Note", "Hinweis"),
          			tr("The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0;
 				      } 
                         
                    if (part_art == "home")
                 	{
-                        QMessageBox::about(this,tr("Note", "Hinweis"),
+                        QMessageBox::warning(this,tr("Note", "Hinweis"),
          			tr("The home partition to be restored is mounted and cannot be written back. Please use a live CD.","Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0; 
                         
@@ -1292,16 +1291,38 @@ int zip = cmb_zip->currentIndex();
 
 void MWindow::folder_einlesen() {
 int found = 0;
+int ret = 0;
    QModelIndex index = treeView->currentIndex();
    QModelIndexList indexes = selModel->selectedIndexes();
-
    folder =  (dirModel->filePath(index));
    folder1 =  (dirModel->filePath(index));
-   while (found > -1){
-          found = folder1.indexOf(" ");
-          if (found > -1)
-            folder1.replace(found, 1, "+"); 
+   found=folder1.indexOf(" ");
+   if (rdBt_restoreFsArchiv->isChecked())
+          {
+          while (found > -1)
+            {
+            found = folder1.indexOf(" ");
+            if (found > -1)
+              folder1.replace(found, 1, "+"); 
+            }
           }
+    else
+         {
+         while (found > -1)
+           {
+           ret = questionMessage(tr("There is a blank space in the name of the backup/restore directory. It is safer to use a directory without a space. If you still want to continue?", "In dem Verzeichnisnamen ist eine Leerstelle vorhanden. Es ist sicherer ein Verzeichnis ohne Leerstelle zu verwenden. Wollen Sie dennoch fortfahren?"));
+           if (ret == 1)
+             {
+             if (found > -1)
+               {
+               folder1.replace(found, 1, "+"); 
+               return;
+               }
+             }
+           if (ret == 2)
+               return ;
+           }
+         }
 }
 
 void MWindow::folder_expand() {
@@ -1317,8 +1338,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.5-22, May 8, 2021",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-22, 8. Mai 2021"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-0, June 15, 2021",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-0, 15. Juni 2021"));
       }
 
 int MWindow::is_running(){
@@ -1582,13 +1603,13 @@ int anzahl = 0;
             befehl = "";
           }
        if (flag_end == 1) 
-        QMessageBox::about(this, tr("Note", "Hinweis"),
+        QMessageBox::warning(this, tr("Note", "Hinweis"),
          tr("The backup of the partition was aborted by the user!\n", "Die Sicherung der Partition  wurde vom Benutzer abgebrochen!\n") );
        // Prüfen ob Partitionsart unterstützt wird 
        dummy = datei_auswerten("d");  //Prüfung erforderlich
        part_testen = dummy.toInt();      
        if (part_testen == 110){ 
-       QMessageBox::about(this, tr("Note", "Hinweis"),
+       QMessageBox::warning(this, tr("Note", "Hinweis"),
           tr("The partition type is not supported.\n", "Der Partitionstyp wird nicht unterstützt.\n" ));
           flag_end = 1;
           } 
@@ -1596,12 +1617,21 @@ int anzahl = 0;
        dummy = datei_auswerten("d");
        part_testen = dummy.toInt(); 
        if (part_testen == 108){
-	   QMessageBox::about(this, tr("Note", "Hinweis"),
+	   QMessageBox::warning(this, tr("Note", "Hinweis"),
           tr("The partition type is not supported. Maybe the partition is encrypted?\n", "Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?\n" ));
           }
        if (part_testen == 109){
-	   QMessageBox::about(this, tr("Note", "Hinweis"),
+	   QMessageBox::warning(this, tr("Note", "Hinweis"),
           tr("The backup of the partition was not successful. The file is too large. Use a FAT partition?\n", "Die Sicherung der Partition war nicht erfolgreich. Die Datei ist zu groß. Nutzen Sie eine FAT-Partition?\n" ));
+          //verbleibende Text-Datei löschen
+          pos=SicherungsFolderFileName.indexOf("fsa");
+          if (pos > 0)
+        	SicherungsFolderFileName.replace(pos, 3, "txt"); 
+          pos=SicherungsFolderFileName.indexOf("+");
+          if (pos > 0)
+        	SicherungsFolderFileName.replace(pos, 1, " "); 
+          QFile file(SicherungsFolderFileName);
+          file.remove();
           }
        dummy = datei_auswerten("a");
        int err_regfile = dummy.toInt();    
@@ -1619,13 +1649,22 @@ int anzahl = 0;
        int err_special = dummy.toInt(); 
        QString err_special_ = QString::number(err_special);
        if (part_testen <= 108 && flag_end == 0 ){
-       	  QMessageBox::about(this, tr("Note", "Hinweis"), 
+       	  QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The backup of the partition was only partially successful.\n", "Die Sicherung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
          + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") 
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
          + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
+         //verbleibende Text-Datei löschen
+          pos=SicherungsFolderFileName.indexOf("fsa");
+          if (pos > 0)
+        	SicherungsFolderFileName.replace(pos, 3, "txt"); 
+          pos=SicherungsFolderFileName.indexOf("+");
+          if (pos > 0)
+        	SicherungsFolderFileName.replace(pos, 1, " "); 
+          QFile file(SicherungsFolderFileName);
+          file.remove();
 	  }
         }
        
@@ -1698,7 +1737,7 @@ int err = 0;
         } 
       }  
      if (flag_end == 1) {
-        QMessageBox::about(this, tr("Note", "Hinweis"),
+        QMessageBox::warning(this, tr("Note", "Hinweis"),
          tr("The restore of the partition was break by user!\n", "Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!\n") );
 	meldung = 0;
         }
@@ -1723,7 +1762,7 @@ int err = 0;
        err_hardlinks_ = QString::number(err_hardlinks); 
        if (err == 11) {
         if (i!=0) {  
-          QMessageBox::about(this, tr("Note", "Hinweis"), 
+          QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
          + cnt_special_ + tr(" specials has been restored.\n.", " spezielle Daten wurden wiederhergestellt\n.")
@@ -1732,7 +1771,7 @@ int err = 0;
          + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                }
        if (i==0) { 
-        QMessageBox::about(this, tr("Note", "Hinweis"), 
+        QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
          + cnt_hardlinks_ + tr(" links and ", " Links und ") 
@@ -1743,7 +1782,7 @@ int err = 0;
                 }
         }
      if (meldung == 102) { 
-        QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have tried restore a partition. The selected file can only restore directories. Please restart the program.\n", "Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.\n"));
+        QMessageBox::warning(this, tr("Note", "Hinweis"), tr("You have tried restore a partition. The selected file can only restore directories. Please restart the program.\n", "Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.\n"));
       }
      if (meldung == 103) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.\n", "Sie haben ein falsches Passwort eingegeben.\n"));
@@ -2312,20 +2351,28 @@ int z = 0;
 //QMessageBox::about(this,tr("Hinweis"),tr("sdx einlesen\n") + part[k][0] + part[k][7] + part[i][7] + QString::number(i));
 }
 
-QString MWindow::sdx3_einlesen(QString part, int flag)
+QString MWindow::sdx3_einlesen(QString part_, int flag)
 {
-
 QString text;
 QString text1;
 QString befehl;
+QString dummy;
 QStringList dev_sdx;
 float part_size;
          QString filename = userpath + "/.config/qt-fsarchiver/disk3.txt";
          QFile file(filename);
          QTextStream ds(&file);
+         dummy = "/dev/" + part_;
+         if (!is_mounted(dummy.toLatin1().data())) // ist nicht gemounted, somit ist das Ergenis von df nicht korrekt
+            {
+            befehl = "/usr/sbin/qt-fsarchiver.sh  2 /dev/" + part_ + " /media/" + part_;
+            if(system (befehl.toLatin1().data()))
+                befehl = "";
+            QThread::msleep(5 * sleepfaktor);
+            }
          if(file.open(QIODevice::ReadWrite | QIODevice::Text))
           {
-         befehl = "df /dev/" + part + " 1>" + filename;
+         befehl = "df /dev/" + part_ + " 1>" + filename;
          if(system (befehl.toLatin1().data()))
             befehl = "";
          text = "";
@@ -2501,7 +2548,7 @@ int MWindow::is_gpt_main(QString partition_efi)
         }
         if(file.size() == 0)
             {
-            QMessageBox::about(this, tr("Note", "Hinweis"),
+            QMessageBox::warning(this, tr("Note", "Hinweis"),
       tr("Reading the partition type was faulty. The backup is not possible\n","Die Partitionsart auslesen war fehlerhaft. Die Sicherung ist nicht möglich.\n"));
             return 2;
             }

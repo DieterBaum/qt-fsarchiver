@@ -34,7 +34,7 @@ extern QString folder_file_;
 extern QString part[100][10];
 extern QString user;
 extern int flag1;
-QString folder_file_1;
+//QString folder_file_1;
 QString zip_net[11];
 QString folder_net;
 QString file_net;
@@ -324,7 +324,7 @@ void DialogNet:: Daten_NFS_eintragen()
         //freigegebene Ordner ermitteln
         int i = nfs_search_folder_free(rechner_IP); 
    	if ( i==1){
-        	QMessageBox::about(this,tr("Note", "Hinweis"),
+        	QMessageBox::warning(this,tr("Note", "Hinweis"),
         tr("No released directory was found for the NFS protocol.\n", "Für das NFS Protokoll wurde kein freigegebenes Verzeichnis gefunden.\n"));
 	}
     	this->setCursor(Qt::ArrowCursor); 
@@ -367,7 +367,7 @@ int i = 0;
    //freigegebene Ordner ermitteln
    i = search_folder_free(rechner_IP); 
    if ( i==1){
-        QMessageBox::about(this,tr("Note", "Hinweis"),
+        QMessageBox::warning(this,tr("Note", "Hinweis"),
         tr("No shared directory was found for Samba.\n", "Für das Samba Protokoll wurde kein freigegebenes Verzeichnis gefunden.\n"));
 	}
     this->setCursor(Qt::ArrowCursor); 
@@ -570,7 +570,7 @@ QString attribute;
         QThread::msleep(50 * sleepfaktor);
         this->setCursor(Qt::ArrowCursor); 
         if (k != 0){
-   	QMessageBox::about(this, tr("Note", "Hinweis"),
+   	QMessageBox::warning(this, tr("Note", "Hinweis"),
       	tr("The network computer ",  "Der Netzwerkrechner ") + rechner_IP + tr(" could not be integrated. The program is aborted\n", " konnte nicht eingebunden werden. Das Programm wird abgebrochen\n"));
         return 1;}
          _Datum_net = Zeit_auslesen_net();
@@ -629,7 +629,7 @@ QString attribute;
                                }
                            if (err != 0 && liveFlag == 0)
                                 {
-				QMessageBox::about(this, tr("Note", "Hinweis"),
+				QMessageBox::warning(this, tr("Note", "Hinweis"),
          			tr("The partition ", "Die Partition ")   + partition_net_ + 
 				tr("cannot be unmounted. The program is aborted.\n", " kann nicht ausgehängt werden. Das Programm wird abgebrochen\n"));
                                 return 0 ; 
@@ -727,7 +727,7 @@ QString attribute;
      	     			 int wert = dlg->exec();
              			 if (wert == 0 && dialog_auswertung == 0)
                 		      {
-                		      QMessageBox::about(this, tr("Note", "Hinweis"),
+                		      QMessageBox::warning(this, tr("Note", "Hinweis"),
          			      tr("The backup was aborted by the user\n", "Die Sicherung wurde vom Benutzer abgebrochen\n"));
 				      pushButton_save->setEnabled(true);
                                       return 0;
@@ -904,7 +904,7 @@ QString optionkey;
              		int wert = dlg->exec();
              		if (wert == 0 && dialog_auswertung == 0)
                 	   {
-                	   QMessageBox::about(this, tr("Note", "Hinweis"),
+                	   QMessageBox::warning(this, tr("Note", "Hinweis"),
          		   tr("The write back was aborted by the user.\n", "Das Zurückschreiben wurde vom Benutzer abgebrochen\n"));
                             pushButton_restore->setEnabled(false);
                             return 0;
@@ -930,14 +930,14 @@ QString optionkey;
                      //Überprüfung ob System oder Home Partition
                       if (part_art_net == "system")
                 	 {
-                        QMessageBox::about(this, tr("Note", "Hinweis"),
+                        QMessageBox::warning(this, tr("Note", "Hinweis"),
          			tr("The system partition to be restored is mounted and cannot be written back. Please use a live DVD.\n", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0;
 				      } 
                         
                    if (part_art_net == "home")
                 	{
-                        QMessageBox::about(this, tr("Note", "Hinweis"),
+                        QMessageBox::warning(this, tr("Note", "Hinweis"),
          			tr("The home partition to be restored is mounted and cannot be written back. Please use a live DVD.\n", "Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
 				return 0; 
                         
@@ -1132,6 +1132,11 @@ int net_art = cmb_Net->currentIndex();
     row_net = row;
     if (row > -1)
     	folder_free = folder_free_[row];
+     int found=folder_free.indexOf(" ");
+     while (found > -1){
+           QMessageBox::warning(this, tr("Note", "Hinweis"), tr("A space is not allowed in the backup directory. You must choose another directory\n", "Ein Leerzeichen im Sicherungsverzeichnis ist nicht zulässig. Sie müssen ein anderes Verzeichnis wählen\n"));
+           return 1;
+          }
     if (rdBt_restoreFsArchiv->isChecked() && net_art == 0) //Samba
        {
        //Verzeichnis mounten
@@ -1156,7 +1161,7 @@ int net_art = cmb_Net->currentIndex();
        QThread::msleep(50 * sleepfaktor);
        this->setCursor(Qt::ArrowCursor);  
     if (k != 0){
-   	QMessageBox::about(this, tr("Note", "Hinweis"),
+   	QMessageBox::warning(this, tr("Note", "Hinweis"),
       	tr("The network computer ",  "Der Netzwerkrechner ") + rechner_IP + tr(" cannot be embedded. The program is aborted.\n", " konnte nicht eingebunden werden. Das Programm wird abgebrochen\n"));
         return 1;
         }
@@ -1254,14 +1259,14 @@ int err = 0;
        if(system (befehl.toLatin1().data()))
            befehl = "";
        if (flag_end_net == 1) {
-        QMessageBox::about(this, tr("Note", "Hinweis"),
+        QMessageBox::warning(this, tr("Note", "Hinweis"),
          tr("The backup of the partition was aborted by the user!\n", "Die Sicherung der Partition wurde vom Benutzer abgebrochen!\n") );
         }
         // Prüfen ob Partitionsart unterstützt wird      
        dummy = datei_auswerten_net("c");
        part_testen = dummy.toInt();
        if (part_testen == 110){ 
-       QMessageBox::about(this, tr("Note", "Hinweis"),
+       QMessageBox::warning(this, tr("Note", "Hinweis"),
           tr("The partition type is not supported.\n", "Der Partitionstyp wird nicht unterstützt\n" ));
        flag_end_net = 1;
           } 
@@ -1269,7 +1274,7 @@ int err = 0;
        dummy = datei_auswerten_net("d");
        part_testen = dummy.toInt(); 
        if (part_testen == 108 && flag_end_net == 0){
-	    QMessageBox::about(this, tr("Note", "Hinweis"),
+	    QMessageBox::warning(this, tr("Note", "Hinweis"),
           tr("The partition type is not supported. Maybe the partition is encrypted?\n", "Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?\n" ));
           }
        dummy = datei_auswerten_net("a");
@@ -1288,7 +1293,7 @@ int err = 0;
        int err_special = dummy.toInt();
        QString err_special_ = QString::number(err_special);  
        if (part_testen != 108 && flag_end_net == 0){
-       QMessageBox::about(this, tr("Note", "Hinweis"), 
+       QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The backup of the partition was only partially successful.\n", "Die Sicherung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")  + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
 	  }
         }
@@ -1333,7 +1338,7 @@ void DialogNet::thread2Ready()  {
    int i = 0;
    int err = 0;
    if (meldung == 105) {
-      QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition to be restored is mounted. It must be unmounted first!\n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
+      QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The partition to be restored is mounted. It must be unmounted first!\n", "Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!\n"));
       endeThread_net = 0;
        }
    if (endeThread_net != 0) { 
@@ -1380,7 +1385,7 @@ void DialogNet::thread2Ready()  {
         } 
         }
        if (flag_end_net == 1) {
-        QMessageBox::about(this, tr("Note", "Hinweis"),
+        QMessageBox::warning(this, tr("Note", "Hinweis"),
          tr("The restore of the partition was aborted by the user!\n", "Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!\n") );
 	meldung = 0;
         }
@@ -1404,25 +1409,25 @@ void DialogNet::thread2Ready()  {
        err_hardlinks = dummy.toInt();
        err_hardlinks_ = QString::number(err_hardlinks); 
        if (i!=0) {  
-       QMessageBox::about(this, tr("Note", "Hinweis"), 
+       QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data has been restored.\n.", " spezielle Daten wurden wiederhergestellt\n.")
          + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") 
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
          + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                }
       if (i==0) { 
-        QMessageBox::about(this, tr("Note", "Hinweis"), 
+        QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
          + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" special data and the partition boot sector were restored.\n.", " spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt\n.") + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories and ", " Verzeichnisse und ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                 }
              }
      if (meldung == 102) { 
-        QMessageBox::about(this, tr("Note", "Hinweis"), 
+        QMessageBox::warning(this, tr("Note", "Hinweis"), 
         tr(" You have tried to restore a partition. The selected file can only recover directories. Please restart the program.\n", "Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.\n"));
       }
      if (meldung == 104) { 
-        QMessageBox::about(this, tr("Note", "Hinweis"), 
-        tr("You have tried to restore a directory. The selected file can only recover partitions. Please restart the program.\n", "Sie haben versucht einVerzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.\n"));
+        QMessageBox::warning(this, tr("Note", "Hinweis"), 
+        tr("You have tried to restore a directory. The selected file can only recover partitions. Please restart the program.\n", "Sie haben versucht ein Verzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.\n"));
       }
      if (meldung == 103) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.\n", "Sie haben ein falsches Passwort eingegeben. \n"));
@@ -1779,7 +1784,7 @@ int i = 0;
 		befehl = "sudo sshfs " + user_net+ "@" + rechner_IP + ":" + pfad_forward + " " + userpath_net + "/.qt-fs-client";
         i = system (befehl.toLatin1().data());
         if ( i==1){
-            QMessageBox::about(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
+            QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
         return 1;
         }
         if (i == 0)
@@ -1844,7 +1849,7 @@ int ret_;
 		     befehl = "sshpass -p " + pass + " ssh " + user+ "@" + rechner + " ls -l " + pfad_back + " 1>" + filename;
 	ret_ = system (befehl.toLatin1().data());
         if ( ret_ != 0) {
-	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
+	QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
         return ;
 	}
 	QStringList folder;
