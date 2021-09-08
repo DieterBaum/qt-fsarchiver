@@ -13,7 +13,6 @@
  * General Public License for more details.
  *
  */
-
 #include <QtGui> 
 #include "mbr.h"
 #include <string.h>
@@ -157,6 +156,8 @@ QString partition;
 QString attribute;
 QModelIndex index = treeView->currentIndex();
 QModelIndexList indexes = selModel->selectedIndexes();
+QString filename;
+
     //Ubuntu Version einlesen, nur wenn Systempartition
     Ubuntuversion_auslesen();
     i = cmb_disk->currentIndex();
@@ -195,32 +196,48 @@ QModelIndexList indexes = selModel->selectedIndexes();
 	i = folder_einlesen();
         if (i ==0) {
                 QFile file(folder_);
-             
-             if (efiflag == 0) 
+              if (efiflag == 0) 
              {  
               attribute = "if=/dev/" + partition + " of=" + folder_ + "/" + Ubuntuversion + "_mbr_" + partition + " bs=" + Sektor_byte + " count=1";
+              filename = folder_ + "/" + Ubuntuversion + "_mbr_" + partition;
               befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
              }
              if (efiflag == 1)
              {
-                attribute = "sgdisk -b" + folder_ + "/" + Ubuntuversion + "_gpt_" + partition + " /dev/" + partition;
-                befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+                attribute = "sgdisk -b" + folder_ + "/" + Ubuntuversion + "_gpt_" + partition + " /dev/" + partition ;
+                filename = folder_ + "/" + Ubuntuversion + "_gpt_" + partition;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  24 " + attribute;
              }
             i = system (befehl.toLatin1().data());
-                if (i == 0 && efiflag == 0)
+            // für das Testen ob Datei vorhanden ist, müssen die Hochkommas entfernt werden
+            do{
+    		found=filename.indexOf("'");
+		if (found > -1){
+             	    filename.replace("'", "");
+		}
+	     }
+	     while  (found >= 0);
+	     success = testen(filename);
+                if (success == 0 && efiflag == 0)
       			QMessageBox::about(this,tr("Note", "Hinweis"), tr("The MBR was successfully saved.\n", "MBR wurde erfolgreich gesichert.\n"));
-        	if (i != 0 && efiflag == 0)
-      			QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The MBR was not saved.\n", "MBR wurde nicht gesichert.\n"));
-                if (i == 0 && efiflag == 1)
+        	if (success == 1 && efiflag == 0)
+ 		        QMessageBox::warning(this,tr("Note", "Hinweis"),tr("The MBR was not saved. If the backup path ", "Der MBR wurde nicht gesichert. Enthält der Pfad ") + folder_ + tr(" a special character?\n", " ein Sonderzeichen?\n"));
+               if (success == 0 && efiflag == 1)
       			QMessageBox::about(this,tr("Note", "Hinweis"), tr("GPT was successfully saved.\n", "GPT wurde erfolgreich gesichert.\n"));
-        	if (i != 0 && efiflag == 1)
-      			QMessageBox::warning(this, tr("Note", "Hinweis"), tr("GPT was not saved.\n", "GPT wurde nicht gesichert.\n"));
+        	if (success == 1 && efiflag == 1)
+      			QMessageBox::warning(this,tr("Note", "Hinweis"),tr("GPT was not saved. If the backup path ", "GPT wurde nicht gesichert. Enthält der Pfad ") + folder_ + tr(" contains a special character?\n", " ein Sonderzeichen?\n"));
       		
                 }
-             
-       }
+ }
 
- if (dialog_auswertung == 5 && efiflag == 1)
+  if (dialog_auswertung == 5) //Prüfen ob aus dem Verzeichnis ausgelesen werden kann? Sonderzeichen vorhanden?
+           {
+           success = testen_1();
+           if (success ==1)
+               QMessageBox::warning(this,tr("Note", "Hinweis"),tr("GPT or MBR cannot be written back. If the path contains ", "GPT oder MBR kann nicht zurückgeschrieben werden. Enthält der Pfad ") + folder_ + tr(" contains a special character?\n", " ein Sonderzeichen?\n"));
+            }
+
+ if (dialog_auswertung == 5 && efiflag == 1 && success == 0)
 	{
 	   i = folder_einlesen();
            if (i ==1)
@@ -228,10 +245,10 @@ QModelIndexList indexes = selModel->selectedIndexes();
 	   int auswertung = questionMessage(tr("Caution: Do you really want to write back the GUID partition table?\n", "Vorsicht: Wollen Sie wirklich die GUID Partitionstabelle zurückschreiben?\n")); 
             if  (auswertung == 2) 
                 return 1;
-         if (i ==0) {
+           if (i ==0) {
               if (cmb_mbr->currentIndex() == 0) {
               attribute = "sgdisk -l " + folder_ + " /dev/" + partition;
-              befehl = "/usr/sbin/qt-fsarchiver.sh  13" + attribute;
+              befehl = "/usr/sbin/qt-fsarchiver.sh  25 " + attribute;
               i = system (befehl.toLatin1().data());
               if (i == 0)
       		QMessageBox::about(this, tr("Note", "Hinweis"), tr("The GUID partition table was successfully restored.\n", "Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.\n"));
@@ -241,7 +258,7 @@ QModelIndexList indexes = selModel->selectedIndexes();
  	      }
 	}
 
-     if (dialog_auswertung == 5 && cmb_mbr->currentIndex() != 3 && efiflag == 0)	
+     if (dialog_auswertung == 5 && cmb_mbr->currentIndex() != 3 && efiflag == 0 && success == 0)	
        {
         i = folder_einlesen();
         if (i ==1)
@@ -419,7 +436,7 @@ QFile file(filename);
 
 
 int DialogMBR::folder_einlesen() {
-   QString partition;
+ QString partition;
    QString Festplatte;
    QString befehl;
    QString filename = userpath_mbr + "/.config/qt-fsarchiver/mbr_size.txt";
@@ -467,14 +484,18 @@ int DialogMBR::folder_einlesen() {
        mbr = mbr_.split(QRegExp("\\s+"));
     if (dialog_auswertung == 5) 
          size_ = info.size();
-      folder_ = dummy;
-      dummy = folder_.right(4);
+    folder_ = dummy;
+    dummy = folder_.right(4);
+    if (dialog_auswertung == 5)  
       Festplatte = dummy.left(3);
       }  
    else
       {
-       size_ = info.size();
-       Festplatte = folder_.right(3);
+      	if (dialog_auswertung == 5)
+      	{
+         size_ = info.size();
+         Festplatte = folder_.right(3);
+         }
       }
     if (folder_ == "" && (dialog_auswertung == 4))
       {
@@ -598,10 +619,55 @@ void DialogMBR::folder_expand() {
    treeView->expand(index);
 }
 
+int DialogMBR::testen(QString filename) {
+    QThread::msleep(10 * sleepfaktor);
+    QFile file(filename);
+    if (file.exists()) {
+      //qDebug() << "Datei vorhanden" << filename;
+      return 0;
+    }
+    else
+    {
+    // qDebug() << "Datei nicht vorhanden" << filename;
+      return 1;
+    }
+}
 
-
-
-
+int DialogMBR::testen_1() {
+QString attribute;
+QString filename;
+QString befehl;
+int i = 0;
+int j[10];
+int k = 0;
+int found = 0;
+     i = cmb_disk->currentIndex();
+     QString partition = disk_name[i];
+     filename = folder_;
+     found = filename.indexOf("/");
+       while (found > -1)
+          {
+          found = filename.indexOf("/");
+          if(found > -1)
+             {
+             j[i] = found;
+             i++;
+             filename.replace(found, 1, "+");
+             }
+          }
+          k = folder_.size() - j[i-1];
+          folder_ = folder_.left(folder_.size() - k); 
+          attribute = "if=/dev/" + partition + " of=" + folder_ + "/test bs=512 count=1";
+          befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
+       if(system (befehl.toLatin1().data()))
+              befehl = "";
+       i = testen(folder_ + "/test");
+      attribute = "rm " + folder_ + "/test";
+      befehl = "/usr/sbin/qt-fsarchiver.sh 10 " + attribute;
+      if(system (befehl.toLatin1().data()))
+              befehl = "";
+      return i;
+}
 
 
 

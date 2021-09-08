@@ -21,7 +21,8 @@ For Debian, Ubuntu and Linux Mint are deb packages for Suse and Fedora rpm packa
 Installing the program from the source files:
 To install qt-fsarchiver and qt-fsarchiver-terminal the necessary dependencies for fsarchiver and the qt5 development environment must be installed.
 Of Debian based distributions: This is the command:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qtbase5-dev qttools5-dev-tools qt5-default btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo ccrypt 
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo ccrypt 
+For older versions qt5-default is also required.
 
 For some distributions, the /etc/sudoers file must be completed with these lines:
 username ALL=(ALL) ALL 
@@ -30,10 +31,10 @@ The username has to be adjusted: for example peter.
 
 Instead of libzst1-dev, libzst-dev is installed in some systems. btrfs-tools has recently been replaced by btrfs-progs. The above command has to be adapted accordingly.
  
-The command for Suse: (you must be an administrator su -l) zypper in zypper in qt5-default libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils ccrypt 
+The command for Suse: (you must be an administrator su -l) zypper in zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils ccrypt 
 If you use ssh (secure shell) want to access other computers in the network, you still need to install individually sshpass.
 
-The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-default qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt
+The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt
 For a 64-bit system, you must also install lrelease: dnf install qt5-linguist.x86-64. With Fediora30 you still have to install make.
 32-bit systems are no longer supported.
 
@@ -50,7 +51,7 @@ Is in Debian8 gpk is not installed, then you must enter: su -l dpkg-i, qt5-fsarc
 
 Installation of the program from a Launchpad:
 With Ubuntu and Mint you can reach the installation with these commands:
-sudo add-apt-repository ppa:/dieterbaum/qt-fsarchiver
+sudo add-apt-repository ppa:dieterbaum/qt-fsarchiver
 Confirm the command with Enter.
 sudo apt update
 sudo apt install qt-fsarchiver

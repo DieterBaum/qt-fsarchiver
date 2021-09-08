@@ -29,7 +29,7 @@ with fsarchiver</string>
        <widget class="QRadioButton" name="rdBt_restoreFsArchiv">
         <property name="text">
          <string>Restore partition
-with fsarchi&amp;ver</string>Restore partition
+with fsarchi&amp;ver</string>
         </property>
        </widget>
       </item>
@@ -45,21 +45,6 @@ with fsarchi&amp;ver</string>Restore partition
       </property>
       <property name="text">
        <string>Existing partitions:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="5" rowspan="3">
-     <widget class="QListWidget" name="listWidget">
-      <property name="font">
-       <font>
-        <family>Courier 10 Pitch</family>
-       </font>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
-      </property>
-      <property name="selectionBehavior">
-       <enum>QAbstractItemView::SelectRows</enum>
       </property>
      </widget>
     </item>
@@ -100,31 +85,6 @@ backup key</string>
        <widget class="QLineEdit" name="lineKey"/>
       </item>
      </layout>
-    </item>
-    <item row="4" column="5">
-     <widget class="QLabel" name="label_folder">
-      <property name="toolTip">
-       <string>Directory where the backup file is written or directory where the recovery file is stored.</string>
-      </property>
-      <property name="locale">
-       <locale language="English" country="UnitedStates"/>
-      </property>
-      <property name="text">
-       <string>Backup directory:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="5" rowspan="9">
-     <widget class="QTreeView" name="treeView">
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-       </font>
-      </property>
-      <attribute name="headerDefaultSectionSize">
-       <number>400</number>
-      </attribute>
-     </widget>
     </item>
     <item row="6" column="0" colspan="5">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -434,6 +394,46 @@ files/directories:</string>
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="7" column="5" rowspan="7">
+     <widget class="QTreeView" name="treeView">
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+       </font>
+      </property>
+      <attribute name="headerDefaultSectionSize">
+       <number>400</number>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="5">
+     <widget class="QLabel" name="label_folder">
+      <property name="toolTip">
+       <string>Directory where the backup file is written or directory where the recovery file is stored.</string>
+      </property>
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="text">
+       <string>Backup directory:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5" rowspan="5">
+     <widget class="QListWidget" name="listWidget">
+      <property name="font">
+       <font>
+        <family>Courier 10 Pitch</family>
+       </font>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
      </widget>
     </item>
    </layout>

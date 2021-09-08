@@ -40,7 +40,8 @@ public slots:
         void disk_exist();
         void disk_art();
         void folder_expand();
-
+        int testen(QString filename);
+        int testen_1();
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;

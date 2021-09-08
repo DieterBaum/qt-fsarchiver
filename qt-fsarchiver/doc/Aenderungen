@@ -1,6 +1,12 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.6-3 15. September 2021.
+    - Korrekturen in der Liesmich und Readme Datei.
+    - Übersetzungen wurden teilweise ergänzt.
+    - Kleinere Verbesserungen und Fehlerbehebungen.
+    - Fehlerhafte Ermittlung von System- oder Home-Partitionen bei der Live-DVD behoben.
+* qt-fsarchiver-0.8.6-1 und qt-fsarchiver-0.8.6-2 wurden nicht veröffentlicht
 * qt-fsarchiver-0.8.6-0 15. Juni 2021.
     - Unterstützung für EXT4 fast_commit-Funktion (Marcos Mello).
     - Unterstützung für die XFS-Funktionen inobtcount und bigtime (Marcos Mello).

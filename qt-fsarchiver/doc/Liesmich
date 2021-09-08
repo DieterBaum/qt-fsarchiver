@@ -20,14 +20,13 @@ Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rp
 Installation des Programms aus den Quelldateien:
 Für die Installation von den Programmen qt-fsarchiver und qt-fsarchiver-terminal müssen die für fsarchiver notwendigen Abhängigkeiten und die qt5-Entwicklungsumgebung installiert werden.
 Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt5-default qtbase5-dev qttools5-dev-tools btrfs-tools gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo ccrypt
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential  qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo ccrypt
+Bei älteren Versionen wird auch qt5-default benötigt.
 
 Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:
 username ALL=(ALL) ALL 
 %sudo	ALL=(ALL:ALL) ALL
 Der username ist anzupassen: beispielweise peter.
-
-Anstatt libzst1-dev wird in einigen Systemen libzst-dev installiert. btrfs-tools wird neuerdings durch btrfs-progs ersetzt. Der obige Befehl ist entsprechend anzupassen.
 
 In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils net-tools-deprecated ccrypt
 Wenn Sie ssh (secureshell) für den Zugriff auf weitere Rechner im Netzwerk nutzen wollen, müssen Sie noch sshpass individuell installieren.
@@ -54,7 +53,7 @@ Ist bei Debian das Programm nicht installiert, dann müssen Sie eingeben: su -l 
 
 Installation des Programms aus einem Launchpad:
 Bei Ubuntu und Mint erreichen sie die Installation mit diesen Befehlen:
-sudo add-apt-repository ppa:/dieterbaum/qt-fsarchiver
+sudo add-apt-repository ppa:dieterbaum/qt-fsarchiver
 Bestätigen Sie deisen Befehl mit Enter
 sudo apt update
 sudo apt install qt-fsarchiver

@@ -84,7 +84,7 @@ if [ $1 -eq 18 ]; then
 echo $i | sudo -S -b nmap $2 $3 $4 $5 $6
 fi
 if [ $1 -eq 19 ]; then
-echo $i | sudo -S -b mount $2 $3 $4 $5 $6 $7 $8 
+echo $i | sudo -S -b mount $2 $3 $4 $5 "$6" $7 $8 
 fi
 if [ $1 -eq 20 ]; then
 cd /
@@ -102,3 +102,10 @@ if [ -f "$2" ];then
   echo $i | sudo -S -b rm $2 
   fi
 fi
+if [ $1 -eq 24 ]; then
+echo $i | sudo -S -b $2 "$3" $4 $5 $6
+fi
+if [ $1 -eq 25 ]; then
+echo $i | sudo -S -b $2 $3 "$4" $5 $6
+fi
+

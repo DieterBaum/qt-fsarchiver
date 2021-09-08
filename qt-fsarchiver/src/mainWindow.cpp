@@ -183,8 +183,8 @@ MWindow::MWindow()
        else
           text = QInputDialog::getText(this, tr("Enter sudo-password","Sudo-Passwort eingeben"),
           (tr("sudo-Password:","sudo Passwort")), QLineEdit::Password,"", &ok);
-       if (!ok)   //Cancel Programm wird beendet
-          close();
+       if (!ok)  //Cancel Programm wird beendet
+          kill_end();
        if (ok && !text.isEmpty())
           password= text;
        if (ok && text.isEmpty())
@@ -225,16 +225,20 @@ MWindow::MWindow()
           {
           QMessageBox::warning(this,tr("Note", "Hinweis"),
          	tr("The password is wrong. The program must be terminated. It may take a few seconds to close the window.\n", "Das Passwort ist falsch. Das Programm muss beendet werden. Das Schließen des Fensters kann einige Sekunden dauern.\n"));
-          QString pid_terminal;
-          pid_terminal = pid_ermitteln_("bash"); 
-         // befehl = "kill -15 " + pid_terminal;  //bash abbrechen, Zeit zum ordentlichen Beenden
-          befehl = "kill -9 " + pid_terminal;  //bash abbrechen, sofortiges Beenden
-          if(system (befehl.toLatin1().data()))
-            befehl = "";
+          kill_end();   
           return;
          } 
-         }   
-   //vorsichtshalber Rechte immer neu setzen
+       } 
+       found = userpath.indexOf("root");
+       if(found > -1)
+          { 
+          userpath = "/root";
+          QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("The program cannot be run as root. The program must be terminated. It may take a few seconds to close the window.\n", "Das Programm kann nicht als root ausgeführt werden. Das Programm muss beendet werden. Das Schließen des Fensters kann einige Sekunden dauern.\n"));
+          kill_end();   
+          return;
+          } 
+       //vorsichtshalber Rechte immer neu setzen
        attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
        if(system (befehl.toLatin1().data()))
@@ -284,17 +288,17 @@ MWindow::MWindow()
         found = version.indexOf("-");
         version.replace(found, 1, "");
         int version_  = version.toInt();
-        version1 ="0.8.6-0";
-       if (!file1.exists() or 8600 > version_)
+        version1 ="0.8.6-3";
+       if (!file1.exists() or 8603 > version_)
            {
        QMessageBox::warning(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
     	return;	
           }
-       // Prüfen ob qt-fsarchiver geändert wurde. Eventuell wurde eine echo Befehl zum Auslesen des Passwortes eingefügt.
+       // Prüfen ob qt-fsarchiver.sh geändert wurde. Eventuell wurde eine echo Befehl zum Auslesen des Passwortes eingefügt.
        // Bei Ubuntu, Debian, Mint und Suse ist die erste Zeile #!/bin/bash.
        // Bei Fedora ist die erste Zeile #!/usr/bin/bash. Daher die verschiedenen Ergebnisse.
        QString vergleich = md5sum("/usr/sbin/qt-fsarchiver.sh");
-       if(vergleich == "b36c2e4bea020b822ff7bb6bf807a2ff" or vergleich == "21187f7deeddb004c0f59a2a6da9068b");
+       if(vergleich == "5619409c58962a583f17c93d30e26be9" or vergleich == "9fbdcece8af2796acfdc3284c4bd82b2");
        else
        {
            QMessageBox::warning(this,tr("Note", "Hinweis"),tr("Security warning: A file has been modified. The program is terminated. Please reinstall qt-fsarchiver.", "Sicherheitswarnung: Eine Datei wurde geändert. Das Programm wird beendet. Bitte installieren Sie qt-fsarchiver neu"));
@@ -899,7 +903,7 @@ int flag = 0;
 int prozent = 0;
 QString text_integer;
 QString dummy;
-QString dummy1;
+int dummy1 = 0;
 text = datei_auswerten("p");
 endeThread = text.toInt();
 if((endeThread == 10 && flag_View == 1) or (endeThread == 11 && flag_View == 1))
@@ -1102,9 +1106,12 @@ QString attribute;
 			
                 }
             // Hier wird verglichen dev_ = die Partition, die zu sichern ist. dev_part = Originalpartition
+            QString label1 = label_read(partition_);  //Bezeichnung der wiederherzustellenden Partition ermitteln
+            QString dummy = dev_part.right(dev_part.size() -5); 
+            QString label2 = label_read(dummy);      //Bezeichnung der gesicherten Partition ermitteln
             if (dev_part != "/dev/" + partition_){
-               cmp = questionMessage(tr("The partition to be recovered  ", "Die wiederherzustellende Partition ") + "/dev/" + partition_ + 
-               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + dev_part + tr("Do you still want to perform the recovery?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
+               cmp = questionMessage(tr("The partition to be recovered  ", "Die wiederherzustellende Partition ") + "/dev/" + partition_ + " " + label1 +
+               tr(" does not coincide with the saved  ", " stimmt nicht mit der gesicherten ") + dev_part + " " + label2 + tr("Do you still want to perform the recovery?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));
                if (cmp == 2)  //nicht wiederherstellen
                   return 0;
             }
@@ -1291,38 +1298,17 @@ int zip = cmb_zip->currentIndex();
 
 void MWindow::folder_einlesen() {
 int found = 0;
-int ret = 0;
    QModelIndex index = treeView->currentIndex();
    QModelIndexList indexes = selModel->selectedIndexes();
    folder =  (dirModel->filePath(index));
    folder1 =  (dirModel->filePath(index));
    found=folder1.indexOf(" ");
-   if (rdBt_restoreFsArchiv->isChecked())
-          {
-          while (found > -1)
-            {
-            found = folder1.indexOf(" ");
-            if (found > -1)
+   while (found > -1)
+        {
+        found = folder1.indexOf(" ");
+        if (found > -1)
               folder1.replace(found, 1, "+"); 
-            }
-          }
-    else
-         {
-         while (found > -1)
-           {
-           ret = questionMessage(tr("There is a blank space in the name of the backup/restore directory. It is safer to use a directory without a space. If you still want to continue?", "In dem Verzeichnisnamen ist eine Leerstelle vorhanden. Es ist sicherer ein Verzeichnis ohne Leerstelle zu verwenden. Wollen Sie dennoch fortfahren?"));
-           if (ret == 1)
-             {
-             if (found > -1)
-               {
-               folder1.replace(found, 1, "+"); 
-               return;
-               }
-             }
-           if (ret == 2)
-               return ;
-           }
-         }
+        }
 }
 
 void MWindow::folder_expand() {
@@ -1338,8 +1324,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-0, June 15, 2021",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-0, 15. Juni 2021"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-3, September 15, 2021",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021"));
       }
 
 int MWindow::is_running(){
@@ -1501,29 +1487,66 @@ void MWindow::format_() {
      extern QString add_part[100];
      if (add_part[0] == "") //verhindert Änderungen durch Aufruf in net.cpp listWidget_auslesen() MWindow window
      {
-     QString teilstring, space1, space2;
+     QString teilstring, space1, space2, space3, dummy;
      int aa, bb, cc, dd;
      int i = 0;
+     int j = 0;
+     //zunächst prüfen ob Label Einträge vorhanden sind
          while (part[i][0] != "") {
-           teilstring = part[i][0];
-           aa = teilstring.size();
-           teilstring = part[i][1];
-           bb = teilstring.size();
-           teilstring = part[i][2];
-           cc = teilstring.size();
-           dd = 19 - aa; 
-           space1.fill (' ',dd);
-           teilstring = part[i][0] + space1;
-           dd = 21 -bb -cc;
-           space2.fill (' ',dd);
-           teilstring = part[i][0] + space1 + part[i][1] +space2 + part[i][2];
-           if (part[i][1] != "" ){
-              widget[i] = teilstring;
-              add_part[i] = teilstring;
-              listWidget->addItem (teilstring);
-              //partitionen werden eingetragen
+            dummy =  part[i][6];
+            if (!dummy.isEmpty())
+                 j++;
+              i++;   
+             } 
+         i = 0; 
+         if (j > 0)  //mindestens 1 Label Eintrag vorhanden
+           {    
+           while (part[i][0] != "") {
+             teilstring = part[i][0];
+             aa = teilstring.size();
+             teilstring = part[i][1];
+             bb = teilstring.size();
+             teilstring = part[i][2];
+             cc = teilstring.size();
+             dd = 12 - aa; 
+             space1.fill (' ',dd);
+             dd = 15 -bb -cc;
+             space2.fill (' ',dd);
+             dd = 2;
+             space3.fill (' ',dd);
+             teilstring = part[i][0] + space1 + part[i][1] +space2 + part[i][2] + space3 + part[i][6];
+             if (part[i][1] != "" ){
+                widget[i] = teilstring;
+                add_part[i] = teilstring;
+                listWidget->addItem (teilstring);
+                //Partitionen werden eingetragen
+                }
+             i++;
+            }
+         }
+         if (j == 0)  //kein Label Eintrag vorhanden
+           {    
+           while (part[i][0] != "") {
+              teilstring = part[i][0];
+              aa = teilstring.size();
+              teilstring = part[i][1];
+              bb = teilstring.size();
+              teilstring = part[i][2];
+              cc = teilstring.size();
+              dd = 19 - aa; 
+              space1.fill (' ',dd);
+              teilstring = part[i][0] + space1;
+              dd = 21 -bb -cc;
+              space2.fill (' ',dd);
+              teilstring = part[i][0] + space1 + part[i][1] +space2 + part[i][2];
+              if (part[i][1] != "" ){
+                 widget[i] = teilstring;
+                 add_part[i] = teilstring;
+                 listWidget->addItem (teilstring);
+              //Partitionen werden eingetragen
               }
-          i++;
+            i++;
+            }
          }
     } 
 }
@@ -1576,7 +1599,6 @@ int anzahl = 0;
            QMessageBox::about(this, tr("Note", "Hinweis"), 
            tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed.", " spezielle Daten wurden gesichert."));
-        progressBar->setValue(100);     
 	}
         if (dialog_auswertung == 1 and err == 10 and befehl_pbr != ""){ 
            //Rückmeldung von fsarchiver: Sicherung erfolgreich
@@ -1586,7 +1608,6 @@ int anzahl = 0;
            tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
         + cnt_special_ + tr(" specials and the Partition Boot Record have been backed.", " spezielle Daten und der Partition Boot Sektor wurden gesichert."));
-        progressBar->setValue(100);     
 	}
         if (dialog_auswertung == 1 and err != 10)
         {
@@ -1761,7 +1782,7 @@ int err = 0;
        err_hardlinks = dummy.toInt();
        err_hardlinks_ = QString::number(err_hardlinks); 
        if (err == 11) {
-        if (i!=0) {  
+        if (i!=0 && meldung !=106) {  
           QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
@@ -1770,7 +1791,7 @@ int err = 0;
          + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ 
          + tr(" specials were not properly restored\n."," spezielle Daten wurden nicht korrekt wiederhergestellt.\n"));
                }
-       if (i==0) { 
+       if (i==0 && meldung !=106) { 
         QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The restore of the partition was only partially successful.\n", "Die Wiederherstellung der Partition war nur teilweise erfolgreich\n")
          + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") 
@@ -1786,6 +1807,11 @@ int err = 0;
       }
      if (meldung == 103) { 
         QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.\n", "Sie haben ein falsches Passwort eingegeben.\n"));
+        endeThread = 0;
+        lineKey->setText ("");
+      }
+        if (meldung == 106) { 
+        QMessageBox::about(this, tr("Note", "Hinweis"), tr("The partition to be written back to is too small.\n", "Die Partition in die zurückgeschrieben wird ist zu klein.\n"));
         endeThread = 0;
         lineKey->setText ("");
       }
@@ -2450,17 +2476,20 @@ QString befehl = "";
 QString pid_nummer = "";
 QStringList pid;
       QString filename = userpath + "/.config/qt-fsarchiver/pid.txt";
+      if (userpath == "/root")
+         filename = userpath + "/.config/pid.txt"; 
       QFile file(filename);
       QTextStream ds(&file);
       if(file.open(QIODevice::ReadWrite | QIODevice::Text))
       {
-         befehl = "ps -C " + prozess + " 1> " +  userpath + "/.config/qt-fsarchiver/pid.txt";
+         befehl = "ps -C " + prozess + " 1> " +  filename;
          if (system (befehl.toLatin1().data()))
              befehl = "";
       if(file.size() == 0) 
          return " ";
         pid_nummer = ds.readLine();
         pid_nummer = ds.readLine();
+        pid_nummer = pid_nummer.trimmed();        
          }
         file.close();
         befehl = "rm " + filename;
@@ -2468,10 +2497,8 @@ QStringList pid;
            befehl = "";
       if (pid_nummer != "")
         {
-          pid = pid_nummer.split(" ") ;
-          pid_nummer = pid[0]; // 5-stellig
-          if (pid_nummer == "")
-             pid_nummer = pid[1];// 4-stellig
+         pid = pid_nummer.split(" ");
+         pid_nummer = pid[0];
          }
         return pid_nummer;
 }
@@ -2509,7 +2536,8 @@ QString filename;
 QFile file(filename);
     if (file.open(QIODevice::ReadWrite)) {
         QTextStream stream(&file);
-        stream << password << endl;
+       // stream << password << endl;
+       stream << password;
     }}
 }
 
@@ -2555,6 +2583,46 @@ int MWindow::is_gpt_main(QString partition_efi)
  	file.close();
   return 0;
 }
+
+void MWindow::kill_end()
+{ 
+QString pid_terminal;
+QString befehl;
+          pid_terminal = pid_ermitteln_("bash"); 
+           // befehl = "kill -15 " + pid_terminal;  //bash abbrechen, Zeit zum ordentlichen Beenden
+          befehl = "kill -9 " + pid_terminal;  //bash abbrechen, sofortiges Beenden
+          if(system (befehl.toLatin1().data()))
+            befehl = "";
+          pid_terminal = pid_ermitteln_("qt-fsarchiver-terminal"); 
+          // befehl = "kill -15 " + pid_terminal;  //qt-fsarchiver-terminal abbrechen, Zeit zum ordentlichen Beenden
+          befehl = "kill -9 " + pid_terminal;  //bash abbrechen, sofortiges Beenden
+          if(system (befehl.toLatin1().data()))
+            befehl = "";  
+          pid_terminal = pid_ermitteln_("qt-fsarchiver"); 
+          // befehl = "kill -15 " + pid_terminal;  //qt-fsarchiver abbrechen, Zeit zum ordentlichen Beenden
+          befehl = "kill -9 " + pid_terminal;  //bash abbrechen, sofortiges Beenden
+          if(system (befehl.toLatin1().data()))
+             befehl = "";
+} 
+
+QString MWindow::label_read(QString partname)
+{
+QString befehl;
+int i = 0;
+QString dummy;
+QString dummy1;
+       dummy = part[i][0];
+       while (dummy != ""){
+            dummy = part[i][0];
+            i++;
+            if (dummy == partname) 
+               {
+               dummy1= part[i-1][6];
+               return dummy1;
+               }
+            } 
+return "";            
+}             
 
 /*
 Auswertung in zahlen.txt

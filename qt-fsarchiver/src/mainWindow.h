@@ -92,6 +92,8 @@ protected slots:
    void daten_write(QString password, int i);
    QString md5sum(QString file_name);
    int is_gpt_main(QString partition_efi);
+   void kill_end();
+   QString label_read(QString partname);
      
 private:
     QFileSystemModel *dirModel;

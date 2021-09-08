@@ -80,6 +80,7 @@ extern int sleepfaktor;
 int nameflag = 0;
 int liveFlag_net = 0;
 int row_net = 0;
+QString name_txt_file;
 
 DialogNet::DialogNet()
 {
@@ -561,7 +562,7 @@ QString attribute;
          attribute = "-t cifs -o username=" + user_net + ",password=" + key_net + ",uid=0,gid=0 //" + rechner_IP + "/'" + folder_free + "' " + userpath_net + "/.qt-fs-client";
          befehl = "/usr/sbin/qt-fsarchiver.sh  19 " + attribute; 
          k = system (befehl.toLatin1().data());
-     	}
+       	}
        if (net_art == 2){ //NFS
            attribute = rechner_IP + ":" + folder_free +  " " + userpath_net + "/.qt-fs-client" ; //mounten
            befehl = "/usr/sbin/qt-fsarchiver.sh  2 " + attribute; 
@@ -592,7 +593,7 @@ QString attribute;
 		   part_art_net = mtab_einlesen_net(row);
                    //Überprüfung on LVM vorhanden
                    if(part[row][7] == "/" or part[row][7] == "/home")
-                      liveFlag = 1;
+                    liveFlag = 1;
                    if(liveFlag_net == 1)
                       liveFlag = 1;
                    liveFlag_net = 0; 
@@ -692,7 +693,7 @@ QString attribute;
                                       indizierung = indizierung + 2; 
                                       }
 				  QFile file_suse(".snapshots");
-                                  if (file.exists())
+                                  if (file_suse.exists())
                                     {
                                     parameter[indizierung] = "--exclude=./snapshots";
                                     indizierung = indizierung + 1;
@@ -709,6 +710,7 @@ QString attribute;
                                         befehl = "";
                                     }
                                 parameter[indizierung] = (folder_net + "/" + DateiName_net + "-" + _Datum_net + ".fsa");
+                                name_txt_file = DateiName_net + "-" + _Datum_net + ".fsa";
                                 parameter[indizierung + 1] = ("/dev/" + partition_net_);
                                 QFile f(parameter[indizierung]);
                                 if  (parameter[4] != "-o" && (f.exists())){
@@ -1123,6 +1125,7 @@ QString attribute;
 QString dummy;
 int k = 0;
 int pos = 0;
+int ret = 0;
 int net_art = cmb_Net->currentIndex();
     TreeviewRead treeviewread;
     int row;
@@ -1132,12 +1135,20 @@ int net_art = cmb_Net->currentIndex();
     row_net = row;
     if (row > -1)
     	folder_free = folder_free_[row];
-     int found=folder_free.indexOf(" ");
-     while (found > -1){
-           QMessageBox::warning(this, tr("Note", "Hinweis"), tr("A space is not allowed in the backup directory. You must choose another directory\n", "Ein Leerzeichen im Sicherungsverzeichnis ist nicht zulässig. Sie müssen ein anderes Verzeichnis wählen\n"));
-           return 1;
-          }
-    if (rdBt_restoreFsArchiv->isChecked() && net_art == 0) //Samba
+    int found=folder_free.indexOf(" ");
+    if (found > -1 && rdBt_saveFsArchiv->isChecked())
+           {
+           ret = questionMessage(tr("There is a blank space in the name of the backup/restore directory. It is safer to use a directory without a space. If you still want to continue?", "In dem Verzeichnisnamen ist eine Leerstelle vorhanden. Es ist sicherer ein Verzeichnis ohne Leerstelle zu verwenden. Wollen Sie dennoch fortfahren?"));
+           if (ret == 2)
+              {
+              this->setCursor(Qt::ArrowCursor); 
+              close();;
+              return 1;
+              }
+           }
+           
+         
+     if (rdBt_restoreFsArchiv->isChecked() && net_art == 0) //Samba
        {
        //Verzeichnis mounten
        this->setCursor(Qt::WaitCursor);
@@ -1195,8 +1206,47 @@ QString befehl;
 QString attribute;
 int part_testen;
 int err = 0;
+int success = 0;
+int net_art = cmb_Net->currentIndex();  
    this->setCursor(Qt::ArrowCursor);
    if (endeThread_net !=0) {
+     if (net_art == 1) //SSH
+       {
+       //befehl = "/etc/init.d/ssh restart";
+       attribute = "-u " + userpath_net + "/.qt-fs-client 2>/dev/null";
+       befehl = "/usr/sbin/qt-fsarchiver.sh  17 " + attribute;  //fuserufusermount -umount
+       }
+     if (net_art == 0) //Samba
+       {
+       attribute = "-f " + userpath_net + "/.qt-fs-client 2>/dev/null";
+       befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
+       }
+     if (net_art == 2) //NFS
+     {
+      // befehl = "/etc/init.d/nfs-kernel-server restart";
+         attribute = "-a -t nfs 2>/dev/null";
+         befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
+     }
+     if(system (befehl.toLatin1().data()))
+           befehl = "";
+        // wurde nicht erfolgreich gemeounted wurde in die Datei .qt-fs-client gesichert.
+        // in diesem Fall verbleibt nach dem entmounten die gesicherten Datein in dem Ordner .qt-fs-client
+        // Es wird geprüft ob die fsa-Datei vorhanden ist oder nicht
+      QThread::msleep(25 * sleepfaktor);
+      QString filename = userpath_net + "/.qt-fs-client/" + name_txt_file;
+      QFile file(filename);
+      if (file.exists())
+           {
+           success = 1;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  10 rm " + filename + " 2>/dev/null"; 
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+           filename = filename.left(filename.size()-3) + "txt";
+           befehl = "/usr/sbin/qt-fsarchiver.sh  10 rm " + filename + " 2>/dev/null"; 
+           if(system (befehl.toLatin1().data()))
+              befehl = "";
+           } 
+      // die Dateien fsa umd txt müssen gelöscht werden
        dummy = datei_auswerten_net("p"); 
        err = dummy.toInt();
        progressBar->setValue(100);
@@ -1229,7 +1279,7 @@ int err = 0;
        int cnt_special  = dummy.toInt();
        QString cnt_special_;
        cnt_special_ = QString::number(cnt_special);
-       if (err == 10){ 
+       if (err == 10 && success == 0){ 
        // Ausgabe progressBar durch Timer unterbinden
        stopFlag_ = 1; 
           if (befehl_pbr_net == "")
@@ -1292,33 +1342,23 @@ int err = 0;
        dummy = datei_auswerten_net("k"); //err_special
        int err_special = dummy.toInt();
        QString err_special_ = QString::number(err_special);  
-       if (part_testen != 108 && flag_end_net == 0){
+       if ((part_testen != 108 && flag_end_net == 0) or success ==1){
+          if (success == 1)
+             {
+             err_regfile_ = cnt_regfile_ ;
+             err_dir_ = cnt_dir_;
+             err_hardlinks_ = cnt_hardlinks_;
+             err_special_ = cnt_special_;
+             cnt_regfile_ = "0";
+             cnt_dir_ = "0";
+             cnt_hardlinks_ = "0";
+             cnt_special_ = "0";
+             }
        QMessageBox::warning(this, tr("Note", "Hinweis"), 
        	  tr("The backup of the partition was only partially successful.\n", "Die Sicherung der Partition war nur teilweise erfolgreich\n") + cnt_regfile_ + tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") + cnt_special_ + tr(" specials have been backed\n.", " spezielle Daten wurden gesichert\n.")  + err_regfile_ + tr(" files, ", " Dateien, ")   + err_dir_ + tr(" directories, ", " Verzeichnisse, ") + err_hardlinks_ + tr(" links and ", " Links und ") + err_special_ + tr(" special data was not saved correctly.\n."," spezielle Daten wurden nicht korrekt gesichert.\n"));
 	  }
         }
-       
      }
-  int net_art = cmb_Net->currentIndex();   
-  if (net_art == 1) //SSH
-     {
-     //befehl = "/etc/init.d/ssh restart";
-     attribute = "-u " + userpath_net + "/.qt-fs-client 2>/dev/null";
-     befehl = "/usr/sbin/qt-fsarchiver.sh  17 " + attribute;  //fuserufusermount -umount
-     }
-  if (net_art == 0) //Samba
-     {
-       attribute = "-f " + userpath_net + "/.qt-fs-client 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
-     }
-  if (net_art == 2) //NFS
-     {
-      // befehl = "/etc/init.d/nfs-kernel-server restart";
-         attribute = "-a -t nfs 2>/dev/null";
-         befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
-     }
- if(system (befehl.toLatin1().data()))
-           befehl = "";
   lineKey->setText ("");
   pushButton_end->setEnabled(true);
   date_delete_net();
@@ -1540,7 +1580,7 @@ int anzahl = 0;
 int anzahl1 = 0;
 QString text_integer;
 QString dummy;
-QString dummy1;
+int dummy1 = 0;
 int flag = 0;
 text = datei_auswerten_net("p");
 endeThread_net = text.toInt();  //10 korrekt beendet 11 fehlerhaft

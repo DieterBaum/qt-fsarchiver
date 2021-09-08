@@ -730,7 +730,7 @@ if (endeThread_ != 10 and endeThread_ != 11)  //noch fejhlerhaft bei 11
   this->repaint();
   dummy = datei_auswerten_1_dir(userpath_dir + "/.config/qt-fsarchiver/meldung.txt"); 
   flag = dummy.toInt();
-if (flag_View_dir == 1)
+if (flag_View_dir == 1) // nur bei sichern
 	{
  	if (flag == 0)
          {
@@ -793,11 +793,9 @@ if (flag_View_dir == 1)
     }   
  dummy_prozent_dir = prozent_;
 }
-// bei mehrmaligem Aufruf von fsarchiver wird am Anfang der Sicherung kurzfristig 100 % angezeigt, was falsch ist
- if (prozent_ <= 99 ) 
-   progressBar->setValue(prozent_);
- if (prozent_ == 99 or endeThread_ >= 1) 
-   progressBar->setValue(100);
+    // bei mehrmaligem Aufruf von fsarchiver wird am Anfang der Sicherung kurzfristig 100 % angezeigt, was falsch ist
+     if (prozent_ != 100 && prozent_ > 0) 
+     	progressBar->setValue(prozent_);
  return;
 } 
 

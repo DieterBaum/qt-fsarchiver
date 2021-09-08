@@ -65,7 +65,9 @@ public slots:
         void addWidget();
         void listWidget_auslesen();
         void folder_expand();
-                       
+        int testen_1(QString filename, QString partition, int flag);
+        int testen(QString filename);
+    
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
@@ -79,7 +81,6 @@ private:
     
 
 private slots: 
-      
    void startThread1(int flag);
    void thread1Ready();
    void startThread2(int flag);
