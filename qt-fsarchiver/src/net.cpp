@@ -498,6 +498,7 @@ QString devsdx[10][20];
 int k = 0;
 QString dummy;
 QString attribute;
+QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
      QString befehl;
      QString text;
      Qt::CheckState state;
@@ -511,6 +512,18 @@ QString attribute;
      int found = 0;
      int stop = 0;
      QString compress = "";
+     attribute = "chown -R " + user + " " + userpath_net + "/.config/qt-fsarchiver";
+     befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+     if(system (befehl.toLatin1().data()))
+         befehl = "";
+     QFile::remove(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");  
+     if (file1.exists())
+        {
+        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("Error. The file ~/config/qt-fsarchiver/zahlen.txt could not be deleted by qt-fsarchiver. The program is terminated. Manually delete the mentioned file and start the program again.\n", "Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.\n"));
+        window.del_mediafolder();
+        return 1;
+        }
      if (rdBt_saveFsArchiv->isChecked())
      {
      	if (folder_free == "")
@@ -786,8 +799,19 @@ QString text;
 QString dummy;
 QString sys;
 QString optionkey;
+QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
         state1 = chk_key->checkState();
 	indicator_reset();
+	befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath_net + "/.config/qt-fsarchiver/zahlen.txt 2>/dev/null"; 
+        if(system (befehl.toLatin1().data()))
+               befehl = "";
+        if (file1.exists())
+        {
+        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("Error. The file ~/config/qt-fsarchiver/zahlen.txt could not be deleted by qt-fsarchiver. The program is terminated. Manually delete the mentioned file and start the program again.\n", "Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.\n"));
+        window.del_mediafolder();
+        return 1;
+        }
         int net_art = cmb_Net->currentIndex();
        	if (rdBt_restoreFsArchiv->isChecked())
         {

@@ -305,9 +305,7 @@ MWindow::MWindow()
     	return;
         }
    //Vorsichtshalber alle txt Dateien löschen
-   befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null";
-   if(system (befehl.toLatin1().data()))
-       befehl = "";
+   date_delete();
    items_kerne_ << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12";
    cmb_kerne->addItems (items_kerne_);
    items_kerne_.clear();
@@ -382,6 +380,10 @@ MWindow::MWindow()
            sleepfaktor = 5;
         int auswertung = setting.value("Kompression").toInt();
         cmb_zip -> setCurrentIndex(auswertung); 
+        if (auswertung ==10)
+            cmb_zstd->setEnabled(true);
+        else
+            cmb_zstd->setEnabled(false); 
         auswertung = setting.value("Kerne").toInt();
         cmb_kerne -> setCurrentIndex(auswertung-1); 
         auswertung = setting.value("overwrite").toInt();
@@ -406,11 +408,6 @@ MWindow::MWindow()
 	   lineKey ->setEchoMode(QLineEdit::Password);
         zstd_level = setting.value("zstd").toInt();
         cmb_zstd -> setCurrentIndex(zstd_level-1);
-        auswertung = setting.value("Kompression").toInt();
-        if (auswertung ==10)
-            cmb_zstd->setEnabled(true);
-        else
-            cmb_zstd->setEnabled(false); 
         setting.endGroup();
         } 
    else {
@@ -418,15 +415,22 @@ MWindow::MWindow()
         cmb_kerne -> setCurrentIndex(0);
         chk_Beschreibung->setChecked(true);
         chk_overwrite->setChecked(true); 
-        cmb_zip -> setCurrentIndex(2);
+        cmb_zip -> setCurrentIndex(10);
+        cmb_zstd -> setCurrentIndex(8);
         setting.beginGroup("Basiseinstellungen");
         setting.setValue("showPrg",1); 
         setting.setValue("ssh",1); 
         setting.setValue("sshfs",1); 
         setting.setValue("dummy",2);
+        setting.setValue("sleep",4);
+        setting.setValue("Kompression",10);
+        setting.setValue("zstd",8);
+        setting.setValue("Kerne",1);
+        setting.setValue("overwrite",1);
+        setting.setValue("tip",1);
         setting.endGroup();
         cmb_zstd -> setCurrentIndex(7);
-        cmb_zstd->setEnabled(false);
+        cmb_zstd->setEnabled(true);
         }
    label_4->setEnabled(false);
    chk_overwrite->setEnabled(true);
@@ -612,7 +616,9 @@ void MWindow::starteinstellung()
 int MWindow::savePartition() 
 {
      QFile file(folder);
+     QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
      QString befehl;
+     QString attribute;
      Qt::CheckState state;
      Qt::CheckState state1;
      Qt::CheckState state3;
@@ -623,6 +629,17 @@ int MWindow::savePartition()
      int zip;
      int zip_zstd;
      indicator_reset();
+     attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
+     befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+     if(system (befehl.toLatin1().data()))
+         befehl = "";
+     QFile::remove(userpath + "/.config/qt-fsarchiver/zahlen.txt");
+     if (file1.exists())
+        {
+        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("Error. The file ~/config/qt-fsarchiver/zahlen.txt could not be deleted by qt-fsarchiver. The program is terminated. Manually delete the mentioned file and start the program again.\n", "Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.\n"));
+        del_mediafolder();
+        }
      if (rdBt_saveFsArchiv->isChecked())
      {
       	if (folder == "")
@@ -869,6 +886,7 @@ int MWindow::savePartition()
   				//timer->singleShot( 20, this , SLOT(ViewProzent( ))) ;
                                 ViewProzent();
                                 stopFlag = 0;
+                                dialog_auswertung = 1;
                                 this->setCursor(Qt::WaitCursor);
   				statusBar()->showMessage(tr("The backup is performed", "Die Sicherung wird durchgeführt"), 15000);
                                 befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
@@ -997,6 +1015,7 @@ int MWindow::restorePartition()
 {
 Qt::CheckState state1;
 QFile file(folder);
+QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
 QString DateiName("") ;
 int err = 0;
 QString keyText = "";
@@ -1009,6 +1028,18 @@ QString attribute;
   std::string dateiname;
   keyText = lineKey->text();
   state1 = chk_key->checkState();
+  attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
+  befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+  if(system (befehl.toLatin1().data()))
+      befehl = "";
+  QFile::remove(userpath + "/.config/qt-fsarchiver/zahlen.txt");
+  if (file1.exists())
+        {
+        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("Error. The file ~/config/qt-fsarchiver/zahlen.txt could not be deleted by qt-fsarchiver. The program is terminated. Manually delete the mentioned file and start the program again.\n", "Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.\n"));
+        del_mediafolder();
+        return 1;
+        }
       {
           if(state1 == Qt::Checked && keyText.isEmpty())  
               {
@@ -1098,9 +1129,7 @@ QString attribute;
                         if(optionkey == "13") {
                            QMessageBox::about(this, tr("Note", "Hinweis"), tr("You have entered an incorrect password.", "Sie haben ein falsches Passwort eingegeben. \n"));
            		   lineKey->setText ("");
-                           befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
-                           if(system (befehl.toLatin1().data()))
-                               befehl = "";
+                          date_delete();
                            return 0;
                         }
 			
@@ -1324,8 +1353,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-3, September 15, 2021",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-4, September 30, 2021",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-4, 30. September 2021"));
       }
 
 int MWindow::is_running(){
@@ -2127,6 +2156,8 @@ int ret = 0;
       if (flag == 0)
           ret = questionMessage(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
       if (ret == 1)
+       {
+       if (pid_qt_fsarchiver_terminal != "")
         {
         attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
         befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
@@ -2136,6 +2167,7 @@ int ret = 0;
         befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
         if(system (befehl.toLatin1().data()))
             befehl = "";
+        }
      	int pos = SicherungsFolderFileName.indexOf("fsa");
        	SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
        	SicherungsFolderFileName.insert(pos, QString("txt"));
@@ -2209,9 +2241,7 @@ void MWindow::del_mediafolder()
             if(system (befehl.toLatin1().data()))
                befehl = "";
            }
-           befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null"; 
-           if(system (befehl.toLatin1().data()))
-               befehl = "";
+           date_delete();
            attribute = "-f " + userpath + "/.qt-fs-client 2>/dev/null";
            befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
            if(system (befehl.toLatin1().data()))
@@ -2506,9 +2536,25 @@ QStringList pid;
 void MWindow::date_delete()
 {
 QString befehl;
-      befehl = "/usr/sbin/qt-fsarchiver.sh  5 " + userpath + "/.config/qt-fsarchiver *.txt 2>/dev/null";
-      if(system (befehl.toLatin1().data()))
+QString attribute;
+     attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
+     befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+     if(system (befehl.toLatin1().data()))
          befehl = "";
+     QFile::remove(userpath + "/.config/qt-fsarchiver/version.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/disk2.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/disk3.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/running.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/zahlen.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/anzahl_file.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/anzahlfile.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/attribute.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/media.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/meldung.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/prozent.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/pid.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/kernel.txt");
+
 }
 
 void MWindow::daten_write(QString password, int i)
@@ -2622,7 +2668,7 @@ QString dummy1;
                }
             } 
 return "";            
-}             
+}  
 
 /*
 Auswertung in zahlen.txt

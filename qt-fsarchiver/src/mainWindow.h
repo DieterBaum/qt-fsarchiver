@@ -50,7 +50,8 @@ public slots:
    void folder_expand();
    void save_button();
    QString pid_ermitteln_(QString prozess);
-   
+   void del_mediafolder();
+      
 protected slots:
    void esc_end(int flag);
    void ViewProzent();
@@ -82,7 +83,6 @@ protected slots:
    void chkGB();
    QString kernel_version();
    QString linux_version();
-   void del_mediafolder();
    void clone_save();
    void zip_einlesen();
    void sdx_einlesen();

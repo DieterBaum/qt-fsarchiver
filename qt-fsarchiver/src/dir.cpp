@@ -206,6 +206,7 @@ void DialogDIR::chkkey(){
 }
 
 int DialogDIR::folder_dir_path_einlesen() {
+MWindow window;
 int pos = 0;
 QString befehl = "";
 int zip ;
@@ -214,7 +215,20 @@ QString keyText = "";
 Qt::CheckState state1;
 QString optionkey;
 QString attribute;
+QFile file1(userpath_dir + "/.config/qt-fsarchiver/zahlen.txt");
 int found = 0;
+     attribute = "chown -R " + user + " " + userpath_dir + "/.config/qt-fsarchiver";
+     befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+     if(system (befehl.toLatin1().data()))
+         befehl = "";
+     QFile::remove(userpath_dir + "/.config/qt-fsarchiver/zahlen.txt");  
+if (file1.exists())
+        {
+        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("Error. The file ~/config/qt-fsarchiver/zahlen.txt could not be deleted by qt-fsarchiver. The program is terminated. Manually delete the mentioned file and start the program again.\n", "Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.\n"));
+        window.del_mediafolder();
+        return 1;
+        }
    	QModelIndex index = treeView_dir->currentIndex();
    	folder_dir.append  (dirModel->filePath(index));
    	folder_dir =  (dirModel->filePath(index));
