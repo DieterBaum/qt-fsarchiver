@@ -36,6 +36,7 @@ extern QString user;
 QString userpath_mbr;
 extern int sleepfaktor;
 int zaehler = 0;
+QString homepath_mbr = QDir::homePath();
 
 DialogMBR::DialogMBR()
 {
@@ -54,7 +55,7 @@ QStringList filters;
         connect(treeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &DialogMBR::folder_einlesen);
         connect( bt_folder, SIGNAL( clicked() ), this, SLOT(folder_expand()));
         this->setCursor(Qt::WaitCursor);
-        userpath_mbr = "/home/" + user; 
+        userpath_mbr = homepath_mbr; 
    	disk_exist();
         if (dialog_auswertung == 4){
             bt_save->setText (tr("MBR/GPT save", "MBR/GPT sichern"));

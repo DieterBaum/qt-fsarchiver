@@ -16,6 +16,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <QtGui> 
+#include <QInputDialog>
 #include "net.h"
 #include "net_ein.h"
 #include "filedialog.h"
@@ -80,7 +81,10 @@ extern int sleepfaktor;
 int nameflag = 0;
 int liveFlag_net = 0;
 int row_net = 0;
+int rootpassword_net = 0;
 QString name_txt_file;
+QString homepath_net = QDir::homePath();
+bool ok;
 
 DialogNet::DialogNet()
 {
@@ -88,7 +92,7 @@ QString befehl;
 QStringList items;
 QStringList items_kerne_; 
 setupUi(this); // this sets up GUI
-        userpath_net = "/home/" + user; 
+        userpath_net = homepath_net; 
         folder_net = userpath_net + "/.qt-fs-client";
         if ( dialog_auswertung == 6)
         	rdBt_saveFsArchiv->setChecked(true);
@@ -683,7 +687,22 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                                     indizierung = 5;
 				    }	
                                  if (state1 == Qt::Checked)   //Schlüssel ja
-                                    {     
+                                    {
+                                    //Wiederholung der Eingabe und prüfen auf Übereinstimmung
+                                    if(rootpassword_net == 1)
+                                       text = QInputDialog::getText(this, tr("Enter password again","Passwort nochmals eingeben"),
+                                       (tr("Password:","Passwort")), QLineEdit::Normal,"", &ok);
+                                    else
+                                       text = QInputDialog::getText(this, tr("Enter password again","Passwort nochmals eingeben"),
+                                       (tr("Password:","Passwort")), QLineEdit::Password,"", &ok);
+                                    if (!ok)  //Cancel Programm wird beendet
+                                         window.kill_end();
+                                    if (keyText != text)
+                                          {
+                                          QMessageBox::about(this,tr("Note", "Hinweis"),
+         	                          tr("The passwords do not match.\n", "Die Passwörter stimmen nicht überein.\n"));
+                                          return 0;
+                                          }     
                                     parameter[indizierung] = "-c";
 	    			    parameter[indizierung + 1] = keyText;
                                     int len = parameter[indizierung + 1].size();
@@ -767,7 +786,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                                 ViewProzent();
                                 stopFlag_ = 0;
                                 this->setCursor(Qt::WaitCursor);
-  				befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+  				befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_net;
                                if(system (befehl.toLatin1().data()))
                                     befehl = "";
         		        }
@@ -859,7 +878,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                		attribute = parameter[0] + " " + parameter[1] + " " + parameter[2];
   			attribute = "3 " + attribute;
                         save_attribut_net(attribute);
-                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_net;
                        if(system (befehl.toLatin1().data()))
                            befehl = "";
                         QThread::msleep(10 * sleepfaktor);
@@ -886,7 +905,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2] + " " + parameter[3] + " " + parameter[4];
                         attribute = "5 " + attribute;
                         save_attribut_net(attribute);
-                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_net;
                        if(system (befehl.toLatin1().data()))
                             befehl = "";
                         QThread::msleep(10 * sleepfaktor);
@@ -1040,7 +1059,7 @@ if (partition_typ_net == "btrfs"){
   	       ViewProzent();
                stopFlag_ = 0;
                this->setCursor(Qt::WaitCursor);
-               befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+               befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_net;
               if(system (befehl.toLatin1().data()))
                    befehl = "";
                }

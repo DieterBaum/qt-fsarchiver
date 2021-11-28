@@ -2953,22 +2953,17 @@ copierea de rezervă. cheia:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-3, September 15, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-0, 15. Juni 2021</comment>
-        <translation type="vanished">Backup și restaurare partiții, directoare și MBR. Versiune 0.8.6-3, 15. 2021</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1422"/>
         <source>Yes</source>
         <comment>Ja</comment>
         <translation>Da</translation>
     </message>
     <message>
+    <location filename="../src/mainWindow.cpp" line="1350"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Nein</comment>
-<translation>Backup și restaurare partiții, directoare și MBR. Versiune 0.8.6-4, 30. 2021</translation>
+version 0.8.6-5, November 30, 2021</source>
+<translation>Backup și restaurare partiții, directoare și MBR.
+Versiune 0.8.6-5, 30.Noiembrie 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1623"/>
@@ -3104,13 +3099,6 @@ version 0.8.6-4, September 30, 2021</source>
         <source>There is a blank space in the name of the backup/restore directory. It is safer to use a directory without a space. If you still want to continue?</source>
         <comment>In dem Verzeichnisnamen ist eine Leerstelle vorhanden. Es ist sicherer ein Verzeichnis ohne Leerstelle zu verwenden. Wollen Sie dennoch fortfahren?</comment>
         <translation type="obsolete">Există un spațiu gol în numele directorului de backup/restaurare. Este mai sigur să folosiți un director fără spațiu. Dacă doriți în continuare să continuați?</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1350"/>
-<source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>Backup și restaurare partiții, directoare și MBR. Versiune 0.8.6-4, 30. 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1624"/>

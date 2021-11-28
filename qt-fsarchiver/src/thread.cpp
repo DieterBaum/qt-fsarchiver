@@ -23,17 +23,18 @@ Thread::Thread() {
    qdummy = "0";
 }
 
-void Thread::setValues( int anzahl_, QString dummy ) {  //Image Festplatte oder Partition mit dd-gzip herstellen oder zurückschreiben
+void Thread::setValues( int anzahl_, QString dummy ) {  //Image Festplatte oder Partition mit dd-gzip erstellen oder zurückschreiben
    anzahl = anzahl_;
    qdummy = dummy;
 }
 
 void Thread::run() {
-  extern int dialog_auswertung;
-
+extern int dialog_auswertung;
 int pos = qdummy.indexOf("/usr/sbin"); 
+
 if (qdummy != "0" && pos > -1) {  //thread Festplatte klonen, Image erstellen midd ohne gzip
 	dialog_auswertung = system (qdummy.toLatin1().data()); 
+        qDebug() << "pos = qdummy.indexOf(/usr/sbin);" << pos << dialog_auswertung;
 	}
 }
 

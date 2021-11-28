@@ -2885,13 +2885,6 @@ verschlüsseln. Schlüssel</comment>
         <translation></translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 
-0.8.6-3, September 15, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-        <translation type="obsolete">分区、目录和MBR 备份/恢复工具。 版本 0.8.6-3, 2021. .15</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1422"/>
         <source>Yes</source>
         <comment>Ja</comment>
@@ -3034,9 +3027,9 @@ version
     <message>
         <location filename="../src/mainWindow.cpp" line="1350"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>分区、目录和MBR 备份/恢复工具。 版本 0.8.6-4, 2021. .30</translation>
+version 0.8.6-5, November 30, 2021</source>
+<translation>分区、目录和MBR 备份/恢复工具。
+版本 0.8.6-5, 2021. 十一月.30</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1702"/>
@@ -3106,15 +3099,7 @@ version 0.8.6-4, September 30, 2021</source>
 .</comment>
         <translation>个其他文件已经恢复。</translation>
     </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1813"/>
-        <location filename="../src/mainWindow.cpp" line="1823"/>
-        <source> directories and </source>
-<source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-<translation>分区、目录和MBR 备份/恢复工具。 版本 0.8.6-4, 2021. .30</translation>
-        </message>
-        <message>
+       <message>
         <location filename="../src/mainWindow.cpp" line="1815"/>
         <location filename="../src/mainWindow.cpp" line="1825"/>
         <source> specials were not properly restored

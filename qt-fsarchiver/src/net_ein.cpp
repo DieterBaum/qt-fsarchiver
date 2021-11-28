@@ -31,6 +31,7 @@ extern int dialog_auswertung;
 extern QString user;
 extern int sleepfaktor;
 QString userpath_net_ein;
+QString homepath_net_ein = QDir::homePath();
 
 NetEin::NetEin()
 {
@@ -43,7 +44,7 @@ connect( pushButton_net_2, SIGNAL( clicked() ), this, SLOT(listWidget_show()));
 connect( pushButton_go, SIGNAL( clicked() ), this, SLOT(go()));
 connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(end()));
 connect( chk_password, SIGNAL( clicked() ), this, SLOT(Kennwort()));
-       userpath_net_ein = "/home/" + user; 
+       userpath_net_ein = homepath_net_ein; 
 // Vorsichtshalver ./qt-fs-client löschen und neu anlegen, da eventuell nicht leer
        attribute =  userpath_net_ein + "/.qt-fs-client  2>/dev/null"; 
        befehl = "/usr/sbin/qt-fsarchiver.sh  8 " + attribute; 

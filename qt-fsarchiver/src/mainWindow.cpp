@@ -77,6 +77,7 @@ QString sdx[500];
 int show_part = 0;
 extern int sleepfaktor;
 extern int password_;
+int rootpassword = 0;
 
 MWindow::MWindow()
 {
@@ -89,7 +90,6 @@ MWindow::MWindow()
    int pos = 0, pos1 = 0;
    int i = 0;
    int found = 0;
-   int rootpassword = 0;
    QString text = "";
    QString befehl;
    QString homepath = QDir::homePath();
@@ -141,10 +141,11 @@ MWindow::MWindow()
    connect( chk_key, SIGNAL( clicked() ), this, SLOT(chkkey()));
    connect( chk_hidden, SIGNAL( clicked() ), this, SLOT(chkhidden()));
    connect( chk_split, SIGNAL( clicked() ), this, SLOT(chkGB()));
+   connect( cmd_zstd, SIGNAL( clicked() ), this, SLOT(zip_setting_einlesen())); 
 
    //Benutzername ermitteln
    user = homepath.right(homepath.size() -6);
-   userpath = "/home/" + user;
+   userpath = homepath;
    // Zeitgeber für Berechnung remainingTime
    timer = new QTimer(this);
    bool ok;
@@ -490,6 +491,7 @@ MWindow::MWindow()
         int ret = questionMessage(tr("The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.", "In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern."));
     		if (ret == 2){
 		//Basiseinstellungen ändern
+               QThread::msleep(5 * sleepfaktor);
         	QSettings setting("qt-fsarchiver", "qt-fsarchiver");
         	setting.beginGroup("Basiseinstellungen");
         	setting.setValue("showPrg",0);
@@ -555,6 +557,7 @@ void MWindow::rdButton_auslesen()
                 label_4->setEnabled(false);
                 chk_overwrite->setEnabled(false);
                 cmb_zip->setEnabled(false);
+                cmb_zstd->setEnabled(false);
                 chk_Beschreibung->setEnabled(false);
                 label->setEnabled(false);
                 label_2->setEnabled(false);
@@ -587,6 +590,7 @@ void MWindow::starteinstellung()
             label_4->setEnabled(true);
             chk_overwrite->setEnabled(true);
             cmb_zip->setEnabled(true);
+            cmb_zstd->setEnabled(true);
             chk_Beschreibung->setEnabled(true);
             label->setEnabled(true);
             label_2->setEnabled(true);
@@ -618,6 +622,7 @@ int MWindow::savePartition()
      QFile file(folder);
      QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
      QString befehl;
+     QString text;
      QString attribute;
      Qt::CheckState state;
      Qt::CheckState state1;
@@ -628,6 +633,7 @@ int MWindow::savePartition()
      int found = 0; 
      int zip;
      int zip_zstd;
+     bool ok;
      indicator_reset();
      attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
      befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
@@ -773,7 +779,22 @@ int MWindow::savePartition()
                                     indizierung = 5;
 				    }	
                                  if (state1 == Qt::Checked)   //Schlüssel ja
-                                    {     
+                                    { 
+                                    //Wiederholung der Eingabe und prüfen auf Übereinstimmung
+                                    if(rootpassword == 1)
+                                       text = QInputDialog::getText(this, tr("Enter password again","Passwort nochmals eingeben"),
+                                       (tr("Password:","Passwort")), QLineEdit::Normal,"", &ok);
+                                    else
+                                       text = QInputDialog::getText(this, tr("Enter password again","Passwort nochmals eingeben"),
+                                       (tr("Password:","Passwort")), QLineEdit::Password,"", &ok);
+                                    if (!ok)  //Cancel Programm wird beendet
+                                         kill_end();
+                                    if (keyText != text)
+                                          {
+                                          QMessageBox::about(this,tr("Note", "Hinweis"),
+         	                          tr("The passwords do not match.\n", "Die Passwörter stimmen nicht überein.\n"));
+                                          return 0;
+                                          }
                                     parameter[indizierung] = "-c";
 	    			    parameter[indizierung + 1] = keyText;
                                     int len = parameter[indizierung + 1].size();
@@ -1318,6 +1339,7 @@ QString MWindow::UUID_auslesen(int row){
 }
 
 void MWindow::zip_einlesen() {
+qDebug() << "Bin in zip einlesen";
 int zip = cmb_zip->currentIndex();
     if (zip == 10) 
        cmb_zstd->setEnabled(true);
@@ -1353,8 +1375,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-4, September 30, 2021",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-4, 30. September 2021"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-5, November 30, 2021",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-5, 30. November 2021"));
       }
 
 int MWindow::is_running(){
@@ -2669,6 +2691,19 @@ QString dummy1;
             } 
 return "";            
 }  
+
+void MWindow::zip_setting_einlesen() {
+int zip = cmb_zip->currentIndex();
+    if (zip == 10) {
+       cmb_zstd->setEnabled(true);
+       label_5->setEnabled(true);
+       }
+    else
+       {
+       cmb_zstd->setEnabled(false);
+       label_5->setEnabled(false);
+       }
+}
 
 /*
 Auswertung in zahlen.txt

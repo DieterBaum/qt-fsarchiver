@@ -3106,9 +3106,9 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1350"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>Säkerhetskopiering och återställning partitioner, katalog och MBR. Version 0.8.6-4, 30. 2021</translation>
+version 0.8.6-5, November 30, 2021</source>
+<translation>Säkerhetskopiering och återställning partitioner, katalog och MBR.
+Version 0.8.6-5, 30.November 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1735"/>

@@ -2270,7 +2270,7 @@ mit fs-archiver</translation>
         <source>On the number saved
 Files/directories:</source>
         <translation>zu sichernde 
-Datein/Verzeichnisse:</translation>
+Dateien/Verzeichnisse:</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="272"/>
@@ -2912,9 +2912,9 @@ Sie müssen eine Datei auswählen</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1350"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR. Version 0.8.6-4, 30.September 2021</translation>
+version 0.8.6-5, November 30, 2021</source>
+<translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR.
+Version 0.8.6-5, 30.November 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1633"/>
@@ -3590,7 +3590,7 @@ einstellung:</translation>
         <source>On the number saved
 Files/directories:</source>
         <translation>zu sichernde 
-Datein/Verzeichnisse:</translation>
+Dateien/Verzeichnisse:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="293"/>
@@ -3932,9 +3932,9 @@ Dateien/Verzeichnisse:</translation>
         <location filename="../src/ui/dir_dialog.ui" line="155"/>
         <source>Already backed
 Files/directories:</source>
-        <extracomment>bereits gesicherte Datein/Verzeichnisse:</extracomment>
+        <extracomment>bereits gesicherte Dateien/Verzeichnisse:</extracomment>
         <translation>bereits gesicherte 
-Datein/Verzeichnisse:</translation>
+Dateien/Verzeichnisse:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="198"/>

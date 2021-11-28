@@ -20,11 +20,12 @@
 QString folder_treeview;
 extern QString user;
 QString userpath_treeview;
+QString homepath_treeview = QDir::homePath();
 
 TreeviewRead::TreeviewRead()
 {
 QStringList filters;
-        userpath_treeview = "/home/" + user; 
+        userpath_treeview = homepath_treeview; 
         setupUi(this); 
 	connect( cmd_save, SIGNAL( clicked() ), this, SLOT(folder_einlesen_beenden())); 
         connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(close()));

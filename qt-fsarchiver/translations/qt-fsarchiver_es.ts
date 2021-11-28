@@ -2830,10 +2830,10 @@ tecla de copia de seguridad:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1072"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
+<source>Backup and restore partitions, directory and MBR.
+version 0.8.6-5, November 30, 2021</source>
 <translation>Copia de seguridad y restauración de particiones, directorios y MBR.
-versione 0.8.6-4, 30. 2021</translation>
+versione 0.8.6-5, 30.Noviembre 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1097"/>
@@ -2897,12 +2897,6 @@ versione 0.8.6-4, 30. 2021</translation>
         <location filename="../src/mainWindow.cpp" line="1349"/>
         <source>qt-fsarchiver</source>
         <translation>qt-fsarchiver</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-3, September 15, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-0, 15. Juni 2021</comment>
-        <translation type="vanished">Copia de seguridad y restauración de particiones, directorios y MBR. versione 0.8.6-3, 15. 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2608"/>
@@ -2985,13 +2979,6 @@ version 0.8.6-3, September 15, 2021</source>
         <source>zstd</source>
         <comment>zstd</comment>
         <translation>zstd</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1350"/>
-<source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>Copia de seguridad y restauración de particiones, directorios y MBR. versione 0.8.6-4, 30. 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1422"/>

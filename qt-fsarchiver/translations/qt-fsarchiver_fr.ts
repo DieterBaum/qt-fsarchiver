@@ -2882,15 +2882,9 @@ Veuillez saisir la clef :</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1350"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>sauvegarde et de restauration des répertoires de partition et MBR. Version 0.8.6-4,  2021 30. </translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-0, June 15, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-0, 15. Juni 2021</comment>
-        <translation type="obsolete">sauvegarde et de restauration des répertoires de partition et MBR. Version 0.8.6-0, Juin 2021 15. </translation>
+version 0.8.6-5, November 30, 2021</source>
+<translation>sauvegarde et de restauration des répertoires de partition et MBR.
+Version 0.8.6-5, Le 30. Novembre 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2608"/>
@@ -2952,12 +2946,6 @@ version 0.8.6-0, June 15, 2021</source>
         <location filename="../src/mainWindow.cpp" line="1349"/>
         <source>qt-fsarchiver</source>
         <translation>qt-fsarchiver</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-0, June 15, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-21, 8.Dezember 2020</comment>
-        <translation type="vanished">sauvegarde et de restauration des répertoires de partition et MBR. Version 0.8.6-0, Juin 2021 15. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1422"/>
@@ -3127,13 +3115,6 @@ version 0.8.6-0, June 15, 2021</source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
         <translation>La sauvegarde de la partition n&apos;était completée qu&apos;en partie</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.5-20, November 27, 2020</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.5-15, 6.Februar 2020</comment>
-        <translation type="vanished">sauvegarde et de restauration des répertoires de partition et MBR.
-Version 0.8.5-20, Novembre 2020 27. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1624"/>

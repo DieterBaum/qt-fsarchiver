@@ -63,6 +63,7 @@ extern QString user;
 QString userpath_clone;
 int mountpoint1;
 extern int sleepfaktor;
+QString homepath_clone = QDir::homePath();
 
 DialogClone::DialogClone()
 {
@@ -89,7 +90,7 @@ DialogClone::DialogClone()
         rdbt_clone->setChecked(true);
         connect(treeView_clone->selectionModel(), &QItemSelectionModel::currentChanged, this, &DialogClone::folder_einlesen);
         treeView_clone->setEnabled(false);
-        userpath_clone = "/home/" + user; 
+        userpath_clone = homepath_clone; 
        	format_Disk();
         bt_save->setText (tr("Clone Harddrive", "Festplatte klonen"));
         timer_clone = new QTimer(this);
@@ -402,14 +403,14 @@ int success = 0;
                 this->setCursor(Qt::WaitCursor);
                 pos = folder_clone.indexOf("gz.part");
 		if (pos > 0){
-                      read_write_hd();
+                      read_write_hd(); //mit gzip wiederherstellen
 		      startThread2(1);
 			}
                 else 
                     {
                 	if(system (befehl.toLatin1().data()))
                            befehl = "";
-                        read_write_hd_1();
+                        read_write_hd_1(); //mit dd wiederherstellen 
                     }
     	}
     return 0;
@@ -1009,12 +1010,17 @@ float dummy1;
 
 void DialogClone::startThread1(int flag) {
 QString befehl;
-   if( thread1.isRunning()) 
+   if( thread1.isRunning())
+     { 
+       qDebug() << "thread1.isRunning";
        return;
+     }
    connect( &thread1, SIGNAL(finished()),
             this, SLOT( thread1Ready()));
    thread_run_clone = 1;
+qDebug() << "vor thread1.start();";
    thread1.start();
+qDebug() << "nach thread1.start();";
    bt_end->setEnabled(false);
    bt_save->setEnabled(false);
    // flag=0: Platte klonen, Image ohne zip schreiben
@@ -1036,15 +1042,20 @@ void DialogClone::startThread2(int flag) {
 }
 
 void DialogClone::closeEvent(QCloseEvent *event) {
+qDebug() << "bin in closeEvent vor thread1.wait(";
    thread1.wait();
+qDebug() << "bin in closeEvent vor thread2.wait(";
    thread2.wait();
+qDebug() << "bin in closeEvent nach thread1.wait(";
    event->accept();
+qDebug() << "bin in closeEvent am Ende";
 }
 
 void DialogClone::thread1Ready()  {
 QString befehl;
 QString dummy;
 float dummy1;
+qDebug() << "bin in thread1Ready(";
 
 	endeThread_clone = endeThread_clone + 1;
         if (endeThread_clone > 0) {

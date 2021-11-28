@@ -51,6 +51,7 @@ public slots:
    void save_button();
    QString pid_ermitteln_(QString prozess);
    void del_mediafolder();
+   void kill_end();
       
 protected slots:
    void esc_end(int flag);
@@ -92,8 +93,8 @@ protected slots:
    void daten_write(QString password, int i);
    QString md5sum(QString file_name);
    int is_gpt_main(QString partition_efi);
-   void kill_end();
    QString label_read(QString partname);
+   void zip_setting_einlesen();
      
 private:
     QFileSystemModel *dirModel;

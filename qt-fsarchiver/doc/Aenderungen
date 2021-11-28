@@ -1,6 +1,10 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.6-5 30. November 2021.
+    - Kennwort für verschlüsseltes Archiv muss zweimal eingegeben werden.
+    - variable Handhabung von $HOME.
+    - kleine optische Korrekturen.
 * qt-fsarchiver-0.8.6-4 30. September 2021.
     - Wichtige Korrektur für Stabilität und Sicherheit
 * qt-fsarchiver-0.8.6-3 15. September 2021.

@@ -3026,9 +3026,9 @@ Proszę użyć live CD.</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1350"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-4, September 30, 2021</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-3, 15. September 2021</comment>
-<translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR. wersja 0.8.6-4, 30. 2021</translation>
+version 0.8.6-5, November 30, 2021</source>
+<translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
+wersja 0.8.6-5, 30.Listopad 2021</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1422"/>

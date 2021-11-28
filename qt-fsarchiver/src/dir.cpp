@@ -55,6 +55,7 @@ int zstd_level_dir;
 extern QString user;
 QString userpath_dir;
 extern int sleepfaktor;
+QString homepath_dir = QDir::homePath();
 
 DialogDIR::DialogDIR()
 {
@@ -106,7 +107,7 @@ DialogDIR::DialogDIR()
         items << zip_dir_[5] << zip_dir_[6] << zip_dir_[7] << zip_dir_[8] << zip_dir_[9] << zip_dir_[10];
         cmb_zip->addItems (items);
         items.clear();
-        userpath_dir = "/home/" + user;
+        userpath_dir = homepath_dir;
         // Ini-Datei auslesen
         QFile file(userpath_dir + "/.config/qt-fsarchiver/qt-fsarchiver.conf");
         QSettings setting("qt-fsarchiver", "qt-fsarchiver");
@@ -221,6 +222,7 @@ int found = 0;
      befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
      if(system (befehl.toLatin1().data()))
          befehl = "";
+     attribute = "";
      QFile::remove(userpath_dir + "/.config/qt-fsarchiver/zahlen.txt");  
 if (file1.exists())
         {
@@ -342,13 +344,14 @@ if (file1.exists())
   		 }
 		 attribute = QString::number(indizierung + 2)  + attribute;
                  save_attribut_dir(attribute);
+qDebug() << "attribute" << attribute;
             indicator_reset();
          //   werte_reset();
             bt_save->setEnabled(false);
             bt_end->setEnabled(false);
             flag_View_dir = 1;
             ViewProzent();
-            befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+            befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_dir;
           if(system (befehl.toLatin1().data()))
                befehl = "";
             return 0;
@@ -394,7 +397,7 @@ if (file1.exists())
               if (state1 != Qt::Checked) {
         	attribute = "3 fsarchiver archinfo " + folder_dir;
                 save_attribut_dir(attribute);
-                befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_dir;
               if(system (befehl.toLatin1().data()))
                     befehl = "";
                 QThread::msleep(10 * sleepfaktor);
@@ -418,7 +421,7 @@ if (file1.exists())
                 parameter[4] = folder_dir;
                 attribute = "5 fsarchiver archinfo -c " + keyText + " "  + folder_dir;
                 save_attribut_dir(attribute);
-                befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+                befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_dir;
                if(system (befehl.toLatin1().data()))
                    befehl = "";
                 QThread::msleep(10 * sleepfaktor);
@@ -466,7 +469,7 @@ if (file1.exists())
         bt_end->setEnabled(false);
         flag_View_dir = 2;
         this->setCursor(Qt::WaitCursor);
-        befehl = "/usr/sbin/qt-fsarchiver.sh  1 /home/" + user;
+        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_dir;
        if(system (befehl.toLatin1().data()))
                befehl = "";
         QThread::msleep(10 * sleepfaktor);
