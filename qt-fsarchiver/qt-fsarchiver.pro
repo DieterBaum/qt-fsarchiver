@@ -12,7 +12,8 @@ QT += widgets gui core
 
 DEFINES +=  HAVE_CONFIG_H _REENTRANT _FILE_OFFSET_BITS=64 _LARGEFILE64_SOURCE _GNU_SOURCE 
 INCLUDEPATH += . src /usr/include/ext2fs /usr/include/et /usr/include/e2p /usr/include/blkid /usr/include/uuid /usr/include/ccrypt
-LIBS += -L/usr/lib -lQt5Gui -lQt5Core -lpthread -lrt -llzma -lext2fs -lcom_err -le2p -lblkid -luuid -lz -llz4 -lbz2 -llzo2 -lgcrypt -lgpg-error -lzstd 
+LIBS += -L/usr/lib -lQt5Gui -lQt5Core -lpthread -lrt -llzma -lext2fs -lcom_err -le2p -lblkid -luuid -lz -llz4 -lbz2 -llzo2 -lgcrypt -lgpg-error
+ 
 OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
@@ -64,8 +65,6 @@ isEmpty(DOC_DIR) {
  autostart.path = /usr/share/applications
  doc.files = doc/*
  doc.path = $$DOC_DIR
- findsmb.files = src/sbin
- findsmb.path = /usr
  TRANSLATIONS += translations/qt-fsarchiver_ar.ts \
                 translations/qt-fsarchiver_ca.ts \
                 translations/qt-fsarchiver_ch.ts \
@@ -144,4 +143,4 @@ translations.files = translations/qt-fsarchiver_de.qm \
                 translations/qt-fsarchiver_ur.qm \ 
                 translations/qt-fsarchiver_uk.qm
 translations.path = /usr/share/qt5/translations
-INSTALLS = target icon autostart translations doc findsmb
+INSTALLS = target icon autostart translations doc 

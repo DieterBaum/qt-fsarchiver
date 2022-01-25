@@ -1,6 +1,9 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.6-6 January 30, 2022.
+    - Hint file is created when creating an image of a partition..
+    - Correction of the uninstall program.
 * qt-fsarchiver-0.8.6-5 November 30, 2021.
     - Password for encrypted archive must be entered twice.
     - variable handling of $HOME.

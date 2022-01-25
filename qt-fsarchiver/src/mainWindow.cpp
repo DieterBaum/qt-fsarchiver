@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2019 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2022 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/orchar
  * modify it under the terms of the GNU General Public
@@ -1375,8 +1375,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-5, November 30, 2021",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-5, 30. November 2021"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-6, January 30, 2022",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-6, 30. Januar 2022"));
       }
 
 int MWindow::is_running(){
@@ -2074,39 +2074,37 @@ return "";
 
 
 QString MWindow::linux_version()  {
-
 QString befehl;
 QString Linuxversion;
-int i;
+QString text;
 	befehl = "cat /etc/*release 1> " +  userpath + "/.config/qt-fsarchiver/version.txt";
         if(system (befehl.toLatin1().data()))
            befehl = "";
         QString filename = userpath + "/.config/qt-fsarchiver/version.txt";
         QFile file(filename);
         QTextStream ds(&file);
-        file.open(QIODevice::ReadOnly | QIODevice::Text); 
-        while (Linuxversion == ""){
-            Linuxversion = ds.readLine();
-            QThread::msleep(5 * sleepfaktor);
-            } 
-           Linuxversion = ds.readLine();
-           if (Linuxversion.indexOf("PRETTY_NAME") > -1) 
-              {  //Debian
-               Linuxversion = Linuxversion.right(Linuxversion.size() -13);
-               Linuxversion = Linuxversion.left(Linuxversion.size() -1);
-               return Linuxversion;
-	      }
-             for (i=1; i < 4; i++){
-           	Linuxversion = ds.readLine(); // Simply Linux
-           }
-           file.close();
-           befehl = "rm " + filename;
-           if(system (befehl.toLatin1().data()))
+        file.open(QIODevice::ReadOnly | QIODevice::Text);
+        Linuxversion = "xxx"; //damit die erste Zeile ausgewerted wird
+                   while (Linuxversion != ""){
+                    Linuxversion = ds.readLine();
+                    if (Linuxversion.indexOf("PRETTY_NAME") > -1) 
+                        {  //Debian
+                        Linuxversion = Linuxversion.right(Linuxversion.size() -13);
+                        Linuxversion = Linuxversion.left(Linuxversion.size() -1);
+                        break;
+                        }
+                    if (Linuxversion.indexOf("DISTRIB_DESCRIPTION=")>0)
+                        {
+                        Linuxversion=Linuxversion.right(Linuxversion.size()-20);
+                        break;
+                        }
+                   QThread::msleep(5 * sleepfaktor);
+                 }
+         file.close();
+         befehl = "rm " + filename;
+         if(system (befehl.toLatin1().data()))
                befehl = "";
-           // Ubuntu, Debian  
-           if (Linuxversion.indexOf("DISTRIB_DESCRIPTION=")>0)
-               Linuxversion=Linuxversion.right(Linuxversion.size()-20);
-           return Linuxversion;
+         return Linuxversion;
 }
 
 QString MWindow::kernel_version()  {
@@ -2730,4 +2728,5 @@ Auswertung in zahlen.txt
 
 Inhalt Anzahlfile.txt: Summe Anzahl gesicherter Dateien Verzeichnisse Links und Specials
 */
+
 

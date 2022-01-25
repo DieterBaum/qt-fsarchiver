@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2020 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2022 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -34,11 +34,15 @@ int pos = qdummy.indexOf("/usr/sbin");
 
 if (qdummy != "0" && pos > -1) {  //thread Festplatte klonen, Image erstellen midd ohne gzip
 	dialog_auswertung = system (qdummy.toLatin1().data()); 
-        qDebug() << "pos = qdummy.indexOf(/usr/sbin);" << pos << dialog_auswertung;
+       // qDebug() << "pos = qdummy.indexOf(/usr/sbin);" << pos << dialog_auswertung;
 	}
 }
 
  
+
+
+
+
 
 
 

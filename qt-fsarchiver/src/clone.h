@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2020 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2022 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -67,6 +67,11 @@ public slots:
         void folder_expand();
         int testen_1(QString filename, QString partition, int flag);
         int testen(QString filename);
+        void beschreibungstext_clone(QString text, int zip, int row);
+        QString sdx3_clone_einlesen(QString part_, int flag, int row);
+        QString format_clone(float zahl);
+        QString kernel_version_clone();  
+        QString linux_version_clone();
     
 private:
     QFileSystemModel *dirModel;
@@ -87,6 +92,10 @@ private slots:
    void thread2Ready();
 };
 #endif
+
+
+
+
 
 
 
