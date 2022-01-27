@@ -1,4 +1,4 @@
-# qt-fsarchiver-terminal
+# qt-fsarchiver
 qt-fsarchiver-terminal is required for qt-fsarchiver (https://github.com/dieterbaum/qt-fsarchiver)to work correctly.
 qt-fsarchiver: Back up and restore partitions, directories for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt4-fsarchiver]
 qt-fsarchiver can clone and image hard disks too.
