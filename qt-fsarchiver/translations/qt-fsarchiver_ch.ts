@@ -3074,9 +3074,8 @@ verschlüsseln. Schlüssel</comment>
         <location filename="../src/mainWindow.cpp" line="1376"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-6, January 30, 2022</source>
-<translation> 分区、目录和MBR 备份/恢复工具。        
+        <translation>分区、目录和MBR 备份/恢复工具。
 版本 0.8.6-6, 2022. 一月.30</translation>
-
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1448"/>
@@ -3217,12 +3216,6 @@ version 0.8.6-6, January 30, 2022</source>
         <comment>Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.
 </comment>
         <translation type="unfinished">错误。文件 ~/config/qt-fsarchiver/zahlen.txt 无法被 qt-fsarchiver 删除。该程序被终止了。手动删除提到的文件并重新启动程序。</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-6, January 30, 2022</source>
-        <translation type="vanished">分区、目录和MBR 备份/恢复工具。
-版本 0.8.6-6, 2022. 一月.30</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1728"/>

@@ -3117,12 +3117,6 @@ còpia de seguretat. clau:</translation>
         <translation type="vanished">Hi ha un espai en blanc al nom del directori de còpia de seguretat / restauració. És més segur utilitzar un directori sense espai. Si encara voleu continuar?</translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-6, January 30, 2022</source>
-        <translation type="vanished">Còpia de seguretat i restaurar de les particions, el directori i el MBR.
-Versió 0.8.6-6, 30. gener 2022</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1448"/>
         <source>Yes</source>
         <comment>Ja</comment>

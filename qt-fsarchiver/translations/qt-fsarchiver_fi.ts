@@ -3162,8 +3162,7 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="1376"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-6, January 30, 2022</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-5, 30. November 2021</comment>
-<translation>Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.        
+  <translation>Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.        
 Versio 0.8.6-6, 30.tammikuu 2022</translation>
     </message>
     <message>

@@ -3163,12 +3163,6 @@ Verze 0.8.6-6, 30. leden 2022</translation>
         <translation type="vanished">V názvu adresáře pro zálohování/obnovu je prázdné místo. Bezpečnější je použít adresář bez mezery. Chcete-li přesto pokračovat?</translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-6, January 30, 2022</source>
-        <translation type="vanished">Zálohování a obnovení příčky, adresář a MBR.
-Verze 0.8.6-6, 30. leden 2022</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1448"/>
         <source>Yes</source>
         <comment>Ja</comment>

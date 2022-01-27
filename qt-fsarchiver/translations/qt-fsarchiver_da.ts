@@ -3094,9 +3094,9 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1376"/>
-        <source>Backup and restore partitions, directory and MBR.
+               <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-6, January 30, 2022</source>
-<translation>Backup og gendanne partitioner, bibliotek og MBR.        
+        <translation>Backup og gendanne partitioner, bibliotek og MBR.
 Version 0.8.6-6, 30.Januar 2022</translation>
     </message>
     <message>
@@ -3306,13 +3306,7 @@ Version 0.8.6-6, 30.Januar 2022</translation>
         <translation type="vanished">Der er et tomrum i navnet på mappen til sikkerhedskopiering/gendannelse af sikkerhedskopiering. Det er sikrere at bruge en mappe uden et mellemrum. Hvis du stadig ønsker at fortsætte?</translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-6, January 30, 2022</source>
-        <translation type="vanished">Backup og gendanne partitioner, bibliotek og MBR.
-Version 0.8.6-6, 30.Januar 2022</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1761"/>
+    <location filename="../src/mainWindow.cpp" line="1761"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!

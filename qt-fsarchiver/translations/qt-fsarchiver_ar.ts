@@ -3097,13 +3097,6 @@ verschlüsseln. Schlüssel</comment>
         <translation>استعادة يتم تنفيذ</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1376"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-6, January 30, 2022</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-5, 30. November 2021</comment>
-     <translation>نسخة 0.8.6-6 30 ينايرا.</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1863"/>
         <source>The partition to be written back to is too small.
 </source>
@@ -3317,10 +3310,10 @@ version 0.8.6-6, January 30, 2022</source>
         <translation type="vanished">وجد مساحة فارغة في اسم دليل النسخ الاحتياطي / الاستعادة. يعتبر استخدام دليل بدون مسافة أكثر أمانًا. إذا كنت لا تزال تريد المتابعة؟</translation>
     </message>
     <message>
+        <location filename="../src/mainWindow.cpp" line="1376"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-6, January 30, 2022</source>
-        <translation type="vanished">أقسام الدليل 
- نسخة 0.8.6-6 30 يناير 2022</translation>
+        <translation>نسخة 0.8.6-6 30 ينايرا.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1761"/>

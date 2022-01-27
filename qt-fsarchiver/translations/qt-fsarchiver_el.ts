@@ -3326,12 +3326,6 @@ version 0.8.6-6, January 30, 2022</source>
         <translation type="vanished">Υπάρχει κενό διάστημα στο όνομα του καταλόγου δημιουργίας αντιγράφων ασφαλείας/επαναφοράς. Είναι ασφαλέστερο να χρησιμοποιήσετε έναν κατάλογο χωρίς κενό. Εάν θέλετε να συνεχίσετε;</translation>
     </message>
     <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-6, January 30, 2022</source>
-        <translation type="vanished">Δημιουργία αντιγράφων ασφαλείας και επαναφορά διαμερίσματα, καταλόγου και MBR.
-Έκδοση 0.8.6-6, 30.Ιανουάριος 2022</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1761"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>
