@@ -30,11 +30,10 @@ void Thread::setValues( int anzahl_, QString dummy ) {  //Image Festplatte oder 
 
 void Thread::run() {
 extern int dialog_auswertung;
-int pos = qdummy.indexOf("/usr/sbin"); 
-
-if (qdummy != "0" && pos > -1) {  //thread Festplatte klonen, Image erstellen midd ohne gzip
+int pos = qdummy.indexOf("/usr/sbin");
+if (qdummy != "0" && pos > -1) {  //thread Festplatte klonen, Image erstellen mit dd ohne gzip
 	dialog_auswertung = system (qdummy.toLatin1().data()); 
-       // qDebug() << "pos = qdummy.indexOf(/usr/sbin);" << pos << dialog_auswertung;
+        //qDebug() << "pos = qdummy.indexOf(/usr/sbin);" << pos << dialog_auswertung;
 	}
 }
 

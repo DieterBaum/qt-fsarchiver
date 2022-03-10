@@ -72,7 +72,8 @@ public slots:
         QString format_clone(float zahl);
         QString kernel_version_clone();  
         QString linux_version_clone();
-    
+        void program_end();
+            
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;

@@ -21,7 +21,6 @@
 #include <QMessageBox>
 #include <string.h>
 #include "ui_dir_dialog.h"
-#include "thread.h"
 
 class DialogDIR : public QWidget, private Ui::dir_dialog
 {
@@ -58,6 +57,8 @@ protected slots:
     void save_attribut_dir(QString attribut);
     QString datei_auswerten_dir(QString buchstabe);
     QString datei_auswerten_1_dir(QString dateiname);
+    void closeEvent(QCloseEvent *event);
+    QString pid_ermitteln_dir(QString prozess);
               
 private slots:    
    void thread1Ready();

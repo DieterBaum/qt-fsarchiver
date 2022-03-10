@@ -22,8 +22,6 @@
 
 #include <string.h>
 #include "ui_fsarchiverMain.h"
-#include "thread.h"
-
 #include <QDialog>
 #include <QMap>
 
@@ -99,8 +97,6 @@ protected slots:
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
-    Thread thread1;
-    Thread thread2;
     QTimer *timer;  
     
     

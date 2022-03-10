@@ -1,6 +1,11 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.6-7 March 30, 2022.
+    - Unintentional closing of the main menu can be prevented by security prompt.
+    - Error correction when backing up and restoring directories.
+    - qt-fsarchiver-terminal must be updated to version 0.8.6-7.
+    - Update is included in the deb and rpm packages and in the launchpad repository.
 * qt-fsarchiver-0.8.6-6 January 30, 2022.
     - Hint file is created when creating an image of a partition..
     - Correction of the uninstall program.

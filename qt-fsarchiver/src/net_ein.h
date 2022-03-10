@@ -30,7 +30,6 @@ public:
 	NetEin();
         ~NetEin() {}
         int list_net(QString flag);
-        int list_net_ssh();
         QString Namen_holen(); 
 	QString user_holen(); 
 	QString key_holen(); 
@@ -42,11 +41,9 @@ protected slots:
         void save_net ();
    	void restore_net ();
         QString hostname();
-        QString IP(QString adresse);
         void listWidget_show();
-        int setting_save(QString user_net_ein);  
+        void setting_save(QString user_net_ein);  
         void Kennwort();
-        int Array_pruefen(QString ip);
         int questionMessage(QString frage);
 
 private:

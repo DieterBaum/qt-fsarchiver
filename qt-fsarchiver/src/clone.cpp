@@ -25,6 +25,7 @@
 extern int dialog_auswertung;
 extern int anzahl_disk;
 extern QString folder_file_;
+QString folder_file_1;
 int zaehler_2;
 QStringList filters_clone;
 QString part_clone[100][4];
@@ -66,6 +67,7 @@ QString userpath_clone;
 int mountpoint1;
 extern int sleepfaktor;
 QString homepath_clone = QDir::homePath();
+int enden = 0;
 
 DialogClone::DialogClone()
 {
@@ -77,7 +79,7 @@ DialogClone::DialogClone()
         connect( rdbt_partition_save, SIGNAL( clicked() ), this, SLOT(rdbutton_partition_image_save() ) ); 
         connect( rdbt_partition_restore, SIGNAL( clicked() ), this, SLOT(rdbutton_partition_image_restore() ) ); 
         //connect( pushButton_break, SIGNAL( clicked() ), this, SLOT(esc_end()));
-        connect( bt_end, SIGNAL( clicked() ), this, SLOT(close()));
+        connect( bt_end, SIGNAL( clicked() ), this, SLOT(program_end()));
         connect( pushButton_folder, SIGNAL( clicked() ), this, SLOT(folder_einlesen()));
         connect( pushButton_folder_2, SIGNAL( clicked() ), this, SLOT(folder_expand()));
         connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
@@ -306,6 +308,8 @@ Qt::CheckState state1;
           befehl = "/usr/sbin/qt-fsarchiver.sh  21 " + attribute;
           zip = 3; 
           folder_file_ = folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa.txt";
+          folder_file_1 = folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa";
+          thread1.setValues( 0,befehl);
           }
        else
           {
@@ -313,15 +317,15 @@ Qt::CheckState state1;
           befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
           zip = 0; 
           folder_file_ = folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa.txt";
+          folder_file_1 = folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa";
           }
-        thread1.setValues( 0,befehl);
-	ret = questionMessage(tr("Do you really want to create an image of a partition?  ", " Wollen Sie wirklich ein Abbild einer Partition erstellen? ") );  
+        ret = questionMessage(tr("Do you really want to create an image of a partition?  ", " Wollen Sie wirklich ein Abbild einer Partition erstellen? ") );  
               if (ret == 2)
                  return 0;
               if (ret == 1){
                	bt_end->setEnabled(false);
             	bt_save->setEnabled(false);
-              	ViewProzent();
+               ViewProzent();
                row = listWidget->currentRow();
                beschreibungstext_clone(folder_file_, zip, row);
                state1 = chk_Beschreibung->checkState();
@@ -340,23 +344,23 @@ Qt::CheckState state1;
                    }
                 this->setCursor(Qt::WaitCursor);
 		if (state == Qt::Checked){
-			read_write_hd();
-			startThread1(1);
+       		    read_write_hd();
+                    startThread1(1);
                    }
                 else 
-                {
-                         if(system (befehl.toLatin1().data()))
-                            befehl = "";
-                         read_write_hd_1();
-                         if (error == "1")
-                            {
-                            QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was not successful.", "Das Sichern des Abbildes der Festplatte war nicht erfolgreich.\n"));
-                            bt_end->setEnabled(true);
-                            bt_save->setEnabled(true);
-                            this->setCursor(Qt::ArrowCursor);
-                            return 0;
-                            }
-                      }
+                   {
+                    if(system (befehl.toLatin1().data()))
+                        befehl = "";
+                    read_write_hd_1();
+                    if (error == "1")
+                       {
+                       QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was not successful.", "Das Sichern des Abbildes der Festplatte war nicht erfolgreich.\n"));
+                       bt_end->setEnabled(true);
+                       bt_save->setEnabled(true);
+                       this->setCursor(Qt::ArrowCursor);
+                       return 0;
+                       }
+                    }
                 }
     return 0;
 }
@@ -459,7 +463,6 @@ chk_Beschreibung->setEnabled(false);
             	bt_save->setEnabled(false);
                 thread2.setValues( 0,befehl);
                 ViewProzent();
-                //text = window.beschreibungstext(DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
                 this->setCursor(Qt::WaitCursor);
                 pos = folder_clone.indexOf("gz.part");
 		if (pos > 0){
@@ -525,7 +528,6 @@ chk_Beschreibung->setEnabled(false);
 
        attribute = "if=" + partition_exist + " of=" + partition_clone + " bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
        befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute;
-       thread1.setValues(0,befehl);
        ret = questionMessage(tr(" Do you want really clone the hard drive? All dates on  ", " Wollen Sie wirklich die Festplatte klonen? Alle Daten auf der Festplatte ")   + partition_clone + tr(" are deleted!", " werden gelöscht!") );
               if (ret == 2)
                  return 0;
@@ -585,14 +587,16 @@ int success = 0;
         if (state == Qt::Checked)
           {
           attribute = "if=" + partition_exist + " | gzip --best > " + folder_clone +  partition_name + "-" + _Datum_clone + ".gz.fsa";
-          befehl = "/usr/sbin/qt-fsarchiver.sh  21 " + attribute; 
+          befehl = "/usr/sbin/qt-fsarchiver.sh  21 " + attribute;
+          folder_file_ = folder_clone +  partition_name + "-" + _Datum_clone + ".gz.fsa"; 
+          thread1.setValues( 0,befehl);
           }
        else
           {
 	   attribute = "if=" + partition_exist + " of=" + folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa bs=1M 2>" + userpath_clone + "/.config/qt-fsarchiver/disk.txt";
            befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute; 
+           folder_file_ = folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa";
           }
- 	thread1.setValues( 0,befehl);
 	ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
               if (ret == 2)
                  return 0;
@@ -1100,9 +1104,25 @@ void DialogClone::startThread2(int flag) {
 }
 
 void DialogClone::closeEvent(QCloseEvent *event) {
-   thread1.wait();
-   thread2.wait();
-   event->accept();
+QString attribute;
+QString befehl;
+int ret = 0;
+if (enden == 0)
+   {
+   ret = questionMessage(tr("Do you want really break clone, save or restore an image from the partition?", "Wollen Sie wirklich das Klonen der Festplatte, die Erstellung oder die Wiederherstellung eines Images der Festplatte beenden?"));
+    }
+       if (ret == 1)
+        { // beenden
+        esc_end();
+        flag_clone = 0;
+        event->accept();
+        }
+       if (ret == 2 )
+          {
+          event->ignore();
+          return;
+          } 
+     enden = 0;     
 }
 
 void DialogClone::thread1Ready()  {
@@ -1136,13 +1156,13 @@ float dummy1;
             if (flag_clone==2 && dialog_auswertung == 0)
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was successful.", "Das Sichern des Abbildes der Festplatte war erfolgreich.\n"));
             if (flag_clone==3 && dialog_auswertung == 0)
-            	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the image of the partition was successful.", "Das Sichern des Abbildes der Partition war erfolgreich.\n"));
+               	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the image of the partition was successful.", "Das Sichern des Abbildes der Partition war erfolgreich.\n"));
             if (flag_clone==1 && dialog_auswertung != 0){
             	progressBar->setValue(0);
                 savedBytes->setText("0");
                 this->repaint();
-QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was not successful.", "Das Klonen der Festplatte war nicht erfolgreich.\n"));
-            }
+                QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was not successful.", "Das Klonen der Festplatte war nicht erfolgreich.\n"));
+                }
             if (flag_clone==2 && dialog_auswertung != 0)
                 {
                 progressBar->setValue(0);
@@ -1272,42 +1292,57 @@ void DialogClone::keyPressEvent(QKeyEvent *event) {
      QWidget::keyPressEvent(event);
      switch( event->key() ) {
          case Qt::Key_Escape:
-              	esc_end(); 
+              close(); 
          break;
      }
+}
+
+void DialogClone::program_end()
+{
+        enden = 1;   
+    	close();
 }
 
 void DialogClone::esc_end()
 {
 QString befehl;
 QString attribute;
-
-   pid_2_ermitteln();
-   int ret = questionMessage(tr("Do you want really break clone, save or restore an image from the partition?", "Wollen Sie wirklich das Klonen der Festplatte, die Erstellung oder die Wiederherstellung eines Images der Festplatte beenden?"));
-      if (ret == 1)
-        {
-        attribute = "kill -15 " + pid_2_dd[0];;  //dd abbrechen
-        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
-        if(system (befehl.toLatin1().data()))
+QString filename;
+        filename = folder_file_1;
+        QFile file(filename);
+        if (file.exists())
+           { 
+           attribute = "rm " + filename + " 2>/dev/null";
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
+           if(system (befehl.toLatin1().data()))
            befehl = "";
-        attribute = "kill -15 " + pid_2_dd[1];;  //dd abbrechen
-        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
-        if(system (befehl.toLatin1().data()))
-            befehl = "";
-        attribute = "rm " + folder_clone +  partition_name + ".gz.fsa 2>/dev/null";
-        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
-       if(system (befehl.toLatin1().data()))
-           befehl = "";
-        attribute = "rm " + folder_clone +  partition_name + ".img.fsa 2>/dev/null";
-        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
-       if(system (befehl.toLatin1().data()))
-           befehl = "";
-        attribute = "rm " + folder_clone +  partition_name + ".gz.part.fsa 2>/dev/null";
-        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
-       if(system (befehl.toLatin1().data()))
-           befehl = "";
+           }
+        //evenzuelle Hinweisdatei entfernen
+        filename = folder_file_;
+        QFile file1(filename);
+        if (file1.exists())
+           { 
+           attribute = "rm " + filename + " 2>/dev/null";
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+           }
+         pid_2_ermitteln();
+         if(pid_2_dd[0] != "")
+           {
+            attribute = "kill -15 " + pid_2_dd[0];  //dd abbrechen
+            befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
+            if(system (befehl.toLatin1().data()))
+               befehl = "";
+            }
+        if(pid_2_dd[1] != "")
+           {
+           attribute = "kill -15 " + pid_2_dd[1];  //dd abbrechen
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+           }
     	close();
-        }
 }
 
 void DialogClone::pid_2_ermitteln()
@@ -1317,7 +1352,6 @@ QString pid_nummer;
 QStringList pid;
 int i = 0;
 int k = 0;
-
       QString filename = userpath_clone + "/.config/qt-fsarchiver/pid_2.txt";
       QFile file(filename);
       if (file.exists())
@@ -1325,7 +1359,7 @@ int k = 0;
          befehl = "rm " + filename;
          if(system (befehl.toLatin1().data()))
              befehl = "";
-      }  
+      }
       QTextStream ds(&file);
       if(file.open(QIODevice::ReadWrite | QIODevice::Text))
            {
@@ -1354,23 +1388,26 @@ int k = 0;
         if(system (befehl.toLatin1().data()))
            befehl = "";
         pid_nummer = pid_2_dd[0];
-        do{
-    	   k=pid_nummer.indexOf("  ");
-	   if (k > 0)
-              pid_nummer.replace("  ", " ");
-	   }
-	while  (k >= 0);
-	     pid = pid_nummer.split(" ");
-             pid_2_dd[0] = pid[1];
-        pid_nummer = pid_2_dd[1];
-        do{
-    	   k=pid_nummer.indexOf("  ");
-	   if (k > 0)
-              pid_nummer.replace("  ", " ");
-	   }
-	while  (k >= 0);
+        if(pid_nummer != "")
+           {
+           do{
+    	     k=pid_nummer.indexOf("  ");
+	     if (k > 0)
+                pid_nummer.replace("  ", " ");
+	     }
+	   while  (k >= 0);
+	   pid = pid_nummer.split(" ");
+           pid_2_dd[0] = pid[1];
+           pid_nummer = pid_2_dd[1];
+           do{
+    	       k=pid_nummer.indexOf("  ");
+	       if (k > 0)
+                   pid_nummer.replace("  ", " ");
+	     }
+	   while  (k >= 0);
 	     pid = pid_nummer.split(" ");
              pid_2_dd[1] = pid[1];
+           }
 }
 
 
@@ -1829,8 +1866,6 @@ QString text;
          if(system (befehl.toLatin1().data()))
                befehl = "";
          return Linuxversion;
-  
 }
-
 
 

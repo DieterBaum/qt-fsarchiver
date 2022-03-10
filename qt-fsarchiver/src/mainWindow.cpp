@@ -27,12 +27,10 @@
 #include "mbr.h"
 #include "clone.h"
 #include "dir.h"
-
 extern "C" {
 }
 #include <unistd.h>
 #include "treeview.h"
-#include "thread.h"
 
 QString Datum_akt("");
 QString partition_;
@@ -81,9 +79,11 @@ int rootpassword = 0;
 
 MWindow::MWindow()
 {
-   QStringList dummy; 
-   QStringList partition_kurz;
-   QString partition1_;
+if (dialog_auswertung == 6 or dialog_auswertung == 7)
+   return;
+QStringList dummy; 
+QStringList partition_kurz;
+QString partition1_;
    QStringList items;
    QString version = ""; 
    QString version1 = "";
@@ -142,7 +142,6 @@ MWindow::MWindow()
    connect( chk_hidden, SIGNAL( clicked() ), this, SLOT(chkhidden()));
    connect( chk_split, SIGNAL( clicked() ), this, SLOT(chkGB()));
    connect( cmd_zstd, SIGNAL( clicked() ), this, SLOT(zip_setting_einlesen())); 
-
    //Benutzername ermitteln
    user = homepath.right(homepath.size() -6);
    userpath = homepath;
@@ -289,8 +288,8 @@ MWindow::MWindow()
         found = version.indexOf("-");
         version.replace(found, 1, "");
         int version_  = version.toInt();
-        version1 ="0.8.6-3";
-       if (!file1.exists() or 8603 > version_)
+        version1 ="0.8.6-7";
+       if (!file1.exists() or 8607 > version_)
            {
        QMessageBox::warning(this,tr("Note", "Hinweis"),tr("qt-fsarchiver-terminal must be updated to version: ", "qt-fsarchiver-terminal muss auf die Version aktualisiert werden: ") + version1 + tr(" The program is terminated.", " Das Programm wird beendet"));
     	return;	
@@ -498,7 +497,6 @@ MWindow::MWindow()
         	setting.endGroup();
                 }
       	} 
-   
 }
 
 void MWindow::chkkey(){
@@ -1045,6 +1043,7 @@ QString text;
 QString befehl;
 int cmp = 0;
 QString attribute;
+  chk_pbr->setChecked(false); 
   indicator_reset();
   std::string dateiname;
   keyText = lineKey->text();
@@ -1339,7 +1338,6 @@ QString MWindow::UUID_auslesen(int row){
 }
 
 void MWindow::zip_einlesen() {
-qDebug() << "Bin in zip einlesen";
 int zip = cmb_zip->currentIndex();
     if (zip == 10) 
        cmb_zstd->setEnabled(true);
@@ -1371,14 +1369,19 @@ void MWindow::folder_file() {
    extern QString folder_file_;
    folder_file_ = folder + "/" + DateiName + "-" + _Datum + ".txt";
 }
+/*
+void MWindow::info() {
+   QMessageBox::information(0,"qt-fsarchiver","Backup and restore partitions, directory and MBR.\nversion 0.8.6-7, March 30, 2022");
+}*/
+
 
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-6, January 30, 2022",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-6, 30. Januar 2022"));
-      }
-
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-7, March 30, 2022",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-7, 30. März 2022"));
+}
+         
 int MWindow::is_running(){
       QString running;
       QString befehl;
@@ -1603,8 +1606,52 @@ void MWindow::format_() {
 }
 
 void MWindow::closeEvent(QCloseEvent *event) {
-     del_mediafolder();
-     event->accept();
+QString attribute;
+QString befehl;
+int ret;
+int pos;
+QString pid_qt_fsarchiver_terminal; 
+      pid_qt_fsarchiver_terminal = pid_ermitteln_("qt-fsarchiver-terminal");
+      if (pid_qt_fsarchiver_terminal == "")
+         return;
+      ret = questionMessage(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+      if (ret == 1 && pid_qt_fsarchiver_terminal != "")
+        { // beenden
+        attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
+        if(system (befehl.toLatin1().data()))
+            befehl = "";
+        del_mediafolder(); 
+        // eventuell vorhandene Hinweis- und pbr-Datei entfernen
+        pos = SicherungsFolderFileName.indexOf("fsa");
+       	SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
+       	SicherungsFolderFileName.insert(pos, QString("txt"));
+        QFile file(SicherungsFolderFileName);
+        if (file.exists())
+           {
+           attribute = "rm " + SicherungsFolderFileName;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+           }
+        // pbr-Datei löschen
+        pos = SicherungsFolderFileName.indexOf("txt");
+        SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
+        SicherungsFolderFileName.insert(pos, QString("pbr"));
+        QFile file1(SicherungsFolderFileName);
+        if (file1.exists())
+           {
+           attribute = "rm " + SicherungsFolderFileName;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+           }
+        } 
+     if (ret == 2)
+       {
+       event->ignore();
+       return;
+       } 
 }
 
 void MWindow::thread1Ready(){
@@ -1875,6 +1922,7 @@ int err = 0;
     sekunde_summe = 0;
     minute_elapsed = 0;
     sekunde_elapsed = 0;
+    chk_pbr->setChecked(true); 
 }
 
 void MWindow::elapsedTime()
@@ -1945,11 +1993,14 @@ float part_size;
 QString Linuxversion;
 QString ubuntu_root;
 QString ubuntu_home;
-QString compress = zip_[zip];
+QString compress;
 QString kernel;
 QString dummy;
 QString dummy1;
 int pos = 0;
+int zstd = 0; 
+int zip_zstd = 0; 
+QString zip_zstd_ = ""; 
 compress_[0] = 0.54;  //lz4
 compress_[1] = 0.55;  //lzo
 compress_[2] = 0.46;  //gzip fast
@@ -1983,11 +2034,26 @@ compress_zstd[19] = 0.39;
 compress_zstd[20] = 0.39;  
 compress_zstd[21] = 0.39;  
 compress_zstd[22] = 0.39;  //Z22
-int zstd = cmb_zip->currentIndex();
-int zip_zstd = cmb_zstd->currentIndex() +1;
-QString zip_zstd_ = QString::number(zip_zstd);
+if (dialog_auswertung < 6) // darf nicht aufgerufen werden beim Speichern/Wiederherstellen über das Netz
+    {
+    zstd = cmb_zip->currentIndex();
+    zip_zstd = cmb_zstd->currentIndex() +1;
+    zip_zstd_ = QString::number(zip_zstd);
+    } 
+if (dialog_auswertung == 6 or dialog_auswertung == 7) // darf nicht aufgerufen werden beim Speichern/Wiederherstellen über das Netz
+    {
+    if(zip > 9)
+       {
+       zstd = zip;
+       zip_zstd = zip -10;
+       zip_zstd_ = QString::number(zip_zstd);
+       zip = 10;
+       zstd = 10;
+       }
+    }           	
 part[row][4] = sdx3_einlesen(part[row][0],0);
 part[row][5] = sdx3_einlesen(part[row][0],1);
+compress = zip_[zip];
      if(zstd == 10)
         compress = compress + " level:" + zip_zstd_;
       dummy = part[row][4];
@@ -2171,12 +2237,14 @@ QString attribute;
 QString pid_qt_fsarchiver;
 QString pid_qt_fsarchiver_terminal;
 int ret = 0;
+int pos = 0;
       pid_qt_fsarchiver = pid_ermitteln_("qt-fsarchiver"); 
       pid_qt_fsarchiver_terminal = pid_ermitteln_("qt-fsarchiver-terminal"); 
       if (flag == 0)
           ret = questionMessage(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
       if (ret == 1)
        {
+       del_mediafolder();
        if (pid_qt_fsarchiver_terminal != "")
         {
         attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
@@ -2188,22 +2256,31 @@ int ret = 0;
         if(system (befehl.toLatin1().data()))
             befehl = "";
         }
-     	int pos = SicherungsFolderFileName.indexOf("fsa");
+        // Hinweis-Datei löschen
+     	pos = SicherungsFolderFileName.indexOf("fsa");
        	SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
        	SicherungsFolderFileName.insert(pos, QString("txt"));
-        attribute = "rm " + SicherungsFolderFileName;
-        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
-        if(system (befehl.toLatin1().data()))
-            befehl = "";
-// pbr-Datei löschen
+        QFile file(SicherungsFolderFileName);
+        if (file.exists())
+           {
+           attribute = "rm " + SicherungsFolderFileName;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+            }
+        // pbr-Datei löschen
         pos = SicherungsFolderFileName.indexOf("txt");
         SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
         SicherungsFolderFileName.insert(pos, QString("pbr"));
-         attribute = "rm " + SicherungsFolderFileName;
-         befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
-        if(system (befehl.toLatin1().data()))
-            befehl = "";
-        attribute = "kill -15 " + pid_qt_fsarchiver;  //qt-fsarchiver-terminal abbrechen
+        QFile file1(SicherungsFolderFileName);
+        if (file1.exists())
+           {
+           attribute = "rm " + SicherungsFolderFileName;
+           befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute; 
+           if(system (befehl.toLatin1().data()))
+               befehl = "";
+           }
+        attribute = "kill -15 " + pid_qt_fsarchiver;  //qt-fsarchiver abbrechen
         befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
         if(system (befehl.toLatin1().data()))
             befehl = "";
@@ -2227,7 +2304,7 @@ void MWindow::del_mediafolder()
       QStringList dev_sdx;
       QString dev_sdx_;
       QString devsdx[100][6];
-     // qApp->quit();
+      QString pid_qt_fsarchiver_terminal;
       QTextStream ds(&file);
       if(file.open(QIODevice::ReadWrite | QIODevice::Text))
          {
@@ -2562,6 +2639,8 @@ QString attribute;
      if(system (befehl.toLatin1().data()))
          befehl = "";
      QFile::remove(userpath + "/.config/qt-fsarchiver/version.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/disk.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/disk1.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/disk2.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/disk3.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/running.txt");
@@ -2574,6 +2653,11 @@ QString attribute;
      QFile::remove(userpath + "/.config/qt-fsarchiver/prozent.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/pid.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/kernel.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/folder.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/ip.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/route.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/smbclient.txt");
+
 
 }
 

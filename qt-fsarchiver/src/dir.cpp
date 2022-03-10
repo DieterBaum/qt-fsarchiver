@@ -207,7 +207,6 @@ void DialogDIR::chkkey(){
 }
 
 int DialogDIR::folder_dir_path_einlesen() {
-MWindow window;
 int pos = 0;
 QString befehl = "";
 int zip ;
@@ -224,13 +223,6 @@ int found = 0;
          befehl = "";
      attribute = "";
      QFile::remove(userpath_dir + "/.config/qt-fsarchiver/zahlen.txt");  
-if (file1.exists())
-        {
-        QMessageBox::warning(this,tr("Note", "Hinweis"),
-         	tr("Error. The file ~/config/qt-fsarchiver/zahlen.txt could not be deleted by qt-fsarchiver. The program is terminated. Manually delete the mentioned file and start the program again.\n", "Fehler. Die Datei ~/config/qt-fsarchiver/zahlentext konnte von qt-fsarchiver nicht gelöscht werden. Das Programm wird beendet. Löschen Sie manuell die genannte Datei und starten das Programm erneut.\n"));
-        window.del_mediafolder();
-        return 1;
-        }
    	QModelIndex index = treeView_dir->currentIndex();
    	folder_dir.append  (dirModel->filePath(index));
    	folder_dir =  (dirModel->filePath(index));
@@ -322,13 +314,20 @@ if (file1.exists())
                indizierung = indizierung + 2;  
 	      }
         dummy = folder_path;
-      	while (pos != -1)
+        pos = 0;
+        while (pos != -1)
+      	{
+      		pos = dummy.indexOf("+");
+      		dummy.replace(pos,1,"-");
+      		}
+        pos = 0;
+       	while (pos != -1)
       	{
       		pos = dummy.indexOf("/");
-      		dummy.replace(pos,1,"-"); 
+      		dummy.replace(pos,1,"-");
       		}
       	dummy.replace(0,1,"/"); 
-        parameter[indizierung] = folder_dir + dummy + ".fsa";
+      	parameter[indizierung] = folder_dir + dummy + ".fsa";
         parameter[indizierung+1] = folder_path;
         QFile f(parameter[indizierung]);
         if  (parameter[4] != "-o" && (f.exists())){
@@ -344,7 +343,6 @@ if (file1.exists())
   		 }
 		 attribute = QString::number(indizierung + 2)  + attribute;
                  save_attribut_dir(attribute);
-qDebug() << "attribute" << attribute;
             indicator_reset();
          //   werte_reset();
             bt_save->setEnabled(false);
@@ -352,8 +350,8 @@ qDebug() << "attribute" << attribute;
             flag_View_dir = 1;
             ViewProzent();
             befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_dir;
-          if(system (befehl.toLatin1().data()))
-               befehl = "";
+           if(system (befehl.toLatin1().data()))
+              befehl = "";
             return 0;
             }
 
@@ -926,8 +924,61 @@ void DialogDIR::folder_expand_path()
    treeView_path->expand(index);
 }
 
+void DialogDIR::closeEvent(QCloseEvent *event) {
+QString attribute;
+QString befehl;
+int ret;
+QString pid_qt_fsarchiver_terminal; 
+      pid_qt_fsarchiver_terminal = pid_ermitteln_dir("qt-fsarchiver-terminal");
+      if (pid_qt_fsarchiver_terminal == "")
+         return;
+      ret = questionMessage(tr("Do you really want to finish the backup or restore of the directory?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung des Verzeichmisses beenden?"));
+      if (ret == 1 && pid_qt_fsarchiver_terminal != "")
+        { // beenden
+        attribute = "kill -15 " + pid_qt_fsarchiver_terminal;  //qt-fsarchiver-terminal abbrechen
+        befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;  
+        if(system (befehl.toLatin1().data()))
+            befehl = "";
+        } 
+     if (ret == 2)
+       {
+       event->ignore();
+       return;
+       } 
+}
 
-
+QString DialogDIR::pid_ermitteln_dir(QString prozess)
+{
+QString befehl = "";
+QString pid_nummer = "";
+QStringList pid;
+      QString filename = userpath_dir + "/.config/qt-fsarchiver/pid.txt";
+      if (userpath_dir == "/root")
+         filename = userpath_dir + "/.config/pid.txt"; 
+      QFile file(filename);
+      QTextStream ds(&file);
+      if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+      {
+         befehl = "ps -C " + prozess + " 1> " +  filename;
+         if (system (befehl.toLatin1().data()))
+             befehl = "";
+      if(file.size() == 0) 
+         return " ";
+        pid_nummer = ds.readLine();
+        pid_nummer = ds.readLine();
+        pid_nummer = pid_nummer.trimmed();        
+         }
+        file.close();
+        befehl = "rm " + filename;
+        if (system (befehl.toLatin1().data()))
+           befehl = "";
+      if (pid_nummer != "")
+        {
+         pid = pid_nummer.split(" ");
+         pid_nummer = pid[0];
+         }
+        return pid_nummer;
+}
 
 
 

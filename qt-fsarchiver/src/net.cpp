@@ -45,7 +45,8 @@ QString partition_net; // z.B 192.168.2.5
 QString partition_net_; // z.B sda1
 QString UUID_net;
 QString partition_typ_net;
-QString DateiName_net("") ;
+//QString DateiName_net("") ;
+QString DateiName_net = "";
 QString _Datum_net;
 QString part_art_net;
 QString user_net;
@@ -579,7 +580,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
          attribute = "-t cifs -o username=" + user_net + ",password=" + key_net + ",uid=0,gid=0 //" + rechner_IP + "/'" + folder_free + "' " + userpath_net + "/.qt-fs-client";
          befehl = "/usr/sbin/qt-fsarchiver.sh  19 " + attribute; 
          k = system (befehl.toLatin1().data());
-       	}
+      	}
        if (net_art == 2){ //NFS
            attribute = rechner_IP + ":" + folder_free +  " " + userpath_net + "/.qt-fs-client" ; //mounten
            befehl = "/usr/sbin/qt-fsarchiver.sh  2 " + attribute; 
@@ -596,10 +597,14 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
          zip = cmb_zip->currentIndex();
          if (zip == -1)
             zip = 3;
+         int zip_zstd_net  = cmb_zstd_net->currentIndex() + 1;
+         if (zip == 10) 
+             zip = zip + zip_zstd_net; 
          int liveFlag = 0;
          int row;
          // Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
          row = listWidget->currentRow();
+         dialog_auswertung = 6;
          text = window.beschreibungstext(DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
          filedialog.werte_uebergeben(text);
          //Überprüfung ob gemounted
@@ -656,7 +661,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                 }
 	   if (rdBt_saveFsArchiv->isChecked())
            		{
-                         int indizierung;
+           		  int indizierung;
                          state = chk_overwrite->checkState();
                          state1 = chk_key->checkState(); 
                          state3 = chk_split->checkState();
@@ -686,7 +691,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                                     parameter[4] = "-o";
                                     indizierung = 5;
 				    }	
-                                 if (state1 == Qt::Checked)   //Schlüssel ja
+				    if (state1 == Qt::Checked)   //Schlüssel ja
                                     {
                                     //Wiederholung der Eingabe und prüfen auf Übereinstimmung
                                     if(rootpassword_net == 1)
@@ -713,7 +718,12 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                				        }
                                      indizierung = indizierung + 2;  
 				     }
-                                  if (state3 == Qt::Checked)   //Archiv splitten 
+				    if (net_art == 2) //NFS -x hinzufügen
+				       {
+                                      parameter[indizierung] = "-x";
+                                      indizierung = indizierung + 1;
+                                      }
+				    if (state3 == Qt::Checked)   //Archiv splitten 
                                      {
                                       parameter[indizierung] = "-s4400";
                                       indizierung = indizierung + 1;
@@ -721,7 +731,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                                   if (liveFlag == 1)
                                       {
                                       parameter[indizierung] = "-A";
-	    			      parameter[indizierung + 1] = "-a";
+	    			       parameter[indizierung + 1] = "-a";
                                       indizierung = indizierung + 2; 
                                       }
 				  QFile file_suse(".snapshots");
@@ -767,27 +777,33 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                                       return 0;
                 		      }
                 	         }
-				//txt-Datei von /.config/qt-fsarchiver in die gemeountete Partition kopieren
-                                attribute = folder_file_ + " " + userpath_net + "/.qt-fs-client/" +  DateiName_net + "-" + _Datum_net + ".txt";
+                	         //txt-Datei von /.config/qt-fsarchiver in die gemeountete Partition kopieren
+                	         attribute = folder_file_ + " " + userpath_net + "/.qt-fs-client/" +  DateiName_net + "-" + _Datum_net + ".txt";
                                 befehl = "/usr/sbin/qt-fsarchiver.sh  11 " + attribute;  //Datei kopieren
-                              if(system (befehl.toLatin1().data()))
+                                QThread::msleep(20 * sleepfaktor);
+                                if(system (befehl.toLatin1().data()))
                                     befehl = "";
-                               QString attribute; 
-			       for ( int i=0; i<15; i++)
+                                // txt-Datei löschen
+                               QThread::msleep(20 * sleepfaktor);
+                               QFile::remove(folder_file_);       
+                                attribute = "";
+			        for ( int i=0; i<15; i++)
   				  {
   				  if (parameter[i] != " ")
      				  attribute = attribute + " " + parameter[i];
   				  }
 				attribute = QString::number(indizierung + 2)  + attribute;
-                                save_attribut_net(attribute);
+				save_attribut_net(attribute);
+                               QThread::msleep(20 * sleepfaktor);
 				pushButton_end->setEnabled(false);  
                                 pushButton_save->setEnabled(false); 
                                 flag_View_net = 1;
                                 ViewProzent();
                                 stopFlag_ = 0;
                                 this->setCursor(Qt::WaitCursor);
+                                QThread::msleep(10 * sleepfaktor);
   				befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath_net;
-                               if(system (befehl.toLatin1().data()))
+  				if(system (befehl.toLatin1().data()))
                                     befehl = "";
         		        }
                        }
@@ -1007,7 +1023,7 @@ QFile file1(userpath_net + "/.config/qt-fsarchiver/zahlen.txt");
                  } 
    	if (rdBt_restoreFsArchiv->isChecked())
               {
-if (partition_typ_net == "btrfs"){
+        if (partition_typ_net == "btrfs"){
                  QThread::msleep(20 * sleepfaktor);
                  befehl = "/usr/sbin/qt-fsarchiver.sh  4 /dev/" + partition_net_; // unmounten
  		if(system (befehl.toLatin1().data()))
@@ -1020,7 +1036,7 @@ if (partition_typ_net == "btrfs"){
                state1 = chk_key->checkState();
 	       parameter[0] = "fsarchiver";
 	       parameter[1] = "restfs"; 
-       	       int kerne = cmb_kerne->currentIndex()+1;
+       	int kerne = cmb_kerne->currentIndex()+1;
                QString index = QString::number(kerne);
                if (index == "0")
                   index = "1"; 
@@ -1250,46 +1266,9 @@ QString attribute;
 int part_testen;
 int err = 0;
 int success = 0;
-int net_art = cmb_Net->currentIndex();  
+//int net_art = cmb_Net->currentIndex();  
    this->setCursor(Qt::ArrowCursor);
    if (endeThread_net !=0) {
-     if (net_art == 1) //SSH
-       {
-       //befehl = "/etc/init.d/ssh restart";
-       attribute = "-u " + userpath_net + "/.qt-fs-client 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh  17 " + attribute;  //fuserufusermount -umount
-       }
-     if (net_art == 0) //Samba
-       {
-       attribute = "-f " + userpath_net + "/.qt-fs-client 2>/dev/null";
-       befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
-       }
-     if (net_art == 2) //NFS
-     {
-      // befehl = "/etc/init.d/nfs-kernel-server restart";
-         attribute = "-a -t nfs 2>/dev/null";
-         befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
-     }
-     if(system (befehl.toLatin1().data()))
-           befehl = "";
-        // wurde nicht erfolgreich gemeounted wurde in die Datei .qt-fs-client gesichert.
-        // in diesem Fall verbleibt nach dem entmounten die gesicherten Datein in dem Ordner .qt-fs-client
-        // Es wird geprüft ob die fsa-Datei vorhanden ist oder nicht
-      QThread::msleep(25 * sleepfaktor);
-      QString filename = userpath_net + "/.qt-fs-client/" + name_txt_file;
-      QFile file(filename);
-      if (file.exists())
-           {
-           success = 1;
-           befehl = "/usr/sbin/qt-fsarchiver.sh  10 rm " + filename + " 2>/dev/null"; 
-           if(system (befehl.toLatin1().data()))
-               befehl = "";
-           filename = filename.left(filename.size()-3) + "txt";
-           befehl = "/usr/sbin/qt-fsarchiver.sh  10 rm " + filename + " 2>/dev/null"; 
-           if(system (befehl.toLatin1().data()))
-              befehl = "";
-           } 
-      // die Dateien fsa umd txt müssen gelöscht werden
        dummy = datei_auswerten_net("p"); 
        err = dummy.toInt();
        progressBar->setValue(100);
