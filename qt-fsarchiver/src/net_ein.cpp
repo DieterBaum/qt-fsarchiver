@@ -98,6 +98,9 @@ int NetEin:: list_net(QString flag)
 {
 int pos = 0;
 int k = 0;
+int i = 0;
+int j = 0;
+int m = 0;
 QStringList adresse_;
 QString attribute;
 QString adresse_eigen;
@@ -108,6 +111,10 @@ QString befehl;
 QString hostname_;
 QString router;
 QStringList router_;
+QString _adresse[100];
+QString dummy;
+        QFile file4("/usr/bin/findsmb");
+        hostname_ = hostname();
         //Routeradresse finden, damit diese Adresse nicht angezeigt wird.
         befehl = "ip route | grep default 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/route.txt";
 	if (system (befehl.toLatin1().data()))
@@ -116,25 +123,94 @@ QStringList router_;
        	QTextStream ds2(&file2);
         file2.open(QIODevice::ReadOnly | QIODevice::Text);
         router = ds2.readLine();
+        if (router == "")
+           {
+           QMessageBox::warning(this,tr("Note","Hinweis"),
+      		tr("There is currently no network computer available.\n","Es ist derzeit kein Netzwerkrechner erreichbar.\n"));
+           return 1;
+           }
         router_ = router.split(QRegExp("\\s+"));
         router = router_[2];
         file2.close();
-        QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/findsmb.txt");
-        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
-        befehl = "findsmb 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/findsmb.txt";
-	if (system (befehl.toLatin1().data()))
-            befehl = "";
-        QTextStream ds1(&file1);
-        QString adresse = ds1.readLine();
-        file1.open(QIODevice::ReadOnly | QIODevice::Text); 
-        // Eigenen Rechner nicht anzeigen
-	hostname_ = hostname();
-	QThread::msleep(5 * sleepfaktor);
-   	     while (!ds1.atEnd()) {
+        if (!file4.exists())
+            {
+            QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/nmblookup.txt");
+            file1.open(QIODevice::ReadWrite | QIODevice::Text);
+            QThread::msleep(5 * sleepfaktor);
+            befehl = "nmblookup '*' 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/nmblookup.txt";
+	    if (system (befehl.toLatin1().data()))
+                befehl = "";
+            QThread::msleep(5 * sleepfaktor);
+           // file1.open(QIODevice::ReadOnly | QIODevice::Text);          
+            QTextStream ds1(&file1);
+            _adresse[k] = ds1.readLine();
+            k ++;
+            while (!ds1.atEnd()) {
+               _adresse[k] = ds1.readLine();
+               dummy = _adresse[k]; 
+               pos = dummy.indexOf("*<00>");
+               dummy = dummy.left(pos-1);
+               if(dummy != router)
+                 {
+                 QThread::msleep(5 * sleepfaktor); 
+                 _adresse[m] = dummy;
+                 m ++;
+                 }
+              } 
+ 	   file1.close();
+ 	   QFile file3(userpath_net_ein + "/.config/qt-fsarchiver/nmblookup.txt");
+ 	   for (i=0; i<m; i++)
+ 	      {
+ 	      befehl = "nmblookup -A " +  _adresse[i] + " 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/nmblookup.txt";
+ 	      if (system (befehl.toLatin1().data()))
+                 befehl = "";
+              file3.open(QIODevice::ReadOnly | QIODevice::Text);   
+              QTextStream ds3(&file3);
+              QThread::msleep(5 * sleepfaktor);  
+              dummy = ds3.readLine(); // 1. Zeile uninteressant
+              while (!ds3.atEnd()) 
+                 {
+                 dummy = ds3.readLine(); 
+                 dummy = dummy.trimmed();
+                 pos = dummy.indexOf("<00> -         B <ACTIVE>");
+                 if (pos > -1 )
+                    { 
+                    dummy = dummy.left(pos);
+                    dummy = dummy.trimmed();
+                    dummy = dummy.toLower(); 
+                    if(hostname_ != dummy)
+                       {
+                       widget_net[j] = _adresse[i] + " " + dummy;
+                       j ++;
+                       }
+                    }     
+               } 
+               file3.close(); 
+             }
+             // Dateie entfernen 
+             if (file3.exists()){
+     		attribute = "~/.config/qt-fsarchiver/nmblookup.txt";
+                befehl = "/usr/sbin/qt-fsarchiver.sh  15 " + attribute; 
+		if(system (befehl.toLatin1().data()))
+                   befehl = "";
+                } 
+             } 
+          
+           if (file4.exists())
+            { 
+            QFile file1(userpath_net_ein + "/.config/qt-fsarchiver/findsmb.txt");
+            file1.open(QIODevice::ReadWrite | QIODevice::Text);
+            befehl = "findsmb 1> " +  userpath_net_ein + "/.config/qt-fsarchiver/findsmb.txt";
+	    if (system (befehl.toLatin1().data()))
+                befehl = "";
+            QTextStream ds1(&file1);
+            QString adresse = ds1.readLine();
+            // Eigenen Rechner nicht anzeigen
+	    QThread::msleep(5 * sleepfaktor);
+	    while (!ds1.atEnd()) {
              	adresse = ds1.readLine();
              	adresse = adresse.toLower();
-             	//qDebug() << "adresse" << adresse;
-            	pos = adresse.indexOf("["); 
+             	pos = adresse.indexOf("["); 
                if ( pos > 0)
                 { adresse_ = adresse.split(QRegExp("\\s+"));
                   adresse2 = adresse_[0];
@@ -150,21 +226,21 @@ QStringList router_;
                   }              
              } 
 	file1.close();
+         
         // Dateien entfernen 
   	if (file1.exists()){
      		attribute = "~/.config/qt-fsarchiver/findsmb.txt";
                 befehl = "/usr/sbin/qt-fsarchiver.sh  15 " + attribute; 
 		if(system (befehl.toLatin1().data()))
                    befehl = "";
-               
-       } 
-        //Ermitteln widget_net Belegung
+               }
+        }
+       //Ermitteln widget_net Belegung
         if (widget_net[0] == "" && flag == "1"){
    		QMessageBox::warning(this,tr("Note","Hinweis"),
       		tr("There is currently no network computer available.\n","Es ist derzeit kein Netzwerkrechner erreichbar.\n"));
         return 1;
    }
-   
    return 0;
 }
 
