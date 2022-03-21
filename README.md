@@ -1,7 +1,7 @@
 # qt-fsarchiver
 qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 
-Copyright (C) 2008-2020 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2022 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
@@ -10,6 +10,7 @@ qt4-fsarchiver was translated QT5 environment and renamed in qt-fsarchiver.
 
 qt-fsarchiver a program with a graphical interface for easy operation the archiving program fsarchiver.
 qt-fsarchiver has been split into a program with a graphical user interface and a terminal program.
+Both programs must be installed.
 The graphical program can be started without root rights.
 Thus the startup problems with gksu/gksudo, which is no longer installable, were solved with Wayland and Snap programs.
 
@@ -19,20 +20,21 @@ For Debian, Ubuntu and Linux Mint are deb packages for Suse and Fedora rpm packa
 Installing the program from the source files:
 To install qt-fsarchiver and qt-fsarchiver-terminal the necessary dependencies for fsarchiver and the qt5 development environment must be installed.
 Of Debian based distributions: This is the command:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt11-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qtbase5-dev qttools5-dev-tools qt5-default btrfs-progs gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd1-dev jfsutils xfsprogs sudo 
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential  qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba cifs-utils nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo ccrypt
+
+For older versions qt5-default is also required.
 
 For some distributions, the /etc/sudoers file must be completed with these lines:
 username ALL=(ALL) ALL 
 %sudo	ALL=(ALL:ALL) ALL
 The username has to be adjusted: for example peter.
 
-Instead of libzst1-dev, libzst-dev is installed in some systems. The above command has to be adapted accordingly.
+Instead of libzst-dev, libzst1-dev is installed in some systems. btrfs-tools has recently been replaced by btrfs-progs. The above command has to be adapted accordingly.
  
-The command for Suse: (you must be an administrator su -l) zypper in zypper in qt5-default libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils 
+The command for Suse: (you must be an administrator su -l) zypper in zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils ccrypt 
 If you use ssh (secure shell) want to access other computers in the network, you still need to install individually sshpass.
 
-The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-default qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils beesu lz4-devel libzstd-devel jfsutils xfsprogs
-For a 64-bit system, you must also install lrelease: dnf install qt5-linguist.x86-64
+The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt libuuid-devel qt5-linguist
 32-bit systems are no longer supported.
 
 You change in the terminal to the folder qt5-fsarchiver (extracted from the sources).
@@ -43,12 +45,12 @@ This is the command for Fedora and Suse: qmake-qt5 && make && sudo make install.
 Installing the program from the DEB packages:
 A double click on the deb file installs the program.
 If the installation is unsuccessful you enter this command in a terminal(you must be administrator): apt install qt-fsarchiver-0.8.5-1.deb. The version number needs to be adjusted.
-In Debian is this the command: gpk-install-local-file qt-fsarchiver-0.8.5-1.deb. The version number needs to be adjusted.
-Is in Debian8 gpk is not installed, then you must enter: su -l dpkg-i, qt-fsarchiver-0.8.5-1.deb und apt install -f. The output of dpkg error message can be ignored.
+In Debian is this the command: gpk-install-local-file qt5-fsarchiver-0.8.5-1.deb. The version number needs to be adjusted.
+Is in Debian8 gpk is not installed, then you must enter: su -l dpkg-i, qt5-fsarchiver-0.8.5-1.deb und apt install -f. The output of dpkg error message can be ignored.
 
 Installation of the program from a Launchpad:
 With Ubuntu and Mint you can reach the installation with these commands:
-sudo add-apt-repository ppa:/dieterbaum/qt-fsarchiver
+sudo add-apt-repository ppa:dieterbaum/qt-fsarchiver
 Confirm the command with Enter.
 sudo apt update
 sudo apt install qt-fsarchiver
@@ -56,9 +58,8 @@ sudo apt install qt-fsarchiver
 qt-fsarchiver-terminal is installed with the deb packages as well as with the launchpad installation. The version of qt-fsarchiver-terminal is checked. If the version is incorrect, the program is terminated.
 
 Program call:
-Partial starters are installed. By double-qt-fsarchiver is started.
-Start qt-fsarchiver in a terminal:
-qt-fsarchiver
+Partial starters are installed. By double-qt5-fsarchiver is started.
+Start qt-fsarchiver in a terminal: /usr/sbin/qt-fsarchiver
 
 The handling of qt-fsarchiver is simple:
 
@@ -80,6 +81,10 @@ When restoring directories is selected, whether the directory should be restored
 Requisites for the work with the network:
 When the backup over a network, an additional form is opened, in which the user name and password must be entered for the network. Of storing the password is not recommended outside of the private sector, because the encryption of the password is performed in a simple way.
 
+Prerequisites for working with the network: 
+The computer name may contain a maximum of 15 characters.
+The names of the backup directories must not contain any spaces.
+
 With the protocoll samba:
 If the network is used must be installed on both computers (Client and Server) Samba. Client is the computer that performs the backup/restore. Server is the computer where the data is stored.
 The integration of the virtual file system "cifs vfs" must be possible on the Linux machine. Please refer to the Ubuntu wiki article "http://wiki.ubuntuusers.de/Samba_Client_cifs".
@@ -91,7 +96,7 @@ sudo ssh user@Adresse des Servers. (Example: sudo ssh peter@192.168.2.10). The c
 The first time access the program qt-fsarchiver on a server, the command sudo ssh username@serveraddress is entered directly into the terminal. In the basic settings of the program can be set if the automatic entry to access additional servers should be repeated or not. 
 For mounting a ssh server, the terminal must be the password for access to the server to be entered. To avoid this, it is advisable to set up a public key. Important: The public key of the server (file:authorized_keys) needs in the /root/.ssh be copied.
 In the basic settings can be determined whether the reference for setting the password to be displayed or not.
-Note works with ssh: Some operating systems, the program must be started in a root-terminal. 
+Note works with ssh: Some operating systems, the program must be started in a terminal with the command: qt-fsarchiver 
 
 With the protocoll NFS (Network File System):
 Only Linux machine as a client or server can be used. Must be installed on the server nfs-kernel-server. In the file /etc/exports to be released in addition to the directories listed. The name can not contain spaces. In the directory must have read and write can be accessed. The entry /home/user/images 192.168.2.0/255.255.255.0(rw) allows any computer with the IP address 192.168.2.0 through 192.168.2.255 a read-write access to the directory /home/user/pictures of the client.
@@ -101,7 +106,7 @@ After starting the live CD or the computer it may .ake a while to show up other 
 Backups can also be done encrypted. Here, the key length between 6 and 64 characters. The archives splitting on DVD-size is possible.
 
 The backup of mounted partitions is possible after asking for confirmation. Restoring partitions can only be made ​​if the partition is unmounted.
-The restoration of a root or a home partition is possible with the live CD qt-fsarchiver (http://sourceforge.net/projects/qt-fsarchiver/files/Live-CD/ ").
+The restoration of a root or a home partition is possible with the live CD qt5-fsarchiver (http://sourceforge.net/projects/qt5-fsarchiver/files/Live-CD/ ").
 On the SystemRescueCd is the program available fsarchiver. With fsarchiver it is posible root- and home-partitions can be restore​​.
 
 When backing up the MBR/GPT only needs to select (with multiple hard drives), the hard disk and the backup directory. The hidden area of ​​the disk between the end of the MBR and the start of the first partition will be backed up. While restoring the MBR/GPT with multiple hard drives, the hard disk can be selected, the MBR/GPT will be written back. In addition, you can choose whether the boot loader area, the partition table or hidden area of ​​the disk to be restored.
@@ -121,5 +126,6 @@ Choose in the left list box from the hard drive/partiiton, from which an image i
 When starting qt-fsarchiver are not all unmounted partitions under / media / sda ... / media / sdb ... mounted. The partitions are easily reachable on the desktop. The directory where the backup should be saved or the directory in which the secured partition is stored, can be selected in qt-fsarchiver under / media / sd .... 
 Qt-fsarchiver can only be called once. The repeated start is prevented.
 
-Further information can be found in the german websites and http://wiki.ubuntuusers.de/qt-fsarchiver http://wiki.ubuntuusers.de/fsarchiver.
+Further information can be found in the german websites http://wiki.ubuntuusers.de/qt-fsarchiver.
 You can get information about fsarchiver on the English website of fsarchiver http://www.fsarchiver.org/Main_Page.
+
