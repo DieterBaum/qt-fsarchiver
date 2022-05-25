@@ -3282,9 +3282,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>پشتیبان گیری و بازیابی پارتیشن، دایرکتوری و MBR.
-نسخه 0.8.6-7 2022 مارس 30</translation>
+نسخه 0.8.6-8 2022 مه 26</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1801"/>

@@ -3092,9 +3092,9 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>백업 및 복원, 디렉터리 파티션과 MBR
-버전 0.8.6-7, 2022년 3 월월 30일</translation>
+버전 0.8.6-8, 2022년 마이월 26일</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1903"/>

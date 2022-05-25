@@ -36,6 +36,7 @@ QString homepath_net_ein = QDir::homePath();
 NetEin::NetEin()
 {
 int i = 0;
+QString dummy = "";
 QString attribute;
 QString befehl;
 setupUi(this);
@@ -75,12 +76,13 @@ connect( chk_password, SIGNAL( clicked() ), this, SLOT(Kennwort()));
            chk_datesave->setChecked(true);      
         setting.endGroup();
    }
-    while (widget_net[i] != ""){
-    	listWidget_net->addItem (widget_net[i]);
-        i++;
-        if (i > 99)
-            break;   
-        }
+    
+       while (widget_net[i] != ""){
+           listWidget_net->addItem (widget_net[i]);
+           i++;
+           if (i > 99)
+              break;   
+          }
 }
 
 void NetEin::Kennwort()

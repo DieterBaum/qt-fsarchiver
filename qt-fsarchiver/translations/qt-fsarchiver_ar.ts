@@ -3098,9 +3098,9 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>النسخ الاحتياطي واستعادة الأقسام والدليل و MBR. 
- نسخة 0.8.6-7 30 مارس 2022</translation>
+ نسخة 0.8.6-8 26 May 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1906"/>

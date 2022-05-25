@@ -3281,9 +3281,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>Atsarginę kopiją ir atkurti pertvaros, katalogas ir MBR.
-versija 0.8.6-7, 30.marts 2022</translation>
+versija 0.8.6-8, 26.May 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1801"/>

@@ -3282,9 +3282,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>Varundamine ja taastamine vaheseinad, kataloog ja MBR.
-Versioon 0.8.6-7, 30.märtsil 2022</translation>
+Versioon 0.8.6-8, 26.May 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1801"/>

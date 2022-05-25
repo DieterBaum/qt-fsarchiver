@@ -195,6 +195,7 @@ QString partition1_;
       }
       daten_write(password,0);
       daten_write("",1);
+      password = "";
       //vorsichtshalber Passswortdatei löschen
       befehl = "rm " + userpath + "/.config/qt-fsarchiver/den.nfo.cpt 2>/dev/null";
       if(system (befehl.toLatin1().data()))
@@ -1378,8 +1379,8 @@ void MWindow::info() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-7, March 30, 2022",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-7, 30. März 2022"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-8, May 26, 2022",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-8, 26. Mai 2022"));
 }
          
 int MWindow::is_running(){
@@ -1465,7 +1466,6 @@ void MWindow::mbr_save () {
 int i = 5;
 QString device = part[0][3]; 
      i = is_gpt_main(device);
-//qDebug() << "dialog i" << i;
      if(i < 2)
      {
         dialog_auswertung = 4;
@@ -1477,7 +1477,6 @@ void MWindow::mbr_restore () {
 int i = 5;
 QString device = part[0][3]; 
      i = is_gpt_main(device);
-//qDebug() << "dialog i" << i;
      if(i < 2)
       {
          dialog_auswertung = 5;
@@ -2657,6 +2656,7 @@ QString attribute;
      QFile::remove(userpath + "/.config/qt-fsarchiver/ip.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/route.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/smbclient.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/nmblookup.txt");
 
 
 }

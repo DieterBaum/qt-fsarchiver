@@ -3505,9 +3505,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>Zálohování a obnovení příčky, adresář a MBR.
-Verze 0.8.6-7, 30. březen 2022</translation>
+Verze 0.8.6-8, 26. Květen 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2700"/>

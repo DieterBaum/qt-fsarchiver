@@ -3101,9 +3101,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>BBölümleri, dizini ve MBR'yi yedekleme ve geri yükleme.
-versiyon 0.8.6-7, 30.Mart 2022</translation>
+versiyon 0.8.6-8, 26.Mayıs 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2697"/>

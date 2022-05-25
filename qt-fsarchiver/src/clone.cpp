@@ -28,7 +28,7 @@ extern QString folder_file_;
 QString folder_file_1;
 int zaehler_2;
 QStringList filters_clone;
-QString part_clone[100][4];
+QString part_clone[100][5];
 extern QString part[100][10];
 float part_clone_[100];
 QString folder_clone;
@@ -68,6 +68,7 @@ int mountpoint1;
 extern int sleepfaktor;
 QString homepath_clone = QDir::homePath();
 int enden = 0;
+QString dev_exist[100];
 
 DialogClone::DialogClone()
 {
@@ -134,6 +135,8 @@ QString filename1;
 QString teilstring;
 int aa, bb, dd;
 //Zunächst disk.txt löschen
+        listWidget_clone->clear();
+        listWidget_exist->clear();
         attribute = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh  23 " + attribute;
        if(system (befehl.toLatin1().data()))
@@ -199,6 +202,7 @@ int aa, bb, dd;
            if(dev_sdx[5] == "disk" && size >= 5)
              {
               part_clone[j][0] = dev_sdx[0]; //Diskname
+              dev_exist[j]= dev_sdx[0];
               part_clone[j][1] = dev_sdx[3]; //size
               dummy = part_clone[j][1].right(1);
               part_clone[j][1] = part_clone[j][1].left(part_clone[j][1].size()-1);
@@ -369,7 +373,7 @@ int DialogClone::restore_image_partition()  //Image einer Partition wiederherste
 {
 dialog_auswertung = 8;
 QString befehl;
-int pos;
+int pos = 0;
 int pos1 = 0;
 QString partition_exist;
 QString partition_exist_size;
@@ -558,10 +562,8 @@ int success = 0;
       state = chk_zip->checkState();
       flag_clone = 2;
       row = listWidget_exist->currentRow();
-      if (row > -1){
-          partition_exist = "/dev/" + part_clone[row][0] ;
-          partition_exist_size_int = part_clone_[row]/1000000;
-       }
+      if (row > -1)
+          partition_exist = "/dev/" + dev_exist[row];
       success = testen_1(folder_clone,partition_exist, 2);
       if (success ==1)
          {
@@ -597,7 +599,7 @@ int success = 0;
            befehl = "/usr/sbin/qt-fsarchiver.sh  12 " + attribute; 
            folder_file_ = folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa";
           }
-	ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
+ 	ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
               if (ret == 2)
                  return 0;
               if (ret == 1){
@@ -646,11 +648,9 @@ int success = 0;
       flag_clone = 4;
       row = listWidget_exist->currentRow();
       row = listWidget_exist->currentRow();
-      if (row > -1){
-          partition_exist = "/dev/" + part_clone[row][0] ;
-          partition_exist_size_int = part_clone_[row]/1000000;
-       }
-       success = testen_1(folder_clone, partition_exist, 3);
+      if (row > -1)
+          partition_exist = "/dev/" + dev_exist[row];
+      success = testen_1(folder_clone, partition_exist, 3);
       if (success ==1)
          {
                QMessageBox::warning(this,tr("Note", "Hinweis"),tr("The folder cannot be read or written to. If the path ", "Der Ordner kann nicht gelesen oder beschrieben werden. Enthält der Pfad ") + folder_clone + tr(" contains a special character?\n", " ein Sonderzeichen?\n"));
@@ -667,13 +667,6 @@ int success = 0;
      if (file_check() == 1)
         return 0;
 // Prüfen, ob gesicherte und wiederherzustellende Partition übereinstimmt.
-// Festplatte aus folder_clone extrahieren
-         pos = folder_clone.indexOf(".gz.fsa");
-         if (pos > -1)
-             disk_name = folder_clone.mid(pos-14,3);
-         pos = folder_clone.indexOf(".img.fsa");
-         if (pos > -1)
-             disk_name = folder_clone.mid(pos-14,3);
          disk_name = partition_exist.right(partition_exist.size() -5);
          partition_save = folder_clone;;
          while (pos > -1)
@@ -688,7 +681,7 @@ int success = 0;
           } 
           partition_save = partition_save.right(partition_save.size() -pos1 - 1);  
           pos = partition_save.indexOf("-"); 
-          partition_save = partition_save.left(pos);  
+          partition_save = partition_save.left(pos);        
         if (folder_clone.indexOf(disk_name) == -1)
             pos = questionMessage(tr("The disk to be recovered ", "Die wiederherzustellende Festplatte ") + disk_name + 
                tr(" does not coincide with the saved ", " stimmt nicht mit der gesicherten ") + partition_save + tr(" Do you want to continue restore?", " überein. Wollen Sie trotzdem die Wiederherstellung durchführen?"));

@@ -20,7 +20,7 @@ Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rp
 Installation des Programms aus den Quelldateien:
 Für die Installation von den Programmen qt-fsarchiver und qt-fsarchiver-terminal müssen die für fsarchiver notwendigen Abhängigkeiten und die qt5-Entwicklungsumgebung installiert werden.
 Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential  qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo ccrypt
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential  qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba cifs-utils nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo ccrypt
 Bei älteren Versionen wird auch qt5-default benötigt.
 
 Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:

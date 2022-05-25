@@ -3009,9 +3009,9 @@ chiave di riserva:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>Backup e ripristino partizioni, directory e MBR.
-La versione 0.8.6-7, 30. marzo 2022</translation>
+La versione 0.8.6-8, 26. Maggio 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1444"/>

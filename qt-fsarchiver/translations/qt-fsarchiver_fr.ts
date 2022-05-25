@@ -3272,9 +3272,9 @@ Veuillez saisir la clef :</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>sauvegarde et de restauration des répertoires de partition et MBR.
-Version 0.8.6-7, Mars 2022 30. </translation>
+Version 0.8.6-8, Mai 2022 26. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1801"/>

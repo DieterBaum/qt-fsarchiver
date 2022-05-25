@@ -1,6 +1,8 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.6-8 26. Mai 2022.
+    - Fehlerkorrektur beim Schreiben und Wiederherstellen von Abbildern von Festplatten.
 * qt-fsarchiver-0.8.6-7 30. März 2022.
     - Unbeabsichtigtes Schließen des Hauptmenüs kann durch Sicherheitsabfrage verhindert werden.
     - Fehlerkorrektur beim Sichern und Wiederherstellen von Verzeichnissen.

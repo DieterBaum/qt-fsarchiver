@@ -3193,9 +3193,9 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>分区、目录和MBR 备份/恢复工具。
-版本 0.8.6-7, 2022. 行进.30</translation>
+版本 0.8.6-8, 2022. 五月.26</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1771"/>

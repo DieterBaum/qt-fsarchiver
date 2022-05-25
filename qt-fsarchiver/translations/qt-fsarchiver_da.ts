@@ -3160,9 +3160,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>Backup og gendanne partitioner, bibliotek og MBR.
-Version 0.8.6-7, 30.marts 2022</translation>
+Version 0.8.6-8, 26.Maj 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1447"/>

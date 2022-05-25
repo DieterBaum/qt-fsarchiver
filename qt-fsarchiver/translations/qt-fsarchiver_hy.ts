@@ -3283,9 +3283,9 @@ backup. բանալին:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1375"/>
 <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-7, March 30, 2022</source>
+version 0.8.6-8, May 26, 2022</source>
 <translation>Կրկնօրնկ եւ վերականգնել բաժիններ, գրացուցակը եւ MBR.
-Մեսսենջեր 0.8.6-7 2022 մարտ 30</translation>
+Մեսսենջեր 0.8.6-8 2022 մինչեւ 26</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1801"/>

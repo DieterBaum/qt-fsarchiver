@@ -1,6 +1,8 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.6-8 May 26, 2022.
+    - Error correction when writing and restoring images from hard disks.
 * qt-fsarchiver-0.8.6-7 March 30, 2022.
     - Unintentional closing of the main menu can be prevented by security prompt.
     - Error correction when backing up and restoring directories.

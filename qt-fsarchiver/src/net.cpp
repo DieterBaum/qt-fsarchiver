@@ -1824,6 +1824,9 @@ int DialogNet::folder_free_mounten(){  //ssh mounten
 QString befehl;
 QString attribute;
 int i = 0;
+//mountbefehl "sudo sshfs -o nonempty dieter@192.168.2.57:/home/dieter/Schreibtisch /home/dieter/.qt-fs-client"
+// auch ohne -o noempty möglich
+
         if(mountflag == 1)
             return 0;
         QSettings setting("qt-fsarchiver", "qt-fsarchiver");
@@ -1841,10 +1844,11 @@ int i = 0;
                 }
         }
         if (folder_free != "" && rdBt_saveFsArchiv->isChecked() )
-		befehl = "sudo sshfs -o nonempty " + user_net+ "@" + rechner_IP + ":" + folder_free + " " +  userpath_net + "/.qt-fs-client";
+		//befehl = "sudo sshfs -o nonempty " + user_net+ "@" + rechner_IP + ":" + folder_free + " " +  userpath_net + "/.qt-fs-client";
+		befehl = "sudo sshfs " + user_net+ "@" + rechner_IP + ":" + folder_free + " " +  userpath_net + "/.qt-fs-client";
         if (folder_free != "" && rdBt_restoreFsArchiv->isChecked() )
 		befehl = "sudo sshfs " + user_net+ "@" + rechner_IP + ":" + pfad_forward + " " + userpath_net + "/.qt-fs-client";
-        i = system (befehl.toLatin1().data());
+	i = system (befehl.toLatin1().data());
         if ( i==1){
             QMessageBox::warning(this, tr("Note", "Hinweis"), tr("The SSH server is not reachable. Try again or with another network protocol.\n", "Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.\n"));
         return 1;
