@@ -1,8 +1,15 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.6-9 12. Juni 2022.
+    - Beim Schreiben oder Wiederherstellen einer Partition wird im Hintergund der Ausführungsbefehl aufgezeichnet.
+    - Unter Aktionen>Auftrag kann ein gewählter Auftrag ohne weitere Eingaben ausgeführt werden.
+    - Beim Auswählen eines Aufrages entfallen somit das Auswählen der vorhandenen Partition, das Auswählen des Sicherungsverzeichnisses 
+    - und die Festlegung des Sicherungsdateiname.
+    - Insgesamt eine erhebliche Vereinfachung der Bedienung.
+    - Unter Aktionen>Auftragsliste bearbeiten kann die Auftragsliste bearbeitet werden und vorhandene Sicherungsdateien können gelöscht werden.
 * qt-fsarchiver-0.8.6-8 26. Mai 2022.
-    - Fehlerkorrektur beim Schreiben und Wiederherstellen von Abbildern von Festplatten.
+    - Fehlerbehebung beim beim Schreiben eines Abbildes einer Festplatte
 * qt-fsarchiver-0.8.6-7 30. März 2022.
     - Unbeabsichtigtes Schließen des Hauptmenüs kann durch Sicherheitsabfrage verhindert werden.
     - Fehlerkorrektur beim Sichern und Wiederherstellen von Verzeichnissen.

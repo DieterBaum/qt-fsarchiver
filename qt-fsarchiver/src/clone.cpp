@@ -135,8 +135,6 @@ QString filename1;
 QString teilstring;
 int aa, bb, dd;
 //Zunächst disk.txt löschen
-        listWidget_clone->clear();
-        listWidget_exist->clear();
         attribute = userpath_clone + "/.config/qt-fsarchiver/disk.txt";
         befehl = "/usr/sbin/qt-fsarchiver.sh  23 " + attribute;
        if(system (befehl.toLatin1().data()))

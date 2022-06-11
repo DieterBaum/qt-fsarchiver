@@ -1,8 +1,15 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-0.8.6-9 June 12, 2022.
+    - When writing or restoring a partition, the execution command is recorded in the background. 
+    - Under Actions>Order a selected task can be executed without any further input.
+    - When selecting a job, there is no need to select the existing partition, to select the backup directory and to specify the backup file name
+    - and the definition of the backup file name. 
+    - All in all a considerable simplification of the operation.
+    - Under Actions>Edit Order List the order list can be edited and existing backup files can be deleted.
 * qt-fsarchiver-0.8.6-8 May 26, 2022.
-    - Error correction when writing and restoring images from hard disks.
+    - Troubleshooting when writing an image of a disk
 * qt-fsarchiver-0.8.6-7 March 30, 2022.
     - Unintentional closing of the main menu can be prevented by security prompt.
     - Error correction when backing up and restoring directories.

@@ -251,6 +251,25 @@ setting:</string>
       </property>
      </widget>
     </item>
+    <item row="15" column="5">
+     <widget class="QPushButton" name="pushButton_order">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1</width>
+        <height>1</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+    </item>
     <item row="15" column="2">
      <widget class="QPushButton" name="pushButton_folder">
       <property name="maximumSize">
@@ -455,7 +474,24 @@ files/directories:</string>
       </property>
      </widget>
     </item>
+    <item row="1" column="5" rowspan="5">
+     <widget class="QListWidget" name="listWidget_2">
+      <property name="font">
+       <font>
+        <family>Courier 10 Pitch</family>
+       </font>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+    </item>
    </layout>
+   <zorder>pushButton_order</zorder>
+   <zorder>cmd_zstd</zorder>
    <zorder>pushButton_partition_2</zorder>
    <zorder>pushButton_zstd</zorder>
    <zorder>pushButton_partition</zorder>
@@ -475,6 +511,7 @@ files/directories:</string>
    <zorder>chk_overwrite</zorder>
    <zorder>chk_pbr</zorder>
    <zorder>label_folder</zorder>
+   <zorder>listWidget_2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -499,6 +536,8 @@ files/directories:</string>
    <addaction name="action_partition_save_net"/>
    <addaction name="action_partition_restore_net"/>
    <addaction name="action_CloneDrive"/>
+   <addaction name="action_Order"/>
+   <addaction name="action_Order_list_edit"/>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -526,6 +565,8 @@ files/directories:</string>
     <addaction name="action_dir_restore"/>
     <addaction name="separator"/>
     <addaction name="actionClone_HD"/>
+    <addaction name="action_Order"/>
+    <addaction name="action_Order_list_edit"/>
    </widget>
    <widget class="QMenu" name="menu_Einstellungen">
     <property name="title">
@@ -557,7 +598,7 @@ files/directories:</string>
   </action>
   <action name="action_partition_save">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/disk.png</normaloff>:/src/images/disk.png</iconset>
    </property>
    <property name="text">
@@ -566,7 +607,7 @@ files/directories:</string>
   </action>
   <action name="action_partition_restore">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/book_previous.png</normaloff>:/src/images/book_previous.png</iconset>
    </property>
    <property name="text">
@@ -575,7 +616,7 @@ files/directories:</string>
   </action>
   <action name="action_Einstellungen">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/einstellung.png</normaloff>:/src/images/einstellung.png</iconset>
    </property>
    <property name="text">
@@ -584,7 +625,7 @@ files/directories:</string>
   </action>
   <action name="action_Information">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/information.png</normaloff>:/src/images/information.png</iconset>
    </property>
    <property name="text">
@@ -593,7 +634,7 @@ files/directories:</string>
   </action>
   <action name="action_mbr_save">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/mbr_save.png</normaloff>:/src/images/mbr_save.png</iconset>
    </property>
    <property name="text">
@@ -602,7 +643,7 @@ files/directories:</string>
   </action>
   <action name="action_mbr_restore">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/mbr_restore.png</normaloff>:/src/images/mbr_restore.png</iconset>
    </property>
    <property name="text">
@@ -611,7 +652,7 @@ files/directories:</string>
   </action>
   <action name="action_dir_restore">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/folder_back.png</normaloff>:/src/images/folder_back.png</iconset>
    </property>
    <property name="text">
@@ -620,7 +661,7 @@ files/directories:</string>
   </action>
   <action name="action_dir_save">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/folder_go.png</normaloff>:/src/images/folder_go.png</iconset>
    </property>
    <property name="text">
@@ -629,7 +670,7 @@ files/directories:</string>
   </action>
   <action name="action_Beenden">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/cancel.png</normaloff>:/src/images/cancel.png</iconset>
    </property>
    <property name="text">
@@ -638,7 +679,7 @@ files/directories:</string>
   </action>
   <action name="action_partition_save_net">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/applications-internet.png</normaloff>:/src/images/applications-internet.png</iconset>
    </property>
    <property name="text">
@@ -647,7 +688,7 @@ files/directories:</string>
   </action>
   <action name="action_partition_restore_net">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/applications-internet-ein.png</normaloff>:/src/images/applications-internet-ein.png</iconset>
    </property>
    <property name="text">
@@ -656,7 +697,7 @@ files/directories:</string>
   </action>
   <action name="breakProcess">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/cancel.png</normaloff>:/src/images/cancel.png</iconset>
    </property>
    <property name="text">
@@ -665,7 +706,7 @@ files/directories:</string>
   </action>
   <action name="action_CloneDrive">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/clone1.png</normaloff>:/src/images/clone1.png</iconset>
    </property>
    <property name="text">
@@ -679,7 +720,7 @@ files/directories:</string>
   </action>
   <action name="actionClone_HD">
    <property name="icon">
-    <iconset>
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
      <normaloff>:/src/images/clone1.png</normaloff>:/src/images/clone1.png</iconset>
    </property>
    <property name="text">
@@ -696,9 +737,27 @@ files/directories:</string>
     <string>Restoring directories over a network.</string>
    </property>
   </action>
+  <action name="action_Order">
+   <property name="icon">
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+     <normaloff>:/src/images/file.png</normaloff>:/src/images/file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Order</string>
+   </property>
+  </action>
+  <action name="action_Order_list_edit">
+   <property name="icon">
+    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+     <normaloff>:/src/images/setting.png</normaloff>:/src/images/settinge.png</iconset>
+   </property>
+   <property name="text">
+    <string>Order list edit</string>
+   </property>
+  </action>
  </widget>
  <resources>
-  <include location="icon.qrc"/>
+  <include location="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc"/>
  </resources>
  <connections>
   <connection>
@@ -721,6 +780,38 @@ files/directories:</string>
    <sender>listWidget</sender>
    <signal>clicked(QModelIndex)</signal>
    <receiver>pushButton_partition</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeView</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>pushButton_folder</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>489</x>
+     <y>413</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_2</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>pushButton_order</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">

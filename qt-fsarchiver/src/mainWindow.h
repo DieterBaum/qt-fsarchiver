@@ -40,9 +40,9 @@ public:
    int is_mounted (char* dev_path);
    int questionMessage(QString frage); 
    QString UUID_auslesen(int row);
-   void save_attribut(QString attribut);
+   void save_attribut(QString attribut, int zahl);
    void date_delete();
-              
+                
 public slots: 
    void folder_einlesen();
    void folder_expand();
@@ -50,6 +50,7 @@ public slots:
    QString pid_ermitteln_(QString prozess);
    void del_mediafolder();
    void kill_end();
+   
       
 protected slots:
    void esc_end(int flag);
@@ -83,6 +84,9 @@ protected slots:
    QString kernel_version();
    QString linux_version();
    void clone_save();
+   void make_order();
+   void listWidget2_auslesen();
+   void save_restorePartiiton_list();
    void zip_einlesen();
    void sdx_einlesen();
    QString datei_auswerten(QString buchstabe);
@@ -93,6 +97,8 @@ protected slots:
    int is_gpt_main(QString partition_efi);
    QString label_read(QString partname);
    void zip_setting_einlesen();
+   void order_edit();
+ 
      
 private:
     QFileSystemModel *dirModel;

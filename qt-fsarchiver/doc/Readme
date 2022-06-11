@@ -82,6 +82,12 @@ When restoring directories is selected, whether the directory should be restored
 Requisites for the work with the network:
 When the backup over a network, an additional form is opened, in which the user name and password must be entered for the network. Of storing the password is not recommended outside of the private sector, because the encryption of the password is performed in a simple way.
 
+New from version 0.8.6-9:
+When backing up partitions, a order list is created in the background. If the order name is the same, the older date is replaced by the current date in the order name.
+A task can be selected under the menu item Actions>Task and the corresponding task can be carried out by pressing the button "Save partition" or "Restore partition".
+Individual or all orders can be deleted under Actions>Edit order list.
+With regular backups, many orders files accumulate. Older orders files can be deleted with the "Delete existing order" button. The number of most recent backups left can be selected from 2 to 5. The order data intended for deletion are displayed in a text window for prior checking.
+
 Prerequisites for working with the network: 
 The computer name may contain a maximum of 15 characters.
 The names of the backup directories must not contain any spaces.

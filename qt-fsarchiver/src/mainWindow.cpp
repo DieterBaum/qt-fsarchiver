@@ -27,6 +27,7 @@
 #include "mbr.h"
 #include "clone.h"
 #include "dir.h"
+#include "order.h"
 extern "C" {
 }
 #include <unistd.h>
@@ -45,6 +46,8 @@ extern int flag1;
 extern QString parameter[15];
 extern QString part[100][10];
 QString widget[100];
+QString widget_2[100]; // attribute
+QString widget_2_[100]; // ordername
 int endeThread;
 int sekunde_elapsed;
 int minute_elapsed;
@@ -55,6 +58,7 @@ QStringList items_zstd;
 QStringList items_sleep_;
 QString partition_typ_;
 QString partition_typ;
+QString part_list;
 extern QString password;
 extern QString user;
 QString userpath;
@@ -76,6 +80,9 @@ int show_part = 0;
 extern int sleepfaktor;
 extern int password_;
 int rootpassword = 0;
+int order = 0;
+QString order_name;
+
 
 MWindow::MWindow()
 {
@@ -108,7 +115,6 @@ QString partition1_;
   // groupBox->setFlat (true);
    pushButton_restore->setEnabled(false);
    // Signal-Slot-Verbindungen  Werkzeugleiste
-   //connect( action_Beenden, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
    connect( action_Beenden, SIGNAL(triggered(bool)), this, SLOT(del_mediafolder()));
    connect( action_partition_save, SIGNAL(triggered(bool)),this, SLOT(save_button()));
    connect( action_partition_restore, SIGNAL(triggered(bool)),this, SLOT(restore_button()));
@@ -122,11 +128,14 @@ QString partition1_;
    connect( action_dir_restore, SIGNAL(triggered(bool)), this, SLOT(dir_restore()));
    connect( action_CloneDrive, SIGNAL(triggered(bool)), this, SLOT(clone_save()));
    connect( actionClone_HD, SIGNAL(triggered(bool)), this, SLOT(clone_save()));
+   connect( action_Order_list_edit, SIGNAL(triggered(bool)), this, SLOT(order_edit()));
+   connect( action_Order, SIGNAL(triggered(bool)), this, SLOT(make_order()));
    //schließt alle Fenster
    //connect( pushButton_end, SIGNAL( clicked() ), qApp, SLOT(quit()));
    connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(del_mediafolder()));
    //schließt das aktuelle (this)Fenster:
-   //connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(close()));	
+   //connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(close()));
+   connect( pushButton_order, SIGNAL( clicked() ), this, SLOT(listWidget2_auslesen()));
    connect( pushButton_save, SIGNAL( clicked() ), this, SLOT(savePartition()));
    connect( pushButton_restore, SIGNAL( clicked() ), this, SLOT(restorePartition()));
    // pushButton_partition, pushButton_folder und pushButton_zstd sind dummy Button um einen Slot ansprechen zu können
@@ -542,6 +551,7 @@ void MWindow::rdButton_auslesen()
      Qt::CheckState state;
      state= chk_hidden->checkState();
      QStringList filters;
+     label_Partition->setText (tr("Existing partitions:", "vorhandene Partitionen"));
      if (rdBt_saveFsArchiv->isChecked())
         {
 	starteinstellung();
@@ -601,6 +611,7 @@ void MWindow::starteinstellung()
             chk_pbr->setEnabled(true);  
             chkkey(); 
             filters << "*.*";
+            listWidget_2->setHidden(true);
             if (state == Qt::Checked){
               if (rdBt_saveFsArchiv->isChecked())
 		dirModel->setFilter(QDir::AllDirs  | QDir::NoDotAndDotDot | QDir::Hidden);
@@ -618,6 +629,11 @@ void MWindow::starteinstellung()
        
 int MWindow::savePartition() 
 {
+if(order == 1)
+{
+   save_restorePartiiton_list();
+   return 1;
+}  
      QFile file(folder);
      QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
      QString befehl;
@@ -661,6 +677,9 @@ int MWindow::savePartition()
            }
         // Überprüfen ob ntfs oder fat Partition, wenn ja Sicherung PBR nicht ermöglichen
         DateiName = lineEdit_DateiName->text();
+        state = chk_key->checkState();
+              if (state == Qt::Checked)
+                   order_name= order_name + "+key";
         if (DateiName == "")
            {
           	QMessageBox::about(this, tr("Note", "Hinweis"),
@@ -668,6 +687,9 @@ int MWindow::savePartition()
 		"Bitte wählen Sie den Dateinamen der Sicherung aus.\n"));
 		return 0 ;
            }
+         state = chk_key->checkState();
+         if (state == Qt::Checked)
+             DateiName = DateiName + "+key";  
         //Überprüfen ob im Dateinamen "/" enthalten ist. Wird durch "-" ersetzt
         found = DateiName.indexOf("/");
         while (found > -1){
@@ -695,7 +717,7 @@ int MWindow::savePartition()
          //Überprüfung ob gemounted
          int liveFlag = 0;
          zip = cmb_zip->currentIndex();
-        // Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
+         // Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
          int row = listWidget->currentRow();
        	 beschreibungstext(DateiName + "-" + _Datum + ".fsa", zip, row);
          if (!is_mounted(partition_.toLatin1().data()))
@@ -897,12 +919,12 @@ int MWindow::savePartition()
      				  attribute = attribute + " " + parameter[i];
   				  }
 				  attribute = QString::number(indizierung + 2)  + attribute;
-                                save_attribut(attribute);
-				pushButton_end->setEnabled(false);  
+		                save_attribut(attribute,1);
+		              	pushButton_end->setEnabled(false);  
                                 pushButton_save->setEnabled(false);
                                 chk_pbr->setEnabled(true); 
                                 flag_View = 1;
-                              //  werte_reset();
+                                //  werte_reset();
   				//timer->singleShot( 20, this , SLOT(ViewProzent( ))) ;
                                 ViewProzent();
                                 stopFlag = 0;
@@ -918,15 +940,111 @@ int MWindow::savePartition()
 
 }
 
-void MWindow::save_attribut(QString attribut)
+void MWindow::save_attribut(QString attribut, int zahl)
 {
+//zahl 1 ist attribute.texte füllen bei einer Sicherung einer Partition
+//zahl 2 ist attribute.texte füllen bei Wiederherstellung einer Partition
+QString line;
+QString text;
+QString text1;
+int i = 0;
+int doppel = 0;
+int size_ = 0;
+int found = 0;
+QString dummy;
+QString replace[100];
 QString dateiname = userpath + "/.config/qt-fsarchiver/attribute.txt";
 QFile file(dateiname);
-file.open(QIODevice::WriteOnly);
-QDataStream out(&file);
-out << attribut;
-file.close();
+dateiname = userpath + "/.config/qt-fsarchiver/auftrag.db";  
+QFile file2(dateiname);  
+QStringList auftrag;
+QString auftrag_; 
+Qt::CheckState state;
+          file.open(QIODevice::WriteOnly);
+          QDataStream out(&file);
+          out << attribut;
+          file.close();
+          if(zahl == 0)
+              return;
+          if(zahl == 1 )
+             {
+              order_name = lineEdit_DateiName->text();  //Order_name auslesen = Auftragname       
+              state = chk_key->checkState();
+              if (state == Qt::Checked)
+                   order_name= order_name + "+key";
+             }
+          if(!file2.exists())
+              {
+              //Datei wird angelegt
+              if (file2.open(QIODevice::ReadWrite)) 
+                   {
+                   QDataStream out(&file2);
+                   attribut = attribut.trimmed();
+                   text = order_name + " ## " + attribut + " ## "; 
+                   out << text;
+                   file2.close();
+                   } 
+               return;             
+              }    
+	file2.open(QIODevice::ReadOnly);
+        QDataStream stream( &file2 ); // read the data serialized from the file
+        stream >> auftrag_ ;
+        file2.close(); 
+        auftrag = auftrag_.split("##");
+        size_ = auftrag.size();
+        for(i=0; i <size_ -1; i++) 
+            {
+            dummy = auftrag[i];
+            dummy = dummy.trimmed(); 
+            auftrag[i] = dummy;
+            text = text + auftrag[i] + " ## ";
+            }
+        text = text + order_name + " ## " + attribut + " ## "; 
+        if(zahl == 1)
+            {
+            //auf vorhandenen Auftrag prüfen
+            for (i=0; i<size_; i++)
+                {
+                if(order_name == auftrag[i])
+                     {
+                     auftrag[i+1] = attribut;
+                     doppel = 1;
+                     break;
+                     }
+                 }
+                 
+                 if(doppel == 1)
+                    { 
+                    text = ""; 
+                    for (i=0; i <size_ -1; i++)
+                        {
+                        if (auftrag[i] != "")
+                           text = text + auftrag[i] + " ## ";
+                        } 
+                  }
+               } 
+          if(zahl == 2)    //  Auftragname bei Wiederherstellung festlegen
+               {
+               text = "";
+               // Partition aus attribut ermitteln
+               found = attribut.indexOf("dest=/");
+               order_name = attribut.right(attribut.size() -found -5);
+               for(i=0; i <size_ -1; i++) 
+                  {
+                  dummy = auftrag[i];
+                  dummy = dummy.trimmed(); 
+                  auftrag[i] = dummy;
+                  text = text + auftrag[i] + " ## ";
+                  }
+               text = text + order_name + " ## " + attribut + " ## "; 
+               }           
+         // Daten speichern    
+         file2.open(QIODevice::WriteOnly);
+         QDataStream out1(&file2);
+         out1 << text;
+         file2.close();
 }
+
 
 void MWindow::ViewProzent()
 {
@@ -1033,6 +1151,11 @@ else {
 
 int MWindow::restorePartition()
 {
+if(order == 1)
+{
+   save_restorePartiiton_list();
+   return 1;
+}
 Qt::CheckState state1;
 QFile file(folder);
 QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
@@ -1111,7 +1234,7 @@ QString attribute;
                		parameter[2] = folder1;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2];
   			attribute = "3 " + attribute;
-                        save_attribut(attribute);
+                        save_attribut(attribute,0);
                         befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
                         if(system (befehl.toLatin1().data()))
                             befehl = "";
@@ -1128,6 +1251,7 @@ QString attribute;
                		} 
      
         	   }
+ 
                        if (state1 == Qt::Checked) {
             		parameter[2] = "-c";
                         parameter[3] = keyText;
@@ -1140,7 +1264,7 @@ QString attribute;
 			parameter[4] = folder1;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2] + " " + parameter[3] + " " + parameter[4];
                         attribute = "5 " + attribute;
-                        save_attribut(attribute);
+                        save_attribut(attribute,0);
                         befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
                         if(system (befehl.toLatin1().data()))
                            befehl = "";
@@ -1281,7 +1405,7 @@ QString attribute;
      		  attribute = attribute + " " + parameter[i];
   		  }
 		  attribute = QString::number(indizierung)  + attribute;
-                  save_attribut(attribute);
+                  save_attribut(attribute,2);
              //  werte_reset();
                pushButton_restore->setEnabled(false);
                pushButton_end->setEnabled(true); 
@@ -1379,8 +1503,8 @@ void MWindow::info() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-8, May 26, 2022",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-8, 26. Mai 2022"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 0.8.6-9, June 12, 2022",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 0.8.6-9, 12. Juni 2022"));
 }
          
 int MWindow::is_running(){
@@ -1461,6 +1585,11 @@ int MWindow::questionMessage(QString frage)
 return 0;
 }
 
+void MWindow::order_edit(){
+dialog_auswertung = 8;
+OrderDialog *dialog = new OrderDialog;
+dialog->show();
+}
 
 void MWindow::mbr_save () {
 int i = 5;
@@ -1796,6 +1925,8 @@ int anzahl = 0;
   minute_elapsed = 0;
   sekunde_elapsed = 0;
   befehl_pbr = "";
+  listWidget_2->setHidden(true);
+  order = 0;
 }
 
 void MWindow::thread2Ready(){
@@ -2036,7 +2167,7 @@ compress_zstd[22] = 0.39;  //Z22
 if (dialog_auswertung < 6) // darf nicht aufgerufen werden beim Speichern/Wiederherstellen über das Netz
     {
     zstd = cmb_zip->currentIndex();
-    zip_zstd = cmb_zstd->currentIndex() +1;
+    zip_zstd = cmb_zstd->currentIndex() + 1;
     zip_zstd_ = QString::number(zip_zstd);
     } 
 if (dialog_auswertung == 6 or dialog_auswertung == 7) // darf nicht aufgerufen werden beim Speichern/Wiederherstellen über das Netz
@@ -2053,11 +2184,13 @@ if (dialog_auswertung == 6 or dialog_auswertung == 7) // darf nicht aufgerufen w
 part[row][4] = sdx3_einlesen(part[row][0],0);
 part[row][5] = sdx3_einlesen(part[row][0],1);
 compress = zip_[zip];
-     if(zstd == 10)
-        compress = compress + " level:" + zip_zstd_;
-      dummy = part[row][4];
-      dummy1 = dummy.right(2); // Einheiten M(ega) G T 
-      dummy = dummy.left(dummy.size() -2); 
+if(order == 1)
+   zstd = zip;
+if(zstd == 10)
+    compress = compress + " level:" + zip_zstd_;
+dummy = part[row][4];
+dummy1 = dummy.right(2); // Einheiten M(ega) G T 
+dummy = dummy.left(dummy.size() -2); 
 // Komma in Punkt ändern
         pos=dummy.indexOf(",");
            if (pos > 0)
@@ -2095,7 +2228,7 @@ compress = zip_[zip];
                 text = ubuntu_home + "\n" + tr("Operating system: ", "Betriebsystem: ")  + Linuxversion + " " + "\n"  + tr("Kernel: ") + kernel  + "\n" + text + "\n";
 	}
 	filedialog.werte_uebergeben(text);
-        return text;
+	return text;
 }
 
 QString MWindow::format(float zahl)
@@ -2291,7 +2424,7 @@ void MWindow::del_mediafolder()
 // Programm beenden
 // eingehängte Partitionen aushängen und leere Verzeichnisse in /media löschen.
 {
- QString foldername[100];
+QString foldername[100];
       QString attribute; 
       QString befehl;
       QString media;
@@ -2657,6 +2790,7 @@ QString attribute;
      QFile::remove(userpath + "/.config/qt-fsarchiver/route.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/smbclient.txt");
      QFile::remove(userpath + "/.config/qt-fsarchiver/nmblookup.txt");
+     QFile::remove(userpath + "/.config/qt-fsarchiver/zeit.txt");
 
 
 }
@@ -2786,6 +2920,277 @@ int zip = cmb_zip->currentIndex();
        label_5->setEnabled(false);
        }
 }
+
+void MWindow::make_order() 
+{
+QString filename = userpath + "/.config/qt-fsarchiver/auftrag.db";
+QFile file(filename);
+QString attribute;
+QStringList auftrag;
+QString auftrag_;  
+int i = 0;
+int j = 0;
+int found = 0;
+int size_ = 0;
+        label_Partition->setText (tr("Existing list entries", "vorhandene Listeinträge"));
+        order = 1;
+        listWidget_2->setHidden(false);
+        listWidget_2-> clear();
+	file.open(QIODevice::ReadOnly);
+        QDataStream stream( &file ); // read the data serialized from the file
+        stream >> auftrag_ ;
+        file.close(); 
+        auftrag = auftrag_.split("##");
+        size_ = auftrag.size();
+        for(i=0; i < size_ - 1; i++) 
+               {
+               order_name = auftrag[i];
+               order_name = order_name.trimmed();
+               attribute = auftrag[i+1];
+               found = attribute.indexOf("savefs"); 
+               if(order_name != "" && found > -1 )
+                    listWidget_2->addItem ("Save: " + order_name);
+               if(order_name != "" && found == -1 )
+                    listWidget_2->addItem ("Restore: " + order_name); 
+               widget_2_[j]= order_name;
+               widget_2[j]= attribute;
+               if(j > 98)
+                  break;  //überlauf wird verhindert
+               i++;
+               j ++;
+               }  
+         
+       if(i == 0)
+           {
+           QMessageBox::warning(this,tr("Note", "Hinweis"),
+           tr("There is no order available\n", "Es ist kein Autrag vorhanden\n"));
+           listWidget_2->setHidden(true);
+           listWidget->setHidden(false);
+           order = 0;
+           }
+       file.close(); 
+}
+
+void MWindow::listWidget2_auslesen() {
+extern QString folder_file_;
+QString attribute;
+QString datum;
+int row = 0;
+int monat_ = 0;
+int tag_ = 0;
+int place[50];
+int found = 0;
+int j = 0;
+int i = 0;
+QString str;
+    datum = Zeit_auslesen();
+    if(row == -1) 
+       row = 0;
+    row = listWidget_2->currentRow();
+    row_1 = row;
+    attribute= widget_2[row];
+    attribute = attribute.trimmed();
+    found = attribute.indexOf("savefs");
+     if(found == -1)
+         {
+         pushButton_restore->setEnabled(true);
+         pushButton_save->setEnabled(false);
+         }
+     else
+        {
+        pushButton_save->setEnabled(true);
+        pushButton_restore->setEnabled(false);
+        }
+    order_name = widget_2_[row];
+    lineEdit_DateiName ->setText(order_name); // Order_name schreiben
+    // Pfad der txt Datei ermitteln
+    str = attribute;
+        while ((j = str.indexOf("/", j)) != -1) {
+           if( j >= 0)
+              {
+              place[i]= j;
+              i++;
+              }
+        ++j;
+        } 
+    found = attribute.indexOf(order_name);   
+    folder_file_ = attribute.mid(place[0],found-place[0]) + order_name + "-" + datum + ".txt"; 
+    i = 0;
+    j = 0;
+    attribute = attribute.trimmed();
+        datum = Zeit_auslesen();
+        str = attribute;
+        while ((j = str.indexOf("-", j)) != -1) {
+           if( j >= 0)
+              {
+              place[i]= j;
+              i++;
+              }
+        ++j;
+        } 
+        monat_ = place[i-1] - place[i-2];
+        tag_ = place[i-2] - place[i-3];
+        attribute.replace(place[i-3], tag_ + monat_ + 5, "-" + datum);
+        attribute = attribute.trimmed();
+        widget_2_[0]= order_name;
+        widget_2[0]= attribute;
+        save_attribut(attribute,0);
+        // zu sichernde Partition ermitteln
+        found = attribute.indexOf("/dev");
+        part_list = attribute.right(attribute.size() -found -5);
+}
+
+
+void MWindow::save_restorePartiiton_list() 
+{
+     QFile file(folder);
+     QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
+     QString befehl;
+     int zip = 0;
+     int save = 0;
+     QString str;
+     QString zip_;
+     QString attribute;
+     QString keyText = "";
+     QString compress = "";
+     int found = 0; 
+     int row = 0;
+     int ret = 0;
+     QString dummy;
+     indicator_reset();
+     QString partition;
+     row = listWidget_2->currentRow();
+     if(row == -1)
+       row = 0;
+     attribute = widget_2[row]; 
+     found = attribute.indexOf("savefs");
+     if(found == -1)
+         save = 2; //Restore partition
+     else
+         save = 1;  //Save  partition
+      //Prüfen ob System oder Home Partition
+      row = 0;
+      while (part[row][0] != "")
+	   {
+            partition_ = part[row][0]; // z.B. sda1
+            if(partition_ == part_list)
+               break;
+            row ++;
+           } 
+       part_art = mtab_einlesen(row);
+       if (part_art == "system" && save == 1)
+            {
+             ret = questionMessage(tr("The system partition to be backed up is mounted. Do you want to perform a live backup?", "Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?"));
+             if (ret == 2)
+                return;
+             }
+             if (part_art == "home" && save == 1)
+                {
+                ret = questionMessage(tr("The home partition to be backed up is mounted. Do you want to perform a live backup?", "Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?"));
+                 if (ret == 2)
+                    return;
+                 }
+        if (part_art == "system" && save == 2)
+                	{
+                        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         			tr("The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.", "Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
+				return;
+				      } 
+                        
+                   if (part_art == "home"&& save == 2)
+                	{
+                        QMessageBox::warning(this,tr("Note", "Hinweis"),
+         			tr("The home partition to be restored is mounted and cannot be written back. Please use a live CD.","Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD\n"));
+				return; 
+                        
+                	}  
+                 if(save == 2)	//Partition zurückschreiben
+                        {
+                        dialog_auswertung = 3;
+           		FileDialog Filedialog;
+     	       		FileDialog *dlg = new FileDialog;
+     	     		// dlg->show(); nicht modal
+             		int wert = dlg->exec();
+             		if (wert == 0 && dialog_auswertung == 0)
+                	   {
+                	   QMessageBox::about(this,tr("Note","Hinweis"),
+         		   tr("The restore was aborted by the user", "Das Zurückschreiben wurde vom Benutzer abgebrochen\n"));
+                            pushButton_restore->setEnabled(true);
+                	   return ;
+                	   } 
+                	   dummy = attribute; 
+                        //Partition muss entmounted werden 
+                        found = attribute.indexOf("dest=");
+                        partition = attribute.right(attribute.size() -found - 5); 
+                        attribute = partition + " 2>/dev/null";  
+                        befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
+                        if(system (befehl.toLatin1().data()))
+                                befehl = ""; 
+                        attribute = dummy;
+                        attribute = attribute.trimmed();
+                        save_attribut(attribute,0);
+                        pushButton_restore->setEnabled(false);
+                        pushButton_end->setEnabled(true); 
+                        flag_View = 2;
+  	                ViewProzent();
+                        stopFlag = 0;
+                        label_Partition->setText (tr("Existing partitions:", "vorhandene Partitionen"));
+                        this->setCursor(Qt::WaitCursor);
+                        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
+                        if(system (befehl.toLatin1().data()))
+                            statusBar()->showMessage(tr("The recovery is performed.", "Die Wiederherstellung wird durchgeführt"), 15000);  
+                         return;      
+                         } 
+    if(save == 1)	//Partition sichern 
+        {          	       
+          // Werte sammeln und nach file_dialog übergeben
+        found = attribute.indexOf("-Z");
+        if (found > -1)
+           zip = 10;
+        found = attribute.indexOf("-z");   
+        if (found > -1)
+           { 
+           zip_ = attribute.mid(found+2,1); 
+           zip  = zip_.toInt(); 
+           }
+        beschreibungstext(order_name + "-" + _Datum + ".fsa", zip, row);
+        	dialog_auswertung = 2;
+             	FileDialog Filedialog;
+     	     	FileDialog *dlg = new FileDialog;
+     	     	int wert = dlg->exec();
+             	if (wert == 0 && dialog_auswertung == 0)
+                	{
+                	QMessageBox::warning(this,tr("Note", "Hinweis"),
+         		tr("The backup was aborted by the user\n", "Die Sicherung wurde vom Benutzer abgebrochen\n"));
+			pushButton_save->setEnabled(true);
+                        chk_pbr->setEnabled(true);
+                	return;
+                	}
+         } 
+         found = attribute.indexOf(".fsa");
+         partition = attribute.right(attribute.size() -found);  
+         //Partition muss entmounted werden    
+         attribute = partition + " 2>/dev/null";   
+         befehl = "/usr/sbin/qt-fsarchiver.sh  4 " + attribute;  //umount
+         if(system (befehl.toLatin1().data()))
+             befehl = "";  
+         pushButton_end->setEnabled(false);  
+        pushButton_save->setEnabled(false);
+        chk_pbr->setEnabled(true); 
+        flag_View = 1;
+        ViewProzent();
+        stopFlag = 0;
+        dialog_auswertung = 1;
+        label_Partition->setText (tr("Existing partitions:", "vorhandene Partitionen"));
+        this->setCursor(Qt::WaitCursor);
+  	statusBar()->showMessage(tr("The backup is performed", "Die Sicherung wird durchgeführt"), 15000);
+        befehl = "/usr/sbin/qt-fsarchiver.sh  1 " + userpath;
+        if(system (befehl.toLatin1().data()))
+            befehl = "";
+}  
+
+
+
 
 /*
 Auswertung in zahlen.txt

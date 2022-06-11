@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>order_dialog</class>
+ <widget class="QDialog" name="order_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>576</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string extracomment="Beschreibung der Sicherung">Description of the backup</string>
+  </property>
+  <widget class="QPushButton" name="cmd_cancel">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>330</y>
+     <width>221</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="Abbrechen">Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cmd_del">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>270</y>
+     <width>221</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="Partition sichern">Delete order</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>511</width>
+     <height>201</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cmd_del_all">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>300</y>
+     <width>221</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete all orders</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>181</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Existing orders</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cmd_listWidget">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>330</y>
+     <width>21</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb_anzahl">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>280</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>260</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="locale">
+    <locale language="German" country="Germany"/>
+   </property>
+   <property name="text">
+    <string>Number of remaining
+backup files</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cmd_clean">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>314</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clean up existing backups</string>
+   </property>
+  </widget>
+  <zorder>cmd_listWidget</zorder>
+  <zorder>cmd_cancel</zorder>
+  <zorder>cmd_del</zorder>
+  <zorder>listWidget</zorder>
+  <zorder>cmd_del_all</zorder>
+  <zorder>label</zorder>
+  <zorder>cmb_anzahl</zorder>
+  <zorder>label_2</zorder>
+  <zorder>cmd_clean</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>cmd_listWidget</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

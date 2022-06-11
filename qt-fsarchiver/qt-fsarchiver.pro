@@ -6,8 +6,7 @@ TEMPLATE = app
 TARGET = bin/qt-fsarchiver
 DEPENDPATH += . src translations src/ui
 QT_AUTO_SCREEN_SCALE_FACTOR=1
-#QT_QPA_PLATFORM=wayland
-
+QT_QPA_PLATFORM=wayland
 QT += widgets gui core
 
 DEFINES +=  HAVE_CONFIG_H _REENTRANT _FILE_OFFSET_BITS=64 _LARGEFILE64_SOURCE _GNU_SOURCE 
@@ -32,8 +31,9 @@ HEADERS += src/clone.h \
            src/net_ein.h \
            src/setting.h \
            src/thread.h \
-           src/treeview.h 
-FORMS += src/ui/clone_dialog.ui \
+           src/treeview.h \
+           src/order.h
+ FORMS += src/ui/clone_dialog.ui \
          src/ui/dir_dialog.ui \
          src/ui/filedialog.ui \
          src/ui/fsarchiverMain.ui \
@@ -41,7 +41,8 @@ FORMS += src/ui/clone_dialog.ui \
          src/ui/net.ui \
          src/ui/net_ein.ui \
          src/ui/setting.ui \
-         src/ui/treeview.ui
+         src/ui/treeview.ui \
+         src/ui/order.ui
 SOURCES += src/clone.cpp \
            src/dir.cpp \
            src/filedialog.cpp \
@@ -52,7 +53,8 @@ SOURCES += src/clone.cpp \
            src/net_ein.cpp \
            src/setting.cpp \
            src/thread.cpp \
-           src/treeview.cpp 
+           src/treeview.cpp \
+           src/order.cpp
 RESOURCES += src/icon.qrc
 isEmpty(DOC_DIR) {
   DOC_DIR = /usr/share/doc/qt-fsarchiver

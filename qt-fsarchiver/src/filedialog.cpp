@@ -75,10 +75,10 @@ void FileDialog::file_save()
 {
         extern QString folder_file_;
       	QString filename = folder_file_;
-        if (filename.isEmpty())
+      	if (filename.isEmpty())
    		return;
 	QFile file(filename);
-        if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) 
+	if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) 
            {
              QMessageBox::about(this,tr("Note", "Hinweis"),
               tr("The notes on the partition were not written to a file.\n", "Die Hinweise zur Partition wurden nicht in eine Datei geschrieben.\n"));

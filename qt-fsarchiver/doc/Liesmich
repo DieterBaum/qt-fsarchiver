@@ -2,7 +2,7 @@
 qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =====================================================================================================================================================
 
-Copyright (C) 2008-2021 Francois Dupoux und Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2022 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
@@ -77,6 +77,12 @@ USB-Partitionen sind unter /media/user/ oder unter run/media/user gemountet.
 Das Wiederherstellen ist ähnlich. In dem Sicherungsverzeichnis wird der Name der Datei ausgewählt, die wiederhergestellt werden soll. Beim Wiederherstellen einer Partition wird die wiederherzustellende Partition ausgewählt. Dabei wird überprüft, ob die Bezeichnung der wiederherzustellende Partition (zum Beispiel /dev/sda5), mit der Bezeichnung der gesicherte Partition übereinstimmt. Nach entsprechendem Warnhinweis kann die Partition an eine beliebige Stelle zurück geschrieben werden. Beim vorhandensein einer Datei mit dem Partitions Boot Sektor als Inhalt, wird gefragt, ob der PBR wieder hergestellt werden soll.
 Beim Wiederherstellen einer btrfs-Partiiton kann gewählt werden, ob die Partition formatiert werden soll oder nicht. Beim Formatieren wird eine neue UUID erzeugt, beim nichtformatieren bleibt die UUID erhalten.
 Beim Wiederherstellen von Verzeichnissen wird ausgewählt, ob das Verzeichnis an den Ursprungsort oder an einen anderen Ort zurückgeschrieben werden soll. Den Button "Partition wiederherstellen" betätigen und die Partition oder das Verzeichnis wird zurückgeschrieben.
+
+Neu ab Version 0.8.6-9:
+Beim Sichern von Partitionen wird im Hintergrund eine Auftragsliste erstellt. Dabei wird bei gleichen Auftragsnamen das ältere Datum durch das aktuelle Datum im Auftragsnamen ersetzt.
+Unter dem Menüpunkt Aktionen>Auftrag kann ein Auftrag ausgewählt und durch betätigen des Button "Partition sichern" oder "Partition wiederherstellen" der entsprechende Auftrag durchgeführt werden.
+Unter Aktionen>Auftragsliste bearbeiten können einzelne oder alle Aufträge gelöscht werden.
+Bei regelmäßigen Sicherungen sammeln sich viele Auftragsdateien an. MIt dem Button "Existierende Aufträge löschen" können ältere Auftragdateien gelöscht werden. Die Anzahl der verbleibenden neuesten Sicherungen kann zwichen 2 bis 5 ausgewählt werden. Die zu Löschung vorgesehenen Auftragsdaten werden zur vorherigen Kontrolle in einem Textfenster angezeigt. 
 
 Bei der Sicherung über ein Netzwerk wird eine zusätzliche Maske geöffnet, in dem der Benutzername und das Kennwort für den Netzwerkrechner eingegeben werden muss. Von der Speicherung des Kennworts ist außerhalb des privaten Bereiches abzuraten, da die Verschlüsselung des Kennwortes auf einfache Art durchgeführt wird.
 
