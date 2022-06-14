@@ -3181,11 +3181,6 @@ verschlüsseln. Schlüssel</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -4362,10 +4357,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Beskrivning av säkerhetskopian</translation>
+        <translation type="vanished">Beskrivning av säkerhetskopian</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4385,8 +4379,10 @@ from this hard disk:</source>
         <translation>Radera alla order</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Befintliga beställningar</translation>
     </message>
     <message>
@@ -4399,14 +4395,15 @@ from this hard disk:</source>
         <source>Number of remaining
 backup files</source>
         <translation>Antal återstående order
-säkerhetskopior</translation>       
-    </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Rensa upp befintliga säkerhetskopior
 säkerhetskopior</translation>
     </message>
+    <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Ta bort befintliga 
+beställningar .fsa-filer</translation>
+    </message> 
 </context>
 <context>
     <name>setting_dialog</name>

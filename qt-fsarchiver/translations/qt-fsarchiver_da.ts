@@ -3185,11 +3185,6 @@ Version 0.8.6-9, 12.Juni 2022</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="265"/>
         <source>Qt-fsarchiver can only be started once. The program must be terminated..
 </source>
@@ -4364,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Beskrivelse af sikkerhedskopien</translation>
+        <translation type="vanished">Beskrivelse af sikkerhedskopien</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4387,8 +4381,10 @@ from this hard disk:</source>
         <translation>Slet alle ordrer</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Eksisterende ordrer</translation>
     </message>
     <message>
@@ -4403,11 +4399,12 @@ backup files</source>
         <translation>Antal resterende ordrer
 backup-filer</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Oprydning af eksisterende 
-sikkerhedskopier</translation>
+     <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation> Sletning af eksisterende ordrer 
+.fsa-filer</translation> 
     </message>
 </context>
 <context>

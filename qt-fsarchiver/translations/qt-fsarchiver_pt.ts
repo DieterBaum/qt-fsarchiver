@@ -3314,11 +3314,6 @@ backup. key:</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -4365,10 +4360,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Descrição do backup</translation>
+        <translation type="vanished">Descrição do backup</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4388,8 +4382,10 @@ from this hard disk:</source>
         <translation>Eliminar todas as encomendas</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Encomendas existentes</translation>
     </message>
     <message>
@@ -4404,12 +4400,13 @@ backup files</source>
         <translation>Número restante
 ficheiros de backup</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation >Limpar as cópias de 
-segurança existentes</translation>
-    </message>
+   <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Eliminar encomendas existentes 
+ficheiros .fsa </translation>
+    </message>   
 </context>
 <context>
     <name>setting_dialog</name>

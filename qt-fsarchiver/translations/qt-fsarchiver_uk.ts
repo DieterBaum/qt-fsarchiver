@@ -3321,13 +3321,8 @@ verschlüsseln. Schlüssel</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
-         <source>Backup and restore partitions, directory and MBR.
+        <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
         <translation>Резервне копіювання і відновлення розділи, директорії і MBR
 Версія 0.8.6-9, 12. Червень 2022</translation>
@@ -4364,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Опис резервної копії</translation>
+        <translation type="vanished">Опис резервної копії</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4387,8 +4381,16 @@ from this hard disk:</source>
         <translation>Видалити всі замовлення</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="114"/>
+        <source>Number of remaining
+backup files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Існуючі замовлення</translation>
     </message>
     <message>
@@ -4397,18 +4399,18 @@ from this hard disk:</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="114"/>
         <source>Number of remaining
 backup files </source>
-        <translation>Кількість залишилося
+        <translation type="vanished">Кількість залишилося
 файлів резервної копії</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Очистіть наявні 
-резервні копії</translation>
-    </message>
+   <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Видалити наявні замовлення
+файли .fsa</translation>
+    </message>   
 </context>
 <context>
     <name>setting_dialog</name>

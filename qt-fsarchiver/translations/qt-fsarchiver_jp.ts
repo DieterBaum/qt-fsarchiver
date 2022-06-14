@@ -3140,15 +3140,10 @@ backup. key:</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
-     <translation>バックアップウント復元するパーティション"
+        <translation>バックアップウント復元するパーティション&quot;
  バージョン 0.8.6-9, 12.6月 2022</translation>
     </message>
     <message>
@@ -3324,12 +3319,6 @@ version 0.8.6-9, June 12, 2022</source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">バックアップウント復元するパーティション
-バージョン 0.8.6-9, 12.6月 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>
@@ -4371,10 +4360,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>バックアップの説明</translation>
+        <translation type="vanished">バックアップの説明</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4394,8 +4382,10 @@ from this hard disk:</source>
         <translation>全注文の削除</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>既存注文</translation>
     </message>
     <message>
@@ -4411,11 +4401,12 @@ backup files</source>
 プファイル数</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>既存のバックアッ
-プのクリーンアップ</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>既存の注文を削除する 
+.fsaファイル </translation>
+    </message> 
 </context>
 <context>
     <name>setting_dialog</name>

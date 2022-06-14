@@ -2471,7 +2471,7 @@ cores for to be used fsarchiver:</source>
     <message>
         <location filename="../src/ui/net.ui" line="651"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="677"/>
@@ -3329,12 +3329,7 @@ verschlüsseln. Schlüssel</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1506"/>
+         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
         <translation>Δημιουργία αντιγράφων ασφαλείας και επαναφορά διαμερίσματα, καταλόγου και MBR.
@@ -3695,7 +3690,7 @@ with fsarchiver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="250"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="269"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="162"/>
@@ -3763,7 +3758,7 @@ backup key</source>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="308"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="553"/>
@@ -4352,7 +4347,7 @@ from this hard disk:</source>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="170"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
@@ -4364,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Περιγραφή της δημιουργίας αντιγράφων ασφαλείας</translation>
+        <translation type="vanished">Περιγραφή της δημιουργίας αντιγράφων ασφαλείας</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4387,8 +4381,10 @@ from this hard disk:</source>
         <translation>Διαγραφή όλων των εντολών</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Υπάρχουσες παραγγελίες</translation>
     </message>
     <message>
@@ -4404,10 +4400,11 @@ backup files</source>
 αρχεία αντιγράφων ασφαλείας</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Καθαρισμός των υφιστάμενων 
-αντιγράφων ασφαλείας</translation>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation> Διαγραφή υφιστάμενων παραγγελιών 
+.fsa αρχεία</translation>
     </message>
 </context>
 <context>

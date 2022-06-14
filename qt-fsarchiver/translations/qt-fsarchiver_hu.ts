@@ -3117,11 +3117,6 @@ biztonsági mentés. kulcs:</translation>
         <translation>A visszaállítása történik</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -3195,12 +3190,6 @@ Verzió 0.8.6-9, 12.Június 2022</translation>
         <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
 </comment>
         <translation>A Qt-fsarchiver csak egyszer indítható. A programot be kell fejezni.</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">Backup and restore partíciókat, könyvtár, MBR.
-Verzió 0.8.6-9, 12.Június 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1578"/>
@@ -4365,10 +4354,9 @@ erről a merevlemezről:</translation>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Leírása a biztonsági mentés</translation>
+        <translation type="vanished">Leírása a biztonsági mentés</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4388,8 +4376,10 @@ erről a merevlemezről:</translation>
         <translation>Minden megbízás törlése</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Meglévő megbízások</translation>
     </message>
     <message>
@@ -4404,12 +4394,13 @@ backup files</source>
         <translation>A fennmaradó megbízások száma
 biztonsági másolat</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Meglévő biztonsági 
-mentések tisztítása</translation>
-    </message>
+   <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>מחק הזמנות קיימותMeglévő megrendelések törlése 
+.fsa fájlok</translation>
+    </message>  
 </context>
 <context>
     <name>setting_dialog</name>

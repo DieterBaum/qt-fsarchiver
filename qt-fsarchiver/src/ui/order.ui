@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string extracomment="Beschreibung der Sicherung">Description of the backup</string>
+   <string extracomment="Existing orders">Existing orders</string>
   </property>
   <widget class="QPushButton" name="cmd_cancel">
    <property name="geometry">
@@ -125,7 +125,8 @@ backup files</string>
     </rect>
    </property>
    <property name="text">
-    <string>Clean up existing backups</string>
+    <string>Delete existing orders 
+.fsa files</string>
    </property>
   </widget>
   <zorder>cmd_listWidget</zorder>

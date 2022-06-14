@@ -2472,7 +2472,7 @@ cores for to be used fsarchiver:</translation>
     <message>
         <location filename="../src/ui/net.ui" line="651"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="677"/>
@@ -3314,11 +3314,6 @@ backup. key:</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -3696,7 +3691,7 @@ with fsarchiver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="250"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="269"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="162"/>
@@ -3764,7 +3759,7 @@ backup key</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="308"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="553"/>
@@ -4353,7 +4348,7 @@ from this hard disk:</source>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="170"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
@@ -4365,10 +4360,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Mô tả về bản sao lưu</translation>
+        <translation type="vanished">Mô tả về bản sao lưu</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4388,8 +4382,10 @@ from this hard disk:</source>
         <translation>Xóa tất cả các đơn đặt hàng</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Đơn đặt hàng hiện có</translation>
     </message>
     <message>
@@ -4405,11 +4401,12 @@ backup files</source>
 tệp sao lưu</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Dọn dẹp các bản 
-sao lưu hiện có</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Xóa các đơn hàng hiện có
+tệp .fsa</translation>
+    </message> 
 </context>
 <context>
     <name>setting_dialog</name>

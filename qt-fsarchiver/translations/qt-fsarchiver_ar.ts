@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ar_SA">
 <context>
@@ -3182,9 +3182,8 @@ verschlüsseln. Schlüssel</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
         <source>qt-fsarchiver</source>
-        <translation>qt-fsarchiver</translation>
+        <translation type="vanished">qt-fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="265"/>
@@ -4360,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>وصف النسخ الاحتياطي</translation>
+        <translation type="vanished">وصف النسخ الاحتياطي</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4383,8 +4381,10 @@ from this hard disk:</source>
         <translation>حذف كل الطلبات</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>أوامر موجودة</translation>
     </message>
     <message>
@@ -4399,12 +4399,13 @@ backup files</source>
         <translation>عدد المتبقين
  ملف نسخ احتياطي</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>تنظيف النُسخ
- الاحتياطية الموجودة</translation>
-    </message>
+<message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>حذف الطلبات الموجودة
+ملفات fsa</translation>
+    </message>  
 </context>
 <context>
     <name>setting_dialog</name>

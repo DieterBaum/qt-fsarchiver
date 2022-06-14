@@ -649,6 +649,7 @@ if(order == 1)
      int zip;
      int zip_zstd;
      bool ok;
+     int i = 0;
      indicator_reset();
      attribute = "chown -R " + user + " " + userpath + "/.config/qt-fsarchiver";
      befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
@@ -766,6 +767,8 @@ if(order == 1)
                                 }  
                  	}
                 }
+                        for(i=0; i<15; i++)
+                           parameter[i] = "";
                         if (rdBt_saveFsArchiv->isChecked())
            		{
                                 int indizierung;
@@ -1012,7 +1015,6 @@ Qt::CheckState state;
                      break;
                      }
                  }
-                 
                  if(doppel == 1)
                     { 
                     text = ""; 
@@ -1023,21 +1025,44 @@ Qt::CheckState state;
                         } 
                   }
                } 
-          if(zahl == 2)    //  Auftragname bei Wiederherstellung festlegen
-               {
-               text = "";
-               // Partition aus attribut ermitteln
-               found = attribut.indexOf("dest=/");
-               order_name = attribut.right(attribut.size() -found -5);
-               for(i=0; i <size_ -1; i++) 
-                  {
-                  dummy = auftrag[i];
-                  dummy = dummy.trimmed(); 
-                  auftrag[i] = dummy;
-                  text = text + auftrag[i] + " ## ";
+             if(zahl == 2)
+                {
+                // Partition aus attribut ermitteln
+                found = attribut.indexOf("dest=/");
+                order_name = attribut.right(attribut.size() -found -5);
+                order_name = order_name.trimmed();
+                 //auf vorhandenen Auftrag prüfen
+                for (i=0; i<size_; i++)
+                    {
+                if(order_name == auftrag[i])
+                     {
+                     auftrag[i+1] = attribut;
+                     doppel = 1;
+                     break;
+                     }
+                 }
+                 if(doppel == 1)
+                    { 
+                    text = ""; 
+                    for (i=0; i <size_ -1; i++)
+                        {
+                        if (auftrag[i] != "")
+                            text = text + auftrag[i] + " ## ";
+                        } 
                   }
+               }
+               if(zahl == 2 && doppel == 0)    //  Auftragname bei Wiederherstellung festlegen
+                   {
+                   text = "";
+                   for(i=0; i <size_ -1; i++) 
+                      {
+                      dummy = auftrag[i];
+                      dummy = dummy.trimmed(); 
+                      auftrag[i] = dummy;
+                      text = text + auftrag[i] + " ## ";
+                    }
                text = text + order_name + " ## " + attribut + " ## "; 
-               }           
+               }             
          // Daten speichern    
          file2.open(QIODevice::WriteOnly);
          QDataStream out1(&file2);
@@ -1161,6 +1186,7 @@ QFile file(folder);
 QFile file1(userpath + "/.config/qt-fsarchiver/zahlen.txt");
 QString DateiName("") ;
 int err = 0;
+int i = 0;
 QString keyText = "";
 QString dev_part;
 QString text;
@@ -1228,6 +1254,8 @@ QString attribute;
             // Archinfo einholen um Originalpartition einzulesen und um Verschlüsselung zu überprüfen
             // Annahme zunächst kein Schlüssel
                QString optionkey;
+               for(i=0; i<15; i++)
+                  parameter[i] = "";
                parameter[0] = "fsarchiver";
        	       parameter[1] = "archinfo";
                if (state1 != Qt::Checked) {
@@ -1494,11 +1522,12 @@ void MWindow::folder_file() {
    extern QString folder_file_;
    folder_file_ = folder + "/" + DateiName + "-" + _Datum + ".txt";
 }
-/*
-void MWindow::info() {
-   QMessageBox::information(0,"qt-fsarchiver","Backup and restore partitions, directory and MBR.\nversion 0.8.6-7, March 30, 2022");
-}*/
 
+/*void MWindow::info() {
+   QMessageBox::information(0,"qt-fsarchiver","Backup and restore partitions, directory and MBR.\nversion 0.8.6-9, June 12, 2022");
+
+}*/
+// Somit entfällt mit lupdate die Zeile <comment>.....</comment>
 
 void MWindow::info() {
    QMessageBox::information(

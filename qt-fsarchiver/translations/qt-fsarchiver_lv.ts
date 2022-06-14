@@ -3138,11 +3138,6 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -3322,12 +3317,6 @@ versija 0.8.6-9, 12.Birželis 2022</translation>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">Atsarginę kopiją ir atkurti pertvaros, katalogas ir MBR.
-versija 0.8.6-9, 12.Birželis 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>
@@ -4369,10 +4358,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Rezerves kopijas apraksts</translation>
+        <translation type="vanished">Rezerves kopijas apraksts</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4392,8 +4380,10 @@ from this hard disk:</source>
         <translation>Dzēst visus rīkojumus</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Esošie pasūtījumi</translation>
     </message>
     <message>
@@ -4408,11 +4398,12 @@ backup files</source>
         <translation>Atlikušo pasūtījumu skaits
 dublējuma faili</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Notīrīt esošos 
-dublējumus</translation>
+     <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Dzēst esošos pasūtījumus 
+.fsa faili</translation>
     </message>
 </context>
 <context>

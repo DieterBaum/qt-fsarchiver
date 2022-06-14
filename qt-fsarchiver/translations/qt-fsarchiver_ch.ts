@@ -3079,12 +3079,7 @@ verschlüsseln. Schlüssel</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1506"/>
+    <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
         <translation>分区、目录和MBR 备份/恢复工具。
@@ -4262,10 +4257,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>備份說明：</translation>
+        <translation type="vanished">備份說明：</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4285,8 +4279,10 @@ from this hard disk:</source>
         <translation>刪除所有訂單</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>現有訂單</translation>
     </message>
     <message>
@@ -4302,9 +4298,11 @@ backup files</source>
 個備份文件</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>清理現有備份</translation>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>删除现有订单
+.FSA文件</translation>
     </message>
 </context>
 <context>

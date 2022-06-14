@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="fa_IR">
 <context>
@@ -3132,12 +3132,7 @@ backup. key:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1506"/>
+    <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
         <translation>شتیبان گیری و بازیابی پارتیشن، دایرکتوری و MBR.
@@ -3316,12 +3311,6 @@ version 0.8.6-9, June 12, 2022</source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">پشتیبان گیری و بازیابی پارتیشن، دایرکتوری و MBR.
-نسخه 0.8.6-9 2022 ژوئن 12</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>
@@ -4363,10 +4352,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>توضیحات نسخه پشتیبان</translation>
+        <translation type="vanished">توضیحات نسخه پشتیبان</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4386,8 +4374,10 @@ from this hard disk:</source>
         <translation> حذف تمام سفارشات</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>سفارشات موجود</translation>
     </message>
     <message>
@@ -4402,12 +4392,13 @@ backup files</source>
         <translation> تعداد باقی مانده
 فایل پشتیبان</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>پشتیبان های
- موجود را پاک کنید</translation>
-    </message>
+   <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>حذف سفارشات موجود
+فایل های fsa</translation>
+    </message> 
 </context>
 <context>
     <name>setting_dialog</name>

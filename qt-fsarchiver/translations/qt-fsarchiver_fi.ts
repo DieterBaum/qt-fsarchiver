@@ -3125,15 +3125,10 @@ backup. key:</translation>
         <translation>The partition </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
-     <translation>Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.
+        <translation>Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.
 Versio 0.8.6-9, 12.Kesäkuu 2022</translation>
     </message>
     <message>
@@ -3179,12 +3174,6 @@ Versio 0.8.6-9, 12.Kesäkuu 2022</translation>
         <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
         <translation>The restoring is performed</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">Varmuuskopiointi ja palauttaminen osioita, hakemisto ja MBR.
-Versio 0.8.6-9, 12.Kesäkuu 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1578"/>
@@ -4370,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Varmuuskopion kuvaus</translation>
+        <translation type="vanished">Varmuuskopion kuvaus</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4393,8 +4381,10 @@ from this hard disk:</source>
         <translation>Poista kaikki tilaukset</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Olemassa olevat tilaukset</translation>
     </message>
     <message>
@@ -4410,11 +4400,12 @@ backup files</source>
 varmuuskopiotiedostot</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Siivoa olemassa olevat 
-varmuuskopiot</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation> Olemassa olevien tilausten poistaminen 
+.fsa-tiedostot</translation>
+</message>
 </context>
 <context>
     <name>setting_dialog</name>

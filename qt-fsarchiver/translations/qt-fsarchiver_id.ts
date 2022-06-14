@@ -2471,7 +2471,7 @@ cores for to be used fsarchiver:</translation>
     <message>
         <location filename="../src/ui/net.ui" line="651"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pesanan yang ada {2?}</translation>
     </message>
     <message>
         <location filename="../src/ui/net.ui" line="677"/>
@@ -3125,11 +3125,6 @@ backup. key:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -3303,12 +3298,6 @@ versi 0.8.6-9, 12.May. 2022</translation>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">Backup dan restore partisi, direktori dan MBR.
-versi 0.8.6-9, 12.May. 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1827"/>
@@ -3659,7 +3648,7 @@ with fsarchi&amp;ver</source>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="308"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pesanan yang ada {2?}</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="573"/>
@@ -3731,7 +3720,7 @@ with fsarchi&amp;ver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="250"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="269"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pesanan yang ada</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="162"/>
@@ -4358,7 +4347,7 @@ from this hard disk:</source>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="170"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pesanan yang ada</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
@@ -4370,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Deskripsi cadangan</translation>
+        <translation type="vanished">Deskripsi cadangan</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4393,8 +4381,10 @@ from this hard disk:</source>
         <translation>Hapus semua pesanan</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4410,11 +4400,12 @@ backup files</source>
 file cadangan</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Bersihkan 
-cadangan yang ada</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>מחק הזמנות קיימותHapus pesanan yang ada
+.fsa file</translation>
+    </message>  
 </context>
 <context>
     <name>setting_dialog</name>

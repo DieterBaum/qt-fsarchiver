@@ -3101,11 +3101,6 @@ copierea de rezervă. cheia:</translation>
         <translation>Recuperarea se realizează</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1579"/>
         <source>No</source>
         <comment>Nein</comment>
@@ -4364,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Descrierea de rezervă:</translation>
+        <translation type="vanished">Descrierea de rezervă:</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4387,8 +4381,10 @@ from this hard disk:</source>
         <translation>Ștergerea tuturor comenzilor</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Comenzi existente</translation>
     </message>
     <message>
@@ -4400,15 +4396,16 @@ from this hard disk:</source>
         <location filename="../src/ui/order.ui" line="114"/>
         <source>Number of remaining
 backup files</source>
-     <translation>Numărul de ordine rămase
+        <translation>Numărul de ordine rămase
 fișiere de rezervă</translation>
     </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Curățați copiile de 
-rezervă existente</translation>
-    </message>
+   <message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Ștergerea comenzilor existente 
+Fișiere .fsa </translation>
+    </message> 
 </context>
 <context>
     <name>setting_dialog</name>
@@ -4527,7 +4524,7 @@ to the original location by default</source>
     <message>
         <location filename="../src/ui/setting.ui" line="306"/>
         <source>Show hidden directories and files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Editarea listei de comenzi</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="329"/>

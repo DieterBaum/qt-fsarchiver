@@ -3322,11 +3322,6 @@ backup. nøkkel:</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -4365,10 +4360,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Beskrivelse av backup</translation>
+        <translation type="vanished">Beskrivelse av backup</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4388,8 +4382,10 @@ from this hard disk:</source>
         <translation>Slett alle bestillinger</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Eksisterende bestillinger</translation>
     </message>
     <message>
@@ -4405,10 +4401,11 @@ backup files</source>
 sikkerhetskopifiler</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-      <translation>Rydd opp i eksisterende
-sikkerhetskopier</translation>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Slett eksisterende bestillinger
+.fsa-filer</translation>
     </message>
 </context>
 <context>

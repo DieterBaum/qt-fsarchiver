@@ -3319,11 +3319,6 @@ verschlüsseln. Schlüssel</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -4370,10 +4365,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Опис резервне копије</translation>
+        <translation type="vanished">Опис резервне копије</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4393,8 +4387,10 @@ from this hard disk:</source>
         <translation>Обриши све наруџбе</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Постојећа наређења</translation>
     </message>
     <message>
@@ -4410,11 +4406,12 @@ backup files</source>
 резервних датотека</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Очистите постојеће 
-резервне копије</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Избришите постојеће поруџбине
+.фса датотеке</translation>
+    </message>   
 </context>
 <context>
     <name>setting_dialog</name>

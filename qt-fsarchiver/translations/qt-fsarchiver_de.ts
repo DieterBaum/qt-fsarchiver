@@ -3101,9 +3101,8 @@ Sie müssen eine Datei auswählen</translation>
         <translation>Die Wiederherstellung wird durchgeführt</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
         <source>qt-fsarchiver</source>
-        <translation>qt-fsarchiver</translation>
+        <translation type="vanished">qt-fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
@@ -3172,7 +3171,7 @@ Partition war nur teilweise erfolgreich.</translation>
 </source>
         <comment>Es ist kein Autrag vorhanden
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Es ist kein Autrag vorhanden</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1827"/>
@@ -4364,10 +4363,9 @@ sichern / wiederherstellen:</translation>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Beschreibung der Sicherung</translation>
+        <translation type="vanished">Beschreibung der Sicherung</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4387,8 +4385,10 @@ sichern / wiederherstellen:</translation>
         <translation>Alle Aufträge löschen</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Existierende Aufträge</translation>
     </message>
     <message>
@@ -4399,14 +4399,16 @@ sichern / wiederherstellen:</translation>
     <message>
         <location filename="../src/ui/order.ui" line="114"/>
         <source>Number of remaining
-backup files</source>       
+backup files</source>
         <translation>Anzahl der verbleibenden 
 Sicherungsdateien</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Existierene Aufträge löschen</translation>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Vorhandene Auftrags-
+.fsa-Dateien löschen</translation>
     </message>
 </context>
 <context>

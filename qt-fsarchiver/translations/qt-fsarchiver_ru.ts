@@ -3007,15 +3007,10 @@ backup key</source>
         <translation>Восстановление было выполнено</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
-       <translation>Сохранение и восстановление разделов, каталогов и MBR.
+        <translation>Сохранение и восстановление разделов, каталогов и MBR.
 Версия 0.8.6-9, 12.июнь 2022</translation>
     </message>
     <message>
@@ -3227,12 +3222,6 @@ backup. key:</source>
 verschlüsseln. Schlüssel</comment>
         <translation>Ключ
 шифрования:</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">Сохранение и восстановление разделов, каталогов и MBR.
-Версия 0.8.6-9, 12.июнь 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2210"/>
@@ -4356,10 +4345,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Параметры сохранения</translation>
+        <translation type="vanished">Параметры сохранения</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4379,8 +4367,10 @@ from this hard disk:</source>
         <translation>Удалить все заказы</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Существующие заказы</translation>
     </message>
     <message>
@@ -4396,11 +4386,12 @@ backup files</source>
 файлы резервных копий</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Очистить существующие 
-резервные копии</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Удаление существующих заказов 
+Файлы .fsa</translation>
+    </message> 
 </context>
 <context>
     <name>setting_dialog</name>

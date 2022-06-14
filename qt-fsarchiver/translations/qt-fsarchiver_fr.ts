@@ -3128,11 +3128,6 @@ Veuillez saisir la clef :</translation>
         <translation> ne peut pas être détaché. Programme abondonné.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
@@ -3313,12 +3308,6 @@ Version 0.8.6-9, Juin 2022 12. </translation>
         <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation> données particuliéres sauvegardées</translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">sauvegarde et de restauration des répertoires de partition et MBR.
-Version 0.8.6-9, Juin 2022 12. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>
@@ -3890,7 +3879,7 @@ Clé</translation>
         <source>There are no backupfiles to delete.</source>
         <comment>Es sind keine Sicherungdateien zum löschen vorhanden.
 </comment>
-        <translation>Il n'y a pas de fichiers de sauvegarde à supprimer.</translation>
+        <translation>Il n&apos;y a pas de fichiers de sauvegarde à supprimer.</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="304"/>
@@ -4303,10 +4292,9 @@ existant</translation>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Déscription de la sauvegard</translation>
+        <translation type="vanished">Déscription de la sauvegard</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4318,7 +4306,7 @@ existant</translation>
         <location filename="../src/ui/order.ui" line="39"/>
         <source>Delete order</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>Supprimer l'ordre</translation>
+        <translation>Supprimer l&apos;ordre</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="62"/>
@@ -4326,8 +4314,16 @@ existant</translation>
         <translation>Supprimer tous les ordres</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="114"/>
+        <source>Number of remaining
+backup files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Ordres existants</translation>
     </message>
     <message>
@@ -4336,17 +4332,12 @@ existant</translation>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="114"/>
-        <source>Nombre de fichiers restants
-fichiers de sauvegarde        </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Nettoyer les sauvegardes 
-existantes</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Supprimer les commandes existantes 
+Fichiers .fsa</translation>
+</message>
 </context>
 <context>
     <name>setting_dialog</name>

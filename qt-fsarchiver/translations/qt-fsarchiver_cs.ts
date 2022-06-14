@@ -3170,11 +3170,6 @@ backup. key:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="265"/>
         <source>Qt-fsarchiver can only be started once. The program must be terminated..
 </source>
@@ -4364,10 +4359,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Popis zálohy</translation>
+        <translation type="vanished">Popis zálohy</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4387,8 +4381,10 @@ from this hard disk:</source>
         <translation>Smazat všechny objednávky</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>Existující objednávky</translation>
     </message>
     <message>
@@ -4403,10 +4399,11 @@ backup files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>Vyčistit existující 
-zálohy</translation>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Odstranění stávajících objednávek
+.fsa soubory</translation>
     </message>
 </context>
 <context>

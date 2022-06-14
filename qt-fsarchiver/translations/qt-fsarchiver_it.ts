@@ -3266,15 +3266,10 @@ chiave di riserva:</translation>
         <translation>  non può essere smontato. Il programma viene interrotto.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
-        <translation>Backup e ripristino partizioni, directory e MBR.
+        <translation type="vanished">Backup e ripristino partizioni, directory e MBR.
 La versione 0.8.6-9, 12. Giugno 2022</translation>
     </message>
     <message>
@@ -3468,7 +3463,7 @@ La versione 0.8.6-9, 12. Giugno 2022</translation>
 </source>
         <comment>Es ist kein Autrag vorhanden
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>Non è disponibile alcun ordine</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1745"/>
@@ -4292,10 +4287,9 @@ harddrive:</translation>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Descrizione del backup</translation>
+        <translation type="vanished">Descrizione del backup</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4315,8 +4309,16 @@ harddrive:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="114"/>
+        <source>Number of remaining
+backup files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4325,15 +4327,12 @@ harddrive:</translation>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="114"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the number of&lt;/p&gt;&lt;p&gt;remaining backups&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>Cancellare gli ordini esistenti 
+File .fs </translation>
+    </message>  
 </context>
 <context>
     <name>setting_dialog</name>

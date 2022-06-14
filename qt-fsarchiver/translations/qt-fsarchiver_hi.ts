@@ -3130,15 +3130,10 @@ verschlüsseln. Schlüssel</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1505"/>
-        <source>qt-fsarchiver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
 version 0.8.6-9, June 12, 2022</source>
-     <translation>बैकअप और पुनर्स्थापना विभाजन, निर्देशिका और MBR.
+        <translation>बैकअप और पुनर्स्थापना विभाजन, निर्देशिका और MBR.
 संस्करण 0.8.6-9 12.जून 2022</translation>
     </message>
     <message>
@@ -3314,12 +3309,6 @@ version 0.8.6-9, June 12, 2022</source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
-        <translation type="vanished">बैकअप और पुनर्स्थापना विभाजन, निर्देशिका और MBR.
-संस्करण 0.8.6-9 12.जून 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>
@@ -4358,10 +4347,9 @@ from this hard disk:</source>
 <context>
     <name>order_dialog</name>
     <message>
-        <location filename="../src/ui/order.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>बैकअप का वर्णन:</translation>
+        <translation type="vanished">बैकअप का वर्णन:</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="26"/>
@@ -4381,8 +4369,10 @@ from this hard disk:</source>
         <translation>सभी आदेश हटाएं</translation>
     </message>
     <message>
+        <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
+        <extracomment>Existing orders</extracomment>
         <translation>मौजूदा आदेश</translation>
     </message>
     <message>
@@ -4398,10 +4388,12 @@ backup files</source>
 बैकअप फ़ाइलें</translation>
     </message>
     <message>
-        <location filename="../src/ui/order.ui" line="127"/>
-        <source>Clean up existing backups</source>
-        <translation>मौजूदा बैकअप को साफ करें</translation>
-    </message>
+        <location filename="../src/ui/order.ui" line="128"/>
+        <source>Delete existing orders 
+.fsa files</source>
+        <translation>מחק הזמנות קיימותमौजूदा आदेश हटाएं
+एफएसए फ़ाइलें</translation>
+    </message>  
 </context>
 <context>
     <name>setting_dialog</name>

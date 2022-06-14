@@ -9,7 +9,7 @@
     - All in all a considerable simplification of the operation.
     - Under Actions>Edit Order List the order list can be edited and existing backup files can be deleted.
 * qt-fsarchiver-0.8.6-8 May 26, 2022.
-    - Troubleshooting when writing an image of a disk
+    - Troubleshooting when writing an image of a disk.
 * qt-fsarchiver-0.8.6-7 March 30, 2022.
     - Unintentional closing of the main menu can be prevented by security prompt.
     - Error correction when backing up and restoring directories.
