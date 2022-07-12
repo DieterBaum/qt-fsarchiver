@@ -3044,9 +3044,9 @@ tecla de copia de seguridad:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
+version 0.8.6-10, July 12, 2022</source>
         <translation>Copia de seguridad y restauración de particiones, directorios y MBR.
-versione 0.8.6-9, 12.Junio 2022</translation>
+versione 0.8.6-10, 12. 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2864"/>

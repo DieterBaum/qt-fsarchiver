@@ -18,6 +18,7 @@
 #include "dir.h"
 #include "mainWindow.h"
 #include <unistd.h>
+#include <QInputDialog>
 extern "C" {
 }
 
@@ -56,6 +57,7 @@ extern QString user;
 QString userpath_dir;
 extern int sleepfaktor;
 QString homepath_dir = QDir::homePath();
+int lineKey_ = 0;
 
 DialogDIR::DialogDIR()
 {
@@ -139,9 +141,15 @@ DialogDIR::DialogDIR()
               chk_hidden->setChecked(true);
            auswertung = setting.value("Passwort").toInt(); 
            if (auswertung ==1)
+              {
               lineKey ->setEchoMode(QLineEdit::Normal);
+              lineKey_ = 1;
+              }
            else
+               {
 	       lineKey ->setEchoMode(QLineEdit::Password);
+	       lineKey_ = 2;
+              }
            zstd_level_dir = setting.value("zstd").toInt();
            cmb_zstd_dir -> setCurrentIndex(zstd_level_dir-1);
            auswertung = setting.value("Kompression").toInt();
@@ -217,6 +225,8 @@ QString optionkey;
 QString attribute;
 QFile file1(userpath_dir + "/.config/qt-fsarchiver/zahlen.txt");
 int found = 0;
+QString text;
+bool ok;
      attribute = "chown -R " + user + " " + userpath_dir + "/.config/qt-fsarchiver";
      befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + attribute;
      if(system (befehl.toLatin1().data()))
@@ -312,6 +322,21 @@ int found = 0;
                   	return 0 ; 
                	   }
                indizierung = indizierung + 2;  
+               //Wiederholung der Eingabe und prüfen auf Übereinstimmung
+                                  if(lineKey_ == 1)
+                                       text = QInputDialog::getText(this, tr("Enter password again","Passwort nochmals eingeben"),
+                                       (tr("Password:","Passwort")), QLineEdit::Normal,"", &ok);
+                                   if(lineKey_ == 2)
+                                       text = QInputDialog::getText(this, tr("Enter password again","Passwort nochmals eingeben"),
+                                       (tr("Password:","Passwort")), QLineEdit::Password,"", &ok);
+                                   if (!ok)  //Cancel Programm wird beendet
+                                         close();
+                                    if (keyText != text)
+                                          {
+                                          QMessageBox::about(this,tr("Note", "Hinweis"),
+         	                          tr("The passwords do not match.\n", "Die Passwörter stimmen nicht überein.\n"));
+                                          return 0;
+                                          }
 	      }
         dummy = folder_path;
         pos = 0;
@@ -439,6 +464,11 @@ int found = 0;
    		index = "1"; 
         parameter[2] = "-j" + index;
         indizierung = 3;
+        if (state1 == Qt::Checked) { // Verzeichnis mit Schlüssel gesichert
+                parameter[3] = "-c";
+                parameter[4] = keyText;
+		indizierung = 5;
+                }
         if (state == Qt::Checked){
                 parameter[indizierung] = (folder_dir);  //an Originalort zurückschreiben
                 indizierung = indizierung + 1;
@@ -449,11 +479,7 @@ int found = 0;
                 indizierung = indizierung  + 1;
                 parameter[indizierung] = folder_path ;
                 }
-        if (state1 == Qt::Checked) { // Verzeichnis mit Schlüssel gesichert
-                parameter[5] = "-c";
-                parameter[6] = keyText;
-		indizierung = 6;
-                }
+        
          QString attribute; 
 	 for ( int i=0; i<7; i++)
   	  {
@@ -570,6 +596,7 @@ void DialogDIR::thread1Ready()  {
    dir_sekunde_summe = 0;
    dir_minute_elapsed = 0;
    dir_sekunde_elapsed = 0;
+   this->setCursor(Qt::ArrowCursor);
 }
 
 void DialogDIR::thread2Ready()  {
@@ -665,6 +692,7 @@ void DialogDIR::thread2Ready()  {
    dir_sekunde_summe = 0;
    dir_minute_elapsed = 0;
    dir_sekunde_elapsed = 0;
+   this->setCursor(Qt::ArrowCursor);
 }
 
 void DialogDIR::elapsedTime()

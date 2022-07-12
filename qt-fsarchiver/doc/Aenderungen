@@ -1,6 +1,9 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-0.8.6-10 12. Juli 2022.
+    - Fehlerkorrektur im Bereich Klonen/Image schreiben.
+    - kleinerer Verbesserungen.
 * qt-fsarchiver-0.8.6-9 12. Juni 2022.
     - Beim Schreiben oder Wiederherstellen einer Partition wird im Hintergund der Ausführungsbefehl aufgezeichnet.
     - Unter Aktionen>Auftrag kann ein gewählter Auftrag ohne weitere Eingaben ausgeführt werden.

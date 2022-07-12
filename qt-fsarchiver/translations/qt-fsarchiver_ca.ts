@@ -3301,9 +3301,9 @@ còpia de seguretat. clau:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
+version 0.8.6-10, July 12, 2022</source>
         <translation>Còpia de seguretat i restaurar de les particions, el directori i el MBR.
-Versió 0.8.6-9, 12. Juny 2022</translation>
+Versió 0.8.6-10, 12.  2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>

@@ -66,7 +66,7 @@ int main(int argc, char **argv)
    language[12] = "da_DA";
    language[13] = "el_EL";
    language[14] = "et_ET";
-   language[15] = "fn_FN";
+   language[15] = "fi_FI";
    language[16] = "he_HE";
    language[17] = "hi_HI";
    language[18] = "hu_HU";

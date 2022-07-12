@@ -30,12 +30,11 @@ QString wort;
 
 FileDialog::FileDialog()
 {
+QString filename;
   setupUi(this);
   connect( cmd_save, SIGNAL(clicked()), this, SLOT(folder_einlesen()));
   connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(beenden()));
   textEdit->setPlainText(wort);
- 
- 
  if (dialog_auswertung ==3)
      {
 	cmd_save->setText(tr("Partition restore", "Partition zurückschreiben"));
@@ -49,11 +48,25 @@ FileDialog::FileDialog()
      }
 if (dialog_auswertung ==8)
      {
-	cmd_save->setText(tr("Write hard disk image back", "Festplatten Abbild zurückschreiben"));
-	file_read();
-     }
-  
- } 
+        extern QString folder_file_;
+  	cmd_save->setText(tr("Write hard disk image back", "Festplatten Abbild zurückschreiben"));
+        filename = folder_file_;
+        filename = filename + ".txt";
+        int found = filename.indexOf("'");
+        if (found > -1)
+            filename = filename.replace("'", "");
+        found = filename.indexOf("'"); 
+        if (found > -1)   
+            filename = filename.replace("'", ""); 
+         //prüfen ob Datei existiert
+        if (!filename.isEmpty()) 
+           {
+      	   QFile file(filename);
+           if (file.open(QIODevice::ReadOnly | QIODevice::Text)) 
+              textEdit->setPlainText(file.readAll());
+  	   } 
+     } 
+}     
 
 void FileDialog::folder_einlesen() {
         QString folder;
@@ -74,7 +87,16 @@ void FileDialog::beenden() {
 void FileDialog::file_save()
 {
         extern QString folder_file_;
-      	QString filename = folder_file_;
+        int found = folder_file_.indexOf("'");
+        if (found > -1)
+            folder_file_ = folder_file_.replace("'", "");
+        found = folder_file_.indexOf("'"); 
+        if (found > -1)   
+            folder_file_ = folder_file_.replace("'", "");
+        found = folder_file_.indexOf("+"); 
+        if (found > -1)   
+            folder_file_ = folder_file_.replace("+", " ");    
+       	QString filename = folder_file_;
       	if (filename.isEmpty())
    		return;
 	QFile file(filename);
@@ -90,6 +112,7 @@ void FileDialog::file_save()
 void FileDialog::file_read()
 {
 QString filename;
+int found = 0;
         QSettings setting("qt-fsarchiver", "qt-fsarchiver");
         setting.beginGroup("Basiseinstellungen");
         setting.endGroup();
@@ -97,17 +120,21 @@ QString filename;
         filename = folder_file_;
         int pos = filename.indexOf("fsa");
         filename = filename.left(pos);
-        filename.insert(pos, QString("txt"));
+        filename.insert(pos, QString("txt")); 
+        found=filename.indexOf("+");
+        if (found > 0)
+            filename.replace(found, 1, " "); 
         if (dialog_auswertung >=7)
-           filename = folder_file_ + ".txt";  
+           filename = folder_file_ + ".txt" ;  
         //prüfen ob Datei existiert
-                if (!filename.isEmpty()) {
-      		QFile file(filename);
-        	if (file.open(QIODevice::ReadOnly | QIODevice::Text)) 
-                    textEdit->setPlainText(file.readAll());
- 	  }
+        if (!filename.isEmpty()) 
+           {
+      	   QFile file(filename);
+           if (file.open(QIODevice::ReadOnly | QIODevice::Text)) 
+              textEdit->setPlainText(file.readAll());
+  	   }
   }
-
+  
 void FileDialog::werte_uebergeben(QString wert) {
        	wort = wert;
 }

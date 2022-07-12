@@ -3134,9 +3134,9 @@ backup. key:</translation>
     <message>
     <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
+version 0.8.6-10, July 12, 2022</source>
         <translation>شتیبان گیری و بازیابی پارتیشن، دایرکتوری و MBR.
-نسخه 0.8.6-9 2022 ژوئن 12</translation>
+نسخه 0.8.6-10 2022  12</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1578"/>

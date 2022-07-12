@@ -3316,9 +3316,9 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
+version 0.8.6-10, July 12, 2022</source>
         <translation>Sao lưu và phục hồi phân vùng, thư mục và MBR.
-Phiên bản 0.8.6-9, 12. Tháng sáu 2022</translation>
+Phiên bản 0.8.6-10, 12.  2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1940"/>

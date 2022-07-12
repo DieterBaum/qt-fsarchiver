@@ -2942,7 +2942,7 @@ Das Programm wird abgebrochen</translation>
         <location filename="../src/mainWindow.cpp" line="810"/>
         <source>Password:</source>
         <comment>Passwort</comment>
-        <translation>Passnwort:</translation>
+        <translation>Passwort:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="816"/>
@@ -3107,9 +3107,9 @@ Sie müssen eine Datei auswählen</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1506"/>
         <source>Backup and restore partitions, directory and MBR.
-version 0.8.6-9, June 12, 2022</source>
+version 0.8.6-10, July 12, 2022</source>
         <translation>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR.
-Version 0.8.6-9, 12.Juni 2022</translation>
+Version 0.8.6-10, 12.Juli 2022</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1836"/>
