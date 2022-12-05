@@ -373,7 +373,7 @@ for to be used fsarchiver:</string>
      <rect>
       <x>150</x>
       <y>0</y>
-      <width>131</width>
+      <width>111</width>
       <height>27</height>
      </rect>
     </property>
@@ -438,9 +438,9 @@ backup key</string>
    <widget class="QComboBox" name="cmb_zstd_dir">
     <property name="geometry">
      <rect>
-      <x>294</x>
+      <x>278</x>
       <y>0</y>
-      <width>35</width>
+      <width>51</width>
       <height>27</height>
      </rect>
     </property>

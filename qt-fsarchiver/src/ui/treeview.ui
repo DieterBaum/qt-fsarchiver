@@ -51,7 +51,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>315</y>
+      <y>320</y>
       <width>423</width>
       <height>27</height>
      </rect>
@@ -72,7 +72,7 @@
       <x>10</x>
       <y>40</y>
       <width>421</width>
-      <height>261</height>
+      <height>271</height>
      </rect>
     </property>
     <attribute name="headerDefaultSectionSize">
@@ -105,20 +105,6 @@
      <string>a</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_treeview_2">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>320</y>
-      <width>31</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>a</string>
-    </property>
-   </widget>
-   <zorder>pushButton_treeview_2</zorder>
    <zorder>cmd_cancel</zorder>
    <zorder>treeView</zorder>
    <zorder>label</zorder>
@@ -145,22 +131,6 @@
     <hint type="destinationlabel">
      <x>60</x>
      <y>344</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>treeView</sender>
-   <signal>activated(QModelIndex)</signal>
-   <receiver>pushButton_treeview_2</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>379</x>
-     <y>139</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>372</x>
-     <y>256</y>
     </hint>
    </hints>
   </connection>

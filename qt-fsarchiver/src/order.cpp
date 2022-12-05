@@ -33,7 +33,6 @@ using namespace std;
 
 extern int dialog_auswertung;
 extern int sleepfaktor;
-QString userpath_list;
 QString widget_list[100];
 QString widget_list_[100];
 QString order_name_[100];
@@ -46,7 +45,7 @@ OrderDialog::OrderDialog()
   setupUi(this);
   connect( cmd_del, SIGNAL(clicked()), this, SLOT(del_one()));
   connect( cmd_del_all, SIGNAL(clicked()), this, SLOT(del_all()));
-  connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(close()));
+  connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(end_()));
   connect( cmd_listWidget, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
   connect( cmd_clean, SIGNAL( clicked() ), this, SLOT(clean()));
   clear << "2" << "3" << "4" <<  "5" ;
@@ -59,8 +58,8 @@ OrderDialog::OrderDialog()
 
 void OrderDialog:: make_order()
 {
-userpath_list = QDir::homePath();
-QString filename = userpath_list + "/.config/qt-fsarchiver/auftrag.db";
+QString homepath = QDir::homePath();
+QString filename = homepath + "/.config/qt5-fsarchiver/auftrag.db";
 QFile file(filename);
 QString attribute;
 QStringList auftrag;
@@ -107,6 +106,7 @@ void OrderDialog::listWidget_auslesen() {
 }
 
 void OrderDialog::clean() {
+QString homepath = QDir::homePath();
 int i = 0;
 int j = 0;
 int l = 0;
@@ -147,7 +147,7 @@ QString befehl;
             ++j;
             } 
             dummy = dummy.mid(place[0],place[i-3]-place[0]);
-            pfade[l] = dummy; 
+            pfade[l] = dummy;
             if( l > 98)
                break;  // Überlauf verhindern
             l++;   
@@ -230,10 +230,10 @@ QString befehl;
                    QFileInfo resourceInfo(dummy);
                    dummy = resourceInfo.lastModified().toString("yyyy-MM-dd");
                    // in Systemzeit umrechnen
-                   befehl = "date -d '" + dummy + "' +%s 1> " +  userpath_list + "/.config/qt-fsarchiver/zeit.txt";
+                   befehl = "date -d '" + dummy + "' +%s 1> " +  homepath + "/.config/qt5-fsarchiver/zeit.txt";
                    if(system (befehl.toLatin1().data()))
                         befehl = "";
-                   QString filename = userpath_list + "/.config/qt-fsarchiver/zeit.txt";
+                   QString filename = homepath + "/.config/qt5-fsarchiver/zeit.txt";
                    QFile file(filename);
                    QTextStream ds(&file);
                    file.open(QIODevice::ReadOnly | QIODevice::Text); 
@@ -264,8 +264,7 @@ QString befehl;
                    n++;
                    }
                 // Array nach Zeit sortieren    
-               // for(i=0;i<n;++i)
-                 for(o=0;o<n;++o)
+                for(o=0;o<n;++o)
                    {
                    for(j=0;j<(n-1);++j)
                    if(array_time[l][j]>array_time[l][j+1])
@@ -306,13 +305,13 @@ QString befehl;
                    { 
                    for(o = 0; o < p; o++)
                        {
-                       befehl = "/usr/sbin/qt-fsarchiver.sh  13 " + name[o]; 
+                       befehl = name[o]; 
                        if(system (befehl.toLatin1().data()))
-                          befehl = "";
+                           befehl = "";
                        // Text-Dateien müssen auch entfernt werden
                        zahl=befehl.indexOf(".fsa");
                        if (zahl > 0)
-        	          befehl.replace(zahl, 4, ".txt"); 
+        	          befehl.replace(zahl, 4, ".txt");
         	       if(system (befehl.toLatin1().data()))
                           befehl = "";
                  }
@@ -323,12 +322,13 @@ QString befehl;
 }
 
 void OrderDialog::del_all() {
+QString homepath = QDir::homePath();
 QString befehl;
 int ret = 0;
        ret = questionMessage(tr("Do you really want to delete all orders?", "Wollen Sie wirklich alle Aufträge löschen?"));
        if (ret == 1)
           { // beenden
-          befehl = "rm " + userpath_list + "/.config/qt-fsarchiver/auftrag.db";
+          befehl = "rm " + homepath + "/.config/qt5-fsarchiver/auftrag.db";
           if(system (befehl.toLatin1().data()))
                befehl = "";
           cmd_del_all ->setEnabled(true);
@@ -339,9 +339,10 @@ int ret = 0;
 }
 
 void OrderDialog::del_one() {
+QString homepath = QDir::homePath();
 int i = 0;
 QString order_name;
-QString dateiname = userpath_list + "/.config/qt-fsarchiver/auftrag.db";  
+QString dateiname = homepath + "/.config/qt5-fsarchiver/auftrag.db";  
 QFile file2(dateiname);
 QString text; 
        make_order();
@@ -382,6 +383,13 @@ int OrderDialog::questionMessage(QString frage)
     		return 2;
 return 0;
 }
+
+void OrderDialog::end_()
+{
+dialog_auswertung = 0;
+close();
+}
+
 
 
 

@@ -1,11 +1,11 @@
 [Desktop Entry]
 Name=qt-fsarchiver
 Name[de_DE]=qt-fsarchiver
-GenericName=Qt GUI for fsarchiver
-GenericName[lt]=Qt fsarchiver
-Exec=/usr/sbin/qt-fsarchiver
+Comment=Qt GUI for fsarchiver
+Exec=/usr/sbin/qt-fsarchiver.sh
 Icon=qt-fsarchiver
 Terminal=false
 Type=Application
 StartupNotify=true
 Categories=System;Filesystem;
+

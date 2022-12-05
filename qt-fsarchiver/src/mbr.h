@@ -5,7 +5,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v3 as published by the Free Software Foundation.
+ * License v2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,6 +21,8 @@
 #include <QMessageBox>
 #include <string.h>
 #include "ui_mbr_dialog.h"
+
+using namespace std;
 
 class DialogMBR : public QWidget, private Ui::mbr_dialog
 {
@@ -40,20 +42,14 @@ public slots:
         void disk_exist();
         void disk_art();
         void folder_expand();
-        int testen(QString filename);
-        int testen_1();
+
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
     QLabel *questionLabel;
-    QString mtab_einlesen(QString partition_if_home);
+    string mtab_einlesen(string partition_if_home);
 };
 #endif
-
-
-
-
-
 
 
 

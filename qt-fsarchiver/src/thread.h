@@ -5,7 +5,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v3 as published by the Free Software Foundation.
+ * License v2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -24,7 +24,7 @@ class Thread : public QThread {
 public:
    Thread();
    void setValues( int anzahl_, QString dummy);
-
+   //int progressbar();
 protected:
    void run();
 private:
@@ -32,11 +32,6 @@ private:
    QString qdummy; 
 };
 #endif
-
-
-
-
-
 
 
 

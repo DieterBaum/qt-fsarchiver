@@ -5,7 +5,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v3 as published by the Free Software Foundation.
+ * License v2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,6 +21,8 @@
 #include <QMessageBox>
 #include <string.h>
 #include "ui_dir_dialog.h"
+#include "thread.h"
+using namespace std;
 
 class DialogDIR : public QWidget, private Ui::dir_dialog
 {
@@ -33,45 +35,41 @@ public:
 public slots:
 	int folder_dir_path_einlesen();
         void treeview_show();
-        void zip_einlesen_dir(); 
-        void folder_expand_dir(); 
-        void folder_expand_path();
               
 private:
+    //QFileSystemModel *model;
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
     QFileSystemModel *dirModel1;
     QItemSelectionModel *selModel1;
     QLabel *questionLabel;
+    Thread thread1;
+    Thread thread2;
     void indicator_reset();
     QTimer *timer;
     
 
 protected slots:
+    void closeEvent(QCloseEvent* event);
     void elapsedTime();
     void remainingTime(int prozent);
     void chkkey();
     void ViewProzent();
+    void keyPressEvent(QKeyEvent *event);
     int questionMessage(QString frage);
+    void esc_end();
     void chkhidden();
-    void save_attribut_dir(QString attribut);
-    QString datei_auswerten_dir(QString buchstabe);
-    QString datei_auswerten_1_dir(QString dateiname);
-    void closeEvent(QCloseEvent *event);
-    QString pid_ermitteln_dir(QString prozess);
+    void zip_einlesen_dir();
               
 private slots:    
+   void startThread1();
    void thread1Ready();
+   void startThread2();
    void thread2Ready();
-   	
+	
 };
 
 #endif
-
-
-
-
-
 
 
 

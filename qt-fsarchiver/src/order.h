@@ -32,9 +32,13 @@ private slots:
    int questionMessage(QString frage);
    void listWidget_auslesen();
    void clean();
+   void end_();
 };
 
 #endif // OrderDialog_H
+
+
+
 
 
 

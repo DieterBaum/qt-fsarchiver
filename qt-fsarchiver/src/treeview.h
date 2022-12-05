@@ -5,7 +5,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v3 as published by the Free Software Foundation.
+ * License v2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -22,15 +22,16 @@
 #include <QDialog>
 #include "ui_treeview.h"
 
+using namespace std;
+
 class TreeviewRead : public QDialog, private Ui::treeview_dialog
 {
 	Q_OBJECT
 
 public:
-	TreeviewRead();
-         ~TreeviewRead() {}
-         QString folder_treeview_holen();
-       
+	TreeviewRead(QWidget *parent = 0);
+        QString folder_treeview_holen();
+
 private:
 	QFileSystemModel *dirModel;
     	QItemSelectionModel *selModel;       
@@ -38,15 +39,9 @@ private:
 private slots:	
         void folder_einlesen();
         void folder_einlesen_beenden();
-        void folder_expand();
 };
 
 #endif
-
-
-
-
-
 
 
 

@@ -580,23 +580,6 @@ transmission:</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="bt_toParent">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>270</y>
-     <width>31</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset resource="../icon.qrc">
-     <normaloff>:/src/images/cdtoparent.png</normaloff>:/src/images/cdtoparent.png</iconset>
-   </property>
-  </widget>
   <widget class="QPushButton" name="bt_treeWiget">
    <property name="geometry">
     <rect>
@@ -609,21 +592,6 @@ transmission:</string>
    <property name="text">
     <string/>
    </property>
-  </widget>
-  <widget class="QTreeWidget" name="treeWidget">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>300</y>
-     <width>371</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string notr="true">1</string>
-    </property>
-   </column>
   </widget>
   <widget class="QPushButton" name="pushButton_zstd_net">
    <property name="geometry">
@@ -742,8 +710,6 @@ setting:</string>
   <zorder>frame_2</zorder>
   <zorder>cmb_Net</zorder>
   <zorder>label_13</zorder>
-  <zorder>bt_toParent</zorder>
-  <zorder>treeWidget</zorder>
   <zorder>bt_treeWiget_2</zorder>
   <zorder>label</zorder>
   <zorder>label_4</zorder>
@@ -803,22 +769,6 @@ setting:</string>
    </hints>
   </connection>
   <connection>
-   <sender>treeWidget</sender>
-   <signal>clicked(QModelIndex)</signal>
-   <receiver>bt_treeWiget</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>390</x>
-     <y>240</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>55</x>
-     <y>395</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>cmb_zip</sender>
    <signal>activated(QString)</signal>
    <receiver>pushButton_zstd_net</receiver>
@@ -847,22 +797,6 @@ setting:</string>
     <hint type="destinationlabel">
      <x>257</x>
      <y>475</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>treeWidget</sender>
-   <signal>currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)</signal>
-   <receiver>bt_treeWiget_2</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>457</x>
-     <y>299</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>261</x>
-     <y>393</y>
     </hint>
    </hints>
   </connection>

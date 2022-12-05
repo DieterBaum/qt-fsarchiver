@@ -577,7 +577,7 @@
   <widget class="QPushButton" name="pushButton_partition">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>560</x>
      <y>480</y>
      <width>31</width>
      <height>27</height>
@@ -695,6 +695,62 @@
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pB1">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>480</y>
+     <width>21</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>480</y>
+     <width>21</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pB1_2">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>480</y>
+     <width>16</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb2_2">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>480</y>
+     <width>21</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>pb2_2</zorder>
+  <zorder>pB1_2</zorder>
+  <zorder>pB2</zorder>
+  <zorder>pB1</zorder>
   <zorder>pushButton_partition_2</zorder>
   <zorder>pushButton_folder_2</zorder>
   <zorder>pushButton_folder</zorder>
@@ -743,12 +799,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>401</x>
-     <y>293</y>
+     <x>370</x>
+     <y>413</y>
     </hint>
     <hint type="destinationlabel">
-     <x>363</x>
-     <y>745</y>
+     <x>560</x>
+     <y>506</y>
     </hint>
    </hints>
   </connection>
@@ -775,12 +831,76 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>229</x>
-     <y>289</y>
+     <x>209</x>
+     <y>409</y>
     </hint>
     <hint type="destinationlabel">
      <x>583</x>
      <y>543</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_exist</sender>
+   <signal>currentItemChanged(QListWidgetItem*,QListWidgetItem*)</signal>
+   <receiver>pB1</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_clone</sender>
+   <signal>currentItemChanged(QListWidgetItem*,QListWidgetItem*)</signal>
+   <receiver>pB2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>631</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_exist</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>pB1_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>485</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_clone</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>pb2_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>613</x>
+     <y>492</y>
     </hint>
    </hints>
   </connection>

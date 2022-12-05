@@ -1,12 +1,11 @@
-
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2018 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2022 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License v3 as published by the Free Software Foundation.
+ * License v2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -22,8 +21,14 @@
 
 #include <string.h>
 #include "ui_fsarchiverMain.h"
+#include "thread.h"
+
 #include <QDialog>
 #include <QMap>
+
+using namespace std;
+
+
 
 class MWindow : public QMainWindow,
                 private Ui::MainWindow {
@@ -32,30 +37,24 @@ class MWindow : public QMainWindow,
 public:
    MWindow();
    ~MWindow() {}
-   int is_running();
+   //int show_flag = 0; Zugriff auf eine Variable von beispielsweise net.cpp
+   int Root_Auswertung();
    QString Zeit_auslesen();
-   QString mtab_einlesen(int zahl);
+   QString mtab_einlesen(QString partition_if_home);
    QString identify_save_part(QString save_partition);
-   QString beschreibungstext(QString text, int zip, int row);
+   QString beschreibungstext(QString partitiontext, QString text, int zip, int row);
    int is_mounted (char* dev_path);
    int questionMessage(QString frage); 
    QString UUID_auslesen(int row);
-   void save_attribut(QString attribut, int zahl);
-   void date_delete();
-                
+        
 public slots: 
    void folder_einlesen();
-   void folder_expand();
    void save_button();
-   QString pid_ermitteln_(QString prozess);
-   void del_mediafolder();
-   void kill_end();
-   
-      
+                    
 protected slots:
-   void esc_end(int flag);
+   void esc_end();
    void ViewProzent();
-   int testDateiName(std::string endung);
+   int testDateiName(string endung);
    int savePartition();
    int restorePartition();
    void info();
@@ -68,8 +67,7 @@ protected slots:
    void dir_restore ();
    void folder_file();
    void starteinstellung();
-   void format_();
-   QString format(float zahl);
+   void format();
    void closeEvent(QCloseEvent* event);
    void elapsedTime();
    void remainingTime(int prozent);
@@ -83,35 +81,42 @@ protected slots:
    void chkGB();
    QString kernel_version();
    QString linux_version();
+   QString mountpoint(QString uuid);
+   QString format(float zahl);
+   int pid_ermitteln();
+   void del_mediafolder();
    void clone_save();
-   void make_order();
-   void listWidget2_auslesen();
+   void clone_save_net();
+   void make_order(); 
+   void order_edit(); 
    void save_restorePartiiton_list();
-   void zip_einlesen();
-   void sdx_einlesen();
-   QString datei_auswerten(QString buchstabe);
-   QString datei_auswerten_1(QString dateiname);
-   QString sdx3_einlesen(QString part, int flag);
-   void daten_write(QString password, int i);
-   QString md5sum(QString file_name);
-   int is_gpt_main(QString partition_efi);
-   QString label_read(QString partname);
+   void save_attribut(QString attribut, int zahl);
+   void listWidget2_auslesen();
+   void kill_end();
+   QString pid_ermitteln_(QString prozess);
    void zip_setting_einlesen();
-   void order_edit();
- 
+   void zip_einlesen();
+   void make_direct();
      
 private:
     QFileSystemModel *dirModel;
     QItemSelectionModel *selModel;
+    QLabel *questionLabel;
+    Thread thread1;
+    Thread thread2;
     QTimer *timer;  
     
     
 private slots:    
+   void startThread1();
    void thread1Ready();
+   void startThread2();
    void thread2Ready();
      
 };
 #endif
+
+
 
 
 

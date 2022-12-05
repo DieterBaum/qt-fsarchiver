@@ -40,7 +40,7 @@ DialogSetting::DialogSetting()
         cmb_language->addItems (items_language);
         items_zstd_setting << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12" << "13" << "14" << "15" << "16" << "17" << "18" << "19" << "20" << "21" << "22";
         cmb_zstd->addItems (items_zstd_setting);
-        items_kerne << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12" << "13" << "14" << "15" << "16" ;
+        items_kerne << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12" << "13" << "14" << "15" << "16" << "17" << "18" << "19" << "20";
         cmb_Kerne->addItems (items_kerne);
    	items_kerne.clear();
         items_sleep << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12" << "13" << "14" << "15" << "16" << "17" << "18" << "19" << "20";
@@ -52,10 +52,10 @@ DialogSetting::DialogSetting()
    	items_zip << tr("bzip2 good", "bzip2 good") << tr("lzma fast","lzma fast") << tr("lzma medium","lzma medium") << tr("lzma best","lzma best") << tr("zstd","zstd");
    	cmb_zip->addItems (items_zip);
    	items_zip.clear();
-        items_network << tr("Samba") << tr("SSH") << tr("NFS");
+        items_network << tr("Samba") << tr("NFS");
    	cmb_network->addItems (items_network);
    	items_network.clear();
-        QSettings setting("qt-fsarchiver", "qt-fsarchiver");
+        QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
         setting.beginGroup("Basiseinstellungen");
         int auswertung = setting.value("Sprache").toInt(); 
         cmb_language -> setCurrentIndex(auswertung-1); 
@@ -125,7 +125,7 @@ DialogSetting::DialogSetting()
 
 void DialogSetting:: setting_save()
 {
-     QSettings setting("qt-fsarchiver", "qt-fsarchiver");
+     QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
      setting.beginGroup("Basiseinstellungen");
      setting.setValue("Sprache",cmb_language->currentIndex()+1);
      int zip = cmb_zip->currentIndex();
@@ -209,6 +209,9 @@ int zip = cmb_zip->currentIndex();
        label_5->setEnabled(false);
        }
 }
+
+
+
 
 
 

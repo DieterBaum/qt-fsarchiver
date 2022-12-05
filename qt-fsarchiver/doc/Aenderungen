@@ -1,6 +1,11 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-1.8.6-1 12. Dezember 2022.
+    - kliene Korrekturen
+* qt-fsarchiver-1.8.6-0 1. Dezember 2022.
+    - qt-fsarchiver und qt-fsarchiver-terminal wurden in einem Programm zusammengefasst.
+    - kleinerer Verbesserungen und kleinere Korrekturen.
 * qt-fsarchiver-0.8.6-10 12. Juli 2022.
     - Fehlerkorrektur im Bereich Klonen/Image schreiben.
     - kleinerer Verbesserungen.
