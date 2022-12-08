@@ -322,6 +322,10 @@ MWindow::MWindow()
       if(system (befehl.toLatin1().data()))
          befehl = "";
       }
+   // /home/user/.config/qt-fsarchiver/qt-fsarchiver.conf entfernen   
+   befehl = "rm /home/*/.config/qt-fsarchiver/qt-fsarchiver.conf 2>/dev/null";  //file.exist mit * funktioniert nicht
+   if(system (befehl.toLatin1().data()))
+      befehl = "";	
    // Ini-Datei auslesen
    QFile file(homepath + "/.config/qt5-fsarchiver/qt5-fsarchiver.conf");
    QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
