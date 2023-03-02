@@ -1,4 +1,6 @@
-# qt-fsarchiver
+# qt-fsarchiver <a href="https://hosted.weblate.org/engage/qt-fsarchiver/">
+<img src="https://hosted.weblate.org/widgets/qt-fsarchiver/-/287x66-black.png" alt="Translation status" />
+</a>
 qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 
 Copyright (C) 2008-2022 Francois Dupoux and Dieter Baum.  All rights reserved.
