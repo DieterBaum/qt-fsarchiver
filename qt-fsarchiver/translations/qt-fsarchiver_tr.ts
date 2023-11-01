@@ -3053,10 +3053,10 @@ backup. key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1311"/>
         <source>Backup and restore partitions, directory and MBR.
-version 1.8.6-1, December 12, 2022</source>
+version 1.8.7-0, December 15, 2023</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.6-0, 1.Dezember 2022</comment>
         <translation>BBölümleri, dizini ve MBR&apos;yi yedekleme ve geri yükleme.
-versiyon 1.8.6-1, 12.Aralık 2022</translation>
+versiyon 1.8.7-0, 15.Aralık 2023</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1319"/>

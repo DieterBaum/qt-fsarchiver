@@ -1,6 +1,6 @@
 /*
  * fsarchiver: Filesystem Archiver
- * 
+ *
  * Copyright (C) 2008-2022 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
@@ -170,8 +170,7 @@ int xfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char *
     }
 
     // Determine if the "rmapbt" mkfs option should be enabled (reverse mapping btree)
-    // - starting with linux-4.8 XFS has added a btree that maps filesystem blocks to
-    //   their owner
+    // - starting with linux-4.8 XFS has added a btree that maps filesystem blocks to their owner
     // - this feature relies on the V5 on-disk format but it is optional
     // - this feature will be enabled if the original filesystem was XFS V5 and had it
     if (xfstoolsver >= PROGVER(4,8,0)) // only use "rmapbt" option when it is supported by mkfs
@@ -196,6 +195,7 @@ int xfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char *
     //   to reduce mount times
     // - this optional feature relies on the V5 on-disk format and on the "finobt"
     //   (free inode btree) mkfs option being enabled
+    // - this feature is enabled by default when using xfsprogs-5.15.0 or later
     // - this feature will be enabled if the original filesystem was XFS V5 and had it
     if (xfstoolsver >= PROGVER(5,10,0)) // only use "inobtcount" option when it is supported by mkfs
     {
@@ -206,6 +206,7 @@ int xfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char *
     // Determine if the "bigtime" mkfs option should be enabled (large timestamps)
     // - starting with linux-5.10 XFS has added support for larger inode timestamps, beyond january 2038
     // - this feature relies on the V5 on-disk format but it is optional
+    // - this feature is enabled by default when using xfsprogs-5.15.0 or later
     // - this feature will be enabled if the original filesystem was XFS V5 and had it
     if (xfstoolsver >= PROGVER(5,10,0)) // only use "bigtime" option when it is supported by mkfs
     {
@@ -255,12 +256,22 @@ int xfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char *
     // - this feature will be enabled if the original filesystem was XFS V5 and had it
     // - this feature is supported since mkfs.xfs 4.2.0
     // - mkfs.xfs 4.5.0 in RHEL 7.3 carries a custom patch removing the option
- /*   if (xfstoolsver >= PROGVER(4,2,0) &&
+    if (xfstoolsver >= PROGVER(4,2,0) &&
         !match_uname_r(RHEL7_KERNEL_ERE)) // only use "sparse" option when it is supported by mkfs
     {
         optval = ((xfsver==XFS_SB_VERSION_5) && (sb_features_incompat & XFS_SB_FEAT_INCOMPAT_SPINODES));
         strlcatf(mkfsopts, sizeof(mkfsopts), " -i sparse=%d ", (int)optval);
-    } */
+    }
+
+    // Determine if the "nrext64" mkfs option should be enabled (large extent counters)
+    // - starting with linux-5.19 XFS has added support for larger number of per-file extents
+    // - this feature relies on the V5 on-disk format but it is optional
+    // - this feature will be enabled if the original filesystem was XFS V5 and had it
+    if (xfstoolsver >= PROGVER(5,19,0)) // only use "nrext64" option when it is supported by mkfs
+    {
+        optval = ((xfsver==XFS_SB_VERSION_5) && (sb_features_incompat & XFS_SB_FEAT_INCOMPAT_NREXT64));
+        strlcatf(mkfsopts, sizeof(mkfsopts), " -i nrext64=%d ", (int)optval);
+    }
 
     // ---- mkfsopt from command line
     strlcatf(mkfsopts, sizeof(mkfsopts), " %s ", fsoptions);
@@ -428,4 +439,3 @@ int xfs_get_reqmntopt(char *partition, cstrlist *reqopt, cstrlist *badopt)
 
     return 0;
 }
-

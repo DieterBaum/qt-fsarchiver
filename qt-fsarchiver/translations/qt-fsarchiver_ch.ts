@@ -2912,10 +2912,10 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1311"/>
         <source>Backup and restore partitions, directory and MBR.
-version 1.8.6-1, December 12, 2022</source>
+version 1.8.7-0, December 15, 2023</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.6-0, 1.Dezember 2022</comment>
         <translation>分区、目录和MBR 备份/恢复工具。
-版本 1.8.6-1, 2022. 十二月.12</translation>
+版本 1.8.7-0, 2023. 十二月.15</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1319"/>

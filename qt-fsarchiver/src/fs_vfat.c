@@ -1,6 +1,6 @@
 /*
  * fsarchiver: Filesystem Archiver
- * 
+ *
  * Copyright (C) 2008-2022 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
@@ -65,7 +65,9 @@ int vfat_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char 
         strlcatf(mkfsopts, sizeof(mkfsopts), " -n '%.11s' ", buffer);
 
     // ---- filesystem serial
-    if (dico_get_u32(d, 0, FSYSHEADKEY_FSVFATSERIAL, &temp32)==0)
+    if (strlen(mkfsuuid) > 0)
+        strlcatf(mkfsopts, sizeof(mkfsopts), " -i '%.8s' ", mkfsuuid);
+    else if (dico_get_u32(d, 0, FSYSHEADKEY_FSVFATSERIAL, &temp32)==0)
         strlcatf(mkfsopts, sizeof(mkfsopts), " -i '%08X' ", temp32);
 
     // ---- mkfsopt from command line
@@ -201,4 +203,3 @@ int vfat_get_reqmntopt(char *partition, cstrlist *reqopt, cstrlist *badopt)
 
     return 0;
 }
-

@@ -27,6 +27,7 @@
 #include "archinfo.h"
 #include "archreader.h"
 #include "error.h"
+#include "connect_c_cpp.h"
 extern char home1[100];
 
 char *compalgostr(int algo)
@@ -87,6 +88,7 @@ int archinfo_show_fshead(cdico *dicofshead, int fsid)
 {
     char magic[FSA_SIZEOF_MAGIC+1];
     char fsbuf[FSA_MAX_FSNAMELEN];
+    u32 temp32;
     u64 temp64;
     u64 fsbytestotal;
     u64 fsbytesused;
@@ -129,6 +131,8 @@ int archinfo_show_fshead(cdico *dicofshead, int fsid)
     snprintf(fsuuid, sizeof(fsuuid), "<none>");
     if (dico_get_u64(dicofshead, 0, FSYSHEADKEY_NTFSUUID, &temp64)==0)
         snprintf(fsuuid, sizeof(fsuuid), "%016llX", (long long unsigned int)temp64);
+    else if (dico_get_u32(dicofshead, 0, FSYSHEADKEY_FSVFATSERIAL, &temp32)==0)
+        snprintf(fsuuid, sizeof(fsuuid), "%08lX", (long unsigned int)temp32);
     else if (dico_get_string(dicofshead, 0, FSYSHEADKEY_FSUUID, buffer, sizeof(buffer))==0 && strlen(buffer)==36)
         snprintf(fsuuid, sizeof(fsuuid), "%s", buffer);
     

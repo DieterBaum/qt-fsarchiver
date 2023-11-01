@@ -184,7 +184,6 @@ int extractar_listing_print_file(cextractar *exar, int objtype, char *relpath)
     }
     msgprintf(MSG_VERB1, "-[%.2d]%s[%s] %s\n", exar->fsid, strprogress, get_objtype_name(objtype), relpath);
     // Terminal Ausgabe 
-    // Terminal Ausgabe 
     	printf("       %.0f%%       \r ", progress1); 
 	werte_uebergeben(progress1,1);
 	  
@@ -1234,12 +1233,12 @@ int extractar_filesystem_extract(cextractar *exar, cdico *dicofs, cstrdico *dico
         (int)FSA_VERSION_GET_B(curver), (int)FSA_VERSION_GET_C(curver), (int)FSA_VERSION_GET_D(curver));
     msgprintf(MSG_VERB2, "Minimum fsarchiver version for that filesystem: %d.%d.%d.%d\n", (int)FSA_VERSION_GET_A(minver), 
         (int)FSA_VERSION_GET_B(minver), (int)FSA_VERSION_GET_C(minver), (int)FSA_VERSION_GET_D(minver));
-    /*if (curver < minver)
+    if (curver < minver)
     {   errprintf("This filesystem can only be restored with fsarchiver %d.%d.%d.%d or more recent\n",
         (int)FSA_VERSION_GET_A(minver), (int)FSA_VERSION_GET_B(minver), (int)FSA_VERSION_GET_C(minver),
         (int)FSA_VERSION_GET_D(minver));
-       // return -1;
-    }*/
+        return -1;
+    }
     
     // check the partition is not mounted
     res=generic_get_mntinfo(partition, &readwrite, mntbuf, sizeof(mntbuf), optbuf, sizeof(optbuf), fsbuf, sizeof(fsbuf));
@@ -1629,7 +1628,7 @@ do_extract_success:
     while (get_secthreads()>0 && queue_get_end_of_queue(&g_queue)==false)
         queue_destroy_first_item(&g_queue);
          // Damit die wiederholte Wiederherstellung der Verzeichnisse und Partitionen klappt!!
-	     set_stopfillqueue_false();
+	set_stopfillqueue_false();
     msgprintf(MSG_DEBUG1, "THREAD-MAIN2: queue is now empty\n");
     // the queue is empty, so thread_compress should now exit
     

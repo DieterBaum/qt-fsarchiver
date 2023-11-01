@@ -27,12 +27,14 @@
 #include <sys/time.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <sys/utsname.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <wordexp.h>
 #include <fnmatch.h>
 #include <time.h>
 #include <limits.h>
+#include <regex.h>
 
 #ifdef HAVE_EXECINFO_H
 #include <execinfo.h>
@@ -260,7 +262,6 @@ int getpathtoprog(char *buffer, int bufsize, char *prog)
 {
     char pathtest[PATH_MAX];
     char delims[]=":\t\n";
-    struct stat bufstat;
     char pathenv[4096];
     char *saveptr=0;
     char *result;
@@ -275,7 +276,7 @@ int getpathtoprog(char *buffer, int bufsize, char *prog)
     for(i=0; result != NULL; i++)
     {
         snprintf(pathtest, sizeof(pathtest), "%s/%s", result, prog);
-        if (stat(pathtest, &bufstat)==0 && access(pathtest, X_OK)==0)
+        if (access(pathtest, X_OK)==0)
         {
             snprintf(buffer, bufsize, "%s", pathtest);
             return 0;
@@ -401,10 +402,10 @@ int exec_command(char *command, int cmdbufsize, int *exitst, char *stdoutbuf, in
             read(mystdout, stdoutbuf+outpos, stdoutsize-outpos-1);
         if ((stderrbuf!=NULL) && (errpos+1 < stderrsize))
             read(mystderr, stderrbuf+errpos, stderrsize-errpos-1);
-        
-        msgprintf(MSG_VERB1, "command [%s] returned %d\n", command, WEXITSTATUS(status));
+        status = WIFSIGNALED(status) ? 128 + WTERMSIG(status) : WEXITSTATUS(status);
+        msgprintf(MSG_VERB1, "command [%s] returned %d\n", command, status);
         if (exitst)
-            *exitst=WEXITSTATUS(status);
+            *exitst=status;
         
         if ((stdoutbuf!=NULL) && (outpos>0))
             msgprintf(MSG_DEBUG1, "\n----stdout----\n%s\n----stdout----\n\n", stdoutbuf);
@@ -642,4 +643,23 @@ s64 get_device_size(char *partition)
     close(fd);
 
     return devsize;
+}
+bool match_uname_r(char *ere)
+{
+    int r;
+    struct utsname ut;
+    regex_t reg;
+
+    if (uname(&ut) != 0)
+        return false;
+
+    // do not bother with invalid regex, since it is not user configurable
+    if (regcomp(&reg, ere, REG_EXTENDED|REG_NOSUB) != 0)
+        return false;
+
+    r = !regexec(&reg, ut.release, 0, NULL, 0);
+
+    msgprintf(MSG_VERB2, "match_uname_r(%s)=[%s], kernel=[%s]\n", ere, r ? "true" : "false", ut.release);
+
+    return r;
 }

@@ -640,9 +640,14 @@ int createar_save_file(csavear *save, char *root, char *relpath, struct stat64 *
     }
     
     // ---- backup other file attributes (xattr + winattr)
-    if (createar_item_xattr(save, root, relpath, statbuf, dicoattr)!=0)
-    {   msgprintf(MSG_STACK, "backup_item_xattr() failed: cannot prepare xattr-dico for item %s\n", relpath);
-        attrerrors++;
+    // selinux can present fake xattrs
+    // do not try to save them if not supported by the filesystem, otherwise restoration will fail
+    if (filesys[save->fstype].support_for_xattr==true)
+    {
+        if (createar_item_xattr(save, root, relpath, statbuf, dicoattr)!=0)
+        {   msgprintf(MSG_STACK, "backup_item_xattr() failed: cannot prepare xattr-dico for item %s\n", relpath);
+            attrerrors++;
+        }
     }
     
     if (filesys[save->fstype].winattr==true)
@@ -803,9 +808,16 @@ int createar_save_directory(csavear *save, char *root, char *path, u64 *costeval
         
         // ---- get details about current file
         if (lstat64(fullpath, &statbuf)!=0)
-        {   sysprintf("cannot lstat64(%s)\n", fullpath);
-            ret=-1;
-            goto backup_dir_err;
+        {
+            if (g_options.allowsaverw==0)
+            {   sysprintf("cannot lstat64(%s)\n", fullpath);
+                ret=-1;
+                goto backup_dir_err;
+            }
+            else
+            {   sysprintf("cannot lstat64(%s), ignoring\n", fullpath);
+                continue; // not a fatal error with option '-A'
+            }
         }
         
         // check the list of excluded files/dirs

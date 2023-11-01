@@ -35,6 +35,7 @@
 #include "filesys.h"
 #include "strlist.h"
 #include "error.h"
+#include "connect_c_cpp.h"
 
 int btrfs_check_compatibility(u64 compat, u64 incompat, u64 ro_compat)
 {
@@ -61,6 +62,9 @@ int btrfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char
     u64 compat_ro_flags;
     int exitst;
     u64 temp64;
+    int i = btrfs_flag_uebergeben(); 
+    if (i == 1) 
+		return 0; 
     
     // ---- get original filesystem features (if the original filesystem was a btrfs)
     if (dico_get_u64(d, 0, FSYSHEADKEY_BTRFSFEATURECOMPAT, &compat_flags)!=0 ||
@@ -72,12 +76,12 @@ int btrfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char
         compat_ro_flags=0;
     }
     
-    // ---- check there is no unsuported feature in that filesystem
+/*    // ---- check there is no unsuported feature in that filesystem
     if (btrfs_check_compatibility(compat_flags, incompat_flags, compat_ro_flags)!=0)
     {   errprintf("this filesystem has features which are not supported by this fsarchiver version.\n");
         return -1;
     }
-    
+*/   
     // ---- there is no option that just displays the version and return 0 in mkfs.btrfs-0.16
     if (exec_command(command, sizeof(command), NULL, NULL, 0, NULL, 0, "mkfs.btrfs")!=0)
     {   errprintf("mkfs.btrfs not found. please install btrfs-progs on your system or check the PATH.\n");
@@ -87,7 +91,6 @@ int btrfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char
     // ---- set the advanced filesystem settings from the dico
     memset(options, 0, sizeof(options));
 
-    strlcatf(options, sizeof(options), " %s ", fsoptions);
 
     if (strlen(mkfslabel) > 0)
         strlcatf(options, sizeof(options), " -L '%s' ", mkfslabel);
@@ -101,12 +104,13 @@ int btrfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char
 
     if (dico_get_u64(d, 0, FSYSHEADKEY_FSBTRFSSECTORSIZE, &temp64)==0)
         strlcatf(options, sizeof(options), " -s %ld ", (long)temp64);
-    
-    if (exec_command(command, sizeof(command), &exitst, NULL, 0, NULL, 0, "mkfs.btrfs -f %s %s", partition, options)!=0 || exitst!=0)
+    // ---- mkfsopt from command line
+    strlcatf(options, sizeof(options), " %s ", fsoptions);
+
+    if (exec_command(command, sizeof(command), &exitst, NULL, 0, NULL, 0, "mkfs.btrfs -f %s %s", options, partition)!=0 || exitst!=0)
     {   errprintf("command [%s] failed\n", command);
         return -1;
     }
-    
     return 0;
 }
 
@@ -163,10 +167,11 @@ int btrfs_getinfo(cdico *d, char *devname)
     dico_add_u64(d, 0, FSYSHEADKEY_BTRFSFEATURECOMPAT, le64_to_cpu(sb.compat_flags));
     dico_add_u64(d, 0, FSYSHEADKEY_BTRFSFEATUREINCOMPAT, le64_to_cpu(sb.incompat_flags));
     dico_add_u64(d, 0, FSYSHEADKEY_BTRFSFEATUREROCOMPAT, le64_to_cpu(sb.compat_ro_flags));
-    if (btrfs_check_compatibility(le64_to_cpu(sb.compat_flags), le64_to_cpu(sb.incompat_flags), le64_to_cpu(sb.compat_ro_flags))!=0)
+/*    if (btrfs_check_compatibility(le64_to_cpu(sb.compat_flags), le64_to_cpu(sb.incompat_flags), le64_to_cpu(sb.compat_ro_flags))!=0)
     {   errprintf("this filesystem has features which are not supported by this fsarchiver version.\n");
         return -1;
     }
+ */   
     
     // ---- minimum fsarchiver version required to restore
     dico_add_u64(d, 0, FSYSHEADKEY_MINFSAVERSION, FSA_VERSION_BUILD(0, 6, 4, 0));

@@ -1,6 +1,6 @@
 /*
  * fsarchiver: Filesystem Archiver
- * 
+ *
  * Copyright (C) 2008-2022 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
@@ -59,7 +59,7 @@ struct s_features
 // us and therefore is not preserved (i.e. present in FSA_FEATURE_INCOMPAT_SUPP but not listed
 // below). Users can easily enable it with tune2fs if desired.
 //
-struct s_features mkfeatures[] = // cf e2fsprogs-1.46.0/lib/e2p/feature.c
+struct s_features mkfeatures[] = // cf e2fsprogs-1.47.0/lib/e2p/feature.c
 {
     {"has_journal",   FSA_EXT3_FEATURE_COMPAT_HAS_JOURNAL,      E2P_FEATURE_COMPAT,      EXTFSTYPE_EXT3, PROGVER(1,39,0)},
     {"ext_attr",      FSA_EXT2_FEATURE_COMPAT_EXT_ATTR,         E2P_FEATURE_COMPAT,      EXTFSTYPE_EXT2, PROGVER(1,40,5)},
@@ -67,6 +67,7 @@ struct s_features mkfeatures[] = // cf e2fsprogs-1.46.0/lib/e2p/feature.c
     {"dir_index",     FSA_EXT2_FEATURE_COMPAT_DIR_INDEX,        E2P_FEATURE_COMPAT,      EXTFSTYPE_EXT2, PROGVER(1,33,0)},
     {"sparse_super2", FSA_EXT4_FEATURE_COMPAT_SPARSE_SUPER2,    E2P_FEATURE_COMPAT,      EXTFSTYPE_EXT4, PROGVER(1,42,10)},
     {"fast_commit",   FSA_EXT4_FEATURE_COMPAT_FAST_COMMIT,      E2P_FEATURE_COMPAT,      EXTFSTYPE_EXT4, PROGVER(1,46,0)},
+    {"orphan_file",   FSA_EXT4_FEATURE_COMPAT_ORPHAN_FILE,      E2P_FEATURE_COMPAT,      EXTFSTYPE_EXT4, PROGVER(1,47,0)},
     {"filetype",      FSA_EXT2_FEATURE_INCOMPAT_FILETYPE,       E2P_FEATURE_INCOMPAT,    EXTFSTYPE_EXT2, PROGVER(1,16,0)},
     {"extent",        FSA_EXT4_FEATURE_INCOMPAT_EXTENTS,        E2P_FEATURE_INCOMPAT,    EXTFSTYPE_EXT4, PROGVER(1,41,0)},
     {"journal_dev",   FSA_EXT3_FEATURE_INCOMPAT_JOURNAL_DEV,    E2P_FEATURE_INCOMPAT,    EXTFSTYPE_EXT3, PROGVER(1,39,0)},
@@ -176,7 +177,6 @@ int extfs_mkfs(cdico *d, char *partition, int extfstype, char *fsoptions, char *
     u64 temp64;
     int exitst;
     int ret=0;
-    int res;
     int i;
 
     // init
@@ -413,7 +413,7 @@ int extfs_mkfs(cdico *d, char *partition, int extfstype, char *fsoptions, char *
         // http://marc.info/?l=linux-ext4&m=123246035924487&w=2
         if (extfstype==EXTFSTYPE_EXT4 && !mke2fsuuid)
         {
-            if ( ((res=exec_command(command, sizeof(command), &exitst, NULL, 0, NULL, 0, "e2fsck -fy %s", partition))!=0) || ((exitst!=0) && (exitst!=1)) )
+            if (exec_command(command, sizeof(command), &exitst, NULL, 0, NULL, 0, "e2fsck -fy %s", partition)!=0 || (exitst!=0 && exitst!=1))
             {   errprintf("command [%s] failed with return status=%d\n", command, exitst);
                 ret=-1;
                 goto extfs_mkfs_cleanup;
@@ -660,4 +660,3 @@ u64 check_prog_version(char *prog)
 
     return PROGVER(x,y,z);
 }
-

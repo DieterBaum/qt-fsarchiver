@@ -325,7 +325,7 @@ MWindow::MWindow()
    // /home/user/.config/qt-fsarchiver/qt-fsarchiver.conf entfernen   
    befehl = "rm /home/*/.config/qt-fsarchiver/qt-fsarchiver.conf 2>/dev/null";  //file.exist mit * funktioniert nicht
    if(system (befehl.toLatin1().data()))
-      befehl = "";	
+      befehl = "";
    // Ini-Datei auslesen
    QFile file(homepath + "/.config/qt5-fsarchiver/qt5-fsarchiver.conf");
    QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
@@ -921,7 +921,7 @@ if(order == 1)
                                 chk_pbr->setEnabled(true); 
                                 flag_View = 1;
                                 werte_reset();
-  				timer->singleShot( 1000, this , SLOT(ViewProzent( ))) ;
+  				timer->singleShot(1000, this , SLOT(ViewProzent( ))) ;
                                 stopFlag = 0;
                                 this->setCursor(Qt::WaitCursor);
   				startThread1(); // fsarchiver wird im Thread ausgeführt
@@ -1336,8 +1336,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 1.8.6-1, December 12, 2022",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.6-1, 12.Dezember 2022"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 1.8.7-0, December 15, 2023",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.7-0, 15.Dezember 2023"));
       }
 
 int MWindow::Root_Auswertung(){

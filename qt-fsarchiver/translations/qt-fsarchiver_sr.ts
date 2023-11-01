@@ -3054,10 +3054,10 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1311"/>
         <source>Backup and restore partitions, directory and MBR.
-version 1.8.6-1, December 12, 2022</source>
+version 1.8.7-0, December 15, 2023</source>
         <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.6-0, 1.Dezember 2022</comment>
         <translation>Backup și restaurare partiții, directoare și MBR.
-Versiune 1.8.6-1, 12.децембар 2022</translation>
+Versiune 1.8.7-0, 15.децембар 2023</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1319"/>

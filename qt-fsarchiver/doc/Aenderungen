@@ -1,6 +1,14 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-1.8.7-0 15. Dezember 2023.
+    - Unterstützung für die Option "uuid=" für vfat wird implementiert (Marcos Mello)
+    - Aktualisieren der Liste der unterstützten btrfs-Funktionen (Marcos Mello)
+    - Unterstützung für die "nrext64"-Funktion auf XFS wird hinzugefügt (Marcos Mello)
+    - Kein Fehler mehr bei gelöschten Dateien, wenn die Option -A verwendet wird (Marcos Mello)
+    - Beendigung durch Signal in exec_command() wird behandelt (Marcos Mello)
+    - Unterstützung für die "orphan_file"-Funktion in EXT4 hinzufügen (Marcos Mello)
+    - Es wird nicht mehr versucht, xattrs zu speichern, wenn sie vom Dateisystem nicht unterstützt werden (Marcos Mello)
 * qt-fsarchiver-1.8.6-1 12. Dezember 2022.
     - kliene Korrekturen
 * qt-fsarchiver-1.8.6-0 1. Dezember 2022.

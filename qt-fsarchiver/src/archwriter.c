@@ -36,7 +36,8 @@
 #include "comp_gzip.h"
 #include "comp_bzip2.h"
 #include "error.h"
-extern char home1[100];
+#include "connect_c_cpp.h"
+//extern char home1[100];
 
 #define FSA_SMB_SUPER_MAGIC 0x517B
 #define FSA_CIFS_MAGIC_NUMBER 0xFF534D42
