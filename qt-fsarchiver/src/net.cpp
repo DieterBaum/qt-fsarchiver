@@ -564,7 +564,7 @@ QString attribute;
          dummy = partition_net_;
  	 // Werte sammeln und nach file_dialog übergeben, Partition ist eingehängt
          row = listWidget->currentRow();
-         text = window.beschreibungstext("/dev/" + partition_net_, DateiName_net + "-" + _Datum_net + ".fsa", zip, row);
+         text = window.beschreibungstext("/dev/" + partition_net_, DateiName_net + "-" + _Datum_net + ".fsa", zip, row, "", "");
          filedialog.werte_uebergeben(text);
          partition_net = dummy;
          if (!window.is_mounted(partition_net_.toLatin1().data())) 

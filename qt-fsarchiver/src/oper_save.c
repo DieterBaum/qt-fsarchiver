@@ -226,6 +226,7 @@ int createar_obj_regfile_unique(csavear *save, cdico *header, char *relpath, cha
     
     if (get_interrupted()==true)
     {   errprintf("operation has been interrupted\n");
+        werte_uebergeben (120,4); 
         ret=-1;
         goto backup_obj_regfile_unique_error;
     }

@@ -1381,14 +1381,6 @@ Die Dateiendung muss .fsa sein</comment>
 </translation>
     </message>
     <message>
-        <source>You have selected a file. You must select a directory
-</source>
-        <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
-</comment>
-        <translation type="vanished">คุณได้เลือกแฟ้ม คุณต้องเลือกไดเรกทอรี
-</translation>
-    </message>
-    <message>
         <location filename="../src/net.cpp" line="543"/>
         <location filename="../src/net.cpp" line="1147"/>
         <source>The network computer </source>
@@ -1627,11 +1619,6 @@ Die Dateiendung muss .fsa sein</comment>
         <source>The partition</source>
         <comment>Die Partition </comment>
         <translation>The partition </translation>
-    </message>
-    <message>
-        <source>There is a blank space in the name of the backup/restore directory. It is safer to use a directory without a space. If you still want to continue?</source>
-        <comment>In dem Verzeichnisnamen ist eine Leerstelle vorhanden. Es ist sicherer ein Verzeichnis ohne Leerstelle zu verwenden. Wollen Sie dennoch fortfahren?</comment>
-        <translation type="vanished">มีช่องว่างในชื่อของไดเร็กทอรี backup/restore การใช้ไดเร็กทอรีโดยไม่มีช่องว่างจะปลอดภัยกว่า หากคุณยังต้องการดำเนินการต่อ? </translation>
     </message>
     <message>
         <location filename="../src/net.cpp" line="1277"/>
@@ -1904,23 +1891,6 @@ backup. key:</translation>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
         <translation>คุณต้องหยุดการบันทึก หรือคืนค่าพาร์ทิชันจริง ๆ หรือไม่</translation>
-    </message>
-    <message>
-        <source>If you have not set up SSH authentication, you must now enter the password in the terminal. Do you still want to see this message? You can change this in the basic settings.</source>
-        <comment>Wenn Sie keine SSH-Authentifizierung eingerichtet haben, müssen Sie nun das Passwort in dem Terminal eingeben. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern</comment>
-        <translation type="vanished">ถ้าคุณไม่ได้ตั้งค่าการรับรองความถูกต้องของ SSH คุณต้องป้อนรหัสผ่านตอนนี้ในเทอร์มินัล นี้ควรดำเนินการ คุณสามารถเปลี่ยนวันที่นี้ในการตั้งค่าพื้นฐาน</translation>
-    </message>
-    <message>
-        <source>The SSH server is not reachable. Try again or with another network protocol.
-</source>
-        <comment>Der SSH-Server ist nicht erreichbar. Versuchen Sie es nochmals oder mit einem anderen Netzwerkprotokoll.
-</comment>
-        <translation type="vanished">The SSH server is not reachable. Try again or with another network protocol.
-</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Name</translation>
     </message>
 </context>
 <context>
@@ -2217,10 +2187,6 @@ backup. key:</translation>
         <location filename="../src/setting.cpp" line="55"/>
         <source>Samba</source>
         <translation>Samba</translation>
-    </message>
-    <message>
-        <source>SSH</source>
-        <translation type="vanished">SSH</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="55"/>
@@ -2660,67 +2626,67 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MWindow</name>
     <message>
-        <location filename="../src/mainWindow.cpp" line="253"/>
+        <location filename="../src/mainWindow.cpp" line="260"/>
         <source>lzo</source>
         <comment>lzo</comment>
         <translation>lzo</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="254"/>
+        <location filename="../src/mainWindow.cpp" line="261"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
         <translation>gzip อย่างรวดเร็ว</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="255"/>
+        <location filename="../src/mainWindow.cpp" line="262"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
         <translation>มาตรฐาน gzip</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="257"/>
+        <location filename="../src/mainWindow.cpp" line="264"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
         <translation>bzip2 อย่างรวดเร็ว</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="258"/>
+        <location filename="../src/mainWindow.cpp" line="265"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
         <translation>bzip2 ดี</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="259"/>
+        <location filename="../src/mainWindow.cpp" line="266"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
         <translation>รวดเร็วรองรับ lzma</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="260"/>
+        <location filename="../src/mainWindow.cpp" line="267"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
         <translation>กลางรองรับ lzma</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="261"/>
+        <location filename="../src/mainWindow.cpp" line="268"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
         <translation>รองรับ lzma สุด</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="498"/>
+        <location filename="../src/mainWindow.cpp" line="521"/>
         <source>Backup File</source>
         <comment>Sicherungsdatei</comment>
         <translation>Backup File</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="499"/>
+        <location filename="../src/mainWindow.cpp" line="522"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
         <translation>การคืนค่าพาร์ติชัน</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="513"/>
+        <location filename="../src/mainWindow.cpp" line="536"/>
         <source>Decrypt
 backup. key:</source>
         <comment>Sicherung
@@ -2729,13 +2695,13 @@ entschlüsseln. Schlüssel</comment>
 backup. key:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="532"/>
+        <location filename="../src/mainWindow.cpp" line="555"/>
         <source>Backup directory</source>
         <comment>Sicherungsverzeichnis</comment>
         <translation>ไดเรกทอรีสำรองข้อมูล:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="546"/>
+        <location filename="../src/mainWindow.cpp" line="569"/>
         <source>Encrypt
 backup. key:</source>
         <comment>Sicherung
@@ -2744,85 +2710,89 @@ verschlüsseln. Schlüssel</comment>
 backup. key:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="311"/>
-        <location filename="../src/mainWindow.cpp" line="598"/>
-        <location filename="../src/mainWindow.cpp" line="604"/>
-        <location filename="../src/mainWindow.cpp" line="615"/>
+        <location filename="../src/mainWindow.cpp" line="318"/>
         <location filename="../src/mainWindow.cpp" line="623"/>
-        <location filename="../src/mainWindow.cpp" line="660"/>
-        <location filename="../src/mainWindow.cpp" line="721"/>
-        <location filename="../src/mainWindow.cpp" line="781"/>
-        <location filename="../src/mainWindow.cpp" line="790"/>
-        <location filename="../src/mainWindow.cpp" line="857"/>
-        <location filename="../src/mainWindow.cpp" line="872"/>
-        <location filename="../src/mainWindow.cpp" line="1010"/>
-        <location filename="../src/mainWindow.cpp" line="1016"/>
-        <location filename="../src/mainWindow.cpp" line="1022"/>
-        <location filename="../src/mainWindow.cpp" line="1034"/>
-        <location filename="../src/mainWindow.cpp" line="1042"/>
-        <location filename="../src/mainWindow.cpp" line="1066"/>
-        <location filename="../src/mainWindow.cpp" line="1076"/>
-        <location filename="../src/mainWindow.cpp" line="1085"/>
-        <location filename="../src/mainWindow.cpp" line="1127"/>
-        <location filename="../src/mainWindow.cpp" line="1152"/>
-        <location filename="../src/mainWindow.cpp" line="1159"/>
-        <location filename="../src/mainWindow.cpp" line="1175"/>
-        <location filename="../src/mainWindow.cpp" line="1214"/>
-        <location filename="../src/mainWindow.cpp" line="1318"/>
-        <location filename="../src/mainWindow.cpp" line="1364"/>
-        <location filename="../src/mainWindow.cpp" line="1601"/>
-        <location filename="../src/mainWindow.cpp" line="1612"/>
-        <location filename="../src/mainWindow.cpp" line="1633"/>
-        <location filename="../src/mainWindow.cpp" line="1640"/>
-        <location filename="../src/mainWindow.cpp" line="1647"/>
-        <location filename="../src/mainWindow.cpp" line="1651"/>
-        <location filename="../src/mainWindow.cpp" line="1664"/>
-        <location filename="../src/mainWindow.cpp" line="1685"/>
-        <location filename="../src/mainWindow.cpp" line="1713"/>
-        <location filename="../src/mainWindow.cpp" line="1717"/>
-        <location filename="../src/mainWindow.cpp" line="1722"/>
-        <location filename="../src/mainWindow.cpp" line="1740"/>
-        <location filename="../src/mainWindow.cpp" line="1749"/>
-        <location filename="../src/mainWindow.cpp" line="1760"/>
-        <location filename="../src/mainWindow.cpp" line="1763"/>
-        <location filename="../src/mainWindow.cpp" line="1768"/>
-        <location filename="../src/mainWindow.cpp" line="2340"/>
-        <location filename="../src/mainWindow.cpp" line="2420"/>
-        <location filename="../src/mainWindow.cpp" line="2476"/>
-        <location filename="../src/mainWindow.cpp" line="2483"/>
-        <location filename="../src/mainWindow.cpp" line="2500"/>
-        <location filename="../src/mainWindow.cpp" line="2563"/>
+        <location filename="../src/mainWindow.cpp" line="629"/>
+        <location filename="../src/mainWindow.cpp" line="640"/>
+        <location filename="../src/mainWindow.cpp" line="648"/>
+        <location filename="../src/mainWindow.cpp" line="685"/>
+        <location filename="../src/mainWindow.cpp" line="749"/>
+        <location filename="../src/mainWindow.cpp" line="809"/>
+        <location filename="../src/mainWindow.cpp" line="818"/>
+        <location filename="../src/mainWindow.cpp" line="885"/>
+        <location filename="../src/mainWindow.cpp" line="900"/>
+        <location filename="../src/mainWindow.cpp" line="913"/>
+        <location filename="../src/mainWindow.cpp" line="1118"/>
+        <location filename="../src/mainWindow.cpp" line="1124"/>
+        <location filename="../src/mainWindow.cpp" line="1130"/>
+        <location filename="../src/mainWindow.cpp" line="1142"/>
+        <location filename="../src/mainWindow.cpp" line="1150"/>
+        <location filename="../src/mainWindow.cpp" line="1174"/>
+        <location filename="../src/mainWindow.cpp" line="1184"/>
+        <location filename="../src/mainWindow.cpp" line="1193"/>
+        <location filename="../src/mainWindow.cpp" line="1234"/>
+        <location filename="../src/mainWindow.cpp" line="1263"/>
+        <location filename="../src/mainWindow.cpp" line="1270"/>
+        <location filename="../src/mainWindow.cpp" line="1286"/>
+        <location filename="../src/mainWindow.cpp" line="1325"/>
+        <location filename="../src/mainWindow.cpp" line="1428"/>
+        <location filename="../src/mainWindow.cpp" line="1474"/>
+        <location filename="../src/mainWindow.cpp" line="1488"/>
+        <location filename="../src/mainWindow.cpp" line="1501"/>
+        <location filename="../src/mainWindow.cpp" line="1732"/>
+        <location filename="../src/mainWindow.cpp" line="1767"/>
+        <location filename="../src/mainWindow.cpp" line="1778"/>
+        <location filename="../src/mainWindow.cpp" line="1799"/>
+        <location filename="../src/mainWindow.cpp" line="1806"/>
+        <location filename="../src/mainWindow.cpp" line="1813"/>
+        <location filename="../src/mainWindow.cpp" line="1827"/>
+        <location filename="../src/mainWindow.cpp" line="1848"/>
+        <location filename="../src/mainWindow.cpp" line="1877"/>
+        <location filename="../src/mainWindow.cpp" line="1881"/>
+        <location filename="../src/mainWindow.cpp" line="1886"/>
+        <location filename="../src/mainWindow.cpp" line="1904"/>
+        <location filename="../src/mainWindow.cpp" line="1913"/>
+        <location filename="../src/mainWindow.cpp" line="1924"/>
+        <location filename="../src/mainWindow.cpp" line="1927"/>
+        <location filename="../src/mainWindow.cpp" line="1932"/>
+        <location filename="../src/mainWindow.cpp" line="2526"/>
+        <location filename="../src/mainWindow.cpp" line="2611"/>
+        <location filename="../src/mainWindow.cpp" line="2671"/>
+        <location filename="../src/mainWindow.cpp" line="2678"/>
+        <location filename="../src/mainWindow.cpp" line="2708"/>
+        <location filename="../src/mainWindow.cpp" line="2786"/>
+        <location filename="../src/mainWindow.cpp" line="2813"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>หมายเหตุ</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="252"/>
+        <location filename="../src/mainWindow.cpp" line="259"/>
         <source>lz4</source>
         <comment>lz4</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="256"/>
+        <location filename="../src/mainWindow.cpp" line="263"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="435"/>
+        <location filename="../src/mainWindow.cpp" line="457"/>
         <source>The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.</source>
         <comment>In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
         <translation>In the file /usr/share/doc/qt-fsarchiver/Readme are instructions included on the use of the program. Should this continue to be displayed? You can change this in the basic settings.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="491"/>
-        <location filename="../src/mainWindow.cpp" line="2525"/>
+        <location filename="../src/mainWindow.cpp" line="514"/>
+        <location filename="../src/mainWindow.cpp" line="2735"/>
         <source>Existing partitions:</source>
         <comment>vorhandene Partitionen</comment>
         <translation>พาร์ติชันที่มีอยู่:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="599"/>
+        <location filename="../src/mainWindow.cpp" line="624"/>
         <source>Please select from the backup directory.
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
@@ -2831,15 +2801,15 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="605"/>
+        <location filename="../src/mainWindow.cpp" line="630"/>
         <source>Please select the partition you want to back up.</source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
         <translation>Please select the partition to be</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="624"/>
-        <location filename="../src/mainWindow.cpp" line="1017"/>
+        <location filename="../src/mainWindow.cpp" line="649"/>
+        <location filename="../src/mainWindow.cpp" line="1125"/>
         <source>Please select the file name of the backup.
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
@@ -2848,7 +2818,7 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="661"/>
+        <location filename="../src/mainWindow.cpp" line="686"/>
         <source>You have selected a file. You must select a directory
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
@@ -2857,27 +2827,27 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="690"/>
-        <location filename="../src/mainWindow.cpp" line="2464"/>
+        <location filename="../src/mainWindow.cpp" line="718"/>
+        <location filename="../src/mainWindow.cpp" line="2655"/>
         <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>To back up the system partition is mounted. Do you want to do a live backup?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="698"/>
-        <location filename="../src/mainWindow.cpp" line="2470"/>
+        <location filename="../src/mainWindow.cpp" line="726"/>
+        <location filename="../src/mainWindow.cpp" line="2663"/>
         <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>To back up home partition is mounted. Do you want to do a live backup?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="722"/>
+        <location filename="../src/mainWindow.cpp" line="750"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
         <translation>The partition </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="722"/>
+        <location filename="../src/mainWindow.cpp" line="750"/>
         <source>cannot be unmounted. The program is aborted.
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
@@ -2886,21 +2856,21 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="772"/>
-        <location filename="../src/mainWindow.cpp" line="775"/>
+        <location filename="../src/mainWindow.cpp" line="800"/>
+        <location filename="../src/mainWindow.cpp" line="803"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="773"/>
-        <location filename="../src/mainWindow.cpp" line="776"/>
+        <location filename="../src/mainWindow.cpp" line="801"/>
+        <location filename="../src/mainWindow.cpp" line="804"/>
         <source>Password:</source>
         <comment>Passwort</comment>
         <translation>Password:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="782"/>
+        <location filename="../src/mainWindow.cpp" line="810"/>
         <source>The passwords do not match.
 </source>
         <comment>Die Passwörter stimmen nicht überein.
@@ -2908,9 +2878,9 @@ backup. key:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="616"/>
-        <location filename="../src/mainWindow.cpp" line="791"/>
-        <location filename="../src/mainWindow.cpp" line="1077"/>
+        <location filename="../src/mainWindow.cpp" line="641"/>
+        <location filename="../src/mainWindow.cpp" line="819"/>
+        <location filename="../src/mainWindow.cpp" line="1185"/>
         <source>The key length must be between 6 and 64 characters
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
@@ -2919,13 +2889,13 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="858"/>
+        <location filename="../src/mainWindow.cpp" line="886"/>
         <source>The partition file</source>
         <comment>Die Partitionsdatei</comment>
         <translation>แฟ้มพาร์ติชัน </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="858"/>
+        <location filename="../src/mainWindow.cpp" line="886"/>
         <source> already exists. The backup is not performed
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
@@ -2934,8 +2904,8 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="873"/>
-        <location filename="../src/mainWindow.cpp" line="2564"/>
+        <location filename="../src/mainWindow.cpp" line="901"/>
+        <location filename="../src/mainWindow.cpp" line="2787"/>
         <source>The backup was aborted by the user
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
@@ -2944,21 +2914,21 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="904"/>
-        <location filename="../src/mainWindow.cpp" line="2588"/>
+        <location filename="../src/mainWindow.cpp" line="949"/>
+        <location filename="../src/mainWindow.cpp" line="2828"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
         <translation>The backup is performed</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1011"/>
+        <location filename="../src/mainWindow.cpp" line="1119"/>
         <source>No decryption key was specified.</source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
         <translation>มีไม่มีคีย์การถอดรหัสที่ระบุ</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1023"/>
+        <location filename="../src/mainWindow.cpp" line="1131"/>
         <source>Please select the partition you want to write back.
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
@@ -2967,7 +2937,7 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1043"/>
+        <location filename="../src/mainWindow.cpp" line="1151"/>
         <source>You have selected a directory. You must select a file
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
@@ -2976,108 +2946,107 @@ backup. key:</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1067"/>
+        <location filename="../src/mainWindow.cpp" line="1175"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
         <translation>พาร์ติชันถูกเข้ารหัสลับ กรุณาใส่หมายเลข</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1085"/>
+        <location filename="../src/mainWindow.cpp" line="1193"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
         <translation>คุณได้ป้อนรหัสผ่านไม่ถูกต้อง</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1103"/>
+        <location filename="../src/mainWindow.cpp" line="1211"/>
         <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1103"/>
+        <location filename="../src/mainWindow.cpp" line="1211"/>
         <source>Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1128"/>
-        <location filename="../src/mainWindow.cpp" line="2501"/>
+        <location filename="../src/mainWindow.cpp" line="1235"/>
+        <location filename="../src/mainWindow.cpp" line="2709"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
         <translation>The restore was aborted by the user</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1140"/>
+        <location filename="../src/mainWindow.cpp" line="1247"/>
         <source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
         <translation>There is a file with the contents of the partition boot sector present. Do you want to perform the restoration of the PBR?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1153"/>
-        <location filename="../src/mainWindow.cpp" line="2477"/>
+        <location filename="../src/mainWindow.cpp" line="1264"/>
+        <location filename="../src/mainWindow.cpp" line="2672"/>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
         <translation>Restore the system partition is mounted and can not be written back. Please use a live CD.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1160"/>
-        <location filename="../src/mainWindow.cpp" line="2484"/>
+        <location filename="../src/mainWindow.cpp" line="1271"/>
+        <location filename="../src/mainWindow.cpp" line="2679"/>
         <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
         <translation>Restore the home partition is mounted and can not be written back. Please use a live CD.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1176"/>
+        <location filename="../src/mainWindow.cpp" line="1287"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
         <translation>The partition </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1215"/>
+        <location filename="../src/mainWindow.cpp" line="1326"/>
         <source>The key length must be between 6 and 64 characters.</source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein.
 </comment>
         <translation>ความยาวคีย์ต้องอยู่ระหว่าง 6 ถึง 64 อักขระ</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1242"/>
-        <location filename="../src/mainWindow.cpp" line="2526"/>
+        <location filename="../src/mainWindow.cpp" line="1353"/>
+        <location filename="../src/mainWindow.cpp" line="2736"/>
         <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
         <translation>The restoring is performed</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1310"/>
+        <location filename="../src/mainWindow.cpp" line="1420"/>
         <source>qt-fsarchiver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1311"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 1.8.7-0, December 15, 2023</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.6-0, 1.Dezember 2022</comment>
-        <translation>สำรองและเรียกคืนพาร์ทิชัน Directory และ MBR
-รุ่น 1.8.7-0, 15.ธันวาคม 2023</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1319"/>
+        <location filename="../src/mainWindow.cpp" line="1429"/>
         <source>The program must be run with root privileges. The program is terminated.</source>
         <comment>Das Programm muss mit Root-Rechten gestartet werden. Das Programm wird beendet.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1718"/>
+        <location filename="../src/mainWindow.cpp" line="1698"/>
+        <location filename="../src/mainWindow.cpp" line="2350"/>
+        <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
+        <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
+        <translation>คำเตือน: นี่เป็นการสำรองข้อมูลแบบสด อย่าออกจากโปรแกรม ระบบอาจถูกทำลายได้ คุณต้องการออกจากโปรแกรมหรือไม่</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1882"/>
         <source> specials and the Partition Boot Record have been restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1743"/>
+        <location filename="../src/mainWindow.cpp" line="1907"/>
         <source> specials has been restored
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
@@ -3085,19 +3054,25 @@ version 1.8.7-0, December 15, 2023</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2185"/>
+        <location filename="../src/mainWindow.cpp" line="2118"/>
+        <source>Free space on the hard disk to be backed up to: </source>
+        <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
+        <translation>พื้นที่ว่างบนฮาร์ดดิสก์ที่จะสำรองข้อมูล:</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="2352"/>
         <source>Do you really want to break the save or restore from the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2310"/>
+        <location filename="../src/mainWindow.cpp" line="2496"/>
         <source>Existing list entries</source>
         <comment>vorhandene Listeinträge</comment>
         <translation>รายการที่มีอยู่</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2341"/>
+        <location filename="../src/mainWindow.cpp" line="2527"/>
         <source>There is no order available
 </source>
         <comment>Es ist kein Autrag vorhanden
@@ -3105,32 +3080,39 @@ version 1.8.7-0, December 15, 2023</source>
         <translation>ไม่มีคำสั่งซื้อ</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="262"/>
+        <location filename="../src/mainWindow.cpp" line="2814"/>
+        <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
+        <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
+</comment>
+        <translation>ฮาร์ดไดรฟ์มีพื้นที่ไม่เพียงพอสำหรับการสำรองข้อมูล การสำรองข้อมูลถูกยกเลิก</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="269"/>
         <source>zstd</source>
         <comment>zstd</comment>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1035"/>
+        <location filename="../src/mainWindow.cpp" line="1143"/>
         <source>You have selected an incorrect recovery file. The file extension must be .fsa</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht. Die Dateiendung muss .fsa sein.</comment>
-        <translation type="unfinished"></translation>
+        <translation>คุณเลือกไฟล์กู้คืนไม่ถูกต้อง นามสกุลไฟล์ต้องเป็น .fsa</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1102"/>
+        <location filename="../src/mainWindow.cpp" line="1210"/>
         <source>The partition to be recovered  </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation type="unfinished"></translation>
+        <translation>พาร์ติชั่นที่ต้องการกู้คืน</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1176"/>
+        <location filename="../src/mainWindow.cpp" line="1287"/>
         <source> cannot be unmounted. The program is aborted.</source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation type="unfinished"></translation>
+        <translation>ไม่สามารถยกเลิกการติดตั้งได้ โปรแกรมถูกยกเลิก</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="312"/>
+        <location filename="../src/mainWindow.cpp" line="319"/>
         <source>Qt-fsarchiver can only be started once. The program must be terminated..
 </source>
         <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
@@ -3138,20 +3120,24 @@ version 1.8.7-0, December 15, 2023</source>
         <translation>Qt-fsarchiver สามารถเริ่มต้นได้เพียงครั้งเดียว โปรแกรมจะต้องถูกยกเลิก</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1365"/>
+        <location filename="../src/mainWindow.cpp" line="1475"/>
+        <location filename="../src/mainWindow.cpp" line="1489"/>
+        <location filename="../src/mainWindow.cpp" line="1502"/>
         <source>Yes</source>
         <comment>Ja</comment>
         <translation>ใช่</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1366"/>
+        <location filename="../src/mainWindow.cpp" line="1476"/>
+        <location filename="../src/mainWindow.cpp" line="1490"/>
+        <location filename="../src/mainWindow.cpp" line="1503"/>
         <source>No</source>
         <comment>Nein</comment>
         <translation>ไม่ใช่</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1602"/>
-        <location filename="../src/mainWindow.cpp" line="1613"/>
+        <location filename="../src/mainWindow.cpp" line="1768"/>
+        <location filename="../src/mainWindow.cpp" line="1779"/>
         <source>The partition was successfully backed up.
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
@@ -3160,55 +3146,55 @@ version 1.8.7-0, December 15, 2023</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1603"/>
-        <location filename="../src/mainWindow.cpp" line="1614"/>
-        <location filename="../src/mainWindow.cpp" line="1666"/>
-        <location filename="../src/mainWindow.cpp" line="1668"/>
-        <location filename="../src/mainWindow.cpp" line="1714"/>
-        <location filename="../src/mainWindow.cpp" line="1718"/>
-        <location filename="../src/mainWindow.cpp" line="1742"/>
-        <location filename="../src/mainWindow.cpp" line="1744"/>
-        <location filename="../src/mainWindow.cpp" line="1751"/>
-        <location filename="../src/mainWindow.cpp" line="1754"/>
+        <location filename="../src/mainWindow.cpp" line="1769"/>
+        <location filename="../src/mainWindow.cpp" line="1780"/>
+        <location filename="../src/mainWindow.cpp" line="1829"/>
+        <location filename="../src/mainWindow.cpp" line="1831"/>
+        <location filename="../src/mainWindow.cpp" line="1878"/>
+        <location filename="../src/mainWindow.cpp" line="1882"/>
+        <location filename="../src/mainWindow.cpp" line="1906"/>
+        <location filename="../src/mainWindow.cpp" line="1908"/>
+        <location filename="../src/mainWindow.cpp" line="1915"/>
+        <location filename="../src/mainWindow.cpp" line="1918"/>
         <source> files, </source>
         <comment> Dateien, </comment>
         <translation> แฟ้ม</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1603"/>
-        <location filename="../src/mainWindow.cpp" line="1614"/>
-        <location filename="../src/mainWindow.cpp" line="1666"/>
-        <location filename="../src/mainWindow.cpp" line="1668"/>
-        <location filename="../src/mainWindow.cpp" line="1714"/>
-        <location filename="../src/mainWindow.cpp" line="1718"/>
-        <location filename="../src/mainWindow.cpp" line="1742"/>
-        <location filename="../src/mainWindow.cpp" line="1751"/>
+        <location filename="../src/mainWindow.cpp" line="1769"/>
+        <location filename="../src/mainWindow.cpp" line="1780"/>
+        <location filename="../src/mainWindow.cpp" line="1829"/>
+        <location filename="../src/mainWindow.cpp" line="1831"/>
+        <location filename="../src/mainWindow.cpp" line="1878"/>
+        <location filename="../src/mainWindow.cpp" line="1882"/>
+        <location filename="../src/mainWindow.cpp" line="1906"/>
+        <location filename="../src/mainWindow.cpp" line="1915"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
         <translation> ไดเรกทอรี </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1603"/>
-        <location filename="../src/mainWindow.cpp" line="1614"/>
-        <location filename="../src/mainWindow.cpp" line="1666"/>
-        <location filename="../src/mainWindow.cpp" line="1669"/>
-        <location filename="../src/mainWindow.cpp" line="1714"/>
-        <location filename="../src/mainWindow.cpp" line="1742"/>
-        <location filename="../src/mainWindow.cpp" line="1745"/>
-        <location filename="../src/mainWindow.cpp" line="1752"/>
-        <location filename="../src/mainWindow.cpp" line="1755"/>
+        <location filename="../src/mainWindow.cpp" line="1769"/>
+        <location filename="../src/mainWindow.cpp" line="1780"/>
+        <location filename="../src/mainWindow.cpp" line="1829"/>
+        <location filename="../src/mainWindow.cpp" line="1832"/>
+        <location filename="../src/mainWindow.cpp" line="1878"/>
+        <location filename="../src/mainWindow.cpp" line="1906"/>
+        <location filename="../src/mainWindow.cpp" line="1909"/>
+        <location filename="../src/mainWindow.cpp" line="1916"/>
+        <location filename="../src/mainWindow.cpp" line="1919"/>
         <source> links and </source>
         <comment> Links und </comment>
         <translation> เชื่อมโยง และ </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1615"/>
+        <location filename="../src/mainWindow.cpp" line="1781"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1634"/>
+        <location filename="../src/mainWindow.cpp" line="1800"/>
         <source>The backup of the partition was aborted by the user!
 </source>
         <comment>Die Sicherung der Partition  wurde vom Benutzer abgebrochen!
@@ -3217,7 +3203,7 @@ version 1.8.7-0, December 15, 2023</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1641"/>
+        <location filename="../src/mainWindow.cpp" line="1807"/>
         <source>The partition type is not supported.
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt.
@@ -3225,7 +3211,7 @@ version 1.8.7-0, December 15, 2023</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1648"/>
+        <location filename="../src/mainWindow.cpp" line="1814"/>
         <source>The partition type is not supported. Maybe the partition is encrypted?
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
@@ -3234,16 +3220,7 @@ version 1.8.7-0, December 15, 2023</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1652"/>
-        <source>The backup of the partition was not successful. The file is too large. Use a FAT partition?
-</source>
-        <comment>Die Sicherung der Partition war nicht erfolgreich. Die Datei ist zu groß. Nutzen Sie eine FAT-Partition?
-</comment>
-        <translation>Error saving partition. File too large. Use is FAT-partition?
-</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1665"/>
+        <location filename="../src/mainWindow.cpp" line="1828"/>
         <source>The backup of the partition was only partially successful.
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
@@ -3251,7 +3228,7 @@ version 1.8.7-0, December 15, 2023</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1667"/>
+        <location filename="../src/mainWindow.cpp" line="1830"/>
         <source> specials have been backed
 .</source>
         <comment> spezielle Daten wurden gesichert
@@ -3259,7 +3236,7 @@ version 1.8.7-0, December 15, 2023</source>
         <translation> ได้รับการสนับสนุนพิเศษ</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1670"/>
+        <location filename="../src/mainWindow.cpp" line="1833"/>
         <source> special data was not saved correctly.
 .</source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
@@ -3267,13 +3244,36 @@ version 1.8.7-0, December 15, 2023</source>
         <translation>specials were not properly backed.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1603"/>
+        <location filename="../src/mainWindow.cpp" line="1769"/>
         <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1685"/>
+        <location filename="../src/mainWindow.cpp" line="914"/>
+        <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
+        <comment>Auf der festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
+</comment>
+        <translation>ฮาร์ดไดรฟ์มีพื้นที่ไม่เพียงพอสำหรับการสำรองข้อมูล การสำรองข้อมูลถูกยกเลิก</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1421"/>
+        <source>Backup and restore partitions, directory and MBR.
+Version 1.8.7-1, October 15, 2024</source>
+        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.7-1, 15.Oktober 2024</comment>
+        <translation>สำรองและเรียกคืนพาร์ทิชัน Directory และ MBR
+รุ่น 1.8.7-1, 15.ตุลาคม 2024</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1733"/>
+        <source>The partition was not backed up successfully. The free space on the hard drive to be backed up was not sufficient or The file is too large. do not use a FAT partition.
+</source>
+        <comment>Die Partition wurde nicht erfolgreich gesichert. Der freie Speicherplatz auf der Festplatte auf die gesichert werden sollte war nicht ausreichend oder die Datei ist zu groß. Benutzen Sie keine FAT Partition.
+</comment>
+        <translation>ไม่สามารถสำรองข้อมูลพาร์ติชันได้สำเร็จ พื้นที่ว่างบนฮาร์ดไดรฟ์ที่จะสำรองข้อมูลไม่เพียงพอหรือไฟล์มีขนาดใหญ่เกินไป อย่าใช้พาร์ติชัน FAT</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1848"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
@@ -3281,8 +3281,8 @@ version 1.8.7-0, December 15, 2023</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1713"/>
-        <location filename="../src/mainWindow.cpp" line="1717"/>
+        <location filename="../src/mainWindow.cpp" line="1877"/>
+        <location filename="../src/mainWindow.cpp" line="1881"/>
         <source>The partition was successfully restored.
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
@@ -3291,19 +3291,19 @@ version 1.8.7-0, December 15, 2023</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1714"/>
+        <location filename="../src/mainWindow.cpp" line="1878"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
         <translation> คืนค่าพิเศษแล้ว</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1718"/>
+        <location filename="../src/mainWindow.cpp" line="1882"/>
         <source> links </source>
         <comment> Links </comment>
         <translation> links </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1723"/>
+        <location filename="../src/mainWindow.cpp" line="1887"/>
         <source>The restore of the partition was break by user!
 </source>
         <comment>Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!
@@ -3311,8 +3311,8 @@ version 1.8.7-0, December 15, 2023</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1741"/>
-        <location filename="../src/mainWindow.cpp" line="1750"/>
+        <location filename="../src/mainWindow.cpp" line="1905"/>
+        <location filename="../src/mainWindow.cpp" line="1914"/>
         <source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
@@ -3320,14 +3320,14 @@ version 1.8.7-0, December 15, 2023</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1744"/>
-        <location filename="../src/mainWindow.cpp" line="1754"/>
+        <location filename="../src/mainWindow.cpp" line="1908"/>
+        <location filename="../src/mainWindow.cpp" line="1918"/>
         <source> directories and </source>
         <comment> Verzeichnisse und </comment>
         <translation> directories and </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1746"/>
+        <location filename="../src/mainWindow.cpp" line="1910"/>
         <source> specials were not properly restored
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
@@ -3335,7 +3335,7 @@ version 1.8.7-0, December 15, 2023</source>
         <translation>specials were not properly restored.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1753"/>
+        <location filename="../src/mainWindow.cpp" line="1917"/>
         <source> special data and the partition boot sector were restored.
 .</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
@@ -3343,7 +3343,7 @@ version 1.8.7-0, December 15, 2023</source>
         <translation>พิเศษและพาร์ทิชันบูตเรกคอร์ดได้ถูกคืนค่า</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1756"/>
+        <location filename="../src/mainWindow.cpp" line="1920"/>
         <source> specials were not properly restored.
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
@@ -3351,7 +3351,7 @@ version 1.8.7-0, December 15, 2023</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1760"/>
+        <location filename="../src/mainWindow.cpp" line="1924"/>
         <source>You have tried restore a partition. The selected file can only restore directories. Please restart the program.
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
@@ -3360,7 +3360,7 @@ version 1.8.7-0, December 15, 2023</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1763"/>
+        <location filename="../src/mainWindow.cpp" line="1927"/>
         <source>You have entered an incorrect password.
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
@@ -3369,7 +3369,7 @@ version 1.8.7-0, December 15, 2023</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1768"/>
+        <location filename="../src/mainWindow.cpp" line="1932"/>
         <source>The partition to be written back to is too small.
 </source>
         <comment>Die Partition in die zurückgeschrieben wird ist zu klein.
@@ -3377,114 +3377,120 @@ version 1.8.7-0, December 15, 2023</source>
         <translation>พาร์ติชั่นที่จะเขียนกลับไปนั้นเล็กเกินไป </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1932"/>
+        <location filename="../src/mainWindow.cpp" line="2097"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
         <translation>Backup file name: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1933"/>
+        <location filename="../src/mainWindow.cpp" line="2098"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
         <translation>Partition  name: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1934"/>
+        <location filename="../src/mainWindow.cpp" line="2099"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
         <translation>Partition type: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1935"/>
+        <location filename="../src/mainWindow.cpp" line="2100"/>
         <source>UUID: </source>
         <translation>UUID:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1935"/>
+        <location filename="../src/mainWindow.cpp" line="2100"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
         <translation>Description: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1936"/>
+        <location filename="../src/mainWindow.cpp" line="2101"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
         <translation>Partition size: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1936"/>
-        <location filename="../src/mainWindow.cpp" line="1937"/>
+        <location filename="../src/mainWindow.cpp" line="2101"/>
+        <location filename="../src/mainWindow.cpp" line="2102"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
         <translation>Assignment of the partition: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1937"/>
+        <location filename="../src/mainWindow.cpp" line="2102"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
         <translation>Compression: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1938"/>
+        <location filename="../src/mainWindow.cpp" line="2103"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
         <translation>Approximate image file sizes: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1938"/>
+        <location filename="../src/mainWindow.cpp" line="2117"/>
+        <source>Path of the backup file: </source>
+        <comment>Pfad der Sicherungsdatei: </comment>
+        <translation>เส้นทางของไฟล์สำรองข้อมูล:</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="2121"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
         <translation>Other notes: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1939"/>
+        <location filename="../src/mainWindow.cpp" line="2104"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
         <translation>to be protected/secured partition: / (root system directory) </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1944"/>
-        <location filename="../src/mainWindow.cpp" line="1950"/>
+        <location filename="../src/mainWindow.cpp" line="2109"/>
+        <location filename="../src/mainWindow.cpp" line="2115"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
         <translation>Operating system: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1944"/>
-        <location filename="../src/mainWindow.cpp" line="1950"/>
+        <location filename="../src/mainWindow.cpp" line="2109"/>
+        <location filename="../src/mainWindow.cpp" line="2115"/>
         <source>Kernel: </source>
         <translation>Kernel:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1946"/>
+        <location filename="../src/mainWindow.cpp" line="2111"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
         <translation>to be protected/secured partition: /home</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1967"/>
+        <location filename="../src/mainWindow.cpp" line="2137"/>
         <source> MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1978"/>
+        <location filename="../src/mainWindow.cpp" line="2148"/>
         <source> TB</source>
         <translation>TB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1989"/>
+        <location filename="../src/mainWindow.cpp" line="2159"/>
         <source> GB</source>
         <translation>GB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2421"/>
+        <location filename="../src/mainWindow.cpp" line="2612"/>
         <source>No USB disk is connected, The program is terminated.</source>
         <comment>Es ist keine USB-Platte angeschlossen, Das Programm wird beendet.
 </comment>
         <translation>ไม่มีการเชื่อมต่อดิสก์ USB โปรแกรมถูกยกเลิก</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1554"/>
+        <location filename="../src/mainWindow.cpp" line="1700"/>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
         <translation>Do you really want to break the save or restore from the partition?</translation>
@@ -3939,22 +3945,22 @@ backup key</translation>
 <context>
     <name>OrderDialog</name>
     <message>
-        <location filename="../src/order.cpp" line="300"/>
-        <location filename="../src/order.cpp" line="321"/>
+        <location filename="../src/order.cpp" line="301"/>
+        <location filename="../src/order.cpp" line="322"/>
         <location filename="../src/order.cpp" line="376"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>หมายเหตุ</translation>
     </message>
     <message>
-        <location filename="../src/order.cpp" line="300"/>
+        <location filename="../src/order.cpp" line="301"/>
         <source>There are no backupfiles to delete.</source>
         <comment>Es sind keine Sicherungdateien zum löschen vorhanden.
 </comment>
         <translation>ไม่มีไฟล์สำรองที่จะลบ</translation>
     </message>
     <message>
-        <location filename="../src/order.cpp" line="303"/>
+        <location filename="../src/order.cpp" line="304"/>
         <source>It will delete 
 </source>
         <comment>Es werden 
@@ -3962,7 +3968,7 @@ backup key</translation>
         <translation>มันจะลบ</translation>
     </message>
     <message>
-        <location filename="../src/order.cpp" line="303"/>
+        <location filename="../src/order.cpp" line="304"/>
         <source>Do you want to continue?
 </source>
         <comment>Sicherungsdateien gelöscht. Wollen Sie fortfahren?
@@ -3970,7 +3976,7 @@ backup key</translation>
         <translation>คุณต้องการดำเนินการต่อหรือไม่?</translation>
     </message>
     <message>
-        <location filename="../src/order.cpp" line="321"/>
+        <location filename="../src/order.cpp" line="322"/>
         <source>The backup files were deleted. 
 </source>
         <comment>Die Sicherungsdateien wurden gelöscht.
@@ -3978,7 +3984,7 @@ backup key</translation>
         <translation>ไฟล์สำรองถูกลบ</translation>
     </message>
     <message>
-        <location filename="../src/order.cpp" line="328"/>
+        <location filename="../src/order.cpp" line="329"/>
         <source>Do you really want to delete all orders?</source>
         <comment>Wollen Sie wirklich alle Aufträge löschen?</comment>
         <translation>คุณต้องการลบคำสั่งซื้อทั้งหมดหรือไม่?</translation>

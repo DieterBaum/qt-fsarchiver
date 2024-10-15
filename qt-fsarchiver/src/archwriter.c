@@ -211,7 +211,7 @@ int archwriter_write_buffer(carchwriter *ai, struct s_writebuf *wb)
                 "If the archive is being written to a FAT filesystem, you may have reached \n"
                 "the maximum filesize that it can handle (in general 2 GB)\n", 
                 format_size(freebytes, textbuf, sizeof(textbuf), 'h'));
-                werte_uebergeben (109,4); 
+                werte_uebergeben (120,4); 
             return -1;
         }
         else // another error

@@ -37,7 +37,7 @@ QString filename;
  // connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(reject()));
   connect( cmd_cancel, SIGNAL( clicked() ), this, SLOT(close()));
   textEdit->setPlainText(wort);
-  
+    
  if (dialog_auswertung ==3)
      {
 	cmd_save->setText(tr("Partition restore", "Partition zurückschreiben"));
@@ -90,7 +90,7 @@ void FileDialog::file_save()
 {
         extern QString folder_file_;
       	QString filename = folder_file_;
-      	if (filename.isEmpty())
+       	if (filename.isEmpty())
    		return;
 	QFile file(filename);
         if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) 

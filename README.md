@@ -1,13 +1,14 @@
 # qt-fsarchiver
 qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 
-Copyright (C) 2008-2023 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2022 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
 
 qt-fsarchiver a program with a graphical interface for easy operation the archiving program fsarchiver.
 The graphical program must be started with root rights
+
 
 The source code can be installed on any Debian-based system on Suse and Fedora.
 For Debian, Ubuntu and Linux Mint are deb packages for Suse and Fedora rpm packages are available.
@@ -28,7 +29,7 @@ The command for Suse: (you must be an administrator su -l) zypper in zypper in l
 
 The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt libuuid-devel qt5-linguist
 
-You change in the terminal to the folder qt-fsarchiver (extracted from the sources).
+You change in the terminal to the folder qt5-fsarchiver (extracted from the sources).
 This is the command to install the program with Debian, Ubuntu  and und Mint: qmake && make && sudo make install
 In Debian you must instead sudo make install this: su -l, make install
 This is the command for Fedora and Suse: qmake-qt5 && make && sudo make install.
@@ -47,7 +48,7 @@ sudo apt install qt-fsarchiver
 With this installation variant, the updates are installed automatically
 
 Program call:
-Partial starters are installed. By double-click qt-fsarchiver is started.
+Partial starters are installed. By double-qt5-fsarchiver is started.
 Start qt-fsarchiver in a terminal: pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/sbin/qt-fsarchiver
 
 The handling of qt-fsarchiver is simple:

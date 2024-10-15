@@ -69,6 +69,7 @@ int j = 0;
 int found = 0;
 QString order_name;
         file.open(QIODevice::ReadOnly);
+        QThread::msleep(5 * sleepfaktor);
         QDataStream stream( &file ); // read the data serialized from the file
         stream >> auftrag_ ;
         file.close(); 
@@ -361,6 +362,7 @@ QString text;
             text = text + widget_list[i] + " ## " + widget_list_[i] + " ## "; 
             listWidget->addItem (order_name_[i]);
             }
+        QThread::msleep(5 * sleepfaktor);    
         if (file2.open(QIODevice::ReadWrite)) 
             {
              QDataStream out(&file2);
@@ -369,8 +371,6 @@ QString text;
             } 
  }                  
                      
-       
-
 int OrderDialog::questionMessage(QString frage)
 {
 	QMessageBox msg(QMessageBox::Question, tr("Note", "Hinweis"), frage);

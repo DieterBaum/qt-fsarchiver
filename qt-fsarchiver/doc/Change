@@ -1,6 +1,9 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-1.8.7-1 15 October 2024.
+    - Before backing up, the system checks whether there is enough space on the hard drive/USB stick.
+    - Minor corrections and improvements.
 * qt-fsarchiver-1.8.7-0 December 15, 2023.
     - Implement support for option "uuid=" for vfat (Marcos Mello)
     - Update list of btrfs supported features (Marcos Mello)
