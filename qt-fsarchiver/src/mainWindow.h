@@ -76,8 +76,6 @@ protected slots:
    void indicator_reset();
    void keyPressEvent(QKeyEvent *event);
    void restore_button();
-   void eingabe_net_save();
-   void eingabe_net_restore();
    void chkkey();
    void chkhidden();
    void chkGB();
@@ -88,7 +86,6 @@ protected slots:
    int pid_ermitteln();
    void del_mediafolder();
    void clone_save();
-   void clone_save_net();
    void make_order(); 
    void order_edit(); 
    void save_restorePartiiton_list();
@@ -100,6 +97,7 @@ protected slots:
    void zip_einlesen();
    void make_direct();
    int size_determine(QString part_size_compress, QString folder);
+   int question_end();
     
 private:
     QFileSystemModel *dirModel;

@@ -29,8 +29,6 @@
 #include <QInputDialog>
 #include "filedialog.h"
 #include "setting.h"
-#include "net.h"
-#include "net_ein.h"
 #include "mbr.h"
 #include "clone.h"
 #include "dir.h"
@@ -42,12 +40,11 @@ extern "C" {
 }
 #include <sys/types.h>
 #include <unistd.h>
-#include "treeview.h"
 #include <dirent.h>
 
 using namespace std;
 
-QString Datum_akt("");
+//QString Datum_akt("");
 QString partition_;
 QString UUID;
 string partition_str;
@@ -102,6 +99,7 @@ float part_size_compress_float;
 QString size_folder;
 int esc_ = 0;
 int live_save = 0;
+int end_mediafolder = 0;
 
 extern "C"
 {
@@ -188,6 +186,8 @@ MWindow::MWindow()
    QStringList items; 
    int pos = 0, pos1 = 0;
    int i = 0, j = 0;
+   QString tmp;
+   int temp = 0;
    QString rootpath = QDir::rootPath();
    QString homepath = QDir::homePath(); 
    QString befehl;  
@@ -208,8 +208,6 @@ MWindow::MWindow()
    connect( action_Beenden, SIGNAL(triggered(bool)), this, SLOT(esc_end()));
    connect( action_partition_save, SIGNAL(triggered(bool)),this, SLOT(save_button()));
    connect( action_partition_restore, SIGNAL(triggered(bool)),this, SLOT(restore_button()));
-   connect( action_partition_save_net, SIGNAL(triggered(bool)),this, SLOT(eingabe_net_save()));
-   connect( action_partition_restore_net, SIGNAL(triggered(bool)),this, SLOT(eingabe_net_restore()));
    connect( action_Information, SIGNAL(triggered(bool)),this, SLOT(info()));
    connect( action_Einstellungen, SIGNAL(triggered(bool)),this, SLOT(einstellungen()));
    connect( action_mbr_save, SIGNAL(triggered(bool)), this, SLOT(mbr_save()));
@@ -218,19 +216,15 @@ MWindow::MWindow()
    connect( action_dir_restore, SIGNAL(triggered(bool)), this, SLOT(dir_restore()));
    connect( action_CloneDrive, SIGNAL(triggered(bool)), this, SLOT(clone_save()));
    connect( actionClone_HD, SIGNAL(triggered(bool)), this, SLOT(clone_save()));
-   connect( action_CloneDrive_net, SIGNAL(triggered(bool)), this, SLOT(clone_save_net()));
    connect( action_Order_list_edit, SIGNAL(triggered(bool)), this, SLOT(order_edit()));
    connect( action_Order, SIGNAL(triggered(bool)), this, SLOT(make_order()));
    connect( pushButton_order, SIGNAL( clicked() ), this, SLOT(listWidget2_auslesen()));
    //schließt alle Fenster
    //connect( pushButton_end, SIGNAL( clicked() ), qApp, SLOT(quit()));
    connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(del_mediafolder()));
-//   connect( pushButton_break, SIGNAL( clicked() ), this, SLOT(esc_end()));
    //schließt das aktuelle (this)Fenster:
-   //connect( pushButton_end, SIGNAL( clicked() ), this, SLOT(close()));	
    connect( pushButton_save, SIGNAL( clicked() ), this, SLOT(savePartition()));
    connect( pushButton_restore, SIGNAL( clicked() ), this, SLOT(restorePartition()));
-   // pushButton_partition und pushButton_folder sind dummy Button um einen Slot ansprechen zu können
    connect( pushButton_partition, SIGNAL( clicked() ), this, SLOT(listWidget_auslesen()));
    connect( pushButton_folder, SIGNAL( clicked() ), this, SLOT(folder_einlesen()));
    connect( rdBt_saveFsArchiv, SIGNAL( clicked() ), this, SLOT(rdButton_auslesen()));
@@ -285,15 +279,6 @@ MWindow::MWindow()
       if(system (befehl.toLatin1().data()))
           befehl = "";
       }
-   QDir dir(homepath + "/.qt5-fs-client");
-   if (!dir.exists()){
-       befehl = "mkdir " + homepath + "/.qt5-fs-client 2>/dev/null" ;
-       if(system (befehl.toLatin1().data()))
-          befehl = "";
-   }	//vorsichtshalber Rechte immer neu setzen
-       befehl = "chmod a+rwx " + homepath + "/.qt5-fs-client 2>/dev/null";
-       if(system (befehl.toLatin1().data()))
-          befehl = "";
    // wegen Suse
    QDir dir3("/media");
    QString media = "/media";
@@ -304,36 +289,65 @@ MWindow::MWindow()
        }
    // beim Abbruch einer Sicherung bleiben eventuell Daten in /tmp/fsa erhalten.
    // Bei ersten Start werden eventuell vorhandene Dateien gelöscht.
-   // Beim Öffnen einer weiteren Instanz von qt5-fsarchiver, darf /tmp/fsa keinenfalls gelöscht werden.
+   // Daher darf nach dem Abbruch von Live-Sicherungen keinenfalls die Daten in /tmp/fsa gelöscht werden
    // Das System sürzt ab!!
-   pid1 = pid_ermitteln();
-   if (pid1== 1)
+   // Sind in /tmp/fsa Dateien vom gleichen Tag vorhanden, werden diese nicht gelöcht. So wird der Systemabsturz verhindert.
+
+    QDate date = QDate::currentDate();
+    QString dw = date.toString("yyyyMMdd");
+    
+    QDir dir4("/tmp/fsa");
+    if (dir4.exists())
+         {
+        befehl = "dir /tmp/fsa 1> " +  homepath + "/.config/qt5-fsarchiver/tmp.txt";
+        if(system (befehl.toLatin1().data()))
+            befehl = "";
+        temp = 1;    
+        }
+    QString filename = homepath + "/.config/qt5-fsarchiver/tmp.txt";
+    QFile file4(filename);
+    QTextStream ds(&file4);
+    QThread::msleep(10 * sleepfaktor);
+    if( file4.open(QIODevice::ReadOnly|QIODevice::Text)) 
+       {
+       while (!ds.atEnd())
+    	  {
+      	  tmp= ds.readLine();
+      	  pos = tmp.indexOf(dw);
+      	     if(pos > -1)
+      	        {
+      	        temp = 1;
+      	        break;
+      	        }
+   	      if( tmp.isEmpty() )
+         	 break;
+          } 
+   	  file4.close();
+   	} 
+   int pida1 = pid_ermitteln();
+   if (pida1 == 1 && temp == 0)
       {
        befehl = "rm -r -f /tmp/fsa 2>/dev/null"; 
        if(system (befehl.toLatin1().data()))
-               befehl = "";
+           befehl = "";
        }
-  if (pid1 > 1) 
+   else 
+       qDebug() << "/tmp/fsa wird nicht gelöscht"; 
+   befehl = "rm " + homepath + "/.config/qt5-fsarchiver/tmp.txt 2>/dev/null"; 
+   if(system (befehl.toLatin1().data()))
+       befehl = "";
+   if (pida1 > 1) 
        {
        QMessageBox::warning(this,tr("Note", "Hinweis"),
        	tr("Qt-fsarchiver can only be started once. The program must be terminated..\n", "Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.\n"));
-      esc_end();
       return;
       }
    j = 0; 
-   // qt-fsarchiver-terminal entfernen
-   QFile file1("/usr/sbin/qt-fsarchiver-terminal");
-   if (file1.exists()) 
-      {
-      befehl = "rm /usr/sbin/qt-fsarchiver-terminal";
-      if(system (befehl.toLatin1().data()))
-         befehl = "";
-      }
-   // /home/user/.config/qt-fsarchiver/qt-fsarchiver.conf entfernen   
-   befehl = "rm /home/*/.config/qt-fsarchiver/qt-fsarchiver.conf 2>/dev/null";  //file.exist mit * funktioniert nicht
+   // /home/user/.qt5-fs-client entfernen  wird nicht mehr benötigt, da das Arbeiten mit dem Netzwerk aus dem Code entfernt wurde 
+   befehl = "rm -r " + homepath + "/.qt5-fs-client 2>/dev/null"; 
    if(system (befehl.toLatin1().data()))
       befehl = "";
-   // Ini-Datei auslesen
+   // Ini-Datei auslesenc
    QFile file(homepath + "/.config/qt5-fsarchiver/qt5-fsarchiver.conf");
    QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
    if (file.exists()) {
@@ -954,6 +968,7 @@ if(order == 1)
 
 int MWindow::size_determine(QString part_size_compress, QString folder)
 {
+qDebug() << "part_size_compress, QString folder" << part_size_compress << folder;
 QString homepath = QDir::homePath();
 QString befehl;
 QString filename = homepath + "/.config/qt5-fsarchiver/size.txt";
@@ -976,7 +991,7 @@ befehl = "df -hl 1> " +  homepath + "/.config/qt5-fsarchiver/size.txt";
     	   while (!ds.atEnd())
       	      {
       	      // size splitten
-      	      size = size_.split(QRegExp("\\s+"));
+      	      size = size_.split(QRegularExpression("\\s+"));
       	      pos = folder.indexOf(size[5]);
       	      if(pos == 0 && size[5] != "/")
       	        size_folder = size[3];
@@ -1418,8 +1433,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nVersion 1.8.7-1, October 15, 2024",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.7-1, 15.Oktober 2024"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.7-0, November 1, 2024",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.7-0, 1.November 2024"));
       }
 
 int MWindow::Root_Auswertung(){
@@ -1548,54 +1563,9 @@ void MWindow::clone_save () {
      dialog1->show();
 }
 
-void MWindow::clone_save_net () {
-NetEin netein;
-     extern int dialog_auswertung;
-     //int i = netein.list_net("1");
-     int i = netein.list_net();
-        if ( i != 1)
-	{
-     dialog_auswertung = 8;
-     NetEin *dialog2 = new NetEin; 
-     dialog2->show();
-	}
-}
-
 void MWindow::einstellungen () {
       DialogSetting *dialog1 = new DialogSetting;
       dialog1->show();
-}
-
-void MWindow::eingabe_net_save () {
-NetEin netein;
-      	extern int dialog_auswertung;
-        this->setCursor(Qt::WaitCursor);  
-        int i = netein.list_net();
-        if ( i != 1)
-	   {
- 	   dialog_auswertung = 6;
- 	   NetEin *dialog3 = new NetEin;
-      	   dialog3->show();
-           this->setCursor(Qt::ArrowCursor);  
-	   }
-        this->setCursor(Qt::ArrowCursor);
-}
-
-void MWindow::eingabe_net_restore () {
-NetEin netein;
-      	extern int dialog_auswertung;
-        this->setCursor(Qt::WaitCursor);  
-       // int i = netein.list_net("1");
-        int i = netein.list_net();
-        if ( i != 1)
-	{
-                this->setCursor(Qt::WaitCursor);  
-      		dialog_auswertung = 7;
-      		NetEin *dialog3 = new NetEin;
-      		dialog3->show();
-                this->setCursor(Qt::ArrowCursor);
-        }
-        this->setCursor(Qt::ArrowCursor);
 }
 
 void MWindow::format() {
@@ -1683,21 +1653,36 @@ void MWindow::startThread2() {
    thread2.start();
 }
 
+int MWindow::question_end() 
+{
+int ret = 0;
+      if (live_save == 1)
+           ret = questionMessage_critical(tr("Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?", "Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?"));
+       if (live_save == 0)
+            ret = questionMessage_warning(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+     return ret;     
+}
+
+
 void MWindow::closeEvent(QCloseEvent *event) 
 {
 int ret = 0;
 QThread::msleep(10 * sleepfaktor);
 QString befehl;
+    if(end_mediafolder==0)
+       ret = question_end();
+    if (ret == 2)
+       {
+       event->ignore();
+       return;
+       } 
     if (run_ == 0)
        {
        del_mediafolder();
        esc_end();
        event->accept();
        }
-       if (run_ == 1 && live_save == 1)
-           ret = questionMessage_critical(tr("Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?", "Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?"));
-       if (run_ == 1 && live_save == 0)
-            ret = questionMessage_warning(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+    
       if (ret == 1 )
           {
           esc_ = 1;
@@ -1705,11 +1690,7 @@ QString befehl;
           event->accept();
           }
        run_ = 0;
-     if (ret == 2)
-       {
-       event->ignore();
-       return;
-       }   
+       
 }
 
 void MWindow::thread1Ready()  {
@@ -1992,7 +1973,9 @@ void MWindow::keyPressEvent(QKeyEvent *event) {
      QWidget::keyPressEvent(event);
      switch( event->key() ) {
          case Qt::Key_Escape:
-            esc_end(); 
+            int ret = question_end();
+            if (ret==1)
+                 esc_end(); 
          break;
      }
 }
@@ -2346,12 +2329,9 @@ QString befehl = "";
 int pida1=getppid();
 int ret = 0;
    pid1 = QString::number(pida1);
-   if (esc_ == 0 && live_save == 1) 
-        ret = questionMessage_critical(tr("Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?", "Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?"));
-   if (esc_ == 0 && live_save == 0) 
-        ret = questionMessage_warning(tr("Do you really want to break the save or restore from the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+    ret = question_end();
     if (esc_ == 1) 
-        ret = 1;    
+        ret = 1;  
     if(ret == 1)
       {
       befehl = "rm "  + SicherungsFolderFileName;
@@ -2368,10 +2348,10 @@ int ret = 0;
       pos = SicherungsFolderFileName.indexOf("txt");
       SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
       SicherungsFolderFileName.insert(pos, QString("pbr"));
+      del_mediafolder();
       QFile file1(SicherungsFolderFileName);
       if (file1.exists()) 
          befehl = "rm "  + SicherungsFolderFileName + " 2>/dev/null";;
-      del_mediafolder();
       if(system (befehl.toLatin1().data()))
          befehl = "";
       // txt und fsa-Datei löschen 
@@ -2383,11 +2363,14 @@ int ret = 0;
            folder_file_.replace(found, 4, ".fsa"); 
        befehl = "rm " + folder_file_ + " 2>/dev/null";
        if(system (befehl.toLatin1().data()))
-          befehl = "";     
-      befehl = "kill -15 " + pid1;  //qt-fsarchiver abbrechen
-      if(system (befehl.toLatin1().data()))
-         befehl = "";
-      close();
+          befehl = ""; 
+      if(pida1 > 1) 
+         {       
+         befehl = "kill -15 " + pid1;  //qt-fsarchiver abbrechen
+         if(system (befehl.toLatin1().data()))
+            befehl = "";
+         }   
+      QApplication::quit();
       }
       if(ret == 2)
         return;    
@@ -2397,6 +2380,7 @@ void MWindow::del_mediafolder()
 // Programm beenden
 // eingehängte Partitionen aushängen und leere Verzeichnisse in /media löschen.
 {
+end_mediafolder = 1;
 QString foldername[100];
       QString homepath = QDir::homePath();
       QString befehl = "cd /media; ls 1> " +  homepath + "/.config/qt5-fsarchiver/media.txt; cd /";
@@ -2442,7 +2426,11 @@ QString foldername[100];
            filename = homepath + "/.config/qt5-fsarchiver/route.txt";
            befehl = "rm " + filename + " 2>/dev/null";
            if(system (befehl.toLatin1().data()))
-               befehl = "";  
+               befehl = ""; 
+           filename = homepath + "/.config/qt5-fsarchiver/size.txt";
+           befehl = "rm " + filename + " 2>/dev/null";
+           if(system (befehl.toLatin1().data()))
+               befehl = "";      
            filename = homepath + "/.config/qt5-fsarchiver/sektornummer.txt";
            befehl = "rm " + filename + " 2>/dev/null";
            if(system (befehl.toLatin1().data()))
@@ -2450,21 +2438,19 @@ QString foldername[100];
            filename = homepath + "/.config/qt5-fsarchiver/zeit.txt";
            befehl = "rm " + filename + " 2>/dev/null";
            if(system (befehl.toLatin1().data()))
-               befehl = "";             
-           filename = homepath + "/.config/qt5-fsarchiver/pid.txt";
+               befehl = "";  
+           filename = homepath + "/.config/qt5-fsarchiver/disk.txt";
            befehl = "rm " + filename + " 2>/dev/null";
            if(system (befehl.toLatin1().data()))
-               befehl = "";
-           befehl = "umount -f" + homepath + "/.qt5-fs-client 2>/dev/null";
-	   if(system (befehl.toLatin1().data()))
-               befehl = "";  
-           befehl = "fusermount -u " + homepath + "/.qt5-fs-client 2>/dev/null";
+               befehl = "";                 
+           filename = homepath + "/.config/qt5-fsarchiver/pid.txt";
+           befehl = "rm " + filename + " 2>/dev/null";
            if(system (befehl.toLatin1().data()))
                befehl = "";
            befehl = "umount -a -t nfs 2>/dev/null";
            if(system (befehl.toLatin1().data()))
                befehl = "";
-           qApp->quit();
+           QApplication::quit();
  
 }
 
@@ -2571,7 +2557,7 @@ QString datum = Zeit_auslesen();
        row = 0;
      attribute = widget_2[row]; 
      attribute = attribute.trimmed();
-     auftrag = attribute.split(QRegExp("\\s+"));
+     auftrag = attribute.split(QRegularExpression("\\s+"));
      size_ = auftrag.size();
      auftrag_datei_name_fsa = auftrag[size_ -2];
      SicherungsFolderFileName = auftrag_datei_name_fsa;
@@ -2600,7 +2586,7 @@ QString datum = Zeit_auslesen();
                 while (!ds.atEnd())
                 {   
                 text = ds.readLine();
-                texte = text.split(QRegExp("\\s+"));
+                texte = text.split(QRegularExpression("\\s+"));
                 text = texte[5];
                 found = dummy.indexOf(text);
                 if(found == 0)
@@ -2776,6 +2762,7 @@ QString datum = Zeit_auslesen();
             }
         result = size_determine("", folder); 
         // size_folder ist der freie Speicherplatz im Sicherungspfad 
+        qDebug() << "vor beschreibung";
         beschreibungstext("/dev/" + partition_, DateiName + "-" + _Datum + ".fsa", zip, row, size_folder, folder);
         dialog_auswertung = 2;
         FileDialog Filedialog;

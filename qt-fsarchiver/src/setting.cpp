@@ -52,9 +52,6 @@ DialogSetting::DialogSetting()
    	items_zip << tr("bzip2 good", "bzip2 good") << tr("lzma fast","lzma fast") << tr("lzma medium","lzma medium") << tr("lzma best","lzma best") << tr("zstd","zstd");
    	cmb_zip->addItems (items_zip);
    	items_zip.clear();
-        items_network << tr("Samba") << tr("NFS");
-   	cmb_network->addItems (items_network);
-   	items_network.clear();
         QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
         setting.beginGroup("Basiseinstellungen");
         int auswertung = setting.value("Sprache").toInt(); 
@@ -65,10 +62,6 @@ DialogSetting::DialogSetting()
         else
             cmb_zstd -> setCurrentIndex(7);
         auswertung = setting.value("dummy").toInt();
-        if (auswertung ==2){
-           chk_ssh ->setEnabled(false);
-           chk_sshfs ->setEnabled(false); 
-        } 
         auswertung = setting.value("Kompression").toInt();
         if (auswertung !=0)
              cmb_zip -> setCurrentIndex(auswertung);
@@ -81,8 +74,6 @@ DialogSetting::DialogSetting()
             cmb_sleep -> setCurrentIndex(4);
         auswertung = setting.value("Kerne").toInt();
         cmb_Kerne -> setCurrentIndex(auswertung-1); 
-        auswertung = setting.value("Network").toInt();
-        cmb_network -> setCurrentIndex(auswertung-1); 
         auswertung = setting.value("overwrite").toInt();
         if (auswertung ==1)
            chk_file->setChecked(true); 
@@ -101,18 +92,9 @@ DialogSetting::DialogSetting()
         auswertung = setting.value("Passwort").toInt();
         if (auswertung ==1)
            chk_password->setChecked(true);
-        auswertung = setting.value("save").toInt();
-        if (auswertung ==1)
-           chk_datesave->setChecked(true);
         auswertung = setting.value("pbr").toInt();
         if (auswertung ==1)
            chk_pbr->setChecked(true);
-        auswertung = setting.value("ssh").toInt();
-        if (auswertung ==1)
-           chk_ssh->setChecked(true);
-        auswertung = setting.value("sshfs").toInt();
-        if (auswertung ==1)
-           chk_sshfs->setChecked(true);
         auswertung = setting.value("showPrg").toInt();
         if (auswertung ==1)
            chk_prg->setChecked(true);
@@ -142,8 +124,6 @@ void DialogSetting:: setting_save()
      else
         setting.setValue("sleep","4");
      setting.setValue("Kompression",zip);
-     int net = cmb_network->currentIndex()+1;
-     setting.setValue("Network",net);
      if (chk_file->checkState()) 
             setting.setValue("overwrite",1);
      else
@@ -168,22 +148,10 @@ void DialogSetting:: setting_save()
             setting.setValue("Passwort",1);
      else
             setting.setValue("Passwort",0);
-     if (chk_datesave->checkState()) 
-            setting.setValue("save",1);
-     else
-            setting.setValue("save",0);
      if (chk_pbr->checkState()) 
             setting.setValue("pbr",1);
      else
             setting.setValue("pbr",0);
-     if (chk_ssh->checkState()) 
-            setting.setValue("ssh",1);
-     else
-            setting.setValue("ssh",0);
-     if (chk_sshfs->checkState()) 
-            setting.setValue("sshfs",1);
-     else
-            setting.setValue("sshfs",0);
      if (chk_prg->checkState()) 
             setting.setValue("showPrg",1);
      else 

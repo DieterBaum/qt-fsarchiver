@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>473</width>
-    <height>643</height>
+    <height>571</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -179,24 +179,11 @@ to the original location by default</string>
      <string>Show passwords</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="chk_datesave">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>360</y>
-      <width>441</width>
-      <height>39</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string extracomment="Netzwerkeingabedaten * speichern">Save network input data</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="cmd_save">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>540</y>
+      <y>460</y>
       <width>431</width>
       <height>27</height>
      </rect>
@@ -209,7 +196,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>570</y>
+      <y>500</y>
       <width>431</width>
       <height>27</height>
      </rect>
@@ -231,60 +218,11 @@ to the original location by default</string>
      <string extracomment="PBR standradmäßig sichern">Safe PBR by default</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="cmb_network">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>390</y>
-      <width>200</width>
-      <height>27</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>390</y>
-      <width>225</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Network protocol:</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="chk_ssh">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>415</y>
-      <width>441</width>
-      <height>39</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string extracomment="Hinweis  für den Zugriff auf Netzwerkrechner anzeigen">Display note for access to network computers</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="chk_sshfs">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>440</y>
-      <width>441</width>
-      <height>39</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string extracomment="Hinweis über das Mounten des Netzwerkrechners anzeigen">Displaying a note about mounting the network computer</string>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="chk_prg">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>465</y>
+      <y>360</y>
       <width>441</width>
       <height>39</height>
      </rect>
@@ -332,8 +270,8 @@ to the original location by default</string>
    <widget class="QPushButton" name="cmd_zstd">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>570</y>
+      <x>130</x>
+      <y>500</y>
       <width>20</width>
       <height>20</height>
      </rect>
@@ -345,8 +283,8 @@ to the original location by default</string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>15</x>
-      <y>496</y>
+      <x>10</x>
+      <y>400</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -368,8 +306,8 @@ from the terminal program. </string>
    <widget class="QComboBox" name="cmb_sleep">
     <property name="geometry">
      <rect>
-      <x>384</x>
-      <y>500</y>
+      <x>380</x>
+      <y>410</y>
       <width>51</width>
       <height>27</height>
      </rect>
@@ -388,14 +326,9 @@ from the terminal program. </string>
    <zorder>chk_key</zorder>
    <zorder>chk_split</zorder>
    <zorder>chk_password</zorder>
-   <zorder>chk_datesave</zorder>
    <zorder>cmd_save</zorder>
    <zorder>cmd_cancel</zorder>
    <zorder>chk_pbr</zorder>
-   <zorder>cmb_network</zorder>
-   <zorder>label_4</zorder>
-   <zorder>chk_ssh</zorder>
-   <zorder>chk_sshfs</zorder>
    <zorder>chk_prg</zorder>
    <zorder>chk_hidden</zorder>
    <zorder>cmb_zstd</zorder>
@@ -414,7 +347,6 @@ from the terminal program. </string>
   <tabstop>chk_folder</tabstop>
   <tabstop>chk_split</tabstop>
   <tabstop>chk_password</tabstop>
-  <tabstop>chk_datesave</tabstop>
   <tabstop>cmd_save</tabstop>
   <tabstop>cmd_cancel</tabstop>
  </tabstops>

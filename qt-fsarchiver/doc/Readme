@@ -2,7 +2,7 @@
 qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Suse and Fedora [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =========================================================================================================================================
 
-Copyright (C) 2008-2023 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2024 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
@@ -10,32 +10,31 @@ François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has im
 qt-fsarchiver a program with a graphical interface for easy operation the archiving program fsarchiver.
 The graphical program must be started with root rights
 
-
 The source code can be installed on any Debian-based system on Suse and Fedora.
 For Debian, Ubuntu and Linux Mint are deb packages for Suse and Fedora rpm packages are available.
 
-Installing the program from the source files:
-To install qt-fsarchiver the necessary dependencies for fsarchiver and the qt5 development environment must be installed.
-Of Debian based distributions: This is the command:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential  qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba cifs-utils nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo 
+From version 2.8.7-0 qt-fsarchiver is based on Qt6.
 
+Installing the program from the source files:
+To install qt-fsarchiver the necessary dependencies for fsarchiver and the qtt development environment must be installed.
+Of Debian based distributions: This is the command:
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt6-qmltooling-plugins qt6-base-dev qt6-tools-dev qt6-5compat-dev btrfs-progs gdisk liblz4-dev libzstd-dev jfsutils xfsprogs sudo 
 For some distributions, the /etc/sudoers file must be completed with these lines:
 username ALL=(ALL) ALL 
 %sudo	ALL=(ALL:ALL) ALL
 The username has to be adjusted: for example peter.
 
-The command for Suse: (you must be an administrator su -l) zypper in zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils net-tools-deprecated update-desktop-files pkexec 
+The command for Suse: (you must be an administrator su -l) zypper in qt6-qtbase-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk  xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils update-desktop-files pkexec
 
-The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt libuuid-devel qt5-linguist
+The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt6-qtbase qt6-qtbase-devel gdisk lz4-devel libzstd-devel jfsutils xfsprogs libuuid-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel
 
-You change in the terminal to the folder qt5-fsarchiver (extracted from the sources).
-This is the command to install the program with Debian, Ubuntu  and und Mint: qmake && make && sudo make install
+You change in the terminal to the folder qt-fsarchiver (extracted from the sources).
+This is the command to install the program with Debian, Ubuntu, Mint, Fedora und Suse: qmake6 && make && sudo make install
 In Debian you must instead sudo make install this: su -l, make install
-This is the command for Fedora and Suse: qmake-qt5 && make && sudo make install.
 
 Installing the program from the DEB packages:
 A double click on the deb file installs the program.
-If the installation is unsuccessful you enter this command in a terminal(you must be administrator): apt install qt-fsarchiver-1.8.7-0.deb. The version number needs to be adjusted.
+If the installation is unsuccessful you enter this command in a terminal(you must be administrator): apt install qt-fsarchiver-2.8.7-0.deb. The version number needs to be adjusted.
 
 Installation of the program from a Launchpad:
 With Ubuntu and Mint you can reach the installation with these commands:
@@ -79,20 +78,6 @@ New as of version 1.8.6-0:
 qt-fsarchiver can also be started without a graphical user interface.
 If a job has been saved under this name: jj-home, then this job can be started like this: pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/sbin/qt-fsarchiver -jj-home.
 If a corresponding desktop file is also created, this job can be processed very quickly.
-
-Prerequisites for working with the network: 
-The computer name may contain a maximum of 15 characters.
-The names of the backup directories must not contain any spaces.
-
-With the protocoll samba:
-If the network is used must be installed on both computers (Client and Server) Samba. Client is the computer that performs the backup/restore. Server is the computer where the data is stored.
-The integration of the virtual file system "cifs vfs" must be possible on the Linux machine. Please refer to the Ubuntu wiki article "http://wiki.ubuntuusers.de/Samba_Client_cifs".
-For access to a Windows 7 shared folder you must add group or user name "Everyone" in  Properties> Sharing> Advanced Sharing> Permissions. As permissions for "Everyone" should of "full access", "Change" and "reading" can be activated.
-
-With the protocoll NFS (Network File System):
-Only Linux machine as a client or server can be used. Must be installed on the server nfs-kernel-server. In the file /etc/exports to be released in addition to the directories listed. The name can not contain spaces. In the directory must have read and write can be accessed. The entry /home/user/images 192.168.2.0/255.255.255.0(rw) allows any computer with the IP address 192.168.2.0 through 192.168.2.255 a read-write access to the directory /home/user/pictures of the client.
-
-After starting the live CD or the computer it may make a while to show up other computers on the network. 
 
 Backups can also be done encrypted. Here, the key length between 6 and 64 characters. The archives splitting on DVD-size is possible.
 

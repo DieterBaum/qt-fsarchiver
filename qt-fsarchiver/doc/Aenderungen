@@ -1,6 +1,11 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-2.8.7-0 1.November 2024.
+    - Die Entwicklung von qt-fsarchiver basierend auf Qt5 wird eingestellt.
+    - Diese Version wurde mit Qt6 kompiliert.
+    - Die Handhabung und die Befehle sind bei beiden Versionen identisch.
+    - Das Sichern und Wiederherstellen von Partitionen über das Netzwerk wird nicht mehr unterstützt.
 * qt-fsarchiver-1.8.7-1 15. Oktober 2024.
     - Vor der Sicherung wird überprüft, ob genügend Platz auf der Festplatte/USB-Stick vorhanden ist.
     - Kleinere Korrekturen und Verbesserungen.

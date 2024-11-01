@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>763</width>
-    <height>704</height>
+    <height>722</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -533,8 +533,6 @@ files/directories:</string>
    <addaction name="action_mbr_restore"/>
    <addaction name="action_dir_save"/>
    <addaction name="action_dir_restore"/>
-   <addaction name="action_partition_save_net"/>
-   <addaction name="action_partition_restore_net"/>
    <addaction name="action_CloneDrive"/>
    <addaction name="action_Order"/>
    <addaction name="action_Order_list_edit"/>
@@ -545,7 +543,7 @@ files/directories:</string>
      <x>0</x>
      <y>0</y>
      <width>763</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAktionen">
@@ -556,8 +554,6 @@ files/directories:</string>
     <addaction name="action_partition_save"/>
     <addaction name="action_partition_restore"/>
     <addaction name="separator"/>
-    <addaction name="action_partition_save_net"/>
-    <addaction name="action_partition_restore_net"/>
     <addaction name="action_mbr_save"/>
     <addaction name="action_mbr_restore"/>
     <addaction name="separator"/>
@@ -598,7 +594,7 @@ files/directories:</string>
   </action>
   <action name="action_partition_save">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/disk.png</normaloff>:/src/images/disk.png</iconset>
    </property>
    <property name="text">
@@ -607,7 +603,7 @@ files/directories:</string>
   </action>
   <action name="action_partition_restore">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/book_previous.png</normaloff>:/src/images/book_previous.png</iconset>
    </property>
    <property name="text">
@@ -616,7 +612,7 @@ files/directories:</string>
   </action>
   <action name="action_Einstellungen">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/einstellung.png</normaloff>:/src/images/einstellung.png</iconset>
    </property>
    <property name="text">
@@ -625,7 +621,7 @@ files/directories:</string>
   </action>
   <action name="action_Information">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/information.png</normaloff>:/src/images/information.png</iconset>
    </property>
    <property name="text">
@@ -634,7 +630,7 @@ files/directories:</string>
   </action>
   <action name="action_mbr_save">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/mbr_save.png</normaloff>:/src/images/mbr_save.png</iconset>
    </property>
    <property name="text">
@@ -643,7 +639,7 @@ files/directories:</string>
   </action>
   <action name="action_mbr_restore">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/mbr_restore.png</normaloff>:/src/images/mbr_restore.png</iconset>
    </property>
    <property name="text">
@@ -652,7 +648,7 @@ files/directories:</string>
   </action>
   <action name="action_dir_restore">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/folder_back.png</normaloff>:/src/images/folder_back.png</iconset>
    </property>
    <property name="text">
@@ -661,7 +657,7 @@ files/directories:</string>
   </action>
   <action name="action_dir_save">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/folder_go.png</normaloff>:/src/images/folder_go.png</iconset>
    </property>
    <property name="text">
@@ -670,34 +666,21 @@ files/directories:</string>
   </action>
   <action name="action_Beenden">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/cancel.png</normaloff>:/src/images/cancel.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Exit program</string>
    </property>
   </action>
-  <action name="action_partition_save_net">
-   <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
-     <normaloff>:/src/images/applications-internet.png</normaloff>:/src/images/applications-internet.png</iconset>
-   </property>
+  <action name="action">
    <property name="text">
-    <string>&amp;Save a partition on network</string>
-   </property>
-  </action>
-  <action name="action_partition_restore_net">
-   <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
-     <normaloff>:/src/images/applications-internet-ein.png</normaloff>:/src/images/applications-internet-ein.png</iconset>
-   </property>
-   <property name="text">
-    <string>Restore &amp;a partition on network</string>
+    <string/>
    </property>
   </action>
   <action name="breakProcess">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/cancel.png</normaloff>:/src/images/cancel.png</iconset>
    </property>
    <property name="text">
@@ -706,40 +689,25 @@ files/directories:</string>
   </action>
   <action name="action_CloneDrive">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/clone1.png</normaloff>:/src/images/clone1.png</iconset>
    </property>
    <property name="text">
     <string>Clone Drive HD-Image save/restore </string>
    </property>
   </action>
-  <action name="action_CloneDrive_net">
-   <property name="text">
-    <string>HD-Image save/restore on network</string>
-   </property>
-  </action>
   <action name="actionClone_HD">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/clone1.png</normaloff>:/src/images/clone1.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Clone HD, HD-Image built and restore</string>
    </property>
   </action>
-  <action name="action_Save_directories_on_network">
-   <property name="text">
-    <string>Save directories on network</string>
-   </property>
-  </action>
-  <action name="action_Restore_directories_from_network">
-   <property name="text">
-    <string>Restoring directories over a network.</string>
-   </property>
-  </action>
   <action name="action_Order">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
+    <iconset>
      <normaloff>:/src/images/file.png</normaloff>:/src/images/file.png</iconset>
    </property>
    <property name="text">
@@ -748,8 +716,8 @@ files/directories:</string>
   </action>
   <action name="action_Order_list_edit">
    <property name="icon">
-    <iconset resource="../../../../Programme/qt-fsarchiver/0.8/qt-fsarchiver/src/icon.qrc">
-     <normaloff>:/src/images/setting.png</normaloff>:/src/images/settinge.png</iconset>
+    <iconset>
+     <normaloff>:/src/images/setting.png</normaloff>:/src/images/setting.png</iconset>
    </property>
    <property name="text">
     <string>Order list edit</string>

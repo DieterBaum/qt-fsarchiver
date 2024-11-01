@@ -2,7 +2,7 @@
 qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linux-Mint, Suse und Fedora. [http://wiki.ubuntuusers.de/qt-fsarchiver]
 =====================================================================================================================================================
 
-Copyright (C) 2008-2023 Francois Dupoux und Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2024 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
@@ -13,28 +13,29 @@ Das grafische Programm muss mit Root-Rechten gestartet werden.
 Der Quellcode kann auf allen auf Debian basierenden System, auf Suse und Fedora installiert werden.
 Für Debian, Ubuntu und Linux-Mint sind deb-Pakete, für Suse und Fedora sind rpm-Pakete vorhanden.
 
+Ab Version 2.8.7-0 basiert qt-fsarchiver auf Qt6.
+
 Installation des Programms aus den Quelldateien:
-Für die Installation von den Programmen qt-fsarchiver müssen die für fsarchiver notwendigen Abhängigkeiten und die qt5-Entwicklungsumgebung installiert werden.
+Für die Installation von den Programmen qt-fsarchiver müssen die für fsarchiver notwendigen Abhängigkeiten und die qt6-Entwicklungsumgebung installiert werden.
 Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential  qtbase5-dev qttools5-dev-tools btrfs-progs gdisk sshfs sshpass nmap samba cifs-utils nfs-kernel-server nfs-common smbclient liblz4-dev libzstd-dev jfsutils xfsprogs sudo 
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt6-qmltooling-plugins qt6-base-dev qt6-tools-dev qt6-5compat-dev btrfs-progs gdisk liblz4-dev libzstd-dev jfsutils xfsprogs sudo 
 
 Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:
 username ALL=(ALL) ALL 
 %sudo	ALL=(ALL:ALL) ALL
 Der username ist anzupassen: beispielweise peter.
 
-In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in libQt5Core5 libqt5-qttools libqt5-qtbase-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk sshfs nmap samba nfs-kernel-server xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils net-tools-deprecated update-desktop-files pkexec
+In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in qt6-qtbase-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk  xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils update-desktop-files pkexec
 
-In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt5-qtbase qt5-qtbase-devel gdisk sshfs sshpass nmap samba samba-client nfs-utils lz4-devel libzstd-devel jfsutils xfsprogs ccrypt libuuid-devel qt5-linguist
+In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt6-qtbase qt6-qtbase-devel gdisk lz4-devel libzstd-devel jfsutils xfsprogs libuuid-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel
 
 In dem Terminal wechseln Sie in den Ordner qt-fsarchiver, der bei der Entpackung des Quellcodes installiert wurde.
-Bei Debian, Ubuntu und Mint 64-bit Version müssen Sie eingeben: qmake && make && sudo make install.
+Bei Debian, Ubuntu, Mint, Fedora und Suse 64-bit Version müssen Sie eingeben: qmake6 && make && sudo make install.
 Bei Debian müssen Sie anstatt sudo make install dies eingeben: su -l, make install.
-Bei Fedora und Suse müssen Sie eingeben: qmake-qt5 && make && sudo make install
 
 Installation des Programms aus den DEB-Paketen:
 Ein Doppelklick auf die DEB-Datei installiert in der Regel das Programm.
-Eventuell müssen Sie im Terminal mit root-Rechten dieses Kommando eingeben: sudo apt install qt-fsarchiver-1.8.7-0.deb., wobei die Versionsnummer angepasst werden muss.
+Eventuell müssen Sie im Terminal mit root-Rechten dieses Kommando eingeben: sudo apt install qt-fsarchiver-2.8.7-0.deb, wobei die Versionsnummer angepasst werden muss.
 
 Installation des Programms aus einem Launchpad:
 Bei Ubuntu und Mint erreichen sie die Installation mit diesen Befehlen:
@@ -73,20 +74,6 @@ Neu ab Version 1.8.6-0:
 qt-fsarchiver kann auch ohne grafische Oberfläche gestartet werden.
 Wurde ein Autrag unter diesem Namen gespeichert: jj-home, dann kann dieser Auftrag so gestartet werden: pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/sbin/qt-fsarchiver -jj-home.
 Wird zusätzlich eine entsprechende Desktop-Datei angelegt, dann dieser Auftrag sehr schnell abgearbeitet werden.
-
-Bei der Sicherung über ein Netzwerk wird eine zusätzliche Maske geöffnet, in dem der Benutzername und das Kennwort für den Netzwerkrechner eingegeben werden muss. Das Kennwort wird nicht gespeichert und muss immer eingegeben werden.
-
-Vorausetzungen für die Arbeit mit dem Netzwerk: 
-Der Rechnername darf maximal 15 Zeichen enthalten.
-Die Namen der Sicherungsverzeichnisse dürfen keine Leerstellen enthalten.
-Mit Netzwerprotokoll Samba:
-Im Linux-Bereich müssen auf dem Rechner, der die Sicherung durchführt/wiederherstellt(Client) und auf dem Rechner, auf dem die Daten abgelegt werden (Server), Samba installiert sein. Das Einbinden des virtuellen Dateisystem "cifs-vfs" auf dem Linux-Rechner muss möglich sein. Sie hierzu den Ubuntu-Wiki Artikel "http://wiki.ubuntuusers.de/Samba_Client_cifs".
-Mit diesem Befehl können Sie überprüfen, ob ein freigegebener Ordner angesprochen werden kann: sudo mount -t cifs -o username=ABCD,password=xyz,uid=0,gid=0 //192.168.2.5/Name des freigegebenen Verzeichnisses /home/username/.qt-fs-client. Der Username, das Passwort, die IP-Adresse und der Name des freigegebenen Verzeichnisses ist den bestehenden Verhältnissen anzupassen.
-
-Mit Netzwerprotokoll NFS (Network File System):
-Es können nur Linux-Rechner als Client oder Server verwendet werden. Auf den Rechnern, auf dem die Daten abgelegt werden (Server), muss nfs-kernel-server installiert sein. In der Datei  /etc/exports müssen zusätzlich die freizugebenden Verzeichnisse eingetragen werden. Der Namen darf keine Leerzeichen enthalten. Auf das freigegebne Verzeichnis muss lesend und schreibend zugegriffen werden können. Der Eintrag /home/user/Bilder 192.168.2.0/255.255.255.0(rw) erlaubt allen Rechnern mit der IP-Adresse 192.168.2.0 bis 192.168.2.255 einen Lese-Schreibezugriff auf das Verzeichnis /home/user/Bilder des Clients.
-
-Nach dem Start der Live-CD oder des Computers kann es eine Weile dauern, bis andere Rechner im Netzwerk angezeigt werden. 
 
 Die Sicherungen können auch verschlüsselt vorgenommen werde. Dabei muss die Schlüssellänge zwischen 6 und 64 Zeichen sein. Die Archivaufteilung auf DVD-Größe ist möglich.
 

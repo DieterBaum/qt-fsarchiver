@@ -101,7 +101,7 @@ QString disk_;
            j = 0;
            for (k=0; k < i; k++)
            {
-            disk = disk_name[k].split(QRegExp("\\s+"));
+            disk = disk_name[k].split(QRegularExpression("\\s+"));
             size = disk.size();
            if(size >= 5)
              {

@@ -68,13 +68,16 @@ public slots:
         int mountpoint_disk(QString partition);
         QString Zeit_auslesen_clone();
         QString sdx3_clone_einlesen(QString part_, int flag);
-        void beschreibungstext_clone(QString text, int zip, int row);
+        void beschreibungstext_clone(QString text, int zip, int row, QString size_folder, QString folder);
         QString format_clone(float zahl);
         QString kernel_version_clone();
         QString linux_version_clone();
         void folder_expand();
         void listWidget_exist_auslesen();
         void listWidget_clone_auslesen();
+        int size_determine_clone(QString part_size_compress, QString folder);
+        int questionMessage_critical_clone(QString frage);
+        int questionMessage_warning_clone(QString frage);
                        
 private:
     QFileSystemModel *dirModel;

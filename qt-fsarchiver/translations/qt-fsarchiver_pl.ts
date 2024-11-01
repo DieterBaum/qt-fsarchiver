@@ -4,107 +4,111 @@
 <context>
     <name>DialogClone</name>
     <message>
-        <location filename="../src/clone.cpp" line="104"/>
-        <location filename="../src/clone.cpp" line="715"/>
+        <location filename="../src/clone.cpp" line="109"/>
+        <location filename="../src/clone.cpp" line="748"/>
         <source>Clone Harddrive</source>
         <comment>Festplatte klonen</comment>
         <translatorcomment>Uwagi odnośnie tłumaczenia słać na klucznik0@op.pl ---  kikim</translatorcomment>
         <translation>Klonuj Dysk</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="279"/>
-        <location filename="../src/clone.cpp" line="486"/>
-        <location filename="../src/clone.cpp" line="544"/>
+        <location filename="../src/clone.cpp" line="289"/>
+        <location filename="../src/clone.cpp" line="506"/>
+        <location filename="../src/clone.cpp" line="566"/>
         <source>already saved</source>
         <comment>bereits gesichert</comment>
         <translation>już zapisane</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="283"/>
-        <location filename="../src/clone.cpp" line="287"/>
-        <location filename="../src/clone.cpp" line="337"/>
-        <location filename="../src/clone.cpp" line="354"/>
-        <location filename="../src/clone.cpp" line="382"/>
-        <location filename="../src/clone.cpp" line="386"/>
-        <location filename="../src/clone.cpp" line="416"/>
-        <location filename="../src/clone.cpp" line="440"/>
-        <location filename="../src/clone.cpp" line="500"/>
-        <location filename="../src/clone.cpp" line="505"/>
-        <location filename="../src/clone.cpp" line="553"/>
-        <location filename="../src/clone.cpp" line="557"/>
-        <location filename="../src/clone.cpp" line="595"/>
-        <location filename="../src/clone.cpp" line="630"/>
-        <location filename="../src/clone.cpp" line="634"/>
-        <location filename="../src/clone.cpp" line="670"/>
-        <location filename="../src/clone.cpp" line="702"/>
-        <location filename="../src/clone.cpp" line="885"/>
-        <location filename="../src/clone.cpp" line="1080"/>
-        <location filename="../src/clone.cpp" line="1082"/>
-        <location filename="../src/clone.cpp" line="1084"/>
-        <location filename="../src/clone.cpp" line="1089"/>
-        <location filename="../src/clone.cpp" line="1096"/>
-        <location filename="../src/clone.cpp" line="1103"/>
-        <location filename="../src/clone.cpp" line="1151"/>
-        <location filename="../src/clone.cpp" line="1153"/>
-        <location filename="../src/clone.cpp" line="1158"/>
-        <location filename="../src/clone.cpp" line="1164"/>
+        <location filename="../src/clone.cpp" line="293"/>
+        <location filename="../src/clone.cpp" line="297"/>
+        <location filename="../src/clone.cpp" line="348"/>
+        <location filename="../src/clone.cpp" line="357"/>
+        <location filename="../src/clone.cpp" line="373"/>
+        <location filename="../src/clone.cpp" line="402"/>
+        <location filename="../src/clone.cpp" line="406"/>
+        <location filename="../src/clone.cpp" line="436"/>
+        <location filename="../src/clone.cpp" line="460"/>
+        <location filename="../src/clone.cpp" line="520"/>
+        <location filename="../src/clone.cpp" line="525"/>
+        <location filename="../src/clone.cpp" line="576"/>
+        <location filename="../src/clone.cpp" line="580"/>
+        <location filename="../src/clone.cpp" line="609"/>
+        <location filename="../src/clone.cpp" line="628"/>
+        <location filename="../src/clone.cpp" line="663"/>
+        <location filename="../src/clone.cpp" line="667"/>
+        <location filename="../src/clone.cpp" line="703"/>
+        <location filename="../src/clone.cpp" line="735"/>
+        <location filename="../src/clone.cpp" line="918"/>
+        <location filename="../src/clone.cpp" line="1112"/>
+        <location filename="../src/clone.cpp" line="1114"/>
+        <location filename="../src/clone.cpp" line="1116"/>
+        <location filename="../src/clone.cpp" line="1121"/>
+        <location filename="../src/clone.cpp" line="1128"/>
+        <location filename="../src/clone.cpp" line="1135"/>
+        <location filename="../src/clone.cpp" line="1182"/>
+        <location filename="../src/clone.cpp" line="1184"/>
+        <location filename="../src/clone.cpp" line="1189"/>
+        <location filename="../src/clone.cpp" line="1195"/>
+        <location filename="../src/clone.cpp" line="1932"/>
+        <location filename="../src/clone.cpp" line="1945"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Uwaga</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="500"/>
-        <location filename="../src/clone.cpp" line="553"/>
-        <location filename="../src/clone.cpp" line="630"/>
+        <location filename="../src/clone.cpp" line="520"/>
+        <location filename="../src/clone.cpp" line="576"/>
+        <location filename="../src/clone.cpp" line="663"/>
         <source>You must select a hard drive.</source>
         <comment>Sie müssen eine Festplatte auswählen.
 </comment>
         <translation>Należy wybrać dysk twardy.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="505"/>
+        <location filename="../src/clone.cpp" line="525"/>
         <source>The selected hard drive is too small.</source>
         <comment>Die gewählte Festplatte ist zu klein.
 </comment>
         <translation>Wybrany dysk twardy jest za mały.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="416"/>
-        <location filename="../src/clone.cpp" line="670"/>
+        <location filename="../src/clone.cpp" line="436"/>
+        <location filename="../src/clone.cpp" line="703"/>
         <source>There is a root or home partition on the hard disk. You must use a live DVD.</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.
 </comment>
         <translation>Na dysku twardym istnieje root lub partycja domowa. Musisz użyć live-CD.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="519"/>
+        <location filename="../src/clone.cpp" line="539"/>
         <source> are deleted!</source>
         <comment> werden gelöscht!</comment>
         <translation> będą usunięte!</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="287"/>
-        <location filename="../src/clone.cpp" line="557"/>
+        <location filename="../src/clone.cpp" line="297"/>
+        <location filename="../src/clone.cpp" line="580"/>
         <source>You must select a folder.</source>
         <comment>Sie müssen ein Verzeichnis auswählen.
 </comment>
         <translation>Należy wybrać katalog.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="576"/>
+        <location filename="../src/clone.cpp" line="600"/>
         <source>Do you really want to create an image of the hard disk?</source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte erstellen? </comment>
         <translation> Naprawdę chcesz zbudować obraz z twardego dysku? </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="620"/>
+        <location filename="../src/clone.cpp" line="653"/>
         <source>already written back.</source>
         <comment>bereits zurückgeschrieben</comment>
         <translatorcomment>Uwagi słać na klucznik0@op.pl ---  kikim</translatorcomment>
         <translation>już przywrócona</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="283"/>
+        <location filename="../src/clone.cpp" line="293"/>
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partition auswählen.
 </comment>
@@ -112,84 +116,89 @@
         <translation>Należy zaznaczyć partycję.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="319"/>
+        <location filename="../src/clone.cpp" line="328"/>
         <source>Do you really want to create an image of a partition?  </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition erstellen? </comment>
         <translation> Napewno chcesz utworzyć obraz z partycji? </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="382"/>
+        <location filename="../src/clone.cpp" line="402"/>
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partitiom auswählen.
 </comment>
         <translation>Należy zaznaczyć partycję.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="386"/>
+        <location filename="../src/clone.cpp" line="406"/>
         <source>You must select a part.fsa file or an part.fsa.gz file.</source>
         <comment>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.
 </comment>
         <translation>Należy wybrać plik part.fsa lub part.fsa.gz.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="409"/>
+        <location filename="../src/clone.cpp" line="429"/>
         <source>Partition to restore </source>
         <comment>Die wiederherzustellende Partition </comment>
         <translation>Partycja do przywrócenia </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="410"/>
+        <location filename="../src/clone.cpp" line="430"/>
         <source> does not match the backed up partition.</source>
         <comment> stimmt nicht mit der gesicherten </comment>
         <translation> nie pokrywa się z zapisanymi  </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="446"/>
+        <location filename="../src/clone.cpp" line="466"/>
         <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
         <translation> Napewno chcesz przywrócić obraz partycji? </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="634"/>
+        <location filename="../src/clone.cpp" line="667"/>
         <source>You must select a gz.fsa file or an img.fsa file.</source>
         <comment>Sie müssen eine gz.fsa- oder eine img.fsa-Datei auswählen.
 </comment>
         <translation>Należy wybrać plik gz.fsa lub plik img.fsa.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="682"/>
+        <location filename="../src/clone.cpp" line="715"/>
         <source>Do you really want to write back an image of the hard disk? </source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? </comment>
         <translation> Chcesz naprawdę przywrócić obraz dysku twardego? </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="703"/>
+        <location filename="../src/clone.cpp" line="736"/>
+        <location filename="../src/clone.cpp" line="1934"/>
+        <location filename="../src/clone.cpp" line="1947"/>
         <source>Yes</source>
         <comment>Ja</comment>
         <translation>Tak</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="704"/>
+        <location filename="../src/clone.cpp" line="737"/>
+        <location filename="../src/clone.cpp" line="1933"/>
+        <location filename="../src/clone.cpp" line="1946"/>
         <source>No</source>
         <comment>Nein</comment>
         <translation>Nie</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="734"/>
+        <location filename="../src/clone.cpp" line="767"/>
         <source>Save Harddrive Image</source>
         <comment>Festplatten Abbild erstellen</comment>
         <translation>Zapisz obraz dysku</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="720"/>
-        <location filename="../src/clone.cpp" line="739"/>
-        <location filename="../src/clone.cpp" line="760"/>
+        <location filename="../src/clone.cpp" line="123"/>
+        <location filename="../src/clone.cpp" line="753"/>
+        <location filename="../src/clone.cpp" line="772"/>
+        <location filename="../src/clone.cpp" line="793"/>
         <source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
         <translation>Istniejące twarde dyski</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="338"/>
+        <location filename="../src/clone.cpp" line="349"/>
         <source>The backup was aborted by the user
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
@@ -198,20 +207,20 @@
 </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="377"/>
+        <location filename="../src/clone.cpp" line="397"/>
         <source>already restored</source>
         <comment>bereits zurückgeschrieben</comment>
         <translation>już przywrócony</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="410"/>
-        <location filename="../src/clone.cpp" line="664"/>
+        <location filename="../src/clone.cpp" line="430"/>
+        <location filename="../src/clone.cpp" line="697"/>
         <source> Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
         <translation>Czy chcesz kontynuować przywracanie?</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="441"/>
+        <location filename="../src/clone.cpp" line="461"/>
         <source>The write back was aborted by the user.
 </source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
@@ -220,56 +229,64 @@
 </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="563"/>
+        <location filename="../src/clone.cpp" line="586"/>
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren?
 </comment>
         <translation>Na dysku twardym znajduje się partycja główna lub domowa. Chcesz kontynuować?</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="663"/>
+        <location filename="../src/clone.cpp" line="358"/>
+        <location filename="../src/clone.cpp" line="610"/>
+        <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
+        <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
+</comment>
+        <translation>Na dysku twardym nie ma wystarczającej ilości miejsca na kopię zapasową. Kopia zapasowa zostanie anulowana.</translation>
+    </message>
+    <message>
+        <location filename="../src/clone.cpp" line="696"/>
         <source>The disk to be recovered </source>
         <comment>Die wiederherzustellende Festplatte </comment>
         <translation>Dysk, który ma zostać odzyskany</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="664"/>
+        <location filename="../src/clone.cpp" line="697"/>
         <source> does not coincide with the saved </source>
         <comment> stimmt nicht mit der gesicherten </comment>
         <translation> nie pokrywa się z zapisanym.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="754"/>
+        <location filename="../src/clone.cpp" line="787"/>
         <source>Write hard disk image back</source>
         <comment>Festplatten Abbild zurückschreiben</comment>
         <translation>Przywróć obrazu dysku</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="778"/>
+        <location filename="../src/clone.cpp" line="811"/>
         <source>Save Partition Image</source>
         <comment>Image einer Partition erstellen</comment>
         <translation>Zapisz obraz partycji</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="780"/>
+        <location filename="../src/clone.cpp" line="813"/>
         <source>Save Partition Image</source>
         <comment>Partition Abbild erstellen</comment>
         <translation>Zapisz obraz partycji</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="793"/>
+        <location filename="../src/clone.cpp" line="826"/>
         <source>Writing back the image of a partition</source>
         <comment>Image einer Partition zurückschreiben</comment>
         <translation>Przywróć obraz partycji</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="795"/>
+        <location filename="../src/clone.cpp" line="828"/>
         <source>Writing back the image of a partition</source>
         <comment>Partition Abbild zurückschreiben</comment>
         <translation>Przywróć obraz partycji</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="886"/>
+        <location filename="../src/clone.cpp" line="919"/>
         <source>You have selected a directory. You must select a gz.fsa file.
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine gz.fsa Datei auswählen
@@ -278,210 +295,230 @@
 </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1080"/>
+        <location filename="../src/clone.cpp" line="1112"/>
         <source>The cloning of the hard disk was successful.</source>
         <comment>Das Klonen der Festplatte war erfolgreich.
 </comment>
         <translation>Klonowanie twardego dysku powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1082"/>
+        <location filename="../src/clone.cpp" line="1114"/>
         <source>The backup of the hard disk image was successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war erfolgreich.</comment>
         <translation>Pomyślnie wykonano kopię zapasową obrazu dysku twardego.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1084"/>
+        <location filename="../src/clone.cpp" line="1116"/>
         <source>The backup of the image of the partition was successful.</source>
         <comment>Die Sichern des Abbildes der Partition war erfolgreich.</comment>
         <translation>Wykonanie kopii zapasowej obrazu partycji powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1096"/>
+        <location filename="../src/clone.cpp" line="1128"/>
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Die Sichern des Abbildes der Festplatte war nicht erfolgreich.</comment>
         <translation>Tworzenie kopii zapasowej obrazu dysku twardego nie powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1103"/>
+        <location filename="../src/clone.cpp" line="1135"/>
         <source>Saving the image of the partition was not successful.</source>
         <comment>Die Sichern des Abbildes der Partition war nicht erfolgreich.</comment>
         <translation>Utworzenie kopii zapasowej obrazu partycji nie powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1151"/>
+        <location filename="../src/clone.cpp" line="1182"/>
         <source>The hard disk image recovery was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich</comment>
         <translation>Przywrócenie obrazu dysku twardego powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1625"/>
+        <location filename="../src/clone.cpp" line="1263"/>
+        <location filename="../src/clone.cpp" line="1287"/>
+        <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
+        <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
+        <translation>Ostrzeżenie: Jest to kopia zapasowa na żywo. Nie należy zamykać programu. System może zostać zniszczony. Czy mimo to chcesz wyjść?</translation>
+    </message>
+    <message>
+        <location filename="../src/clone.cpp" line="1265"/>
+        <location filename="../src/clone.cpp" line="1289"/>
+        <source>Do you really want to stop backing up or restoring the partition?</source>
+        <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
+        <translation>Czy na pewno chcesz przerwać zapis lub przywracanie z partycji?</translation>
+    </message>
+    <message>
+        <location filename="../src/clone.cpp" line="1696"/>
         <source>gzip-standard</source>
         <comment>gzip-standard</comment>
         <translation>gzip-standard</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1629"/>
+        <location filename="../src/clone.cpp" line="1700"/>
         <source>No compression</source>
         <comment>keine Kompressiom</comment>
         <translation>Brak kompresji </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1632"/>
+        <location filename="../src/clone.cpp" line="1703"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
         <translation>Nazwa pliku kopii zapasowej: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1633"/>
+        <location filename="../src/clone.cpp" line="1704"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
         <translation>Nazwa partycji: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1634"/>
+        <location filename="../src/clone.cpp" line="1705"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
         <translation>Typ partycji: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1635"/>
+        <location filename="../src/clone.cpp" line="1706"/>
         <source>UUID: </source>
-        <translation>UUID: </translation>
+        <translation>UUID</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1635"/>
+        <location filename="../src/clone.cpp" line="1706"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
         <translation>Opis: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1636"/>
+        <location filename="../src/clone.cpp" line="1707"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
         <translation>Rozmiar partycji: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1636"/>
-        <location filename="../src/clone.cpp" line="1637"/>
+        <location filename="../src/clone.cpp" line="1707"/>
+        <location filename="../src/clone.cpp" line="1708"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
         <translation>Przybliżona wielkość partycji: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1637"/>
+        <location filename="../src/clone.cpp" line="1708"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
         <translation>Kompresja: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1638"/>
+        <location filename="../src/clone.cpp" line="1709"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
         <translation>Przybliżony rozmiar obrazu: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1638"/>
+        <location filename="../src/clone.cpp" line="1721"/>
+        <source>Path of the backup file: </source>
+        <comment>Pfad der Sicherungsdatei: </comment>
+        <translation>Ścieżka pliku kopii zapasowej:</translation>
+    </message>
+    <message>
+        <location filename="../src/clone.cpp" line="1722"/>
+        <source>Free space on the hard disk to be backed up to: </source>
+        <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
+        <translation>Wolne miejsce na dysku twardym, na którym ma zostać utworzona kopia zapasowa:</translation>
+    </message>
+    <message>
+        <location filename="../src/clone.cpp" line="1725"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
         <translation>Inne uwagi: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1639"/>
+        <location filename="../src/clone.cpp" line="1710"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
         <translation>Chroniona/zabezpieczona partycja: / (root system directory) </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1644"/>
+        <location filename="../src/clone.cpp" line="1715"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
         <translation>System operacyjny: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1644"/>
+        <location filename="../src/clone.cpp" line="1715"/>
         <source>Kernel: </source>
         <translation>Jądro: </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1646"/>
+        <location filename="../src/clone.cpp" line="1717"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
         <translation>być chronioną / zabezpieczoną partycją: /home</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1710"/>
+        <location filename="../src/clone.cpp" line="1776"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1721"/>
+        <location filename="../src/clone.cpp" line="1787"/>
         <source> TB</source>
         <translation> TB</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1732"/>
+        <location filename="../src/clone.cpp" line="1798"/>
         <source> GB</source>
         <translation> GB</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="294"/>
+        <location filename="../src/clone.cpp" line="304"/>
         <source>There is a root or home partition. Do you want to continue?</source>
         <comment>Es ist eine root- oder home Partition vorhanden. Wollen Sie fortfahren?
 </comment>
         <translation>Istnieje partycja główna lub domowa. Chcesz kontynuować?</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="513"/>
+        <location filename="../src/clone.cpp" line="533"/>
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren.
 </comment>
         <translation>Na dysku twardym znajduje się partycja główna lub domowa. Chcesz kontynuować?</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="519"/>
+        <location filename="../src/clone.cpp" line="539"/>
         <source> Do you want really clone the hard drive? All dates on  </source>
         <comment> Wollen Sie wirklich die Festplatte klonen? Alle Daten auf der Festplatte </comment>
         <translation> Naprawdę chcesz sklonować dysk twardy? Wszystkie daty na  </translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1089"/>
+        <location filename="../src/clone.cpp" line="1121"/>
         <source>The cloning of the hard disk was not successful.</source>
         <comment>Das Klonen der Festplatte war nicht erfolgreich.
 </comment>
         <translation>Klonowanie twardego dysku nie powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="354"/>
-        <location filename="../src/clone.cpp" line="595"/>
+        <location filename="../src/clone.cpp" line="373"/>
+        <location filename="../src/clone.cpp" line="628"/>
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
         <translation>Tworzenie kopii zapasowej obrazu dysku twardego nie powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1153"/>
+        <location filename="../src/clone.cpp" line="1184"/>
         <source>The recovery of the partition image was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war erfolgreich.</comment>
         <translation>Przywrócenie obrazu partycji nie powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1158"/>
+        <location filename="../src/clone.cpp" line="1189"/>
         <source>Hard disk image recovery was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.</comment>
         <translation>Przywracanie obrazu dysku twardego nie powiodło się.</translation>
     </message>
     <message>
-        <location filename="../src/clone.cpp" line="1164"/>
+        <location filename="../src/clone.cpp" line="1195"/>
         <source>The recovery of the partition image was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.</comment>
         <translation>Przywracanie obrazu partycji nie powiodło się.</translation>
-    </message>
-    <message>
-        <location filename="../src/clone.cpp" line="1241"/>
-        <source>Do you want really break clone, save or restore an image from the partition?</source>
-        <comment>Wollen Sie wirklich das Klonen der Festplatte, die Erstellung oder die Wiederherstellung eines Images der Festplatte beenden?</comment>
-        <translation>Chcesz naprawdę przerwać klonowanie, zapisywanie lub przywracanie obrazu z partycji?</translation>
     </message>
 </context>
 <context>
@@ -1256,658 +1293,6 @@ Rozszerzenie pliku musi być .fsa.</translation>
     </message>
 </context>
 <context>
-    <name>DialogNet</name>
-    <message>
-        <location filename="../src/net.cpp" line="145"/>
-        <source>lz4</source>
-        <translation>lz4</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="146"/>
-        <source>lzo</source>
-        <translation>lzo</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="147"/>
-        <source>gzip fast</source>
-        <translation>GZIP szybka</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="148"/>
-        <source>gzip standard</source>
-        <translation>gzip standard</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="149"/>
-        <source>gzip best</source>
-        <translation>gzip najlepsza</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="150"/>
-        <source>bzip2 fast</source>
-        <translation>bzip2 szybka</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="151"/>
-        <source>bzip2 good</source>
-        <translation>bzip2 dobra</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="152"/>
-        <source>lzma fast</source>
-        <translation>lzma szybka</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="153"/>
-        <source>lzma medium</source>
-        <translation>lzma średnia</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="154"/>
-        <source>lzma best</source>
-        <translation>lzma najlepsza</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="155"/>
-        <source>zstd</source>
-        <comment>zstd</comment>
-        <translation>zstd</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="332"/>
-        <location filename="../src/net.cpp" line="355"/>
-        <location filename="../src/net.cpp" line="481"/>
-        <location filename="../src/net.cpp" line="487"/>
-        <location filename="../src/net.cpp" line="498"/>
-        <location filename="../src/net.cpp" line="506"/>
-        <location filename="../src/net.cpp" line="542"/>
-        <location filename="../src/net.cpp" line="616"/>
-        <location filename="../src/net.cpp" line="669"/>
-        <location filename="../src/net.cpp" line="678"/>
-        <location filename="../src/net.cpp" line="722"/>
-        <location filename="../src/net.cpp" line="737"/>
-        <location filename="../src/net.cpp" line="791"/>
-        <location filename="../src/net.cpp" line="797"/>
-        <location filename="../src/net.cpp" line="803"/>
-        <location filename="../src/net.cpp" line="813"/>
-        <location filename="../src/net.cpp" line="834"/>
-        <location filename="../src/net.cpp" line="843"/>
-        <location filename="../src/net.cpp" line="850"/>
-        <location filename="../src/net.cpp" line="896"/>
-        <location filename="../src/net.cpp" line="923"/>
-        <location filename="../src/net.cpp" line="929"/>
-        <location filename="../src/net.cpp" line="949"/>
-        <location filename="../src/net.cpp" line="989"/>
-        <location filename="../src/net.cpp" line="1146"/>
-        <location filename="../src/net.cpp" line="1223"/>
-        <location filename="../src/net.cpp" line="1229"/>
-        <location filename="../src/net.cpp" line="1249"/>
-        <location filename="../src/net.cpp" line="1256"/>
-        <location filename="../src/net.cpp" line="1263"/>
-        <location filename="../src/net.cpp" line="1276"/>
-        <location filename="../src/net.cpp" line="1305"/>
-        <location filename="../src/net.cpp" line="1333"/>
-        <location filename="../src/net.cpp" line="1337"/>
-        <location filename="../src/net.cpp" line="1342"/>
-        <location filename="../src/net.cpp" line="1360"/>
-        <location filename="../src/net.cpp" line="1367"/>
-        <location filename="../src/net.cpp" line="1373"/>
-        <location filename="../src/net.cpp" line="1377"/>
-        <location filename="../src/net.cpp" line="1382"/>
-        <location filename="../src/net.cpp" line="1541"/>
-        <location filename="../src/net.cpp" line="1666"/>
-        <source>Note</source>
-        <comment>Hinweis</comment>
-        <translation>Uwaga</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1343"/>
-        <source>The restore of the partition was aborted by the user!
-</source>
-        <comment>Die Wiederherstellung der Partition wurde vom Benutzer abgebrochen!
-</comment>
-        <translation>Przywracanie partycji/katalogu przerwane przez użytkownika!
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1361"/>
-        <location filename="../src/net.cpp" line="1368"/>
-        <source>The restore of the partition was only partially successful.
-</source>
-        <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
-</comment>
-        <translation>Przywrócenie partycji zakończyło się tylko częściowym sukcesem.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="482"/>
-        <source>Please, select a folder.
-</source>
-        <comment>Bitte wählen Sie einen Ordner aus.
-</comment>
-        <translation>Należy wybrać katalog.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="488"/>
-        <source>Please, select the partition to be saved.
-</source>
-        <comment>Bitte wählen Sie die zu sichernde Partition aus.
-</comment>
-        <translation>Proszę wybrać partycję która będzie zapisana.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="507"/>
-        <location filename="../src/net.cpp" line="798"/>
-        <source>Please, select the filename of the backup.
-</source>
-        <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
-</comment>
-        <translation>Proszę wybrać nazwę pliku kopii zapasowej.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="543"/>
-        <location filename="../src/net.cpp" line="1147"/>
-        <source>The network computer </source>
-        <comment>Der Netzwerkrechner </comment>
-        <translation>Komputer sieciowy </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="872"/>
-        <source>Do you still want to perform the restore?</source>
-        <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>Czy nadal chcesz wykonać przywracanie?</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="909"/>
-        <source>There is a file with the contents of the partition boot sector present. Do you want to perform the restoration of the PBR?</source>
-        <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
-        <translation>Jest tam plik z zawartością sektora startowego partycji. Czy chcesz wykonać odtworzenie PBR? </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="951"/>
-        <source>can not be unmounted. The program is terminated
-</source>
-        <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
-</comment>
-        <translation> nie może zostać odmontowany. Program zostaje zakończony.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1021"/>
-        <source>Save partition</source>
-        <comment>Partition sichern</comment>
-        <translation>Zapisz partycję</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1051"/>
-        <source>Write back partition</source>
-        <comment>Partition zurückschreiben</comment>
-        <translation>Partycję/katalog przywróć</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1147"/>
-        <source> cannot be embedded. The program is aborted.
-</source>
-        <comment> konnte nicht eingebunden werden. Das Programm wird abgebrochen
-</comment>
-        <translation> nie może być zintegrowany. Program zostanie zakończony
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="587"/>
-        <source>The system partition to be saved is mounted. Do you want to do a live backup?</source>
-        <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>Partycja systemowa jest zamontowana. Czy chcesz wykonać kopię zapasową live?</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="333"/>
-        <source>No released directory was found for the NFS protocol.
-</source>
-        <comment>Für das NFS Protokoll wurde kein freigegebenes Verzeichnis gefunden.
-</comment>
-        <translation>Nie można znaleźć udostępnionego katalogu protokołem NFS.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="356"/>
-        <source>No shared directory was found for Samba.
-</source>
-        <comment>Für das Samba Protokoll wurde kein freigegebenes Verzeichnis gefunden.
-</comment>
-        <translation>Nie można znaleźć udostępnionego katalogu protokołem Samba.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="543"/>
-        <source> could not be integrated. The program is aborted
-</source>
-        <comment> konnte nicht eingebunden werden. Das Programm wird abgebrochen
-</comment>
-        <translation> nie mógł zostać zintegrowany. Program został przerwany.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="595"/>
-        <source>The home partition to be saved is mounted. Do you want to do a live backup?</source>
-        <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
-        <translation>Partycja domowa jest zamontowana. Czy chcesz wykonać kopię zapasową live?</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="617"/>
-        <source>The partition </source>
-        <comment>Die Partition </comment>
-        <translation>Partycja </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="618"/>
-        <source>cannot be unmounted. The program is aborted.
-</source>
-        <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
-</comment>
-        <translation>nie może być odmontowana. Program zostanie zakończony
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="660"/>
-        <location filename="../src/net.cpp" line="663"/>
-        <source>Enter password again</source>
-        <comment>Passwort nochmals eingeben</comment>
-        <translation>Wprowadź ponownie hasło</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="661"/>
-        <location filename="../src/net.cpp" line="664"/>
-        <source>Password:</source>
-        <comment>Passwort</comment>
-        <translation>Hasło:</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="670"/>
-        <source>The passwords do not match.
-</source>
-        <comment>Die Passwörter stimmen nicht überein.
-</comment>
-        <translation>Hasła nie są zgodne.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="499"/>
-        <location filename="../src/net.cpp" line="679"/>
-        <location filename="../src/net.cpp" line="844"/>
-        <location filename="../src/net.cpp" line="990"/>
-        <source>The key length must be between 6 and 64 characters
-</source>
-        <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
-</comment>
-        <translation>Długość klucza musi być pomiędzy 6 a 64 znaków
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="723"/>
-        <source>The partition file </source>
-        <comment>Die Partitionsdatei </comment>
-        <translation>Plik partycji </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="723"/>
-        <source>already exists. The backup is not performed
-</source>
-        <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
-</comment>
-        <translation>już istnieje. Kopia zapasowa nie jest wykonywana
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="738"/>
-        <source>The backup was aborted by the user
-</source>
-        <comment>Die Sicherung wurde vom Benutzer abgebrochen
-</comment>
-        <translation>Tworzenie kopii przerwane przez uzytkownika
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="792"/>
-        <source>No decryption key was specified.
-</source>
-        <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
-</comment>
-        <translation>Nie podano klucza do odszyfrowania
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="804"/>
-        <source>Please select the partition you want to write back.
-</source>
-        <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
-</comment>
-        <translation>Proszę wybrać partycję która będzie przywrócona.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="814"/>
-        <source>You have selected an incorrect recovery file.
-The file extension must be .fsa.</source>
-        <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht 
-Die Dateiendung muss .fsa sein</comment>
-        <translation>Wybrano zły plik 
-
-Pliki powinien kończyć się na. fsa</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="835"/>
-        <source>The partition is encrypted. Please enter the key
-</source>
-        <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
-</comment>
-        <translation>Partycja jest szyfrowana. Proszę, wpisz klucz
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="871"/>
-        <source>The partition to be recovered </source>
-        <comment>Die wiederherzustellende Partition </comment>
-        <translation>Partycja do przywrócenia to </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="872"/>
-        <source> does not match the backed up partition.</source>
-        <comment> stimmt nicht mit der gesicherten </comment>
-        <translation> nie pokrywa się z zapisaną  </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="897"/>
-        <source>The write back was aborted by the user.
-</source>
-        <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
-</comment>
-        <translation>Przywracanie przerwane przez uzytkownika
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="924"/>
-        <source>The system partition to be restored is mounted and cannot be written back. Please use a live DVD.
-</source>
-        <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
-</comment>
-        <translation>Przywracana partycja systemowa jest zamontowana i nie może być przywrócona.
-
-Proszę użyć live CD
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="930"/>
-        <source>The home partition to be restored is mounted and cannot be written back. Please use a live DVD.
-</source>
-        <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
-</comment>
-        <translation>Przywracana partycja domowa jest zamontowana i nie może być przywrócona.
-
-Proszę użyć live CD
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="950"/>
-        <source>The partition</source>
-        <comment>Die Partition </comment>
-        <translation>Partycja</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1250"/>
-        <source>The backup of the partition was aborted by the user!
-</source>
-        <comment>Die Sicherung der Partition/des Verzeichnisses wurde vom Benutzer abgebrochen!
-</comment>
-        <translation>Tworzenie kopii przerwanwe przez użytkownika!
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1279"/>
-        <source> specials were not properly backed
-.</source>
-        <comment> spezielle Daten wurden nicht korrekt gesichert.
-</comment>
-        <translation>  specjalne nie zostały odpowiednio zabezpieczone</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1333"/>
-        <source>The partition was successfully restored.
-</source>
-        <comment>Die Partition/das Verzeichnis wurde erfolgreich wieder hergestellt.
-</comment>
-        <translation> Partycja została pomyślnie przywrócona.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1333"/>
-        <source> specials have been restored.</source>
-        <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> specjalne zostały przywrócone.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1338"/>
-        <source> specials and the Partition Boot Record have been restored.</source>
-        <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation> i rekord rozruchowy partycji zostały przywrócone.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1361"/>
-        <source> specials have been restored
-.</source>
-        <comment> spezielle Daten wurden wiederhergestellt
-.</comment>
-        <translation> specjalne zostały przywrócone</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1369"/>
-        <source> specials and the Partition Boot Record have been restored
-.</source>
-        <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
-.</comment>
-        <translation> specjalne i rekord rozruchowy partycji zostały przywrócone</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1383"/>
-        <source>You have tried to restore a directory. The selected file can only recover partitions. Please restart the program.
-</source>
-        <comment>Sie haben versucht ein Verzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen. Bitte starten Sie das Programm neu.
-</comment>
-        <translation>Chciano przywrócić katalog. Wybrany plik może przywracać tylko partycje. Uruchom ponownie program.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1032"/>
-        <source>Encrypt
-backup. key:</source>
-        <comment>Sicherung
-verschlüsseln. Schlüssel:</comment>
-        <translation>Klucz szyfrowania:</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1061"/>
-        <source>Decrypt
-backup. key:</source>
-        <comment>Sicherung
-entschlüsseln. Schlüssel</comment>
-        <translation>Klucz
-deszyfrujący:</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1225"/>
-        <location filename="../src/net.cpp" line="1231"/>
-        <location filename="../src/net.cpp" line="1277"/>
-        <location filename="../src/net.cpp" line="1278"/>
-        <location filename="../src/net.cpp" line="1333"/>
-        <location filename="../src/net.cpp" line="1338"/>
-        <location filename="../src/net.cpp" line="1361"/>
-        <location filename="../src/net.cpp" line="1362"/>
-        <location filename="../src/net.cpp" line="1368"/>
-        <location filename="../src/net.cpp" line="1369"/>
-        <source> files, </source>
-        <comment> Dateien, </comment>
-        <translation> pliki, </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1225"/>
-        <location filename="../src/net.cpp" line="1231"/>
-        <location filename="../src/net.cpp" line="1277"/>
-        <location filename="../src/net.cpp" line="1278"/>
-        <location filename="../src/net.cpp" line="1333"/>
-        <location filename="../src/net.cpp" line="1338"/>
-        <location filename="../src/net.cpp" line="1361"/>
-        <location filename="../src/net.cpp" line="1368"/>
-        <source> directories, </source>
-        <comment> Verzeichnisse, </comment>
-        <translation> katalogi, </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1225"/>
-        <location filename="../src/net.cpp" line="1231"/>
-        <location filename="../src/net.cpp" line="1277"/>
-        <location filename="../src/net.cpp" line="1279"/>
-        <location filename="../src/net.cpp" line="1333"/>
-        <location filename="../src/net.cpp" line="1361"/>
-        <location filename="../src/net.cpp" line="1363"/>
-        <location filename="../src/net.cpp" line="1369"/>
-        <source> links and </source>
-        <comment> Links und </comment>
-        <translation> linki i </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1225"/>
-        <source> specials have been backed up.</source>
-        <comment> spezielle Daten wurden gesichert.</comment>
-        <translation> &quot;specials&quot; zostały skopiowane.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1224"/>
-        <location filename="../src/net.cpp" line="1230"/>
-        <source>The partition was successfully backed up.
-</source>
-        <comment>Die Partition wurde erfolgreich gesichert.
-</comment>
-        <translation>Wykonanie kopii partycji powiodło się.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1232"/>
-        <source> specials and the Partition Boot Record have been backed.</source>
-        <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation> &quot;specials&quot; i Boot Record Partycji zostały zapisane.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1257"/>
-        <source>The partition type is not supported.
-</source>
-        <comment>Der Partitionstyp wird nicht unterstützt
-</comment>
-        <translation>Typ partycji nie jest wspierany.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1264"/>
-        <source>The partition type is not supported. Maybe the partition is encrypted?
-</source>
-        <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
-</comment>
-        <translation>Typ partycji nie jest wspierany. Może jest zaszyfrowana?
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1277"/>
-        <source> specials have been backed
-.</source>
-        <comment> spezielle Daten wurden gesichert
-.</comment>
-        <translation> &quot;specials&quot; zostały skopiowane.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1277"/>
-        <source>The backup of the partition was only partially successful.
-</source>
-        <comment>Die Sicherung der Partition war nur teilweise erfolgreich
-</comment>
-        <translation>Tworzenie kopii zapasowej partycji powiodło się tylko częściowo.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1305"/>
-        <source>The partition to be restored is mounted. It must be unmounted first!
-</source>
-        <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
-</comment>
-        <translation>nie można przywrócić archiwum do zamontowanej partycji, odmontuj pierwszo 
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1337"/>
-        <source>The partition was successfully restored.
-</source>
-        <comment>Die Partition wurde erfolgreich wieder hergestellt.
-</comment>
-        <translation>Partycja przywrócona pomyślnie.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1338"/>
-        <source> links </source>
-        <comment> Links </comment>
-        <translation> linki </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1362"/>
-        <location filename="../src/net.cpp" line="1369"/>
-        <source> directories and </source>
-        <comment> Verzeichnisse und </comment>
-        <translation> katalogi i </translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1364"/>
-        <location filename="../src/net.cpp" line="1369"/>
-        <source> specials were not properly restored
-.</source>
-        <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
-</comment>
-        <translation> &quot;specials&quot; nieprawidłowo przywrócone.</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1374"/>
-        <source> You have tried to restore a partition. The selected file can only recover directories. Please restart the program.
-</source>
-        <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
-</comment>
-        <translation>Próbowano przywracania partycji. Wybrany plik możne przywrócić tylko katalog. Zrestartuj program.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="850"/>
-        <location filename="../src/net.cpp" line="1377"/>
-        <source>You have entered an incorrect password.
-</source>
-        <comment>Sie haben ein falsches Passwort eingegeben. 
-</comment>
-        <translation>Wpisano nieprawidłowe hasło.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1542"/>
-        <location filename="../src/net.cpp" line="1667"/>
-        <source>Yes</source>
-        <comment>Ja</comment>
-        <translation>Tak</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1543"/>
-        <location filename="../src/net.cpp" line="1668"/>
-        <source>No</source>
-        <comment>Nein</comment>
-        <translation>Nie</translation>
-    </message>
-    <message>
-        <location filename="../src/net.cpp" line="1559"/>
-        <source>Do you really want to stop backing up or restoring the partition?</source>
-        <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>Czy na pewno chcesz przerwać zapis lub przywracanie z partycji?</translation>
-    </message>
-</context>
-<context>
     <name>DialogSetting</name>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
@@ -2199,23 +1584,13 @@ deszyfrujący:</translation>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="55"/>
-        <source>Samba</source>
-        <translation>Samba</translation>
-    </message>
-    <message>
-        <location filename="../src/setting.cpp" line="55"/>
-        <source>NFS</source>
-        <translation>NFS</translation>
-    </message>
-    <message>
-        <location filename="../src/setting.cpp" line="196"/>
+        <location filename="../src/setting.cpp" line="164"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Uwaga</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="197"/>
+        <location filename="../src/setting.cpp" line="165"/>
         <source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
         <comment>Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.
 </comment>
@@ -2225,376 +1600,33 @@ Uruchom ponownie program z nowymi ustawieniami.</translation>
     </message>
 </context>
 <context>
-    <name>Dialog_Net</name>
-    <message>
-        <location filename="../src/ui/net.ui" line="14"/>
-        <location filename="../build/ui_net.h" line="361"/>
-        <source>Backup/restore partition over network</source>
-        <extracomment>Partitionen über ein Netzwerk sichern/zurückschreiben</extracomment>
-        <translation>Kopia zapasowa/przywracanie partycji przez sieć</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="26"/>
-        <location filename="../build/ui_net.h" line="362"/>
-        <source>Network computer  name:</source>
-        <extracomment>Netzrechnername:</extracomment>
-        <translation>Nazwa komputera w sieci:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="39"/>
-        <location filename="../build/ui_net.h" line="363"/>
-        <source>Name of the backup file:</source>
-        <extracomment>Name der Sicherungsdatei:</extracomment>
-        <translation>Przywrócić nazwy pliku:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="58"/>
-        <location filename="../build/ui_net.h" line="364"/>
-        <source>S</source>
-        <translation>S</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="71"/>
-        <location filename="../build/ui_net.h" line="366"/>
-        <source>Select the partition to back up or write back to.</source>
-        <translation>Wybierz partycję, aby być utworzenia kopii zapasowej albo przywrócenia.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="74"/>
-        <location filename="../build/ui_net.h" line="368"/>
-        <source>Existing partitions/directories:</source>
-        <extracomment>vorhandene Partitionen:</extracomment>
-        <translation>Istniejące partycje/katalogi:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="93"/>
-        <location filename="../build/ui_net.h" line="369"/>
-        <source>Planned action:</source>
-        <extracomment>vorgesehene Aktion:</extracomment>
-        <translation>Proponowane działania:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="111"/>
-        <location filename="../build/ui_net.h" line="370"/>
-        <source>Save par&amp;tition
-with fs-archiver</source>
-        <translation>Zapisz par&amp;tycę
- lub katalog</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="163"/>
-        <location filename="../build/ui_net.h" line="374"/>
-        <source>n</source>
-        <translation>n</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="685"/>
-        <location filename="../build/ui_net.h" line="424"/>
-        <source>Start the backup of a partition.</source>
-        <translation>Rozpocznij wykonywanie kopii zapasowej partycji.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="688"/>
-        <location filename="../build/ui_net.h" line="426"/>
-        <source>Save partition</source>
-        <extracomment>Partition sichern</extracomment>
-        <translation>Zapisz partycję/katalog</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="659"/>
-        <location filename="../build/ui_net.h" line="421"/>
-        <source>File name of the backup:</source>
-        <extracomment>Dateiname der Sicherung:</extracomment>
-        <translation>Nazwa pliku kopii zapasowej:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="125"/>
-        <location filename="../build/ui_net.h" line="372"/>
-        <source>Restore partition
-with fs-archiver</source>
-        <translation> Przywracanie partycji
-z fs-archiver</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="209"/>
-        <location filename="../build/ui_net.h" line="376"/>
-        <source>Exit</source>
-        <extracomment>Beenden</extracomment>
-        <translation>Wyjście</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="222"/>
-        <location filename="../build/ui_net.h" line="378"/>
-        <source>Start restore a partition.</source>
-        <translation>Początek przywracanie partycji.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="225"/>
-        <location filename="../build/ui_net.h" line="380"/>
-        <source>Write back partition</source>
-        <extracomment>Partition wiederherstellen</extracomment>
-        <translation>Partycję/katalog przywróć</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="247"/>
-        <location filename="../build/ui_net.h" line="381"/>
-        <source>elapsed time:</source>
-        <translation>czas:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="257"/>
-        <location filename="../build/ui_net.h" line="382"/>
-        <source>On the number saved
-Files/directories:</source>
-        <translation>Ilość zapisanych
-plików/katalogów:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="272"/>
-        <location filename="../build/ui_net.h" line="384"/>
-        <source>already saved 
-files/directories:</source>
-        <translation>Już zapisanych
-plików/katalogów:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="294"/>
-        <location filename="../src/ui/net.ui" line="343"/>
-        <location filename="../build/ui_net.h" line="386"/>
-        <location filename="../build/ui_net.h" line="390"/>
-        <source>seconds</source>
-        <translation>już zapisane</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="308"/>
-        <location filename="../src/ui/net.ui" line="329"/>
-        <location filename="../build/ui_net.h" line="387"/>
-        <location filename="../build/ui_net.h" line="389"/>
-        <source>minutes</source>
-        <translation>minuty</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="322"/>
-        <location filename="../build/ui_net.h" line="388"/>
-        <source>remaining time</source>
-        <translation>pozostały czas</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="369"/>
-        <location filename="../build/ui_net.h" line="392"/>
-        <source>Directory in which the partition is backed up or from which the recovery file is selected.</source>
-        <translation>Katalog, w którym partycji jest wspierany w górę lub z pliku odzyskiwania jest usuwany.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="372"/>
-        <location filename="../build/ui_net.h" line="394"/>
-        <source>Please select the folder.</source>
-        <extracomment>Bitte wählen Sie einen freigegebene Ordner aus:</extracomment>
-        <translation>Wybierz folder.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="433"/>
-        <location filename="../build/ui_net.h" line="395"/>
-        <source>Number of processors
-cores for to be used fsarchiver:</source>
-        <translation>Number of processors
-cores for to be used fsarchiver:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="457"/>
-        <location filename="../build/ui_net.h" line="398"/>
-        <source>Notes to the backup is written to a file.</source>
-        <translation>Uwagi do kopii zapasowej są zapisywane do pliku.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="499"/>
-        <location filename="../build/ui_net.h" line="405"/>
-        <source>Split archive , specified size:</source>
-        <translation>Kopia podzielona na rozmiar:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="526"/>
-        <location filename="../build/ui_net.h" line="409"/>
-        <source>PBR is first block of any bootable partition.</source>
-        <translation>PBR jest pierwszym blokiem każdej partycji startowej.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="619"/>
-        <location filename="../build/ui_net.h" line="417"/>
-        <source>2</source>
-        <translation>2</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="645"/>
-        <location filename="../build/ui_net.h" line="419"/>
-        <source>Compression
-setting:</source>
-        <translation>Ustawienie
-kompresji:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="460"/>
-        <location filename="../build/ui_net.h" line="400"/>
-        <source>Notes on the backup</source>
-        <translation>Notatki do kopii zapasowej</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="483"/>
-        <location filename="../build/ui_net.h" line="402"/>
-        <source>Identical backup files are overwritten without prior consultation.</source>
-        <translation>Te same pliki kopii zapasowych są zastępowane bez uprzedniej konsultacji.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="486"/>
-        <location filename="../build/ui_net.h" line="404"/>
-        <source>overwrite existing backup.</source>
-        <translation>Nadpisuj istniejące kopie  bezpieczeństwa</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="512"/>
-        <location filename="../build/ui_net.h" line="406"/>
-        <source>Encrypt 
-backup key</source>
-        <translation>Szyfruj 
-klucz zapasowy</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="529"/>
-        <location filename="../build/ui_net.h" line="411"/>
-        <source>Save PBR</source>
-        <extracomment>PBR sichern</extracomment>
-        <translation>Zapisz PBR</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="542"/>
-        <location filename="../build/ui_net.h" line="412"/>
-        <source>Writing a backup back to the original path.</source>
-        <translation>Przywróć w oryginalne miejsce</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="576"/>
-        <location filename="../build/ui_net.h" line="413"/>
-        <source>Protocoll for network
-transmission:</source>
-        <translation>Protokol do przesyłania w sieci:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net.ui" line="606"/>
-        <location filename="../build/ui_net.h" line="416"/>
-        <source>z</source>
-        <translation>z</translation>
-    </message>
-</context>
-<context>
-    <name>Eingabe_Net</name>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="14"/>
-        <location filename="../build/ui_net_ein.h" line="111"/>
-        <source>Data network</source>
-        <extracomment>Daten Netzwerk</extracomment>
-        <translation>Sieć danych</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="26"/>
-        <location filename="../build/ui_net_ein.h" line="112"/>
-        <source>Username:</source>
-        <extracomment>Benutzername:</extracomment>
-        <translation>Użytkownik:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="39"/>
-        <location filename="../build/ui_net_ein.h" line="113"/>
-        <source>Password:</source>
-        <extracomment>Kennwort:</extracomment>
-        <translation>Hasło:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="52"/>
-        <location filename="../build/ui_net_ein.h" line="115"/>
-        <source>Username and password will be saved.</source>
-        <translation>Nazwa użytkownika i hasło będą zapisane.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="55"/>
-        <location filename="../build/ui_net_ein.h" line="117"/>
-        <source>Save data</source>
-        <extracomment>Daten speichern</extracomment>
-        <translation>Zapisz logowanie</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="94"/>
-        <location filename="../build/ui_net_ein.h" line="118"/>
-        <source>Next</source>
-        <extracomment>Weiter</extracomment>
-        <translation>Dalej</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="117"/>
-        <location filename="../build/ui_net_ein.h" line="119"/>
-        <source>Computers that can be reached in the network:</source>
-        <extracomment>Im Netz erreichbare Rechner:</extracomment>
-        <translation>Osiągalny komputer w sieci:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="130"/>
-        <location filename="../build/ui_net_ein.h" line="120"/>
-        <source>n</source>
-        <translation>n</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="143"/>
-        <location filename="../build/ui_net_ein.h" line="121"/>
-        <source>Show Password</source>
-        <extracomment>Kennwort anzeigen</extracomment>
-        <translation>Pokaż hasło</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="156"/>
-        <location filename="../build/ui_net_ein.h" line="122"/>
-        <source>Cancel</source>
-        <extracomment>Abbrechen</extracomment>
-        <translation>Anuluj</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/net_ein.ui" line="169"/>
-        <location filename="../build/ui_net_ein.h" line="123"/>
-        <source>n1</source>
-        <translation>n1</translation>
-    </message>
-</context>
-<context>
     <name>FileDialog</name>
     <message>
         <location filename="../src/ui/filedialog.ui" line="14"/>
-        <location filename="../build/ui_filedialog.h" line="59"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
         <translation>Opis kopi bezpieczeństwa</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="26"/>
-        <location filename="../build/ui_filedialog.h" line="60"/>
         <source>Cancel</source>
         <extracomment>Abbrechen</extracomment>
         <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="39"/>
-        <location filename="../build/ui_filedialog.h" line="61"/>
         <source>Description of the backup:</source>
         <extracomment>Beschreibung der Sicherung:</extracomment>
         <translation>Opis kopi bezpieczeństwa:</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="52"/>
-        <location filename="../build/ui_filedialog.h" line="62"/>
         <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
         <translation>Wykonaj backup</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="80"/>
-        <location filename="../build/ui_filedialog.h" line="63"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -2645,67 +1677,67 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MWindow</name>
     <message>
-        <location filename="../src/mainWindow.cpp" line="260"/>
+        <location filename="../src/mainWindow.cpp" line="254"/>
         <source>lzo</source>
         <comment>lzo</comment>
         <translation>lzo</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="261"/>
+        <location filename="../src/mainWindow.cpp" line="255"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
         <translation>GZIP szybka</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="262"/>
+        <location filename="../src/mainWindow.cpp" line="256"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
         <translation>gzip standard</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="264"/>
+        <location filename="../src/mainWindow.cpp" line="258"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
         <translation>BZIP2 szybka</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="265"/>
+        <location filename="../src/mainWindow.cpp" line="259"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
         <translation>BZIP2 dobra</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="266"/>
+        <location filename="../src/mainWindow.cpp" line="260"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
         <translation>lzma szybka</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="267"/>
+        <location filename="../src/mainWindow.cpp" line="261"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
         <translation>lzma średnia</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="268"/>
+        <location filename="../src/mainWindow.cpp" line="262"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
         <translation>lzma najlepsza</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="521"/>
+        <location filename="../src/mainWindow.cpp" line="535"/>
         <source>Backup File</source>
         <comment>Sicherungsdatei</comment>
         <translation>Plik kopii zapasowej</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="522"/>
+        <location filename="../src/mainWindow.cpp" line="536"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
         <translation>Przywróć partycję</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="536"/>
+        <location filename="../src/mainWindow.cpp" line="550"/>
         <source>Decrypt
 backup. key:</source>
         <comment>Sicherung
@@ -2713,13 +1745,13 @@ entschlüsseln. Schlüssel</comment>
         <translation>Klucz do odszyfrowania:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="555"/>
+        <location filename="../src/mainWindow.cpp" line="569"/>
         <source>Backup directory</source>
         <comment>Sicherungsverzeichnis</comment>
         <translation>Katalog kopii zapasowej</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="569"/>
+        <location filename="../src/mainWindow.cpp" line="583"/>
         <source>Encrypt
 backup. key:</source>
         <comment>Sicherung
@@ -2727,83 +1759,83 @@ verschlüsseln. Schlüssel</comment>
         <translation>Klucz szyfrowania:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="318"/>
-        <location filename="../src/mainWindow.cpp" line="623"/>
-        <location filename="../src/mainWindow.cpp" line="629"/>
-        <location filename="../src/mainWindow.cpp" line="640"/>
-        <location filename="../src/mainWindow.cpp" line="648"/>
-        <location filename="../src/mainWindow.cpp" line="685"/>
-        <location filename="../src/mainWindow.cpp" line="749"/>
-        <location filename="../src/mainWindow.cpp" line="809"/>
-        <location filename="../src/mainWindow.cpp" line="818"/>
-        <location filename="../src/mainWindow.cpp" line="885"/>
-        <location filename="../src/mainWindow.cpp" line="900"/>
-        <location filename="../src/mainWindow.cpp" line="913"/>
-        <location filename="../src/mainWindow.cpp" line="1118"/>
-        <location filename="../src/mainWindow.cpp" line="1124"/>
-        <location filename="../src/mainWindow.cpp" line="1130"/>
-        <location filename="../src/mainWindow.cpp" line="1142"/>
-        <location filename="../src/mainWindow.cpp" line="1150"/>
-        <location filename="../src/mainWindow.cpp" line="1174"/>
-        <location filename="../src/mainWindow.cpp" line="1184"/>
-        <location filename="../src/mainWindow.cpp" line="1193"/>
-        <location filename="../src/mainWindow.cpp" line="1234"/>
-        <location filename="../src/mainWindow.cpp" line="1263"/>
-        <location filename="../src/mainWindow.cpp" line="1270"/>
-        <location filename="../src/mainWindow.cpp" line="1286"/>
-        <location filename="../src/mainWindow.cpp" line="1325"/>
-        <location filename="../src/mainWindow.cpp" line="1428"/>
-        <location filename="../src/mainWindow.cpp" line="1474"/>
-        <location filename="../src/mainWindow.cpp" line="1488"/>
-        <location filename="../src/mainWindow.cpp" line="1501"/>
-        <location filename="../src/mainWindow.cpp" line="1732"/>
-        <location filename="../src/mainWindow.cpp" line="1767"/>
-        <location filename="../src/mainWindow.cpp" line="1778"/>
-        <location filename="../src/mainWindow.cpp" line="1799"/>
-        <location filename="../src/mainWindow.cpp" line="1806"/>
-        <location filename="../src/mainWindow.cpp" line="1813"/>
-        <location filename="../src/mainWindow.cpp" line="1827"/>
-        <location filename="../src/mainWindow.cpp" line="1848"/>
-        <location filename="../src/mainWindow.cpp" line="1877"/>
-        <location filename="../src/mainWindow.cpp" line="1881"/>
-        <location filename="../src/mainWindow.cpp" line="1886"/>
-        <location filename="../src/mainWindow.cpp" line="1904"/>
+        <location filename="../src/mainWindow.cpp" line="341"/>
+        <location filename="../src/mainWindow.cpp" line="637"/>
+        <location filename="../src/mainWindow.cpp" line="643"/>
+        <location filename="../src/mainWindow.cpp" line="654"/>
+        <location filename="../src/mainWindow.cpp" line="662"/>
+        <location filename="../src/mainWindow.cpp" line="699"/>
+        <location filename="../src/mainWindow.cpp" line="763"/>
+        <location filename="../src/mainWindow.cpp" line="823"/>
+        <location filename="../src/mainWindow.cpp" line="832"/>
+        <location filename="../src/mainWindow.cpp" line="899"/>
+        <location filename="../src/mainWindow.cpp" line="914"/>
+        <location filename="../src/mainWindow.cpp" line="927"/>
+        <location filename="../src/mainWindow.cpp" line="1133"/>
+        <location filename="../src/mainWindow.cpp" line="1139"/>
+        <location filename="../src/mainWindow.cpp" line="1145"/>
+        <location filename="../src/mainWindow.cpp" line="1157"/>
+        <location filename="../src/mainWindow.cpp" line="1165"/>
+        <location filename="../src/mainWindow.cpp" line="1189"/>
+        <location filename="../src/mainWindow.cpp" line="1199"/>
+        <location filename="../src/mainWindow.cpp" line="1208"/>
+        <location filename="../src/mainWindow.cpp" line="1249"/>
+        <location filename="../src/mainWindow.cpp" line="1278"/>
+        <location filename="../src/mainWindow.cpp" line="1285"/>
+        <location filename="../src/mainWindow.cpp" line="1301"/>
+        <location filename="../src/mainWindow.cpp" line="1340"/>
+        <location filename="../src/mainWindow.cpp" line="1443"/>
+        <location filename="../src/mainWindow.cpp" line="1489"/>
+        <location filename="../src/mainWindow.cpp" line="1503"/>
+        <location filename="../src/mainWindow.cpp" line="1516"/>
+        <location filename="../src/mainWindow.cpp" line="1713"/>
+        <location filename="../src/mainWindow.cpp" line="1748"/>
+        <location filename="../src/mainWindow.cpp" line="1759"/>
+        <location filename="../src/mainWindow.cpp" line="1780"/>
+        <location filename="../src/mainWindow.cpp" line="1787"/>
+        <location filename="../src/mainWindow.cpp" line="1794"/>
+        <location filename="../src/mainWindow.cpp" line="1808"/>
+        <location filename="../src/mainWindow.cpp" line="1829"/>
+        <location filename="../src/mainWindow.cpp" line="1858"/>
+        <location filename="../src/mainWindow.cpp" line="1862"/>
+        <location filename="../src/mainWindow.cpp" line="1867"/>
+        <location filename="../src/mainWindow.cpp" line="1885"/>
+        <location filename="../src/mainWindow.cpp" line="1894"/>
+        <location filename="../src/mainWindow.cpp" line="1905"/>
+        <location filename="../src/mainWindow.cpp" line="1908"/>
         <location filename="../src/mainWindow.cpp" line="1913"/>
-        <location filename="../src/mainWindow.cpp" line="1924"/>
-        <location filename="../src/mainWindow.cpp" line="1927"/>
-        <location filename="../src/mainWindow.cpp" line="1932"/>
-        <location filename="../src/mainWindow.cpp" line="2526"/>
-        <location filename="../src/mainWindow.cpp" line="2611"/>
-        <location filename="../src/mainWindow.cpp" line="2671"/>
-        <location filename="../src/mainWindow.cpp" line="2678"/>
-        <location filename="../src/mainWindow.cpp" line="2708"/>
-        <location filename="../src/mainWindow.cpp" line="2786"/>
-        <location filename="../src/mainWindow.cpp" line="2813"/>
+        <location filename="../src/mainWindow.cpp" line="2512"/>
+        <location filename="../src/mainWindow.cpp" line="2597"/>
+        <location filename="../src/mainWindow.cpp" line="2657"/>
+        <location filename="../src/mainWindow.cpp" line="2664"/>
+        <location filename="../src/mainWindow.cpp" line="2694"/>
+        <location filename="../src/mainWindow.cpp" line="2773"/>
+        <location filename="../src/mainWindow.cpp" line="2800"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Uwaga</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="263"/>
+        <location filename="../src/mainWindow.cpp" line="257"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
         <translation>gzip najlepszy</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="457"/>
+        <location filename="../src/mainWindow.cpp" line="471"/>
         <source>The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.</source>
         <comment>In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
         <translation>W pliku /usr/share/doc/qt-fsarchiver/doc/readme znajdują się instrukcje dotyczące korzystania z programu. Czy wyświetlać ten komunikat ciągle? Możesz to zmienić w ustawieniach podstawowych.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="514"/>
-        <location filename="../src/mainWindow.cpp" line="2735"/>
+        <location filename="../src/mainWindow.cpp" line="528"/>
+        <location filename="../src/mainWindow.cpp" line="2721"/>
         <source>Existing partitions:</source>
         <comment>vorhandene Partitionen</comment>
         <translation>Istniejące partycje:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="624"/>
+        <location filename="../src/mainWindow.cpp" line="638"/>
         <source>Please select from the backup directory.
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
@@ -2812,15 +1844,15 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="630"/>
+        <location filename="../src/mainWindow.cpp" line="644"/>
         <source>Please select the partition you want to back up.</source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
         <translation>Wybierz partycję</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="649"/>
-        <location filename="../src/mainWindow.cpp" line="1125"/>
+        <location filename="../src/mainWindow.cpp" line="663"/>
+        <location filename="../src/mainWindow.cpp" line="1140"/>
         <source>Please select the file name of the backup.
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
@@ -2829,7 +1861,7 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="686"/>
+        <location filename="../src/mainWindow.cpp" line="700"/>
         <source>You have selected a file. You must select a directory
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
@@ -2838,27 +1870,27 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="718"/>
-        <location filename="../src/mainWindow.cpp" line="2655"/>
+        <location filename="../src/mainWindow.cpp" line="732"/>
+        <location filename="../src/mainWindow.cpp" line="2641"/>
         <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>Partycja systemowa jest zamontowana. Czy chcesz wykonać kopię zapasową live?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="726"/>
-        <location filename="../src/mainWindow.cpp" line="2663"/>
+        <location filename="../src/mainWindow.cpp" line="740"/>
+        <location filename="../src/mainWindow.cpp" line="2649"/>
         <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>Partycja domowa jest zamontowana. Czy chcesz wykonać kopię zapasową live?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="750"/>
+        <location filename="../src/mainWindow.cpp" line="764"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
         <translation>Partycja</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="750"/>
+        <location filename="../src/mainWindow.cpp" line="764"/>
         <source>cannot be unmounted. The program is aborted.
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
@@ -2867,21 +1899,21 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="800"/>
-        <location filename="../src/mainWindow.cpp" line="803"/>
+        <location filename="../src/mainWindow.cpp" line="814"/>
+        <location filename="../src/mainWindow.cpp" line="817"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
         <translation>Wprowadź ponownie hasło</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="801"/>
-        <location filename="../src/mainWindow.cpp" line="804"/>
+        <location filename="../src/mainWindow.cpp" line="815"/>
+        <location filename="../src/mainWindow.cpp" line="818"/>
         <source>Password:</source>
         <comment>Passwort</comment>
         <translation>Hasło:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="810"/>
+        <location filename="../src/mainWindow.cpp" line="824"/>
         <source>The passwords do not match.
 </source>
         <comment>Die Passwörter stimmen nicht überein.
@@ -2889,9 +1921,9 @@ verschlüsseln. Schlüssel</comment>
         <translation>Hasła nie są zgodne.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="641"/>
-        <location filename="../src/mainWindow.cpp" line="819"/>
-        <location filename="../src/mainWindow.cpp" line="1185"/>
+        <location filename="../src/mainWindow.cpp" line="655"/>
+        <location filename="../src/mainWindow.cpp" line="833"/>
+        <location filename="../src/mainWindow.cpp" line="1200"/>
         <source>The key length must be between 6 and 64 characters
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
@@ -2900,13 +1932,13 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="886"/>
+        <location filename="../src/mainWindow.cpp" line="900"/>
         <source>The partition file</source>
         <comment>Die Partitionsdatei</comment>
         <translation>Plik partycji</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="886"/>
+        <location filename="../src/mainWindow.cpp" line="900"/>
         <source> already exists. The backup is not performed
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
@@ -2916,8 +1948,8 @@ Tworzenie kopii zapasowej nie zostało wykonane
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="901"/>
-        <location filename="../src/mainWindow.cpp" line="2787"/>
+        <location filename="../src/mainWindow.cpp" line="915"/>
+        <location filename="../src/mainWindow.cpp" line="2774"/>
         <source>The backup was aborted by the user
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
@@ -2926,28 +1958,28 @@ Tworzenie kopii zapasowej nie zostało wykonane
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="914"/>
+        <location filename="../src/mainWindow.cpp" line="928"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
         <translation>Na dysku twardym nie ma wystarczającej ilości miejsca na kopię zapasową. Kopia zapasowa zostanie anulowana.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="949"/>
-        <location filename="../src/mainWindow.cpp" line="2828"/>
+        <location filename="../src/mainWindow.cpp" line="963"/>
+        <location filename="../src/mainWindow.cpp" line="2815"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
         <translation>Tworzenie kopii zapasowej jest wykonywane</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1119"/>
+        <location filename="../src/mainWindow.cpp" line="1134"/>
         <source>No decryption key was specified.</source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
         <translation>Nie określono klucza do odszyfrowania.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1131"/>
+        <location filename="../src/mainWindow.cpp" line="1146"/>
         <source>Please select the partition you want to write back.
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
@@ -2957,7 +1989,7 @@ Tworzenie kopii zapasowej nie zostało wykonane
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1151"/>
+        <location filename="../src/mainWindow.cpp" line="1166"/>
         <source>You have selected a directory. You must select a file
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
@@ -2966,48 +1998,48 @@ Tworzenie kopii zapasowej nie zostało wykonane
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1175"/>
+        <location filename="../src/mainWindow.cpp" line="1190"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
         <translation>Partycja jest szyfrowana. Proszę, wpisać klucz</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1193"/>
+        <location filename="../src/mainWindow.cpp" line="1208"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
         <translation>Wprowadziłeś nieprawidłowe hasło.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1211"/>
+        <location filename="../src/mainWindow.cpp" line="1226"/>
         <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
         <translation> nie pokrywa się z zapisanym.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1211"/>
+        <location filename="../src/mainWindow.cpp" line="1226"/>
         <source>Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
         <translation>Czy chcesz kontynuować przywracanie?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1235"/>
-        <location filename="../src/mainWindow.cpp" line="2709"/>
+        <location filename="../src/mainWindow.cpp" line="1250"/>
+        <location filename="../src/mainWindow.cpp" line="2695"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
         <translation>Przywracanie przerwane przez uzytkownika</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1247"/>
+        <location filename="../src/mainWindow.cpp" line="1262"/>
         <source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
         <translation>Plik z zawartością sektora rozruchowego partycji jest obecny. Czy na pewno chcesz wykonać przywracanie PBR?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1264"/>
-        <location filename="../src/mainWindow.cpp" line="2672"/>
+        <location filename="../src/mainWindow.cpp" line="1279"/>
+        <location filename="../src/mainWindow.cpp" line="2658"/>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
@@ -3016,8 +2048,8 @@ Tworzenie kopii zapasowej nie zostało wykonane
 Proszę użyć live CD.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1271"/>
-        <location filename="../src/mainWindow.cpp" line="2679"/>
+        <location filename="../src/mainWindow.cpp" line="1286"/>
+        <location filename="../src/mainWindow.cpp" line="2665"/>
         <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
@@ -3026,59 +2058,50 @@ Proszę użyć live CD.</translation>
 Proszę użyć live CD.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1287"/>
+        <location filename="../src/mainWindow.cpp" line="1302"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
         <translation>Partycja </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1326"/>
+        <location filename="../src/mainWindow.cpp" line="1341"/>
         <source>The key length must be between 6 and 64 characters.</source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein.
 </comment>
         <translation>Długość klucza musi być pomiędzy 6 a 64 znaków.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1353"/>
-        <location filename="../src/mainWindow.cpp" line="2736"/>
+        <location filename="../src/mainWindow.cpp" line="1368"/>
+        <location filename="../src/mainWindow.cpp" line="2722"/>
         <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
         <translation>Przywracanie jest wykonywane</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1420"/>
+        <location filename="../src/mainWindow.cpp" line="1435"/>
         <source>qt-fsarchiver</source>
         <translation>qt-fsarchiver</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1421"/>
-        <source>Backup and restore partitions, directory and MBR.
-Version 1.8.7-1, October 15, 2024</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 1.8.7-1, 15.Oktober 2024</comment>
-        <translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
-Wersja 1.8.7-1, 15 października 2024 r.</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1429"/>
+        <location filename="../src/mainWindow.cpp" line="1444"/>
         <source>The program must be run with root privileges. The program is terminated.</source>
         <comment>Das Programm muss mit Root-Rechten gestartet werden. Das Programm wird beendet.</comment>
         <translation>Program musi być uruchomiony z uprawnieniami roota. Program zostaje zakończony.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1698"/>
-        <location filename="../src/mainWindow.cpp" line="2350"/>
+        <location filename="../src/mainWindow.cpp" line="1660"/>
         <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
         <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
         <translation>Ostrzeżenie: Jest to kopia zapasowa na żywo. Nie należy zamykać programu. System może zostać zniszczony. Czy mimo to chcesz wyjść?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1882"/>
+        <location filename="../src/mainWindow.cpp" line="1863"/>
         <source> specials and the Partition Boot Record have been restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
         <translation> i rekord rozruchowy partycji zostały przywrócone.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1907"/>
+        <location filename="../src/mainWindow.cpp" line="1888"/>
         <source> specials has been restored
 .</source>
         <comment> spezielle Daten wurden wiederhergestellt
@@ -3086,25 +2109,19 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation> specjalne zostały przywrócone</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2118"/>
+        <location filename="../src/mainWindow.cpp" line="2101"/>
         <source>Free space on the hard disk to be backed up to: </source>
         <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
         <translation>Wolne miejsce na dysku twardym, na którym ma zostać utworzona kopia zapasowa:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2352"/>
-        <source>Do you really want to break the save or restore from the partition?</source>
-        <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>Czy naprawdę chcesz przerwać zapisywanie lub przywracanie z partycji?</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="2496"/>
+        <location filename="../src/mainWindow.cpp" line="2482"/>
         <source>Existing list entries</source>
         <comment>vorhandene Listeinträge</comment>
         <translation>Istniejące pozycje listy</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2527"/>
+        <location filename="../src/mainWindow.cpp" line="2513"/>
         <source>There is no order available
 </source>
         <comment>Es ist kein Autrag vorhanden
@@ -3112,45 +2129,45 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation>Nie ma dostępnego zlecenia</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2814"/>
+        <location filename="../src/mainWindow.cpp" line="2801"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
         <translation>Na dysku twardym nie ma wystarczającej ilości miejsca na kopię zapasową. Kopia zapasowa zostanie anulowana.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="259"/>
+        <location filename="../src/mainWindow.cpp" line="253"/>
         <source>lz4</source>
         <comment>lz4</comment>
         <translation>lz4</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="269"/>
+        <location filename="../src/mainWindow.cpp" line="263"/>
         <source>zstd</source>
         <comment>zstd</comment>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1143"/>
+        <location filename="../src/mainWindow.cpp" line="1158"/>
         <source>You have selected an incorrect recovery file. The file extension must be .fsa</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht. Die Dateiendung muss .fsa sein.</comment>
         <translation>Wybrano nieprawidłowy plik odzyskiwania. Rozszerzeniem pliku musi być .fsa</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1210"/>
+        <location filename="../src/mainWindow.cpp" line="1225"/>
         <source>The partition to be recovered  </source>
         <comment>Die wiederherzustellende Partition </comment>
         <translation>Partycja, która ma zostać odzyskana</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1287"/>
+        <location filename="../src/mainWindow.cpp" line="1302"/>
         <source> cannot be unmounted. The program is aborted.</source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
         <translation> nie może zostać odmontowany. Program zostaje przerwany.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="319"/>
+        <location filename="../src/mainWindow.cpp" line="342"/>
         <source>Qt-fsarchiver can only be started once. The program must be terminated..
 </source>
         <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
@@ -3159,23 +2176,31 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1475"/>
-        <location filename="../src/mainWindow.cpp" line="1489"/>
-        <location filename="../src/mainWindow.cpp" line="1502"/>
+        <location filename="../src/mainWindow.cpp" line="1436"/>
+        <source>Backup and restore partitions, directory and MBR.
+version 2.8.7-0, November 1, 2024</source>
+        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.7-0, 1.November 2024</comment>
+        <translation>Tworzenie kopii zapasowych i przywracanie partycji, katalogów i MBR.
+wersja 2.8.7-0, 1.Listopad 2024</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1490"/>
+        <location filename="../src/mainWindow.cpp" line="1505"/>
+        <location filename="../src/mainWindow.cpp" line="1518"/>
         <source>Yes</source>
         <comment>Ja</comment>
         <translation>Tak</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1476"/>
-        <location filename="../src/mainWindow.cpp" line="1490"/>
-        <location filename="../src/mainWindow.cpp" line="1503"/>
+        <location filename="../src/mainWindow.cpp" line="1491"/>
+        <location filename="../src/mainWindow.cpp" line="1504"/>
+        <location filename="../src/mainWindow.cpp" line="1517"/>
         <source>No</source>
         <comment>Nein</comment>
         <translation>Nie</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1733"/>
+        <location filename="../src/mainWindow.cpp" line="1714"/>
         <source>The partition was not backed up successfully. The free space on the hard drive to be backed up was not sufficient or The file is too large. do not use a FAT partition.
 </source>
         <comment>Die Partition wurde nicht erfolgreich gesichert. Der freie Speicherplatz auf der Festplatte auf die gesichert werden sollte war nicht ausreichend oder die Datei ist zu groß. Benutzen Sie keine FAT Partition.
@@ -3183,8 +2208,8 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation>Kopia zapasowa partycji nie powiodła się. Wolne miejsce na dysku twardym, którego kopia zapasowa ma zostać utworzona, było niewystarczające lub Plik jest zbyt duży. nie używaj partycji FAT.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1768"/>
-        <location filename="../src/mainWindow.cpp" line="1779"/>
+        <location filename="../src/mainWindow.cpp" line="1749"/>
+        <location filename="../src/mainWindow.cpp" line="1760"/>
         <source>The partition was successfully backed up.
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
@@ -3193,55 +2218,55 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1769"/>
-        <location filename="../src/mainWindow.cpp" line="1780"/>
-        <location filename="../src/mainWindow.cpp" line="1829"/>
-        <location filename="../src/mainWindow.cpp" line="1831"/>
-        <location filename="../src/mainWindow.cpp" line="1878"/>
-        <location filename="../src/mainWindow.cpp" line="1882"/>
-        <location filename="../src/mainWindow.cpp" line="1906"/>
-        <location filename="../src/mainWindow.cpp" line="1908"/>
-        <location filename="../src/mainWindow.cpp" line="1915"/>
-        <location filename="../src/mainWindow.cpp" line="1918"/>
+        <location filename="../src/mainWindow.cpp" line="1750"/>
+        <location filename="../src/mainWindow.cpp" line="1761"/>
+        <location filename="../src/mainWindow.cpp" line="1810"/>
+        <location filename="../src/mainWindow.cpp" line="1812"/>
+        <location filename="../src/mainWindow.cpp" line="1859"/>
+        <location filename="../src/mainWindow.cpp" line="1863"/>
+        <location filename="../src/mainWindow.cpp" line="1887"/>
+        <location filename="../src/mainWindow.cpp" line="1889"/>
+        <location filename="../src/mainWindow.cpp" line="1896"/>
+        <location filename="../src/mainWindow.cpp" line="1899"/>
         <source> files, </source>
         <comment> Dateien, </comment>
         <translation> pliki, </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1769"/>
-        <location filename="../src/mainWindow.cpp" line="1780"/>
-        <location filename="../src/mainWindow.cpp" line="1829"/>
-        <location filename="../src/mainWindow.cpp" line="1831"/>
-        <location filename="../src/mainWindow.cpp" line="1878"/>
-        <location filename="../src/mainWindow.cpp" line="1882"/>
-        <location filename="../src/mainWindow.cpp" line="1906"/>
-        <location filename="../src/mainWindow.cpp" line="1915"/>
+        <location filename="../src/mainWindow.cpp" line="1750"/>
+        <location filename="../src/mainWindow.cpp" line="1761"/>
+        <location filename="../src/mainWindow.cpp" line="1810"/>
+        <location filename="../src/mainWindow.cpp" line="1812"/>
+        <location filename="../src/mainWindow.cpp" line="1859"/>
+        <location filename="../src/mainWindow.cpp" line="1863"/>
+        <location filename="../src/mainWindow.cpp" line="1887"/>
+        <location filename="../src/mainWindow.cpp" line="1896"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
         <translation> katalogi, </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1769"/>
-        <location filename="../src/mainWindow.cpp" line="1780"/>
-        <location filename="../src/mainWindow.cpp" line="1829"/>
-        <location filename="../src/mainWindow.cpp" line="1832"/>
-        <location filename="../src/mainWindow.cpp" line="1878"/>
-        <location filename="../src/mainWindow.cpp" line="1906"/>
-        <location filename="../src/mainWindow.cpp" line="1909"/>
-        <location filename="../src/mainWindow.cpp" line="1916"/>
-        <location filename="../src/mainWindow.cpp" line="1919"/>
+        <location filename="../src/mainWindow.cpp" line="1750"/>
+        <location filename="../src/mainWindow.cpp" line="1761"/>
+        <location filename="../src/mainWindow.cpp" line="1810"/>
+        <location filename="../src/mainWindow.cpp" line="1813"/>
+        <location filename="../src/mainWindow.cpp" line="1859"/>
+        <location filename="../src/mainWindow.cpp" line="1887"/>
+        <location filename="../src/mainWindow.cpp" line="1890"/>
+        <location filename="../src/mainWindow.cpp" line="1897"/>
+        <location filename="../src/mainWindow.cpp" line="1900"/>
         <source> links and </source>
         <comment> Links und </comment>
         <translation> linki i </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1781"/>
+        <location filename="../src/mainWindow.cpp" line="1762"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
         <translation> &quot;specials&quot; i Boot Record Partycji zostały zapisane.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1800"/>
+        <location filename="../src/mainWindow.cpp" line="1781"/>
         <source>The backup of the partition was aborted by the user!
 </source>
         <comment>Die Sicherung der Partition  wurde vom Benutzer abgebrochen!
@@ -3250,7 +2275,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1807"/>
+        <location filename="../src/mainWindow.cpp" line="1788"/>
         <source>The partition type is not supported.
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt.
@@ -3259,7 +2284,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1814"/>
+        <location filename="../src/mainWindow.cpp" line="1795"/>
         <source>The partition type is not supported. Maybe the partition is encrypted?
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
@@ -3268,7 +2293,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1833"/>
+        <location filename="../src/mainWindow.cpp" line="1814"/>
         <source> special data was not saved correctly.
 .</source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
@@ -3278,16 +2303,16 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
     <message>
         <source></source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> &quot;specials&quot; zostały przywrócone.</translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1769"/>
+        <location filename="../src/mainWindow.cpp" line="1750"/>
         <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation> specjalne zostały wsparte.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1828"/>
+        <location filename="../src/mainWindow.cpp" line="1809"/>
         <source>The backup of the partition was only partially successful.
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
@@ -3295,7 +2320,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation>Tworzenie kopii zapasowej partycji powiodło się tylko częściowo.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1830"/>
+        <location filename="../src/mainWindow.cpp" line="1811"/>
         <source> specials have been backed
 .</source>
         <comment> spezielle Daten wurden gesichert
@@ -3303,7 +2328,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation> &quot;specials&quot; zostały skopiowane.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1848"/>
+        <location filename="../src/mainWindow.cpp" line="1829"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
@@ -3311,28 +2336,28 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation> Partycja, która ma zostać przywrócona jest zamontowana. Musi ona zostać najpierw odmontowana! </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1877"/>
-        <location filename="../src/mainWindow.cpp" line="1881"/>
+        <location filename="../src/mainWindow.cpp" line="1858"/>
+        <location filename="../src/mainWindow.cpp" line="1862"/>
         <source>The partition was successfully restored.
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation> The partition was successfully restored.</translation>
+        <translation>Partycja została pomyślnie przywrócona.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1878"/>
+        <location filename="../src/mainWindow.cpp" line="1859"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
         <translation> &quot;specials&quot; zostały przywrócone.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1882"/>
+        <location filename="../src/mainWindow.cpp" line="1863"/>
         <source> links </source>
         <comment> Links </comment>
         <translation> linki </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1887"/>
+        <location filename="../src/mainWindow.cpp" line="1868"/>
         <source>The restore of the partition was break by user!
 </source>
         <comment>Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!
@@ -3341,8 +2366,8 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1905"/>
-        <location filename="../src/mainWindow.cpp" line="1914"/>
+        <location filename="../src/mainWindow.cpp" line="1886"/>
+        <location filename="../src/mainWindow.cpp" line="1895"/>
         <source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
@@ -3351,14 +2376,14 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1908"/>
-        <location filename="../src/mainWindow.cpp" line="1918"/>
+        <location filename="../src/mainWindow.cpp" line="1889"/>
+        <location filename="../src/mainWindow.cpp" line="1899"/>
         <source> directories and </source>
         <comment> Verzeichnisse und </comment>
         <translation> katalogów i </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1910"/>
+        <location filename="../src/mainWindow.cpp" line="1891"/>
         <source> specials were not properly restored
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
@@ -3366,7 +2391,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation> &quot;specials&quot; nieprawidłowo przywrócone.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1917"/>
+        <location filename="../src/mainWindow.cpp" line="1898"/>
         <source> special data and the partition boot sector were restored.
 .</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt
@@ -3374,7 +2399,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation> &quot;specials&quot; i Boot Record partycji zostały przywrócone.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1920"/>
+        <location filename="../src/mainWindow.cpp" line="1901"/>
         <source> specials were not properly restored.
 .</source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
@@ -3382,7 +2407,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation> specjalne nie zostały prawidłowo przywrócone.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1924"/>
+        <location filename="../src/mainWindow.cpp" line="1905"/>
         <source>You have tried restore a partition. The selected file can only restore directories. Please restart the program.
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
@@ -3391,7 +2416,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1927"/>
+        <location filename="../src/mainWindow.cpp" line="1908"/>
         <source>You have entered an incorrect password.
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
@@ -3400,7 +2425,7 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1932"/>
+        <location filename="../src/mainWindow.cpp" line="1913"/>
         <source>The partition to be written back to is too small.
 </source>
         <comment>Die Partition in die zurückgeschrieben wird ist zu klein.
@@ -3408,120 +2433,120 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
         <translation>Partycja, która ma zostać zapisana z powrotem jest zbyt mała</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2097"/>
+        <location filename="../src/mainWindow.cpp" line="2080"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
         <translation>Nazwa pliku kopii zapasowej: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2098"/>
+        <location filename="../src/mainWindow.cpp" line="2081"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
         <translation>Nazwa partycji: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2099"/>
+        <location filename="../src/mainWindow.cpp" line="2082"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
         <translation>Typ partycji: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2100"/>
+        <location filename="../src/mainWindow.cpp" line="2083"/>
         <source>UUID: </source>
-        <translation>UUID: </translation>
+        <translation>UUID</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2100"/>
+        <location filename="../src/mainWindow.cpp" line="2083"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
         <translation>Opis: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2101"/>
+        <location filename="../src/mainWindow.cpp" line="2084"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
         <translation>Rozmiar partycji: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2101"/>
-        <location filename="../src/mainWindow.cpp" line="2102"/>
+        <location filename="../src/mainWindow.cpp" line="2084"/>
+        <location filename="../src/mainWindow.cpp" line="2085"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
         <translation>Przybliżona wielkość partycji: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2102"/>
+        <location filename="../src/mainWindow.cpp" line="2085"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
         <translation>Kompresja: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2103"/>
+        <location filename="../src/mainWindow.cpp" line="2086"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
         <translation>Przybliżony rozmiar obrazu: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2117"/>
+        <location filename="../src/mainWindow.cpp" line="2100"/>
         <source>Path of the backup file: </source>
         <comment>Pfad der Sicherungsdatei: </comment>
         <translation>Ścieżka pliku kopii zapasowej:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2121"/>
+        <location filename="../src/mainWindow.cpp" line="2104"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
         <translation>Inne uwagi: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2104"/>
+        <location filename="../src/mainWindow.cpp" line="2087"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
         <translation>Chroniona/zabezpieczona partycja: / (root system directory) </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2109"/>
-        <location filename="../src/mainWindow.cpp" line="2115"/>
+        <location filename="../src/mainWindow.cpp" line="2092"/>
+        <location filename="../src/mainWindow.cpp" line="2098"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
         <translation>System operacyjny: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2109"/>
-        <location filename="../src/mainWindow.cpp" line="2115"/>
+        <location filename="../src/mainWindow.cpp" line="2092"/>
+        <location filename="../src/mainWindow.cpp" line="2098"/>
         <source>Kernel: </source>
         <translation>Jądro: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2111"/>
+        <location filename="../src/mainWindow.cpp" line="2094"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
         <translation>być chronioną / zabezpieczoną partycją: /home</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2137"/>
+        <location filename="../src/mainWindow.cpp" line="2120"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2148"/>
+        <location filename="../src/mainWindow.cpp" line="2131"/>
         <source> TB</source>
         <translation> TB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2159"/>
+        <location filename="../src/mainWindow.cpp" line="2142"/>
         <source> GB</source>
         <translation> GB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2612"/>
+        <location filename="../src/mainWindow.cpp" line="2598"/>
         <source>No USB disk is connected, The program is terminated.</source>
         <comment>Es ist keine USB-Platte angeschlossen, Das Programm wird beendet.
 </comment>
         <translation>Nie podłączono dysku USB, Program zostaje przerwany.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1700"/>
+        <location filename="../src/mainWindow.cpp" line="1662"/>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
         <translation>Czy na pewno chcesz przerwać zapis lub przywracanie z partycji?</translation>
@@ -3531,80 +2556,67 @@ Wersja 1.8.7-1, 15 października 2024 r.</translation>
     <name>MainWindow</name>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="14"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="619"/>
         <source>Save/restore partition </source>
         <translation>Zapisz/przywróć partycję </translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="31"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="642"/>
         <source>Restore partition
 with fsarchi&amp;ver</source>
         <translation>Przywracanie partycji za pomocą fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="47"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="647"/>
         <source>Existing partitions:</source>
         <translation>Istniejące partycje:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="458"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="702"/>
         <source>Backup directory:</source>
         <translation>Katalog kopii zapasowej:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="172"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="673"/>
         <source>Start the backup of a partition.</source>
         <translation>Rozpocznij wykonywanie kopii zapasowej partycji.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="175"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="675"/>
         <source>Save partition</source>
         <translation>Zapisz partycję</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="54"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="649"/>
         <source>Notes about the backup are written to a file.</source>
         <translation>Notatki do kopii zapasowej jest zapisywane do pliku.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="64"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="653"/>
         <source>An existing backup file with the same name is overwritten without confirmation.</source>
         <translation>Istniejący plik kopii zapasowej o tej samej nazwie zostanie nadpisany bez potwierdzenia.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="192"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="680"/>
         <source>Exit</source>
         <translation>Zakończ program</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="182"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="677"/>
         <source>Start restore a partition.</source>
         <translation>Początek przywracanie partycji.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="185"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="679"/>
         <source>Partition restore</source>
         <translation>Przywróć partycję</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="338"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="691"/>
         <source>elapsed time:</source>
         <translation>czas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="348"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="692"/>
         <source>On the number saved
 Files/directories:</source>
         <translation>Ilość zapisanych
@@ -3612,7 +2624,6 @@ plików/katalogów:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="356"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="694"/>
         <source>already saved 
 files/directories:</source>
         <translation>Już zapisanych
@@ -3620,7 +2631,6 @@ plików/katalogów:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="23"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="640"/>
         <source>&amp;Partition save 
 with fsarchiver</source>
         <extracomment>Partition mit * fsArchiver sichern:</extracomment>
@@ -3628,110 +2638,80 @@ with fsarchiver</source>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="231"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="683"/>
         <source>.</source>
         <translation>.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="295"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="687"/>
         <source>z</source>
         <translation>z</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="573"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="707"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="569"/>
         <source>Se&amp;ttings</source>
         <translation>Us&amp;tawienia</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="596"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="620"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="592"/>
         <source>Basic Settings</source>
         <translation>&amp;Podstawowe</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="632"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="624"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="628"/>
         <source>&amp;Information qt-fsarchiver</source>
         <translation>Informacja qt-fsarchiver</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="686"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="630"/>
-        <source>&amp;Save a partition on network</source>
-        <translation>Zapi&amp;sz partycję/katalog w sieci</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="695"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="631"/>
-        <source>Restore &amp;a partition on network</source>
-        <translation>Przywróć p&amp;artycję/katalog w sieci</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="727"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="635"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="705"/>
         <source>&amp;Clone HD, HD-Image built and restore</source>
         <translation>&amp;Klonuj HD, Obraz-HD  zapisz/przywróć</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="324"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="364"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="689"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="696"/>
         <source>seconds</source>
         <translation>już zapisane</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="41"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="645"/>
         <source>Select the partition to be backed up or written back.</source>
         <translation>Wybierz partycję, której kopia zapasowa ma zostać utworzona lub zapisana.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="452"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="700"/>
         <source>Directory where the backup file is written or directory where the recovery file is stored.</source>
         <translation>Katalog, w którym zapisany jest plik kopii zapasowej lub katalog, w którym zapisany jest plik odzyskiwania.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="250"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="269"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="684"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="685"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="162"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="671"/>
         <source>Name the backup file:</source>
         <translation>Nazwa pliku kopii zapasowej:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="331"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="399"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="690"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="698"/>
         <source>minutes</source>
         <translation>minut</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="392"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="697"/>
         <source>remaining time:</source>
         <translation>pozostały czas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="128"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="667"/>
         <source>Number of processors
 cores for to be used fsarchiver:</source>
         <translation>Ilość rdzeni CPU używanych podczas pracy:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="143"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="669"/>
         <source>Compression
 setting:</source>
         <translation>Ustawienie 
@@ -3739,236 +2719,125 @@ kompresji:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="57"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="651"/>
         <source>Notes on the backup</source>
         <translation>Zapisuj do pliku notatki dla kopii zapasowej</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="67"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="655"/>
         <source>overwrite existing backup.</source>
         <translation>Nadpisuj istniejące kopie bezpieczeństwa</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="94"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="661"/>
         <source>Split archive , specified size:</source>
         <translation>Kopia podzielona na rozmiar:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="79"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="659"/>
         <source>Encrypt 
 backup key</source>
         <translation>Klucz szyfrowania</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="113"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="664"/>
         <source>PBR is the first block of a bootable partition.</source>
         <translation>PBR jest pierwszym blokiem kazdej rozruchowej partycji</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="116"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="666"/>
         <source>Save PBR</source>
         <extracomment>PBR sichern</extracomment>
         <translation>Zapisz PBR</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="104"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="662"/>
         <source>GB</source>
         <translation>GB</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="308"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="688"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="553"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="706"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="551"/>
         <source>&amp;Actions</source>
         <translation>&amp;Akcje</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="579"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="708"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="575"/>
         <source>&amp;Information</source>
         <translation>&amp;Informacja</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="585"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="709"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="581"/>
         <source>&amp;Exit</source>
         <translation>&amp;Wyjście</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="605"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="621"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="601"/>
         <source>&amp;Backup partition</source>
         <translation>Kopia &amp;bezpieczeństwa partycji</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="614"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="622"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="610"/>
         <source>&amp;Restore partition</source>
         <translation>Przywróć partycję</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="623"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="623"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="619"/>
         <source>&amp;Basic Settings</source>
         <translation>&amp;Podstawowe</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="641"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="625"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="637"/>
         <source>Save &amp;MBR/GPT</source>
         <translation>Zapisz &amp;MBR/GPT</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="650"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="626"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="646"/>
         <source>R&amp;estore MBR/GPT</source>
         <translation>Prz&amp;ywróć MBR/GPT</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="659"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="627"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="655"/>
         <source>Rest&amp;ore directory </source>
         <translation>Pr&amp;zywróć katalog </translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="668"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="628"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="664"/>
         <source>Save &amp;directory </source>
         <translation>Zap&amp;isz katalog </translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="677"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="629"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="673"/>
         <source>&amp;Exit program</source>
         <translation>Zakońc&amp;z</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="732"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="636"/>
-        <source>Save directories on network</source>
-        <translation>Zapisywanie katalogów przez sieć.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="737"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="637"/>
-        <source>Restoring directories over a network.</source>
-        <translation>Przywracanie katalogów przez sieć.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="746"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="638"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="714"/>
         <source>Order</source>
         <translation>Zamówienie</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="755"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="639"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="723"/>
         <source>Order list edit</source>
         <translation>Edycja listy zamówień</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="199"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="681"/>
         <source>Show hidden directories and files</source>
         <translation>Pokaż ukryte pliki i katalogi</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="704"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="632"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="687"/>
         <source>breakprocess</source>
         <translation>Przerwij proces</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="713"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="633"/>
+        <location filename="../src/ui/fsarchiverMain.ui" line="696"/>
         <source>Clone Drive HD-Image save/restore </source>
         <translation>Klonuj HD, Obraz-HD zapisz/przywróć </translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="718"/>
-        <location filename="../build/ui_fsarchiverMain.h" line="634"/>
-        <source>HD-Image save/restore on network</source>
-        <translation>HD-Image zapisz/przywróć w sieci</translation>
-    </message>
-</context>
-<context>
-    <name>NetEin</name>
-    <message>
-        <location filename="../src/net_ein.cpp" line="209"/>
-        <location filename="../src/net_ein.cpp" line="321"/>
-        <location filename="../src/net_ein.cpp" line="513"/>
-        <location filename="../src/net_ein.cpp" line="519"/>
-        <location filename="../src/net_ein.cpp" line="525"/>
-        <location filename="../src/net_ein.cpp" line="568"/>
-        <source>Note</source>
-        <comment>Hinweis</comment>
-        <translation>Uwaga</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="210"/>
-        <location filename="../src/net_ein.cpp" line="322"/>
-        <source>There is currently no network computer available.
-</source>
-        <comment>Es ist derzeit kein Netzwerkrechner erreichbar.
-</comment>
-        <translation>Aktualnie brak komputerów w sieci.
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="514"/>
-        <source>You must select the computer on which the backup data is to be written.
-</source>
-        <comment>Sie müssen den Rechner auswählen, auf den die Sicherungsdaten geschrieben werden sollen
-</comment>
-        <translation>Prosze wybrać komputer na którym będzie zapisana kopia
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="520"/>
-        <source>You must select the computer from which the backup data is to be written back.
-</source>
-        <comment>Sie müssen den Rechner auswählen, von dem die Sicherungsdaten zurück geschrieben werden sollen
-</comment>
-        <translation>Prosze wybrać komputer na którym będzie przywrócona kopia
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="526"/>
-        <source>You must enter the user name. Otherwise network computers cannot be accessed.
-</source>
-        <comment>Sie müssen den Benutzernamen eingeben. Sonst kann nicht auf Netzrechner zugegriffen werden
-</comment>
-        <translation>Wprowadz nazwę użytkownika aby mieć dostęp dla komputerów w sieci
-</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="530"/>
-        <source>Is that correct that you have not entered a key? (NFS does not need a key.</source>
-        <comment>Ist das richtig, dass Sie keinen Schlüssel eingegeben haben? (NFS benötigt keinen Schlüssel)</comment>
-        <translation>Czy to prawda, że wprowadzono klucz? (NFS nie potrzebuje klucza)</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="569"/>
-        <source>Yes</source>
-        <comment>Ja</comment>
-        <translation>Tak</translation>
-    </message>
-    <message>
-        <location filename="../src/net_ein.cpp" line="570"/>
-        <source>No</source>
-        <comment>Nein</comment>
-        <translation>Nie</translation>
     </message>
 </context>
 <context>
@@ -4035,53 +2904,45 @@ backup key</source>
     <name>clone_dialog</name>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="14"/>
-        <location filename="../build/ui_clone_dialog.h" line="324"/>
         <source>Clone hard drive</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
         <translation>Klonowanie dysku twardego</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="521"/>
-        <location filename="../build/ui_clone_dialog.h" line="349"/>
         <source>Image of a &amp;hard disk to create</source>
         <extracomment>sdb</extracomment>
         <translation>Obraz &amp;dysku twardego do utworzenia</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="534"/>
-        <location filename="../build/ui_clone_dialog.h" line="350"/>
         <source>Image of a partition &amp;to create</source>
         <translation>Obraz partycji do u&amp;tworzenia</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="573"/>
-        <location filename="../build/ui_clone_dialog.h" line="353"/>
         <source>Notes on the backup</source>
         <translation>Uwagi dotyczące kopii zapasowej</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="587"/>
-        <location filename="../build/ui_clone_dialog.h" line="354"/>
         <source>p</source>
         <translation>p</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="613"/>
-        <location filename="../build/ui_clone_dialog.h" line="356"/>
         <source>Exit</source>
         <extracomment>Abbrechen</extracomment>
         <translation>Wyjście</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="39"/>
-        <location filename="../build/ui_clone_dialog.h" line="325"/>
         <source>Exist harddrive:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
         <translation>Istnieje dyski:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="86"/>
-        <location filename="../build/ui_clone_dialog.h" line="326"/>
         <source>New harddrive:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
         <translation>Nowy dysk twardy:</translation>
@@ -4092,130 +2953,103 @@ backup key</source>
         <location filename="../src/ui/clone_dialog.ui" line="626"/>
         <location filename="../src/ui/clone_dialog.ui" line="639"/>
         <location filename="../src/ui/clone_dialog.ui" line="652"/>
-        <location filename="../build/ui_clone_dialog.h" line="327"/>
-        <location filename="../build/ui_clone_dialog.h" line="328"/>
-        <location filename="../build/ui_clone_dialog.h" line="357"/>
-        <location filename="../build/ui_clone_dialog.h" line="358"/>
-        <location filename="../build/ui_clone_dialog.h" line="359"/>
         <source>CommandLinkButton</source>
         <translation>PrzyciskLiniiPoleceń</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="140"/>
         <location filename="../src/ui/clone_dialog.ui" line="205"/>
-        <location filename="../build/ui_clone_dialog.h" line="329"/>
-        <location filename="../build/ui_clone_dialog.h" line="332"/>
         <source>seconds</source>
         <translation>sekund</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="166"/>
         <location filename="../src/ui/clone_dialog.ui" line="231"/>
-        <location filename="../build/ui_clone_dialog.h" line="330"/>
-        <location filename="../build/ui_clone_dialog.h" line="333"/>
         <source>minutes</source>
         <translation>minut</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="192"/>
-        <location filename="../build/ui_clone_dialog.h" line="331"/>
         <source>elapsed time:</source>
         <translation>Miniony czas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="257"/>
-        <location filename="../build/ui_clone_dialog.h" line="334"/>
         <source>remaining time:</source>
         <translation>Pozostały czas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="286"/>
-        <location filename="../build/ui_clone_dialog.h" line="335"/>
         <source>already saved:</source>
         <translation>Już zapisane:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="302"/>
-        <location filename="../build/ui_clone_dialog.h" line="336"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="315"/>
         <location filename="../src/ui/clone_dialog.ui" line="341"/>
-        <location filename="../build/ui_clone_dialog.h" line="337"/>
-        <location filename="../build/ui_clone_dialog.h" line="338"/>
         <source>hours</source>
         <translation>godzin</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="367"/>
-        <location filename="../build/ui_clone_dialog.h" line="339"/>
         <source>Transmission speed:</source>
         <translation>Szybkość transmisji:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="393"/>
-        <location filename="../build/ui_clone_dialog.h" line="340"/>
         <source>MB/sec</source>
         <translation>MB/s</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="423"/>
         <location filename="../src/ui/clone_dialog.ui" line="682"/>
-        <location filename="../build/ui_clone_dialog.h" line="341"/>
-        <location filename="../build/ui_clone_dialog.h" line="360"/>
         <source>f</source>
         <translation>f</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="436"/>
-        <location filename="../build/ui_clone_dialog.h" line="343"/>
         <source>Directory in which the image is written</source>
         <translation>Katalog, w którym obraz jest napisane</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="442"/>
-        <location filename="../build/ui_clone_dialog.h" line="345"/>
         <source>Backup directory:</source>
         <translation>Katalog kopii bezpieczeństwa:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="470"/>
-        <location filename="../build/ui_clone_dialog.h" line="346"/>
         <source>&amp;Image of a hard disk write back</source>
         <extracomment>sdc</extracomment>
         <translation>&amp;Przywróć obraz dysku twardego</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="483"/>
-        <location filename="../build/ui_clone_dialog.h" line="347"/>
         <source>&amp;Clone hard disk</source>
         <extracomment>sda</extracomment>
         <translation>&amp;Klonuj dysk twardy</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="547"/>
-        <location filename="../build/ui_clone_dialog.h" line="351"/>
         <source>Image of a &amp;partition write back</source>
         <translation>Przywróć obraz &amp;partycji</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="502"/>
-        <location filename="../build/ui_clone_dialog.h" line="348"/>
         <source>Planned action:</source>
         <extracomment>vorgesehene Aktion:</extracomment>
         <translation>Proponowane działania:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="560"/>
-        <location filename="../build/ui_clone_dialog.h" line="352"/>
         <source>Use gzip</source>
         <translation>Użyj gzip</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="600"/>
-        <location filename="../build/ui_clone_dialog.h" line="355"/>
         <source>Save/Restore</source>
         <translation>Zapisz/Przywróć</translation>
     </message>
@@ -4225,54 +3059,45 @@ backup key</source>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="14"/>
         <location filename="../src/ui/dir_dialog.ui" line="42"/>
-        <location filename="../build/ui_dir_dialog.h" line="219"/>
-        <location filename="../build/ui_dir_dialog.h" line="224"/>
         <source>Save/restore directory</source>
         <extracomment>Verzeichnis sichern/zurückschreiben</extracomment>
         <translation>Zapisz/przywróć katalog</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="26"/>
-        <location filename="../build/ui_dir_dialog.h" line="220"/>
         <source>Exit</source>
         <extracomment>Schließen</extracomment>
         <translation>Wyjście</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="71"/>
-        <location filename="../build/ui_dir_dialog.h" line="228"/>
         <source>Saved directory</source>
         <extracomment>zu sicherndes Verzeichnis:</extracomment>
         <translation>Zapisane katalogi</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="39"/>
-        <location filename="../build/ui_dir_dialog.h" line="222"/>
         <source>Starting a Backup or Restoring a Directory. </source>
         <translation>Uruchamianie kopii zapasowej lub przywracanie katalogu.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="68"/>
-        <location filename="../build/ui_dir_dialog.h" line="226"/>
         <source>Select the directory that is to be backed up or written back.</source>
         <translation>Wybrać katalog, którego kopia zapasowa lub zapis mają być wykonane.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="97"/>
-        <location filename="../build/ui_dir_dialog.h" line="230"/>
         <source>Directory to which the directory backup is written or from which the recovery file is read.</source>
         <translation>Katalog, do którego zapisywana jest kopia zapasowa katalogu lub z którego odczytywany jest plik odzyskiwania.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="100"/>
-        <location filename="../build/ui_dir_dialog.h" line="232"/>
         <source>Location (path) of backup:</source>
         <extracomment>Ort (Pfad) der Sicherung:</extracomment>
         <translation>Położenie (ścieżka) kopii:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="128"/>
-        <location filename="../build/ui_dir_dialog.h" line="233"/>
         <source>Number of files/directories
 to be backed up</source>
         <translation>Ilość zapisanych
@@ -4280,7 +3105,6 @@ plików/katalogów:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="155"/>
-        <location filename="../build/ui_dir_dialog.h" line="235"/>
         <source>Already backed
 Files/directories:</source>
         <extracomment>bereits gesicherte Datein/Verzeichnisse:</extracomment>
@@ -4289,7 +3113,6 @@ plików/katalogów:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="198"/>
-        <location filename="../build/ui_dir_dialog.h" line="237"/>
         <source>elapsed time:</source>
         <extracomment>vergangene Zeit:</extracomment>
         <translation>Miniony czas:</translation>
@@ -4297,8 +3120,6 @@ plików/katalogów:</translation>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="224"/>
         <location filename="../src/ui/dir_dialog.ui" line="302"/>
-        <location filename="../build/ui_dir_dialog.h" line="238"/>
-        <location filename="../build/ui_dir_dialog.h" line="241"/>
         <source>minutes</source>
         <extracomment>Minuten</extracomment>
         <translation>minut</translation>
@@ -4306,22 +3127,18 @@ plików/katalogów:</translation>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="250"/>
         <location filename="../src/ui/dir_dialog.ui" line="315"/>
-        <location filename="../build/ui_dir_dialog.h" line="239"/>
-        <location filename="../build/ui_dir_dialog.h" line="242"/>
         <source>seconds</source>
         <extracomment>Sekunden</extracomment>
         <translation>sekund</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="263"/>
-        <location filename="../build/ui_dir_dialog.h" line="240"/>
         <source>remaining  time:</source>
         <extracomment>noch zu erwartende Zeit:</extracomment>
         <translation>Pozostały czas:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="339"/>
-        <location filename="../build/ui_dir_dialog.h" line="243"/>
         <source>Number of processor cores
 for to be used fsarchiver:</source>
         <extracomment>Anzahl der Prozessorkerne, die für fsarchiver verwendet werden sollen:</extracomment>
@@ -4330,54 +3147,46 @@ używanych podczas:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="368"/>
-        <location filename="../build/ui_dir_dialog.h" line="245"/>
         <source>Compression setting:</source>
         <extracomment>Kompressioneinstellung:</extracomment>
         <translation>Ustawienie kompresji:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="391"/>
-        <location filename="../build/ui_dir_dialog.h" line="246"/>
         <source>Encrypt
 backup key</source>
         <translation>Klucz szyfrowania</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="415"/>
-        <location filename="../build/ui_dir_dialog.h" line="249"/>
         <source>Identical backup files are overwritten without prior consultation.</source>
         <translation>Te same pliki kopii zapasowych są zastępowane bez pytania.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="418"/>
-        <location filename="../build/ui_dir_dialog.h" line="251"/>
         <source>Overwrite existing backup</source>
         <extracomment>vorhandene Sicherung überschreiben</extracomment>
         <translation>Nadpisz istniejąca kopię</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="431"/>
-        <location filename="../build/ui_dir_dialog.h" line="253"/>
         <source>The directory is written back to the path of origin.
 </source>
         <translation>Katalog jest zapisywany z powrotem do ścieżki pochodzenia.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="435"/>
-        <location filename="../build/ui_dir_dialog.h" line="256"/>
         <source>Writing a backup back to the original path.</source>
         <extracomment>Sicherung an den Ursprungsort zurückschreiben</extracomment>
         <translation>Przywróć w oryginalne miejsce</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="459"/>
-        <location filename="../build/ui_dir_dialog.h" line="257"/>
         <source>show hidden directories/files</source>
         <translation>pokaż ukryte pliki/katalogi</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="472"/>
-        <location filename="../build/ui_dir_dialog.h" line="258"/>
         <source>z</source>
         <translation>z</translation>
     </message>
@@ -4386,69 +3195,59 @@ backup key</source>
     <name>mbr_dialog</name>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="14"/>
-        <location filename="../build/ui_mbr_dialog.h" line="101"/>
         <source>Save / Restore MBR/GPT</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
         <translation>Zapisz / Przywróć  MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="27"/>
-        <location filename="../build/ui_mbr_dialog.h" line="102"/>
         <source>Restore only the bootloader area</source>
         <extracomment>nur den Bootloaderbereich wieder herstellen</extracomment>
         <translation>Tylko przestrzeń Boot loadera</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="32"/>
-        <location filename="../build/ui_mbr_dialog.h" line="103"/>
         <source>Restoring the bootloader area and partition table</source>
         <extracomment>Bootloaderbereich und die Partitionstabelle wieder herstellen</extracomment>
         <translation>Bootloader i tablica partycji</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="37"/>
-        <location filename="../build/ui_mbr_dialog.h" line="104"/>
         <source>Restore partition table</source>
         <extracomment>Partitionstabelle wiederherstellen</extracomment>
         <translation>Przywróć tablicę partycji</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="42"/>
-        <location filename="../build/ui_mbr_dialog.h" line="105"/>
         <source>Restore hidden area. (Without bootloader and without partition table).</source>
         <extracomment>Verborgenen Bereich  wieder herstellen. (Ohne  Bootloader und ohne Partitionstabelle).</extracomment>
         <translation>Przywróć sekretny obszar. (Bez Boot Loadera i tablicy partycji).</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="61"/>
-        <location filename="../build/ui_mbr_dialog.h" line="108"/>
         <source>Exit</source>
         <extracomment>Abbrechen</extracomment>
         <translation>Wyjście</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="74"/>
-        <location filename="../build/ui_mbr_dialog.h" line="109"/>
         <source>Save / restore MBR</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
         <translation>Zapisz / przywróć MBR</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="100"/>
-        <location filename="../build/ui_mbr_dialog.h" line="111"/>
         <source>Directory in which the MBR/GPT is written.</source>
         <translation>Katalog w którym zapisany jest MBR/GPT.</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="103"/>
-        <location filename="../build/ui_mbr_dialog.h" line="113"/>
         <source>MBR/GPT backup directory:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
         <translation>Katalog kopii MBR/GPT:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="116"/>
-        <location filename="../build/ui_mbr_dialog.h" line="114"/>
         <source>Backup / restore MBR
 from this hard disk:</source>
         <extracomment>MBR von dieser dieser Festplatte sichern / wiederherstellen:</extracomment>
@@ -4457,13 +3256,11 @@ z tego dysku twardego</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="170"/>
-        <location filename="../build/ui_mbr_dialog.h" line="119"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
-        <location filename="../build/ui_mbr_dialog.h" line="116"/>
         <source>Existing
 &amp;harddrive:</source>
         <translation>Istniejące
@@ -4520,13 +3317,11 @@ Pliki .fsa</translation>
     <name>setting_dialog</name>
     <message>
         <location filename="../src/ui/setting.ui" line="14"/>
-        <location filename="../build/ui_setting.h" line="194"/>
         <source>Basic settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="41"/>
-        <location filename="../build/ui_setting.h" line="195"/>
         <source>Number of processors
 cores, for fsarchiver
 should be used:</source>
@@ -4536,35 +3331,31 @@ domyśnie podczas pracy:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="66"/>
-        <location filename="../build/ui_setting.h" line="198"/>
         <source>Standard
 compression:</source>
         <extracomment>Standard*kompression:</extracomment>
-        <translation>Standard kompresji:</translation>
+        <translation>Standard
+kompresja:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="90"/>
-        <location filename="../build/ui_setting.h" line="200"/>
         <source>Language:</source>
         <translation>Język aplikacji:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="113"/>
-        <location filename="../build/ui_setting.h" line="201"/>
         <source>Overwrite existing files by default</source>
         <extracomment>vorhandene Dateien * standardmäßig überschreiben</extracomment>
         <translation>Istniejące pliki nadpisuj domyśnie</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="126"/>
-        <location filename="../build/ui_setting.h" line="202"/>
         <source>Activate notes for backup  by default</source>
         <extracomment>Hinweise zur Sicherung * standardmäßig aktivieren</extracomment>
         <translation>Zapisuj notatki do tworzonych kopii domyśnie</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="139"/>
-        <location filename="../build/ui_setting.h" line="203"/>
         <source>Directories write back
 to the original location by default</source>
         <extracomment>Verzeichnisse * standardmäßig an * den ursprünglichen * Ort zurückschreiben</extracomment>
@@ -4572,100 +3363,62 @@ to the original location by default</source>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="153"/>
-        <location filename="../build/ui_setting.h" line="205"/>
         <source>Enable encryption by default</source>
         <extracomment>Verschlüsselung * standardmäßig aktivieren</extracomment>
         <translation>Użyj szyfrownia domyślnie</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="166"/>
-        <location filename="../build/ui_setting.h" line="206"/>
         <source>Archive file size divided on DVD</source>
         <extracomment>Archiv-Datei auf DVD * Größe aufteilen</extracomment>
         <translation>Rozmiar pliku archiwum o wielkości DVD</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="179"/>
-        <location filename="../build/ui_setting.h" line="207"/>
         <source>Show passwords</source>
         <translation>Pokaż hasła</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="192"/>
-        <location filename="../build/ui_setting.h" line="208"/>
-        <source>Save network input data</source>
-        <extracomment>Netzwerkeingabedaten * speichern</extracomment>
-        <translation>Network input data save</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/setting.ui" line="205"/>
-        <location filename="../build/ui_setting.h" line="209"/>
         <source>Save Settings</source>
         <extracomment>Einstellungen speichern</extracomment>
         <translation>Zapisz ustawienia</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="218"/>
-        <location filename="../build/ui_setting.h" line="210"/>
+        <location filename="../src/ui/setting.ui" line="205"/>
         <source>Exit</source>
         <extracomment>Beenden</extracomment>
         <translation>Zakończ</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="231"/>
-        <location filename="../build/ui_setting.h" line="211"/>
+        <location filename="../src/ui/setting.ui" line="218"/>
         <source>Safe PBR by default</source>
         <extracomment>PBR standradmäßig sichern</extracomment>
         <translation>Zapisuj PBR domyślnie</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="254"/>
-        <location filename="../build/ui_setting.h" line="212"/>
-        <source>Network protocol:</source>
-        <translation>Protokół sieciowy:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/setting.ui" line="267"/>
-        <location filename="../build/ui_setting.h" line="213"/>
-        <source>Display note for access to network computers</source>
-        <extracomment>Hinweis  für den Zugriff auf Netzwerkrechner anzeigen</extracomment>
-        <translation>pokaż uwagi przy dostępie do komputerów w sieci</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/setting.ui" line="280"/>
-        <location filename="../build/ui_setting.h" line="214"/>
-        <source>Displaying a note about mounting the network computer</source>
-        <extracomment>Hinweis über das Mounten des Netzwerkrechners anzeigen</extracomment>
-        <translation>Pokaż uwagi dla podłączenia do komputera w sieci</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/setting.ui" line="293"/>
-        <location filename="../build/ui_setting.h" line="215"/>
+        <location filename="../src/ui/setting.ui" line="231"/>
         <source>Display notes on how to use the program qt-fsarchiver</source>
         <extracomment>Hinweise zum Gebrauch des Programms anzeigen</extracomment>
         <translation>Pokaż notatkę o programie qt-fsarchiver</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="306"/>
-        <location filename="../build/ui_setting.h" line="216"/>
+        <location filename="../src/ui/setting.ui" line="244"/>
         <source>Show hidden directories and files</source>
         <translation>Pokaz ukryte pliki i katalogi</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="329"/>
-        <location filename="../build/ui_setting.h" line="217"/>
+        <location filename="../src/ui/setting.ui" line="267"/>
         <source>zstd level   1: very fast   22:highest compression</source>
         <translation>zstd level 1: bardzo szybki 22: najwyższa kompresja</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="342"/>
-        <location filename="../build/ui_setting.h" line="218"/>
+        <location filename="../src/ui/setting.ui" line="280"/>
         <source>z</source>
         <translation>z</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="355"/>
-        <location filename="../build/ui_setting.h" line="220"/>
+        <location filename="../src/ui/setting.ui" line="293"/>
         <source>If the program does not work correctly, you can 
 slow down the evaluation time. As standard, the 
 evaluation time set with factor 5 * 10 msec
@@ -4676,49 +3429,11 @@ ze współczynnikiem 5 * 10 ms
 Możesz ustawić współczynnik pomiędzy 1 a 20.</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="361"/>
-        <location filename="../build/ui_setting.h" line="225"/>
+        <location filename="../src/ui/setting.ui" line="299"/>
         <source>Selection of the evaluation time 
 from the terminal program. </source>
         <translation>Wybór współczynika czasu
 z programu terminalowego. </translation>
-    </message>
-</context>
-<context>
-    <name>treeview_dialog</name>
-    <message>
-        <location filename="../src/ui/treeview.ui" line="14"/>
-        <location filename="../build/ui_treeview.h" line="80"/>
-        <source>Select restore file</source>
-        <extracomment>Wiederherstellungsdatei auswählen</extracomment>
-        <translation>Wybierz plik do przywrócenia</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/treeview.ui" line="41"/>
-        <location filename="../build/ui_treeview.h" line="81"/>
-        <source>Cancel</source>
-        <extracomment>Abbrechen</extracomment>
-        <translation>Anuluj</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/treeview.ui" line="60"/>
-        <location filename="../build/ui_treeview.h" line="82"/>
-        <source>Next</source>
-        <extracomment>Mit der Wiederherstellung fortfahren</extracomment>
-        <translation>Dalej</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/treeview.ui" line="92"/>
-        <location filename="../build/ui_treeview.h" line="83"/>
-        <source>Existing restore files:</source>
-        <extracomment>Vorhandene Wiederherstellungsdateien:</extracomment>
-        <translation>Istniejące kopie bezpieczeństwa:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/treeview.ui" line="105"/>
-        <location filename="../build/ui_treeview.h" line="84"/>
-        <source>a</source>
-        <translation>a</translation>
     </message>
 </context>
 </TS>
