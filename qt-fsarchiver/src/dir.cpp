@@ -26,6 +26,7 @@ extern "C" {
 extern int dialog_auswertung;
 extern int anzahl_disk;
 extern QString parameter[10];
+extern int good;
 QString folder_dir;
 QString folder_path;
 QString dummy;
@@ -489,14 +490,16 @@ if(beenden == 1)
   return;
   }
 int ret = 0;
-   ret = questionMessage(tr("Do you really want to finish the backup or restore of the directory?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung des Verzeichmisses beenden?"));
-      if (ret == 1 )
+   if(good == 0)
+      ret = questionMessage(tr("Do you really want to finish the backup or restore of the directory?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung des Verzeichmisses beenden?"));
+   if (ret == 1 )
         { // beenden
         thread1.wait();
         thread2.wait();
+        good = 1;
         event->accept();
         } 
-     if (ret == 2)
+   if (ret == 2)
        {
        event->ignore();
        return;
@@ -519,6 +522,7 @@ int ret_fsarchiver = 0;
    int err_regfile;
    if (endeThread_ == 1) {
      if (ret_fsarchiver == 10){
+       good = 1;
        progressBar->setValue(100);
        SekundeRemaining ->setText("0");
        int anzahl  = werte_holen(2);
@@ -579,6 +583,7 @@ void DialogDIR::thread2Ready()  {
    int meldung = werte_holen(4);
    if (endeThread_ == 1) { 
      if (ret_fsarchiver == 10){
+       good = 1;
        progressBar->setValue(100);
        SekundeRemaining ->setText("0");
        int cnt_regfile = werte_holen(6);
@@ -770,13 +775,26 @@ if (flag_View_dir == 1)
 
 void DialogDIR::keyPressEvent(QKeyEvent *event) {
 MWindow window;
+int ret = 0;
      QWidget::keyPressEvent(event);
-     switch( event->key() ) {
+     switch( event->key() ) 
+         {
          case Qt::Key_Escape:
-              //if (window.bit_version() == "64")
-               	esc_end(); 
-         break;
-     }
+         if(good == 0)
+             ret = questionMessage(tr("Do you really want to finish the backup or restore of the directory?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung des Verzeichmisses beenden?"));
+         if (ret == 1 )
+           {
+           esc_end();
+           good = 1;
+           event->accept();
+           }   
+         if (ret == 2)
+           {
+           event->ignore();
+           return;
+           }    
+         break; 
+         }   
 }
 
 int DialogDIR::questionMessage(QString frage)

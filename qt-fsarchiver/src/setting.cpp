@@ -36,7 +36,7 @@ DialogSetting::DialogSetting()
         items_language << tr("Dutch", "Niederländisch") << tr("Japanese", "Japanisch") <<  tr("French", "Französisch")<<  tr("Arabic", "Arabisch") <<tr("Catalan", "Katalanisch") << tr("Czech", "Tschechisch")<< tr("Danish", "Dänisch");
         items_language  << tr("Greek", "Griechisch") << tr("Estonian", "Estnisch") << tr("Finnish", "Finnisch") <<  tr("Hebrew","Hebräisch")  <<  tr("Hindi", "Hindi") <<tr("Hungarian", "Ungarisch") << tr("Armenian", "Armenisch") << tr("Indonesian", "Indonesisch");
         items_language << tr("Latvian", "Lettisch") << tr("Lithuanian", "Litauisch") << tr("Korean", "Koreanisch") << tr("Norwegian", "Norwegisch") <<  tr("Polish", "Polnisch") << tr("Portuguese", "Portugisisch") <<tr("Persian", "Persisch")<< tr("Romanian", "Rumänisch");
-        items_language << tr("Slovak", "Slowakisch") << tr("Serbian", "Serbisch") << tr("Swedish", "Schwedisch") <<  tr("Thai", "Thailändisch") <<tr("Turkish", "Türkisch") << tr("Ukrainian", "Ukrainisch") << tr("Urdu", "Urdu") << tr("Vietnamese", "Vietnamesich");
+        items_language << tr("Slovak", "Slowakisch") << tr("Serbian", "Serbisch") << tr("Swedish", "Schwedisch") <<  tr("Thai", "Thailändisch") <<tr("Turkish", "Türkisch") << tr("Ukrainian", "Ukrainisch") << tr("Urdu", "Urdu") << tr("Vietnamese", "Vietnamesich")<< tr("Bulgarian", "Bulgarisch") << tr("Slovenian", "Slowenisch")<< tr("Albanian", "Albanisch");
         cmb_language->addItems (items_language);
         items_zstd_setting << "1" << "2" << "3" << "4" <<  "5" << "6" << "7" << "8" << "9" << "10" << "11" << "12" << "13" << "14" << "15" << "16" << "17" << "18" << "19" << "20" << "21" << "22";
         cmb_zstd->addItems (items_zstd_setting);

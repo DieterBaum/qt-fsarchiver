@@ -145,7 +145,8 @@ int archinfo_show_fshead(cdico *dicofshead, int fsid)
     printf("Original filesystem size: \t%s (%lld bytes)\n", format_size(fsbytestotal, buffer, sizeof(buffer), 'h'), (long long)fsbytestotal); 
     printf("Space used in filesystem: \t%s (%lld bytes)\n", format_size(fsbytesused, buffer, sizeof(buffer), 'h'), (long long)fsbytesused); 
     printf("\n"); 
-    meldungen_uebergeben(fsorigdev,2); 
+    meldungen_uebergeben(fsuuid,3); 
+    meldungen_uebergeben(fsorigdev,2);
     werte_uebergeben(200,15);
     
     return 0;

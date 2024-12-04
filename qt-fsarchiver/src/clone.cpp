@@ -67,6 +67,7 @@ extern int sleepfaktor;
 QString homepath = QDir::homePath();
 QString folder_file_1;
 extern QString folder_file_;
+extern int good;
 int esc_end_flag;
 QString bytes_;
 int listwidget_exist_read = 0;
@@ -76,6 +77,8 @@ float part_size_compress_float_clone;
 QString part_size_compress_clone;
 QString size_folder_clone;
 int live_flag_clone = 0;
+int del_flag_clone = 0;
+int do_image_partition_ = 0;
 
 DialogClone::DialogClone()
 {
@@ -261,6 +264,7 @@ QString dev_sdx_;
 }
 
 void DialogClone::todo(){
+good = 0;
 	if (rdbt_clone->isChecked())
 	   do_clone();
 	if (rdbt_image_save->isChecked()) 
@@ -563,6 +567,7 @@ QString disk_size;
 QString partition_exist_size;
 Qt::CheckState state;
 chk_Beschreibung->setEnabled(false);
+do_image_partition_ = 1;
       lbl_save->setText (tr("already saved", "bereits gesichert"));
       state = chk_zip->checkState();
       flag_clone = 2;
@@ -596,7 +601,8 @@ chk_Beschreibung->setEnabled(false);
            befehl = "dd if=" + partition_exist + " | gzip --best > " + folder_clone +  partition_name + "-" + _Datum_clone + ".gz.fsa";
         else
            befehl = "dd if=" + partition_exist + " of=" + folder_clone +  partition_name + "-" + _Datum_clone + ".img.fsa bs=1M 2>" + homepath + "/.config/qt5-fsarchiver/disk.txt"; 
- 	thread1.setValues( 0,befehl);
+        img_partition_clone = partition_exist.right(partition_exist.size() -5);  
+        thread1.setValues( 0,befehl);
 	ret = questionMessage(tr("Do you really want to create an image of the hard disk?", " Wollen Sie wirklich ein Abbild der Festplatte erstellen? ") );  
               if (ret == 2)
                  return 0;
@@ -783,6 +789,7 @@ void DialogClone::rdbutton_image_save(){
 }
 
 void DialogClone::rdbutton_image_restore(){
+	del_flag_clone = 1;
 	treeView_clone->setEnabled(true);
         bt_save->setText (tr("Write hard disk image back", "Festplatten Abbild zurückschreiben"));
         filters_clone << "*gz.fsa" << "*img.fsa" ;
@@ -819,6 +826,7 @@ void DialogClone::rdbutton_partition_image_save(){
 }
 
 void DialogClone::rdbutton_partition_image_restore(){
+        del_flag_clone = 1;
         treeView_clone->setEnabled(true);
         listWidget->setEnabled(true);
         listWidget_exist->setHidden(true); 
@@ -1109,11 +1117,20 @@ int found = 0;
              dummy = dummy.left(found);
              savedBytes->setText(dummy);
             if (flag_clone==1 && dialog_auswertung == 0)
+                {
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The cloning of the hard disk was successful.", "Das Klonen der Festplatte war erfolgreich.\n"));
+            	good = 1;
+            	}
             if (flag_clone==2 && dialog_auswertung == 0)
+                {
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the hard disk image was successful.", "Das Sichern des Abbildes der Festplatte war erfolgreich."));
+            	good = 1;
+            	}
             if (flag_clone==3 && dialog_auswertung == 0)
+                {
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The backup of the image of the partition was successful.", "Die Sichern des Abbildes der Partition war erfolgreich."));
+            	good = 1;
+            	}
             if (flag_clone==1 && dialog_auswertung != 0){
             	progressBar->setValue(0);
                 savedBytes->setText("0");
@@ -1179,9 +1196,15 @@ int found = 0;
              dummy = dummy.left(found);
              savedBytes->setText(dummy);
             if (flag_clone==4 && dialog_auswertung == 0)
+                {
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The hard disk image recovery was successful.", "Die Wiederherstellung des Abbildes der Festplatte war erfolgreich"));
+            	good = 1;
+            	}
             if (flag_clone==5 && dialog_auswertung == 0)
+            	{
             	QMessageBox::about(this, tr("Note", "Hinweis"), tr("The recovery of the partition image was successful.", "Die Wiederherstellung des Abbildes der Partition war erfolgreich."));
+            	good = 1;
+            	}
             if (flag_clone==4 && dialog_auswertung != 0){
                 progressBar->setValue(0);
                 savedBytes->setText("0");
@@ -1259,13 +1282,14 @@ int ret = 0;
      QWidget::keyPressEvent(event);
      switch( event->key() ) {
          case Qt::Key_Escape:
-         if (live_flag_clone == 1)
+         if (live_flag_clone == 1 && good == 0)
            ret = questionMessage_critical_clone(tr("Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?", "Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?"));
-         if (live_flag_clone == 0)
-            ret = questionMessage_warning_clone(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+         if (live_flag_clone == 0 && good == 0)
+            ret = questionMessage_warning_clone(tr("Do you really want to stop the backup or restore of the partition or a hard disk?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition oder der Festplatte beenden?"));
          if (ret == 1 )
            {
            esc_end1(1);
+           good = 1;
            event->accept();
            }   
          if (ret == 2)
@@ -1283,13 +1307,15 @@ int ret = 0;
 if (esc_end_flag == 1)
   return;
 QString befehl;
-      if (live_flag_clone == 1)
+      if (live_flag_clone == 1 && good == 0)
            ret = questionMessage_critical_clone(tr("Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?", "Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?"));
-       if (live_flag_clone == 0)
-            ret = questionMessage_warning_clone(tr("Do you really want to stop backing up or restoring the partition?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?"));
+       if (live_flag_clone == 0 && good == 0)
+            ret = questionMessage_warning_clone(tr("Do you really want to stop the backup or restore of the partition or a hard disk?", "Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition oder der Festplatte beenden?"));
+            
     if (ret == 1 )
        {
        esc_end1(1);
+       good = 1;
        event->accept();
        }
      if (ret == 2)
@@ -1306,7 +1332,10 @@ esc_end1(0);
 
 void DialogClone::esc_end1(int flag)
 {
+Qt::CheckState state;
+state = chk_zip->checkState();
 QString befehl;
+folder_file_ = "";
 int found = 0;
    if (thread_run_clone > 0 && flag == 1)
         {
@@ -1323,31 +1352,64 @@ int found = 0;
         befehl = "rm " + homepath + "/.config/qt5-fsarchiver/disk3.txt 2>/dev/null"; 
         if(system (befehl.toLatin1().data()))
                  befehl = ""; 
-        // Bei Abbruch fsa und txt Dateien löschen                       
-        befehl = "rm "  + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa 2>/dev/null"; 
-        QFile file(folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa");
-        if (file.exists())
-            {
-	    if(system (befehl.toLatin1().data()))
-                 befehl = "";
-            found=befehl.indexOf(".fsa");
-            if (found > 0)
-                 befehl.replace(found, 4, ".txt"); 
-            if(system (befehl.toLatin1().data()))
-                 befehl = "";     
-            }
-        befehl = "rm "  + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa 2>/dev/null"; 
-        QFile file1(folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa");
-        if (file1.exists())
-            {
-	    if(system (befehl.toLatin1().data()))
-                 befehl = "";
-            found=befehl.indexOf(".fsa");
-            if (found > 0)
-                 befehl.replace(found, 4, ".txt"); 
-            if(system (befehl.toLatin1().data()))
-                 befehl = "";     
-            }    
+        // Bei Abbruch Sicherung fsa und txt Dateien löschen  
+        // Bei Abbruch Wiederherstellung darf fsa und txt Dateien nicht gelöscht werden  
+        if (del_flag_clone == 0)   
+           {
+           // Beim Abbruch einer Sicherung darf eine eventuell vorhandene gz.part.fsa Datei nicht gelöscht werden
+           if(state != Qt::Checked)    // nicht komprimiert 
+              { 
+              if(do_image_partition_ == 1)  // Image einer Festplatte erzeugen
+                   {          
+                   befehl = "rm "  + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + ".img.fsa 2>/dev/null";
+                   if(system (befehl.toLatin1().data()))
+                      befehl = "";
+                   }
+               if(do_image_partition_ == 0)  // Image einer Partition erzeugen  
+                  {                     // Image einer Partition  erzeugen 
+                   befehl = "rm "  + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa 2>/dev/null";  
+                   QFile file(folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-part.fsa");
+                   if (file.exists())
+                       {
+	               if(system (befehl.toLatin1().data()))
+                            befehl = "";    //part.fsa Datei wird gelöscht oder gz.fsa Datei wird gelöscht
+                       found=befehl.indexOf(".fsa");
+                        if (found > 0)
+                            befehl.replace(found, 4, ".txt");    //Text-Datei ist nur bei der Sicherung einer Partition vorhanden.
+                        befehl = "rm "  + befehl + " 2>/dev/null";
+                        if(system (befehl.toLatin1().data()))
+                           befehl = "";
+                        }              
+                    }
+                 }   
+            // Beim Abbruch einer Sicherung darf eine eventuell vorhandene part.fsa Datei nicht gelöscht werden
+           if(state == Qt::Checked)    //  komprimiert 
+              {
+              if(do_image_partition_ == 1)  // Image einer Festplatte erzeugen
+                    {
+                    befehl = "rm "  + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + ".gz.fsa 2>/dev/null"; 
+                    if(system (befehl.toLatin1().data()))
+                        befehl = "";
+                    }
+               if(do_image_partition_ == 0)  // Image einer Partition erzeugen 
+                  {                        
+                  befehl = "rm "  + folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa 2>/dev/null"; 
+                  QFile file1(folder_clone + "/" + img_partition_clone + "-" + _Datum_clone + "-gz.part.fsa");
+                  if (file1.exists())
+                     {
+	             if(system (befehl.toLatin1().data()))
+                     befehl = "";
+                     found=befehl.indexOf(".fsa");
+                     if (found > 0)
+                         befehl.replace(found, 4, ".txt");  // nur beim Sichern einer Partition ist eine Text-Datei vorhanden.
+                     befehl = "rm "  + befehl + " 2>/dev/null"; 
+                     if(system (befehl.toLatin1().data()))
+                        befehl = ""; 
+                     }
+                  }
+                }      
+        } 
+        del_flag_clone = 0;      
         befehl = "kill -15 " + pid_2_dd[0];  //dd abbrechen
         if(system (befehl.toLatin1().data()))
              befehl = "";

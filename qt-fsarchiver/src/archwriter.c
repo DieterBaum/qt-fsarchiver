@@ -187,7 +187,7 @@ int archwriter_write_buffer(carchwriter *ai, struct s_writebuf *wb)
     struct statvfs64 statvfsbuf;
     char textbuf[128];
     long lres;
-    char home[100];
+   // char home[100];
     assert(ai);
     assert(wb);
 

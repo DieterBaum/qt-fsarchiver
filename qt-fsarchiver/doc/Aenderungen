@@ -1,6 +1,14 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-2.8.7-2 4.Dezember 2024.
+    - Bei allen Sicherungen wird geprüft, ob genügend Platz auf dem Sicherungsmedium vorhanden ist.
+    - Im Bereich Aufträge prüft das System, ob die gespeicherte Partition und die zurück zuschreibende Partition übereinstimmt.
+    - Bei abgebrochenen Aufträgen werden die fsa-Dateien gelöscht, da sie fehlerhaft sind.
+    - Korrekturen und Ergänzungen bei den Sprachdateien.
+    - kleinere Ergänzungen und Fehlerkorrekturen.
+* qt-fsarchiver-2.8.7-1 1.Dezember 2024. 
+    - Diese Version wurde nicht veröffentlicht.  
 * qt-fsarchiver-2.8.7-0 1.November 2024.
     - Die Entwicklung von qt-fsarchiver basierend auf Qt5 wird eingestellt.
     - Diese Version wurde mit Qt6 kompiliert.

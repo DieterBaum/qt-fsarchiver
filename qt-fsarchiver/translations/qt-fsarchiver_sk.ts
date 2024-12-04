@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="da_DK">
+<TS version="2.1" language="sl" sourcelanguage="en">
 <context>
     <name>DialogClone</name>
     <message>
@@ -8,7 +8,7 @@
         <location filename="../src/clone.cpp" line="754"/>
         <source>Clone Harddrive</source>
         <comment>Festplatte klonen</comment>
-        <translation>Klone harddisk</translation>
+        <translation>Klon Harddrive</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="293"/>
@@ -16,7 +16,7 @@
         <location filename="../src/clone.cpp" line="571"/>
         <source>already saved</source>
         <comment>bereits gesichert</comment>
-        <translation>allerede gemt</translation>
+        <translation>že shranjene</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="297"/>
@@ -53,14 +53,14 @@
         <location filename="../src/clone.cpp" line="2007"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Opomba</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="434"/>
         <location filename="../src/clone.cpp" line="703"/>
         <source> Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>Vil du fortsætte gendannelsen?</translation>
+        <translation> Chcete pokračovať v obnovovaní?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="524"/>
@@ -69,14 +69,14 @@
         <source>You must select a hard drive.</source>
         <comment>Sie müssen eine Festplatte auswählen.
 </comment>
-        <translation>Du skal vælge en harddisk.</translation>
+        <translation>Izberite trdi disk.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="529"/>
         <source>The selected hard drive is too small.</source>
         <comment>Die gewählte Festplatte ist zu klein.
 </comment>
-        <translation>Den valgte skrap drive er for lille.</translation>
+        <translation>Izbrane trdi disk je premajhen.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="440"/>
@@ -84,19 +84,19 @@
         <source>There is a root or home partition on the hard disk. You must use a live DVD.</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Sie müssen eine Live-CD benutzen.
 </comment>
-        <translation>Findes en rod eller en home-partition på harddisken. Du skal have en live-CD.</translation>
+        <translation>Na trdem disku obstaja koren ali particijo dom. Moraš potreba a živeti CD.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="543"/>
         <source> Do you want really clone the hard drive? All dates on  </source>
         <comment> Wollen Sie wirklich die Festplatte klonen? Alle Daten auf der Festplatte </comment>
-        <translation> Vil du virkelig klone den harddisk? Alle datoer på  </translation>
+        <translation> Ali želite res klon trdem disku? Vse datume na  </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="543"/>
         <source> are deleted!</source>
         <comment> werden gelöscht!</comment>
-        <translation> slettes!</translation>
+        <translation> črtajo!</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="301"/>
@@ -104,32 +104,32 @@
         <source>You must select a folder.</source>
         <comment>Sie müssen ein Verzeichnis auswählen.
 </comment>
-        <translation>Du skal vælge en mappe.</translation>
+        <translation>Izberite mapo.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="606"/>
         <source>Do you really want to create an image of the hard disk?</source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte erstellen? </comment>
-        <translation>Du vil virkelig bygget et billede fra harddisken?</translation>
+        <translation>Ali želite res zgrajena slike iz trdega diska?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="659"/>
         <source>already written back.</source>
         <comment>bereits zurückgeschrieben</comment>
-        <translation>allerede restaureret</translation>
+        <translation>že obnovljena</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="297"/>
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partition auswählen.
 </comment>
-        <translation>Du skal vælge en partition.</translation>
+        <translation>Musíte vybrať oddiel.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="332"/>
         <source>Do you really want to create an image of a partition?  </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition erstellen? </comment>
-        <translation>Vil du virkelig skabe et billede af en partition?</translation>
+        <translation>Naozaj chcete vytvoriť obraz oddielu?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="353"/>
@@ -137,34 +137,33 @@
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>Sikkerhedskopieringen blev afbrudt af brugeren
-</translation>
+        <translation>Zálohovanie bolo prerušené používateľom</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="401"/>
         <source>already restored</source>
         <comment>bereits zurückgeschrieben</comment>
-        <translation>allerede restaureret</translation>
+        <translation>už obnovené</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="406"/>
         <source>You must select a partition.</source>
         <comment>Sie müssen eine Partitiom auswählen.
 </comment>
-        <translation>Du skal vælge en partition.</translation>
+        <translation>Musíte vybrať oddiel.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="410"/>
         <source>You must select a part.fsa file or an part.fsa.gz file.</source>
         <comment>Sie müssen eine part.fsa- oder eine part.fsa.gz-Datei auswählen.
 </comment>
-        <translation>Du skal vælge en part.fsa-fil eller en part.fsa.gz-fil.</translation>
+        <translation>Musíte vybrať súbor part.fsa alebo part.fsa.gz.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="433"/>
         <source>Partition to restore </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>Partition til gendannelse.</translation>
+        <translation>Oddiel na obnovenie</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="434"/>
@@ -185,14 +184,14 @@
         <location filename="../src/clone.cpp" line="470"/>
         <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
-        <translation>Vil du virkelig skrive et billede af en partition tilbage?</translation>
+        <translation>Naozaj chcete zapísať späť obraz diskovej oblasti?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="591"/>
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren?
 </comment>
-        <translation>Der er en root- eller home-partition på harddisken. Vil du fortsætte?</translation>
+        <translation>Na pevnom disku je koreňový alebo domáci oddiel. Chcete pokračovať?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="362"/>
@@ -200,32 +199,32 @@
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
-        <translation>Der er ikke nok plads på harddisken til sikkerhedskopien. Sikkerhedskopieringen er annulleret.</translation>
+        <translation>Na pevnom disku nie je dostatok miesta na zálohovanie. Zálohovanie sa zruší.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="673"/>
         <source>You must select a gz.fsa file or an img.fsa file.</source>
         <comment>Sie müssen eine gz.fsa- oder eine img.fsa-Datei auswählen.
 </comment>
-        <translation>Du skal vælge en gz.fsa fil eller en img.fsa.</translation>
+        <translation>Izberite datoteko gz.fsa ali datoteko img.fsa.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="702"/>
         <source>The disk to be recovered </source>
         <comment>Die wiederherzustellende Festplatte </comment>
-        <translation>Den disk, der skal gendannes</translation>
+        <translation>Disk, ktorý sa má obnoviť</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="703"/>
         <source> does not coincide with the saved </source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>ikke falder sammen med den gemte</translation>
+        <translation> nezhoduje sa so spaseným</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="721"/>
         <source>Do you really want to write back an image of the hard disk? </source>
         <comment> Wollen Sie wirklich ein Abbild der Festplatte zurückschreiben? </comment>
-        <translation> Vil du virkelig gendanne billedet af den harddisk? </translation>
+        <translation> Ali želite obnoviti pošteno sliko trdega diska? </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="742"/>
@@ -233,7 +232,7 @@
         <location filename="../src/clone.cpp" line="2009"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>Ja</translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="743"/>
@@ -241,134 +240,139 @@
         <location filename="../src/clone.cpp" line="2008"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>Nej</translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="773"/>
         <source>Save Harddrive Image</source>
         <comment>Festplatten Abbild erstellen</comment>
-        <translation>Gemme harddisk Image</translation>
+        <translation>Shranite sliko Harddrive</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1286"/>
         <location filename="../src/clone.cpp" line="1311"/>
         <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
         <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
-        <translation>Advarsel: Dette er en live backup. Du må ikke afslutte programmet. Systemet kan blive ødelagt. Vil du afslutte alligevel?</translation>
+        <translation>Varovanie: Toto je živá záloha. Neukončujte program. Mohlo by dôjsť k zničeniu systému. Chcete aj tak ukončiť?</translation>
+    </message>
+    <message>
+        <source>Do you really want to stop backing up or restoring the partition?</source>
+        <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
+        <translation type="vanished">Do you really want to break the save or restore from the partition?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1758"/>
         <source>gzip-standard</source>
         <comment>gzip-standard</comment>
-        <translation>gzip</translation>
+        <translation>gzip-štandard</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1762"/>
         <source>No compression</source>
         <comment>keine Kompressiom</comment>
-        <translation>Ingen komprimering</translation>
+        <translation>Žiadna kompresia</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1765"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
-        <translation>Navn på backup-fil:</translation>
+        <translation>Názov záložného súboru:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1766"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
-        <translation>Partitionens navn:</translation>
+        <translation>Názov oddielu:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1767"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
-        <translation>Partitionstype:</translation>
+        <translation>Typ oddielu:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1768"/>
         <source>UUID: </source>
-        <translation>UUID</translation>
+        <translation>UUID:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1768"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
-        <translation>Beskrivelse:</translation>
+        <translation>Popis:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1769"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
-        <translation>Partitionens størrelse:</translation>
+        <translation>Veľkosť oddielu:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1769"/>
         <location filename="../src/clone.cpp" line="1770"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
-        <translation>Tildeling af partition:</translation>
+        <translation>Priradenie oddielu:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1770"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
-        <translation>Kompression:</translation>
+        <translation>Kompresia:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1771"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
-        <translation>Omtrentlige billedfilstørrelser:</translation>
+        <translation>Približné veľkosti obrázkových súborov:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1783"/>
         <source>Path of the backup file: </source>
         <comment>Pfad der Sicherungsdatei: </comment>
-        <translation>Sti til backup-filen:</translation>
+        <translation>Cesta k záložnému súboru:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1784"/>
         <source>Free space on the hard disk to be backed up to: </source>
         <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
-        <translation>Fri plads på den harddisk, der skal tages backup af:</translation>
+        <translation>Voľné miesto na pevnom disku, na ktorý sa má zálohovať:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1787"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
-        <translation>Andre noter: </translation>
+        <translation>Ďalšie poznámky:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1772"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
-        <translation>der skal beskyttes/sikres partition: / (rodsystemkatalog)</translation>
+        <translation>oddiel, ktorý má byť chránený/zabezpečený: / (adresár koreňového systému)</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1288"/>
         <location filename="../src/clone.cpp" line="1313"/>
         <source>Do you really want to stop the backup or restore of the partition or a hard disk?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition oder der Festplatte beenden?</comment>
-        <translation>Vil du virkelig stoppe sikkerhedskopieringen eller gendannelsen af ​​partitionen eller en harddisk?</translation>
+        <translation>Naozaj chcete zastaviť zálohovanie alebo obnovu oddielu alebo pevného disku?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1777"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
-        <translation>Operativsystem: </translation>
+        <translation>Operačný systém:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1777"/>
         <source>Kernel: </source>
-        <translation>Kernel: </translation>
+        <translation>Jadro:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1779"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
-        <translation>der skal beskyttes/sikres partition: /home</translation>
+        <translation>ktorý má byť chránený/zabezpečený oddiel: /home</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1838"/>
@@ -391,25 +395,25 @@
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
-        <translation>Sikkerhedskopieringen af ​​harddiskbilledet lykkedes ikke.</translation>
+        <translation>Zálohovanie obrazu pevného disku nebolo úspešné.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1205"/>
         <source>The recovery of the partition image was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war erfolgreich.</comment>
-        <translation>Gendannelsen af ​​partitionsbilledet lykkedes.</translation>
+        <translation>Obnova obrazu oddielu bola úspešná.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1212"/>
         <source>Hard disk image recovery was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.</comment>
-        <translation>Gendannelse af harddiskbillede mislykkedes.</translation>
+        <translation>Obnova obrazu pevného disku nebola úspešná.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1218"/>
         <source>The recovery of the partition image was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war nicht erfolgreich.</comment>
-        <translation>Gendannelsen af ​​partitionsbilledet lykkedes ikke.</translation>
+        <translation>Obnova obrazu oddielu nebola úspešná.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="126"/>
@@ -418,37 +422,37 @@
         <location filename="../src/clone.cpp" line="800"/>
         <source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
-        <translation>Eksisterende harddisk</translation>
+        <translation>Existujúci pevný disk</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="794"/>
         <source>Write hard disk image back</source>
         <comment>Festplatten Abbild zurückschreiben</comment>
-        <translation>Genoprette harddisk Image</translation>
+        <translation>Obnoviti Harddrive podoba</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="818"/>
         <source>Save Partition Image</source>
         <comment>Image einer Partition erstellen</comment>
-        <translation>Gem partitionsbillede</translation>
+        <translation>Uložiť obrázok oddielu</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="820"/>
         <source>Save Partition Image</source>
         <comment>Partition Abbild erstellen</comment>
-        <translation>Gem partitionsbillede</translation>
+        <translation>Uložiť obrázok oddielu</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="834"/>
         <source>Writing back the image of a partition</source>
         <comment>Image einer Partition zurückschreiben</comment>
-        <translation>Skriver billedet af en partition tilbage</translation>
+        <translation>Spätný zápis obrazu oddielu</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="836"/>
         <source>Writing back the image of a partition</source>
         <comment>Partition Abbild zurückschreiben</comment>
-        <translation>Skriver billedet af en partition tilbage</translation>
+        <translation>Spätný zápis obrazu oddielu</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="927"/>
@@ -456,7 +460,7 @@
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine gz.fsa Datei auswählen
 </comment>
-        <translation>Du har valgt en mappe. Du skal vælge en gz.fsa fil.
+        <translation>Izberete mapo. Izberite datoteko gz.fsa.
 </translation>
     </message>
     <message>
@@ -464,58 +468,58 @@
         <source>The cloning of the hard disk was successful.</source>
         <comment>Das Klonen der Festplatte war erfolgreich.
 </comment>
-        <translation>Klon af harddisken var med held.</translation>
+        <translation>Klon trdega diska je bil uspešno.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="308"/>
         <source>There is a root or home partition. Do you want to continue?</source>
         <comment>Es ist eine root- oder home Partition vorhanden. Wollen Sie fortfahren?
 </comment>
-        <translation>Der er en rod- eller hjemmepartition. Vil du fortsætte?</translation>
+        <translation>Existuje koreňový alebo domáci oddiel. Chcete pokračovať?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="537"/>
         <source>There is a root or home partition on the hard disk. Do you want to continue?</source>
         <comment>Auf der Festplatte ist eine root- oder home Partition. Wollen Sie fortfahren.
 </comment>
-        <translation>Der er en root- eller home-partition på harddisken. Vil du fortsætte?</translation>
+        <translation>Na pevnom disku je koreňový alebo domáci oddiel. Chcete pokračovať?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1126"/>
         <source>The backup of the hard disk image was successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war erfolgreich.</comment>
-        <translation>Sikkerhedskopieringen af ​​harddiskbilledet lykkedes.</translation>
+        <translation>Zálohovanie obrazu pevného disku bolo úspešné.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1131"/>
         <source>The backup of the image of the partition was successful.</source>
         <comment>Die Sichern des Abbildes der Partition war erfolgreich.</comment>
-        <translation>Sikkerhedskopieringen af ​​billedet af partitionen lykkedes.</translation>
+        <translation>Zálohovanie obrazu oddielu bolo úspešné.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1138"/>
         <source>The cloning of the hard disk was not successful.</source>
         <comment>Das Klonen der Festplatte war nicht erfolgreich.
 </comment>
-        <translation>Klon af harddisken var ikke korrekt.</translation>
+        <translation>Klon trdega diska ni bilo uspešno.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1145"/>
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Die Sichern des Abbildes der Festplatte war nicht erfolgreich.</comment>
-        <translation>Sikkerhedskopieringen af ​​harddiskbilledet lykkedes ikke.</translation>
+        <translation>Zálohovanie obrazu pevného disku nebolo úspešné.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1152"/>
         <source>Saving the image of the partition was not successful.</source>
         <comment>Die Sichern des Abbildes der Partition war nicht erfolgreich.</comment>
-        <translation>Det lykkedes ikke at gemme billedet af partitionen.</translation>
+        <translation>Uloženie obrazu oddielu nebolo úspešné.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1200"/>
         <source>The hard disk image recovery was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich</comment>
-        <translation>Gendannelsen af ​​harddiskbilledet lykkedes.</translation>
+        <translation>Obnova obrazu pevného disku bola úspešná.</translation>
     </message>
 </context>
 <context>
@@ -536,49 +540,49 @@
         <location filename="../src/dir.cpp" line="92"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
-        <translation>gzip hurtigt</translation>
+        <translation>GZIP hitro</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="93"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
-        <translation>gzip standard</translation>
+        <translation>GZIP standard</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="94"/>
         <source>gzip best</source>
         <comment>gzip best</comment>
-        <translation>gzip bedste</translation>
+        <translation>gzip najboljši</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="95"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
-        <translation>bzip2 hurtigt</translation>
+        <translation>BZIP2 hitro</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="96"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
-        <translation>bzip2 god</translation>
+        <translation>BZIP2 dober</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="97"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
-        <translation>LZMA hurtigt</translation>
+        <translation>LZMA hitro</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="98"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
-        <translation>LZMA medium</translation>
+        <translation>LZMA srednje</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="99"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
-        <translation>LZMA bedste</translation>
+        <translation>LZMA najboljši</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="100"/>
@@ -592,26 +596,26 @@
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel:</comment>
-        <translation>Krypter
-backup. nøgle:</translation>
+        <translation>Šifrovať
+zálohovanie. kľúč:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="164"/>
         <source>Backup directory</source>
         <comment>Verzeichnis sichern</comment>
-        <translation>Directory Gem</translation>
+        <translation>Imenik shrani</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="165"/>
         <source>Directory to backup</source>
         <comment>zu sicherndes Verzeichnis</comment>
-        <translation>gemte Register</translation>
+        <translation>za shraniti imenik</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="166"/>
         <source>Location (path) of the backup</source>
         <comment>Ort (Pfad) der Sicherung</comment>
-        <translation>Placering (sti) for sikkerhedskopieringen</translation>
+        <translation>Mesto (pot), varnostne kopije</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="177"/>
@@ -619,26 +623,26 @@ backup. nøgle:</translation>
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel:</comment>
-        <translation>Dekrypter
-backup. nøgle:</translation>
+        <translation>Dešifrovať
+zálohovanie. kľúč:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="178"/>
         <source>Write directory back</source>
         <comment>Verzeichnis zurückschreiben</comment>
-        <translation>Directory gendanne</translation>
+        <translation>Imenik obnovitev</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="179"/>
         <source>Backup file to write back</source>
         <comment>zurück zu schreibende Sicherungsdatei</comment>
-        <translation>tilbage til at skrive backup-fil</translation>
+        <translation>nazaj pisati datoteke varnostne kopije</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="180"/>
         <source>Location (path) of the restore</source>
         <comment>Ort (Pfad) der Wiederherstellung</comment>
-        <translation>Placering (sti) af gendannelsen</translation>
+        <translation>Mesto (pot) postaviti v prejšnje stanje</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="244"/>
@@ -669,14 +673,14 @@ backup. nøgle:</translation>
         <location filename="../src/dir.cpp" line="802"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Opomba</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="619"/>
         <source> links were not correctly restored. The restoring of the lists was only partially successful</source>
         <comment> Links wurden nicht korrekt wiederhergestellt. Die Wiederherstellung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation> links blev ikke gendannet korrekt. Gendannelsen af ​​listerne lykkedes kun delvist</translation>
+        <translation> odkazy neboli správne obnovené. Obnova zoznamov bola úspešná len čiastočne</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="245"/>
@@ -684,7 +688,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Es wurde kein Schlüssel für die Verschlüsselung angegeben.
 </comment>
-        <translation>Der var ingen nøgle til kryptering angivet.
+        <translation>Ni bilo brez ključa za šifriranje določena.
 </translation>
     </message>
     <message>
@@ -693,7 +697,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Bitte wählen Sie das Verzeichnis aus, in das das zu sichernde Verzeichnis bzw die zu sichernde Datei geschrieben werden soll.
 </comment>
-        <translation>Vælg venligst den mappe, hvori den mappe eller fil, der skal sikkerhedskopieres, skal skrives.</translation>
+        <translation>Vyberte adresár, do ktorého sa má zapísať adresár alebo súbor, ktorý sa má zálohovať.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="257"/>
@@ -701,7 +705,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Bitte wählen Sie das zu sichernde Verzeichnis bzw. die zu sichernde Datei aus.
 </comment>
-        <translation>Vælg den mappe eller fil skal gemmes.
+        <translation>Prosimo, izberite v imenik ali datoteko shraniti.
 </translation>
     </message>
     <message>
@@ -710,7 +714,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Du har valgt en fil. Du skal vælge en mappe
+        <translation>Izbrali ste datoteko. Izberite imenik
 </translation>
     </message>
     <message>
@@ -720,7 +724,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
 </comment>
-        <translation>Den centrale længde skal være mellem 6 og 64 tegn
+        <translation>Dolžina ključa mora biti med 6 in 64 znaki
 </translation>
     </message>
     <message>
@@ -728,14 +732,14 @@ backup. nøgle:</translation>
         <location filename="../src/dir.cpp" line="312"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
-        <translation>Indtast adgangskoden igen</translation>
+        <translation>Zadajte heslo znova</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="310"/>
         <location filename="../src/dir.cpp" line="313"/>
         <source>Password:</source>
         <comment>Passwort</comment>
-        <translation>Adgangskode:</translation>
+        <translation>heslo:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="319"/>
@@ -743,13 +747,13 @@ backup. nøgle:</translation>
 </source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
-        <translation>Adgangskoderne stemmer ikke overens.</translation>
+        <translation>Heslá sa nezhodujú.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="342"/>
         <source>The partition file </source>
         <comment>Die Partitionsdatei </comment>
-        <translation>Partitionsfilen </translation>
+        <translation>Pila prekat </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="343"/>
@@ -757,7 +761,7 @@ backup. nøgle:</translation>
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
 </comment>
-        <translation>der findes allerede. Sikkerhedskopien er ikke udført
+        <translation>že obstaja. Varnostno kopiranje se ne izvaja
 </translation>
     </message>
     <message>
@@ -766,14 +770,14 @@ backup. nøgle:</translation>
 </source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>Der blev ikke angivet nogen dekrypteringsnøgle..</translation>
+        <translation>Nebol zadaný žiadny dešifrovací kľúč..</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="494"/>
         <location filename="../src/dir.cpp" line="784"/>
         <source>Do you really want to finish the backup or restore of the directory?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung des Verzeichmisses beenden?</comment>
-        <translation>Ønsker du virkelig at afslutte sikkerhedskopieringen eller gendannelsen af mappen?</translation>
+        <translation>Naozaj chcete dokončiť zálohovanie alebo obnovu adresára?</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="371"/>
@@ -781,7 +785,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Bitte wählen Sie das Verzeichnis aus, in das das das gesicherte Verzeichnis zurück geschrieben werden soll.
 </comment>
-        <translation>Vælg den mappe, hvor det gemte billede vil blive inddrevet.
+        <translation>Izberite imenik, v katerem bo mogoče izterjati shranjene slike.
 </translation>
     </message>
     <message>
@@ -790,7 +794,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Bitte wählen Sie die vorhandene Sicherungsdatei aus.
 </comment>
-        <translation>Vælg den eksisterende sikkerhedskopifil.
+        <translation>Izberite obstoječo datoteko varnostne kopije.
 </translation>
     </message>
     <message>
@@ -799,7 +803,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Sicherungsdatei mit der Dateiendung .fsa auswählen
 </comment>
-        <translation>Du har valgt en mappe. Du har brug for en backup-fil med filtypenavnet .fsa Vælg
+        <translation>Izberete imenik. Backup datoteke s pripono .fsa izberite potrebujete
 </translation>
     </message>
     <message>
@@ -809,22 +813,22 @@ The file extension must be .fsa.
 </source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht ausgesucht 
 Die Dateiendung muss .fsa sein</comment>
-        <translation>Du har valgt en forkert gendannelsesfil.
-Filtypen skal være .fsa.</translation>
+        <translation>Vybrali ste nesprávny súbor obnovy.
+Prípona súboru musí byť .fsa.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="404"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>Den partition, der er krypteret. Bedes du indtaste den nøgle, der</translation>
+        <translation>Particije, ki je šifrirana. Prosimo vnesite ključ</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="421"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>Du har indtastet en forkert adgangskode.</translation>
+        <translation>Vnesli ste napačno geslo.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="541"/>
@@ -832,7 +836,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die Sicherung des Verzeichnisses war erfolgreich.
 </comment>
-        <translation>Sikkerhedskopi af mappen var vellykket.
+        <translation>Varnostno kopiranje imenika je bil uspešen.
 </translation>
     </message>
     <message>
@@ -840,25 +844,25 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/dir.cpp" line="600"/>
         <source> files, </source>
         <comment> Dateien, </comment>
-        <translation> filer,</translation>
+        <translation> datoteke,</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="542"/>
         <source>  directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> mapper, </translation>
+        <translation> imenikov, </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="542"/>
         <source>  links and </source>
         <comment> Links und </comment>
-        <translation> links og </translation>
+        <translation> povezave in </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="542"/>
         <source> specials have been backed up.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation> tilbud er blevet bakket.</translation>
+        <translation> v akciji so bila podprta.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="547"/>
@@ -866,21 +870,21 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die Sicherung des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Sikkerhedskopi af mappen blev afbrudt af brugeren!
+        <translation>Varnostno kopijo mape je prekinil uporabnik!
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="561"/>
         <source> Files, </source>
         <comment> Dateien, </comment>
-        <translation>Filer, </translation>
+        <translation>Datoteke, </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="562"/>
         <location filename="../src/dir.cpp" line="618"/>
         <source> directories, and </source>
         <comment> Verzeichnisse und </comment>
-        <translation> mapper, og </translation>
+        <translation> imenikov, in </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="563"/>
@@ -888,7 +892,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment> Links wurden nicht korrekt gesichert. Die Sicherung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation> Links blev ikke sikkerhedskopieret korrekt. Sikkerhedskopi af mapper var kun delvist vellykket
+        <translation> Povezave niso bili pravilno varnostno. Backup imenikov je bila le delno
 </translation>
     </message>
     <message>
@@ -897,25 +901,25 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die Wiederherstellung des Verzeichnisses war erfolgreich.
 </comment>
-        <translation>Gendannelsen af ​​biblioteket lykkedes.</translation>
+        <translation>Obnova adresára bola úspešná.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="600"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> mapper, </translation>
+        <translation> imenikov, </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="600"/>
         <source> links and </source>
         <comment> Links und </comment>
-        <translation> links og </translation>
+        <translation> povezave in </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="600"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> tilbud er blevet restaureret.</translation>
+        <translation> v akciji so bile obnovljene.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="604"/>
@@ -923,14 +927,14 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die Wiederherstellung des Verzeichnisses wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Gendannelse af mappen var pause af bruger!
+        <translation>Postaviti v prejšnje stanje mape je bil odmor uporabnik!
 </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="617"/>
         <source> files,</source>
         <comment> Dateien, </comment>
-        <translation> filer,</translation>
+        <translation> datoteke,</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="622"/>
@@ -938,7 +942,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
 </comment>
-        <translation>Du har indtastet en forkert adgangskode.
+        <translation>Vnesli ste napačno geslo.
 </translation>
     </message>
     <message>
@@ -947,7 +951,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie haben versucht ein Verzeichnis wiederherzustellen. Die gewählte Datei kann nur Partitionen wiederherstellen.
 </comment>
-        <translation>Du har forsøgt at genskabe en mappe. Den markerede fil kan kun gendanne partitioner.
+        <translation>Ste poskušali obnoviti imenik. Izbrane datoteke lahko obnovite le particije.
 </translation>
     </message>
     <message>
@@ -955,26 +959,26 @@ Filtypen skal være .fsa.</translation>
         <source>Error in fsarchiver. The directory can not be restored!</source>
         <comment>Fehler in fsarchiver. Das Verzeichnis kann nicht wiederhergestellt werden!!
 </comment>
-        <translation>Fejl i fsarchiver. Mappen kan ikke gendannes!</translation>
+        <translation>Napaka v fsarchiver. Imenika ni bilo mogoče obnoviti!</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="636"/>
         <source>Error! The directory was only partially restored.</source>
         <comment>Fehler! Das Verzeichnis wurde nur teilweise wiederhergestellt. 
 </comment>
-        <translation>Fejl!  Gendannelse af mappen var kun delvist vellykket!</translation>
+        <translation>Napaka!  Obnavljanje mape je bila le delno!</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="803"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>Ja</translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="804"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>Nej</translation>
+        <translation>Nie</translation>
     </message>
 </context>
 <context>
@@ -983,13 +987,13 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/mbr.cpp" line="53"/>
         <source>MBR/GPT save</source>
         <comment>MBR/GPT sichern</comment>
-        <translation>MBR/GPT Gem</translation>
+        <translation>MBR/GPT shrani</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="58"/>
         <source>MBR/GPT restore</source>
         <comment>MBR/GPT zurückschreiben</comment>
-        <translation>MBR/GPT gendannelse</translation>
+        <translation>Obnovitev MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="161"/>
@@ -1017,7 +1021,7 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/mbr.cpp" line="464"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Opomba</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="162"/>
@@ -1025,7 +1029,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie müssen eine MBR Sicherungsdatei auswählen.
 </comment>
-        <translation>Du skal vælge MBR fil
+        <translation>Izbrati morate MBR datoteke
 </translation>
     </message>
     <message>
@@ -1034,7 +1038,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie müssen eine GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>Du skal vælge filen GPT-
+        <translation>Izbrati morate datoteko GPT
 </translation>
     </message>
     <message>
@@ -1043,7 +1047,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>MBR wurde erfolgreich gesichert.
 </comment>
-        <translation>MBR&apos;en blev gemt.</translation>
+        <translation>Záznam MBR bol úspešne uložený.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="198"/>
@@ -1051,7 +1055,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>GPT wurde erfolgreich gesichert.
 </comment>
-        <translation>GPT blev gemt.</translation>
+        <translation>Značka GPT bola úspešne uložená.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="196"/>
@@ -1059,7 +1063,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>MBR wurde nicht gesichert.
 </comment>
-        <translation>MBR&apos;en blev ikke gemt. Hvis backup-stien</translation>
+        <translation>Záznam MBR nebol uložený. Ak je cesta zálohy</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="200"/>
@@ -1067,7 +1071,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>GPT wurde nicht gesichert.
 </comment>
-        <translation>GPT blev ikke gemt. Hvis backup-stien</translation>
+        <translation>Značka GPT nebola uložená. Ak je cesta zálohy</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="210"/>
@@ -1075,7 +1079,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Vorsicht: Wollen Sie wirklich die GUID Partitionstabelle zurückschreiben?
 </comment>
-        <translation>Forsigtig: Hvis du virkelig ønsker at skrive tilbage GUID partition table?
+        <translation>Pozor: Če res želite, da napisati nazaj GUID particijski tabeli?
 </translation>
     </message>
     <message>
@@ -1084,7 +1088,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die GUID Partitionstabelle wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>GUID-partitionstabel er vellykket tilbagevenden.
+        <translation>GUID particijski tabeli je uspešno vrnitev.
 </translation>
     </message>
     <message>
@@ -1093,7 +1097,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die GUID Partitionstabelle wurde nicht wieder hergestellt.
 </comment>
-        <translation>GUID-partitionstabel blev ikke gendannet.
+        <translation>GUID particijski tabeli ne ponovno.
 </translation>
     </message>
     <message>
@@ -1102,7 +1106,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Vorsicht: Wollen Sie wirklich den MBR komplett beziehungsweise teilweise zurückschreiben?
 </comment>
-        <translation>Forsigtig: Hvis du virkelig ønsker at skrive tilbage MBR helt eller delvist?
+        <translation>Pozor: Če res želite, da napisati nazaj MBR popolnoma ali delno?
 </translation>
     </message>
     <message>
@@ -1111,7 +1115,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Der Bootloaderbereich wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Afsnittet Boot Loader er vellykket tilbagevenden.
+        <translation>Razdelku Boot Loader je uspešno vrnitev.
 </translation>
     </message>
     <message>
@@ -1120,7 +1124,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Der Bootloaderbereich wurde nicht wieder hergestellt.
 </comment>
-        <translation>Boot loader område blev ikke gendannet.
+        <translation>Območju škorenj nakladač ni saniralo.
 </translation>
     </message>
     <message>
@@ -1128,7 +1132,7 @@ Filtypen skal være .fsa.</translation>
         <source>The partition table was successfully restored.</source>
         <comment>Die Partitionstabelle wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Partitionstabellen er vellykket tilbagevenden.</translation>
+        <translation>Particijski tabeli je uspešno vrnitev.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="263"/>
@@ -1136,7 +1140,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Die Partitionstabelle wurde nicht wieder hergestellt.
 </comment>
-        <translation>Partitionstabel blev ikke gendannet.
+        <translation>Particijski tabeli ne ponovno.
 </translation>
     </message>
     <message>
@@ -1145,7 +1149,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Der MBR wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>MBR er vellykket tilbagevenden.
+        <translation>MBR je uspešno vrnitev.
 </translation>
     </message>
     <message>
@@ -1154,7 +1158,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Der MBR wurde nicht wieder hergestellt.
 </comment>
-        <translation>MBR gendannes ikke.
+        <translation>MBR ne obnovijo.
 </translation>
     </message>
     <message>
@@ -1163,7 +1167,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Vorsicht: Wollen Sie wirklich den verborgenen Bereich zurückschreiben? 
 </comment>
-        <translation>Forsigtig: Hvis du virkelig ønsker at skrive tilbage feltet hemmelige?
+        <translation>Pozor: Če hočeš da pisati nazaj polje skrivnost?
 </translation>
     </message>
     <message>
@@ -1172,7 +1176,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Der verborgene Bereich wurde erfolgreich wieder hergestellt.
 </comment>
-        <translation>Det skjulte område er vellykket tilbagevenden.
+        <translation>Skrito področje je uspešno vrnitev.
 </translation>
     </message>
     <message>
@@ -1181,7 +1185,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Der verborgene Bereich wurde nicht wieder hergestellt.
 </comment>
-        <translation>Det skjulte område blev ikke gendannet.
+        <translation>Skrito področje ni saniralo.
 </translation>
     </message>
     <message>
@@ -1189,21 +1193,21 @@ Filtypen skal være .fsa.</translation>
         <source>Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.</source>
         <comment>Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.
 </comment>
-        <translation>Fejl. Partitionstabellen kan ikke læses. Partitionstabellen kan ikke udlæses. Programmet er afbrudt.</translation>
+        <translation>Chyba. Tabuľka oddielov sa nedá prečítať. Tabuľka oddielov sa nedá prečítať. Program je prerušený.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="360"/>
         <source>The end of hidden area of the 1st Partition could not be read. Only 512 bytes are saved.</source>
         <comment>Das Ende des verborgenen Bereiches der 1. Partition konnte nicht ausgelesen werden. Es werden nur 512 Bytes gesichert.
 </comment>
-        <translation>Slutningen af skjult område i den 1st afsnit kunne ikke læses. Kun 512 byte gemmes.</translation>
+        <translation>Konec skrite površine 1st prekat ni bilo mogoče prebrati. Shranijo se samo 512 bajtov.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="414"/>
         <source>You must select a directory</source>
         <comment>Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Du skal vælge en mappe</translation>
+        <translation>Izberite imenik</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="420"/>
@@ -1211,7 +1215,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Du har valgt en fil. Du skal vælge en mappe
+        <translation>Izbrali ste datoteko. Izberite imenik
 </translation>
     </message>
     <message>
@@ -1220,7 +1224,7 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie müssen die MBR/GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>Du skal vælge MBR/GPT-filen</translation>
+        <translation>Musíte vybrať súbor MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="432"/>
@@ -1228,62 +1232,62 @@ Filtypen skal være .fsa.</translation>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen die MBR/GPT Sicherungsdatei auswählen
 </comment>
-        <translation>Du har valgt en mappe. Du skal vælge den MBR/GPT-backup fil
+        <translation>Izberete imenik. Izberite datoteko varnostne kopije MBR/GPT
 </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="450"/>
         <source> bytes. Do you want to continue?</source>
         <comment> Byte. Wollen Sie fortfahren?</comment>
-        <translation> bytes. Vil du fortsætte?</translation>
+        <translation> bajtov. Chcete pokračovať?</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="441"/>
         <source>, but the backed up hard drive is </source>
         <comment>,  die gesicherte Festplatte ist aber </comment>
-        <translation>, gemte harddisken er </translation>
+        <translation>, shranjene trd voziti se </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="441"/>
         <source> Do you want to continue?</source>
         <comment> Wollen Sie fortfahren?</comment>
-        <translation> Er du sikker?</translation>
+        <translation> si prepričan?</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="441"/>
         <source>You may have selected the wrong hard disk. The hard disk to be restored is </source>
         <comment>Sie haben eventuell eine falsche Festplatte ausgewählt. Die wiederherzustellende Festplatte ist </comment>
-        <translation>Du har muligvis valgt den forkerte harddisk. Harddisken, der skal gendannes, er</translation>
+        <translation>Možno ste vybrali nesprávny pevný disk. Pevný disk, ktorý sa má obnoviť, je</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="449"/>
         <source>You may have selected an incorrect file. The hidden area to be restored has a size of </source>
         <comment>Sie haben eventuell eine falsche Datei ausgewählt. Der wiederherzustellende verborgene Bereich hat eine Größe von</comment>
-        <translation>Du kan have en forkert fil valgt. Gendan det skjulte felt har en størrelse på </translation>
+        <translation>Ste morda narobe izbrana datoteka. Obnovitev skrito polje je velikost </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="450"/>
         <source> bytes. The hidden area of the disk </source>
         <comment> Byte. Der verborgene Bereich von der Festplatte </comment>
-        <translation>byte. Det skjulte område af disken</translation>
+        <translation>bajtov. Skrite površine diska</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="450"/>
         <source> has a size of </source>
         <comment> hat eine Größe von </comment>
-        <translation> har en størrelse på </translation>
+        <translation> je velikost </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="465"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>Ja</translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="466"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>Nej</translation>
+        <translation>Nie</translation>
     </message>
 </context>
 <context>
@@ -1292,241 +1296,241 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/setting.cpp" line="35"/>
         <source>German</source>
         <comment>Deutsch</comment>
-        <translation>Tysk</translation>
+        <translation>Nemški</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>English</source>
         <comment>Englisch</comment>
-        <translation>Engelsk</translation>
+        <translation>Angleščina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Russian</source>
         <comment>Russisch</comment>
-        <translation>Russisk</translation>
+        <translation>Ruščina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Spanish</source>
         <comment>Spanisch</comment>
-        <translation>Spansk</translation>
+        <translation>španski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Italian</source>
         <comment>Italienisch</comment>
-        <translation>Italiensk</translation>
+        <translation>Italijanski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="35"/>
         <source>Chinese</source>
         <comment>Chinesisch</comment>
-        <translation>Kinesisk</translation>
+        <translation>čínsky</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Dutch</source>
         <comment>Niederländisch</comment>
-        <translation>hollandsk</translation>
+        <translation>holandský</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Japanese</source>
         <comment>Japanisch</comment>
-        <translation>Japansk</translation>
+        <translation>Japonski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Arabic</source>
         <comment>Arabisch</comment>
-        <translation>Arabisk</translation>
+        <translation>arabčina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Catalan</source>
         <comment>Katalanisch</comment>
-        <translation>catalansk</translation>
+        <translation>Katalonski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Danish</source>
         <comment>Dänisch</comment>
-        <translation>Danske</translation>
+        <translation>dánčina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>French</source>
         <comment>Französisch</comment>
-        <translation>Fransk</translation>
+        <translation>Francosko</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="36"/>
         <source>Czech</source>
         <comment>Tschechisch</comment>
-        <translation>Tjekkisk</translation>
+        <translation>Češki</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Greek</source>
         <comment>Griechisch</comment>
-        <translation>Græsk</translation>
+        <translation>grécky</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Finnish</source>
         <comment>Finnisch</comment>
-        <translation>Finsk</translation>
+        <translation>Finski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Hindi</source>
         <comment>Hindi</comment>
-        <translation>hindi</translation>
+        <translation>hindčina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Hungarian</source>
         <comment>Ungarisch</comment>
-        <translation>ungarsk</translation>
+        <translation>Madžarski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Armenian</source>
         <comment>Armenisch</comment>
-        <translation>Armensk</translation>
+        <translation>Armenski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Estonian</source>
         <comment>Estnisch</comment>
-        <translation>estisk</translation>
+        <translation>Estonski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Hebrew</source>
         <comment>Hebräisch</comment>
-        <translation>Hebraisk</translation>
+        <translation>Hebrejščina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="37"/>
         <source>Indonesian</source>
         <comment>Indonesisch</comment>
-        <translation>Indonesisk</translation>
+        <translation>Indonezijski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Korean</source>
         <comment>Koreanisch</comment>
-        <translation>koreansk</translation>
+        <translation>Korejski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Norwegian</source>
         <comment>Norwegisch</comment>
-        <translation>norsk</translation>
+        <translation>Norveški</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Polish</source>
         <comment>Polnisch</comment>
-        <translation>Polsk</translation>
+        <translation>Poljski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Romanian</source>
         <comment>Rumänisch</comment>
-        <translation>Rumænsk</translation>
+        <translation>Romunski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Latvian</source>
         <comment>Lettisch</comment>
-        <translation>Lettisk</translation>
+        <translation>Latvijski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Lithuanian</source>
         <comment>Litauisch</comment>
-        <translation>Litauisk</translation>
+        <translation>Litvanski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Portuguese</source>
         <comment>Portugisisch</comment>
-        <translation>Portugisisk</translation>
+        <translation>Portugalski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="38"/>
         <source>Persian</source>
         <comment>Persisch</comment>
-        <translation>Persisk</translation>
+        <translation>perzský</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Slovak</source>
         <comment>Slowakisch</comment>
-        <translation>slovakisk</translation>
+        <translation>Slovaški</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Serbian</source>
         <comment>Serbisch</comment>
-        <translation>Serbisk</translation>
+        <translation>Srbski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Swedish</source>
         <comment>Schwedisch</comment>
-        <translation>Svensk</translation>
+        <translation>Švedski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Turkish</source>
         <comment>Türkisch</comment>
-        <translation>Tyrkisk</translation>
+        <translation>Turška</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Ukrainian</source>
         <comment>Ukrainisch</comment>
-        <translation>Ukrainsk</translation>
+        <translation>Ukrajinski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Urdu</source>
         <comment>Urdu</comment>
-        <translation>Urdu</translation>
+        <translation>urdčina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Thai</source>
         <comment>Thailändisch</comment>
-        <translation>Thai</translation>
+        <translation>Tajski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Vietnamese</source>
         <comment>Vietnamesich</comment>
-        <translation>Vietnamesisk</translation>
+        <translation>Vietnamski</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Bulgarian</source>
         <comment>Bulgarisch</comment>
-        <translation>bulgarsk</translation>
+        <translation>bulharčina</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Slovenian</source>
         <comment>Slowenisch</comment>
-        <translation>slovensk</translation>
+        <translation>slovensky</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="39"/>
         <source>Albanian</source>
         <comment>Albanisch</comment>
-        <translation>albansk</translation>
+        <translation>albánsky</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -1538,25 +1542,25 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/setting.cpp" line="49"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
-        <translation>gzip hurtigt</translation>
+        <translation>GZIP hitro</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
-        <translation>gzip standard</translation>
+        <translation>GZIP standard</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>gzip best</source>
         <comment>gzip best</comment>
-        <translation>gzip bedste</translation>
+        <translation>gzip najboljši</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
-        <translation>bzip2 hurtigt</translation>
+        <translation>BZIP2 hitro</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="49"/>
@@ -1568,25 +1572,25 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/setting.cpp" line="52"/>
         <source>bzip2 good</source>
         <comment>bzip2 good</comment>
-        <translation>bzip2 god</translation>
+        <translation>BZIP2 dober</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
-        <translation>LZMA hurtigt</translation>
+        <translation>LZMA hitro</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
-        <translation>LZMA medium</translation>
+        <translation>LZMA srednje</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
-        <translation>LZMA bedste</translation>
+        <translation>LZMA najboljši</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="52"/>
@@ -1598,7 +1602,7 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/setting.cpp" line="164"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Opomba</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="165"/>
@@ -1614,25 +1618,25 @@ Filtypen skal være .fsa.</translation>
         <location filename="../src/ui/filedialog.ui" line="14"/>
         <source>Description of the backup</source>
         <extracomment>Beschreibung der Sicherung</extracomment>
-        <translation>Beskrivelse af sikkerhedskopien</translation>
+        <translation>Popis zálohovania</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="26"/>
         <source>Cancel</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Annuller</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="39"/>
         <source>Description of the backup:</source>
         <extracomment>Beschreibung der Sicherung:</extracomment>
-        <translation>Beskrivelse af sikkerhedskopien</translation>
+        <translation>Popis zálohovania</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="52"/>
         <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>Back partition</translation>
+        <translation>Uloženie oddielu</translation>
     </message>
     <message>
         <location filename="../src/ui/filedialog.ui" line="80"/>
@@ -1642,37 +1646,37 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-blok-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="43"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
-        <translation>Partition gendanne</translation>
+        <translation>Obnovitvene particije</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="49"/>
         <source>Save Harddrive Image</source>
         <comment>Festplatten Abbild erstellen</comment>
-        <translation>Gemme harddisk Image</translation>
+        <translation>Shranite sliko Harddrive</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="55"/>
         <source>Write hard disk image back</source>
         <comment>Festplatten Abbild zurückschreiben</comment>
-        <translation>Genoprette harddisk Image</translation>
+        <translation>Obnoviti Harddrive podoba</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="82"/>
         <source>Save partition</source>
         <comment>Partition sichern</comment>
-        <translation>Gem partition</translation>
+        <translation>Uložiť oddiel</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="98"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Opomba</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="99"/>
@@ -1696,55 +1700,55 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/mainWindow.cpp" line="256"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
-        <translation>gzip hurtigt</translation>
+        <translation>GZIP hitro</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="257"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
-        <translation>gzip standard</translation>
+        <translation>GZIP standard</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="259"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
-        <translation>bzip2 hurtigt</translation>
+        <translation>BZIP2 hitro</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="260"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
-        <translation>bzip2 god</translation>
+        <translation>BZIP2 dober</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="261"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
-        <translation>LZMA hurtigt</translation>
+        <translation>LZMA hitro</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="262"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
-        <translation>LZMA medium</translation>
+        <translation>LZMA srednje</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="263"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
-        <translation>LZMA bedste</translation>
+        <translation>LZMA najboljši</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="534"/>
         <source>Backup File</source>
         <comment>Sicherungsdatei</comment>
-        <translation>Backup fil</translation>
+        <translation>Záložný súbor</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="535"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
-        <translation>Partition gendanne</translation>
+        <translation>Obnovitvene particije</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="549"/>
@@ -1752,14 +1756,14 @@ p, li { white-space: pre-wrap; }
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel</comment>
-        <translation>Dekrypter
-backup. nøgle:</translation>
+        <translation>Dešifrovať
+zálohovanie. kľúč:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="568"/>
         <source>Backup directory</source>
         <comment>Sicherungsverzeichnis</comment>
-        <translation>Sikkerhedskopimappen:</translation>
+        <translation>Imenika z varnostnimi kopijami:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="582"/>
@@ -1767,8 +1771,8 @@ backup. nøgle:</translation>
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel</comment>
-        <translation>Krypter
-backup. nøgle:</translation>
+        <translation>Šifrovať
+zálohovanie. kľúč:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="342"/>
@@ -1826,13 +1830,21 @@ backup. nøgle:</translation>
         <location filename="../src/mainWindow.cpp" line="2862"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Opomba</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="343"/>
+        <source>Qt-fsarchiver can only be started once. The program must be terminated..
+</source>
+        <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
+</comment>
+        <translation>Qt-fsarchiver možno spustiť iba raz. Program musí byť ukončený.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="258"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
-        <translation>qzip bedst</translation>
+        <translation>qzip najlepšie</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="472"/>
@@ -1845,7 +1857,7 @@ backup. nøgle:</translation>
         <location filename="../src/mainWindow.cpp" line="2784"/>
         <source>Existing partitions:</source>
         <comment>vorhandene Partitionen</comment>
-        <translation>Eksisterende partitioner:</translation>
+        <translation>Obstoječe particije:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="637"/>
@@ -1853,7 +1865,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
 </comment>
-        <translation>Vælg venligst fra backup-mappen.</translation>
+        <translation>Vyberte si z adresára zálohy.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="643"/>
@@ -1869,7 +1881,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
 </comment>
-        <translation>Vælg venligst filnavnet på sikkerhedskopien.</translation>
+        <translation>Vyberte názov súboru zálohy.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="699"/>
@@ -1877,7 +1889,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
 </comment>
-        <translation>Du har valgt en fil. Du skal vælge en mappe
+        <translation>Izbrali ste datoteko. Izberite imenik
 </translation>
     </message>
     <message>
@@ -1898,7 +1910,7 @@ backup. nøgle:</translation>
         <location filename="../src/mainWindow.cpp" line="763"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
-        <translation>Skillevæggen</translation>
+        <translation>Priečka</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="763"/>
@@ -1914,14 +1926,14 @@ backup. nøgle:</translation>
         <location filename="../src/mainWindow.cpp" line="816"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
-        <translation>Indtast adgangskoden igen</translation>
+        <translation>Zadajte heslo znova</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="814"/>
         <location filename="../src/mainWindow.cpp" line="817"/>
         <source>Password:</source>
         <comment>Passwort</comment>
-        <translation>Adgangskode:</translation>
+        <translation>heslo:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="823"/>
@@ -1929,7 +1941,7 @@ backup. nøgle:</translation>
 </source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
-        <translation>Adgangskoderne stemmer ikke overens.</translation>
+        <translation>Heslá sa nezhodujú.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="654"/>
@@ -1939,14 +1951,14 @@ backup. nøgle:</translation>
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
 </comment>
-        <translation>Den centrale længde skal være mellem 6 og 64 tegn
+        <translation>Dolžina ključa mora biti med 6 in 64 znaki
 </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="899"/>
         <source>The partition file</source>
         <comment>Die Partitionsdatei</comment>
-        <translation>Partitionsfilen </translation>
+        <translation>Pila prekat </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="899"/>
@@ -1954,7 +1966,7 @@ backup. nøgle:</translation>
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
 </comment>
-        <translation>der findes allerede. Sikkerhedskopien er ikke udført
+        <translation>že obstaja. Varnostno kopiranje se ne izvaja
 </translation>
     </message>
     <message>
@@ -1964,22 +1976,21 @@ backup. nøgle:</translation>
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>Sikkerhedskopieringen blev afbrudt af brugeren
-</translation>
+        <translation>Zálohovanie bolo prerušené používateľom</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="962"/>
         <location filename="../src/mainWindow.cpp" line="2877"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
-        <translation>Sikkerhedskopieringen udføres</translation>
+        <translation>Záloha sa vykoná</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1129"/>
         <source>No decryption key was specified.</source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>Der var ingen nøgle til at dekryptere angivet.</translation>
+        <translation>Ni bilo brez ključa za dešifriranje določenih.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1141"/>
@@ -1996,34 +2007,27 @@ backup. nøgle:</translation>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
 </comment>
-        <translation>Du har valgt en mappe. Du skal vælge en fil</translation>
+        <translation>Vybrali ste adresár. Musíte vybrať súbor</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1185"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
-        <translation>Den partition, der er krypteret. Bedes du indtaste den nøgle, der</translation>
+        <translation>Particije, ki je šifrirana. Prosimo vnesite ključ</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1203"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
-        <translation>Du har indtastet en forkert adgangskode.</translation>
+        <translation>Vnesli ste napačno geslo.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1221"/>
         <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation> falder ikke sammen med det gemte</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1221"/>
-        <location filename="../src/mainWindow.cpp" line="2765"/>
-        <source>Do you want to continue restore?</source>
-        <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
-        <translation>Vil du fortsætte med at gendanne?</translation>
+        <translation> nezhoduje sa so spaseným</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1245"/>
@@ -2031,7 +2035,7 @@ backup. nøgle:</translation>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
-        <translation>Gendannelsen blev afbrudt af brugeren</translation>
+        <translation>Obnovenie bolo prerušené používateľom</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1257"/>
@@ -2059,14 +2063,14 @@ backup. nøgle:</translation>
         <location filename="../src/mainWindow.cpp" line="1297"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
-        <translation>Skillevæggen</translation>
+        <translation>Priečka</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1336"/>
         <source>The key length must be between 6 and 64 characters.</source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein.
 </comment>
-        <translation>Den centrale længde skal være mellem 6 og 64 tegn</translation>
+        <translation>Dolžina ključa mora biti med 6 in 64 znaki</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1363"/>
@@ -2076,40 +2080,30 @@ backup. nøgle:</translation>
         <translation>The restoring is performed</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2735"/>
-        <source>
-The write-back is canceled.
- </source>
-        <comment>
-Das Zurückschreiben  wird abgebrochen.
- </comment>
-        <translation>Tilbageskrivningen annulleres.</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1655"/>
-        <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
-        <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
-        <translation>Advarsel: Dette er en live backup. Du må ikke afslutte programmet. Systemet kan blive ødelagt. Vil du afslutte alligevel?</translation>
-    </message>
-    <message>
         <location filename="../src/mainWindow.cpp" line="1709"/>
         <source>The partition was not backed up successfully. The free space on the hard drive to be backed up was not sufficient or The file is too large. do not use a FAT partition.
 </source>
         <comment>Die Partition wurde nicht erfolgreich gesichert. Der freie Speicherplatz auf der Festplatte auf die gesichert werden sollte war nicht ausreichend oder die Datei ist zu groß. Benutzen Sie keine FAT Partition.
 </comment>
-        <translation>Partitionen blev ikke sikkerhedskopieret. Der var ikke nok ledig plads på den harddisk, der skulle sikkerhedskopieres, eller filen er for stor. Brug ikke en FAT-partition.</translation>
+        <translation>Oddiel nebol úspešne zálohovaný. Voľné miesto na pevnom disku, ktoré sa má zálohovať, nebolo dostatočné alebo Súbor je príliš veľký. nepoužívajte oddiel FAT.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2103"/>
-        <source>Path of the backup file: </source>
-        <comment>Pfad der Sicherungsdatei: </comment>
-        <translation>Sti til backup-filen:</translation>
+        <location filename="../src/mainWindow.cpp" line="1861"/>
+        <source> specials and the Partition Boot Record have been restored.</source>
+        <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
+        <translation> špeciály a bootovací záznam oddielu boli obnovené.</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="2104"/>
+        <source>Free space on the hard disk to be backed up to: </source>
+        <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
+        <translation>Voľné miesto na pevnom disku, na ktorý sa má zálohovať:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2489"/>
         <source>Existing list entries</source>
         <comment>vorhandene Listeinträge</comment>
-        <translation>Eksisterende listeposter</translation>
+        <translation>Existujúce položky zoznamu</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2520"/>
@@ -2117,7 +2111,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Es ist kein Autrag vorhanden
 </comment>
-        <translation>Der er ingen ordre til rådighed</translation>
+        <translation>Nie je k dispozícii žiadne poradie</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="254"/>
@@ -2135,28 +2129,45 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1153"/>
         <source>You have selected an incorrect recovery file. The file extension must be .fsa</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht. Die Dateiendung muss .fsa sein.</comment>
-        <translation>Du har valgt en forkert gendannelsesfil. Filtypenavnet skal være .fsa</translation>
+        <translation>Vybrali ste nesprávny súbor obnovy. Prípona súboru musí byť .fsa</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1220"/>
         <source>The partition to be recovered  </source>
         <comment>Die wiederherzustellende Partition </comment>
-        <translation>Partitionen, der skal gendannes</translation>
+        <translation>Oddiel, ktorý sa má obnoviť</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1221"/>
+        <location filename="../src/mainWindow.cpp" line="2765"/>
+        <source>Do you want to continue restore?</source>
+        <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
+        <translation>Chcete pokračovať v obnovovaní?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1297"/>
         <source> cannot be unmounted. The program is aborted.</source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
-        <translation> kan ikke afmonteres. Programmet er afbrudt.</translation>
+        <translation> nemožno odmontovať. Program je prerušený.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="343"/>
-        <source>Qt-fsarchiver can only be started once. The program must be terminated..
-</source>
-        <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
-</comment>
-        <translation>Qt-fsarchiver kan kun startes én gang. Programmet skal afsluttes.</translation>
+        <location filename="../src/mainWindow.cpp" line="1430"/>
+        <source>qt-fsarchiver</source>
+        <translation>qt-fsarchiver</translation>
+    </message>
+    <message>
+        <source>Backup and restore partitions, directory and MBR.
+version 2.8.7-2, December 4, 2024</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
+        <translation type="vanished">Zálohovanie a obnovenie priečky, adresár a MBR.
+verzia 2.8.7-2, 4.Decembra 2024</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1439"/>
+        <source>The program must be run with root privileges. The program is terminated.</source>
+        <comment>Das Programm muss mit Root-Rechten gestartet werden. Das Programm wird beendet.</comment>
+        <translation>Program musí byť spustený s oprávneniami root. Program je ukončený.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1485"/>
@@ -2164,7 +2175,7 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1513"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>Ja</translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1486"/>
@@ -2172,7 +2183,7 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1512"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>Nej</translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1745"/>
@@ -2197,7 +2208,7 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1897"/>
         <source> files, </source>
         <comment> Dateien, </comment>
-        <translation> filer,</translation>
+        <translation> datoteke,</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1746"/>
@@ -2210,7 +2221,7 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1894"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
-        <translation> mapper, </translation>
+        <translation> imenikov, </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1746"/>
@@ -2224,13 +2235,13 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1898"/>
         <source> links and </source>
         <comment> Links und </comment>
-        <translation> links og </translation>
+        <translation> povezave in </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1759"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation> specials og Partition Boot Record er blevet understøttet.</translation>
+        <translation> špeciály a Partition Boot Record boli podporené.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1778"/>
@@ -2238,7 +2249,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Die Sicherung der Partition  wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Sikkerhedskopieringen af ​​partitionen blev afbrudt af brugeren!</translation>
+        <translation>Zálohovanie oddielu bolo prerušené používateľom!</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1785"/>
@@ -2246,7 +2257,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt.
 </comment>
-        <translation> Partitionstypen understøttes ikke.</translation>
+        <translation> Typ oddielu nie je podporovaný.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1792"/>
@@ -2254,7 +2265,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
 </comment>
-        <translation>Partitionstypen understøttes ikke. Måske er partitionen krypteret?</translation>
+        <translation>Typ oddielu nie je podporovaný. Možno je oddiel šifrovaný?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1806"/>
@@ -2262,24 +2273,45 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>Sikkerhedskopieringen af ​​partitionen lykkedes kun delvist.</translation>
+        <translation>Zálohovanie oddielu bolo úspešné len čiastočne.</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="2735"/>
+        <source>
+The write-back is canceled.
+ </source>
+        <comment>
+Das Zurückschreiben  wird abgebrochen.
+ </comment>
+        <translation>
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1746"/>
         <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
-        <translation> specials er blevet støttet.</translation>
+        <translation> špeciály boli podporené.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1430"/>
-        <source>qt-fsarchiver</source>
-        <translation>qt-fsarchiver</translation>
+        <location filename="../src/mainWindow.cpp" line="927"/>
+        <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
+        <comment>Auf der festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
+</comment>
+        <translation>Na pevnom disku nie je dostatok miesta na zálohovanie. Zálohovanie sa zruší.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1439"/>
-        <source>The program must be run with root privileges. The program is terminated.</source>
-        <comment>Das Programm muss mit Root-Rechten gestartet werden. Das Programm wird beendet.</comment>
-        <translation>Programmet skal køres med root-rettigheder. Programmet er afsluttet.</translation>
+        <location filename="../src/mainWindow.cpp" line="1431"/>
+        <source>Backup and restore partitions, directory and MBR.
+version 2.8.7-2, December 4, 2024</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
+        <translation>Zálohovanie a obnovenie priečky, adresár a MBR.
+verzia 2.8.7-2, 4.Decembra 2024</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1655"/>
+        <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
+        <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
+        <translation>Varovanie: Toto je živá záloha. Neukončujte program. Mohlo by dôjsť k zničeniu systému. Chcete aj tak ukončiť?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1808"/>
@@ -2287,7 +2319,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment> spezielle Daten wurden gesichert.
 </comment>
-        <translation> specials er blevet støttet.</translation>
+        <translation> špeciály boli podporené.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1811"/>
@@ -2295,7 +2327,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
 </comment>
-        <translation> særlige data blev ikke gemt korrekt.</translation>
+        <translation> špeciálne údaje neboli správne uložené.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1826"/>
@@ -2303,7 +2335,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
 </comment>
-        <translation>Den partition, der skal gendannes, er monteret. Den skal afmonteres først!</translation>
+        <translation>Oddiel, ktorý sa má obnoviť, je pripojený. Najprv ho treba odmontovať!</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1856"/>
@@ -2319,13 +2351,13 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1857"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
-        <translation> tilbud er blevet restaureret.</translation>
+        <translation> v akciji so bile obnovljene.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1861"/>
         <source> links </source>
         <comment> Links </comment>
-        <translation> links</translation>
+        <translation> odkazy</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1866"/>
@@ -2333,7 +2365,7 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!
 </comment>
-        <translation>Gendannelsen af ​​partitionen blev brudt af brugeren!</translation>
+        <translation>Obnova oddielu bola prerušená používateľom!</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1884"/>
@@ -2342,35 +2374,22 @@ Das Zurückschreiben  wird abgebrochen.
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
 </comment>
-        <translation>Gendannelsen af ​​partitionen lykkedes kun delvist.</translation>
+        <translation>Obnova oddielu bola úspešná len čiastočne.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1861"/>
-        <source> specials and the Partition Boot Record have been restored.</source>
-        <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
-        <translation> specials og Partition Boot Record er blevet gendannet.</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="927"/>
-        <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
-        <comment>Auf der festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
+        <location filename="../src/mainWindow.cpp" line="1886"/>
+        <source> specials has been restored.
+</source>
+        <comment> spezielle Daten wurden wiederhergestellt.
 </comment>
-        <translation>Der er ikke nok plads på harddisken til sikkerhedskopien. Sikkerhedskopieringen er annulleret.</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1431"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 2.8.7-2, December 4, 2024</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
-        <translation>Backup og gendanne partitioner, bibliotek og MBR.
-Version 2.8.7-2, 4.December 2024</translation>
+        <translation> špeciály boli obnovené.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1887"/>
         <location filename="../src/mainWindow.cpp" line="1897"/>
         <source> directories and </source>
         <comment> Verzeichnisse und </comment>
-        <translation> mapper og</translation>
+        <translation> adresáre a</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1903"/>
@@ -2378,7 +2397,7 @@ Version 2.8.7-2, 4.December 2024</translation>
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
 </comment>
-        <translation>Du har prøvet at gendanne en partition. Den valgte fil kan kun gendanne mapper. Genstart venligst programmet.</translation>
+        <translation>Pokúsili ste sa obnoviť oddiel. Zvolený súbor môže obnoviť iba adresáre. Reštartujte program.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1906"/>
@@ -2386,7 +2405,7 @@ Version 2.8.7-2, 4.December 2024</translation>
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
 </comment>
-        <translation>Du har indtastet en forkert adgangskode.
+        <translation>Vnesli ste napačno geslo.
 </translation>
     </message>
     <message>
@@ -2395,73 +2414,67 @@ Version 2.8.7-2, 4.December 2024</translation>
 </source>
         <comment>Die Partition in die zurückgeschrieben wird ist zu klein.
 </comment>
-        <translation>Den partition, der skal skrives tilbage til, er for lille.</translation>
+        <translation>Oddiel, do ktorého sa má zapisovať, je príliš malý</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2083"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
-        <translation>Navn på backup-fil:</translation>
+        <translation>Názov záložného súboru:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2084"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
-        <translation>Partitionens navn:</translation>
+        <translation>Názov oddielu:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2085"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
-        <translation>Partitionstype:</translation>
+        <translation>Typ oddielu:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2086"/>
         <source>UUID: </source>
-        <translation>UUID</translation>
+        <translation>UUID:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2086"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
-        <translation>Beskrivelse:</translation>
+        <translation>Popis:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2087"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
-        <translation>Partitionens størrelse:</translation>
+        <translation>Veľkosť oddielu:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2087"/>
         <location filename="../src/mainWindow.cpp" line="2088"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
-        <translation>Tildeling af partition:</translation>
+        <translation>Priradenie oddielu:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2088"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
-        <translation>Kompression:</translation>
+        <translation>Kompresia:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2089"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
-        <translation>Omtrentlige billedfilstørrelser:</translation>
+        <translation>Približné veľkosti obrázkových súborov:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2104"/>
-        <source>Free space on the hard disk to be backed up to: </source>
-        <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
-        <translation>Fri plads på den harddisk, der skal tages backup af:</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="2107"/>
-        <source>Other notes: </source>
-        <comment>weitere Hinweise:</comment>
-        <translation>Andre noter: </translation>
+        <location filename="../src/mainWindow.cpp" line="2103"/>
+        <source>Path of the backup file: </source>
+        <comment>Pfad der Sicherungsdatei: </comment>
+        <translation>Cesta k záložnému súboru:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2735"/>
@@ -2469,40 +2482,33 @@ Version 2.8.7-2, 4.December 2024</translation>
  </source>
         <comment>Die für die Wiederherstellung erforderliche Datei ist nicht vorhanden:
  </comment>
-        <translation>Den fil, der kræves til gendannelsen, er ikke tilgængelig:</translation>
+        <translation>Súbor potrebný na obnovenie nie je k dispozícii:
+</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2764"/>
         <source>The UUID of the partition to be restored  </source>
         <comment>Die UUID der wiederherzustellende Partition </comment>
-        <translation>UUID for den partition, der skal gendannes </translation>
+        <translation>UUID oddielu, ktorý sa má obnoviť</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2765"/>
         <source> does not match the saved UUID  </source>
         <comment> stimmt nicht mit der gesicherten UUID überein</comment>
-        <translation>stemmer ikke overens med det gemte UUID</translation>
+        <translation> sa nezhoduje s uloženým UUID</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2863"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
-        <translation>Der er ikke nok plads på harddisken til sikkerhedskopien. Sikkerhedskopieringen er annulleret.</translation>
+        <translation>Na pevnom disku nie je dostatok miesta na zálohovanie. Zálohovanie sa zruší.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2090"/>
-        <source>to be protected/secured partition: / (root system directory) </source>
-        <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
-        <translation>der skal beskyttes/sikres partition: / (rodsystemkatalog)</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1886"/>
-        <source> specials has been restored.
-</source>
-        <comment> spezielle Daten wurden wiederhergestellt.
-</comment>
-        <translation> specials er blevet gendannet.</translation>
+        <location filename="../src/mainWindow.cpp" line="2107"/>
+        <source>Other notes: </source>
+        <comment>weitere Hinweise:</comment>
+        <translation>Ďalšie poznámky:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1889"/>
@@ -2511,7 +2517,7 @@ Version 2.8.7-2, 4.December 2024</translation>
 </source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
 </comment>
-        <translation> tilbud blev ikke korrekt gendannet.</translation>
+        <translation> špeciály neboli riadne obnovené.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1896"/>
@@ -2519,26 +2525,32 @@ Version 2.8.7-2, 4.December 2024</translation>
 </source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.
 </comment>
-        <translation> særlige data og partitions boot-sektoren blev gendannet.</translation>
+        <translation> boli obnovené špeciálne údaje a zavádzací sektor oddielu.</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="2090"/>
+        <source>to be protected/secured partition: / (root system directory) </source>
+        <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
+        <translation>oddiel, ktorý má byť chránený/zabezpečený: / (adresár koreňového systému)</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2095"/>
         <location filename="../src/mainWindow.cpp" line="2101"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
-        <translation>Operativsystem: </translation>
+        <translation>Operačný systém:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2095"/>
         <location filename="../src/mainWindow.cpp" line="2101"/>
         <source>Kernel: </source>
-        <translation>Kernel: </translation>
+        <translation>Jadro:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2097"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
-        <translation>der skal beskyttes/sikres partition: /home</translation>
+        <translation>ktorý má byť chránený/zabezpečený oddiel: /home</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2123"/>
@@ -2560,13 +2572,13 @@ Version 2.8.7-2, 4.December 2024</translation>
         <source>No USB disk is connected, The program is terminated.</source>
         <comment>Es ist keine USB-Platte angeschlossen, Das Programm wird beendet.
 </comment>
-        <translation>Der er ikke tilsluttet nogen USB-disk, Programmet afsluttes.</translation>
+        <translation>Nie je pripojený žiadny USB disk, Program sa ukončí.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1657"/>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
-        <translation>Vil du virkelig stoppe med at sikkerhedskopiere eller gendanne partitionen?</translation>
+        <translation>Do you really want to break the save or restore from the partition?</translation>
     </message>
 </context>
 <context>
@@ -2574,91 +2586,91 @@ Version 2.8.7-2, 4.December 2024</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="14"/>
         <source>Save/restore partition </source>
-        <translation>Gem/gendan partition</translation>
+        <translation>Uložiť/obnoviť oddiel</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="31"/>
+        <source>Restore partition
+with fsarchi&amp;ver</source>
+        <translation>Obnoviť oddiel
+s fsarchiverom</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="47"/>
         <source>Existing partitions:</source>
-        <translation>Eksisterende partitioner:</translation>
+        <translation>Obstoječe particije:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="467"/>
         <source>Backup directory:</source>
-        <translation>Sikkerhedskopimappen:</translation>
+        <translation>Imenika z varnostnimi kopijami:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="172"/>
         <source>Start the backup of a partition.</source>
-        <translation>Start backup af en partition.</translation>
+        <translation>Start backup particijo.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="175"/>
         <source>Save partition</source>
-        <translation>Partition lagret</translation>
+        <translation>podprta particijo</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="54"/>
+        <source>Notes about the backup are written to a file.</source>
+        <translation>Opombe za varnostno kopiranje je napisan v datoteko.</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="64"/>
+        <source>An existing backup file with the same name is overwritten without confirmation.</source>
+        <translation>Existujúci záložný súbor s rovnakým názvom sa prepíše bez potvrdenia.</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="94"/>
+        <source>Split archive , specified size:</source>
+        <translation>Rozdelený archív, špecifikovaná veľkosť:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="192"/>
         <source>Exit</source>
-        <translation>Udgang</translation>
+        <translation>Izhod</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="182"/>
         <source>Start restore a partition.</source>
-        <translation>Start gendanne en partition.</translation>
+        <translation>Začetek obnoviti particijo.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="185"/>
         <source>Partition restore</source>
-        <translation>Partition gendanne</translation>
+        <translation>Obnovitvene particije</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="338"/>
         <source>elapsed time:</source>
-        <translation>forløbet tid:</translation>
+        <translation>potekli čas:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="348"/>
         <source>On the number saved
 Files/directories:</source>
-        <translation>På nummeret gemt
-Filer/mapper:</translation>
+        <translation>Na uloženom čísle
+Súbory/adresáre:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="356"/>
         <source>already saved 
 files/directories:</source>
-        <translation>allerede gemt
-filer/mapper:</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="54"/>
-        <source>Notes about the backup are written to a file.</source>
-        <translation>Bemærkninger til sikkerhedskopien er skrevet til en fil.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="64"/>
-        <source>An existing backup file with the same name is overwritten without confirmation.</source>
-        <translation>En eksisterende sikkerhedskopifil med samme navn overskrives uden bekræftelse.</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="94"/>
-        <source>Split archive , specified size:</source>
-        <translation>Opdelt arkiv, specificeret størrelse:</translation>
+        <translation>už uložené
+súbory/adresáre:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="23"/>
         <source>&amp;Partition save 
 with fsarchiver</source>
         <extracomment>Partition mit * fsArchiver sichern:</extracomment>
-        <translation>Gem partition
-med fsarkiver</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="31"/>
-        <source>Restore partition
-with fsarchi&amp;ver</source>
-        <translation>Gendan partition
-med fsarkiver</translation>
+        <translation>Uložiť oddiel
+s fsarchiverom</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="231"/>
@@ -2671,55 +2683,35 @@ med fsarkiver</translation>
         <translation>z</translation>
     </message>
     <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="308"/>
-        <source>2</source>
-        <translation>2</translation>
-    </message>
-    <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="578"/>
         <source>Se&amp;ttings</source>
-        <translation>Indstillinger</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="619"/>
-        <source>&amp;Restore partition</source>
-        <translation>Gendan partition</translation>
+        <translation>Nastavenia</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="637"/>
         <source>&amp;Information qt-fsarchiver</source>
-        <translation>Information qt-fsarchiver</translation>
+        <translation>Informácie qt-fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="714"/>
         <source>&amp;Clone HD, HD-Image built and restore</source>
-        <translation>Klon HD, HD-billede bygget og gendan</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="723"/>
-        <source>Order</source>
-        <translation>Bestilling</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/fsarchiverMain.ui" line="732"/>
-        <source>Order list edit</source>
-        <translation>Redigering af ordreliste</translation>
+        <translation>Klonovanie HD, vytvorenie a obnovenie HD obrazu</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="324"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="364"/>
         <source>seconds</source>
-        <translation>allerede gemt</translation>
+        <translation>že shranjene</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="41"/>
         <source>Select the partition to be backed up or written back.</source>
-        <translation>Vælg den partition, der skal sikkerhedskopieres eller skrives tilbage.</translation>
+        <translation>Vyberte oddiel, ktorý chcete zálohovať alebo prepísať späť.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="461"/>
         <source>Directory where the backup file is written or directory where the recovery file is stored.</source>
-        <translation>Bibliotek, hvor sikkerhedskopieringsfilen er skrevet, eller bibliotek, hvor gendannelsesfilen er gemt.</translation>
+        <translation>Adresár, kde je zapísaný záložný súbor alebo adresár, kde je uložený súbor obnovy.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="250"/>
@@ -2730,60 +2722,60 @@ med fsarkiver</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="162"/>
         <source>Name the backup file:</source>
-        <translation>Navngiv backupfilen:</translation>
+        <translation>Pomenujte záložný súbor:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="331"/>
         <location filename="../src/ui/fsarchiverMain.ui" line="399"/>
         <source>minutes</source>
-        <translation>minutter</translation>
+        <translation>minút</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="392"/>
         <source>remaining time:</source>
-        <translation>resterende tid</translation>
+        <translation>Preostali čas</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="128"/>
         <source>Number of processors
 cores for to be used fsarchiver:</source>
-        <translation>Antal processorer
-kerner til at blive brugt fsarchiver:</translation>
+        <translation>Počet procesorov
+jadrá, ktoré sa majú použiť fsarchiver:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="143"/>
         <source>Compression
 setting:</source>
-        <translation>Kompression
-indstilling:</translation>
+        <translation>Kompresia
+nastavenie:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="57"/>
         <source>Notes on the backup</source>
-        <translation>Bemærkninger til backup</translation>
+        <translation>Opombe za varnostno kopiranje</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="67"/>
         <source>overwrite existing backup.</source>
-        <translation>tilgængelig sikkerhedskopi Overskriv</translation>
+        <translation>na voljo varnostne kopije prepisati</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="79"/>
         <source>Encrypt 
 backup key</source>
-        <translation>Krypter
-backup nøgle</translation>
+        <translation>Šifrovať
+záložný kľúč</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="113"/>
         <source>PBR is the first block of a bootable partition.</source>
-        <translation>PBR er første blok af enhver bootbar partition.</translation>
+        <translation>PBR je prvi blok vse bootable prekat.</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="116"/>
         <source>Save PBR</source>
         <extracomment>PBR sichern</extracomment>
-        <translation>Gemme PBR</translation>
+        <translation>Shranite PBR</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="104"/>
@@ -2791,54 +2783,74 @@ backup nøgle</translation>
         <translation>GB</translation>
     </message>
     <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="308"/>
+        <source>2</source>
+        <translation>2</translation>
+    </message>
+    <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="560"/>
         <source>&amp;Actions</source>
-        <translation>Handlinger</translation>
+        <translation>Akcie</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="584"/>
         <source>&amp;Information</source>
-        <translation>Information</translation>
+        <translation>Informácie</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="590"/>
         <source>&amp;Exit</source>
-        <translation>Udgang</translation>
+        <translation>VÝCHOD</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="610"/>
         <source>&amp;Backup partition</source>
-        <translation>Backup partition</translation>
+        <translation>Záložný oddiel</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="619"/>
+        <source>&amp;Restore partition</source>
+        <translation>Obnoviť oddiel</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="628"/>
         <source>&amp;Basic Settings</source>
-        <translation>Grundlæggende indstillinger</translation>
+        <translation>Základné nastavenia</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="646"/>
         <source>Save &amp;MBR/GPT</source>
-        <translation>Gem MBR/GPT</translation>
+        <translation>Uložiť MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="655"/>
         <source>R&amp;estore MBR/GPT</source>
-        <translation>Gendan MBR/GPT</translation>
+        <translation>Obnovte MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="664"/>
         <source>Rest&amp;ore directory </source>
-        <translation>Gendan mappe</translation>
+        <translation>Obnoviť adresár</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="673"/>
         <source>Save &amp;directory </source>
-        <translation>Gem mappe</translation>
+        <translation>Uložiť adresár</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="682"/>
         <source>&amp;Exit program</source>
-        <translation>Afslut program</translation>
+        <translation>Ukončiť program</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="723"/>
+        <source>Order</source>
+        <translation>Objednávka</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="732"/>
+        <source>Order list edit</source>
+        <translation>Úprava zoznamu objednávok</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="199"/>
@@ -2848,17 +2860,17 @@ backup nøgle</translation>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="601"/>
         <source>Basic Settings</source>
-        <translation>Grundlæggende indstillinger</translation>
+        <translation>Základné nastavenia</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="696"/>
         <source>breakprocess</source>
-        <translation>pauseproces</translation>
+        <translation>breakprocess</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="705"/>
         <source>Clone Drive HD-Image save/restore </source>
-        <translation>Clone Drive HD-Image gem/gendan</translation>
+        <translation>Uloženie/obnovenie snímky Clone Drive HD</translation>
     </message>
 </context>
 <context>
@@ -2869,14 +2881,14 @@ backup nøgle</translation>
         <location filename="../src/order.cpp" line="376"/>
         <source>Note</source>
         <comment>Hinweis</comment>
-        <translation>Bemærk</translation>
+        <translation>Poznámka</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="301"/>
         <source>There are no backupfiles to delete.</source>
         <comment>Es sind keine Sicherungdateien zum löschen vorhanden.
 </comment>
-        <translation>Der er ingen backupfiler, der skal slettes</translation>
+        <translation>Nie sú žiadne záložné súbory na vymazanie</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="304"/>
@@ -2884,7 +2896,7 @@ backup nøgle</translation>
 </source>
         <comment>Es werden 
 </comment>
-        <translation>Det vil slette</translation>
+        <translation>Vymaže sa</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="304"/>
@@ -2892,7 +2904,7 @@ backup nøgle</translation>
 </source>
         <comment>Sicherungsdateien gelöscht. Wollen Sie fortfahren?
 </comment>
-        <translation>Ønsker du at fortsætte?</translation>
+        <translation>Chcete pokračovať?</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="322"/>
@@ -2900,25 +2912,25 @@ backup nøgle</translation>
 </source>
         <comment>Die Sicherungsdateien wurden gelöscht.
 </comment>
-        <translation>Backupfilerne blev slettet.</translation>
+        <translation>Záložné súbory boli vymazané.</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="329"/>
         <source>Do you really want to delete all orders?</source>
         <comment>Wollen Sie wirklich alle Aufträge löschen?</comment>
-        <translation>Vil du virkelig slette alle ordrer?</translation>
+        <translation>Naozaj chcete vymazať všetky objednávky?</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="377"/>
         <source>Yes</source>
         <comment>Ja</comment>
-        <translation>Ja</translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location filename="../src/order.cpp" line="378"/>
         <source>No</source>
         <comment>Nein</comment>
-        <translation>Nej</translation>
+        <translation>Nie</translation>
     </message>
 </context>
 <context>
@@ -2927,46 +2939,46 @@ backup nøgle</translation>
         <location filename="../src/ui/clone_dialog.ui" line="14"/>
         <source>Clone hard drive</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>Klone harddisk</translation>
+        <translation>Trd voziti se vegetativno razmnožavanje</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="521"/>
         <source>Image of a &amp;hard disk to create</source>
         <extracomment>sdb</extracomment>
-        <translation>Billede af en harddisk, der skal oprettes</translation>
+        <translation>Obrázok pevného disku na vytvorenie</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="534"/>
         <source>Image of a partition &amp;to create</source>
-        <translation>Billede af en partition, der skal oprettes</translation>
+        <translation>Obrázok oddielu, ktorý sa má vytvoriť</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="573"/>
         <source>Notes on the backup</source>
-        <translation>Bemærkninger til backup</translation>
+        <translation>Opombe za varnostno kopiranje</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="587"/>
         <source>p</source>
-        <translation>s</translation>
+        <translation>p</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="613"/>
         <source>Exit</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Udgang</translation>
+        <translation>Izhod</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="39"/>
         <source>Exist harddrive:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation>Findes harddisk:</translation>
+        <translation>Obstajajo harddrive:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="86"/>
         <source>New harddrive:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation>Ny harddisk:</translation>
+        <translation>Nove harddrive:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="99"/>
@@ -2975,34 +2987,34 @@ backup nøgle</translation>
         <location filename="../src/ui/clone_dialog.ui" line="639"/>
         <location filename="../src/ui/clone_dialog.ui" line="652"/>
         <source>CommandLinkButton</source>
-        <translation>CommandLink-knap</translation>
+        <translation>CommandLinkButton</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="140"/>
         <location filename="../src/ui/clone_dialog.ui" line="205"/>
         <source>seconds</source>
-        <translation>sekunder</translation>
+        <translation>sekund</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="166"/>
         <location filename="../src/ui/clone_dialog.ui" line="231"/>
         <source>minutes</source>
-        <translation>minutter</translation>
+        <translation>minút</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="192"/>
         <source>elapsed time:</source>
-        <translation>forløbet tid:</translation>
+        <translation>potekli čas:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="257"/>
         <source>remaining time:</source>
-        <translation>resterende tid</translation>
+        <translation>Preostali čas</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="286"/>
         <source>already saved:</source>
-        <translation>allerede gemt</translation>
+        <translation>že shranjene</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="302"/>
@@ -3013,17 +3025,17 @@ backup nøgle</translation>
         <location filename="../src/ui/clone_dialog.ui" line="315"/>
         <location filename="../src/ui/clone_dialog.ui" line="341"/>
         <source>hours</source>
-        <translation>timer</translation>
+        <translation>ur</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="367"/>
         <source>Transmission speed:</source>
-        <translation>Datatransmission hastighed</translation>
+        <translation>Hitrost prenosa</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="393"/>
         <source>MB/sec</source>
-        <translation>MB/sek</translation>
+        <translation>MB/sec</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="423"/>
@@ -3034,45 +3046,45 @@ backup nøgle</translation>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="436"/>
         <source>Directory in which the image is written</source>
-        <translation>Register, hvor billedet er skrevet</translation>
+        <translation>Imenik, v katerem je napisano sliko</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="442"/>
         <source>Backup directory:</source>
-        <translation>Sikkerhedskopimappen:</translation>
+        <translation>Imenika z varnostnimi kopijami:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="470"/>
         <source>&amp;Image of a hard disk write back</source>
         <extracomment>sdc</extracomment>
-        <translation>Billede af en harddisk tilbageskrivning</translation>
+        <translation>Obrázok spätného zápisu pevného disku</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="483"/>
         <source>&amp;Clone hard disk</source>
         <extracomment>sda</extracomment>
-        <translation>Klon harddisk</translation>
+        <translation>Klonovanie pevného disku</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="547"/>
         <source>Image of a &amp;partition write back</source>
-        <translation>Billede af en partition skriv tilbage</translation>
+        <translation>Obrázok oddielu odpíše</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="502"/>
         <source>Planned action:</source>
         <extracomment>vorgesehene Aktion:</extracomment>
-        <translation>Foreslåede tiltag:</translation>
+        <translation>Predlagani ukrepi:</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="560"/>
         <source>Use gzip</source>
-        <translation>Brug gzip</translation>
+        <translation>Uporabo gzip</translation>
     </message>
     <message>
         <location filename="../src/ui/clone_dialog.ui" line="600"/>
         <source>Save/Restore</source>
-        <translation>Gem/gendan</translation>
+        <translation>Uložiť/Obnoviť</translation>
     </message>
 </context>
 <context>
@@ -3082,40 +3094,40 @@ backup nøgle</translation>
         <location filename="../src/ui/dir_dialog.ui" line="42"/>
         <source>Save/restore directory</source>
         <extracomment>Verzeichnis sichern/zurückschreiben</extracomment>
-        <translation>Gem/gendan mappe</translation>
+        <translation>Uložiť/obnoviť adresár</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="26"/>
         <source>Exit</source>
         <extracomment>Schließen</extracomment>
-        <translation>Udgang</translation>
+        <translation>Izhod</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="71"/>
         <source>Saved directory</source>
         <extracomment>zu sicherndes Verzeichnis:</extracomment>
-        <translation>Gemt mappe</translation>
+        <translation>Uložený adresár</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="39"/>
         <source>Starting a Backup or Restoring a Directory. </source>
-        <translation>Start af en sikkerhedskopi eller gendannelse af en mappe.</translation>
+        <translation>Spustenie zálohovania alebo obnovy adresára.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="68"/>
         <source>Select the directory that is to be backed up or written back.</source>
-        <translation>Vælg den mappe, der skal sikkerhedskopieres eller skrives tilbage.</translation>
+        <translation>Vyberte adresár, ktorý sa má zálohovať alebo prepísať.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="97"/>
         <source>Directory to which the directory backup is written or from which the recovery file is read.</source>
-        <translation>Bibliotek, som mappesikkerhedskopieringen er skrevet til, eller som gendannelsesfilen læses fra.</translation>
+        <translation>Adresár, do ktorého sa zapisuje záloha adresára alebo z ktorého sa načíta súbor obnovy.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="100"/>
         <source>Location (path) of backup:</source>
         <extracomment>Ort (Pfad) der Sicherung:</extracomment>
-        <translation>Placering (sti) for backup:</translation>
+        <translation>Umiestnenie (cesta) zálohy:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="128"/>
@@ -3129,72 +3141,72 @@ captive Files/directories:</translation>
         <source>Already backed
 Files/directories:</source>
         <extracomment>bereits gesicherte Datein/Verzeichnisse:</extracomment>
-        <translation>Allerede bakket op
-Filer/mapper:</translation>
+        <translation>Už zálohované
+Súbory/adresáre:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="198"/>
         <source>elapsed time:</source>
         <extracomment>vergangene Zeit:</extracomment>
-        <translation>forløbet tid:</translation>
+        <translation>potekli čas:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="224"/>
         <location filename="../src/ui/dir_dialog.ui" line="302"/>
         <source>minutes</source>
         <extracomment>Minuten</extracomment>
-        <translation>minutter</translation>
+        <translation>minút</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="250"/>
         <location filename="../src/ui/dir_dialog.ui" line="315"/>
         <source>seconds</source>
         <extracomment>Sekunden</extracomment>
-        <translation>sekunder</translation>
+        <translation>sekund</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="263"/>
         <source>remaining  time:</source>
         <extracomment>noch zu erwartende Zeit:</extracomment>
-        <translation>resterende tid:</translation>
+        <translation>zostávajúci čas:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="339"/>
         <source>Number of processor cores
 for to be used fsarchiver:</source>
         <extracomment>Anzahl der Prozessorkerne, die für fsarchiver verwendet werden sollen:</extracomment>
-        <translation>Antal processorkerner
-for at blive brugt fsarchiver:</translation>
+        <translation>Počet jadier procesora
+na použitie fsarchiver:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="368"/>
         <source>Compression setting:</source>
         <extracomment>Kompressioneinstellung:</extracomment>
-        <translation>Kompressionsindstilling:</translation>
+        <translation>Nastavenie kompresie:</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="391"/>
         <source>Encrypt
 backup key</source>
-        <translation>Krypter
-backup nøgle</translation>
+        <translation>Šifrovať
+záložný kľúč</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="415"/>
         <source>Identical backup files are overwritten without prior consultation.</source>
-        <translation>Samme backup filer overskrives uden forudgående høring.</translation>
+        <translation>Isti backup datoteke so prepisani brez predhodnega posvetovanja.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="418"/>
         <source>Overwrite existing backup</source>
         <extracomment>vorhandene Sicherung überschreiben</extracomment>
-        <translation>Overskriv eksisterende backup</translation>
+        <translation>Prepísať existujúcu zálohu</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="431"/>
         <source>The directory is written back to the path of origin.
 </source>
-        <translation>Biblioteket skrives tilbage til oprindelsesstien.</translation>
+        <translation>Adresár sa zapíše späť do pôvodnej cesty.</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="435"/>
@@ -3205,7 +3217,7 @@ backup nøgle</translation>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="459"/>
         <source>show hidden directories/files</source>
-        <translation>vis skjulte mapper/filer</translation>
+        <translation>zobraziť skryté adresáre/súbory</translation>
     </message>
     <message>
         <location filename="../src/ui/dir_dialog.ui" line="472"/>
@@ -3219,7 +3231,7 @@ backup nøgle</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="14"/>
         <source>Save / Restore MBR/GPT</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>Gem/gendan MBR/GPT</translation>
+        <translation>Uložiť/obnoviť MBR/GPT</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="27"/>
@@ -3237,7 +3249,7 @@ backup nøgle</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="37"/>
         <source>Restore partition table</source>
         <extracomment>Partitionstabelle wiederherstellen</extracomment>
-        <translation>Gendan partitionstabel</translation>
+        <translation>Obnovenie tabuľky oddielov</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="42"/>
@@ -3249,32 +3261,32 @@ backup nøgle</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="61"/>
         <source>Exit</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Udgang</translation>
+        <translation>Izhod</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="74"/>
         <source>Save / restore MBR</source>
         <extracomment>MBR sichern/zurückschreiben</extracomment>
-        <translation>Spare / genskabe MBR</translation>
+        <translation>Shranjevanje / Obnovitev MBR</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="100"/>
         <source>Directory in which the MBR/GPT is written.</source>
-        <translation>Directory, hvori MBR/GPT er skrevet.</translation>
+        <translation>Adresár, v ktorom je zapísaný MBR/GPT.</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="103"/>
         <source>MBR/GPT backup directory:</source>
         <extracomment>MBR Sicherungsverzeichnis:</extracomment>
-        <translation>MBR/GPT backup bibliotek:</translation>
+        <translation>Záložný adresár MBR/GPT:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="116"/>
         <source>Backup / restore MBR
 from this hard disk:</source>
         <extracomment>MBR von dieser dieser Festplatte sichern / wiederherstellen:</extracomment>
-        <translation>Sikkerhedskopier/gendan MBR
-fra denne harddisk:</translation>
+        <translation>Zálohovanie / obnovenie MBR
+z tohto pevného disku:</translation>
     </message>
     <message>
         <location filename="../src/ui/mbr_dialog.ui" line="170"/>
@@ -3285,8 +3297,8 @@ fra denne harddisk:</translation>
         <location filename="../src/ui/mbr_dialog.ui" line="140"/>
         <source>Existing
 &amp;harddrive:</source>
-        <translation>Eksisterende
-harddisk:</translation>
+        <translation>Existujúce
+pevný disk:</translation>
     </message>
 </context>
 <context>
@@ -3295,25 +3307,25 @@ harddisk:</translation>
         <location filename="../src/ui/order.ui" line="26"/>
         <source>Cancel</source>
         <extracomment>Abbrechen</extracomment>
-        <translation>Annuller</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="39"/>
         <source>Delete order</source>
         <extracomment>Partition sichern</extracomment>
-        <translation>Slet ordre</translation>
+        <translation>Vymazať objednávku</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="62"/>
         <source>Delete all orders</source>
-        <translation>Slet alle ordrer</translation>
+        <translation>Vymazať všetky objednávky</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="14"/>
         <location filename="../src/ui/order.ui" line="75"/>
         <source>Existing orders</source>
         <extracomment>Existing orders</extracomment>
-        <translation>Eksisterende ordrer</translation>
+        <translation>Existujúce objednávky</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="88"/>
@@ -3324,15 +3336,15 @@ harddisk:</translation>
         <location filename="../src/ui/order.ui" line="114"/>
         <source>Number of remaining
 backup files</source>
-        <translation>Antal resterende ordrer
-backup-filer</translation>
+        <translation>Počet zostávajúcich
+záložné súbory</translation>
     </message>
     <message>
         <location filename="../src/ui/order.ui" line="128"/>
         <source>Delete existing orders 
 .fsa files</source>
-        <translation> Sletning af eksisterende ordrer 
-.fsa-filer</translation>
+        <translation>Odstránenie existujúcich objednávok 
+.fsa súbory</translation>
     </message>
 </context>
 <context>
@@ -3340,7 +3352,7 @@ backup-filer</translation>
     <message>
         <location filename="../src/ui/setting.ui" line="14"/>
         <source>Basic settings</source>
-        <translation>Grundlæggende indstillinger</translation>
+        <translation>Základné nastavenia</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="41"/>
@@ -3348,22 +3360,22 @@ backup-filer</translation>
 cores, for fsarchiver
 should be used:</source>
         <extracomment>Anzahl Prozessorenkerne, * die für fsarchiver * verwendet werden sollen:</extracomment>
-        <translation>Antal processorer
-kerner, for fsarchiver
-skal bruges:</translation>
+        <translation>Počet procesorov
+jadrá pre fsarchiver
+treba použiť:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="66"/>
         <source>Standard
 compression:</source>
         <extracomment>Standard*kompression:</extracomment>
-        <translation>Standard
-kompression:</translation>
+        <translation>Štandardné
+kompresia:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="90"/>
         <source>Language:</source>
-        <translation>Sprog:</translation>
+        <translation>jazyk:</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="113"/>
@@ -3389,42 +3401,42 @@ back to the original location</translation>
         <location filename="../src/ui/setting.ui" line="153"/>
         <source>Enable encryption by default</source>
         <extracomment>Verschlüsselung * standardmäßig aktivieren</extracomment>
-        <translation>Aktiver kryptering som standard</translation>
+        <translation>V predvolenom nastavení povoliť šifrovanie</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="166"/>
         <source>Archive file size divided on DVD</source>
         <extracomment>Archiv-Datei auf DVD * Größe aufteilen</extracomment>
-        <translation>Arkivfilstørrelse opdelt på DVD</translation>
+        <translation>Veľkosť archívneho súboru rozdelená na DVD</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="179"/>
         <source>Show passwords</source>
-        <translation>Vis adgangskoder</translation>
+        <translation>Zobraziť heslá</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="192"/>
         <source>Save Settings</source>
         <extracomment>Einstellungen speichern</extracomment>
-        <translation>Gem indstillinger</translation>
+        <translation>Uložiť nastavenia</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="205"/>
         <source>Exit</source>
         <extracomment>Beenden</extracomment>
-        <translation>Udgang</translation>
+        <translation>Izhod</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="218"/>
         <source>Safe PBR by default</source>
         <extracomment>PBR standradmäßig sichern</extracomment>
-        <translation>Sikker PBR som standard</translation>
+        <translation>Bezpečné PBR v predvolenom nastavení</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="231"/>
         <source>Display notes on how to use the program qt-fsarchiver</source>
         <extracomment>Hinweise zum Gebrauch des Programms anzeigen</extracomment>
-        <translation>Vis noter om, hvordan du bruger programmet qt-fsarchiver</translation>
+        <translation>Zobrazte poznámky o tom, ako používať program qt-fsarchiver</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="244"/>
@@ -3434,7 +3446,7 @@ back to the original location</translation>
     <message>
         <location filename="../src/ui/setting.ui" line="267"/>
         <source>zstd level   1: very fast   22:highest compression</source>
-        <translation>zstd level 1: meget hurtig 22: højeste kompression</translation>
+        <translation>zstd level 1:zelo hitro 22:  največja kompresija</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="280"/>
@@ -3447,17 +3459,17 @@ back to the original location</translation>
 slow down the evaluation time. As standard, the 
 evaluation time set with factor 5 * 10 msec
 You can set the factor between 1 and 20.</source>
-        <translation>
-Du kan indstille faktoren mellem 1 og 20.</translation>
+        <translation>Ak program nefunguje správne, môžete
+spomaliť čas hodnotenia. Štandardne je
+čas vyhodnotenia nastavený s faktorom 5 * 10 ms
+Faktor môžete nastaviť medzi 1 a 20.</translation>
     </message>
     <message>
         <location filename="../src/ui/setting.ui" line="299"/>
         <source>Selection of the evaluation time 
 from the terminal program. </source>
-        <translation>Hvis programmet ikke fungerer korrekt, kan du 
-sænke evalueringstiden. Som standard er 
-evalueringstiden indstillet med faktor 5 * 10 msek
-Du kan indstille faktoren mellem 1 og 20.</translation>
+        <translation>Výber času hodnotenia
+z programu terminálu.</translation>
     </message>
 </context>
 </TS>

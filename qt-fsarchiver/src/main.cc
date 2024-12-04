@@ -60,6 +60,7 @@ int sleepfaktor = 5;
 int flag1 = 0;
 int password_ = 0;
 QString list_;
+int good = 0;
 
 int main(int argc, char *argv[])
 {
@@ -108,6 +109,9 @@ list_ = argv[1];
    language[34] = "uk_UK";
    language[35] = "ur_UR";
    language[36] = "vi_VI";
+   language[37] = "bg_BG";
+   language[38] = "sl_SL";
+   language[39] = "sq_SQ";
            
    QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
    setting.beginGroup("Basiseinstellungen");

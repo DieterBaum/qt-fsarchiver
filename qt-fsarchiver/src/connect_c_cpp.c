@@ -67,6 +67,7 @@ float arch_art;
 float ret_fsarchiver;
 char* key ;
 char fsorigdev[100];
+char fsuuid[100];
 extern int btrfs_flag;
 
 
@@ -195,18 +196,25 @@ void meldungen_uebergeben(char* meldung, int auswahl){
      if (auswahl ==1) {
          key = meldung;
          }
-     if (auswahl ==2) {
-     	 strncpy(fsorigdev,meldung,100);
+     if (auswahl ==2) 
+        {
+         strncpy(fsorigdev,meldung,100);
          fsorigdev[99] = 0;
          }
+      if (auswahl ==3) 
+        {
+         strncpy(fsuuid,meldung,100);
+         fsorigdev[99] = 0;
+         }   
     }
 
 char *meldungen_holen(int auswahl){
-      if (auswahl ==1) {
-         return key;
-      }
-      if (auswahl ==2)  
+      if (auswahl ==1) 
+      	 return key;
+      if (auswahl ==2) 
         return fsorigdev;
+      if (auswahl ==3) 
+        return fsuuid;  
       return "-1";
       
 }
@@ -245,9 +253,6 @@ float df(char *device, const char *mountPoint, int flag )
        }		
 			  
 }
-
-
-
 
 float freesize(char *Partition,char *mount, int flag)
 {

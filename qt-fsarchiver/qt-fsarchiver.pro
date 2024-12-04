@@ -174,14 +174,17 @@ TRANSLATIONS += translations/qt-fsarchiver_ar.ts \
                 translations/qt-fsarchiver_pt.ts \
                 translations/qt-fsarchiver_ro.ts \
                 translations/qt-fsarchiver_ru.ts \
-                translations/qt-fsarchiver_sl.ts \
+                translations/qt-fsarchiver_sk.ts \
                 translations/qt-fsarchiver_sr.ts \
                 translations/qt-fsarchiver_sv.ts \
                 translations/qt-fsarchiver_th.ts \
                 translations/qt-fsarchiver_tr.ts \
                 translations/qt-fsarchiver_uk.ts \
                 translations/qt-fsarchiver_ur.ts \
-                translations/qt-fsarchiver_vi.ts
+                translations/qt-fsarchiver_vi.ts \
+                translations/qt-fsarchiver_bg.ts \
+                translations/qt-fsarchiver_sl.ts \
+                translations/qt-fsarchiver_sq.ts
  QMAKE_EXTRA_COMPILERS += lrelease
 lrelease.input  = TRANSLATIONS
 lrelease.output = ${QMAKE_FILE_BASE}.qm
@@ -215,13 +218,16 @@ translations.files = translations/qt-fsarchiver_de.qm \
                 translations/qt-fsarchiver_pl.qm \
                 translations/qt-fsarchiver_pt.qm \
 		translations/qt-fsarchiver_ro.qm \
-                translations/qt-fsarchiver_sl.qm \
+                translations/qt-fsarchiver_sk.qm \
 		translations/qt-fsarchiver_sr.qm \
                 translations/qt-fsarchiver_sv.qm \
                 translations/qt-fsarchiver_th.qm \
 		translations/qt-fsarchiver_tr.qm \
                 translations/qt-fsarchiver_vi.qm \
                 translations/qt-fsarchiver_ur.qm \ 
-                translations/qt-fsarchiver_uk.qm
+                translations/qt-fsarchiver_uk.qm \
+                translations/qt-fsarchiver_bg.qm \
+                translations/qt-fsarchiver_sl.qm \ 
+                translations/qt-fsarchiver_sq.qm
 translations.path = /usr/share/qt$$QT_MAJOR_VERSION/translations
 INSTALLS = target target1 icon autostart translations doc  # polkit               
