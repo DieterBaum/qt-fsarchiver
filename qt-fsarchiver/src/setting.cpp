@@ -89,9 +89,6 @@ DialogSetting::DialogSetting()
         auswertung = setting.value("split").toInt();
         if (auswertung ==1)
            chk_split->setChecked(true); 
-        auswertung = setting.value("Passwort").toInt();
-        if (auswertung ==1)
-           chk_password->setChecked(true);
         auswertung = setting.value("pbr").toInt();
         if (auswertung ==1)
            chk_pbr->setChecked(true);
@@ -144,10 +141,6 @@ void DialogSetting:: setting_save()
             setting.setValue("split",1);
      else
             setting.setValue("split",0);
-     if (chk_password->checkState()) 
-            setting.setValue("Passwort",1);
-     else
-            setting.setValue("Passwort",0);
      if (chk_pbr->checkState()) 
             setting.setValue("pbr",1);
      else

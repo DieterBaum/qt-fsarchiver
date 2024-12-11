@@ -2292,10 +2292,10 @@ Das Zurückschreiben  wird abgebrochen.
     <message>
         <location filename="../src/mainWindow.cpp" line="1431"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.7-2, December 4, 2024</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
+version 2.8.7-3, December 12, 2024</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-3 12.12 2024</comment>
         <translation>پشتیبان گیری و بازیابی پارتیشن ها، دایرکتوری و MBR.
-نسخه 2.8.7-2 2024 دسامبر 4</translation>
+نسخه 2.8.7-3 2024 دسامبر 12</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1655"/>

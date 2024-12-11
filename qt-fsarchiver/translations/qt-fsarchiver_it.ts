@@ -2010,10 +2010,10 @@ chiave di riserva:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1431"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.7-2, December 4, 2024</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
+version 2.8.7-3, December 12, 2024</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-3 12.12 2024</comment>
         <translation>Backup e ripristino partizioni, directory e MBR.
-La versione 2.8.7-2, 4. Dicembre 2024</translation>
+La versione 2.8.7-3, 12. Dicembre 2024</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1439"/>

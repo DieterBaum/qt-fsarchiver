@@ -1,6 +1,9 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-2.8.7-3 11.Dezember 2024.
+    - Fehlerkorrektur beim Sichern von Partitionen.
+    - kleinere Verbesserungen.
 * qt-fsarchiver-2.8.7-2 4.Dezember 2024.
     - Bei allen Sicherungen wird geprüft, ob genügend Platz auf dem Sicherungsmedium vorhanden ist.
     - Im Bereich Aufträge prüft das System, ob die gespeicherte Partition und die zurück zuschreibende Partition übereinstimmt.

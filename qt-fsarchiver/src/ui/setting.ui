@@ -16,10 +16,10 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
+     <x>0</x>
+     <y>0</y>
      <width>451</width>
-     <height>611</height>
+     <height>501</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -166,24 +166,11 @@ to the original location by default</string>
      <string extracomment="Archiv-Datei auf DVD * Größe aufteilen">Archive file size divided on DVD</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="chk_password">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>335</y>
-      <width>441</width>
-      <height>39</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Show passwords</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="cmd_save">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>460</y>
+      <y>430</y>
       <width>431</width>
       <height>27</height>
      </rect>
@@ -196,7 +183,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>500</y>
+      <y>460</y>
       <width>431</width>
       <height>27</height>
      </rect>
@@ -222,7 +209,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>360</y>
+      <y>335</y>
       <width>441</width>
       <height>39</height>
      </rect>
@@ -270,8 +257,8 @@ to the original location by default</string>
    <widget class="QPushButton" name="cmd_zstd">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>500</y>
+      <x>120</x>
+      <y>460</y>
       <width>20</width>
       <height>20</height>
      </rect>
@@ -284,7 +271,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>400</y>
+      <y>380</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -307,7 +294,7 @@ from the terminal program. </string>
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>410</y>
+      <y>390</y>
       <width>51</width>
       <height>27</height>
      </rect>
@@ -325,7 +312,6 @@ from the terminal program. </string>
    <zorder>chk_folder</zorder>
    <zorder>chk_key</zorder>
    <zorder>chk_split</zorder>
-   <zorder>chk_password</zorder>
    <zorder>cmd_save</zorder>
    <zorder>cmd_cancel</zorder>
    <zorder>chk_pbr</zorder>
@@ -346,7 +332,6 @@ from the terminal program. </string>
   <tabstop>chk_key</tabstop>
   <tabstop>chk_folder</tabstop>
   <tabstop>chk_split</tabstop>
-  <tabstop>chk_password</tabstop>
   <tabstop>cmd_save</tabstop>
   <tabstop>cmd_cancel</tabstop>
  </tabstops>

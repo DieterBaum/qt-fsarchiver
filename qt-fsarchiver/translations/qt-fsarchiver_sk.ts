@@ -2158,10 +2158,10 @@ zálohovanie. kľúč:</translation>
     </message>
     <message>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.7-2, December 4, 2024</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
+version 2.8.7-3, December 12, 2024</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-3 12.12 2024</comment>
         <translation type="vanished">Zálohovanie a obnovenie priečky, adresár a MBR.
-verzia 2.8.7-2, 4.Decembra 2024</translation>
+verzia 2.8.7-3, 12.Decembra 2024</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1439"/>
@@ -2302,10 +2302,10 @@ Das Zurückschreiben  wird abgebrochen.
     <message>
         <location filename="../src/mainWindow.cpp" line="1431"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.7-2, December 4, 2024</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-2 4.12 2024</comment>
+version 2.8.7-3, December 12, 2024</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-3 12.12 2024</comment>
         <translation>Zálohovanie a obnovenie priečky, adresár a MBR.
-verzia 2.8.7-2, 4.Decembra 2024</translation>
+verzia 2.8.7-3, 12.Decembra 2024</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1655"/>

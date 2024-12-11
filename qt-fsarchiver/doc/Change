@@ -1,7 +1,10 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
-* qt-fsarchiver-2.8.7-2 4 December 2024.
+* qt-fsarchiver-2.8.7-3 December 11, 2024.
+    - Error correction when backing up partitions.
+    - Minor improvements
+* qt-fsarchiver-2.8.7-2 December 4, 2024.
     - For all backups, the system checks whether there is enough space on the backup medium.
     - In the Orders area, the system checks whether the saved partition and the partition to be written back match.
     - If jobs are cancelled, the fsa files are deleted as they are incorrect.

@@ -87,7 +87,6 @@ int stopFlag;
 int row_1;
 QString order_name;
 int order = 0;
-int run_ = 0;
 QString widget_2_[100]; // ordername
 QString widget_2[100]; // attribute
 int live_flag;
@@ -189,9 +188,12 @@ MWindow::MWindow()
    int i = 0, j = 0;
    QString tmp;
    int temp = 0;
+   QString filename;
    QString rootpath = QDir::rootPath();
    QString homepath = QDir::homePath(); 
-   QString befehl;  
+   QString befehl; 
+   QStringList tmp_;
+   QString user; 
    setupUi(this);
    rdBt_saveFsArchiv->setChecked(true);
    dirModel = new QFileSystemModel;
@@ -206,7 +208,7 @@ MWindow::MWindow()
    pushButton_restore->setEnabled(false);
    // Signal-Slot-Verbindungen  Werkzeugleiste
    //connect( action_Beenden, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
-   connect( action_Beenden, SIGNAL(triggered(bool)), this, SLOT(esc_end()));
+   connect( action_Beenden, SIGNAL(triggered(bool)), this, SLOT(finish()));
    connect( action_partition_save, SIGNAL(triggered(bool)),this, SLOT(save_button()));
    connect( action_partition_restore, SIGNAL(triggered(bool)),this, SLOT(restore_button()));
    connect( action_Information, SIGNAL(triggered(bool)),this, SLOT(info()));
@@ -288,6 +290,44 @@ MWindow::MWindow()
        if(system (befehl.toLatin1().data()))
           befehl = "";
        }
+   // eventuell vorhandene Dateien  aus Vorinstallationen entfernen, die nicht mehr benötigt werde   
+   // zunächst den User ermitteln 
+   filename = homepath + "/.config/qt5-fsarchiver/user.txt";
+   befehl = "lslogins -u 1> " +  filename;
+   if(system (befehl.toLatin1().data()))
+      befehl = "";
+   QFile file5(filename);
+   QTextStream ds1(&file5);
+   QThread::msleep(10 * sleepfaktor);
+   if( file5.open(QIODevice::ReadOnly|QIODevice::Text)) 
+       {
+        while (!ds1.atEnd())
+    	  {
+      	  tmp= ds1.readLine();
+      	  pos = tmp.indexOf("1000");
+      	     if(pos > -1)
+      	        {
+      	        tmp_ = tmp.split(QRegularExpression("\\s+"));
+      	        user = tmp_[1];
+      	        }
+   	  file5.close(); 
+   	  befehl = "rm " +  homepath + "/.config/qt5-fsarchiver/user.txt 2>/dev/null";
+   	  if(system (befehl.toLatin1().data()))
+              befehl = "";
+   	  }
+   }
+   befehl = "rm -r /home/" + user + "/qt5-fs-client 2>/dev/null"; 
+   if(system (befehl.toLatin1().data()))
+      befehl = "";
+   befehl = "rm -r /home/" + user + "/.config/qt5-fs-client 2>/dev/null"; 
+   if(system (befehl.toLatin1().data()))
+      befehl = "";   
+   befehl = "rm -r /home/" + user + "/.config/qt-fsarchiver 2>/dev/null"; 
+   if(system (befehl.toLatin1().data()))
+      befehl = "";
+   befehl = "rm -r /home/" + user + "/.config/qt5-fsarchiver 2>/dev/null"; 
+   if(system (befehl.toLatin1().data()))
+      befehl = "";   	   	      
    // beim Abbruch einer Sicherung bleiben eventuell Daten in /tmp/fsa erhalten.
    // Bei ersten Start werden eventuell vorhandene Dateien gelöscht.
    // Daher darf nach dem Abbruch von Live-Sicherungen keinenfalls die Daten in /tmp/fsa gelöscht werden
@@ -305,7 +345,7 @@ MWindow::MWindow()
             befehl = "";
         temp = 1;    
         }
-    QString filename = homepath + "/.config/qt5-fsarchiver/tmp.txt";
+    filename = homepath + "/.config/qt5-fsarchiver/tmp.txt";
     QFile file4(filename);
     QTextStream ds(&file4);
     QThread::msleep(10 * sleepfaktor);
@@ -344,10 +384,7 @@ MWindow::MWindow()
       return;
       }
    j = 0; 
-   // /home/user/.qt5-fs-client entfernen  wird nicht mehr benötigt, da das Arbeiten mit dem Netzwerk aus dem Code entfernt wurde 
-   befehl = "rm -r " + homepath + "/.qt5-fs-client 2>/dev/null"; 
-   if(system (befehl.toLatin1().data()))
-      befehl = "";
+   
    // Ini-Datei auslesenc
    QFile file(homepath + "/.config/qt5-fsarchiver/qt5-fsarchiver.conf");
    QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
@@ -606,7 +643,6 @@ QString homepath = QDir::homePath();
 if(order == 1)
 {
    save_restorePartiiton_list();
-   run_ = 1;
    return 1;
 }  
      QFile file(folder);
@@ -625,7 +661,6 @@ if(order == 1)
      int zip_zstd;
      bool ok;
      int i = 0;
-     run_ = 1;
      int len = 0;
      int result = 0;
      indicator_reset();
@@ -918,7 +953,7 @@ if(order == 1)
                 		  }
              			}
 //qDebug() << "Befehl" << parameter[0] << parameter[1] << parameter[2] << parameter[3] << parameter[4] << parameter[5] << parameter[6] << parameter[7] << parameter[8] << parameter[9] << parameter[10] << indizierung + 2;
-                                
+                               
                                 // Größe der Partition ermitteln, in die gesichert wird.
                                 result = size_determine(part_size_compress, folder);
                                 if(result == 2)  
@@ -1114,7 +1149,6 @@ QString text;
 QString befehl;
 char * part_;
 char * dev_part;
-run_ = 1;
 int cmp = 0;
 QString attribute;
   chk_pbr->setChecked(false); 
@@ -1428,8 +1462,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.7-2, December 4, 2024",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.7-2, 4.Dezember 2024"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.7-3, December 12, 2024",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.7-3, 12.Dezember 2024"));
       }
 
 int MWindow::Root_Auswertung(){
@@ -1658,6 +1692,23 @@ int ret = 0;
      return ret;     
 }
 
+void MWindow::finish()
+{
+int ret = 0;
+if(good == 1)
+   del_mediafolder();
+if(good ==0)
+    {   
+    ret = question_end(); 
+    if (ret == 2)
+       return;
+    if (ret == 1 )
+      {
+       esc_ = 1;
+       esc_end();
+       } 
+    }     
+}
 
 void MWindow::closeEvent(QCloseEvent *event) 
 {
@@ -1671,19 +1722,12 @@ QString befehl;
        event->ignore();
        return;
        } 
-    if (run_ == 0)
-       {
-       del_mediafolder();
-       esc_end();
-       event->accept();
-       }
-     if (ret == 1 )
+    if (ret == 1 )
           {
           esc_ = 1;
           esc_end();
           event->accept();
           }
-       run_ = 0;
        good = 0;
        
 }
@@ -1757,7 +1801,7 @@ QString befehl;
            tr("The partition was successfully backed up.\n", "Die Partition wurde erfolgreich gesichert.\n") + cnt_regfile_ + 
         tr(" files, ", " Dateien, ") + cnt_dir_ + tr(" directories, ", " Verzeichnisse, ") + cnt_hardlinks_ + tr(" links and ", " Links und ") 
         + cnt_special_ + tr(" specials and the Partition Boot Record have been backed.", " spezielle Daten und der Partition Boot Sektor wurden gesichert."));
-	  }	
+	  }
       if (dialog_auswertung == 0 and err != 10)
        {
        pushButton_save->setEnabled(false);
@@ -2106,7 +2150,7 @@ compress = zip_[zip];
 	     text = text + "" + foldertext + " " + folder + "\n" + foldertext1  +  " " + size_folder + "B";
 	text = text + "\n" + "\n" + tr("Other notes: ", "weitere Hinweise:");
 	filedialog.werte_uebergeben(text);
-        return text;
+	return text;
 }
 
 QString MWindow::format(float zahl)  {
@@ -2330,43 +2374,27 @@ QString pid1;
 QString pid_qt_fsarchiver;
 QString befehl = "";
 int pida1=getppid();
-int ret = 0;
-    pid1 = QString::number(pida1);
-  //  qDebug() << "vor Frage in esc end";
- //   ret = question_end();
- //   if (esc_ == 1) 
- //       ret = 1;  
- //   if(ret == 1)
- //     {
-      befehl = "rm "  + SicherungsFolderFileName;
-      if(system (befehl.toLatin1().data()))
-           befehl = "";
-      int pos = SicherungsFolderFileName.indexOf("fsa");
-      SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
-      SicherungsFolderFileName.insert(pos, QString("txt"));
-      QFile file(SicherungsFolderFileName);
-      if (file.exists()) 
-         befehl = "rm "  + SicherungsFolderFileName + " 2>/dev/null";
-      // pbr-Datei löschen
-      pos = SicherungsFolderFileName.indexOf("txt");
-      SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
-      SicherungsFolderFileName.insert(pos, QString("pbr"));
+int pos = 0;
+      pid1 = QString::number(pida1);
       del_mediafolder();
-      QFile file1(SicherungsFolderFileName);
-      if (file1.exists()) 
-         befehl = "rm "  + SicherungsFolderFileName + " 2>/dev/null";;
-      if(system (befehl.toLatin1().data()))
-         befehl = "";
-      // txt und fsa-Datei löschen 
-       befehl = "rm " + folder_file_ + " 2>/dev/null";
-       if(system (befehl.toLatin1().data()))
-          befehl = ""; 
-       int found=folder_file_.indexOf(".txt");
-       if (found > 0)
-           folder_file_.replace(found, 4, ".fsa"); 
-       befehl = "rm " + folder_file_ + " 2>/dev/null";
-       if(system (befehl.toLatin1().data()))
-          befehl = ""; 
+      if(good == 0)
+         {
+         befehl = "rm "  + SicherungsFolderFileName;   //fsa-Datei wird gelöscht
+         if(system (befehl.toLatin1().data()))
+            befehl = "";
+         pos = SicherungsFolderFileName.indexOf("fsa");
+         SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
+         SicherungsFolderFileName.insert(pos, QString("txt"));
+         befehl = "rm "  + SicherungsFolderFileName + " 2>/dev/null";   //txt-datei wird gelöscht
+         if(system (befehl.toLatin1().data()))
+            befehl = "";
+         pos = SicherungsFolderFileName.indexOf("txt");
+         SicherungsFolderFileName = SicherungsFolderFileName.left(pos);
+         SicherungsFolderFileName.insert(pos, QString("pbr"));
+         befehl = "rm "  + SicherungsFolderFileName + " 2>/dev/null";   //pbr-datei wird gelöscht
+         if(system (befehl.toLatin1().data()))
+            befehl = "";   
+         }    
       if(pida1 > 1) 
          {       
          befehl = "kill -15 " + pid1;  //qt-fsarchiver abbrechen
@@ -2374,9 +2402,6 @@ int ret = 0;
             befehl = "";
          }   
       QApplication::quit();
-    //  }
-      if(ret == 2)
-        return;    
 }
 
 void MWindow::del_mediafolder()
