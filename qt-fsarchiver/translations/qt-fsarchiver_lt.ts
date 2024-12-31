@@ -1291,319 +1291,319 @@ Failo plėtinys turi būti .fsa.</translation>
 <context>
     <name>DialogSetting</name>
     <message>
-        <location filename="../src/setting.cpp" line="35"/>
+        <location filename="../src/setting.cpp" line="40"/>
         <source>German</source>
         <comment>Deutsch</comment>
         <translation>vokiečių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="35"/>
+        <location filename="../src/setting.cpp" line="40"/>
         <source>English</source>
         <comment>Englisch</comment>
         <translation>anglų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="35"/>
+        <location filename="../src/setting.cpp" line="40"/>
         <source>Russian</source>
         <comment>Russisch</comment>
         <translation>rusų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="35"/>
+        <location filename="../src/setting.cpp" line="40"/>
         <source>Spanish</source>
         <comment>Spanisch</comment>
         <translation>ispanų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="35"/>
+        <location filename="../src/setting.cpp" line="40"/>
         <source>Italian</source>
         <comment>Italienisch</comment>
         <translation>italų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="35"/>
+        <location filename="../src/setting.cpp" line="40"/>
         <source>Chinese</source>
         <comment>Chinesisch</comment>
         <translation>kinų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>Dutch</source>
         <comment>Niederländisch</comment>
         <translation>olandų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>Japanese</source>
         <comment>Japanisch</comment>
         <translation>japonų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>Arabic</source>
         <comment>Arabisch</comment>
         <translation>arabų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>Catalan</source>
         <comment>Katalanisch</comment>
         <translation>katalonų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>Danish</source>
         <comment>Dänisch</comment>
         <translation>danų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>French</source>
         <comment>Französisch</comment>
         <translation>prancūzų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="36"/>
+        <location filename="../src/setting.cpp" line="41"/>
         <source>Czech</source>
         <comment>Tschechisch</comment>
         <translation>čekų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Greek</source>
         <comment>Griechisch</comment>
         <translation>graikų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Finnish</source>
         <comment>Finnisch</comment>
         <translation>suomių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Hindi</source>
         <comment>Hindi</comment>
         <translation>hindi</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Hungarian</source>
         <comment>Ungarisch</comment>
         <translation>vengrų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Armenian</source>
         <comment>Armenisch</comment>
         <translation>armėnų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Estonian</source>
         <comment>Estnisch</comment>
         <translation>estų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Hebrew</source>
         <comment>Hebräisch</comment>
         <translation>hebrajų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="37"/>
+        <location filename="../src/setting.cpp" line="42"/>
         <source>Indonesian</source>
         <comment>Indonesisch</comment>
         <translation>indoneziečių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Korean</source>
         <comment>Koreanisch</comment>
         <translation>korėjiečių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Norwegian</source>
         <comment>Norwegisch</comment>
         <translation>norvegų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Polish</source>
         <comment>Polnisch</comment>
         <translation>lenkų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Romanian</source>
         <comment>Rumänisch</comment>
         <translation>rumunų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Latvian</source>
         <comment>Lettisch</comment>
         <translation>latvių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Lithuanian</source>
         <comment>Litauisch</comment>
         <translation>lietuvių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Portuguese</source>
         <comment>Portugisisch</comment>
         <translation>portugalų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="38"/>
+        <location filename="../src/setting.cpp" line="43"/>
         <source>Persian</source>
         <comment>Persisch</comment>
         <translation>persų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Slovak</source>
         <comment>Slowakisch</comment>
         <translation>slovakų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Serbian</source>
         <comment>Serbisch</comment>
         <translation>serbų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Swedish</source>
         <comment>Schwedisch</comment>
         <translation>švedų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Turkish</source>
         <comment>Türkisch</comment>
         <translation>turkų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Ukrainian</source>
         <comment>Ukrainisch</comment>
         <translation>ukrainiečių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Urdu</source>
         <comment>Urdu</comment>
         <translation>urdų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Thai</source>
         <comment>Thailändisch</comment>
         <translation>tajų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Vietnamese</source>
         <comment>Vietnamesich</comment>
         <translation>vietnamiečių</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Bulgarian</source>
         <comment>Bulgarisch</comment>
         <translation>bulgarų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Slovenian</source>
         <comment>Slowenisch</comment>
         <translation>slovėnų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="39"/>
+        <location filename="../src/setting.cpp" line="44"/>
         <source>Albanian</source>
         <comment>Albanisch</comment>
         <translation>albanų</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="49"/>
+        <location filename="../src/setting.cpp" line="54"/>
         <source>lzo</source>
         <comment>lzo</comment>
         <translation>lzo</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="49"/>
+        <location filename="../src/setting.cpp" line="54"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
         <translation>gzip, greitasis</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="49"/>
+        <location filename="../src/setting.cpp" line="54"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
         <translation>gzip, įprastas</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="49"/>
+        <location filename="../src/setting.cpp" line="54"/>
         <source>gzip best</source>
         <comment>gzip best</comment>
         <translation>qzip, stipriausias</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="49"/>
+        <location filename="../src/setting.cpp" line="54"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
         <translation>bzip2, greitasis</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="49"/>
+        <location filename="../src/setting.cpp" line="54"/>
         <source>lz4</source>
         <comment>lz4</comment>
         <translation>lz4</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="52"/>
+        <location filename="../src/setting.cpp" line="57"/>
         <source>bzip2 good</source>
         <comment>bzip2 good</comment>
         <translation>bzip2, geras</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="52"/>
+        <location filename="../src/setting.cpp" line="57"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
         <translation>lzma, greitasis</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="52"/>
+        <location filename="../src/setting.cpp" line="57"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
         <translation>lzma, vidutinis</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="52"/>
+        <location filename="../src/setting.cpp" line="57"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
         <translation>lzma, stipriausias</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="52"/>
+        <location filename="../src/setting.cpp" line="57"/>
         <source>zstd</source>
         <comment>zstd</comment>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="164"/>
+        <location filename="../src/setting.cpp" line="177"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Pastaba</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="165"/>
+        <location filename="../src/setting.cpp" line="178"/>
         <source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
         <comment>Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.
 </comment>
@@ -1689,67 +1689,67 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MWindow</name>
     <message>
-        <location filename="../src/mainWindow.cpp" line="255"/>
+        <location filename="../src/mainWindow.cpp" line="253"/>
         <source>lzo</source>
         <comment>lzo</comment>
         <translation>lzo</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="256"/>
+        <location filename="../src/mainWindow.cpp" line="254"/>
         <source>gzip fast</source>
         <comment>gzip fast</comment>
         <translation>gzip, greitasis</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="257"/>
+        <location filename="../src/mainWindow.cpp" line="255"/>
         <source>gzip standard</source>
         <comment>gzip standard</comment>
         <translation>gzip, įprastas</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="259"/>
+        <location filename="../src/mainWindow.cpp" line="257"/>
         <source>bzip2 fast</source>
         <comment>bzip2 fast</comment>
         <translation>bzip2, greitasis</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="260"/>
+        <location filename="../src/mainWindow.cpp" line="258"/>
         <source>bzip2 good</source>
         <comment> bzip2 good</comment>
         <translation>bzip2, geras</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="261"/>
+        <location filename="../src/mainWindow.cpp" line="259"/>
         <source>lzma fast</source>
         <comment>lzma fast</comment>
         <translation>lzma, greitasis</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="262"/>
+        <location filename="../src/mainWindow.cpp" line="260"/>
         <source>lzma medium</source>
         <comment>lzma medium</comment>
         <translation>lzma, vidutinis</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="263"/>
+        <location filename="../src/mainWindow.cpp" line="261"/>
         <source>lzma best</source>
         <comment>lzma best</comment>
         <translation>lzma, stipriausias</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="534"/>
+        <location filename="../src/mainWindow.cpp" line="581"/>
         <source>Backup File</source>
         <comment>Sicherungsdatei</comment>
         <translation>Atsarginės kopijos rinkmena</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="535"/>
+        <location filename="../src/mainWindow.cpp" line="582"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
         <translation>Atkurti skaidinį</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="549"/>
+        <location filename="../src/mainWindow.cpp" line="596"/>
         <source>Decrypt
 backup. key:</source>
         <comment>Sicherung
@@ -1757,13 +1757,13 @@ entschlüsseln. Schlüssel</comment>
         <translation>Atšifruoti naudojant raktą:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="568"/>
+        <location filename="../src/mainWindow.cpp" line="615"/>
         <source>Backup directory</source>
         <comment>Sicherungsverzeichnis</comment>
         <translation>Atsarginių kopijų katalogas</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="582"/>
+        <location filename="../src/mainWindow.cpp" line="629"/>
         <source>Encrypt
 backup. key:</source>
         <comment>Sicherung
@@ -1771,85 +1771,85 @@ verschlüsseln. Schlüssel</comment>
         <translation>Užšifruoti naudojant raktą:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="342"/>
-        <location filename="../src/mainWindow.cpp" line="636"/>
-        <location filename="../src/mainWindow.cpp" line="642"/>
-        <location filename="../src/mainWindow.cpp" line="653"/>
-        <location filename="../src/mainWindow.cpp" line="661"/>
+        <location filename="../src/mainWindow.cpp" line="394"/>
+        <location filename="../src/mainWindow.cpp" line="681"/>
+        <location filename="../src/mainWindow.cpp" line="687"/>
         <location filename="../src/mainWindow.cpp" line="698"/>
-        <location filename="../src/mainWindow.cpp" line="762"/>
-        <location filename="../src/mainWindow.cpp" line="822"/>
-        <location filename="../src/mainWindow.cpp" line="831"/>
-        <location filename="../src/mainWindow.cpp" line="898"/>
-        <location filename="../src/mainWindow.cpp" line="913"/>
-        <location filename="../src/mainWindow.cpp" line="926"/>
-        <location filename="../src/mainWindow.cpp" line="1128"/>
-        <location filename="../src/mainWindow.cpp" line="1134"/>
-        <location filename="../src/mainWindow.cpp" line="1140"/>
-        <location filename="../src/mainWindow.cpp" line="1152"/>
-        <location filename="../src/mainWindow.cpp" line="1160"/>
+        <location filename="../src/mainWindow.cpp" line="706"/>
+        <location filename="../src/mainWindow.cpp" line="743"/>
+        <location filename="../src/mainWindow.cpp" line="807"/>
+        <location filename="../src/mainWindow.cpp" line="867"/>
+        <location filename="../src/mainWindow.cpp" line="876"/>
+        <location filename="../src/mainWindow.cpp" line="943"/>
+        <location filename="../src/mainWindow.cpp" line="958"/>
+        <location filename="../src/mainWindow.cpp" line="971"/>
+        <location filename="../src/mainWindow.cpp" line="1172"/>
+        <location filename="../src/mainWindow.cpp" line="1178"/>
         <location filename="../src/mainWindow.cpp" line="1184"/>
-        <location filename="../src/mainWindow.cpp" line="1194"/>
-        <location filename="../src/mainWindow.cpp" line="1203"/>
-        <location filename="../src/mainWindow.cpp" line="1244"/>
-        <location filename="../src/mainWindow.cpp" line="1273"/>
-        <location filename="../src/mainWindow.cpp" line="1280"/>
-        <location filename="../src/mainWindow.cpp" line="1296"/>
-        <location filename="../src/mainWindow.cpp" line="1335"/>
-        <location filename="../src/mainWindow.cpp" line="1438"/>
-        <location filename="../src/mainWindow.cpp" line="1484"/>
-        <location filename="../src/mainWindow.cpp" line="1498"/>
-        <location filename="../src/mainWindow.cpp" line="1511"/>
-        <location filename="../src/mainWindow.cpp" line="1708"/>
-        <location filename="../src/mainWindow.cpp" line="1744"/>
-        <location filename="../src/mainWindow.cpp" line="1756"/>
-        <location filename="../src/mainWindow.cpp" line="1777"/>
-        <location filename="../src/mainWindow.cpp" line="1784"/>
-        <location filename="../src/mainWindow.cpp" line="1791"/>
-        <location filename="../src/mainWindow.cpp" line="1805"/>
-        <location filename="../src/mainWindow.cpp" line="1826"/>
-        <location filename="../src/mainWindow.cpp" line="1856"/>
-        <location filename="../src/mainWindow.cpp" line="1860"/>
-        <location filename="../src/mainWindow.cpp" line="1865"/>
+        <location filename="../src/mainWindow.cpp" line="1196"/>
+        <location filename="../src/mainWindow.cpp" line="1204"/>
+        <location filename="../src/mainWindow.cpp" line="1228"/>
+        <location filename="../src/mainWindow.cpp" line="1238"/>
+        <location filename="../src/mainWindow.cpp" line="1247"/>
+        <location filename="../src/mainWindow.cpp" line="1288"/>
+        <location filename="../src/mainWindow.cpp" line="1317"/>
+        <location filename="../src/mainWindow.cpp" line="1324"/>
+        <location filename="../src/mainWindow.cpp" line="1340"/>
+        <location filename="../src/mainWindow.cpp" line="1379"/>
+        <location filename="../src/mainWindow.cpp" line="1482"/>
+        <location filename="../src/mainWindow.cpp" line="1528"/>
+        <location filename="../src/mainWindow.cpp" line="1542"/>
+        <location filename="../src/mainWindow.cpp" line="1555"/>
+        <location filename="../src/mainWindow.cpp" line="1765"/>
+        <location filename="../src/mainWindow.cpp" line="1801"/>
+        <location filename="../src/mainWindow.cpp" line="1813"/>
+        <location filename="../src/mainWindow.cpp" line="1834"/>
+        <location filename="../src/mainWindow.cpp" line="1841"/>
+        <location filename="../src/mainWindow.cpp" line="1848"/>
+        <location filename="../src/mainWindow.cpp" line="1862"/>
         <location filename="../src/mainWindow.cpp" line="1883"/>
-        <location filename="../src/mainWindow.cpp" line="1892"/>
-        <location filename="../src/mainWindow.cpp" line="1903"/>
-        <location filename="../src/mainWindow.cpp" line="1906"/>
-        <location filename="../src/mainWindow.cpp" line="1911"/>
-        <location filename="../src/mainWindow.cpp" line="2519"/>
-        <location filename="../src/mainWindow.cpp" line="2609"/>
-        <location filename="../src/mainWindow.cpp" line="2669"/>
-        <location filename="../src/mainWindow.cpp" line="2676"/>
-        <location filename="../src/mainWindow.cpp" line="2706"/>
-        <location filename="../src/mainWindow.cpp" line="2734"/>
-        <location filename="../src/mainWindow.cpp" line="2835"/>
-        <location filename="../src/mainWindow.cpp" line="2862"/>
+        <location filename="../src/mainWindow.cpp" line="1913"/>
+        <location filename="../src/mainWindow.cpp" line="1917"/>
+        <location filename="../src/mainWindow.cpp" line="1922"/>
+        <location filename="../src/mainWindow.cpp" line="1940"/>
+        <location filename="../src/mainWindow.cpp" line="1949"/>
+        <location filename="../src/mainWindow.cpp" line="1960"/>
+        <location filename="../src/mainWindow.cpp" line="1963"/>
+        <location filename="../src/mainWindow.cpp" line="1968"/>
+        <location filename="../src/mainWindow.cpp" line="2560"/>
+        <location filename="../src/mainWindow.cpp" line="2650"/>
+        <location filename="../src/mainWindow.cpp" line="2710"/>
+        <location filename="../src/mainWindow.cpp" line="2717"/>
+        <location filename="../src/mainWindow.cpp" line="2747"/>
+        <location filename="../src/mainWindow.cpp" line="2775"/>
+        <location filename="../src/mainWindow.cpp" line="2876"/>
+        <location filename="../src/mainWindow.cpp" line="2903"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Pastaba</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="258"/>
+        <location filename="../src/mainWindow.cpp" line="256"/>
         <source>qzip best</source>
         <comment>qzip best</comment>
         <translation>qzip geriausias
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="472"/>
+        <location filename="../src/mainWindow.cpp" line="519"/>
         <source>The file /usr/share/doc/qt-fsarchiver/doc/Readme contains instructions for using the program. Do you still want to see this note? You can change this in the basic settings.</source>
         <comment>In der Datei /usr/share/doc/qt-fsarchiver/doc/Liesmich sind Hinweise zur Nutzung des Programms enthalten. Wollen Sie diesen Hinweis weiterhin sehen? Sie können dies in den Basiseinstellungen ändern.</comment>
         <translation>Instrukcijų kaip naudotis šia progama ieškokite /usr/share/doc/qt-fsarchiver/doc/Readme rinkmenoje. Ar norėtumėte ir toliau matyti šį pranešimą? Pasirinkimą galėsite pakeisti pagrindinėse nuostatose.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="527"/>
-        <location filename="../src/mainWindow.cpp" line="2784"/>
+        <location filename="../src/mainWindow.cpp" line="574"/>
+        <location filename="../src/mainWindow.cpp" line="2825"/>
         <source>Existing partitions:</source>
         <comment>vorhandene Partitionen</comment>
         <translation>Skaidiniai:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="637"/>
+        <location filename="../src/mainWindow.cpp" line="682"/>
         <source>Please select from the backup directory.
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
@@ -1858,15 +1858,15 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="643"/>
+        <location filename="../src/mainWindow.cpp" line="688"/>
         <source>Please select the partition you want to back up.</source>
         <comment>Bitte wählen Sie die zu sichernde Partition aus.
 </comment>
         <translation>Pasirinkite skaidinį, kurio atsarginę kopiją norite sukurti.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="662"/>
-        <location filename="../src/mainWindow.cpp" line="1135"/>
+        <location filename="../src/mainWindow.cpp" line="707"/>
+        <location filename="../src/mainWindow.cpp" line="1179"/>
         <source>Please select the file name of the backup.
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
@@ -1875,7 +1875,7 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="699"/>
+        <location filename="../src/mainWindow.cpp" line="744"/>
         <source>You have selected a file. You must select a directory
 </source>
         <comment>Sie haben eine Datei ausgewählt. Sie müssen ein Verzeichnis auswählen
@@ -1884,27 +1884,27 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="731"/>
-        <location filename="../src/mainWindow.cpp" line="2653"/>
+        <location filename="../src/mainWindow.cpp" line="776"/>
+        <location filename="../src/mainWindow.cpp" line="2694"/>
         <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>Sistemos skaidinys, kurį pasirinkote, šiuo metu programiškai prijungtas (angl. mounted) ir yra naudojamas. Ar tikrai norite kurti atsarginę kopiją programiškai neatjungę to skaidinio?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="739"/>
-        <location filename="../src/mainWindow.cpp" line="2661"/>
+        <location filename="../src/mainWindow.cpp" line="784"/>
+        <location filename="../src/mainWindow.cpp" line="2702"/>
         <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>Namų skaidinys, kurį pasirinkote, šiuo metu programiškai prijungtas prie sistemos (angl. mounted) ir yra naudojamas. Ar tikrai norite kurti atsarginę kopiją programiškai neatjungę to skaidinio?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="763"/>
+        <location filename="../src/mainWindow.cpp" line="808"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
         <translation>Skaidinio</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="763"/>
+        <location filename="../src/mainWindow.cpp" line="808"/>
         <source>cannot be unmounted. The program is aborted.
 </source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
@@ -1913,21 +1913,21 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="813"/>
-        <location filename="../src/mainWindow.cpp" line="816"/>
+        <location filename="../src/mainWindow.cpp" line="858"/>
+        <location filename="../src/mainWindow.cpp" line="861"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
         <translation>Dar kartą įveskite slaptažodį</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="814"/>
-        <location filename="../src/mainWindow.cpp" line="817"/>
+        <location filename="../src/mainWindow.cpp" line="859"/>
+        <location filename="../src/mainWindow.cpp" line="862"/>
         <source>Password:</source>
         <comment>Passwort</comment>
         <translation>Slaptažodis:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="823"/>
+        <location filename="../src/mainWindow.cpp" line="868"/>
         <source>The passwords do not match.
 </source>
         <comment>Die Passwörter stimmen nicht überein.
@@ -1935,9 +1935,9 @@ verschlüsseln. Schlüssel</comment>
         <translation>Slaptažodžiai nesutampa.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="654"/>
-        <location filename="../src/mainWindow.cpp" line="832"/>
-        <location filename="../src/mainWindow.cpp" line="1195"/>
+        <location filename="../src/mainWindow.cpp" line="699"/>
+        <location filename="../src/mainWindow.cpp" line="877"/>
+        <location filename="../src/mainWindow.cpp" line="1239"/>
         <source>The key length must be between 6 and 64 characters
 </source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein
@@ -1946,13 +1946,13 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="899"/>
+        <location filename="../src/mainWindow.cpp" line="944"/>
         <source>The partition file</source>
         <comment>Die Partitionsdatei</comment>
         <translation>Skaidinio rinkmena</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="899"/>
+        <location filename="../src/mainWindow.cpp" line="944"/>
         <source> already exists. The backup is not performed
 </source>
         <comment> ist bereits vorhanden. Die Sicherung wird nicht durchgeführt
@@ -1961,8 +1961,8 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="914"/>
-        <location filename="../src/mainWindow.cpp" line="2836"/>
+        <location filename="../src/mainWindow.cpp" line="959"/>
+        <location filename="../src/mainWindow.cpp" line="2877"/>
         <source>The backup was aborted by the user
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
@@ -1971,21 +1971,21 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="962"/>
-        <location filename="../src/mainWindow.cpp" line="2877"/>
+        <location filename="../src/mainWindow.cpp" line="1007"/>
+        <location filename="../src/mainWindow.cpp" line="2918"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
         <translation>Kuriama atsarginė kopija</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1129"/>
+        <location filename="../src/mainWindow.cpp" line="1173"/>
         <source>No decryption key was specified.</source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
         <translation>Šifravimo raktas nenurodytas.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1141"/>
+        <location filename="../src/mainWindow.cpp" line="1185"/>
         <source>Please select the partition you want to write back.
 </source>
         <comment>Bitte wählen Sie die zurück zu schreibende Partition aus.
@@ -1994,7 +1994,7 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1161"/>
+        <location filename="../src/mainWindow.cpp" line="1205"/>
         <source>You have selected a directory. You must select a file
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
@@ -2003,89 +2003,97 @@ verschlüsseln. Schlüssel</comment>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1185"/>
+        <location filename="../src/mainWindow.cpp" line="1229"/>
         <source>The partition is encrypted. Please enter the key</source>
         <comment>Die Partition ist verschlüsselt. Bitte geben Sie den Schlüssel ein
 </comment>
         <translation>Skaidinys yra užšifruotas. Prašome įvesti jo raktą</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1203"/>
+        <location filename="../src/mainWindow.cpp" line="1247"/>
         <source>You have entered an incorrect password.</source>
         <comment>Sie haben ein falsches Passwort eingegeben. 
 </comment>
         <translation>Įvedėte klaidingą slaptažodį.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1221"/>
+        <location filename="../src/mainWindow.cpp" line="1265"/>
         <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
         <translation> nesutampa su išsaugotu  </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1221"/>
-        <location filename="../src/mainWindow.cpp" line="2765"/>
+        <location filename="../src/mainWindow.cpp" line="1265"/>
+        <location filename="../src/mainWindow.cpp" line="2806"/>
         <source>Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
         <translation>Ar norite tęsti atkūrimą?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1245"/>
-        <location filename="../src/mainWindow.cpp" line="2707"/>
+        <location filename="../src/mainWindow.cpp" line="1289"/>
+        <location filename="../src/mainWindow.cpp" line="2748"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
         <translation>Atkūrimą iš atsarginės kopijos nutraukė naudotojas</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1257"/>
+        <location filename="../src/mainWindow.cpp" line="1301"/>
         <source>There is a file with the contents of the partition boot sector. Do you want to restore the PBR?</source>
         <comment>Es ist eine Datei mit dem Inhalt des Partition Boot Sektors vorhanden. Wollen Sie die Wiederherstellung des PBR durchführen?</comment>
         <translation>Aptikta rinkmena su skaidinio paleidimo įrašu (PBR). Ar norėtumėte atkurti PBR?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1274"/>
-        <location filename="../src/mainWindow.cpp" line="2670"/>
+        <location filename="../src/mainWindow.cpp" line="1318"/>
+        <location filename="../src/mainWindow.cpp" line="2711"/>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
         <translation>Pasirinktas atkurtinas sistemos skaidinys yra programiškai prijungtas (angl. mounted), todėl į jį negalima atkurti duomenų. Tokiu atveju naudokite demonstracinę laikmeną (LiveCD, LiveDVD, LiveUSB).</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1281"/>
-        <location filename="../src/mainWindow.cpp" line="2677"/>
+        <location filename="../src/mainWindow.cpp" line="1325"/>
+        <location filename="../src/mainWindow.cpp" line="2718"/>
         <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
         <translation>Pasirinktas atkurtinas namų skaidinys yra programiškai prijungtas (angl. mounted), todėl į jį negalima atkurti duomenų. Tokiu atveju naudokite demonstracinę laikmeną (LiveCD, LiveDVD, LiveUSB).</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1297"/>
+        <location filename="../src/mainWindow.cpp" line="1341"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
         <translation>Skaidinio </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1336"/>
+        <location filename="../src/mainWindow.cpp" line="1380"/>
         <source>The key length must be between 6 and 64 characters.</source>
         <comment>Die Schlüssellänge muss zwischen 6 und 64 Zeichen sein.
 </comment>
         <translation>Rakto ilgis turi būti nuo 6 iki 64 ženklų.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1363"/>
-        <location filename="../src/mainWindow.cpp" line="2785"/>
+        <location filename="../src/mainWindow.cpp" line="1407"/>
+        <location filename="../src/mainWindow.cpp" line="2826"/>
         <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
         <translation>Atkūrinėjama.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1430"/>
+        <location filename="../src/mainWindow.cpp" line="1474"/>
         <source>qt-fsarchiver</source>
         <translation>qt-fsarchiver</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2735"/>
+        <location filename="../src/mainWindow.cpp" line="1475"/>
+        <source>Backup and restore partitions, directory and MBR.
+version 2.8.8-0, December 31, 2024</source>
+        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.8-0, 31.Dezember 2024</comment>
+        <translation>Atsarginė kopija un atjaunot starpsienas, direktoriju un MBR.
+versija 2.8.8-0, 31.Gruodis 2024</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="2776"/>
         <source>
 The write-back is canceled.
  </source>
@@ -2095,37 +2103,37 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Atgriezeniskais ieraksts tiek atcelts.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1439"/>
+        <location filename="../src/mainWindow.cpp" line="1483"/>
         <source>The program must be run with root privileges. The program is terminated.</source>
         <comment>Das Programm muss mit Root-Rechten gestartet werden. Das Programm wird beendet.</comment>
         <translation>Programa turi būti paleista su root teisėmis. Programa nutraukiama.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1655"/>
+        <location filename="../src/mainWindow.cpp" line="1699"/>
         <source>Warning: This is a live backup. Do not exit the program. The system could be destroyed. Do you want to quit anyway?</source>
         <comment>Warnung: Das ist eine Live-Sicherung. Beenden Sie nicht das Programm. Das System könnte zerstört werden. Wollen Sie trotzdem beenden?</comment>
         <translation>Įspėjimas: Įspėjimas: Tai yra atsarginė kopija. Neišeikite iš programos. Sistema gali būti sunaikinta. Ar vis dėlto norite išeiti?</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1861"/>
+        <location filename="../src/mainWindow.cpp" line="1918"/>
         <source> specials and the Partition Boot Record have been restored.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.</comment>
         <translation>specialieji ir skirsnio įkrovos įrašas buvo atkurti.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2104"/>
+        <location filename="../src/mainWindow.cpp" line="2166"/>
         <source>Free space on the hard disk to be backed up to: </source>
         <comment>Freier Speicherplatz auf der Festplatte auf die gesichert wird: </comment>
         <translation>Laisva vieta standžiajame diske, į kurią bus kuriama atsarginė kopija:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2489"/>
+        <location filename="../src/mainWindow.cpp" line="2530"/>
         <source>Existing list entries</source>
         <comment>vorhandene Listeinträge</comment>
         <translation>Esami sąrašo įrašai</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2520"/>
+        <location filename="../src/mainWindow.cpp" line="2561"/>
         <source>There is no order available
 </source>
         <comment>Es ist kein Autrag vorhanden
@@ -2133,7 +2141,7 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Nėra užsakymo</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2735"/>
+        <location filename="../src/mainWindow.cpp" line="2776"/>
         <source>The file required for the restore is not available:
  </source>
         <comment>Die für die Wiederherstellung erforderliche Datei ist nicht vorhanden:
@@ -2142,57 +2150,57 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2764"/>
+        <location filename="../src/mainWindow.cpp" line="2805"/>
         <source>The UUID of the partition to be restored  </source>
         <comment>Die UUID der wiederherzustellende Partition </comment>
         <translation>Atkuriamo skirsnio UUID</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2765"/>
+        <location filename="../src/mainWindow.cpp" line="2806"/>
         <source> does not match the saved UUID  </source>
         <comment> stimmt nicht mit der gesicherten UUID überein</comment>
         <translation>nesutampa su išsaugotu UUID</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2863"/>
+        <location filename="../src/mainWindow.cpp" line="2904"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
         <translation>Kietajame diske nepakanka vietos atsarginei kopijai kurti. Atsarginė kopija atšaukta.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="254"/>
+        <location filename="../src/mainWindow.cpp" line="252"/>
         <source>lz4</source>
         <comment>lz4</comment>
         <translation>lz4</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="264"/>
+        <location filename="../src/mainWindow.cpp" line="262"/>
         <source>zstd</source>
         <comment>zstd</comment>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1153"/>
+        <location filename="../src/mainWindow.cpp" line="1197"/>
         <source>You have selected an incorrect recovery file. The file extension must be .fsa</source>
         <comment>Sie haben eine falsche Wiederherstellungsdatei ausgesucht. Die Dateiendung muss .fsa sein.</comment>
         <translation>Jūs pasirinkote neteisingą atkūrimo failą. Failo plėtinys turi būti .fsa</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1220"/>
+        <location filename="../src/mainWindow.cpp" line="1264"/>
         <source>The partition to be recovered  </source>
         <comment>Die wiederherzustellende Partition </comment>
         <translation>Atkuriamas skaidinys  </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1297"/>
+        <location filename="../src/mainWindow.cpp" line="1341"/>
         <source> cannot be unmounted. The program is aborted.</source>
         <comment> kann nicht ausgehängt werden. Das Programm wird abgebrochen
 </comment>
         <translation> negalima atkabinti. Programa nutraukta.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="343"/>
+        <location filename="../src/mainWindow.cpp" line="395"/>
         <source>Qt-fsarchiver can only be started once. The program must be terminated..
 </source>
         <comment>Qt-fsarchiver kann nur einmal gestartet werden. Das Programm muss beendet werden.
@@ -2200,24 +2208,24 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Vienu metu galite paleisti tik vieną Qt-fsarchiver programą. Teks užverti programą.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1485"/>
-        <location filename="../src/mainWindow.cpp" line="1500"/>
-        <location filename="../src/mainWindow.cpp" line="1513"/>
+        <location filename="../src/mainWindow.cpp" line="1529"/>
+        <location filename="../src/mainWindow.cpp" line="1544"/>
+        <location filename="../src/mainWindow.cpp" line="1557"/>
         <source>Yes</source>
         <comment>Ja</comment>
         <translation>Taip</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1486"/>
-        <location filename="../src/mainWindow.cpp" line="1499"/>
-        <location filename="../src/mainWindow.cpp" line="1512"/>
+        <location filename="../src/mainWindow.cpp" line="1530"/>
+        <location filename="../src/mainWindow.cpp" line="1543"/>
+        <location filename="../src/mainWindow.cpp" line="1556"/>
         <source>No</source>
         <comment>Nein</comment>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1745"/>
-        <location filename="../src/mainWindow.cpp" line="1757"/>
+        <location filename="../src/mainWindow.cpp" line="1802"/>
+        <location filename="../src/mainWindow.cpp" line="1814"/>
         <source>The partition was successfully backed up.
 </source>
         <comment>Die Partition wurde erfolgreich gesichert.
@@ -2226,55 +2234,55 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1746"/>
-        <location filename="../src/mainWindow.cpp" line="1758"/>
-        <location filename="../src/mainWindow.cpp" line="1807"/>
-        <location filename="../src/mainWindow.cpp" line="1809"/>
-        <location filename="../src/mainWindow.cpp" line="1857"/>
-        <location filename="../src/mainWindow.cpp" line="1861"/>
-        <location filename="../src/mainWindow.cpp" line="1885"/>
-        <location filename="../src/mainWindow.cpp" line="1887"/>
-        <location filename="../src/mainWindow.cpp" line="1894"/>
-        <location filename="../src/mainWindow.cpp" line="1897"/>
+        <location filename="../src/mainWindow.cpp" line="1803"/>
+        <location filename="../src/mainWindow.cpp" line="1815"/>
+        <location filename="../src/mainWindow.cpp" line="1864"/>
+        <location filename="../src/mainWindow.cpp" line="1866"/>
+        <location filename="../src/mainWindow.cpp" line="1914"/>
+        <location filename="../src/mainWindow.cpp" line="1918"/>
+        <location filename="../src/mainWindow.cpp" line="1942"/>
+        <location filename="../src/mainWindow.cpp" line="1944"/>
+        <location filename="../src/mainWindow.cpp" line="1951"/>
+        <location filename="../src/mainWindow.cpp" line="1954"/>
         <source> files, </source>
         <comment> Dateien, </comment>
         <translation> rinkmena(-os,-ų), </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1746"/>
-        <location filename="../src/mainWindow.cpp" line="1758"/>
-        <location filename="../src/mainWindow.cpp" line="1807"/>
-        <location filename="../src/mainWindow.cpp" line="1809"/>
-        <location filename="../src/mainWindow.cpp" line="1857"/>
-        <location filename="../src/mainWindow.cpp" line="1861"/>
-        <location filename="../src/mainWindow.cpp" line="1885"/>
-        <location filename="../src/mainWindow.cpp" line="1894"/>
+        <location filename="../src/mainWindow.cpp" line="1803"/>
+        <location filename="../src/mainWindow.cpp" line="1815"/>
+        <location filename="../src/mainWindow.cpp" line="1864"/>
+        <location filename="../src/mainWindow.cpp" line="1866"/>
+        <location filename="../src/mainWindow.cpp" line="1914"/>
+        <location filename="../src/mainWindow.cpp" line="1918"/>
+        <location filename="../src/mainWindow.cpp" line="1942"/>
+        <location filename="../src/mainWindow.cpp" line="1951"/>
         <source> directories, </source>
         <comment> Verzeichnisse, </comment>
         <translation> katalogas(-ai,-ų), </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1746"/>
-        <location filename="../src/mainWindow.cpp" line="1758"/>
-        <location filename="../src/mainWindow.cpp" line="1807"/>
-        <location filename="../src/mainWindow.cpp" line="1810"/>
-        <location filename="../src/mainWindow.cpp" line="1857"/>
-        <location filename="../src/mainWindow.cpp" line="1885"/>
-        <location filename="../src/mainWindow.cpp" line="1888"/>
-        <location filename="../src/mainWindow.cpp" line="1895"/>
-        <location filename="../src/mainWindow.cpp" line="1898"/>
+        <location filename="../src/mainWindow.cpp" line="1803"/>
+        <location filename="../src/mainWindow.cpp" line="1815"/>
+        <location filename="../src/mainWindow.cpp" line="1864"/>
+        <location filename="../src/mainWindow.cpp" line="1867"/>
+        <location filename="../src/mainWindow.cpp" line="1914"/>
+        <location filename="../src/mainWindow.cpp" line="1942"/>
+        <location filename="../src/mainWindow.cpp" line="1945"/>
+        <location filename="../src/mainWindow.cpp" line="1952"/>
+        <location filename="../src/mainWindow.cpp" line="1955"/>
         <source> links and </source>
         <comment> Links und </comment>
         <translation> nuoroda(-os,-ų) ir </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1759"/>
+        <location filename="../src/mainWindow.cpp" line="1816"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
         <translation> spec. duomenys ir skaidinio paleidimo įrašas (PBR) sudėti į atsarginę kopiją.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1778"/>
+        <location filename="../src/mainWindow.cpp" line="1835"/>
         <source>The backup of the partition was aborted by the user!
 </source>
         <comment>Die Sicherung der Partition  wurde vom Benutzer abgebrochen!
@@ -2283,7 +2291,7 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1785"/>
+        <location filename="../src/mainWindow.cpp" line="1842"/>
         <source>The partition type is not supported.
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt.
@@ -2292,7 +2300,7 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1792"/>
+        <location filename="../src/mainWindow.cpp" line="1849"/>
         <source>The partition type is not supported. Maybe the partition is encrypted?
 </source>
         <comment>Der Partitionstyp wird nicht unterstützt. Vielleicht ist die Partition verschlüsselt?
@@ -2301,7 +2309,7 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1806"/>
+        <location filename="../src/mainWindow.cpp" line="1863"/>
         <source>The backup of the partition was only partially successful.
 </source>
         <comment>Die Sicherung der Partition war nur teilweise erfolgreich
@@ -2310,28 +2318,20 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1746"/>
+        <location filename="../src/mainWindow.cpp" line="1803"/>
         <source> specials have been backed.</source>
         <comment> spezielle Daten wurden gesichert.</comment>
         <translation> specialieji buvo sudėti atsarginėn kopijon.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="927"/>
+        <location filename="../src/mainWindow.cpp" line="972"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
         <translation>Kietajame diske nepakanka vietos atsarginei kopijai kurti. Atsarginė kopija atšaukta.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1431"/>
-        <source>Backup and restore partitions, directory and MBR.
-version 2.8.7-3, December 12, 2024</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.7-3 12.12 2024</comment>
-        <translation>Atsarginė kopija un atjaunot starpsienas, direktoriju un MBR.
-versija 2.8.7-3, 12.Gruodis 2024</translation>
-    </message>
-    <message>
-        <location filename="../src/mainWindow.cpp" line="1709"/>
+        <location filename="../src/mainWindow.cpp" line="1766"/>
         <source>The partition was not backed up successfully. The free space on the hard drive to be backed up was not sufficient or The file is too large. do not use a FAT partition.
 </source>
         <comment>Die Partition wurde nicht erfolgreich gesichert. Der freie Speicherplatz auf der Festplatte auf die gesichert werden sollte war nicht ausreichend oder die Datei ist zu groß. Benutzen Sie keine FAT Partition.
@@ -2339,7 +2339,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>Nebuvo sėkmingai sukurta atsarginė skirsnio kopija. Laisvos vietos standžiajame diske, kurio atsarginę kopiją reikia sukurti, nepakako arba Failas yra per didelis. nenaudokite FAT skirsnio.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1808"/>
+        <location filename="../src/mainWindow.cpp" line="1865"/>
         <source> specials have been backed.
 </source>
         <comment> spezielle Daten wurden gesichert.
@@ -2347,7 +2347,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>speciālie ieraksti ir dublēti.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1811"/>
+        <location filename="../src/mainWindow.cpp" line="1868"/>
         <source> special data was not saved correctly.
 </source>
         <comment> spezielle Daten wurden nicht korrekt gesichert.
@@ -2355,7 +2355,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>speciālie dati nav saglabāti pareizi.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1826"/>
+        <location filename="../src/mainWindow.cpp" line="1883"/>
         <source>The partition to be restored is mounted. It must be unmounted first! 
 </source>
         <comment>Die Partition die wiederhergestellt werden soll, ist eingehängt. Sie muss zunächst ausgehängt werden!
@@ -2363,8 +2363,8 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>Atkuriamas skaidinys prikabintas. Pirmiausiai reikia atkabinti!</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1856"/>
-        <location filename="../src/mainWindow.cpp" line="1860"/>
+        <location filename="../src/mainWindow.cpp" line="1913"/>
+        <location filename="../src/mainWindow.cpp" line="1917"/>
         <source>The partition was successfully restored.
 </source>
         <comment>Die Partition wurde erfolgreich wieder hergestellt.
@@ -2373,19 +2373,19 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1857"/>
+        <location filename="../src/mainWindow.cpp" line="1914"/>
         <source> special data has been restored.</source>
         <comment> spezielle Daten wurden wieder hergestellt.</comment>
         <translation> spec. duomenys atkurti.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1861"/>
+        <location filename="../src/mainWindow.cpp" line="1918"/>
         <source> links </source>
         <comment> Links </comment>
         <translation> nuoroda(-os,-ų) </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1866"/>
+        <location filename="../src/mainWindow.cpp" line="1923"/>
         <source>The restore of the partition was break by user!
 </source>
         <comment>Die Wiederherstellung der Partition  wurde vom Benutzer abgebrochen!
@@ -2394,8 +2394,8 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1884"/>
-        <location filename="../src/mainWindow.cpp" line="1893"/>
+        <location filename="../src/mainWindow.cpp" line="1941"/>
+        <location filename="../src/mainWindow.cpp" line="1950"/>
         <source>The restore of the partition was only partially successful.
 </source>
         <comment>Die Wiederherstellung der Partition war nur teilweise erfolgreich
@@ -2404,7 +2404,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1886"/>
+        <location filename="../src/mainWindow.cpp" line="1943"/>
         <source> specials has been restored.
 </source>
         <comment> spezielle Daten wurden wiederhergestellt.
@@ -2412,14 +2412,14 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>speciālie dati ir atjaunoti.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1887"/>
-        <location filename="../src/mainWindow.cpp" line="1897"/>
+        <location filename="../src/mainWindow.cpp" line="1944"/>
+        <location filename="../src/mainWindow.cpp" line="1954"/>
         <source> directories and </source>
         <comment> Verzeichnisse und </comment>
         <translation> katalogas(-ai,-ų) ir </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1903"/>
+        <location filename="../src/mainWindow.cpp" line="1960"/>
         <source>You have tried restore a partition. The selected file can only restore directories. Please restart the program.
 </source>
         <comment>Sie haben versucht eine Partition wiederherzustellen. Die gewählte Datei kann nur Verzeichnisse wiederherstellen. Bitte starten Sie das Programm neu.
@@ -2428,7 +2428,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1906"/>
+        <location filename="../src/mainWindow.cpp" line="1963"/>
         <source>You have entered an incorrect password.
 </source>
         <comment>Sie haben ein falsches Passwort eingegeben.
@@ -2437,7 +2437,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1911"/>
+        <location filename="../src/mainWindow.cpp" line="1968"/>
         <source>The partition to be written back to is too small.
 </source>
         <comment>Die Partition in die zurückgeschrieben wird ist zu klein.
@@ -2445,80 +2445,80 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>Įrašomas skirsnis yra per mažas</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2083"/>
+        <location filename="../src/mainWindow.cpp" line="2145"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
         <translation>Atsarginės kopijos rinkmenos vardas: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2084"/>
+        <location filename="../src/mainWindow.cpp" line="2146"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
         <translation>Skaidinio vardas: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2085"/>
+        <location filename="../src/mainWindow.cpp" line="2147"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
         <translation>Skaidinio tipas: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2086"/>
+        <location filename="../src/mainWindow.cpp" line="2148"/>
         <source>UUID: </source>
         <translation>UUID</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2086"/>
+        <location filename="../src/mainWindow.cpp" line="2148"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
         <translation>Aprašas: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2087"/>
+        <location filename="../src/mainWindow.cpp" line="2149"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
         <translation>Skaidinio dydis: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2087"/>
-        <location filename="../src/mainWindow.cpp" line="2088"/>
+        <location filename="../src/mainWindow.cpp" line="2149"/>
+        <location filename="../src/mainWindow.cpp" line="2150"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
         <translation>Skaidinio lygiavimas: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2088"/>
+        <location filename="../src/mainWindow.cpp" line="2150"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
         <translation>Glaudinimas: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2089"/>
+        <location filename="../src/mainWindow.cpp" line="2151"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
         <translation>Apytikris atvaizdžio rinkmenos dydis: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2103"/>
+        <location filename="../src/mainWindow.cpp" line="2165"/>
         <source>Path of the backup file: </source>
         <comment>Pfad der Sicherungsdatei: </comment>
         <translation>Atsarginės kopijos failo kelias:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2107"/>
+        <location filename="../src/mainWindow.cpp" line="2169"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
         <translation>Kitos pastabos: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2090"/>
+        <location filename="../src/mainWindow.cpp" line="2152"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
         <translation>apsaugotinas skaidinys: / (šakninis sistemos katalogas) </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1889"/>
-        <location filename="../src/mainWindow.cpp" line="1899"/>
+        <location filename="../src/mainWindow.cpp" line="1946"/>
+        <location filename="../src/mainWindow.cpp" line="1956"/>
         <source> specials were not properly restored.
 </source>
         <comment> spezielle Daten wurden nicht korrekt wiederhergestellt.
@@ -2526,7 +2526,7 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>speciālie dati netika atjaunoti pareizi.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1896"/>
+        <location filename="../src/mainWindow.cpp" line="1953"/>
         <source> special data and the partition boot sector were restored.
 </source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden wieder hergestellt.
@@ -2534,48 +2534,48 @@ versija 2.8.7-3, 12.Gruodis 2024</translation>
         <translation>speciālie dati un nodalījuma sākumsektors tika atjaunoti.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2095"/>
-        <location filename="../src/mainWindow.cpp" line="2101"/>
+        <location filename="../src/mainWindow.cpp" line="2157"/>
+        <location filename="../src/mainWindow.cpp" line="2163"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
         <translation>Operacinė sistema: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2095"/>
-        <location filename="../src/mainWindow.cpp" line="2101"/>
+        <location filename="../src/mainWindow.cpp" line="2157"/>
+        <location filename="../src/mainWindow.cpp" line="2163"/>
         <source>Kernel: </source>
         <translation>Branduolys: </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2097"/>
+        <location filename="../src/mainWindow.cpp" line="2159"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
         <translation>apsaugotinas skaidinys: /home (namų)</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2123"/>
+        <location filename="../src/mainWindow.cpp" line="2185"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2134"/>
+        <location filename="../src/mainWindow.cpp" line="2196"/>
         <source> TB</source>
         <translation> TB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2145"/>
+        <location filename="../src/mainWindow.cpp" line="2207"/>
         <source> GB</source>
         <translation> GB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2610"/>
+        <location filename="../src/mainWindow.cpp" line="2651"/>
         <source>No USB disk is connected, The program is terminated.</source>
         <comment>Es ist keine USB-Platte angeschlossen, Das Programm wird beendet.
 </comment>
         <translation>USB diskas neprijungtas, Programa nutraukiama.</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1657"/>
+        <location filename="../src/mainWindow.cpp" line="1701"/>
         <source>Do you really want to stop backing up or restoring the partition?</source>
         <comment>Wollen Sie wirklich die Sicherung oder Wiederherstellung der Partition beenden?</comment>
         <translation>Ar tikrai norite nutraukti darbą su skaidinio atsargine kopija?</translation>
@@ -3402,64 +3402,62 @@ to the original location by default</source>
         <translation>Dalinti į DVD dydžio rinkmenas</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="179"/>
-        <source>Show passwords</source>
-        <translation>Rodyti slaptažodžius</translation>
+        <location filename="../src/ui/setting.ui" line="313"/>
+        <source>Select the font size of the 
+graphical user interfaces</source>
+        <translation>Pasirinkite šrifto dydį
+grafinės vartotojo sąsajos</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="192"/>
+        <location filename="../src/ui/setting.ui" line="179"/>
         <source>Save Settings</source>
         <extracomment>Einstellungen speichern</extracomment>
         <translation>Įrašyti nuostatas</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="205"/>
+        <location filename="../src/ui/setting.ui" line="192"/>
         <source>Exit</source>
         <extracomment>Beenden</extracomment>
         <translation>Užverti</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="218"/>
+        <location filename="../src/ui/setting.ui" line="205"/>
         <source>Safe PBR by default</source>
         <extracomment>PBR standradmäßig sichern</extracomment>
         <translation>Numatytuoju atveju įrašyti skaidinio paleidimo įrašą (PBR)</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="231"/>
+        <location filename="../src/ui/setting.ui" line="218"/>
         <source>Display notes on how to use the program qt-fsarchiver</source>
         <extracomment>Hinweise zum Gebrauch des Programms anzeigen</extracomment>
         <translation>Rodyti paaiškinimą kaip naudotis qt-fsarchiver programa</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="244"/>
+        <location filename="../src/ui/setting.ui" line="231"/>
         <source>Show hidden directories and files</source>
         <translation>Rodyti slepiamuosius katalogus ir rinkmenas</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="267"/>
+        <location filename="../src/ui/setting.ui" line="254"/>
         <source>zstd level   1: very fast   22:highest compression</source>
         <translation>zstd lygiai: 1 – greičiausias, 22 – stipriausias glaudinimas</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="280"/>
+        <location filename="../src/ui/setting.ui" line="267"/>
         <source>z</source>
         <translation>z</translation>
     </message>
-    <message>
-        <location filename="../src/ui/setting.ui" line="293"/>
-        <source>If the program does not work correctly, you can 
-slow down the evaluation time. As standard, the 
-evaluation time set with factor 5 * 10 msec
-You can set the factor between 1 and 20.</source>
-        <translation>Jei progama veikia netinkamai, galite padidinti įvertinimo laiką.
-Numatytuoju atveju įvertinimo laikas yra 5 * 10 ms.
-Galite pasirinkti daugiklį nuo 1 iki 20.</translation>
+   <message>
+        <location filename="../src/ui/setting.ui" line="280"/>
+        <source>For the program to function correctly, the processor must insert a short pause at some points.
+The pause length is pre-set to 5*10 msec. If the program does not work properly, you can influence the pause length with a factor of 1 to 20.</source>
+        <translation>Kad programa veiktų teisingai, procesorius kai kuriose vietose turi įterpti trumpą pauzę.
+Iš anksto nustatytas pauzės ilgis yra 5*10 msec. Jei programa veikia netinkamai, pauzės ilgiui galite daryti įtaką nuo 1 iki 20 kartų.</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="299"/>
-        <source>Selection of the evaluation time 
-from the terminal program. </source>
-        <translation>Įvertinimo laikas iš terminalo programos. </translation>
+        <location filename="../src/ui/setting.ui" line="283"/>
+        <source>Select time delay factor. You can obtain further information by placing the cursor on this text.</source>
+        <translation>Pasirinkite uždelsimo faktorių. Daugiau informacijos galite gauti užvedę žymeklį ant šio teksto.</translation>
     </message>
 </context>
 </TS>

@@ -33,6 +33,7 @@ public:
 private slots:	
    void setting_save();
    void zip_setting_einlesen();
+   void font_change(int size); 
 };
 
 #endif

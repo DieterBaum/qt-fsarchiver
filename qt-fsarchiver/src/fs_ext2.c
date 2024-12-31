@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
  *
- * Copyright (C) 2008-2022 Francois Dupoux.  All rights reserved.
+ * Copyright (C) 2008-2018 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -58,6 +58,10 @@ struct s_features
 // case metadata_csum is going to be used (mke2fs 1.43+), metadata_csum_seed brings no value for
 // us and therefore is not preserved (i.e. present in FSA_FEATURE_INCOMPAT_SUPP but not listed
 // below). Users can easily enable it with tune2fs if desired.
+//
+// /etc/mke2fs.conf feature list from [fs_types] section applies to mkfs.extX, mke2fs -t extX
+// and mke2fs -j/-J. FSArchiver calls mke2fs without specifying -t/-j/-J, therefore only the
+// [defaults] section, containing ext2 baseline features, is used.
 //
 struct s_features mkfeatures[] = // cf e2fsprogs-1.47.0/lib/e2p/feature.c
 {
@@ -349,7 +353,10 @@ int extfs_mkfs(cdico *d, char *partition, int extfstype, char *fsoptions, char *
     strlcatf(options, sizeof(options), " -I %ld ", (long)devisize);
 
     // filesystem revision: good-old-rev or dynamic
-    strlcatf(options, sizeof(options), " -r %d ", (int)fsextrevision);
+    if (e2fstoolsver<PROGVER(1,47,2))
+        strlcatf(options, sizeof(options), " -r %d ", (int)fsextrevision);
+    else
+        strlcatf(options, sizeof(options), " -E revision=%d ", (int)fsextrevision);
 
     // if extfs revision is dynamic and there are features in the list
     if (fsextrevision!=EXT2_GOOD_OLD_REV && strlist_count(&strfeatures)>0)

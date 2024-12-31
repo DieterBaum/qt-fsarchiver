@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>473</width>
-    <height>571</height>
+    <height>772</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>10</x>
+     <y>10</y>
      <width>451</width>
-     <height>501</height>
+     <height>631</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -32,9 +32,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>17</y>
+      <y>5</y>
       <width>225</width>
-      <height>51</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
@@ -46,8 +46,8 @@ should be used:</string>
    <widget class="QComboBox" name="cmb_Kerne">
     <property name="geometry">
      <rect>
-      <x>241</x>
-      <y>30</y>
+      <x>240</x>
+      <y>20</y>
       <width>200</width>
       <height>27</height>
      </rect>
@@ -57,7 +57,7 @@ should be used:</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>73</y>
+      <y>80</y>
       <width>225</width>
       <height>34</height>
      </rect>
@@ -70,8 +70,8 @@ compression:</string>
    <widget class="QComboBox" name="cmb_zip">
     <property name="geometry">
      <rect>
-      <x>241</x>
-      <y>73</y>
+      <x>240</x>
+      <y>90</y>
       <width>200</width>
       <height>27</height>
      </rect>
@@ -81,7 +81,7 @@ compression:</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>145</y>
+      <y>160</y>
       <width>225</width>
       <height>27</height>
      </rect>
@@ -94,7 +94,7 @@ compression:</string>
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>145</y>
+      <y>160</y>
       <width>200</width>
       <height>27</height>
      </rect>
@@ -130,7 +130,7 @@ compression:</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>260</y>
+      <y>270</y>
       <width>441</width>
       <height>39</height>
      </rect>
@@ -157,7 +157,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>310</y>
+      <y>330</y>
       <width>441</width>
       <height>39</height>
      </rect>
@@ -170,9 +170,9 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>430</y>
+      <y>540</y>
       <width>431</width>
-      <height>27</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -183,9 +183,9 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>460</y>
+      <y>580</y>
       <width>431</width>
-      <height>27</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -196,7 +196,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>288</y>
+      <y>305</y>
       <width>441</width>
       <height>39</height>
      </rect>
@@ -209,7 +209,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>335</y>
+      <y>360</y>
       <width>441</width>
       <height>39</height>
      </rect>
@@ -235,7 +235,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>370</x>
-      <y>110</y>
+      <y>125</y>
       <width>71</width>
       <height>27</height>
      </rect>
@@ -245,7 +245,7 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>108</y>
+      <y>120</y>
       <width>321</width>
       <height>30</height>
      </rect>
@@ -257,8 +257,8 @@ to the original location by default</string>
    <widget class="QPushButton" name="cmd_zstd">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>460</y>
+      <x>130</x>
+      <y>590</y>
       <width>20</width>
       <height>20</height>
      </rect>
@@ -271,20 +271,17 @@ to the original location by default</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>380</y>
+      <y>460</y>
       <width>351</width>
-      <height>41</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="toolTip">
-     <string>If the program does not work correctly, you can 
-slow down the evaluation time. As standard, the 
-evaluation time set with factor 5 * 10 msec
-You can set the factor between 1 and 20.</string>
+     <string>For the program to function correctly, the processor must insert a short pause at some points.
+The pause length is pre-set to 5*10 msec. If the program does not work properly, you can influence the pause length with a factor of 1 to 20.</string>
     </property>
     <property name="text">
-     <string>Selection of the evaluation time 
-from the terminal program. </string>
+     <string>Select time delay factor. You can obtain further information by placing the cursor on this text.</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
@@ -294,9 +291,33 @@ from the terminal program. </string>
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>390</y>
-      <width>51</width>
+      <y>480</y>
+      <width>60</width>
       <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>421</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select the font size of the 
+graphical user interfaces</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmb_font">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>410</y>
+      <width>60</width>
+      <height>30</height>
      </rect>
     </property>
    </widget>
@@ -321,6 +342,8 @@ from the terminal program. </string>
    <zorder>label_5</zorder>
    <zorder>label_6</zorder>
    <zorder>cmb_sleep</zorder>
+   <zorder>label_4</zorder>
+   <zorder>cmb_font</zorder>
   </widget>
  </widget>
  <tabstops>

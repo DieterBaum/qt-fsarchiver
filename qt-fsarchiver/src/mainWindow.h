@@ -99,6 +99,8 @@ protected slots:
    int size_determine(QString part_size_compress, QString folder);
    int question_end();
    void finish();
+   void file_exist();
+   void qt6ct();
     
 private:
     QFileSystemModel *dirModel;

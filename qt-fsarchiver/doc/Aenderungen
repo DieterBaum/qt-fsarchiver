@@ -1,6 +1,12 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-2.8.8-0 31.Dezember 2024.
+    - Gewährleistung der Kompatibilität mit e2fsprogs >= 1.47.2 
+    - Akzeptiert -j Argumente größer als FSA_MAX_COMPJOBS 
+    - Ergänzung der Datei /etc/environment, damit die Verzeichnissymbole in der Baumansicht angezeigt werden.
+* qt-fsarchiver-2.8.7-4 15.Dezember 2024.
+    - kleine Korrekturen.
 * qt-fsarchiver-2.8.7-3 11.Dezember 2024.
     - Fehlerkorrektur beim Sichern von Partitionen.
     - kleinere Verbesserungen.

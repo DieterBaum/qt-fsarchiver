@@ -189,6 +189,7 @@ MWindow::MWindow()
    QString befehl; 
    QStringList tmp_;
    QString user; 
+   QString text[100];
    setupUi(this);
    rdBt_saveFsArchiv->setChecked(true);
    dirModel = new QFileSystemModel;
@@ -285,6 +286,8 @@ MWindow::MWindow()
        if(system (befehl.toLatin1().data()))
           befehl = "";
        }
+   // Datei /etc/environment ergänzen
+file_exist();
    // eventuell vorhandene Dateien  aus Vorinstallationen entfernen, die nicht mehr benötigt werde   
    // zunächst den User ermitteln 
 if (live_flag == 0)
@@ -406,7 +409,7 @@ if (live_flag == 0)
         else
             cmb_zstd->setEnabled(false);
         if (auswertung != 10)
-            cmb_zstd->setEnabled(false);    
+            cmb_zstd->setEnabled(false); 
         auswertung = setting.value("Kerne").toInt();       
         cmb_kerne -> setCurrentIndex(auswertung-1); 
         auswertung = setting.value("overwrite").toInt();
@@ -1469,8 +1472,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.7-3, December 12, 2024",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.7-3, 12.Dezember 2024"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.8-0, December 31, 2024",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.8-0, 31.Dezember 2024"));
       }
 
 int MWindow::Root_Auswertung(){
@@ -3396,8 +3399,106 @@ fsarchiver_aufruf(zahl,auftrag__[1].toLatin1().data(),auftrag__[2].toLatin1().da
 return;            
 }
 
+void MWindow::file_exist()
+{
+if(live_flag == 1)
+  return;
+QString text[100];
+int i= 0;
+int j = 0;
+int pos = 0;
+QString filename = "/etc/environment";
+//QString filename = "/root/.config/qt6ct/qt6ct.conf";
+QFile file(filename);
+QTextStream ds(&file); 
+     if (file.open(QIODevice::ReadOnly|QIODevice::Text)) 
+	   {
+            while (!ds.atEnd())
+      	       {
+	       text[i] = ds.readLine();
+	       pos = text[i].indexOf("QT_QPA_PLATFORMTHEME=qt6ct");
+	       if (pos > -1)   //Text schon vorhanden
+	          return;
+	       if (text[i] == "")
+	         {
+	         text[i] = "QT_QPA_PLATFORMTHEME=qt6ct";
+	         break;
+	         }
+               i++;
+               }
+           file.close();
+           } 
+       // Datei löschen, Inhalt wird somit gelöscht
+       file.remove();
+        // leere Datei neu öffnen
+       file.open(QIODevice::ReadWrite|QIODevice::Text);
+        for(j=0; j < i +1; j++)
+          ds << text[j] + "\n";
+       file.close();
+QString filename1 = "/root/.config/qt6ct/qt6ct.conf";
+QFile file1(filename1);  
+if(file1.exists())
+   return;
+qt6ct();       
+}
 
-
-
+void MWindow::qt6ct()
+{
+QString text[100];
+text[0] =  "[Appearance]";
+text[1] =  "color_scheme_path=/usr/share/qt6ct/colors/airy.conf";
+text[2] =  "custom_palette=false";
+text[3] =  "fixed=\"Noto Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1\"";
+text[4] =  "general=\"Noto Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1\"";
+text[5] =  "icon_theme=Adwaita";
+text[6] =  "standard_dialogs=default";
+text[7] =  "style=Fusion";
+text[8] =  "";
+text[9] =  "[Fonts]";
+text[10] =  "fixed=\"Noto Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular\"";
+text[11] =  "general=\"Noto Sans,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular\"";
+text[12] =  "";
+text[13] ="[Interface]";
+text[14]="activate_item_on_single_click=1";
+text[15]="buttonbox_layout=0";
+text[16]="cursor_flash_time=1000";
+text[17]="dialog_buttons_have_icons=1";
+text[18]="double_click_interval=400";
+text[19]="gui_effects=@Invalid()";
+text[20]="keyboard_scheme=2";
+text[21]="menus_have_icons=true";
+text[22]="show_shortcuts_in_context_menus=true";
+text[23]="stylesheets=@Invalid()";
+text[24]="toolbutton_style=4";
+text[25]="underline_shortcut=1";
+text[26]="wheel_scroll_lines=3";
+text[27]="";
+text[28]="[Troubleshooting]";
+text[29]="force_raster_widgets=1";
+text[30]="ignored_applications=@Invalid()";
+int i = 0;
+QString befehl;
+QDir dir1("/root/.config/qt6ct");
+   if (!dir1.exists())
+      {
+      befehl = "mkdir /root/.config/qt6ct";
+      if(system (befehl.toLatin1().data()))
+         befehl = ""; 
+      }   
+QString filename = "/root/.config/qt6ct/qt6ct.conf";
+QFile file(filename);
+QTextStream ds(&file); 
+     if(!file.exists())
+        { 
+        if(file.open(QIODevice::ReadWrite | QIODevice::Text))
+	   {
+           for(i=0; i < 31 +1; i++)
+              {
+              ds << text[i] + "\n";
+              }
+           file.close();
+           } 
+        }           
+}
 
 

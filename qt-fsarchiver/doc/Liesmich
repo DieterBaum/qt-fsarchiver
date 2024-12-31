@@ -3,7 +3,7 @@ qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linu
 =====================================================================================================================================================
 
 Die Version 2.8.7-1 und höher funktionieren nur auf aktuellen Debian basierenden Distributionen.
-Für ältere Distributionen verwenden Sie bitte die Version 1.8.7-1
+Für ältere Distributionen verwenden Sie bitte die Version 1.8.7-1 und höher.
 
 Copyright (C) 2008-2024 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
@@ -21,7 +21,7 @@ Ab Version 2.8.7-0 basiert qt-fsarchiver auf Qt6.
 Installation des Programms aus den Quelldateien:
 Für die Installation von den Programmen qt-fsarchiver müssen die für fsarchiver notwendigen Abhängigkeiten und die qt6-Entwicklungsumgebung installiert werden.
 Dies erreichen Sie, bei auf Debian aufbauenden Distributionen, mit folgendem Befehl:
-sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt6-qmltooling-plugins qt6-base-dev qt6-tools-dev qt6-5compat-dev btrfs-progs gdisk liblz4-dev libzstd-dev jfsutils xfsprogs sudo 
+sudo apt install libzip-dev libbz2-dev liblzma-dev liblzo2-2 liblzo2-dev libgcrypt20-dev e2fslibs-dev libblkid-dev libattr1-dev build-essential qt6-qmltooling-plugins qt6-base-dev qt6-tools-dev qt6-5compat-dev qt6ct btrfs-progs gdisk liblz4-dev libzstd-dev jfsutils xfsprogs sudo 
 
 Bei einigen Distributionen muss die Datei /etc/sudoers mit diesen Zeilen ergämzt werden:
 username ALL=(ALL) ALL 
@@ -46,6 +46,8 @@ sudo add-apt-repository ppa:dieterbaum/qt-fsarchiver
 Bestätigen Sie diesen Befehl mit Enter
 sudo apt update
 sudo apt install qt-fsarchiver
+Für die Version 1.8.7.1 und höher müssen Sie das Launchpad so einbinden:
+sudo add-apt-repository ppa:dieterbaum/qt-fsarchiver-focal-jammy
 
 Bei dieser Installationsvariante werden die Updates automatisch installiert.
 
@@ -55,6 +57,12 @@ qt-fsarchiver im Terminal starten:
 Befehl: pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/sbin/qt-fsarchiver
 
 Die Handhabung von qt-fsarchiver ist einfach:
+
+Ab der Version 2.8.8-0 wird das Programm qt6ct mit installiert. Diese Programm ist erforderlich, dass die Symbole für Verzeichnisse in der grafischen Oberfläche angezeigt werden.
+Die Größe der Schrift kann den eigenen Erfordernissen angepasst werden. Bei den Einstellungen für das Programm ist die Wahl der Schriftgröße erreichbar.
+Mit diesem Befehl können Sie das Aussehen der grafischen Oberfläche verändern: sudo qt6ct.
+Das Programm ist selbsterklärend.
+Nach der Installation von qt-fsarchiver muss das System einmal neu gestartet werden, bevor Änderungen mit qt6ct vorgenommen werden können.
 
 Über den Menüpunkt "Aktionen" oder über die Werkzeugleiste können folgende Aktionen ausgewählt werden: "Partitionen sichern/zurückschreiben", "Partitionen sichern/zurückschreiben über ein Netzwerk", "MBR/GPT sichern/zurückschreiben", "Verzeichnisse sichern/zurückschreiben" und "Festplatten klonen, Festplattenimage erzeuegen/zurxckspielen". Zusätzlich kann über den Menüpunkt "Einstellungen" Basiseinstellungen wie Anzahl der Prozessorkerne oder Kompressionsstärke und Weiteres eingestellt werden.
 Das Programm erkennt automatisch ob der Master Boot Record oder eine GUID Partitionstabelle gesichert werden muss.
