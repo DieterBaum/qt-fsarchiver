@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
  * 
- * Copyright (C) 2008-2022 Francois Dupoux.  All rights reserved.
+* Copyright (C) 2008-2025 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -339,4 +339,8 @@ int dico_show(cdico *d, u8 section, char *debugtxt)
     msgprintf(MSG_FORCE, "-----------------debug-dico-end(%s)------------------\n\n", debugtxt);
     return 0;
 }
+
+
+
+
 

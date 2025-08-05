@@ -2088,10 +2088,10 @@ rezervë. çelësi:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1475"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.8-0, December 31, 2024</source>
-        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.8-0, 31.Dezember 2024</comment>
+version 2.8.8-1, August 5, 2025</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.8-1 5.8 2025</comment>
         <translation>Rezervoni dhe rivendosni ndarjet, drejtorinë dhe MBR.
-version 2.8.8-0, 31. dhjetor 2024</translation>
+version 2.8.8-1, 5. gusht 2025</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1483"/>

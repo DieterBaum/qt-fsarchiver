@@ -1,6 +1,8 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
+* qt-fsarchiver-2.8.8-1 August 5, 2025.
+    - Troubleshooting jobs Restoring partitions.
 * qt-fsarchiver-2.8.8-0 December 31, 2024,
     - Provide compatibility with e2fsprogs >= 1.47.2 
     - Accept -j arguments greater than FSA_MAX_COMPJOBS 

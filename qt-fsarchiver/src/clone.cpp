@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2022 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2025 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -2014,6 +2014,10 @@ int DialogClone::questionMessage_warning_clone(QString frage)
     		return 2;
 return 0;    		
 }
+
+
+
+
 
 
 

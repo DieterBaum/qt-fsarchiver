@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2022 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2025 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -1472,8 +1472,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.8-0, December 31, 2024",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.8-0, 31.Dezember 2024"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.8-1, August 5, 2025",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.8-1, 5.August 2025"));
       }
 
 int MWindow::Root_Auswertung(){
@@ -2522,7 +2522,9 @@ QString filename = homepath + "/.config/qt5-fsarchiver/auftrag.db";
 QFile file(filename);
 QString attribute;
 QStringList auftrag;
-QString auftrag_;  
+QString auftrag_; 
+QString dummy; 
+QString befehl;
 int i = 0;
 int j = 0;
 int found = 0;
@@ -2546,7 +2548,7 @@ int size_ = 0;
                if(order_name != "" && found > -1 )
                     listWidget_2->addItem ("Save: " + order_name);
                if(order_name != "" && found == -1 )
-                    listWidget_2->addItem ("Restore: " + order_name); 
+                     listWidget_2->addItem ("Restore: " + order_name); 
                widget_2_[j]= order_name;
                widget_2[j]= attribute;
                if(j > 98)
@@ -2554,7 +2556,6 @@ int size_ = 0;
                i++;
                j ++;
                }  
- return;        
        if(i == 0)
            {
            QMessageBox::warning(this,tr("Note", "Hinweis"),
@@ -2598,7 +2599,9 @@ QString auftrag_datei_name_pbr;
 QStringList folder_size;
 QString folder_size_;
 QString auftragdateiname;
+QString AnzahlKerne;
 int size_;
+int size1_;
 int i = 0;
 int j = 0;
 int indizierung = 0;
@@ -2612,6 +2615,8 @@ QString datum = Zeit_auslesen();
      attribute = attribute.trimmed();
      auftrag = attribute.split(QRegularExpression("\\s+"));
      size_ = auftrag.size();
+     AnzahlKerne = auftrag[3];
+     size1_ = AnzahlKerne.size();
      auftrag_datei_name_fsa = auftrag[size_ -2];
      SicherungsFolderFileName = auftrag_datei_name_fsa;
      // Pfad ermitteln
@@ -2760,15 +2765,18 @@ QString datum = Zeit_auslesen();
                         parameter[1] = "archinfo";
                         parameter[2] = SicherungsFolderFileName;
                         attribute = parameter[0] + " " + parameter[1] + " " + parameter[2];
-  		        attribute = "3 " + attribute;
-                        save_attribut(attribute,0);
-                        fsarchiver_aufruf(3,parameter[0].toLatin1().data(),parameter[1].toLatin1().data(),parameter[2].toLatin1().data(),parameter[3].toLatin1().data());
+                        attribute = "3 " + attribute;
+  		        save_attribut(attribute,0);
+ fsarchiver_aufruf(3,parameter[0].toLatin1().data(),parameter[1].toLatin1().data(),parameter[2].toLatin1().data(),parameter[3].toLatin1().data());
                	        char * dev_part = meldungen_holen(3);
                	        QString str =  dev_part; // str = UUID
                	        // Dateiname der fsa-Datei ermitteln
-             	        found = dummy.indexOf("-j10");
+               	        found = dummy.indexOf("-j");
              	        found1 = dummy.indexOf("id=0");
-             	        auftragdateiname = dummy.mid(found + 5,found1 - found -6); 
+             	        if (size1_ == 3)
+             	            auftragdateiname = dummy.mid(found + 4,found1 - found -5); 
+             	        if (size1_ == 4)    
+             	            auftragdateiname = dummy.mid(found + 5,found1 - found -6); 
             	        QFile file3(auftragdateiname);
             	        if(!file3.exists())
             	           {
@@ -3019,12 +3027,12 @@ QString auftrag_;
                 //auf vorhandenen Auftrag prüfen
                 for (i=0; i<size_; i++)
                     {
-                if(order_name == auftrag[i])
-                     {
-                     auftrag[i+1] = attribut;
-                     doppel = 1;
-                     break;
-                     }
+                    if(order_name == auftrag[i])
+                      {
+                      auftrag[i+1] = attribut;
+                      doppel = 1;
+                      break;
+                      }
                  }
                  if(doppel == 1)
                     { 
@@ -3056,7 +3064,8 @@ QString auftrag_;
          file2.close();
 }
  
-void MWindow::listWidget2_auslesen() {
+void MWindow::listWidget2_auslesen() 
+{
 QString homepath = QDir::homePath();
 QString filename = homepath + "/.config/qt5-fsarchiver/auftrag.db";
 QFile file(filename);
@@ -3418,7 +3427,7 @@ QTextStream ds(&file);
 	       text[i] = ds.readLine();
 	       pos = text[i].indexOf("QT_QPA_PLATFORMTHEME=qt6ct");
 	       if (pos > -1)   //Text schon vorhanden
-	          return;
+	          break;
 	       if (text[i] == "")
 	         {
 	         text[i] = "QT_QPA_PLATFORMTHEME=qt6ct";
@@ -3428,7 +3437,7 @@ QTextStream ds(&file);
                }
            file.close();
            } 
-       // Datei löschen, Inhalt wird somit gelöscht
+        // Datei löschen, Inhalt wird somit gelöscht
        file.remove();
         // leere Datei neu öffnen
        file.open(QIODevice::ReadWrite|QIODevice::Text);
@@ -3493,12 +3502,14 @@ QTextStream ds(&file);
         if(file.open(QIODevice::ReadWrite | QIODevice::Text))
 	   {
            for(i=0; i < 31 +1; i++)
-              {
               ds << text[i] + "\n";
-              }
            file.close();
            } 
         }           
 }
+
+
+
+
 
 

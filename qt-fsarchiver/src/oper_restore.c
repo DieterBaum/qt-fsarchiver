@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
  * 
- * Copyright (C) 2008-2018 Francois Dupoux.  All rights reserved.
+* Copyright (C) 2008-2025 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -24,7 +24,7 @@
 #include <assert.h>
 #include <string.h>
 #include <stdlib.h>
-#include <attr/xattr.h>
+#include <sys/xattr.h>
 #include <sys/time.h>
 #include <sys/stat.h>
 #include <gcrypt.h>
@@ -1660,5 +1660,9 @@ do_extract_success:
     archreader_destroy(&exar.ai);
     return ret;
 }
+
+
+
+
 
 

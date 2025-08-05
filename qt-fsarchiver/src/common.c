@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
- *
- * Copyright (C) 2008-2016 Francois Dupoux.  All rights reserved.
+ * 
+* Copyright (C) 2008-2025 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -663,3 +663,7 @@ bool match_uname_r(char *ere)
 
     return r;
 }
+
+
+
+
