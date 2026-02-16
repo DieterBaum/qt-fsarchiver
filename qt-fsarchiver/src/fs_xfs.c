@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
- * 
-* Copyright (C) 2008-2025 Francois Dupoux.  All rights reserved.
+ *
+ * Copyright (C) 2008-2018 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -273,6 +273,34 @@ int xfs_mkfs(cdico *d, char *partition, char *fsoptions, char *mkfslabel, char *
         strlcatf(mkfsopts, sizeof(mkfsopts), " -i nrext64=%d ", (int)optval);
     }
 
+    // Determine if the "exchange range" option should be enabled
+    if (xfstoolsver >= PROGVER(6,10,0))
+    {
+        optval = !!(sb_features_incompat & XFS_SB_FEAT_INCOMPAT_EXCHRANGE);
+        strlcatf(mkfsopts, sizeof(mkfsopts), " -i exchange=%d ", (int)optval);
+    }
+
+    // Determine if the "directory parent pointers" option should be enabled
+    if (xfstoolsver >= PROGVER(6,10,0))
+    {
+        optval = !!(sb_features_incompat & XFS_SB_FEAT_INCOMPAT_PARENT);
+        strlcatf(mkfsopts, sizeof(mkfsopts), " -n parent=%d ", (int)optval);
+    }
+
+    // Determine if the "metadata directory" option should be enabled
+    if (xfstoolsver >= PROGVER(6,13,0))
+    {
+        optval = !!(sb_features_incompat & XFS_SB_FEAT_INCOMPAT_METADIR);
+        strlcatf(mkfsopts, sizeof(mkfsopts), " -m metadir=%d ", (int)optval);
+    }
+
+    // Determine if the "zoned" option should be enabled
+    if (xfstoolsver >= PROGVER(6,15,0))
+    {
+        optval = !!(sb_features_incompat & XFS_SB_FEAT_INCOMPAT_ZONED);
+        strlcatf(mkfsopts, sizeof(mkfsopts), " -r zoned=%d ", (int)optval);
+    }
+
     // ---- mkfsopt from command line
     strlcatf(mkfsopts, sizeof(mkfsopts), " %s ", fsoptions);
 
@@ -439,7 +467,3 @@ int xfs_get_reqmntopt(char *partition, cstrlist *reqopt, cstrlist *badopt)
 
     return 0;
 }
-
-
-
-

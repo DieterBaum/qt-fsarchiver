@@ -1472,8 +1472,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.8-1, August 5, 2025",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.8-1, 5.August 2025"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.9-0, February 15, 2026",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.9-0, 15.Februar 2026"));
       }
 
 int MWindow::Root_Auswertung(){

@@ -1,8 +1,10 @@
 ==================================================================================================
 * qt-fsarchiver: Grafische Oberfläche für fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ==================================================================================================
+* qt-fsarchiver-2.8.9-0 15. Februar 2026.
+    - Unterstützung für xfs- und btrfs-Funktionen bis Linux-6.18 hinzufügen
 * qt-fsarchiver-2.8.8-1 5. August 2025.
-    - Fehlerbehebung Aufträge Wiederherstellen von Partitionen.
+    - Fehlerbehebung Aufträge Wiederherstellen von Partitionen..
 * qt-fsarchiver-2.8.8-0 31.Dezember 2024.
     - Gewährleistung der Kompatibilität mit e2fsprogs >= 1.47.2 
     - Akzeptiert -j Argumente größer als FSA_MAX_COMPJOBS 

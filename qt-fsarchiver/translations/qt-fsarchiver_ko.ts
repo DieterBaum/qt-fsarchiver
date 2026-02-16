@@ -2083,10 +2083,10 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1475"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.8-1, August 5, 2025</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.8-1 5.8 2025</comment>
+version 2.8.9-0, February 15, 2026</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.9-0 15.2 2026</comment>
         <translation>백업 및 복원, 디렉터리 파티션과 MBR
-버전 2.8.8-1, 2025년 위엄있는월 5일</translation>
+버전 2.8.9-0, 2026년 2월월 15일</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2776"/>

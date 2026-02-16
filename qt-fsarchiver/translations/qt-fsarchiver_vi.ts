@@ -2088,10 +2088,10 @@ backup.key:</translation>
     <message>
         <location filename="../src/mainWindow.cpp" line="1475"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.8-1, August 5, 2025</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.8-1 5.8 2025</comment>
+version 2.8.9-0, February 15, 2026</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.9-0 15.2 2026</comment>
         <translation>Sao lưu và phục hồi phân vùng, thư mục và MBR.
-Phiên bản 2.8.8-1, 5. Tháng tám 2025</translation>
+Phiên bản 2.8.9-0, 15. tháng hai 2026</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2776"/>

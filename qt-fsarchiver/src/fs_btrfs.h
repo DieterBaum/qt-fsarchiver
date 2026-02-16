@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
- * 
-* Copyright (C) 2008-2025 Francois Dupoux.  All rights reserved.
+ *
+ * Copyright (C) 2008-2018 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -29,33 +29,54 @@ int btrfs_check_support_for_features(u64 compat, u64 incompat, u64 ro_compat);
 int btrfs_get_reqmntopt(char *partition, struct s_strlist *reqopt, struct s_strlist *badopt);
 int btrfs_test(char *devname);
 
-// compat flags: official definition from linux-3.14/fs/btrfs/ctree.h
+// compat flags: official definition from linux-5.15/fs/btrfs/ctree.h
+// and linux-5.15/include/uapi/linux/btrfs.h
+#define BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE        (1ULL << 0)
+#define BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE_VALID  (1ULL << 1)
+#define BTRFS_FEATURE_COMPAT_RO_VERITY                 (1ULL << 2)
+
 #define BTRFS_FEATURE_INCOMPAT_MIXED_BACKREF    (1ULL << 0)
 #define BTRFS_FEATURE_INCOMPAT_DEFAULT_SUBVOL   (1ULL << 1)
 #define BTRFS_FEATURE_INCOMPAT_MIXED_GROUPS     (1ULL << 2)
 #define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZO     (1ULL << 3)
-#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZOv2   (1ULL << 4)
+#define BTRFS_FEATURE_INCOMPAT_COMPRESS_ZSTD    (1ULL << 4)
 #define BTRFS_FEATURE_INCOMPAT_BIG_METADATA     (1ULL << 5)
 #define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF    (1ULL << 6)
 #define BTRFS_FEATURE_INCOMPAT_RAID56           (1ULL << 7)
 #define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA  (1ULL << 8)
 #define BTRFS_FEATURE_INCOMPAT_NO_HOLES         (1ULL << 9)
+#define BTRFS_FEATURE_INCOMPAT_METADATA_UUID    (1ULL << 10)
+#define BTRFS_FEATURE_INCOMPAT_RAID1C34         (1ULL << 11)
+#define BTRFS_FEATURE_INCOMPAT_ZONED            (1ULL << 12)
+#define BTRFS_FEATURE_INCOMPAT_EXTENT_TREE_V2   (1ULL << 13)
+#define BTRFS_FEATURE_INCOMPAT_RAID_STRIPE_TREE (1ULL << 14)
+#define BTRFS_FEATURE_INCOMPAT_SIMPLE_QUOTA     (1ULL << 16)
 
 // compat flags: btrfs features that this fsarchiver version supports
 #define FSA_BTRFS_FEATURE_COMPAT_SUPP           0ULL
-#define FSA_BTRFS_FEATURE_COMPAT_RO_SUPP        0ULL
+
+#define FSA_BTRFS_FEATURE_COMPAT_RO_SUPP                 \
+        (BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE |       \
+         BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE_VALID | \
+         BTRFS_FEATURE_COMPAT_RO_VERITY)
+
 #define FSA_BTRFS_FEATURE_INCOMPAT_SUPP                 \
         (BTRFS_FEATURE_INCOMPAT_MIXED_BACKREF |         \
          BTRFS_FEATURE_INCOMPAT_DEFAULT_SUBVOL |        \
          BTRFS_FEATURE_INCOMPAT_MIXED_GROUPS |          \
          BTRFS_FEATURE_INCOMPAT_BIG_METADATA |          \
          BTRFS_FEATURE_INCOMPAT_COMPRESS_LZO |          \
-         BTRFS_FEATURE_INCOMPAT_COMPRESS_LZOv2 |        \
+         BTRFS_FEATURE_INCOMPAT_COMPRESS_ZSTD |         \
          BTRFS_FEATURE_INCOMPAT_RAID56 |                \
          BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF |         \
          BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA |       \
-         BTRFS_FEATURE_INCOMPAT_NO_HOLES)
-
+         BTRFS_FEATURE_INCOMPAT_NO_HOLES |              \
+         BTRFS_FEATURE_INCOMPAT_METADATA_UUID |         \
+         BTRFS_FEATURE_INCOMPAT_RAID1C34 |              \
+         BTRFS_FEATURE_INCOMPAT_ZONED |                 \
+         BTRFS_FEATURE_INCOMPAT_EXTENT_TREE_V2 |        \
+         BTRFS_FEATURE_INCOMPAT_RAID_STRIPE_TREE |      \
+         BTRFS_FEATURE_INCOMPAT_SIMPLE_QUOTA)
 
 // disk layout definitions
 #define BTRFS_SUPER_MAGIC 0x9123683E
@@ -84,7 +105,7 @@ static inline u64 btrfs_sb_offset(int mirror)
     return BTRFS_SUPER_INFO_OFFSET;
 }
 
-struct btrfs_dev_item 
+struct btrfs_dev_item
 {
     /* the internal btrfs device id */
     __le64 devid;
@@ -136,7 +157,7 @@ struct btrfs_dev_item
  * the super block basically lists the main trees of the FS
  * it currently lacks any block count etc etc
  */
-struct btrfs_super_block 
+struct btrfs_super_block
 {
     u8 csum[BTRFS_CSUM_SIZE];
     /* the first 4 fields must match struct btrfs_header */
@@ -180,8 +201,3 @@ struct btrfs_super_block
 } __attribute__ ((__packed__));
 
 #endif // __FS_BTRFS_H__
-
-
-
-
-
