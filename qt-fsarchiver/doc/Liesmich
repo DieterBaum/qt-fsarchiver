@@ -5,7 +5,7 @@ qt-fsarchiver: Sichern und Wiederherstellen von Partitionen Debian, Ubuntu, Linu
 Die Version 2.8.7-1 und höher funktionieren nur auf aktuellen Debian basierenden Distributionen.
 Für ältere Distributionen verwenden Sie bitte die Version 1.8.7-1 und höher.
 
-Copyright (C) 2008-2024 Francois Dupoux und Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2026 Francois Dupoux und Dieter Baum.  All rights reserved.
 Kopieren der Dateien, mit und ohne Änderung ist erlaubt. Der Code ist ohne jegliche Garantie. Die Benutzung erfolgt auf eigene Gefahr.
 Francois Dupoux entwickelte das Basisprogramm fsarchiver, Hihin Ruslan hat das Programm verbessert und nach Englisch und Russisch übersetzt. Michael R. Lawrence und sein Team übersetzte nach Spanisch und Italienisch, Zhenneng Li übersetzte nach Chinesisch, Dieter Baum erstellte die GUI.
 
@@ -28,7 +28,7 @@ username ALL=(ALL) ALL
 %sudo	ALL=(ALL:ALL) ALL
 Der username ist anzupassen: beispielweise peter.
 
-In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in qt6-qtbase-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk  xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils update-desktop-files pkexec
+In Suse werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: zypper in qt6-base-devel  libQt6Core5Compat6 make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gptfdisk  xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils update-desktop-files pkexec
 
 In Fedora werden die Abhängigkeiten mit Root-Rechten (su -l) mit diesem Befehl installiert: dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt6-qtbase qt6-qtbase-devel gdisk lz4-devel libzstd-devel jfsutils xfsprogs libuuid-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel
 

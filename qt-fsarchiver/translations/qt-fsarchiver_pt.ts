@@ -137,7 +137,7 @@
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>バックアップはユーザーによって中止されました</translation>
+        <translation>O backup foi interrompido pelo utilizador</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="401"/>
@@ -184,7 +184,7 @@
         <location filename="../src/clone.cpp" line="470"/>
         <source>Do you really want to write back an image of a partition? </source>
         <comment> Wollen Sie wirklich ein Abbild einer Partition zurückschreiben? </comment>
-        <translation>パーティションのイメージを本当に書き戻しますか?</translation>
+        <translation>Quer mesmo regravar uma imagem de uma partição?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="591"/>
@@ -212,13 +212,13 @@
         <location filename="../src/clone.cpp" line="702"/>
         <source>The disk to be recovered </source>
         <comment>Die wiederherzustellende Festplatte </comment>
-        <translation>復元するディスク</translation>
+        <translation>O disco a recuperar </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="703"/>
         <source> does not coincide with the saved </source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>保存したものと一致しません</translation>
+        <translation> não coincide com o que está guardado </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="721"/>
@@ -271,19 +271,19 @@
         <location filename="../src/clone.cpp" line="1765"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
-        <translation>バックアップ ファイル名:</translation>
+        <translation>Nome do ficheiro de cópia de segurança: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1766"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
-        <translation>パーティション名:</translation>
+        <translation>Nome da partição: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1767"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
-        <translation>パーティション タイプ:</translation>
+        <translation>Tipo de partição:</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1768"/>
@@ -300,26 +300,26 @@
         <location filename="../src/clone.cpp" line="1769"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
-        <translation>パーティション サイズ:</translation>
+        <translation>Tamanho da partição: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1769"/>
         <location filename="../src/clone.cpp" line="1770"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
-        <translation>パーティションの割り当て:</translation>
+        <translation>Atribuição da partição: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1770"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
-        <translation>圧縮:</translation>
+        <translation>Compressão: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1771"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
-        <translation>イメージ ファイルのおおよそのサイズ:</translation>
+        <translation>Tamanhos aproximados dos ficheiros de imagem: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1783"/>
@@ -337,13 +337,13 @@
         <location filename="../src/clone.cpp" line="1787"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
-        <translation>その他の注意事項:</translation>
+        <translation>Outras observações: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1772"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
-        <translation>保護/セキュリティ保護対象のパーティション: / (ルート システム ディレクトリ)</translation>
+        <translation>partição a proteger/proteger: / (diretório raiz do sistema)</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1288"/>
@@ -356,7 +356,7 @@
         <location filename="../src/clone.cpp" line="1777"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
-        <translation>オペレーティング システム:</translation>
+        <translation>Sistema operativo: </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1777"/>
@@ -367,7 +367,7 @@
         <location filename="../src/clone.cpp" line="1779"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
-        <translation>保護/セキュリティ保護対象のパーティション: /home</translation>
+        <translation>partição a proteger/proteger: /home</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1838"/>
@@ -390,19 +390,19 @@
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war nicht erfolgreich.
 </comment>
-        <translation>ハード ディスク イメージのバックアップは成功しませんでした。</translation>
+        <translation>A cópia de segurança da imagem do disco rígido não foi bem-sucedida.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1205"/>
         <source>The recovery of the partition image was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Partition war erfolgreich.</comment>
-        <translation>パーティション イメージの復元は成功しました。</translation>
+        <translation>A recuperação da imagem da partição foi bem-sucedida.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1212"/>
         <source>Hard disk image recovery was not successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war nicht erfolgreich.</comment>
-        <translation>ハード ディスク イメージの復元は成功しませんでした。</translation>
+        <translation>A recuperação da imagem do disco rígido não foi bem-sucedida.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1218"/>
@@ -417,7 +417,7 @@
         <location filename="../src/clone.cpp" line="800"/>
         <source>Exist harddrive</source>
         <comment>Existierende Festplatte</comment>
-        <translation>ハード ドライブが存在します</translation>
+        <translation>Existe um disco rígido</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="794"/>
@@ -429,25 +429,25 @@
         <location filename="../src/clone.cpp" line="818"/>
         <source>Save Partition Image</source>
         <comment>Image einer Partition erstellen</comment>
-        <translation>パーティション イメージの保存</translation>
+        <translation>Guardar imagem da partição</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="820"/>
         <source>Save Partition Image</source>
         <comment>Partition Abbild erstellen</comment>
-        <translation>パーティション イメージの保存</translation>
+        <translation>Guardar imagem da partição</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="834"/>
         <source>Writing back the image of a partition</source>
         <comment>Image einer Partition zurückschreiben</comment>
-        <translation>パーティションのイメージを書き戻しています</translation>
+        <translation>Gravar a imagem de uma partição</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="836"/>
         <source>Writing back the image of a partition</source>
         <comment>Partition Abbild zurückschreiben</comment>
-        <translation>パーティションのイメージを書き戻しています</translation>
+        <translation>Gravar a imagem de uma partição</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="927"/>
@@ -470,7 +470,7 @@
         <source>There is a root or home partition. Do you want to continue?</source>
         <comment>Es ist eine root- oder home Partition vorhanden. Wollen Sie fortfahren?
 </comment>
-        <translation>ルートまたはホーム パーティションがあります。続行しますか?</translation>
+        <translation>Existe uma partição raiz ou partição principal. Deseja continuar?</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="537"/>
@@ -483,13 +483,13 @@
         <location filename="../src/clone.cpp" line="1126"/>
         <source>The backup of the hard disk image was successful.</source>
         <comment>Das Sichern des Abbildes der Festplatte war erfolgreich.</comment>
-        <translation>ハード ディスク イメージのバックアップは成功しました。</translation>
+        <translation>A cópia de segurança da imagem do disco rígido foi bem-sucedida.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1131"/>
         <source>The backup of the image of the partition was successful.</source>
         <comment>Die Sichern des Abbildes der Partition war erfolgreich.</comment>
-        <translation>パーティションのイメージのバックアップは成功しました。</translation>
+        <translation>O backup da imagem da partição foi realizado com sucesso.</translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1138"/>
@@ -502,19 +502,19 @@
         <location filename="../src/clone.cpp" line="1145"/>
         <source>The backup of the hard disk image was not successful.</source>
         <comment>Die Sichern des Abbildes der Festplatte war nicht erfolgreich.</comment>
-        <translation>ハード ディスク イメージのバックアップは成功しませんでした。</translation>
+        <translation>A cópia de segurança da imagem do disco rígido não foi bem-sucedida. </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1152"/>
         <source>Saving the image of the partition was not successful.</source>
         <comment>Die Sichern des Abbildes der Partition war nicht erfolgreich.</comment>
-        <translation>パーティションのイメージの保存は成功しませんでした。</translation>
+        <translation>Não foi possível guardar a imagem da partição. </translation>
     </message>
     <message>
         <location filename="../src/clone.cpp" line="1200"/>
         <source>The hard disk image recovery was successful.</source>
         <comment>Die Wiederherstellung des Abbildes der Festplatte war erfolgreich</comment>
-        <translation>ハード ディスク イメージの復元は成功しました。</translation>
+        <translation>A recuperação da imagem do disco rígido foi bem-sucedida. </translation>
     </message>
 </context>
 <context>
@@ -591,8 +591,8 @@
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel:</comment>
-        <translation>暗号化
-backup. key:</translation>
+        <translation>Encriptar
+cópia de segurança. chave: </translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="164"/>
@@ -618,8 +618,8 @@ backup. key:</translation>
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel:</comment>
-        <translation>復号化
-backup. key:</translation>
+        <translation>Descriptografar 
+cópia de segurança. chave:</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="178"/>
@@ -671,11 +671,11 @@ backup. key:</translation>
         <translation>referência</translation>
     </message>
     <message>
-        <location filename="../src/dir.cpp" line="619"/>
-        <source> links were not correctly restored. The restoring of the lists was only partially successful</source>
+        <location filename="../src/dir.cpp" line="619"/> 
+        <source> links were not correctly restof the lists was only partially successful</source>
         <comment> Links wurden nicht korrekt wiederhergestellt. Die Wiederherstellung der Verzeichnisse war nur teilweise erfolgreich
 </comment>
-        <translation>リンクは正しく復元されませんでした。リストの復元は部分的にしか成功しませんでした</translation>
+        <translation> os links não foram restaurados corretamente; a restauração das listas foi apenas parcialmente bem-sucedida</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="245"/>
@@ -727,14 +727,14 @@ backup. key:</translation>
         <location filename="../src/dir.cpp" line="312"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
-        <translation>パスワードをもう一度入力してください</translation>
+        <translation>Introduza a palavra-passe novamente</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="310"/>
         <location filename="../src/dir.cpp" line="313"/>
-        <source>Password:</source>
+        <source>Password</source>
         <comment>Passwort</comment>
-        <translation>パスワード:</translation>
+        <translation>Palavra-passe</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="319"/>
@@ -742,7 +742,7 @@ backup. key:</translation>
 </source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
-        <translation>パスワードが一致しません。</translation>
+        <translation>As palavras-passe não coincidem.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="342"/>
@@ -765,7 +765,7 @@ backup. key:</translation>
 </source>
         <comment>Es wurde kein Schlüssel für die Entschlüsselung angegeben.
 </comment>
-        <translation>復号化キーが指定されていません。</translation>
+        <translation>Não foi especificada nenhuma chave de descodificação.</translation>
     </message>
     <message>
         <location filename="../src/dir.cpp" line="494"/>
@@ -1042,7 +1042,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
 </source>
         <comment>MBR wurde erfolgreich gesichert.
 </comment>
-        <translation>MBR は正常に保存されました。</translation>
+        <translation>O MBR foi guardado com sucesso. </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="198"/>
@@ -1050,7 +1050,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
 </source>
         <comment>GPT wurde erfolgreich gesichert.
 </comment>
-        <translation>GPT は正常に保存されました。</translation>
+        <translation>O GPT foi guardado com sucesso. </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="196"/>
@@ -1058,7 +1058,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
 </source>
         <comment>MBR wurde nicht gesichert.
 </comment>
-        <translation>MBR は保存されませんでした。 バックアップ パスの場合</translation>
+        <translation>O MBR não foi guardado.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="200"/>
@@ -1066,7 +1066,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
 </source>
         <comment>GPT wurde nicht gesichert.
 </comment>
-        <translation>GPT は保存されませんでした。 バックアップ パスの場合</translation>
+        <translation>O GPT não foi guardado.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="210"/>
@@ -1188,7 +1188,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <source>Error. The partition table cannot be read. The partition table cannot be read out. The program is aborted.</source>
         <comment>Fehler. Die Partitionstabelle kann nicht ausgelesen werden. Das Programm wird abgebrochen.
 </comment>
-        <translation>エラー。パーティション テーブルを読み取れません。パーティション テーブルを読み取れません。プログラムは中止されました。</translation>
+        <translation>Erro. Não é possível ler a tabela de partições. Não é possível ler a tabela de partições. O programa foi interrompido.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="360"/>
@@ -1219,7 +1219,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
 </source>
         <comment>Sie müssen die MBR/GPT Sicherungsdatei auswählen.
 </comment>
-        <translation>MBR/GPT ファイルを選択する必要があります</translation>
+        <translation>Tem de selecionar o ficheiro de cópia de segurança MBR/GPT.</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="432"/>
@@ -1234,7 +1234,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/mbr.cpp" line="450"/>
         <source> bytes. Do you want to continue?</source>
         <comment> Byte. Wollen Sie fortfahren?</comment>
-        <translation>バイトです。続行しますか?</translation>
+        <translation>bytes. Deseja continuar?</translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="441"/>
@@ -1252,7 +1252,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/mbr.cpp" line="441"/>
         <source>You may have selected the wrong hard disk. The hard disk to be restored is </source>
         <comment>Sie haben eventuell eine falsche Festplatte ausgewählt. Die wiederherzustellende Festplatte ist </comment>
-        <translation>間違ったハードディスクを選択した可能性があります。復元するハードディスクは</translation>
+        <translation>Pode ter selecionado o disco rígido errado. O disco rígido a ser restaurado é </translation>
     </message>
     <message>
         <location filename="../src/mbr.cpp" line="449"/>
@@ -1315,7 +1315,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="40"/>
         <source>Italian</source>
         <comment>Italienisch</comment>
-        <translation>イタリア語</translation>
+        <translation>Italiano</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="40"/>
@@ -1327,13 +1327,13 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="41"/>
         <source>Dutch</source>
         <comment>Niederländisch</comment>
-        <translation>オランダ語</translation>
+        <translation>Holandês</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="41"/>
         <source>Japanese</source>
         <comment>Japanisch</comment>
-        <translation>日本語</translation>
+        <translation>Japonês</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="41"/>
@@ -1375,7 +1375,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="42"/>
         <source>Estonian</source>
         <comment>Estnisch</comment>
-        <translation>エストニア語</translation>
+        <translation>Estónio</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="42"/>
@@ -1393,7 +1393,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="42"/>
         <source>Hindi</source>
         <comment>Hindi</comment>
-        <translation>ヒンディー語</translation>
+        <translation>hindi</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="42"/>
@@ -1447,7 +1447,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="43"/>
         <source>Portuguese</source>
         <comment>Portugisisch</comment>
-        <translation>ポルトガル語</translation>
+        <translation>Português</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="43"/>
@@ -1483,7 +1483,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="44"/>
         <source>Thai</source>
         <comment>Thailändisch</comment>
-        <translation>タイ語</translation>
+        <translation>tailandês</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="44"/>
@@ -1501,7 +1501,7 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <location filename="../src/setting.cpp" line="44"/>
         <source>Urdu</source>
         <comment>Urdu</comment>
-        <translation>ウルドゥー語</translation>
+        <translation>urdu</translation>
     </message>
     <message>
         <location filename="../src/setting.cpp" line="44"/>
@@ -1594,13 +1594,13 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="177"/>
+        <location filename="../src/setting.cpp" line="184"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>referência</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="178"/>
+        <location filename="../src/setting.cpp" line="185"/>
         <source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
         <comment>Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.
 </comment>
@@ -1632,16 +1632,6 @@ A extensão do ficheiro deve ser . fsa.</translation>
         <source>Save partition</source>
         <extracomment>Partition sichern</extracomment>
         <translation>Back partition</translation>
-    </message>
-    <message>
-        <location filename="../src/ui/filedialog.ui" line="80"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/filedialog.cpp" line="43"/>
@@ -1751,8 +1741,8 @@ p, li { white-space: pre-wrap; }
 backup. key:</source>
         <comment>Sicherung
 entschlüsseln. Schlüssel</comment>
-        <translation>復号化
-backup. key:</translation>
+        <translation>Descriptografar
+cópia de segurança. chave:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="615"/>
@@ -1772,8 +1762,8 @@ backup. key:</translation>
 backup. key:</source>
         <comment>Sicherung
 verschlüsseln. Schlüssel</comment>
-        <translation>暗号化
-backup. key:</translation>
+        <translation>Encriptar
+cópia de segurança. chave:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="394"/>
@@ -1821,14 +1811,14 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="1960"/>
         <location filename="../src/mainWindow.cpp" line="1963"/>
         <location filename="../src/mainWindow.cpp" line="1968"/>
-        <location filename="../src/mainWindow.cpp" line="2560"/>
-        <location filename="../src/mainWindow.cpp" line="2650"/>
-        <location filename="../src/mainWindow.cpp" line="2710"/>
-        <location filename="../src/mainWindow.cpp" line="2717"/>
-        <location filename="../src/mainWindow.cpp" line="2747"/>
-        <location filename="../src/mainWindow.cpp" line="2775"/>
-        <location filename="../src/mainWindow.cpp" line="2876"/>
-        <location filename="../src/mainWindow.cpp" line="2903"/>
+        <location filename="../src/mainWindow.cpp" line="2561"/>
+        <location filename="../src/mainWindow.cpp" line="2655"/>
+        <location filename="../src/mainWindow.cpp" line="2715"/>
+        <location filename="../src/mainWindow.cpp" line="2722"/>
+        <location filename="../src/mainWindow.cpp" line="2752"/>
+        <location filename="../src/mainWindow.cpp" line="2783"/>
+        <location filename="../src/mainWindow.cpp" line="2884"/>
+        <location filename="../src/mainWindow.cpp" line="2911"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>referência</translation>
@@ -1841,7 +1831,7 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="574"/>
-        <location filename="../src/mainWindow.cpp" line="2825"/>
+        <location filename="../src/mainWindow.cpp" line="2833"/>
         <source>Existing partitions:</source>
         <comment>vorhandene Partitionen</comment>
         <translation>Partições existentes:</translation>
@@ -1852,7 +1842,7 @@ backup. key:</translation>
 </source>
         <comment>Bitte wählen Sie das Sicherungsverzeichnis aus.
 </comment>
-        <translation>バックアップ ディレクトリから選択してください。</translation>
+        <translation>Selecione um ficheiro do diretório de cópias de segurança.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="688"/>
@@ -1868,7 +1858,7 @@ backup. key:</translation>
 </source>
         <comment>Bitte wählen Sie den Dateinamen der Sicherung aus.
 </comment>
-        <translation>バックアップのファイル名を選択してください。</translation>
+        <translation>Selecione o nome do ficheiro da cópia de segurança.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="744"/>
@@ -1881,14 +1871,14 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="776"/>
-        <location filename="../src/mainWindow.cpp" line="2694"/>
+        <location filename="../src/mainWindow.cpp" line="2699"/>
         <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>To back up the system partition is mounted. Do you want to do a live backup?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="784"/>
-        <location filename="../src/mainWindow.cpp" line="2702"/>
+        <location filename="../src/mainWindow.cpp" line="2707"/>
         <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>To back up home partition is mounted. Do you want to do a live backup?</translation>
@@ -1897,7 +1887,7 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="808"/>
         <source>The partition</source>
         <comment>Die Partition </comment>
-        <translation>パーティションはマウント解除できません。プログラムは中止されます。</translation>
+        <translation>A partição</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="808"/>
@@ -1913,14 +1903,14 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="861"/>
         <source>Enter password again</source>
         <comment>Passwort nochmals eingeben</comment>
-        <translation>パスワードをもう一度入力してください</translation>
+        <translation>Introduza a palavra-passe novamente</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="859"/>
         <location filename="../src/mainWindow.cpp" line="862"/>
         <source>Password:</source>
         <comment>Passwort</comment>
-        <translation>パスワード:</translation>
+        <translation>Palavra-passe:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="868"/>
@@ -1928,7 +1918,7 @@ backup. key:</translation>
 </source>
         <comment>Die Passwörter stimmen nicht überein.
 </comment>
-        <translation>パスワードが一致しません。</translation>
+        <translation>As palavras-passe não coincidem. </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="699"/>
@@ -1958,19 +1948,19 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="959"/>
-        <location filename="../src/mainWindow.cpp" line="2877"/>
+        <location filename="../src/mainWindow.cpp" line="2885"/>
         <source>The backup was aborted by the user
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
 </comment>
-        <translation>バックアップはユーザーによって中止されました</translation>
+        <translation>O backup foi interrompido pelo utilizador</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1007"/>
-        <location filename="../src/mainWindow.cpp" line="2918"/>
+        <location filename="../src/mainWindow.cpp" line="2926"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
-        <translation>書き戻すパーティションを選択してください。</translation>
+        <translation>O backup é realizado</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1173"/>
@@ -1994,7 +1984,7 @@ backup. key:</translation>
 </source>
         <comment>Sie haben ein Verzeichnis ausgewählt. Sie müssen eine Datei auswählen
 </comment>
-        <translation>入力したパスワードが間違っています。</translation>
+        <translation>Selecionou um diretório. Deve selecionar um ficheiro</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1229"/>
@@ -2014,22 +2004,22 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="1265"/>
         <source> does not coincide with the saved  </source>
         <comment> stimmt nicht mit der gesicherten </comment>
-        <translation>回復するシステム パーティションはマウントされており、書き戻すことはできません。Live-CD を使用してください。</translation>
+        <translation> não coincide com o que está guardado  </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1265"/>
-        <location filename="../src/mainWindow.cpp" line="2806"/>
+        <location filename="../src/mainWindow.cpp" line="2814"/>
         <source>Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
         <translation>Deseja continuar a restauração?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1289"/>
-        <location filename="../src/mainWindow.cpp" line="2748"/>
+        <location filename="../src/mainWindow.cpp" line="2753"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
-        <translation>復元するホーム パーティションはマウントされており、書き戻すことはできません。Live CD を使用してください。</translation>
+        <translation>A restauração foi interrompida pelo utilizador</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1301"/>
@@ -2039,7 +2029,7 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1318"/>
-        <location filename="../src/mainWindow.cpp" line="2711"/>
+        <location filename="../src/mainWindow.cpp" line="2716"/>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
@@ -2047,7 +2037,7 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1325"/>
-        <location filename="../src/mainWindow.cpp" line="2718"/>
+        <location filename="../src/mainWindow.cpp" line="2723"/>
         <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
@@ -2057,7 +2047,7 @@ backup. key:</translation>
         <location filename="../src/mainWindow.cpp" line="1341"/>
         <source>The partition </source>
         <comment>Die Partition </comment>
-        <translation>パーティション、ディレクトリ、および MBR をバックアップおよび復元します。</translation>
+        <translation>A divisória </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1380"/>
@@ -2068,7 +2058,7 @@ backup. key:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1407"/>
-        <location filename="../src/mainWindow.cpp" line="2826"/>
+        <location filename="../src/mainWindow.cpp" line="2834"/>
         <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
         <translation>The restoring is performed</translation>
@@ -2079,7 +2069,7 @@ backup. key:</translation>
         <translation>qt-fsarchiver</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2776"/>
+        <location filename="../src/mainWindow.cpp" line="2784"/>
         <source>
 The write-back is canceled.
  </source>
@@ -2114,13 +2104,13 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Espaço livre no disco rígido para o qual se pretende efetuar a cópia de segurança:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2530"/>
+        <location filename="../src/mainWindow.cpp" line="2532"/>
         <source>Existing list entries</source>
         <comment>vorhandene Listeinträge</comment>
         <translation>Entradas da lista existente</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2561"/>
+        <location filename="../src/mainWindow.cpp" line="2562"/>
         <source>There is no order available
 </source>
         <comment>Es ist kein Autrag vorhanden
@@ -2128,7 +2118,7 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Não há encomenda disponível</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2776"/>
+        <location filename="../src/mainWindow.cpp" line="2784"/>
         <source>The file required for the restore is not available:
  </source>
         <comment>Die für die Wiederherstellung erforderliche Datei ist nicht vorhanden:
@@ -2137,19 +2127,19 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2805"/>
+        <location filename="../src/mainWindow.cpp" line="2813"/>
         <source>The UUID of the partition to be restored  </source>
         <comment>Die UUID der wiederherzustellende Partition </comment>
         <translation>Identyfikator UUID partycji, która ma zostać przywrócona</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2806"/>
+        <location filename="../src/mainWindow.cpp" line="2814"/>
         <source> does not match the saved UUID  </source>
         <comment> stimmt nicht mit der gesicherten UUID überein</comment>
         <translation>nie jest zgodny z zapisanym identyfikatorem UUID</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2904"/>
+        <location filename="../src/mainWindow.cpp" line="2912"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
@@ -2266,7 +2256,7 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="1816"/>
         <source> specials and the Partition Boot Record have been backed.</source>
         <comment> spezielle Daten und der Partition Boot Sektor wurden gesichert.</comment>
-        <translation>バックアップ ファイルのパス:</translation>
+        <translation> Os setores especiais e o Registo de Arranque da Partição foram copiados.</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1835"/>
@@ -2313,6 +2303,13 @@ Das Zurückschreiben  wird abgebrochen.
 </comment>
         <translation>Não existe espaço suficiente no disco rígido para a cópia de segurança. A cópia de segurança é cancelada.</translation>
     </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1475"/>
+        <source>Backup and restore partitions, directory and MBR.
+version 2.8.9-0, February 15, 2026</source>
+        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.9-0, 15.Februar 2026</comment>
+        <translation>Cópia de segurança e recuperação de partições, diretórios e MBR Versão 2.8.9-0, 15 de fevereiro de 2026</translation>
+    </message> 
     <message>
         <location filename="../src/mainWindow.cpp" line="1766"/>
         <source>The partition was not backed up successfully. The free space on the hard drive to be backed up was not sufficient or The file is too large. do not use a FAT partition.
@@ -2428,19 +2425,19 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="2145"/>
         <source>Backup file name: </source>
         <comment>Sicherungsdateiname: </comment>
-        <translation>バックアップ ファイル名:</translation>
+        <translation>Nome do ficheiro de cópia de segurança: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2146"/>
         <source>Partition  name: </source>
         <comment>Partitionsname: </comment>
-        <translation>パーティション名:</translation>
+        <translation>Nome da partição: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2147"/>
         <source>Partition type: </source>
         <comment>Partitionsart: </comment>
-        <translation>パーティション タイプ:</translation>
+        <translation>Tipo de partição: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2148"/>
@@ -2451,32 +2448,32 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="2148"/>
         <source>Description: </source>
         <comment>Bezeichnung: </comment>
-        <translation>説明:</translation>
+        <translation>Descrição: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2149"/>
         <source>Partition size: </source>
         <comment>Partitionsgröße: </comment>
-        <translation>パーティション サイズ:</translation>
+        <translation>Tamanho da partição: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2149"/>
         <location filename="../src/mainWindow.cpp" line="2150"/>
         <source>Assignment of the partition: </source>
         <comment>Belegung der Partition: </comment>
-        <translation>パーティションの割り当て:</translation>
+        <translation>Atribuição da partição: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2150"/>
         <source>Compression: </source>
         <comment>Kompression: </comment>
-        <translation>圧縮:</translation>
+        <translation>Compressão: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2151"/>
         <source>Approximate image file sizes: </source>
         <comment>ungefähre Sicherungsdateigröße: </comment>
-        <translation>イメージ ファイルのおおよそのサイズ:</translation>
+        <translation>Tamanhos aproximados dos ficheiros de imagem: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2165"/>
@@ -2488,13 +2485,13 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="2169"/>
         <source>Other notes: </source>
         <comment>weitere Hinweise:</comment>
-        <translation>その他の注意事項:</translation>
+        <translation>Outras observações: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2152"/>
         <source>to be protected/secured partition: / (root system directory) </source>
         <comment>zu sichernde / gesicherte Partition: / (Wurzel-Systemverzeichnis) </comment>
-        <translation>保護/セキュリティ保護対象のパーティション: / (ルート システム ディレクトリ)</translation>
+        <translation>partição a proteger/proteger: / (diretório raiz do sistema) </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1946"/>
@@ -2518,19 +2515,19 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/mainWindow.cpp" line="2163"/>
         <source>Operating system: </source>
         <comment>Betriebsystem: </comment>
-        <translation>オペレーティング システム:</translation>
+        <translation>Sistema operativo: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2157"/>
         <location filename="../src/mainWindow.cpp" line="2163"/>
         <source>Kernel: </source>
-        <translation>カーネル:</translation>
+        <translation>Kernel: </translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2159"/>
         <source>to be protected/secured partition: /home</source>
         <comment>zu sichernde/gesicherte Partition: /home</comment>
-        <translation>保護/セキュリティ保護対象のパーティション: /home</translation>
+        <translation>partição a proteger/proteger: /home</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2185"/>
@@ -2548,7 +2545,7 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>GB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2651"/>
+        <location filename="../src/mainWindow.cpp" line="2656"/>
         <source>No USB disk is connected, The program is terminated.</source>
         <comment>Es ist keine USB-Platte angeschlossen, Das Programm wird beendet.
 </comment>
@@ -2572,9 +2569,17 @@ Das Zurückschreiben  wird abgebrochen.
         <location filename="../src/ui/fsarchiverMain.ui" line="31"/>
         <source>Restore partition
 with fsarchi&amp;ver</source>
-        <translation>
+        <translation>Restaurar partição
+com o fsarchiver
 </translation>
     </message>
+<message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="143"/>
+        <source>Compression
+setting:</source>
+        <translation>Configuração
+de compressão:</translation>
+    </message>    
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="47"/>
         <source>Existing partitions:</source>
@@ -2589,6 +2594,13 @@ with fsarchi&amp;ver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="172"/>
         <source>Start the backup of a partition.</source>
         <translation>Inicie o backup de uma partição.</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/fsarchiverMain.ui" line="128"/>
+        <source>Number of processors
+cores for to be used fsarchiver:</source>
+        <translation>Número de núcleos de processador
+a utilizar pelo fsarchiver:</translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="175"/>
@@ -2634,14 +2646,15 @@ with fsarchi&amp;ver</source>
         <location filename="../src/ui/fsarchiverMain.ui" line="348"/>
         <source>On the number saved
 Files/directories:</source>
-        <translation>
+        <translation>No número guardado
+Ficheiros/diretórios:
 </translation>
     </message>
     <message>
         <location filename="../src/ui/fsarchiverMain.ui" line="356"/>
         <source>already saved 
 files/directories:</source>
-        <translation>すでに保存済み
+        <translation>já guardado
 </translation>
     </message>
     <message>
@@ -2649,7 +2662,8 @@ files/directories:</source>
         <source>&amp;Partition save 
 with fsarchiver</source>
         <extracomment>Partition mit * fsArchiver sichern:</extracomment>
-        <translation>
+        <translation>Guardar partição 
+com o fsarchiver
 </translation>
     </message>
     <message>
@@ -3155,7 +3169,8 @@ Files/directories:</source>
         <source>Number of processor cores
 for to be used fsarchiver:</source>
         <extracomment>Anzahl der Prozessorkerne, die für fsarchiver verwendet werden sollen:</extracomment>
-        <translation>
+        <translation>Número de núcleos do processador
+a utilizar no fsarchiver:
 </translation>
     </message>
     <message>
@@ -3168,7 +3183,7 @@ for to be used fsarchiver:</source>
         <location filename="../src/ui/dir_dialog.ui" line="391"/>
         <source>Encrypt
 backup key</source>
-        <translation>暗号化
+        <translation>Encriptar
 </translation>
     </message>
     <message>
@@ -3349,7 +3364,8 @@ deve ser utilizado:</translation>
         <source>Standard
 compression:</source>
         <extracomment>Standard*kompression:</extracomment>
-        <translation>
+        <translation>Compressão
+padrão:
 </translation>
     </message>
     <message>
@@ -3390,7 +3406,7 @@ back to the original location</translation>
         <translation>Tamanho do ficheiro comprimido dividido em DVD</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="313"/>
+        <location filename="../src/ui/setting.ui" line="310"/>
         <source>Select the font size of the 
 graphical user interfaces</source>
         <translation>Selecione o tamanho da letra do
@@ -3443,7 +3459,7 @@ The pause length is pre-set to 5*10 msec. If the program does not work properly,
 A duração da pausa está predefinida para 5*10 mseg. Se o programa não funcionar corretamente, é possível influenciar a duração da pausa com um fator de 1 a 20.</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="283"/>
+        <location filename="../src/ui/setting.ui" line="284"/>
         <source>Select time delay factor. You can obtain further information by placing the cursor on this text.</source>
         <translation>Selecionar o fator de atraso de tempo. Pode obter mais informações se colocar o cursor sobre este texto.</translation>
     </message>

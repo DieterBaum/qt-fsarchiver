@@ -5,7 +5,7 @@ qt-fsarchiver: Back up and restore partitions for Debian,Ubuntu, Linux-Mint, Sus
 Version 2.8.7-1 and higher only work on current Debian-based distributions.
 For older distributions, please use version 1.8.7-1 and higher.
 
-Copyright (C) 2008-2024 Francois Dupoux and Dieter Baum.  All rights reserved.
+Copyright (C) 2008-2026 Francois Dupoux and Dieter Baum.  All rights reserved.
 Copying the files is permitted with or without modifications. The code is without warranty of any kind. Use at your own risk.
 
 François Dupoux has developed the basic program fsarchiver, Hihin Ruslan has improved the program and tranlate to englisch und russian. Michael R. Lawrence and his team translated to Spanish and Italian, Zhenneng Li translated to Chinese, Dieter Baum created the GUI and the code to use the GUI.
@@ -27,7 +27,7 @@ username ALL=(ALL) ALL
 %sudo	ALL=(ALL:ALL) ALL
 The username has to be adjusted: for example peter.
 
-The command for Suse: (you must be an administrator su -l) zypper in qt6-qtbase-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gdisk  xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils update-desktop-files pkexec
+The command for Suse: (you must be an administrator su -l) zypper in zypper in qt6-base-devel  libQt6Core5Compat6 make libzip-devel libbz2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel btrfsprogs gptfdisk  xfsprogs liblz4-1 liblz4-devel libzstd1 libzstd-devel zlib-devel jfsutils update-desktop-files pkexec
 
 The command for Fedora: (you must be an administrator su -l) dnf install  gcc gcc-c++ zlib-devel bzip2-devel xz-devel lzo-devel libgcrypt-devel e2fsprogs-devel libblkid-devel libattr-devel qt6-qtbase qt6-qtbase-devel gdisk lz4-devel libzstd-devel jfsutils xfsprogs libuuid-devel qt6-linguist qt6-qt5compat qt6-qt5compat-devel
 

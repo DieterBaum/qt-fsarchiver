@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2025 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2026 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -131,6 +131,13 @@ void FileDialog::file_read()
 void FileDialog::werte_uebergeben(QString wert) {
        	wort = wert;
 }
+
+
+
+
+
+
+
 
 
 

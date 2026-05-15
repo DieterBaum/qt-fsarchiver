@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+%:
+	dh $@ 
+override_dh_auto_configure:
+	/usr/lib/qt6/bin/qmake6 -o Makefile qt-fsarchiver.pro 
+	

@@ -1,7 +1,7 @@
 /*
  * fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2025 Francois Dupoux.  All rights reserved.
+* Copyright (C) 2008-2026 Francois Dupoux.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -61,6 +61,13 @@ int archreader_read_header(carchreader *ai, char *magic, struct s_dico **d, bool
 int archreader_read_block(carchreader *ai, struct s_dico *in_blkdico, int in_skipblock, int *out_sumok, struct s_blockinfo *out_blkinfo);
 
 #endif // __ARCHREADER_H__
+
+
+
+
+
+
+
 
 
 

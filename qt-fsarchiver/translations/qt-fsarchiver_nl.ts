@@ -1596,13 +1596,13 @@ De bestandsextensie moet .fsa zijn.</translation>
         <translation>zstd</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="177"/>
+        <location filename="../src/setting.cpp" line="184"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Noot</translation>
     </message>
     <message>
-        <location filename="../src/setting.cpp" line="178"/>
+        <location filename="../src/setting.cpp" line="185"/>
         <source>The settings have been saved. If the language setting is changed, the program must be restarted.</source>
         <comment>Die Einstellungen wurden gespeichert. Bei geänderter Spracheinstellung muss das Programm neu gestartet werden.
 </comment>
@@ -1816,14 +1816,14 @@ back-up. sleutel:</translation>
         <location filename="../src/mainWindow.cpp" line="1960"/>
         <location filename="../src/mainWindow.cpp" line="1963"/>
         <location filename="../src/mainWindow.cpp" line="1968"/>
-        <location filename="../src/mainWindow.cpp" line="2560"/>
-        <location filename="../src/mainWindow.cpp" line="2650"/>
-        <location filename="../src/mainWindow.cpp" line="2710"/>
-        <location filename="../src/mainWindow.cpp" line="2717"/>
-        <location filename="../src/mainWindow.cpp" line="2747"/>
-        <location filename="../src/mainWindow.cpp" line="2775"/>
-        <location filename="../src/mainWindow.cpp" line="2876"/>
-        <location filename="../src/mainWindow.cpp" line="2903"/>
+        <location filename="../src/mainWindow.cpp" line="2561"/>
+        <location filename="../src/mainWindow.cpp" line="2655"/>
+        <location filename="../src/mainWindow.cpp" line="2715"/>
+        <location filename="../src/mainWindow.cpp" line="2722"/>
+        <location filename="../src/mainWindow.cpp" line="2752"/>
+        <location filename="../src/mainWindow.cpp" line="2783"/>
+        <location filename="../src/mainWindow.cpp" line="2884"/>
+        <location filename="../src/mainWindow.cpp" line="2911"/>
         <source>Note</source>
         <comment>Hinweis</comment>
         <translation>Noot</translation>
@@ -1842,7 +1842,7 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="574"/>
-        <location filename="../src/mainWindow.cpp" line="2825"/>
+        <location filename="../src/mainWindow.cpp" line="2833"/>
         <source>Existing partitions:</source>
         <comment>vorhandene Partitionen</comment>
         <translation>bestaande partities:</translation>
@@ -1882,14 +1882,14 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="776"/>
-        <location filename="../src/mainWindow.cpp" line="2694"/>
+        <location filename="../src/mainWindow.cpp" line="2699"/>
         <source>The system partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Systempartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>To back up the system partition is mounted. Do you want to do a live backup?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="784"/>
-        <location filename="../src/mainWindow.cpp" line="2702"/>
+        <location filename="../src/mainWindow.cpp" line="2707"/>
         <source>The home partition to be backed up is mounted. Do you want to perform a live backup?</source>
         <comment>Die zu sichernde Homepartition ist eingehängt. Wollen Sie eine Live-Sicherung durchführen?</comment>
         <translation>To back up home partition is mounted. Do you want to do a live backup?</translation>
@@ -1959,7 +1959,7 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="959"/>
-        <location filename="../src/mainWindow.cpp" line="2877"/>
+        <location filename="../src/mainWindow.cpp" line="2885"/>
         <source>The backup was aborted by the user
 </source>
         <comment>Die Sicherung wurde vom Benutzer abgebrochen
@@ -1969,7 +1969,7 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1007"/>
-        <location filename="../src/mainWindow.cpp" line="2918"/>
+        <location filename="../src/mainWindow.cpp" line="2926"/>
         <source>The backup is performed</source>
         <comment>Die Sicherung wird durchgeführt</comment>
         <translation>De back-up wordt uitgevoerd</translation>
@@ -2020,14 +2020,14 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1265"/>
-        <location filename="../src/mainWindow.cpp" line="2806"/>
+        <location filename="../src/mainWindow.cpp" line="2814"/>
         <source>Do you want to continue restore?</source>
         <comment> überein. Wollen Sie trotzdem die Wiederherstellung durchführen?</comment>
         <translation>Wil je doorgaan met herstellen?</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1289"/>
-        <location filename="../src/mainWindow.cpp" line="2748"/>
+        <location filename="../src/mainWindow.cpp" line="2753"/>
         <source>The restore was aborted by the user</source>
         <comment>Das Zurückschreiben wurde vom Benutzer abgebrochen
 </comment>
@@ -2041,7 +2041,7 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1318"/>
-        <location filename="../src/mainWindow.cpp" line="2711"/>
+        <location filename="../src/mainWindow.cpp" line="2716"/>
         <source>The system partition to be recovered is mounted and cannot be written back. Please use a Live-CD.</source>
         <comment>Die wiederherzustellende Systempartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
@@ -2049,7 +2049,7 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1325"/>
-        <location filename="../src/mainWindow.cpp" line="2718"/>
+        <location filename="../src/mainWindow.cpp" line="2723"/>
         <source>The home partition to be restored is mounted and cannot be written back. Please use a live CD.</source>
         <comment>Die wiederherzustellende Homepartition ist eingehängt und kann nicht zurückgeschrieben werden. Benutzen Sie bitte eine Live-CD
 </comment>
@@ -2070,7 +2070,7 @@ back-up. sleutel:</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1407"/>
-        <location filename="../src/mainWindow.cpp" line="2826"/>
+        <location filename="../src/mainWindow.cpp" line="2834"/>
         <source>The recovery is performed.</source>
         <comment>Die Wiederherstellung wird durchgeführt</comment>
         <translation>The restoring is performed</translation>
@@ -2081,15 +2081,14 @@ back-up. sleutel:</translation>
         <translation>qt-fsarchiver</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="1475"/>
         <source>Backup and restore partitions, directory and MBR.
 version 2.8.9-0, February 15, 2026</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.9-0 15.2 2026</comment>
-        <translation>Back-up en herstel partities, mappen en MBR.
+        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.9-0 15.2 2026</comment>
+        <translation type="vanished">Back-up en herstel partities, mappen en MBR.
 Versie 2.8.9-0, 15.Februari 2026</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2776"/>
+        <location filename="../src/mainWindow.cpp" line="2784"/>
         <source>
 The write-back is canceled.
  </source>
@@ -2123,13 +2122,13 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Vrije ruimte op de harde schijf waarnaar een back-up moet worden gemaakt:</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2530"/>
+        <location filename="../src/mainWindow.cpp" line="2532"/>
         <source>Existing list entries</source>
         <comment>vorhandene Listeinträge</comment>
         <translation>Bestaande vermeldingen op de lijst</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2561"/>
+        <location filename="../src/mainWindow.cpp" line="2562"/>
         <source>There is no order available
 </source>
         <comment>Es ist kein Autrag vorhanden
@@ -2137,7 +2136,7 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>Er is geen bestelling beschikbaar</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2776"/>
+        <location filename="../src/mainWindow.cpp" line="2784"/>
         <source>The file required for the restore is not available:
  </source>
         <comment>Die für die Wiederherstellung erforderliche Datei ist nicht vorhanden:
@@ -2146,19 +2145,19 @@ Das Zurückschreiben  wird abgebrochen.
 </translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2805"/>
+        <location filename="../src/mainWindow.cpp" line="2813"/>
         <source>The UUID of the partition to be restored  </source>
         <comment>Die UUID der wiederherzustellende Partition </comment>
         <translation>De UUID van de partitie die moet worden teruggezet</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2806"/>
+        <location filename="../src/mainWindow.cpp" line="2814"/>
         <source> does not match the saved UUID  </source>
         <comment> stimmt nicht mit der gesicherten UUID überein</comment>
         <translation>komt niet overeen met de opgeslagen UUID</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2904"/>
+        <location filename="../src/mainWindow.cpp" line="2912"/>
         <source>There is not enough space on the hard disk for the backup. The backup is canceled.</source>
         <comment>Auf der Festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
@@ -2328,6 +2327,14 @@ Das Zurückschreiben  wird abgebrochen.
         <comment>Auf der festplatte ist nicht genügend Platz für die Sicherung vorhanden. Die Sicherung wird abgebrochen.
 </comment>
         <translation>Er is niet genoeg ruimte op de harde schijf voor de back-up. De back-up wordt geannuleerd.</translation>
+    </message>
+    <message>
+        <location filename="../src/mainWindow.cpp" line="1475"/>
+        <source>Backup and restore partitions, directory and MBR.
+version 2.8.9-0, February 15, 2026</source>
+        <comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.9-0, 15.Februar 2026</comment>
+        <translation type="unfinished">Back-up en herstel partities, mappen en MBR.
+Versie 2.8.9-0, 15.Februari 2026</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="1766"/>
@@ -2565,7 +2572,7 @@ Das Zurückschreiben  wird abgebrochen.
         <translation>GB</translation>
     </message>
     <message>
-        <location filename="../src/mainWindow.cpp" line="2651"/>
+        <location filename="../src/mainWindow.cpp" line="2656"/>
         <source>No USB disk is connected, The program is terminated.</source>
         <comment>Es ist keine USB-Platte angeschlossen, Das Programm wird beendet.
 </comment>
@@ -3409,7 +3416,7 @@ back to the original location</translation>
         <translation>Grootte archiefbestand verdeeld op DVD</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="313"/>
+        <location filename="../src/ui/setting.ui" line="310"/>
         <source>Select the font size of the 
 graphical user interfaces</source>
         <translation>Selecteer de lettergrootte van de
@@ -3462,7 +3469,7 @@ The pause length is pre-set to 5*10 msec. If the program does not work properly,
 De pauzeduur is vooraf ingesteld op 5*10 msec. Als het programma niet goed werkt, kun je de pauzeduur beïnvloeden met een factor van 1 tot 20.</translation>
     </message>
     <message>
-        <location filename="../src/ui/setting.ui" line="283"/>
+        <location filename="../src/ui/setting.ui" line="284"/>
         <source>Select time delay factor. You can obtain further information by placing the cursor on this text.</source>
         <translation>Selecteer vertragingsfactor. Je kunt meer informatie krijgen door de cursor op deze tekst te plaatsen.</translation>
     </message>

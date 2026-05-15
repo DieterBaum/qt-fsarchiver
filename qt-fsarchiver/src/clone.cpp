@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2025 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2026 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -1706,7 +1706,10 @@ QString dummy;
     int Tag;
     int Monat;
     int Jahr;
+    int zahl;
     QString Datum_akt;
+    QString _Datum_Tag_clone;
+    QString _Datum_Monat_clone;
     time_t Zeitstempel;
     tm *nun;
     Zeitstempel = time(0);
@@ -1714,9 +1717,20 @@ QString dummy;
     Tag = nun->tm_mday;
     Monat = nun->tm_mon+1;
     Jahr = nun->tm_year+1900;
-    _Datum_clone = Datum_akt.setNum(Tag) + "-" ; 
-    _Datum_clone = _Datum_clone + Datum_akt.setNum(Monat) + "-" ;
-    _Datum_clone = _Datum_clone + Datum_akt.setNum(Jahr) ;
+    _Datum_Tag_clone = Datum_akt.setNum(Tag);
+    _Datum_Monat_clone = Datum_akt.setNum(Monat);
+    zahl = _Datum_Tag_clone.size();
+    if(zahl  == 1)
+       _Datum_Tag_clone = _Datum_clone + "0" + Datum_akt.setNum(Tag);
+    zahl = _Datum_Monat_clone.size();   
+    if(zahl  == 1)
+      _Datum_Monat_clone = _Datum_clone + "0" + Datum_akt.setNum(Monat); 
+     //Deutsche Variante 
+   _Datum_clone = _Datum_Tag_clone + "-" + _Datum_Monat_clone + "-" + Datum_akt.setNum(Jahr); 
+    
+    //Englische Variante
+//     _Datum_clone = Datum_akt.setNum(Jahr) + "-" + _Datum_Monat_clone + "-" + _Datum_Tag_clone; 
+    
     return _Datum_clone;
 }       
 
@@ -2014,6 +2028,13 @@ int DialogClone::questionMessage_warning_clone(QString frage)
     		return 2;
 return 0;    		
 }
+
+
+
+
+
+
+
 
 
 

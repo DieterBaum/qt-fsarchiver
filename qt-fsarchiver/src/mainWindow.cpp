@@ -1,7 +1,7 @@
 /*
  * qt-fsarchiver: Filesystem Archiver
  * 
-* Copyright (C) 2008-2025 Dieter Baum.  All rights reserved.
+* Copyright (C) 2008-2026 Dieter Baum.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -1414,7 +1414,10 @@ QString MWindow::Zeit_auslesen(){
     int Tag;
     int Monat;
     int Jahr;
+    int zahl;
     QString Datum_akt;
+    QString _Datum_Tag;
+    QString _Datum_Monat;
     time_t Zeitstempel;
     tm *nun;
     Zeitstempel = time(0);
@@ -1422,9 +1425,20 @@ QString MWindow::Zeit_auslesen(){
     Tag = nun->tm_mday;
     Monat = nun->tm_mon+1;
     Jahr = nun->tm_year+1900;
-    _Datum = Datum_akt.setNum(Tag) + "-" ; 
-    _Datum = _Datum + Datum_akt.setNum(Monat) + "-" ;
-    _Datum = _Datum + Datum_akt.setNum(Jahr) ;
+    _Datum = "";
+    _Datum_Tag = Datum_akt.setNum(Tag);
+    _Datum_Monat = Datum_akt.setNum(Monat);
+    zahl = _Datum_Tag.size();
+    if(zahl  == 1)
+       _Datum_Tag = _Datum + "0" + Datum_akt.setNum(Tag);
+    zahl = _Datum_Monat.size();   
+    if(zahl  == 1)
+      _Datum_Monat = _Datum + "0" + Datum_akt.setNum(Monat); 
+     //Deutsche Variante 
+     // _Datum = _Datum_Tag + "-" + _Datum_Monat + "-" + Datum_akt.setNum(Jahr); 
+    
+    //Englische Variante
+    _Datum = Datum_akt.setNum(Jahr) + "-" + _Datum_Monat + "-" + _Datum_Tag; 
     return _Datum;
 }
 
@@ -3507,6 +3521,13 @@ QTextStream ds(&file);
            } 
         }           
 }
+
+
+
+
+
+
+
 
 
 
