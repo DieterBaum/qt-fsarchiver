@@ -1634,16 +1634,6 @@ Die Dateiendung muss .fsa sein</comment>
         <translation>Back partition</translation>
     </message>
     <message>
-        <location filename="../src/ui/filedialog.ui" line="80"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../src/filedialog.cpp" line="43"/>
         <source>Partition restore</source>
         <comment>Partition zurückschreiben</comment>
@@ -2065,10 +2055,10 @@ verschlüsseln. Schlüssel</comment>
     <message>
         <location filename="../src/mainWindow.cpp" line="1475"/>
         <source>Backup and restore partitions, directory and MBR.
-version 2.8.9-0, February 15, 2026</source>
-<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.9-0 15.2 2026</comment>
+version 2.8.9-2, August 8, 2026</source>
+<comment>Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR  2.8.9-2 8.8 2026</comment>
         <translation>پشتیبان گیری و بازیابی پارتیشن ها، دایرکتوری و MBR.
-نسخه 2.8.9-0 2026 فوریه 15</translation>
+نسخه 2.8.9-2 2026 اوت 8</translation>
     </message>
     <message>
         <location filename="../src/mainWindow.cpp" line="2776"/>

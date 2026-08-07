@@ -292,8 +292,7 @@ file_exist();
    // zunächst den User ermitteln 
 if (live_flag == 0)
    {   
-   filename = homepath + "/.config/qt5-fsarchiver/user.txt";
-   befehl = "lslogins -u 1> " +  filename;
+   filename = "/etc/passwd";
    if(system (befehl.toLatin1().data()))
       befehl = "";
    QFile file5(filename);
@@ -304,18 +303,15 @@ if (live_flag == 0)
         while (!ds1.atEnd())
     	  {
       	  tmp= ds1.readLine();
-      	  pos = tmp.indexOf("1000");
-      	     if(pos > -1)
-      	        {
-      	        tmp_ = tmp.split(QRegularExpression("\\s+"));
-      	        user = tmp_[1];
-      	        }
-   	  file5.close(); 
-   	  befehl = "rm " +  homepath + "/.config/qt5-fsarchiver/user.txt 2>/dev/null";
-   	  if(system (befehl.toLatin1().data()))
-              befehl = "";
-   	  }
-   }
+      	  pos = tmp.indexOf(":x:1000");  //user mit Passwort
+      	  pos1 = tmp.indexOf(":!:1000");  //user mit Passwort
+      	  if(pos > -1)
+              user = tmp.left(pos);
+          if(pos1 > -1)
+              user = tmp.left(pos);    
+    	  }
+       }
+   file5.close();    
    befehl = "rm -r /user/share/doc/qt-fsarchiver/doc 2>/dev/null"; 
    if(system (befehl.toLatin1().data()))
       befehl = "";
@@ -338,7 +334,10 @@ if (live_flag == 0)
       befehl = ""; 
    befehl = "rm -r /usr/share/doc/qt-fsarchiver/doc 2>/dev/null"; 
    if(system (befehl.toLatin1().data()))
-      befehl = "";   
+      befehl = "";  
+    befehl = "rm /root/.config/qt5-fsarchiver/user.txt 2>/dev/null";
+    if(system (befehl.toLatin1().data()))
+        befehl = "";    
  }         	   	      
    // beim Abbruch einer Sicherung bleiben eventuell Daten in /tmp/fsa erhalten.
    // Bei ersten Start werden eventuell vorhandene Dateien gelöscht.
@@ -396,7 +395,6 @@ if (live_flag == 0)
       return;
       }
    j = 0; 
-   
    // Ini-Datei auslesenc
    QFile file(homepath + "/.config/qt5-fsarchiver/qt5-fsarchiver.conf");
    QSettings setting("qt5-fsarchiver", "qt5-fsarchiver");
@@ -1486,8 +1484,8 @@ void MWindow::folder_file() {
 void MWindow::info() {
    QMessageBox::information(
       0, tr("qt-fsarchiver"),
-      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.9-0, February 15, 2026",
-         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR Version 2.8.9-0, 15.Februar 2026"));
+      tr("Backup and restore partitions, directory and MBR.\nversion 2.8.9-2, August 8, 2026",
+         "Sichern und Wiederherstellen von Partitionen, Verzeichnissen und MBR \nVersion 2.8.9-2, 15.Mai8. August 2026"));
       }
 
 int MWindow::Root_Auswertung(){
@@ -2697,7 +2695,13 @@ QString datum = Zeit_auslesen();
       // Partition ermitteln
         found = attribute.indexOf("/dev");
         partition_ = attribute.right(attribute.size() -found -5);
-        partition_ = partition_.trimmed();   
+        partition_ = partition_.trimmed(); 
+      //Anzahl der vorhandenen Partitionen ermitteln
+      int row1 = 0; 
+      row = 0;
+      while (part[row][0] != "")
+         row ++;
+      row1 = row;  
       row = 0;
       while (part[row][0] != "")
 	   {
@@ -2705,8 +2709,15 @@ QString datum = Zeit_auslesen();
             if(partition_ == part_list)
                break;
             row ++;
-           }    
-      //Prüfen ob System oder Home Partition
+           } 
+      //Prüfen ob Partition vorhanden ist  
+      if(row == row1) //Partition nicht vorhanden 
+         {
+         QMessageBox::warning(this,tr("Note", "Hinweis"),
+         	tr("The partition specified in the command /dev/", "Die im Auftrag genannte Partition /dev/") + part_list + tr(" does not exist. The program is aborted.", " ist nicht vorhanden. Das Programm wird abgebrochen\n"));
+         return;
+        }  
+      //Prüfen ob System oder Home Partiti}
       part_art = mtab_einlesen("/dev/" + partition_);
       if (part_art == "system" && save == 1)
             {

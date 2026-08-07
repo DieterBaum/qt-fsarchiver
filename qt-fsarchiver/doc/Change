@@ -1,7 +1,9 @@
 ===========================================================================================================
 * qt-fsarchiver: Graphical interface for fsarchiver fsarchiver [http://wiki.ubuntuusers.de/qt-fsarchiver] 
 ===========================================================================================================
-* qt-fsarchiver-2.8.9-0 15. February 2026.
+* qt-fsarchiver-2.8.9-1 May 15, 2026.
+    - minor corrections .
+* qt-fsarchiver-2.8.9-0 February 16, 2026.
     - Add support for xfs and btrfs features up to linux-6.18
 * qt-fsarchiver-2.8.8-1 August 5, 2025.
     - Troubleshooting jobs Restoring partitions.
